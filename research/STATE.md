@@ -184,8 +184,17 @@ with each admissible covariance; with a positive infimum they determine
 the entire Gaussian sector. The earlier density-ceiling witness fails
 even a two-copy mixer. A supplied entropy floor instead gives a classical
 model with actual cusp transport, copy-index mixing and $W_2$ closure,
-but not ordinary weak closure. Record closure, an independently selected
-scale and identification with $\hbar$ remain open.
+but not ordinary weak closure. The [Gaussian-meter test](../notes/gaussian-meter-entropy-floor.md)
+shows that this witness fails selective closure under one canonical
+position meter with a minimum-action Gaussian pointer: a positive-probability
+coarse record yields arbitrarily small posterior covariance action. The
+construction uses increasingly large apertures. Gaussian input states pass
+the same meter test, while an explicit Wigner-overlap bound excludes the
+counterexample inputs from quantum states at $\hbar=2S_0\zeta$. The
+$W_2$-closed Gaussian-mixture repair survives the meter and copy mixers but
+fails a classical nonlinear shear by a three-point Wigner kernel test. These
+calculations are unrefereed; an independently selected scale and physical
+record closure remain open.
 The [history and records test](../notes/cusp-history-records-continuity.md)
 constructs a reversible classical solution-space group with exact states;
 its Gaussian inputs have zero-action limits with preparation-dependent

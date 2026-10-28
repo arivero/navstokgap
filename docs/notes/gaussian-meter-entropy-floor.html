@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Gaussian meter breaks the classical entropy-floor witness</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>A Gaussian meter breaks the classical entropy-floor witness</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/gaussian-meter-entropy-floor.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/gaussian-meter-entropy-floor.pdf">PDF</a></p><p><strong>Result, 2026-10-28; written derivation, unrefereed.</strong>
+The classical entropy-floor class used as a witness in the <a
+href="central-limit-canonical-gaussian-sector.html">canonical-averaging
+note</a> is not closed under a single selective Gaussian position
+measurement. The initial body and pointer both obey the same positive
+entropy and covariance-action floor. The pointer has independent
+Gaussian error and kick with the minimum action product <span
+class="math inline">\(S_0\zeta\)</span>, and the body–pointer
+interaction is a reversible canonical shear. A single record event has
+probability at least <span class="math inline">\(9/32\)</span>, yet its
+body posterior can have covariance action arbitrarily close to zero.
+Both unread one-pair marginals remain in the entropy-floor class.</p>
+<p>For a Gaussian body preparation the same meter <em>does</em> preserve
+the floor, even after conditioning on any measurable record event. This
+exact contrast identifies the hidden issue: the entropy floor admits
+non-Gaussian mixtures containing a very narrow component, concealed by a
+broad component. With <span
+class="math inline">\(\hbar=2S_0\zeta\)</span>, those mixtures are not
+Wigner functions of quantum states, although they are positive, have
+finite covariance and satisfy the same global entropy and covariance
+inequalities. A coherent-state overlap proves their nonquantumness
+below.</p>
+<p>A narrower classical class—the <span
+class="math inline">\(W_2\)</span> closure of finite mixtures of
+admissible Gaussians—survives this meter, affine canonical changes and
+copy-index mixers. It retains the supplied floor, but a smooth nonlinear
+canonical shear takes one of its Gaussian states outside the class. A
+three-point kernel test proves the failure without invoking a numerical
+calculation or a general no-go theorem.</p>
+<p>The construction tests one specified classical instrument, not all
+physically possible readouts. Its initial body aperture becomes
+unbounded along the zero-action sequence. The entropy threshold is
+supplied, and no positive <span class="math inline">\(\hbar\)</span> is
+derived. The underlying Gaussian equivalence has substantial prior art:
+<a href="https://doi.org/10.1103/PhysRevA.86.012103">Bartlett, Rudolph
+and Spekkens 2012</a> (publisher abstract read) recover Gaussian quantum
+statistics from a classical uncertainty condition plus maximum entropy
+at fixed moments. The <a
+href="necessity-unit-and-indeterminacy.html#theorem-i-the-two-pointer-construction">two-pointer
+theorem</a> already defeats a prior density ceiling under explicit
+instrument-access assumptions. Here the target is the later entropy
+witness and one meter; no literature priority is claimed.</p>
+<h2 id="entropy-floor-and-a-canonical-meter">1. Entropy floor and a
+canonical meter</h2>
+<p>Choose calibration units <span
+class="math inline">\(L_0,P_0&gt;0\)</span>, <span
+class="math inline">\(S_0=L_0P_0\)</span>, and use dimensionless
+canonical variables <span class="math inline">\(Q=q/L_0\)</span>, <span
+class="math inline">\(P=p/P_0\)</span> and similarly <span
+class="math inline">\(Y,\Pi\)</span> for a separate pointer. A
+covariance matrix <span class="math inline">\(C\)</span> of <span
+class="math inline">\((Q,P)\)</span> has physical covariance action
+<span class="math inline">\(S_0\sqrt{\det C}\)</span>. Fix a
+<strong>supplied</strong> <span
+class="math inline">\(\zeta&gt;0\)</span> and write</p>
+<p><span class="math display">\[
+G_v(z)=\frac{1}{2\pi v}\exp\!\left(-\frac{|z|^2}{2v}\right),\qquad
+\mathcal E_\zeta=\left\{\rho\,dz\in\mathcal P_2(\mathbb R^2):
+h(\rho)\ge\log(2\pi e\zeta)\right\}, \tag{1}
+\]</span></p>
+<p>where <span
+class="math inline">\(h(\rho)=-\int\rho\log\rho\,dz\)</span> is
+dimensionless differential entropy. The Gaussian maximum-entropy
+inequality implies</p>
+<p><span class="math display">\[
+\rho\in\mathcal E_\zeta\quad\Longrightarrow\quad
+S_0\sqrt{\det\operatorname{Cov}_\rho(Q,P)}\ge S_0\zeta. \tag{2}
+\]</span></p>
+<p>Prepare the pointer independently with density <span
+class="math inline">\(G_\zeta(Y,\Pi)\)</span>. Thus its error <span
+class="math inline">\(Y\)</span> and kick <span
+class="math inline">\(\Pi\)</span> have variances <span
+class="math inline">\(\zeta\)</span> and their physical
+standard-deviation product is <span
+class="math inline">\(S_0\zeta\)</span>. The canonical interaction
+is</p>
+<p><span class="math display">\[
+Q&#39;=Q,\quad P&#39;=P-\Pi,\quad R=Y&#39;=Y+Q,\quad \Pi&#39;=\Pi.
+\tag{3}
+\]</span></p>
+<p>It is the unit-strength Hamiltonian pulse generated by <span
+class="math inline">\(S_0Q\Pi\)</span>: the common dimensionless
+symplectic form is <span class="math inline">\(S_0(dQ\wedge dP+dY\wedge
+d\Pi)\)</span>. Equation (3) is invertible and preserves its
+four-dimensional phase volume. We record the pointer coordinate <span
+class="math inline">\(R\)</span>, retaining either its value or an event
+<span class="math inline">\(A\)</span> of positive probability. The
+instruments and independent pointer preparation are explicit
+availability assumptions.</p>
+<h2 id="exact-gaussian-record-closure">2. Exact Gaussian record
+closure</h2>
+<p><strong>Theorem 1.</strong> Let the body input be a Gaussian with
+covariance <span
+class="math inline">\(C=\begin{pmatrix}a&amp;c\\c&amp;b\end{pmatrix}\)</span>,
+where <span class="math inline">\(a&gt;0\)</span> and <span
+class="math inline">\(\det C\ge\zeta^2\)</span>. Under (3), every exact
+pointer outcome has a Gaussian body posterior with covariance</p>
+<p><span class="math display">\[
+C_{\rm post}=\begin{pmatrix}
+a\zeta/(a+\zeta)&amp;c\zeta/(a+\zeta)\\
+c\zeta/(a+\zeta)&amp;b+\zeta-c^2/(a+\zeta)
+\end{pmatrix},\quad
+\det C_{\rm post}=\zeta\frac{\det C+a\zeta}{a+\zeta}\ge\zeta^2. \tag{4}
+\]</span></p>
+<p>For every Borel record event <span class="math inline">\(A\)</span>
+with positive probability, the postselected body law also belongs to
+<span class="math inline">\(\mathcal E_\zeta\)</span>.</p>
+<p><em>Proof.</em> The output body covariance before reading is <span
+class="math inline">\(\begin{pmatrix}a&amp;c\\c&amp;b+\zeta\end{pmatrix}\)</span>,
+its covariance with <span class="math inline">\(R\)</span> is <span
+class="math inline">\((a,c)^{\mathsf T}\)</span>, and <span
+class="math inline">\(\operatorname{Var}R=a+\zeta\)</span>. Gaussian
+conditioning gives (4). Its last inequality is equivalent to <span
+class="math inline">\(\det C\ge\zeta^2\)</span>. The conditional
+covariance does not depend on the outcome. Conditioning instead on <span
+class="math inline">\(A\)</span> mixes those Gaussian conditional laws,
+all with the same covariance and Gaussian entropy <span
+class="math inline">\(\log(2\pi e\sqrt{\det C_{\rm post}})\)</span>.
+Entropy concavity gives the stated floor for the mixture. <span
+class="math inline">\(\square\)</span></p>
+<p>Thus this meter is a classical realization of the quantum Gaussian
+update on the Gaussian sector. Closure for that sector does not settle
+closure for the larger class (1).</p>
+<h2 id="a-non-gaussian-preparation-selected-by-one-ordinary-record">3. A
+non-Gaussian preparation selected by one ordinary record</h2>
+<p>For <span class="math inline">\(0&lt;\delta\le1/2\)</span> put</p>
+<p><span class="math display">\[
+s=\zeta\delta,\qquad b_\delta=\zeta\delta^{-3},\qquad
+d=\sqrt\zeta\,\delta^{-2},\qquad
+\rho_\delta=\tfrac34G_s(Q,P)+\tfrac14G_{b_\delta}(Q-d,P). \tag{5}
+\]</span></p>
+<p>All variances are finite for each <span
+class="math inline">\(\delta&gt;0\)</span>. By concavity of entropy,</p>
+<p><span class="math display">\[
+h(\rho_\delta)\ge\tfrac34\log(2\pi e s)
+                   +\tfrac14\log(2\pi e b_\delta)
+                 =\log(2\pi e\zeta). \tag{6}
+\]</span></p>
+<p>The input body and pointer therefore both belong to <span
+class="math inline">\(\mathcal E_\zeta\)</span>. Take the
+finite-resolution record event</p>
+<p><span class="math display">\[ A=\{|R|\le\sqrt\zeta\}.
+\tag{7}\]</span></p>
+<p><strong>Theorem 2.</strong> Let <span
+class="math inline">\(w_\delta\)</span> be the posterior weight of the
+broad component in (5) after event (7), and let <span
+class="math inline">\(\kappa_\delta\)</span> be the physical covariance
+action of the postselected body. Then</p>
+<p><span class="math display">\[
+\mathbb P(A)\ge\frac9{32},\qquad
+0\le w_\delta\le\delta^{3/2}e^{-1/(4\delta)}, \tag{8}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\frac{\kappa_\delta}{S_0\zeta}\le
+\sqrt{(\delta+\delta^2+5w_\delta)
+              (1+\delta+w_\delta\delta^{-3})}
+\ \longrightarrow\ 0. \tag{9}
+\]</span></p>
+<p>Consequently the posterior lies outside <span
+class="math inline">\(\mathcal E_\zeta\)</span> for all sufficiently
+small <span class="math inline">\(\delta\)</span>, despite the fixed
+positive pointer floor.</p>
+<p><em>Proof.</em> In the narrow and broad components respectively,</p>
+<p><span class="math display">\[
+R_s\sim N(0,\zeta(1+\delta)),\qquad
+R_b\sim N(d,\zeta(1+\delta^{-3})). \tag{10}
+\]</span></p>
+<p>Let <span class="math inline">\(p_s,p_b\)</span> be their
+probabilities of <span class="math inline">\(A\)</span>. Since <span
+class="math inline">\(1/\sqrt{1+\delta}\ge1/\sqrt2\)</span>, the normal
+integral gives</p>
+<p><span class="math display">\[p_s\ge
+\frac{e^{-1/4}}{\sqrt\pi}\ge\frac38.\tag{11}\]</span></p>
+<p>For <span class="math inline">\(0&lt;\delta\le1/2\)</span>, the broad
+normal density on the interval is at most its value at <span
+class="math inline">\(\sqrt\zeta\)</span>, so</p>
+<p><span class="math display">\[
+p_b\le\sqrt{\frac2\pi}\,(1+\delta^{-3})^{-1/2}
+\exp\!\left[-\frac{(\delta^{-2}-1)^2}{2(1+\delta^{-3})}\right]
+\le\delta^{3/2}e^{-1/(4\delta)}. \tag{12}
+\]</span></p>
+<p>The second inequality uses <span
+class="math inline">\((1-\delta^2)^2/[2\delta(1+\delta^3)]\ge1/(4\delta)\)</span>.
+The total event probability is <span
+class="math inline">\((3p_s+p_b)/4\ge9/32\)</span>, and <span
+class="math inline">\(w_\delta=p_b/(3p_s+p_b)\le p_b\)</span>, proving
+(8).</p>
+<p>For the narrow component, Gaussian conditioning on <span
+class="math inline">\(R=r\)</span> gives conditional mean <span
+class="math inline">\(\delta r/(1+\delta)\)</span> and variance <span
+class="math inline">\(\zeta\delta/(1+\delta)\)</span>. Averaging over
+<span class="math inline">\(|r|\le\sqrt\zeta\)</span> yields</p>
+<p><span class="math display">\[\mathbb E(Q^2\mid
+A,\text{narrow})\le\zeta(\delta+\delta^2).\tag{13}\]</span></p>
+<p>For the broad component the conditional variance is <span
+class="math inline">\(\zeta/(1+\delta^3)\)</span>, and the conditional
+mean is <span
+class="math inline">\([\sqrt\zeta\,\delta+r]/(1+\delta^3)\)</span>. On
+<span class="math inline">\(A\)</span> its absolute value is at most
+<span class="math inline">\(2\sqrt\zeta\)</span>, so the corresponding
+second moment is at most <span class="math inline">\(5\zeta\)</span>.
+The final momentum <span class="math inline">\(P&#39;=P-\Pi\)</span> is,
+within either component, independent of <span
+class="math inline">\((Q,R)\)</span>, centered, and has variance <span
+class="math inline">\(s+\zeta\)</span> or <span
+class="math inline">\(b_\delta+\zeta\)</span>. Hence</p>
+<p><span class="math display">\[
+\operatorname{Var}(Q\mid A)\le\zeta(\delta+\delta^2+5w_\delta),\quad
+\operatorname{Var}(P&#39;\mid A)\le\zeta(1+\delta+w_\delta\delta^{-3}).
+\tag{14}
+\]</span></p>
+<p>The covariance determinant is no larger than the product of these
+variances, which proves (9). Since <span
+class="math inline">\(w_\delta\delta^{-3}\to0\)</span>, the bound tends
+to zero. Equation (2) excludes the posterior from the entropy-floor
+class. <span class="math inline">\(\square\)</span></p>
+<p>The failure is selective. Before reading <span
+class="math inline">\(R\)</span>, the body law is the input law averaged
+over independent momentum translations, so entropy concavity gives <span
+class="math inline">\(h(Q,P-\Pi)\ge h(Q,P)\)</span>. The pointer’s
+unread law has <span class="math inline">\(R=Q+Y\)</span> independent of
+<span class="math inline">\(\Pi\)</span>, and <span
+class="math inline">\(h(R)\ge h(Y)\)</span> by the same argument. Both
+unread marginals therefore remain in <span
+class="math inline">\(\mathcal E_\zeta\)</span>; the full joint entropy
+is conserved by the canonical shear. Selective closure is a strictly
+stronger requirement than this unread evolution.</p>
+<p>The counterexample uses no divergent quantity at any fixed <span
+class="math inline">\(\delta\)</span>. Its broad-component variance and
+position separation grow as <span
+class="math inline">\(\zeta\delta^{-3}\)</span> and <span
+class="math inline">\(\sqrt\zeta\,\delta^{-2}\)</span>, respectively.
+Thus it does not defeat a separately imposed finite preparation aperture
+or energy budget uniformly in <span
+class="math inline">\(\delta\)</span>; the <a
+href="planck-gap-probabilistic.html">resource-relative distinction</a>
+remains.</p>
+<h2 id="why-the-positive-classical-density-is-not-a-quantum-state">4.
+Why the positive classical density is not a quantum state</h2>
+<p>Set the <em>physical</em> reduced action to <span
+class="math inline">\(\hbar=2S_0\zeta&gt;0\)</span>, so the commutator
+of the calibrated variables is <span class="math inline">\([\widehat
+Q,\widehat P]=i\hbar/S_0=2i\zeta\)</span>. Let <span
+class="math inline">\(\sigma_0\)</span> be the pure minimum-uncertainty
+Gaussian state whose normalized Wigner function is <span
+class="math inline">\(G_\zeta\)</span>. If (5) were the Wigner function
+of a density operator <span class="math inline">\(\rho\)</span>, the
+Wigner trace identity would give</p>
+<p><span class="math display">\[
+\operatorname{Tr}(\rho\sigma_0)
+=2\pi\frac{\hbar}{S_0}\int\rho_\delta(z)G_\zeta(z)\,dz
+\ge \frac{3}{2(1+\delta)}&gt;1,\qquad 0&lt;\delta&lt;\tfrac12. \tag{15}
+\]</span></p>
+<p>Here <span class="math inline">\(\int
+G_sG_\zeta\,dz=[2\pi(s+\zeta)]^{-1}\)</span>, and the broad component
+contributes a nonnegative amount. Equation (15) is impossible because a
+density operator has expectation at most one in a normalized pure state.
+The overlap identity is the usual Wigner Hilbert–Schmidt formula; see <a
+href="https://arxiv.org/pdf/1111.5057">Bartlett–Rudolph–Spekkens</a>,
+§IV.B, equation (90) (passage read; the factor in (15) uses our
+unit-integral Wigner convention). This is an explicit positivity test
+beyond the entropy and covariance inequalities, not a new
+characterization of all Wigner functions.</p>
+<p>Under the quantum identification above, the meter <span
+class="math inline">\(G_\zeta\)</span> itself is a legitimate
+minimum-uncertainty state and (3) is the Wigner action of the quadratic
+unitary pulse. The counterexample cannot be imported as a quantum
+preparation: its concentrated component makes the full input operator
+nonpositive. In particular, positivity of a classical phase-space
+density, a covariance floor, entropy closure and Gaussian-meter
+back-action do not alone supply quantum state positivity.</p>
+<h2
+id="a-record-stable-classical-repair-and-its-nonlinear-obstruction">5. A
+record-stable classical repair and its nonlinear obstruction</h2>
+<p>Let <span class="math inline">\(\mathcal C_\zeta\)</span> be the
+finite convex mixtures of one-pair Gaussian probabilities with <span
+class="math inline">\(\det C\ge\zeta^2\)</span>, and let <span
+class="math inline">\(\overline{\mathcal C}_\zeta\)</span> be its <span
+class="math inline">\(W_2\)</span> closure in <span
+class="math inline">\(\mathcal P_2\)</span>.</p>
+<p><strong>Theorem 3.</strong> The class <span
+class="math inline">\(\overline{\mathcal C}_\zeta\)</span> has physical
+covariance-action infimum <span class="math inline">\(S_0\zeta\)</span>
+and is closed under affine canonical transformations, independent-copy
+orthogonal canonical mixing followed by retention of one pair, and the
+Gaussian meter (3) followed by any positive-probability Borel record
+event. Nevertheless, for every <span
+class="math inline">\(\lambda\ne0\)</span> the classical canonical
+shear</p>
+<p><span class="math display">\[
+Q&#39;=Q,\qquad P&#39;=P+\lambda Q^2 \tag{16}
+\]</span></p>
+<p>sends <span class="math inline">\(G_\zeta\in\overline{\mathcal
+C}_\zeta\)</span> to a density outside that class, although the output
+remains in <span class="math inline">\(\mathcal E_\zeta\)</span>.</p>
+<p><em>Proof of the closed operations.</em> Entropy concavity and (2)
+put every finite Gaussian mixture in <span
+class="math inline">\(\mathcal E_\zeta\)</span>, and the latter is <span
+class="math inline">\(W_2\)</span>-closed by the central-limit note, §6.
+Thus the closure has action at least <span
+class="math inline">\(S_0\zeta\)</span>; <span
+class="math inline">\(G_\zeta\)</span> attains it.</p>
+<p>An affine canonical map carries every admissible Gaussian to another.
+For one output of an orthogonal copy-index mixer, the covariance is
+<span class="math inline">\(\sum_j a_j^2C_j\)</span> with <span
+class="math inline">\(\sum_j a_j^2=1\)</span>. Each <span
+class="math inline">\(C_j+i\zeta J\succeq0\)</span>, <span
+class="math inline">\(J=\begin{pmatrix}0&amp;1\\-1&amp;0\end{pmatrix}\)</span>,
+so their convex combination also obeys that inequality, equivalent in
+one pair to <span class="math inline">\(\det C\ge\zeta^2\)</span>.
+Finite input mixtures therefore give finite output mixtures. These
+operations are continuous in <span class="math inline">\(W_2\)</span> on
+independent product laws, so they extend to the closure.</p>
+<p>For a finite Gaussian mixture, Theorem 1 shows that conditioning on a
+record value gives a finite mixture of admissible Gaussians.
+Conditioning on a Borel event <span class="math inline">\(A\)</span>
+gives an integral mixture over the record values. Its record
+distribution has finite second moment; approximation by finitely
+supported distributions makes this an element of the <span
+class="math inline">\(W_2\)</span> closure. To extend the result to all
+input laws in the closure, write the event likelihood as</p>
+<p><span class="math display">\[
+\ell_A(q)=\int_A\frac{e^{-(r-q)^2/(2\zeta)}}{\sqrt{2\pi\zeta}}\,dr.
+\tag{17}
+\]</span></p>
+<p>If <span class="math inline">\(A\)</span> has positive probability,
+it has positive Lebesgue measure; <span
+class="math inline">\(\ell_A\)</span> is bounded, continuous and
+strictly positive. The posterior is the input law weighted by <span
+class="math inline">\(\ell_A(Q)\)</span>, normalized, followed by
+convolution of <span class="math inline">\(P\)</span> with the
+independent Gaussian kick. <span class="math inline">\(W_2\)</span>
+convergence of inputs implies weak convergence plus uniformly integrable
+second moments, so these weighted normalized laws converge in <span
+class="math inline">\(W_2\)</span>; coupling the same kick preserves
+that convergence. Exact record values use the bounded positive Gaussian
+likelihood at that value. Hence all the claimed record outputs remain in
+<span class="math inline">\(\overline{\mathcal C}_\zeta\)</span>.</p>
+<p><em>Proof of the nonlinear obstruction.</em> Equation (16) is a
+global canonical map, generated by the pulse <span
+class="math inline">\(-S_0\lambda Q^3/3\)</span>. Its output is</p>
+<p><span class="math display">\[
+f_\lambda(q,p)=\frac{1}{2\pi\zeta}
+\exp\!\left[-\frac{q^2+(p-\lambda q^2)^2}{2\zeta}\right]. \tag{18}
+\]</span></p>
+<p>The shear preserves entropy, so <span
+class="math inline">\(h(f_\lambda)=\log(2\pi e\zeta)\)</span>; it has
+finite covariance and belongs to <span class="math inline">\(\mathcal
+E_\zeta\)</span>.</p>
+<p>Every member of <span class="math inline">\(\mathcal C_\zeta\)</span>
+is a Wigner function of a positive quantum state when <span
+class="math inline">\(\hbar=2S_0\zeta\)</span>. For every Schwartz test
+state <span class="math inline">\(\psi\)</span>, its Wigner function is
+bounded and continuous, and the Wigner overlap with any member of <span
+class="math inline">\(\mathcal C_\zeta\)</span> is nonnegative. This
+necessary condition is preserved by weak convergence, hence by <span
+class="math inline">\(W_2\)</span> closure. We now violate it for
+(18).</p>
+<p>The inverse Wigner kernel corresponding to (18) is continuous and
+equals</p>
+<p><span class="math display">\[
+K_\lambda(x,y)=\frac{e^{-(x^2+y^2)/(4\zeta)}}{\sqrt{2\pi\zeta}}
+\exp\!\left[\frac{i\lambda(x+y)^2(x-y)}{8\zeta}\right]. \tag{19}
+\]</span></p>
+<p>If it came from a positive operator, every finite matrix <span
+class="math inline">\([K_\lambda(x_i,x_j)]\)</span> would be positive
+semidefinite; smooth test bumps approximating point masses justify this
+necessary condition. Normalize the diagonal of the three-point matrix at
+<span class="math inline">\(x_1=-a,x_2=0,x_3=a\)</span>. The normalized
+off-diagonal entries have modulus one and cyclic phase <span
+class="math inline">\(-\lambda a^3/(4\zeta)\)</span>, so its determinant
+is</p>
+<p><span class="math display">\[
+2\left[\cos\!\left(\frac{\lambda a^3}{4\zeta}\right)-1\right]. \tag{20}
+\]</span></p>
+<p>Choosing <span
+class="math inline">\(a=(4\pi\zeta/|\lambda|)^{1/3}\)</span> makes (20)
+equal <span class="math inline">\(-4\)</span>. A finite combination of
+smooth compactly supported bumps therefore has negative expectation
+against <span class="math inline">\(K_\lambda\)</span>. Its Wigner
+function is a bounded continuous test violating the necessary condition
+above, so <span class="math inline">\(f_\lambda\notin\overline{\mathcal
+C}_\zeta\)</span>. <span class="math inline">\(\square\)</span></p>
+<p>This is a concrete boundary between the two classical repairs: the
+larger <span class="math inline">\(\mathcal E_\zeta\)</span> survives
+this nonlinear Liouville shear but fails selective Gaussian recording;
+the smaller <span class="math inline">\(\overline{\mathcal
+C}_\zeta\)</span> survives that record but not the shear. Neither
+statement excludes every other classical completion. In particular <span
+class="math inline">\(\zeta\)</span> is supplied in both
+constructions.</p>
+<p>The distinction also has an exact quantum form. The quantum pulse for
+<span class="math inline">\(-S_0\lambda Q^3/3\)</span> sends the minimum
+Gaussian wavefunction to <span
+class="math inline">\(\psi(q)\exp[i\lambda q^3/(6\zeta)]\)</span>. Its
+density kernel is</p>
+<p><span class="math display">\[
+K_{\rm quantum}(x,y)=K_\lambda(x,y)
+       \exp\!\left[\frac{i\lambda(x-y)^3}{24\zeta}\right]. \tag{21}
+\]</span></p>
+<p>The additional off-diagonal phase is absent in the purely classical
+shear. Equation (21) is a direct calculation at fixed physical <span
+class="math inline">\(\hbar=2S_0\zeta\)</span>. On separations <span
+class="math inline">\(|x-y|=O(\sqrt\zeta)\)</span> the phase is <span
+class="math inline">\(O(|\lambda|\sqrt\zeta)\)</span> as <span
+class="math inline">\(\hbar/S_0=2\zeta\to0\)</span>. The three-point
+test at fixed <span class="math inline">\(\lambda\)</span> instead
+uses</p>
+<p><span class="math display">\[
+\frac a{\sqrt\zeta}=
+\left(\frac{4\pi}{|\lambda|}\right)^{1/3}\zeta^{-1/6},\qquad
+\frac{K_\lambda(a,a)}{K_\lambda(0,0)}
+=\exp\!\left[-\frac12\left(\frac{4\pi}{|\lambda|}\right)^{2/3}
+                     \zeta^{-1/3}\right]. \tag{22}
+\]</span></p>
+<p>Thus the normalized determinant stays at <span
+class="math inline">\(-4\)</span> while the test points move into
+suppressed Gaussian tails. It gives no lower bound on an operational
+distance that remains finite in the large-action limit. As in the
+earlier cusp comparison, <span class="math inline">\(S_0\)</span> must
+describe a physical family of characteristic actions for <span
+class="math inline">\(\hbar/S_0\to0\)</span> to mean more than a change
+of units.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>The entropy-floor witness satisfies the existing copy and actual-cusp
+transport tests, but a single allowed Gaussian meter and a positive-
+probability coarse record break its selective closure. The
+Gaussian-mixture repair survives the record and copy tests but fails a
+nonlinear classical canonical shear. Quantum operator positivity blocks
+both exhibited nonphysical densities, with <span
+class="math inline">\(\hbar\)</span> supplied; quantum nonlinear
+evolution also differs from the classical shear by (21). Independently
+deriving a state and dynamics law, its physical scale and closure for
+actual records remains open.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>

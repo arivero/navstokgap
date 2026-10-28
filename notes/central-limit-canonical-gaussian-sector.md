@@ -25,7 +25,10 @@ bounded-density cusp model fails even the two-copy mixer test. An
 entropy-floor class below realizes actual nonlinear cusp transport and
 the mixer rules with $W_2$-closure, but it is not weakly closed.
 Without cusp compatibility, copy/mixing closure allows a zero-floor
-Gaussian theory. Selective recordings are a separate closure question.
+Gaussian theory. The subsequent [Gaussian-meter counterexample](gaussian-meter-entropy-floor.md)
+shows that selective records do not preserve the entropy-floor witness,
+even with a minimum-action Gaussian pointer and a single finite-resolution
+position record.
 
 The central limit theorem and Gaussian symplectic covariance are
 standard. In quantum optics, the known Cushen--Hudson central limit
@@ -349,8 +352,12 @@ Nevertheless $\mu_n$ converges weakly to $\delta_0$, which is not in
 $\mathcal E_\zeta$; the second moments diverge, so this is not a
 $W_2$-convergent sequence. The entropy floor, like the earlier density
 ceiling, is an explicitly supplied classical preparation constraint.
-It does not identify the floor with quantum $\hbar/2$ or establish
-closure under arbitrary selective records.
+It does not identify the floor with quantum $\hbar/2$. The subsequent
+[Gaussian-meter counterexample](gaussian-meter-entropy-floor.md) proves
+that this class fails selective closure under a single specified
+minimum-action Gaussian pointer; its postselected states can have
+arbitrarily small covariance action. Gaussian input states pass the same
+test. The counterexample uses increasingly large preparation apertures.
 
 ## 7. Consequence for STATE
 
@@ -361,5 +368,5 @@ positive covariance floor and exactly the one-pair Gaussian sector
 above it. The entropy model realizes actual nonlinear cusp transport
 and the specified mixers under $W_2$ closure, while demonstrating
 that ordinary weak closure is a separate, stronger condition. The
-supplied entropy floor does not derive $\hbar$ or establish selective
-record closure or independent action necessity.
+supplied entropy floor does not derive $\hbar$ or independent action
+necessity; its selective record closure fails as specified above.

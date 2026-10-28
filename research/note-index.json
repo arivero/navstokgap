@@ -5,6 +5,30 @@
  "priority_basis": "User independent retrieval analysis, 2026-10-01; not novelty or proof quality.",
  "notes": [
   {
+   "path": "notes/gaussian-meter-entropy-floor.md",
+   "title": "A Gaussian meter breaks the classical entropy-floor witness",
+   "summary": "A single classical Gaussian meter with a supplied minimum-action pointer takes an entropy-floor input to arbitrarily small posterior action on a positive-probability coarse record. A Gaussian-mixture repair preserves the record and copy mixers but fails a nonlinear canonical shear.",
+   "thematic_area": "Newton/action",
+   "strongest_result": "The record has probability at least 9/32 and postselected covariance action tending to zero while both unread marginals stay in the entropy class. A Wigner overlap excludes the non-Gaussian input from quantum states; a three-point inverse-Wigner kernel rules out the nonlinear shear for the W2-closed Gaussian-mixture repair.",
+   "status": "result",
+   "proof_status": "proved-unrefereed",
+   "retrieval_priority": 3,
+   "current_relevance": "Directly tests and corrects the earlier classical entropy witness under physically specified selective Gaussian recording, then tests a narrower record-stable classical replacement against nonlinear dynamics.",
+   "relations": [
+    {"type": "corrects", "target": "notes/central-limit-canonical-gaussian-sector.md", "reason": "Shows its entropy-floor witness fails selective closure even under one minimum-action Gaussian meter."},
+    {"type": "continues", "target": "notes/cusp-history-records-continuity.md", "reason": "Replaces its arbitrary fine-joint-record premise by a concrete position meter and tests a record-closed classical repair."},
+    {"type": "uses", "target": "notes/necessity-unit-and-indeterminacy.md", "reason": "Contrasts one Gaussian meter with the earlier explicit two-pointer escape from a prior density ceiling."},
+    {"type": "uses", "target": "notes/planck-gap-probabilistic.md", "reason": "Retains the resource-aperture limitation of the zero-action counterexample."}
+   ],
+   "surprising": true,
+   "route_closure": false,
+   "keys": ["classical entropy floor", "Gaussian meter", "selective records", "minimum action pointer", "postselected covariance", "non-Gaussian mixture", "Wigner positivity", "Gaussian mixture closure", "nonlinear canonical shear", "three point kernel", "hbar explicit"],
+   "role": "result,live",
+   "value": "decisive-obstruction,open-mechanism",
+   "limitations": "Zeta is supplied and the initial preparation aperture diverges along the postselection limit. The result assumes access to the specified Gaussian pointer and shear; the quantum-incompatible examples do not exclude all classical completions. The nonlinear kernel witness moves into suppressed tails as hbar/S0 tends to zero.",
+   "content_coverage": "Full note and relevant entropy, recording and quantum comparison arguments read; Bartlett–Rudolph–Spekkens abstract and Wigner trace passage checked. Written derivations without independent review and no literature-priority claim."
+  },
+  {
    "path": "notes/cusp-history-records-continuity.md",
    "title": "Classical histories, complete records and the cusp limit",
    "summary": "A reversible time-symmetric group on complete cusp trajectories admits classical exact states and fine conditioning with zero action. Gaussian preparations collapse initially to the same point but converge to different classical branch mixtures. W2 continuity, canonical mixing, closure and actual Gaussian transport select a positive action floor without reversibility.",
@@ -122,7 +146,7 @@
   {
    "path": "notes/central-limit-canonical-gaussian-sector.md",
    "title": "Canonical averaging and the Gaussian sector of Newton preparations",
-   "summary": "Copy-index symplectic mixers and weak or W2 closure admit a Gaussian with each admissible covariance; a positive infimum determines the entire Gaussian sector. The older density ceiling fails a two-copy mixer. A supplied entropy floor supports actual cusp transport and mixing with W2 closure but fails weak closure.",
+   "summary": "Copy-index symplectic mixers and weak or W2 closure admit a Gaussian with each admissible covariance; a positive infimum determines the entire Gaussian sector. The older density ceiling fails a two-copy mixer. A supplied entropy floor supports actual cusp transport and mixing with W2 closure but fails weak closure and, as a subsequent note proves, selective Gaussian-meter closure.",
    "thematic_area": "Newton/action",
    "strongest_result": "The central limit and two-copy squeezing generate the full one-pair Gaussian sector above an attained positive floor. An entropy-floor classical model realizes actual cusp transport and copy-index mixing with W2 closure, while an explicit weakly convergent sequence rules out ordinary weak closure.",
    "status": "conditional",
@@ -131,15 +155,16 @@
    "current_relevance": "Resolves the previously proposed conditional Gaussian-sector calculation and tests whether the prior cusp witness composes.",
    "relations": [
     {"type": "continues", "target": "notes/newton-cusp-preparation-floor.md", "reason": "Uses its point-state merger and corrects the scope of its density-ceiling witness under canonical copying."},
-    {"type": "uses", "target": "notes/newton-indeterminacy-routes.md", "reason": "Compares the Gaussian sector with the restricted statistical-speed theorem while retaining record closure as a separate premise."}
+    {"type": "uses", "target": "notes/newton-indeterminacy-routes.md", "reason": "Compares the Gaussian sector with the restricted statistical-speed theorem while retaining record closure as a separate premise."},
+    {"type": "uses", "target": "notes/gaussian-meter-entropy-floor.md", "reason": "A single Gaussian meter disproves selective record closure for the entropy-floor witness."}
    ],
    "surprising": false,
    "route_closure": false,
    "keys": ["canonical mixing", "independent copies", "central limit", "Gaussian covariance sector", "cusp flow", "entropy power", "Wasserstein closure", "density ceiling counterexample", "selective records"],
    "role": "result,live",
    "value": "open-mechanism,infrastructure",
-   "limitations": "Copy, mixing and closure are explicit hypotheses; the entropy model supplies its floor and is not weakly closed. Selective records, physical scale selection and identification with quantum hbar remain open.",
-   "content_coverage": "Full note and derivations read, with cited central-limit and entropy-power theorem statements checked; targeted model review is not independent peer review."
+   "limitations": "Copy, mixing and closure are explicit hypotheses; the entropy model supplies its floor, is not weakly closed, and fails the specified selective Gaussian-meter test. Physical record closure, scale selection and identification with quantum hbar remain open.",
+   "content_coverage": "Full note and derivations read, with cited central-limit and entropy-power theorem statements checked; subsequent Gaussian-meter correction added. Targeted model review is not independent peer review."
   },
   {
    "path": "notes/relativistic-dispersion-blocks.md",
