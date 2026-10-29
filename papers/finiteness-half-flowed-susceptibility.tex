@@ -5,57 +5,42 @@
 \DeclareUnicodeCharacter{1E93}{\d{z}}
 \usepackage{amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}
-\usepackage{longtable,booktabs,array,calc}
 \usepackage[hidelinks]{hyperref}
-\hypersetup{pdftitle={The finiteness half of the mass gap is the nonvanishing of one smeared susceptibility},pdfauthor={navstokgap research working notes}}
+\hypersetup{pdftitle={Spectral upper bounds: smeared susceptibilities and moment hierarchies},pdfauthor={navstokgap research working notes}}
 \newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
-\hypertarget{the-finiteness-half-of-the-mass-gap-is-the-nonvanishing-of-one-smeared-susceptibility}{%
-\section{The finiteness half of the mass gap is the nonvanishing of one
-smeared
-susceptibility}\label{the-finiteness-half-of-the-mass-gap-is-the-nonvanishing-of-one-smeared-susceptibility}}
+\hypertarget{spectral-upper-bounds-smeared-susceptibilities-and-moment-hierarchies}{%
+\section{Spectral upper bounds: smeared susceptibilities and moment
+hierarchies}\label{spectral-upper-bounds-smeared-susceptibilities-and-moment-hierarchies}}
 
-The requirement \(m<\infty\) of the Jaffe--Witten statement reduces to
-an exact inequality between two ground-state quantities. For any
-gauge-invariant local scalar \(\varphi\) built from the spatially
-smeared field, with \(\langle\varphi\rangle=0\),
-\[m\ \le\ \frac{g^2\hbar c}{2}\;\frac{\big\langle\,|D_\varphi|^2\,\big\rangle_0}{\chi_\varphi},
-\qquad
-D_\varphi=\int d^3y\;\frac{\delta\varphi(y)}{\delta A^a_i(0)},\qquad
-\chi_\varphi=\int d^3z\;\big\langle\varphi(z)\varphi(0)\big\rangle_0^{\rm c},\]
-at fixed regularization, with \(g=g(a)\). The continuum version requires
-a limit of the full weighted numerator and the susceptibility as below.
-Both sides are intensive: the volume cancels between the numerator and
-the denominator, which is what makes the zero-momentum operator the
-right trial excitation and the plaquette of
-\href{lattice-gap-upper-bounds.md}{the upper-bound note} the wrong one.
-The inequality is the energy-weighted sum rule, \(m\) bounded by the
-mean excitation energy carried by \(\varphi\), so its content is:
-\textbf{if some local gauge-invariant observable has nonvanishing
-zero-momentum fluctuations in the vacuum, the theory has an excitation
-of finite energy.} Conversely \(m=\infty\) forces every such
-susceptibility to vanish, that is, the vacuum is an eigenstate of every
-smeared gauge-invariant operator. Spatial gradient flow supplies a
-candidate smearing; its needed Hamiltonian equal-time continuum
-estimates remain hypotheses; what is assumed, and stated as hypothesis
-(F1), is that the equal-time flowed correlators have continuum limits,
-which is not Lüscher's four-dimensional theorem but its Hamiltonian
-counterpart. In free Maxwell theory the explicit ratio carries
-\(g^{-2}\), cancelling the prefactor in the bound, which is
-\(4.26\hbar c/\sqrt{8t}\); since the bound cannot fall below \(m\), the
-flow time at which that scaling must break down is the correlation
-length \(\hbar c/m\). In free Maxwell theory the scaling persists for
-all \(t\) and the bound correctly tends to \(m=0\). The inequality
-itself is the textbook single-mode (Feynman--Bijl) bound; what is
-specific here is the zero-momentum intensive form, the flow as the
-smearing that makes it cutoff-independent, and the identification with
-the finiteness half of the Millennium statement. Constants explicit;
-nothing promoted.
+A nonzero admissible vacuum excitation gives variational upper bounds on
+the physical Hamiltonian gap. For a gauge-invariant \textbf{equal-time
+spatial} observable, the Feynman--Bijl numerator is its electric
+derivative norm. At zero momentum, volume cancels against the
+susceptibility. With a supplied positive spectral measure, consecutive
+moment ratios give progressively sharper bounds on the observable's
+spectral edge. That edge can lie above the global gap.
 
-\hypertarget{the-continuum-bound}{%
-\subsection{1. The continuum bound}\label{the-continuum-bound}}
+The continuum statements require a finite nonzero Hilbert-space
+insertion, its spectral representation, ultraviolet control and the
+stated infrared integrability. Four-dimensional Wilson-flow ultraviolet
+finiteness does not supply those equal-time or spectral hypotheses:
+temporal smoothing crosses the reflection plane. The earlier claim that
+such smoothing eliminated the Hamiltonian assumptions is withdrawn. The
+exact inequalities, the free spatially flowed Maxwell constants and the
+gapless inverse-moment countermodel survive under their explicit
+premises.
+
+Here \(m\) denotes an \textbf{energy gap}, not a rest mass; a mass is
+\(m/c^2\). Physical \(\hbar\) and \(c\) remain explicit. These are
+written derivations and conditional continuum implications, not a
+construction of Yang--Mills theory.
+
+\hypertarget{variational-bound-and-intensive-susceptibility}{%
+\subsection{Variational bound and intensive
+susceptibility}\label{variational-bound-and-intensive-susceptibility}}
 
 Take the temporal-gauge Hamiltonian in the convention of
 \href{low-dimensional-mass-gap.md}{G07} Proposition 7, with \(g\)
@@ -90,9 +75,16 @@ quantity that Section 2 of
 \href{low-dimensional-mass-gap.md\#conditional-orbit-area-bounds-and-state-counting}{the
 action-floor note} identifies as the carrier of \(\hbar\).
 
-\hypertarget{zero-momentum-makes-the-bound-intensive}{%
-\subsection{2. Zero momentum makes the bound
-intensive}\label{zero-momentum-makes-the-bound-intensive}}
+For a centered observable commuting with \(H\), the numerator vanishes.
+In a unique vacuum, \(O\Omega\) must then vanish as well; a conserved
+observable cannot give a nonzero centered vacuum fluctuation. The
+quotient is undefined when that variance is zero. A nonzero zero-energy
+centered vector would instead diagnose ground-state degeneracy and lies
+outside the simple-vacuum variational premise.
+
+\hypertarget{zero-momentum-and-volume-cancellation}{%
+\subsubsection{Zero momentum and volume
+cancellation}\label{zero-momentum-and-volume-cancellation}}
 
 Let \(\varphi(x)\) be a gauge-invariant local scalar with
 \(\langle\varphi\rangle_0=0\) and take \(O=\int_Vd^3y\,\varphi(y)\) in a
@@ -119,33 +111,63 @@ note} fails precisely because it is a single cell rather than a
 zero-momentum sum: its variance is an ultraviolet quantity that vanishes
 in the continuum limit while its gradient does not.
 
-\hypertarget{spectral-reading-and-two-checks}{%
-\subsection{3. Spectral reading and two
-checks}\label{spectral-reading-and-two-checks}}
+\hypertarget{positive-spectral-measures-and-the-observable-channel}{%
+\subsection{Positive spectral measures and the observable
+channel}\label{positive-spectral-measures-and-the-observable-channel}}
 
-Inserting a complete set of eigenstates,
-\[\langle\Omega,[O,[H,O]]\Omega\rangle=2\sum_n(E_n-E_0)\,\big|\langle n|O|\Omega\rangle\big|^2,
-\qquad\langle O^2\rangle_0=\sum_n\big|\langle n|O|\Omega\rangle\big|^2,\]
-so Proposition 1 states that \(m\) is at most the mean excitation energy
-weighted by the spectral weight of \(O\): the \(f\)-sum rule. Two
-consequences.
+Assume a constructed physical theory with self-adjoint \(H\ge0\), unique
+vacuum \(\Omega\) and a specified insertion \(v=\Phi\Omega\perp\Omega\),
+\(0<\|v\|<\infty\). In a finite volume this is an ordinary Hilbert
+vector; an intensive zero-momentum infinite-volume statement
+additionally needs the appropriate limit of the spectral measures. For
+that supplied positive measure,
+\[C(\tau)=\langle v,e^{-\tau H/\hbar}v\rangle
+ =\int_{(0,\infty)}e^{-E\tau/\hbar}d\rho(E),\qquad
+ M_k=\int E^k d\rho(E),\] \[m\le e_\Phi:=\inf\operatorname{supp}\rho.\]
+The connected insertion removes the vacuum atom. A local observable can
+miss an entire low-energy sector, so a positive \(e_\Phi\) alone gives
+no global lower gap bound.
 
-\emph{Conserved observables.} If \([H,O]=0\) the numerator vanishes and
-the bound reads \(\Delta\le0\). With a unique ground state this is
-consistent only if \(\langle O^2\rangle_0=0\): a conserved
-gauge-invariant observable cannot fluctuate in a nondegenerate vacuum,
-since \(O\Omega\) would be a second state of energy \(E_0\). The bound
-therefore detects vacuum degeneracy, and is vacuous exactly in that
-case.
+For \(0<M_k,M_{k+1}<\infty\), \[m\le e_\Phi\le\frac{M_{k+1}}{M_k}.\] If
+\(0<M_{k-1}<\infty\) as well, Cauchy--Schwarz gives
+\[M_k^2\le M_{k-1}M_{k+1},\qquad
+ \frac{M_k}{M_{k-1}}\le\frac{M_{k+1}}{M_k}.\] The first inequality uses
+\(E\ge e_\Phi\); the second follows by testing \(E^{(k-1)/2}\) and
+\(E^{(k+1)/2}\) in \(L^2(d\rho)\). Thus
+\[m\le e_\Phi\le\cdots\le\frac{M_{-1}}{M_{-2}}
+ \le\frac{M_0}{M_{-1}}\le\frac{M_1}{M_0}.\] Each displayed ratio
+requires its own finite nonzero moments. Tonelli and one-sided
+differentiation where finite give
+\[M_0=C(0^+),\qquad M_{-1}=\hbar^{-1}\int_0^\infty C(\tau)d\tau,
+ \qquad M_1=-\hbar C'(0^+).\] Consequently, \textbf{if
+\(0<M_{-1}<\infty\) and \(0<M_0<\infty\)},
+\[m\le\frac{\hbar C(0^+)}{\int_0^\infty C(\tau)d\tau}<\infty.\] If
+\(M_0\) is finite but \(M_{-1}\) diverges, a positive channel edge is
+impossible: \(E\ge e_\Phi>0\) would give \(M_{-1}\le M_0/e_\Phi\).
 
-\emph{Free Maxwell.} Here \(m=0\) and the bound is a positive number for
-every flow time; Section 5 shows it tends to zero as the smearing grows,
-which is the correct behaviour for a gapless theory and a check that the
-bound is not empty.
+This ratio avoids a derivative numerator \textbf{once its spectral and
+moment hypotheses are supplied}. Ultraviolet finiteness at a point does
+not prove spatially integrated susceptibility, time-integrated infrared
+convergence, or admissibility of a four-dimensionally flowed insertion.
+The spatial flow below stays on one Hamiltonian time slice; its
+continuum control remains a hypothesis. Sakai--Sasaki, \emph{PRD}
+\textbf{107} (2023) 034510,
+\href{https://arxiv.org/abs/2211.15176v2}{arXiv:2211.15176v2}
+(\textbf{abstract read}), explicitly distinguish space-time diffusion
+from spatial gradient flow for spectroscopy. This is source context for
+that distinction; the abstract is not invoked as a proof of the spectral
+or continuum assumptions here.
 
-\hypertarget{what-must-be-smeared-and-the-hypothesis}{%
-\subsection{4. What must be smeared, and the
-hypothesis}\label{what-must-be-smeared-and-the-hypothesis}}
+A nonzero finite spectral measure already has some positive weight below
+a finite energy: \((0,\infty)=\bigcup_n(0,n]\). Thus a nontrivial
+admissible insertion excludes an empty excited spectrum without
+requiring \(M_1\) or \(M_{-1}\) finite. A useful quantitative bound
+still needs the corresponding moments. Neither argument establishes
+\(m>0\).
+
+\hypertarget{spatial-flow-and-the-continuum-hypothesis}{%
+\subsection{Spatial flow and the continuum
+hypothesis}\label{spatial-flow-and-the-continuum-hypothesis}}
 
 A local operator at a point has divergent gradient in the continuum, so
 \(\varphi\) must be built from a smeared field. The gauge-covariant
@@ -159,12 +181,12 @@ smearing radius \(\sqrt{8t}\) at flow time \(t\) and the lattice form
 given by his equation (1.4). Take
 \(\varphi=\varphi_t=\tfrac14G^a_{ij}G^a_{ij}\big|_{s=t}-\langle\cdot\rangle_0\).
 
-Lüscher's renormalization statement is for the four-dimensional flow in
-the Euclidean functional integral: expectation values of local
-gauge-invariant expressions in the flowed field are finite without
-further renormalization. The object needed here is the equal-time
-Hamiltonian correlator of the spatially flowed field, which his theorem
-does not cover. State it as a hypothesis:
+Lüscher's perturbative ultraviolet-finiteness statement concerns the
+four-dimensional flow in the Euclidean functional integral: expectation
+values of local gauge-invariant expressions in the flowed field are
+finite without further renormalization. The object needed here is the
+equal-time Hamiltonian correlator of the spatially flowed field, which
+his theorem does not cover. State it as a hypothesis:
 
 \begin{quote}
 \textbf{(F1)} For fixed flow time \(t>0\), the equal-time ground-state
@@ -175,12 +197,13 @@ limit \(K_t\), as \(a\to0\) along the scaling curve (after the specified
 volume limit).
 \end{quote}
 
-On any fixed lattice both quantities are finite and positive and
-Corollary 2 holds unconditionally, so (F1) is entirely a statement about
-the continuum limit. Its first half is the flow's renormalization
-property in the Hamiltonian framework; its second half, \(\chi>0\), is
-nontriviality: the vacuum is not an eigenstate of the flowed energy
-density.
+For the stated nonconstant smooth finite-lattice observable and positive
+ground state, both quantities are finite and positive and Corollary 2
+holds, so (F1) is entirely a statement about the continuum limit. It
+includes both renormalized Hamiltonian control of the weighted
+derivative and susceptibility, and nontriviality of the integrated
+observable. Four-dimensional Euclidean flow does not prove either
+required equal-time limit by substitution.
 
 \textbf{Proposition 3 (the finiteness half).} Assume the continuum
 theory exists with a unique vacuum and translation invariance, that the
@@ -192,9 +215,61 @@ numerator, the positive susceptibility and spectral-limit hypotheses.
 The remaining clause, \(m>0\), is untouched: nothing above excludes
 \(m=0\).
 
-\hypertarget{the-free-maxwell-check-and-the-coupling-correction}{%
-\subsection{5. The free Maxwell check and the coupling
-correction}\label{the-free-maxwell-check-and-the-coupling-correction}}
+\hypertarget{inverse-moments-what-finiteness-does-and-does-not-imply}{%
+\subsection{Inverse moments: what finiteness does and does not
+imply}\label{inverse-moments-what-finiteness-does-and-does-not-imply}}
+
+For a finite measure \(M_0>0\), a positive channel edge makes every
+inverse moment finite. The converse fails. For example, with supplied
+energy \(A>0\), \[d\rho(E)=\mathbf1_{(0,E_*]}e^{-A/E}dE,\qquad E_*>0,\]
+has edge zero and, for \(k\ge2\),
+\[M_{-k}=A^{1-k}\int_{A/E_*}^{\infty}u^{k-2}e^{-u}du<\infty.\] \(M_0\)
+and \(M_{-1}\) are also finite because the upper energy is bounded and
+the exponential suppresses the lower endpoint. The earlier full gamma
+expression applies only if the upper integration endpoint is infinite;
+the truncated countermodel uses this incomplete integral. It has every
+inverse moment finite while remaining gapless.
+
+Finiteness alone differs from knowledge of the complete sequence. When
+all inverse moments exist, the ratios \(M_{-n+1}/M_{-n}\) tend to
+\(e_\Phi\), possibly zero. One way to see the concentration is to push
+the finite measure forward by \(Y=1/E\): its \(L^n\) norms tend to the
+essential supremum of \(Y\), and log-convexity makes the consecutive
+moment ratios tend to the same endpoint. Thus exact full moment data can
+determine the channel edge; the old assertion that no amount of moment
+information distinguishes it from a gapped measure was too strong. A
+global lower gap still needs observable completeness and uniform control
+over the relevant sectors.
+
+Upper estimates and a gapless example do not close all methods using
+susceptibility. The \href{susceptibility-gap.md}{complete-frame theorem}
+concerns another operator and has its own lower-bound assumptions. The
+physical Yang--Mills problem retains the separate
+\href{mass-gap-obligations-lattice.md}{spectral-limit obligations}.
+
+\hypertarget{free-maxwell-inverse-moment-checks}{%
+\subsection{Free Maxwell inverse-moment
+checks}\label{free-maxwell-inverse-moment-checks}}
+
+For the spatially flowed magnetic scalar computed below, the positive
+zero-momentum spectral weight is proportional to \(k^4e^{-4tk^2}dk\) at
+energy \(E=2\hbar ck\). Elementary Gaussian integrals give
+\[\frac{M_1}{M_0}=\frac8{3\sqrt\pi}\frac{\hbar c}{\sqrt t},\qquad
+ \frac{M_0}{M_{-1}}=\frac{3\sqrt\pi}{4}\frac{\hbar c}{\sqrt t},\qquad
+ \frac{M_{-1}}{M_{-2}}=\frac2{\sqrt\pi}\frac{\hbar c}{\sqrt t}.\] The
+numerical coefficients are approximately 1.504, 1.329 and 1.128. The
+identities use \(\int k^5e^{-4tk^2}dk=1/(64t^3)\),
+\(\int k^4e^{-4tk^2}dk=3\sqrt\pi/(256t^{5/2})\),
+\(\int k^3e^{-4tk^2}dk=1/(32t^2)\) and
+\(\int k^2e^{-4tk^2}dk=\sqrt\pi/(32t^{3/2})\), all over \(k>0\). Here
+\(M_k\) exists for \(k\ge-4\) and diverges for \(k\le-5\). This
+power-law example terminates the ratio hierarchy; the exponentially
+suppressed countermodel above shows that such termination is not
+necessary for edge zero.
+
+\hypertarget{free-maxwell-susceptibility-and-derivative-calculation}{%
+\subsection{Free Maxwell susceptibility and derivative
+calculation}\label{free-maxwell-susceptibility-and-derivative-calculation}}
 
 The coefficient \(g^2\) in the variational bound is cancelled by the
 \(g^{-2}\) dependence of the ratio of the two free-field observables.
@@ -203,10 +278,10 @@ The following is an exact Gaussian calibration; extending it to an
 interacting theory near its confinement scale requires nonperturbative
 control, and an upper bound cannot prove a positive gap.
 
-\hypertarget{a.-free-ground-state}{%
-\subsubsection{5a. Free ground state}\label{a.-free-ground-state}}
+\hypertarget{free-ground-state}{%
+\subsubsection{Free ground state}\label{free-ground-state}}
 
-Take the abelian case of the Hamiltonian of §1,
+Take the abelian case of the Hamiltonian above,
 \[H=\int d^3x\;\Big[\frac{g^2c}{2\hbar}\,\Pi_i\Pi_i+\frac{\hbar c}{2g^2}\,b_ib_i\Big],
 \qquad b_i=\varepsilon_{ijk}\partial_jA_k,
 \qquad[A_i(x),\Pi_j(y)]=i\hbar\delta_{ij}\delta^3(x-y),\] in Coulomb
@@ -221,10 +296,10 @@ ground-state width gives
 \([\hat A]=L^2\), \([(2\pi)^3\delta^3]=L^3\), and \(g^2/2k\) is a
 length.
 
-\hypertarget{b.-equal-time-flow}{%
-\subsubsection{5b. Equal-time flow}\label{b.-equal-time-flow}}
+\hypertarget{equal-time-flow}{%
+\subsubsection{Equal-time flow}\label{equal-time-flow}}
 
-For an abelian field the flow equation of §4 reduces to
+For an abelian field the spatial flow equation above reduces to
 \(\partial_sB_i=\Delta B_i-\partial_i(\partial_jB_j)\), and a transverse
 initial field stays transverse, so
 \[\hat B_i(t,k)=e^{-tk^2}\hat A_i(k),\qquad
@@ -234,8 +309,8 @@ is \(\sqrt{8t}\). Set
 \(\varphi_t=\tfrac12\big(b_t\!\cdot\!b_t-\langle b_t\!\cdot\!b_t\rangle_0\big)\),
 of dimension \(L^{-4}\).
 
-\hypertarget{c.-susceptibility}{%
-\subsubsection{5c. Susceptibility}\label{c.-susceptibility}}
+\hypertarget{susceptibility}{%
+\subsubsection{Susceptibility}\label{susceptibility}}
 
 Write \(G_{ij}(z)=\langle b_{t,i}(z)b_{t,j}(0)\rangle_0\). Using
 \(\varepsilon_{iab}\varepsilon_{jcd}k_ak_cP^{\rm T}_{bd}(k)=k^2P^{\rm T}_{ij}(k)\)
@@ -256,8 +331,8 @@ and \(\alpha=4t\), so \((4t)^{5/2}=32t^{5/2}\),
 =\frac{3g^4}{2048\,\pi^{3/2}\,t^{5/2}} .\] Dimension:
 \([\chi]=[\varphi]^2L^3=L^{-5}\) and \(t^{5/2}\sim L^5\), as required.
 
-\hypertarget{d.-gradient-term}{%
-\subsubsection{5d. Gradient term}\label{d.-gradient-term}}
+\hypertarget{gradient-term}{%
+\subsubsection{Gradient term}\label{gradient-term}}
 
 By Parseval
 \(O=\int d^3y\,\varphi_t=\tfrac12\int\frac{d^3k}{(2\pi)^3}k^2e^{-2tk^2}|\hat A(k)|^2+\text{const}\),
@@ -272,9 +347,9 @@ at twice the flow time. Hence
 using \(\int_0^\infty k^5e^{-\alpha k^2}dk=1/\alpha^3\). Dimension:
 \([\varphi]^2L^2=L^{-6}\) and \(t^3\sim L^6\), as required.
 
-\hypertarget{e.-the-bound-and-coupling-cancellation}{%
-\subsubsection{5e. The bound and coupling
-cancellation}\label{e.-the-bound-and-coupling-cancellation}}
+\hypertarget{the-bound-and-coupling-cancellation}{%
+\subsubsection{The bound and coupling
+cancellation}\label{the-bound-and-coupling-cancellation}}
 
 \[\frac{\langle|D|^2\rangle}{\chi}
 =\frac{g^2}{128\pi^2t^3}\cdot\frac{2048\,\pi^{3/2}t^{5/2}}{3g^4}
@@ -293,14 +368,14 @@ corrected statement is that the perturbative bound is
 through the corrections. The \(t\)-dependence \(1/\sqrt{8t}\) of the
 earlier note stands.
 
-\hypertarget{f.-two-photon-sum-rule-check}{%
-\subsubsection{5f. Two-photon sum-rule
-check}\label{f.-two-photon-sum-rule-check}}
+\hypertarget{two-photon-sum-rule-check}{%
+\subsubsection{Two-photon sum-rule
+check}\label{two-photon-sum-rule-check}}
 
-By the spectral reading of §3, the bound equals the mean excitation
-energy weighted by the spectral weight of \(O\). In the free theory
-\(O\) is quadratic in \(\hat A\) and creates two photons of momenta
-\(k\) and \(-k\), of total energy \(2\hbar ck\), with weight
+By the positive spectral representation below, the bound equals the mean
+excitation energy weighted by the spectral weight of \(O\). In the free
+theory \(O\) is quadratic in \(\hat A\) and creates two photons of
+momenta \(k\) and \(-k\), of total energy \(2\hbar ck\), with weight
 proportional to
 \(\big[k^2e^{-2tk^2}\big]^2\big[g^2/2k\big]^2\,k^2\,dk\propto k^4e^{-4tk^2}dk\)
 after the phase-space factor. Therefore
@@ -317,50 +392,15 @@ not a uniform confinement-scale bound. Its decrease at large flow time
 is consistent with a gapless photon; monotonic convergence of the
 interacting spectral mean to the lowest energy is not proved.
 
-\hypertarget{status}{%
-\subsection{6. Status}\label{status}}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-claim
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-status
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Proposition 1, the bound with explicit constants & proved \\
-Corollary 2, intensive zero-momentum form & proved \\
-\(f\)-sum rule reading, conserved-observable check & proved \\
-finiteness of the lattice bound at fixed \(a\) & proved \\
-(F1), continuum limit of the flowed equal-time correlators & hypothesis;
-the flow's renormalization in the Hamiltonian framework \\
-\(\chi>0\) & hypothesis; nontriviality \\
-Free Maxwell ratio and two-photon mean & exact calibration, §5 \\
-\(m>0\) & untouched \\
-\end{longtable}
-
-The single-mode bound and the use of smeared operators as glueball
-interpolators are standard; the statement being recorded is the
-reduction of the Millennium finiteness clause to the positivity of one
-flowed susceptibility, with the constants and hypotheses written out.
-
 \hypertarget{consequence-for-state}{%
-\subsection{7. Consequence for STATE}\label{consequence-for-state}}
+\subsection{Consequence for STATE}\label{consequence-for-state}}
 
-The upper side of the problem is now in the same shape as the lower
-side: an exact inequality at fixed cutoff, plus one renormalization
-hypothesis for the continuum. The two hypotheses are different in kind.
-(F1) concerns flowed observables, which are expected to be renormalized
-by Lüscher's four-dimensional result and whose Hamiltonian counterpart
-is a bounded, self-contained question; the dressed-vacuum problem of
-\href{weak-coupling-feshbach-reduction.md}{the Schur note} concerns the
-state itself. The next steps this suggests, in order: use the explicit
-free-field calibration in §5; then state the Hamiltonian
-flow-renormalization question as its own target, since both the
-upper-side (F1) and the lower-side dressing are instances of it.
+The maintained upper-bound family consists of a regulated variational
+identity, a conditional intensive continuum limit and a positive-measure
+hierarchy. Spatial smearing, temporal admissibility, infrared
+integrability, surviving spectral weight and observable completeness
+retain separate hypotheses. The free calibration and inverse-moment
+countermodel prove no positive global gap. None of these corrections
+supplies new research or removes the separate continuum construction and
+lower-bound obligations.
 \end{document}

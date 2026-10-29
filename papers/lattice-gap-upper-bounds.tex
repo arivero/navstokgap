@@ -2,53 +2,37 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
+\DeclareUnicodeCharacter{1E93}{\d{z}}
 \usepackage{amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}
 \usepackage[hidelinks]{hyperref}
-\hypersetup{pdftitle={Upper bounds on the lattice gap: the Feynman--Bijl inequality, the abelian structure facto},pdfauthor={navstokgap research working notes}}
+\hypersetup{pdftitle={Variational lattice-gap bounds: plaquettes, electric trials and holonomies},pdfauthor={navstokgap research working notes}}
 \newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
-\hypertarget{upper-bounds-on-the-lattice-gap-the-feynmanbijl-inequality-the-abelian-structure-factor-and-the-non-abelian-dressing-obstruction}{%
-\section{Upper bounds on the lattice gap: the Feynman--Bijl inequality,
-the abelian structure factor and the non-abelian dressing
-obstruction}\label{upper-bounds-on-the-lattice-gap-the-feynmanbijl-inequality-the-abelian-structure-factor-and-the-non-abelian-dressing-obstruction}}
+\hypertarget{variational-lattice-gap-bounds-plaquettes-electric-trials-and-holonomies}{%
+\section{Variational lattice-gap bounds: plaquettes, electric trials and
+holonomies}\label{variational-lattice-gap-bounds-plaquettes-electric-trials-and-holonomies}}
 
-The single-mode (Feynman--Bijl) inequality bounds the gap of the
-Kogut--Susskind Hamiltonian above by ground-state expectation values,
-and three consequences follow with explicit constants. (i) For any real
-gauge-invariant function \(O\) of the links,
-\(\Delta^{\rm phys}_{a,L}\le\frac{\hbar cg^2}{2a}\sum_\ell\langle|\nabla_\ell O|^2\rangle/\operatorname{Var}O\);
-for a plaquette this is
-\(\Delta\le\hbar cg^2N/(a\operatorname{Var}\operatorname{Re}\operatorname{tr}U_p)\),
-which together with the strong-coupling lower bound shows that for large
-\(g\) the gap is of order \(g^2\hbar c/a\) on both sides. (ii) For
-compact \(U(1)\) the operator \(O=\sum_\ell\varphi_\ell E_\ell\) is
-gauge invariant without dressing, and the uncertainty principle turns
-the inequality into
-\[\Delta\ \le\ \frac{2\hbar c}{a\,g^2}\;\frac{\hat S(k)}{\langle\cos\theta_p\rangle},
-\qquad\hat S(k)=\frac{\langle\Theta_k^2\rangle}{\sum_p|(d\varphi_k)_p|^2},\quad
-\Theta_k=\sum_p(d\varphi_k)_p\sin\theta_p,\] for every lattice momentum
-\(k\): the abelian gap is bounded by the zero-momentum limit of the
-plaquette-sine structure factor, so a Coulomb phase, where
-\(\hat S(k)\to0\), is gapless, and T2\('\) fails for \(U(1)\) exactly
-through this channel. (iii) For a non-abelian group no operator linear
-in the electric field with c-number coefficients commutes with Gauss's
-law (proved), so the same trial excitation must be dressed with a Wilson
-line, and the dressing contributes to the double commutator an electric
-term of order \(g^2\hbar c/a\) per unit length that does not vanish as
-the wavelength grows: the channel through which the abelian gap closes
-is blocked by gauge invariance, which is the exact place where the
-non-abelian conjecture T2\('\) parts from the abelian theorem. The
-plaquette bound diverges in the continuum limit because plaquette
-fluctuations are ultraviolet dominated, so the finiteness half
-\(m<\infty\) of the conjecture needs smeared operators, and the next
-target is the same inequality for Wilson-flowed observables with a
-flow-Jacobian bound uniform in \(a\). Nothing here is promoted.
+For a specified smooth gauge-invariant link function, the Feynman--Bijl
+identity bounds the physical Kogut--Susskind gap above by its electric
+gradient norm over its variance. Plaquettes give the strong-coupling
+order; an averaged spatial Polyakov loop gives a complementary exact
+susceptibility bound. Replacing its expectations by constant-mode values
+is a separate unproved small-volume step.
 
-\hypertarget{the-inequality}{%
-\subsection{1. The inequality}\label{the-inequality}}
+An abelian electric trial gives a structure-factor gaplessness
+criterion. For a \textbf{semisimple} gauge Lie algebra, a nonzero
+electric trial with constant colour coefficients is excluded by Gauss's
+law. This exclusion neither proves a positive gap nor a universal string
+energy for all dressed trials. Continuum smearing and positive-measure
+moments have their own
+\href{finiteness-half-flowed-susceptibility.md}{canonical treatment}.
+
+\hypertarget{the-feynmanbijl-inequality}{%
+\subsection{The Feynman--Bijl
+inequality}\label{the-feynmanbijl-inequality}}
 
 Let \(H\) be self-adjoint and bounded below with simple ground state
 \(\psi_0\) and next eigenvalue \(E_1\), and let \(O\) be symmetric with
@@ -63,9 +47,9 @@ sector and the same bound holds for \(\Delta^{\rm phys}\). (Feynman,
 Phys. Rev.~94 (1954) 262, metadata; the argument is the two lines
 above.)
 
-\hypertarget{functions-of-the-links-and-the-strong-coupling-order}{%
-\subsection{2. Functions of the links, and the strong-coupling
-order}\label{functions-of-the-links-and-the-strong-coupling-order}}
+\hypertarget{link-functions-and-strong-coupling-order}{%
+\subsection{Link functions and strong-coupling
+order}\label{link-functions-and-strong-coupling-order}}
 
 Take
 \(H=\frac{\hbar c}{a}[\frac{g^2}{2}\sum_\ell(-\Delta_\ell)+\frac2{g^2}\sum_p(N-\operatorname{Re}\operatorname{tr}U_p)]\)
@@ -122,12 +106,13 @@ The plaquette is an ultraviolet observable whose excitation costs an
 energy of order \(\hbar c/a\); the finiteness half \(m<\infty\) of the
 conjecture requires an operator whose ratio
 \(\sum_\ell\langle|\nabla_\ell O|^2\rangle/\operatorname{Var}O\) stays
-of order \(a/\ell\) for a physical length \(\ell\). Section 5 states
-that target.
+of order \(a/\ell\) for a physical length \(\ell\). The
+smeared-susceptibility treatment states the additional continuum
+hypotheses.
 
-\hypertarget{the-abelian-theory-the-gap-is-bounded-by-a-structure-factor}{%
-\subsection{3. The abelian theory: the gap is bounded by a structure
-factor}\label{the-abelian-theory-the-gap-is-bounded-by-a-structure-factor}}
+\hypertarget{abelian-electric-trials-and-the-structure-factor}{%
+\subsection{Abelian electric trials and the structure
+factor}\label{abelian-electric-trials-and-the-structure-factor}}
 
 For compact \(U(1)\) write \(U_\ell=e^{i\theta_\ell}\),
 \(E_\ell=-i\partial/\partial\theta_\ell\),
@@ -149,7 +134,7 @@ With \([E_\ell,h(\theta)]=-i\partial_\ell h\) and the lattice curl
 \([O_\varphi,\cos\theta_p]=i(d\varphi)_p\sin\theta_p\),
 \([O_\varphi,\sin\theta_p]=-i(d\varphi)_p\cos\theta_p\), hence
 \[[O_\varphi,[H,O_\varphi]]=\frac{\hbar c}{ag^2}\sum_p(d\varphi)_p^2\cos\theta_p,\]
-and Section 1 gives
+and the variational identity above gives
 \[\Delta^{\rm phys}\le\frac{\hbar c}{2ag^2}\,\frac{\sum_p(d\varphi)_p^2\,c_0}{\langle O_\varphi^2\rangle_0},
 \qquad c_0=\langle\cos\theta_p\rangle_0,\] where \(c_0\) is independent
 of \(p\) by translation invariance of the unique ground state. To bound
@@ -160,7 +145,8 @@ with \(\langle[O_\varphi,\Theta]\rangle=-ic_0\sum_p\psi_p(d\varphi)_p\).
 Choosing \(\psi=d\varphi\):
 
 \textbf{Theorem 5.} If \(c_0>0\), then for every real \(\varphi\) on the
-links, \[\Delta^{\rm phys}_{a,L}\ \le\ \frac{2\hbar c}{a\,g^2\,c_0}\;
+links with \(d\varphi\ne0\),
+\[\Delta^{\rm phys}_{a,L}\ \le\ \frac{2\hbar c}{a\,g^2\,c_0}\;
 \frac{\langle\Theta_\varphi^2\rangle_0}{\sum_p(d\varphi)_p^2},
 \qquad\Theta_\varphi=\sum_p(d\varphi)_p\sin\theta_p .\] For a plane wave
 \(\varphi_\ell=\cos(k\cdot x_\ell)\,u_{i(\ell)}\) the ratio is the
@@ -179,15 +165,16 @@ and Fröhlich--Spencer prove at weak coupling (abstract, B78), obtained
 here as a consequence of two ground-state quantities, \(c_0\) and
 \(\hat S\). In a confining phase \(\hat S(0)>0\) and the bound is
 finite, consistent with the strong-coupling gap. The theorem does not
-decide which phase occurs; it shows that the abelian question T2\('\) is
-equivalent, at the level of upper bounds, to the behaviour of one
-correlation function at zero momentum.
+decide which phase occurs; it shows that vanishing of this structure
+factor is a sufficient criterion for gaplessness in the specified
+channel. A nonvanishing upper bound gives no converse lower-gap
+criterion.
 
-\hypertarget{the-non-abelian-obstruction}{%
-\subsection{4. The non-abelian
-obstruction}\label{the-non-abelian-obstruction}}
+\hypertarget{semisimple-gauss-law-and-the-limits-of-the-dressing-argument}{%
+\subsection{Semisimple Gauss law and the limits of the dressing
+argument}\label{semisimple-gauss-law-and-the-limits-of-the-dressing-argument}}
 
-\textbf{Proposition 6.} Let \(G\) be non-abelian and
+\textbf{Proposition 6.} Let \(G\) have semisimple Lie algebra and
 \(O=\sum_\ell\sum_a\varphi^a_\ell E^a_\ell\) with c-number coefficients.
 If \(O\) commutes with all Gauss generators, then \(\varphi=0\).
 
@@ -202,71 +189,161 @@ contribution from the entering links. The \(L^c_\ell\) are linearly
 independent operators, so \([G^b_x,O]=0\) for all \(b,x\) forces
 \(f^{bac}\varphi^a_\ell=0\) for all \(b,c\) and every link, that is
 \([\varphi_\ell,T^b]=0\) for all \(b\): \(\varphi_\ell\) lies in the
-centre of the Lie algebra, which is trivial for a semisimple \(G\).
+centre of the Lie algebra, which is zero under the semisimplicity
+hypothesis. \(\square\)
+
+The proof identifies the exact boundary: coefficients must lie in the
+Lie algebra centre. A nonabelian group with a \(U(1)\) factor still
+admits central abelian trials; the former unrestricted ``nonabelian''
+statement was too broad.
+
+Field-dependent gauge-covariant coefficients can produce invariant
+electric trials, with ordering/domain obligations. A Wilson-loop
+dressing is one example; local curvature coefficients are another. For
+such an operator, \([K,O]\) generally contributes to the double
+commutator, but \(O\) is a differential operator rather than a
+multiplication function. Proposition 1's gradient formula cannot be
+substituted for that extra term. The former universal positive cost
+proportional to \(g^2|C|\) was not established. Gauge invariance removes
+the specified c-number semisimple trial; it proves neither a mandatory
+long string nor a nonvanishing dressing energy or lower gap.
+
+\hypertarget{spatial-polyakov-loop-trials}{%
+\subsection{Spatial Polyakov-loop
+trials}\label{spatial-polyakov-loop-trials}}
+
+\hypertarget{the-averaged-holonomy-and-its-exact-bound}{%
+\subsubsection{The averaged holonomy and its exact
+bound}\label{the-averaged-holonomy-and-its-exact-bound}}
+
+Fix a direction \(i\). The lattice decomposes into \(N_s^2\) lines
+parallel to \(i\), each of \(N_s\) links closing around the torus. For a
+line \(\lambda\) let
+\(P_\lambda=\operatorname{Re}\operatorname{tr}\prod_{\ell\in\lambda}U_\ell\),
+the ordered product along the line; it is gauge invariant (a closed
+loop), and \(\bar P_i=N_s^{-2}\sum_\lambda P_\lambda\). Let
+\(O=\bar P_i-\langle\bar P_i\rangle_0\).
+
+\textbf{Polyakov-loop bound.} For every \(g>0\), \(N_s\ge2\) and
+\(SU(N)\) with the normalization of
+\href{mass-gap-obligations-lattice.md}{the obligations map},
+\[\Delta^{\rm phys}_{a,L}\ \le\ \frac{\hbar cg^2}{2a}\,
+\frac{\big\langle\sum_\ell|\nabla_\ell\bar P_i|^2\big\rangle_0}{\operatorname{Var}_0\bar P_i}
+\ \le\ \frac{\hbar c\,g^2N}{4L\,\operatorname{Var}_0\bar P_i}.\]
+
+\emph{Proof.} \(O\) is a real gauge-invariant function of the links with
+zero mean, so Proposition 1 of \href{lattice-gap-upper-bounds.md}{the
+upper-bound note} applies and gives the first inequality. Each link in
+direction \(i\) belongs to exactly one line and links in other
+directions do not enter \(\bar P_i\), so
+\(\nabla_\ell\bar P_i=N_s^{-2}\nabla_\ell P_{\lambda(\ell)}\). For a
+link of \(\lambda\),
+\(X_a\operatorname{tr}\prod U=\operatorname{tr}(T^aM)\) up to a phase
+with \(M\) a cyclic rearrangement of the product, and the completeness
+relation gives
+\(\sum_a|\operatorname{tr}(T^aM)|^2=\tfrac12(N-|\operatorname{tr}M|^2/N)\le N/2\);
+the real part has smaller gradient. Hence
+\(\sum_\ell|\nabla_\ell\bar P_i|^2\le N_s^{-4}\cdot N_s^2\cdot N_s\cdot N/2=N/(2N_s)\),
+and \(\frac{\hbar cg^2}{2a}\cdot\frac{N}{2N_s}=\frac{\hbar cg^2N}{4L}\).
 \(\square\)
 
-The trial excitation of Theorem 5 therefore does not exist in the
-non-abelian theory. A gauge-invariant operator linear in \(E\) must
-carry a Wilson line,
-\(O=\sum_\ell\varphi_\ell\operatorname{tr}(E_\ell W_{C_\ell})\) with
-\(C_\ell\) a closed path through \(\ell\), and then \([K,O]\ne0\): the
-double commutator acquires the term
-\(\frac{\hbar cg^2}{2a}\sum_{\ell'\in C}\langle|\nabla_{\ell'}O|^2\rangle\)
-of Section 2, of order \(g^2\hbar c/a\) per link of \(C\), which does
-not decrease when \(\varphi\) becomes a long-wavelength mode. The
-Feynman--Bijl bound then reads
-\[\Delta^{\rm phys}\le\frac{\text{magnetic term}\ (\propto g^{-2}\hat S\text{-like})+\text{string term}\ (\propto g^2|C|)}{\langle O^2\rangle},\]
-and no choice of \(\varphi\) removes the second numerator. This is the
-precise sense in which gauge invariance blocks, for non-abelian groups,
-the channel through which the abelian gap closes: the excitation that
-would be a photon must be attached to a string whose electric energy is
-set by the cutoff-scale coupling. It is an obstruction to proving
-gaplessness, and it is consistent with T2\('\); it proves nothing in the
-direction of a lower bound.
+\hypertarget{conditional-small-volume-comparison}{%
+\subsubsection{Conditional small-volume
+comparison}\label{conditional-small-volume-comparison}}
 
-\hypertarget{the-finiteness-half-and-the-flowed-operator-target}{%
-\subsection{5. The finiteness half and the flowed-operator
-target}\label{the-finiteness-half-and-the-flowed-operator-target}}
+For the formal weak-coupling constant-mode comparison, assume the links
+are near the identity and the gauge-invariant content of a Polyakov line
+is the holonomy of the constant mode:
+\(\prod_{\ell\in\lambda}U_\ell\approx\exp(iLa_i)\) with \(a_i=a_i^bT^b\)
+the constant mode of \href{low-dimensional-mass-gap.md}{G07} Proposition
+7, whose ground-state width is \(|a_i|\sim g^{2/3}/L\) in natural units.
+Since \(\operatorname{tr}T^b=0\),
+\[P_\lambda\approx\operatorname{Re}\operatorname{tr}e^{iLa_i}=N-\tfrac14L^2|\vec a_i|^2+O(L^4|a|^4),\qquad
+\nabla_\ell P_\lambda\approx\operatorname{Im}\operatorname{tr}(T^aLa_i)=\tfrac12La_i^a ,\]
+so the variance of \(\bar P_i\) is second order and the gradient first
+order in the constant mode:
+\[\operatorname{Var}_0\bar P_i\approx\tfrac1{16}L^4\operatorname{Var}(|\vec a_i|^2),\qquad
+\Big\langle\sum_\ell|\nabla_\ell\bar P_i|^2\Big\rangle_0\approx N_s^{-4}\cdot N_s^3\cdot\tfrac14L^2\langle|\vec a_i|^2\rangle
+=\frac{L^2\langle|\vec a_i|^2\rangle}{4N_s}.\] For the \(SU(2)\)
+constant-mode model of C133, \(La_i=g^{2/3}\xi_i\) with \(\xi_i\)
+distributed by the unit ground state \(\psi_0^{(3)}\) of
+\(\tfrac12(-\Delta_{\mathbb R^9}+\sum_{i<j}|\vec\xi_i\times\vec\xi_j|^2)\):
+\[\frac{\hbar cg^2}{2a}\cdot\frac{g^{4/3}\langle|\vec\xi_i|^2\rangle/(4N_s)}{g^{8/3}\operatorname{Var}(|\vec\xi_i|^2)/16}
+=\frac{\hbar c}{L}\,g^{2/3}\cdot\frac{2\langle|\vec\xi_i|^2\rangle}{\operatorname{Var}(|\vec\xi_i|^2)} .\]
+The bound is therefore \((\hbar c/L)g^{2/3}\) times the pure number
+\(2\langle|\vec\xi_i|^2\rangle/\operatorname{Var}(|\vec\xi_i|^2)\),
+finite because the unit ground state decays faster than any power along
+the valleys (the confining bound of C133 gives exponential decay of
+\(\psi_0\) in \(\sum_i|\vec\xi_i|\)). Consistency with the exact
+zero-mode gap \(\delta_1^{(3)}g^{2/3}\hbar c/L\) requires this number to
+be at least \(\delta_1^{(3)}\), which is the Feynman--Bijl inequality
+applied inside the zero-mode model with the trial operator
+\(|\vec\xi_i|^2\); the model version of the Polyakov-loop bound is exact
+and says exactly that.
 
-Jaffe--Witten require \(m<\infty\). On the lattice every bound above is
-finite, and the continuum question is whether some gauge-invariant
-observable has
-\(\frac{\hbar cg^2}{2a}\sum_\ell\langle|\nabla_\ell O|^2\rangle/\operatorname{Var}O\)
-bounded as \(a\to0\) along the scaling curve. Plaquettes fail (Section
-2). Wilson-flowed observables (Lüscher's flow,
-\href{../docs/Luscher_WilsonFlow_1006.4518v3.md}{local companion},
-equations (1.1)--(2.4) at passage level) are smooth functions of the
-links smeared over the physical radius \(\sqrt{8t}\); for them
-\(\nabla_\ell O_t\) is the flow Jacobian, and the target statement is
+What is proved and what is not: the Polyakov-loop bound is exact. The
+two approximations, replacing the ground-state expectations by their
+constant-mode values, are the leading order of the small-volume
+expansion (Lüscher; abstract, B78) and are not proved here. The
+statement that follows from them is that the exact lattice inequality
+carries the \(g^{2/3}\) scaling of the small-volume corner on its upper
+side; a lower bound with that scaling remains the open weak-coupling
+target of STATE.
 
-\begin{quote}
-\textbf{T\(_{\rm fin}\).} For the flowed energy density
-\(O_t=t^2\operatorname{tr}F_t^2\) at fixed physical flow time \(t\),
-\(\sum_\ell\langle|\nabla_\ell O_t|^2\rangle\) is \(O(a^3t^{-3/2})\)
-times a number uniform in \(a\), so that
-\(\Delta\le C(t)\,\hbar c/\sqrt{8t}\) in the continuum limit.
-\end{quote}
+\hypertarget{infinite-volume-susceptibility-condition}{%
+\subsubsection{Infinite-volume susceptibility
+condition}\label{infinite-volume-susceptibility-condition}}
 
-The ingredient to prove is a diamagnetic-type bound on the linearized
-flow, which is a covariant heat equation with a curvature term; the
-covariant heat kernel obeys the scalar Gaussian bound by Kato's
-inequality, and the curvature term must be controlled by the flow's own
-a-priori estimates. This is the next theorem-sized target on the upper
-side; it delivers the finiteness half of the conjecture in the
-finite-volume continuum theory once existence is available, and its
-proof would be the first continuum-uniform spectral statement in this
-programme.
+Suppose the lattice theory at fixed \(a\) and \(g\) has infinite-volume
+gap \(\Delta_a=\liminf_{N_s\to\infty}\Delta_{a,L}>0\) (T2\('\)), and
+write \(mc^2=\Delta_a\). the Polyakov-loop bound gives, for every \(L\),
+\[\operatorname{Var}_0\bar P_i\ \le\ \frac{\hbar cg^2N}{4L\,\Delta_{a,L}} .\]
+By translation invariance in the transverse plane,
+\(\operatorname{Var}_0\bar P_i=N_s^{-2}\sum_{y}C_i(y)\) with
+\(C_i(y)=\langle\operatorname{Re}P_\lambda(x)\operatorname{Re}P_\lambda(x+y)\rangle_c\)
+the connected two-point function of the spatial Polyakov loop at
+transverse separation \(y\). Hence
+
+\textbf{Susceptibility consequence.} If the infinite-volume gap is
+\(mc^2>0\), then along any sequence of boxes on which
+\(\Delta_{a,L}\ge mc^2/2\),
+\[\sum_{y\in\text{transverse plane}}a^2\,C_i(y)\ \le\ \frac{\hbar cg^2N}{2mc^2}\,L ,\]
+and the averaged spatial Polyakov loop self-averages at least like
+\(1/L\).
+
+Reading: in a confining phase the spatial Polyakov loop of length \(L\)
+has connected correlations decaying on a transverse scale \(\xi\), and
+the left side is of order \(\xi^2\langle P^2\rangle_c\), so the
+corollary is satisfied with room; in a phase where the loop orders or
+its correlations do not decay, the left side grows like \(L^2\) and the
+corollary forbids a gap. It is a necessary condition only, but it is one
+written entirely in terms of a single gauge-invariant correlation and
+the coupling, with no reference to the spectrum.
+
+\hypertarget{the-haar-strong-coupling-comparison}{%
+\subsubsection{The Haar strong-coupling
+comparison}\label{the-haar-strong-coupling-comparison}}
+
+At \(g=\infty\) the links are independent Haar variables, distinct lines
+are independent, and
+\(\langle|\operatorname{tr}U_1\cdots U_{N_s}|^2\rangle=1\) for a product
+of independent Haar elements of \(SU(N)\) (the product is again Haar
+distributed), so \(\operatorname{Var}P_\lambda=\tfrac12\) for \(N\ge3\)
+and \(\operatorname{Var}\bar P_i=1/(2N_s^2)\). the Polyakov-loop bound
+then reads \(\Delta\le\hbar cg^2NN_s^2/(2L)\), which grows with the
+lattice and says nothing. The averaged loop is the wrong trial operator
+in the disordered phase, as the plaquette is in the ordered one; the two
+bounds are complementary, and neither is uniform in \(a\) along the
+scaling curve.
 
 \hypertarget{consequence-for-state}{%
-\subsection{6. Consequence for STATE}\label{consequence-for-state}}
+\subsection{Consequence for STATE}\label{consequence-for-state}}
 
-The upper side of the lattice route is organized: Proposition 1 is the
-tool, Corollary 3 fixes the strong-coupling gap to order
-\(g^2\hbar c/a\) on both sides, Theorem 5 reduces the abelian T2\('\) to
-a structure factor, and Proposition 6 with the string term is where the
-non-abelian theory escapes that reduction. Two targets follow:
-T\(_{\rm fin}\) via flowed observables (upper side, continuum), and, on
-the lower side, the weak-coupling lattice bound of STATE step 3 whose
-obstruction is now sharper: any lower-bound argument must use gauge
-invariance in the way Proposition 6 shows the upper bound is forced to.
+The exact upper bounds retain their specified trial states, groups,
+variances, units and finite-volume domains. Strong-coupling order, a
+vanishing abelian structure factor and a Polyakov susceptibility
+constraint answer different questions. Neither a nonzero upper bound nor
+the absence of one constant-colour trial establishes a lower gap. The
+small-volume spectral transport and the continuum equal-time smearing
+hypotheses remain open.
 \end{document}

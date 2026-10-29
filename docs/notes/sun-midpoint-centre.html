@@ -80,24 +80,11 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </nav></div></header>
 <main class="wrap">
 <h1>The bridge midpoint on a compact group at any cut: windings and the
-centre</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/sun-midpoint-centre.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/sun-midpoint-centre.pdf">PDF</a></p><p><strong>After refereeing (GPT-6 Astra, 2026-09-28).</strong> A1 and
-A1’: ACCEPT the single- and several-cut identities, with REFINE for
-metric identifications, regularity and the extended-character iteration
-spelled out below. A2: ACCEPT both reductions; correct the SU(2) theorem
-number and the bridge orientation. A3–A4: ACCEPT the centre criterion,
-torsion, phases and norms; REFINE the focal-point and relative-exponent
-qualifications. A5: ACCEPT the numerical threshold; REFINE its
-application and the screening discussion. The image expansion carries
-signed polynomial amplitudes; the probability-mixture and
-topological-winding readings for simply connected groups are REJECTED.
-The thin-vortex placement remains a semiclassical interpretation of
-exact central phases. All checks used written derivations.</p>
-<p><strong>Result, 2026-09-28 (Claude; refereed with corrections
-above).</strong> Let <span class="math inline">\(G\)</span> be a compact
-connected simply connected Lie group with a bi-invariant metric, let
-<span class="math inline">\(t&gt;0\)</span>, and take the heat-kernel
-bridge of total heat time <span class="math inline">\(t\)</span> from
-<span class="math inline">\(e\)</span> to <span
+centre</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/sun-midpoint-centre.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/sun-midpoint-centre.pdf">PDF</a></p><p>Let <span class="math inline">\(G\)</span> be a compact connected
+simply connected Lie group with a bi-invariant metric, let <span
+class="math inline">\(t&gt;0\)</span>, and take the heat-kernel bridge
+of total heat time <span class="math inline">\(t\)</span> from <span
+class="math inline">\(e\)</span> to <span
 class="math inline">\(g=e^{iX}\)</span>, cut at fraction <span
 class="math inline">\(s\in(0,1)\)</span>, so that the first piece has
 heat time <span class="math inline">\(st\)</span>. For every irreducible
@@ -206,6 +193,12 @@ class="math inline">\((R/12)^k/k!\)</span>; <span
 class="math inline">\((R/6)^k/k!\)</span> uses heat time for <span
 class="math inline">\(\Delta\)</span>. No novelty is claimed for the
 method.</p>
+<p>The Cartan-image amplitudes are signed polynomials. A positive
+winding mixture is available for <span
+class="math inline">\(U(1)\)</span>, while the simply connected
+nonabelian image labels are not topological winding sectors. Thin-vortex
+placement remains a semiclassical interpretation. Checks are internal
+written derivations.</p>
 <h2 id="conventions">1. Conventions</h2>
 <p>The group metric is that of the <a
 href="series-parallel-gauge-refinement.html">series/parallel note</a>
@@ -350,17 +343,17 @@ class="math inline">\(v&#39;+\kappa&#39;\)</span> lies off a wall.</p>
 class="math inline">\(s|v|^2+(1-s)|v+\kappa|^2=|v+(1-s)\kappa|^2+s(1-s)|\kappa|^2\)</span>.</p></li>
 <li><p><em>Poisson summation</em> over <span
 class="math inline">\(P\)</span>, whose dual lattice is <span
-class="math inline">\(Q^\vee\)</span>: <span
-class="math inline">\(\sum_{v\in P}f(v)={\rm vol}(\mathfrak
-t^*/P)^{-1}\sum_{H\in Q^\vee}\hat f(H)\)</span> with <span
-class="math inline">\(\hat f(H)=\int f(y)e^{-2\pi i\langle
+class="math inline">\(Q^\vee\)</span>:</p></li>
+</ol>
+<p><span class="math display">\[\sum_{v\in P}f(v)={\rm vol}(\mathfrak
+t^*/P)^{-1}\sum_{H\in Q^\vee}\hat f(H).\]</span></p>
+<p>Here <span class="math inline">\(\hat f(H)=\int f(y)e^{-2\pi i\langle
 y,H\rangle}dy\)</span>. With <span
 class="math inline">\(y=u-(1-s)\kappa\)</span> one has <span
 class="math inline">\(\langle y+\kappa,X\rangle=\langle
 u,X\rangle+s\langle\kappa,X\rangle\)</span> and <span
 class="math inline">\(\langle y,H\rangle=\langle
-u,H\rangle-(1-s)\langle\kappa,H\rangle\)</span>, so</p></li>
-</ol>
+u,H\rangle-(1-s)\langle\kappa,H\rangle\)</span>, so</p>
 <p><span class="math display">\[\hat
 f(H)=e^{is\langle\kappa,X\rangle}e^{2\pi
 i(1-s)\langle\kappa,H\rangle}\int\pi(u-(1-s)\kappa)\,
@@ -458,10 +451,7 @@ class="math inline">\(s=\frac12\)</span> it is the factor <span
 class="math inline">\(1+ikt/(2\theta)\)</span> behind the <span
 class="math inline">\(-\frac t{2\theta}k\sin\frac{k\theta}2\)</span>
 term of the <span class="math inline">\(SU(2)\)</span> note.</p>
-<h2
-id="reductions-corollary-2-a2-accept-with-orientation-and-numbering-corrections">3.
-Reductions (Corollary 2; A2: ACCEPT with orientation and numbering
-corrections)</h2>
+<span id="reductions-corollary-2-a2-accept-with-orientation-and-numbering-corrections"></span><h2 id="reductions-corollary-2">3. Reductions (Corollary 2)</h2>
 <p><em><span class="math inline">\(U(1)\)</span>.</em> The abelian
 calculation uses <span class="math inline">\(P=Q^\vee=\mathbb
 Z\)</span>, <span class="math inline">\(\pi\equiv1\)</span>, <span
@@ -523,8 +513,7 @@ for <span class="math inline">\(0&lt;\theta&lt;2\pi\)</span>. The cube
 statement in Theorem 3 also uses independence of its four bridges. Thus
 every image agrees, while the character identity alone supplies no
 higher-spin diagonal entries.</p>
-<h2 id="the-centre-corollary-3-a3-accept-geometric-scope-refined">4. The
-centre (Corollary 3; A3: ACCEPT, geometric scope refined)</h2>
+<span id="the-centre-corollary-3-a3-accept-geometric-scope-refined"></span><h2 id="the-centre-corollary-3">4. The centre (Corollary 3)</h2>
 <p><em>Proof.</em> Two weights of one representation differ by an
 element of the root lattice <span class="math inline">\(Q\)</span>, so
 <span class="math inline">\(e^{2\pi
@@ -591,9 +580,8 @@ class="math inline">\(S(U(2)\times U(1))\subset SU(3)\)</span>. The
 identity has the unique constant minimizing geodesic. The word focal
 refers here to the degeneracy of the exponential map at the nontrivial
 central endpoints.</p>
-<h2 id="su3-corollary-4-a4-accept-image-size-qualification-refined">5.
-<span class="math inline">\(SU(3)\)</span> (Corollary 4; A4: ACCEPT,
-image-size qualification refined)</h2>
+<span id="su3-corollary-4-a4-accept-image-size-qualification-refined"></span><h2 id="su3-corollary-4">5. <span class="math inline">\(SU(3)\)</span>
+(Corollary 4)</h2>
 <p>Use <span class="math inline">\(\mathfrak t=\{H\in\mathbb R^3:\sum
 H_i=0\}\)</span>, <span class="math inline">\(Q^\vee=\mathfrak
 t\cap\mathbb Z^3\)</span>, <span class="math inline">\(|H|^2=2\sum
@@ -700,9 +688,8 @@ information: the amplitudes in (1) and (1<span
 class="math inline">\(&#39;\)</span>) include signed Weyl polynomials.
 In particular <span class="math inline">\(G_H\)</span> alone gives no
 probability for such a vortex.</p>
-<h3
-id="b.-fundamental-trisection-with-its-first-image-shells-round-5b-b1">5b.
-Fundamental trisection with its first image shells (Round 5B B1)</h3>
+<span id="b.-fundamental-trisection-with-its-first-image-shells-round-5b-b1"></span><h3 id="b.-fundamental-trisection-and-first-image-shells">5b.
+Fundamental trisection and first image shells</h3>
 <p>For <span class="math inline">\(t&gt;0\)</span>, write <span
 class="math inline">\(X=\operatorname{diag}(x_1,x_2,x_3)\)</span> with
 <span class="math inline">\(\sum x_i=0\)</span> and initially <span

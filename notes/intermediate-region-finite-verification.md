@@ -30,7 +30,7 @@ Three consequences, each a chain of known results:
    one where $\xi/a$ is moderate, that is precisely the intermediate
    region; the weak side, where $\xi/a=1/(a\Lambda)$ grows beyond any
    box, is the domain of the renormalization group, and the target box
-   of [the target-box note](strong-coupling-target-box.md) may be
+   of [the target-box note](strong-coupling-uniform-gap.md#bounded-local-perturbations-and-the-existential-target-region) may be
    replaced by the verified interval, whose openness radius supplies
    the tolerance.
 
@@ -124,7 +124,7 @@ finite-range bounded terms, since the criteria are stated for general
 finite-range interactions.
 
 **Correction, 2026-10-02.** The maintained
-[target-box note](strong-coupling-target-box.md) proves an existential
+[target-box note](strong-coupling-uniform-gap.md#bounded-local-perturbations-and-the-existential-target-region) proves an existential
 Hamiltonian tolerance and withdraws its explicit continuous-time values.
 That theorem and a Wilson finite-size mixing margin concern different
 operators. Neither supplies the other's numerical openness radius.

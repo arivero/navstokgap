@@ -214,7 +214,7 @@ additional estimates even on the Euclidean side.
 The original assertion that local large-field regions are exponentially
 rare at the required rate in the Hamiltonian ground state is withdrawn.
 The global estimate does not supply the local input sought in
-[the typical-field note](flow-jacobian-truncation-error.md#free-field-size-is-a-benchmark-not-a-supremum-bound) or
+[the typical-field note](flow-conjugation-truncation.md#free-field-size-is-a-benchmark-not-a-supremum-bound) or
 [the flow-before-decimation note](flow-conjugation-truncation.md).
 
 ## 4. Scope, excited states and the missing local input

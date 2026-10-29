@@ -1,10 +1,11 @@
-# Classical detector clicks: thresholds, shared release and coincidence bounds
+# Classical detector records: thresholds, reliability and coincidence bounds
 
 Independently prepared receivers with monotone responses to **fixed fractions
 of one common scalar pulse energy**, counted on the same full gate ensemble,
 obey $p_{12}\ge p_1p_2$. This is the strongest exclusion below: saturation,
-unequal efficiencies and independent dark triggers preserve it. A passive
-barrier supplies discrete crossings but no universal threshold; a shared
+unequal efficiencies and independent dark triggers preserve it. The activated-rate model gives a sharp retention/deadline cost under fixed
+attempt frequency and transduction. A passive barrier supplies discrete
+crossings but no universal threshold; a shared
 release supplies exclusive fringe-weighted records by changing the independence
 premise. Neither the exclusion nor these classical constructions selects
 physical $\hbar$ or reconstructs quantum states and instruments.
@@ -183,6 +184,148 @@ threshold scales $\Delta/\omega$ and $(\Delta-e_0)/\omega$ depend on frequency
 and readiness. Barrier energy times crossing time is another apparatus scale,
 with a separatrix divergence rather than a selected constant.
 
+## Thermal retention and response deadlines
+
+The following is an effective stochastic receiver with an unchanged bath and
+a fixed activated-rate prefactor. It is not derived from the conservative
+quartic trajectory above. Its optimal barrier cost and the later shared-release
+architecture answer different questions: reliable single-channel triggering
+and exclusive two-channel competition.
+
+### Retention and the stipulated rates
+
+Let $T>0$ be bath temperature, $k_B$ Boltzmann's constant, and $\nu>0$ an attempt
+frequency in inverse seconds. A prepared metastable receiver has residual
+activation barrier $b\ge0$, measured in energy units. Its first recorded escape
+is an absorbing event. The stipulated dark rate is
+
+$$r_0=\nu e^{-b/(k_BT)}. \tag{1}$$
+
+Thus the survival probability S solves $dS/dt=-r_0S$, $S(0)=1$, giving
+$S(t)=\exp(-r_0t)$. Absorption describes a monitored first event; maintaining a
+permanent physical record and resetting it remain separate apparatus tasks.
+Retention here means absence of a false first event while armed.
+
+During a signal gate of duration $t_g>0$ the barrier is reduced by an amount
+$u\ge0$, held constant throughout the gate. Use the explicitly capped model
+
+$$r_1=\nu e^{-\max(b-u,0)/(k_BT)}. \tag{2}$$
+
+Here $u$ denotes an energy change, whereas $\nu$ denotes a rate. The cap prevents
+an unphysical extrapolation to rates above the stipulated attempt frequency.
+It is a model definition, not a Kramers formula near a vanishing barrier.
+The same $\nu$ in (1) and (2), an unchanged bath and exponential holding times
+are essential premises. Sustaining u may require work from a control source;
+no equality between u and input pulse energy has yet been assumed.
+
+Require false-event probability at most $\epsilon$ over a dark interval $\tau>0$,
+and miss probability at most $\eta$ in a subsequent signal gate, conditional on
+surviving to that gate. For $0<\epsilon,\eta<1$, define
+
+$$a=-\log(1-\epsilon)>0,\qquad c=\log(1/\eta)>0. \tag{3}$$
+
+The two requirements are exactly
+
+$$r_0\tau\le a,\qquad r_1t_g\ge c. \tag{4}$$
+
+Conditional efficiency matters: the probability of both surviving the dark
+interval and firing in the gate is $\exp(-r_0\tau)[1-\exp(-r_1t_g)]$. The
+separate bounds ensure it is at least $(1-\epsilon)(1-\eta)$.
+
+### Exact feasibility and the optimal barrier
+
+Timely detection is impossible in this model if $\nu t_g<c$, even with zero
+remaining barrier. If $\nu t_g\ge c$, define
+
+$$B=\max\!\left(0,k_BT\log\frac{\nu\tau}{a}\right),\qquad
+D=k_BT\log\frac{\nu t_g}{c}\ge0. \tag{5}$$
+
+The feasible designs are precisely
+
+$$b\ge B,\qquad u\ge\max(0,b-D). \tag{6}$$
+
+Indeed, taking logarithms of (4) first gives $b\ge k_BT\log(\nu\tau/a)$.
+The signal inequality gives $\max(b-u,0)\le D$. Since $D\ge0$, this is equivalent
+to $b-u\le D$, proving (6). Every point in (6) satisfies both original probability
+bounds, including the equality cases. Minimizing over $b\ge0$ therefore yields
+
+$$u_{\min}=\max(0,B-D)
+ =k_BT\left[\log\frac{c\tau}{a t_g}\right]_+,
+ \qquad \nu t_g\ge c, \tag{7}$$
+
+where $[x]_+=\max(x,0)$. For the last equality, if $\nu\tau\le a$ then $B=0$;
+feasibility also gives $c\tau/(at_g)\le\nu\tau/a\le1$. If $\nu\tau>a$, subtract
+the two logarithms in (5). This checks both branches without extending a
+negative barrier.
+
+In the discriminating regime $c\tau>at_g$, choose $b=B$ and $u=B-D$. Both
+probability constraints then saturate. If $c\tau\le at_g$, a design with $u=0$
+can already satisfy them: the timing/error specification is too weak to
+require signal discrimination. A nonzero temperature alone is insufficient.
+
+### Preloading, deadlines and the prefactor countermodel
+
+At fixed $T,\nu,\tau,\epsilon$ with $\nu\tau>a$, preloading cannot reduce b
+below B while satisfying dark retention. This closes the zero-residual-barrier
+route within the specified metastable class. A receiver with bare barrier
+$\Delta$ and a sustainable preload $e_0$, modeled by $b=\Delta-e_0$, must satisfy
+
+$$0\le e_0\le\Delta-B. \tag{8}$$
+
+If $\Delta<B$ the design cannot meet retention. A particle initially at rest
+near the conservative barrier's unstable saddle is not automatically such a sustainable metastable
+preload: it moves even without noise. Equation (8) applies only if an actual
+preparation/control mechanism realizes (1) for the full dark interval.
+
+Reducing $\nu$ alone improves dark survival but slows detection. The gate floor
+$\nu\ge c/t_g$ prevents using $\nu\to0$ at fixed gate and miss tolerance. In the
+positive-bound regime the same prefactor cancels from (7), exposing the
+required contrast $r_1/r_0\ge c\tau/(at_g)$. Retention alone would not give
+this protection: it is the combined dark and signal requirement that does so.
+
+If the signal can instead change the prefactor, a rate-only alternative is
+
+$$r_0=\nu_0 e^{-b/(k_BT)},\qquad
+r_1=\nu_1 e^{-b/(k_BT)}. \tag{9}$$
+
+For any fixed $b\ge0$ choose $\nu_0=(a/\tau)\exp(b/(k_BT))$ and
+$\nu_1=(c/t_g)\exp(b/(k_BT))$. Both specifications hold with $u=0$. This is an
+exact counterexample to an inference from probabilities alone to barrier
+reduction, not a construction of a zero-work autonomous detector. Changing
+mobility, coupling or access to a reaction channel has its own physical
+control cost, which (9) does not specify.
+
+### Transduction, energy and action
+
+To infer incident work W, add the explicit transduction premise
+
+$$u\le\chi W,\qquad 0<\chi<\infty, \tag{10}$$
+
+with fixed dimensionless $\chi$ and with all sources contributing to barrier
+control included in W. Then (7) implies
+
+$$W\ge\frac{k_BT}{\chi}
+ \left[\log\frac{c\tau}{a t_g}\right]_+. \tag{11}$$
+
+A stored-energy amplifier need not obey (10) for signal work alone. Nor is a
+barrier-height change automatically dissipated heat or reset work: it concerns
+the energy landscape along an escape path, not the work along the actual
+control trajectory. the conservative barrier's cycle accounting remains necessary.
+
+For the mechanical interference model's narrow-band wave input of angular frequency $\omega$, canonical wave
+action is approximately $W/\omega$. Under (10) its corresponding lower bound is
+the right side of (11) divided by $\omega$. A finite-pulse wave-action definition
+must retain the mechanical interference model's bandwidth qualification. Alternatively $Wt_g$ has action
+units but describes a different quantity. Neither choice removes $T$, error
+rates, timing, transduction or frequency from the result.
+
+Within the stipulated rate-model class, $T\to0$ at fixed $\nu$ and fixed
+specifications sends the optimal b, u and W bound to zero while preserving
+all rate ratios. No microscopic low-temperature extrapolation is claimed.
+Allowing larger $\chi$ also removes a bound on signal work; allowing $t_g\ge c\tau/a$
+removes the positive discrimination requirement. These are explicit class
+limits, not quantum predictions.
+
 ## Exclusive shared release and causal timing
 
 ### One release permission with supplied hazards
@@ -264,12 +407,25 @@ receiver model. The [B67 companion](../docs/batches/B67/quantum-premise-source-c
 supplies the recorded operational-premise comparison. No exhaustive priority
 search or independent proof acceptance is implied.
 
+For the activated-rate model, source context is limited. The existing
+[B23 companion](../docs/batches/B23/harmonic-receiver-source-companion.md),
+Zwanzig p. 219 (21)--(24), supplies a bath-memory construction, not (1).
+One discovery search located Hänggi, Talkner and Borkovec,
+*Reaction-rate theory: fifty years after Kramers*, Rev. Mod. Phys. 62,
+251--341 (1990), [DOI](https://doi.org/10.1103/RevModPhys.62.251).
+Its bibliographic metadata/abstract identify activated escape as established
+context. The PDF was opened but no rate formula is imported from it; this is
+not a passage or prior-art audit. Equations (1), (2) and (10) are declared
+premises; (3)--(8) and (11) are written consequences; (9) tests an omitted
+coupling premise. The displayed rate laws and transduction law are premises; the optimality
+calculation is internal written mathematics, not independent peer review.
+
 ## Consequence for STATE
 
 Clicks, exclusive fringe weights and a fixed-split coincidence exclusion have
 different premises. The retained passive-barrier and shared-release countermodels
 locate those differences explicitly. Further receiver tuning remains parked;
-any reliable-record floor needs a separately justified stability, retention and
-error law, and any identification with physical $\hbar$ needs dynamics and
+the thermal optimum retains its specified rate, timing, temperature and
+transduction premises, and any identification with physical $\hbar$ needs dynamics and
 calibration beyond dimensionless event statistics. The independent-setting
 CHSH question retains its separate proof and supplied quantum comparison.

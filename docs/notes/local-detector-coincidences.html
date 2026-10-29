@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Classical detector clicks: thresholds, shared release and coincidence bounds</title>
+<title>Classical detector records: thresholds, reliability and coincidence bounds</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,16 +79,18 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>Classical detector clicks: thresholds, shared release and coincidence
+<h1>Classical detector records: thresholds, reliability and coincidence
 bounds</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/local-detector-coincidences.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/local-detector-coincidences.pdf">PDF</a></p><p>Independently prepared receivers with monotone responses to
 <strong>fixed fractions of one common scalar pulse energy</strong>,
 counted on the same full gate ensemble, obey <span
 class="math inline">\(p_{12}\ge p_1p_2\)</span>. This is the strongest
 exclusion below: saturation, unequal efficiencies and independent dark
-triggers preserve it. A passive barrier supplies discrete crossings but
-no universal threshold; a shared release supplies exclusive
-fringe-weighted records by changing the independence premise. Neither
-the exclusion nor these classical constructions selects physical <span
+triggers preserve it. The activated-rate model gives a sharp
+retention/deadline cost under fixed attempt frequency and transduction.
+A passive barrier supplies discrete crossings but no universal
+threshold; a shared release supplies exclusive fringe-weighted records
+by changing the independence premise. Neither the exclusion nor these
+classical constructions selects physical <span
 class="math inline">\(\hbar\)</span> or reconstructs quantum states and
 instruments.</p>
 <p>The proofs concern declared receiver models. They are written
@@ -302,6 +304,172 @@ class="math inline">\(\Delta/\omega\)</span> and <span
 class="math inline">\((\Delta-e_0)/\omega\)</span> depend on frequency
 and readiness. Barrier energy times crossing time is another apparatus
 scale, with a separatrix divergence rather than a selected constant.</p>
+<h2 id="thermal-retention-and-response-deadlines">Thermal retention and
+response deadlines</h2>
+<p>The following is an effective stochastic receiver with an unchanged
+bath and a fixed activated-rate prefactor. It is not derived from the
+conservative quartic trajectory above. Its optimal barrier cost and the
+later shared-release architecture answer different questions: reliable
+single-channel triggering and exclusive two-channel competition.</p>
+<h3 id="retention-and-the-stipulated-rates">Retention and the stipulated
+rates</h3>
+<p>Let <span class="math inline">\(T&gt;0\)</span> be bath temperature,
+<span class="math inline">\(k_B\)</span> Boltzmann’s constant, and <span
+class="math inline">\(\nu&gt;0\)</span> an attempt frequency in inverse
+seconds. A prepared metastable receiver has residual activation barrier
+<span class="math inline">\(b\ge0\)</span>, measured in energy units.
+Its first recorded escape is an absorbing event. The stipulated dark
+rate is</p>
+<p><span class="math display">\[r_0=\nu e^{-b/(k_BT)}.
+\tag{1}\]</span></p>
+<p>Thus the survival probability S solves <span
+class="math inline">\(dS/dt=-r_0S\)</span>, <span
+class="math inline">\(S(0)=1\)</span>, giving <span
+class="math inline">\(S(t)=\exp(-r_0t)\)</span>. Absorption describes a
+monitored first event; maintaining a permanent physical record and
+resetting it remain separate apparatus tasks. Retention here means
+absence of a false first event while armed.</p>
+<p>During a signal gate of duration <span
+class="math inline">\(t_g&gt;0\)</span> the barrier is reduced by an
+amount <span class="math inline">\(u\ge0\)</span>, held constant
+throughout the gate. Use the explicitly capped model</p>
+<p><span class="math display">\[r_1=\nu e^{-\max(b-u,0)/(k_BT)}.
+\tag{2}\]</span></p>
+<p>Here <span class="math inline">\(u\)</span> denotes an energy change,
+whereas <span class="math inline">\(\nu\)</span> denotes a rate. The cap
+prevents an unphysical extrapolation to rates above the stipulated
+attempt frequency. It is a model definition, not a Kramers formula near
+a vanishing barrier. The same <span class="math inline">\(\nu\)</span>
+in (1) and (2), an unchanged bath and exponential holding times are
+essential premises. Sustaining u may require work from a control source;
+no equality between u and input pulse energy has yet been assumed.</p>
+<p>Require false-event probability at most <span
+class="math inline">\(\epsilon\)</span> over a dark interval <span
+class="math inline">\(\tau&gt;0\)</span>, and miss probability at most
+<span class="math inline">\(\eta\)</span> in a subsequent signal gate,
+conditional on surviving to that gate. For <span
+class="math inline">\(0&lt;\epsilon,\eta&lt;1\)</span>, define</p>
+<p><span class="math display">\[a=-\log(1-\epsilon)&gt;0,\qquad
+c=\log(1/\eta)&gt;0. \tag{3}\]</span></p>
+<p>The two requirements are exactly</p>
+<p><span class="math display">\[r_0\tau\le a,\qquad r_1t_g\ge c.
+\tag{4}\]</span></p>
+<p>Conditional efficiency matters: the probability of both surviving the
+dark interval and firing in the gate is <span
+class="math inline">\(\exp(-r_0\tau)[1-\exp(-r_1t_g)]\)</span>. The
+separate bounds ensure it is at least <span
+class="math inline">\((1-\epsilon)(1-\eta)\)</span>.</p>
+<h3 id="exact-feasibility-and-the-optimal-barrier">Exact feasibility and
+the optimal barrier</h3>
+<p>Timely detection is impossible in this model if <span
+class="math inline">\(\nu t_g&lt;c\)</span>, even with zero remaining
+barrier. If <span class="math inline">\(\nu t_g\ge c\)</span>,
+define</p>
+<p><span
+class="math display">\[B=\max\!\left(0,k_BT\log\frac{\nu\tau}{a}\right),\qquad
+D=k_BT\log\frac{\nu t_g}{c}\ge0. \tag{5}\]</span></p>
+<p>The feasible designs are precisely</p>
+<p><span class="math display">\[b\ge B,\qquad u\ge\max(0,b-D).
+\tag{6}\]</span></p>
+<p>Indeed, taking logarithms of (4) first gives <span
+class="math inline">\(b\ge k_BT\log(\nu\tau/a)\)</span>. The signal
+inequality gives <span class="math inline">\(\max(b-u,0)\le D\)</span>.
+Since <span class="math inline">\(D\ge0\)</span>, this is equivalent to
+<span class="math inline">\(b-u\le D\)</span>, proving (6). Every point
+in (6) satisfies both original probability bounds, including the
+equality cases. Minimizing over <span
+class="math inline">\(b\ge0\)</span> therefore yields</p>
+<p><span class="math display">\[u_{\min}=\max(0,B-D)
+=k_BT\left[\log\frac{c\tau}{a t_g}\right]_+,
+\qquad \nu t_g\ge c, \tag{7}\]</span></p>
+<p>where <span class="math inline">\([x]_+=\max(x,0)\)</span>. For the
+last equality, if <span class="math inline">\(\nu\tau\le a\)</span> then
+<span class="math inline">\(B=0\)</span>; feasibility also gives <span
+class="math inline">\(c\tau/(at_g)\le\nu\tau/a\le1\)</span>. If <span
+class="math inline">\(\nu\tau&gt;a\)</span>, subtract the two logarithms
+in (5). This checks both branches without extending a negative
+barrier.</p>
+<p>In the discriminating regime <span
+class="math inline">\(c\tau&gt;at_g\)</span>, choose <span
+class="math inline">\(b=B\)</span> and <span
+class="math inline">\(u=B-D\)</span>. Both probability constraints then
+saturate. If <span class="math inline">\(c\tau\le at_g\)</span>, a
+design with <span class="math inline">\(u=0\)</span> can already satisfy
+them: the timing/error specification is too weak to require signal
+discrimination. A nonzero temperature alone is insufficient.</p>
+<h3 id="preloading-deadlines-and-the-prefactor-countermodel">Preloading,
+deadlines and the prefactor countermodel</h3>
+<p>At fixed <span class="math inline">\(T,\nu,\tau,\epsilon\)</span>
+with <span class="math inline">\(\nu\tau&gt;a\)</span>, preloading
+cannot reduce b below B while satisfying dark retention. This closes the
+zero-residual-barrier route within the specified metastable class. A
+receiver with bare barrier <span class="math inline">\(\Delta\)</span>
+and a sustainable preload <span class="math inline">\(e_0\)</span>,
+modeled by <span class="math inline">\(b=\Delta-e_0\)</span>, must
+satisfy</p>
+<p><span class="math display">\[0\le e_0\le\Delta-B.
+\tag{8}\]</span></p>
+<p>If <span class="math inline">\(\Delta&lt;B\)</span> the design cannot
+meet retention. A particle initially at rest near the conservative
+barrier’s unstable saddle is not automatically such a sustainable
+metastable preload: it moves even without noise. Equation (8) applies
+only if an actual preparation/control mechanism realizes (1) for the
+full dark interval.</p>
+<p>Reducing <span class="math inline">\(\nu\)</span> alone improves dark
+survival but slows detection. The gate floor <span
+class="math inline">\(\nu\ge c/t_g\)</span> prevents using <span
+class="math inline">\(\nu\to0\)</span> at fixed gate and miss tolerance.
+In the positive-bound regime the same prefactor cancels from (7),
+exposing the required contrast <span class="math inline">\(r_1/r_0\ge
+c\tau/(at_g)\)</span>. Retention alone would not give this protection:
+it is the combined dark and signal requirement that does so.</p>
+<p>If the signal can instead change the prefactor, a rate-only
+alternative is</p>
+<p><span class="math display">\[r_0=\nu_0 e^{-b/(k_BT)},\qquad
+r_1=\nu_1 e^{-b/(k_BT)}. \tag{9}\]</span></p>
+<p>For any fixed <span class="math inline">\(b\ge0\)</span> choose <span
+class="math inline">\(\nu_0=(a/\tau)\exp(b/(k_BT))\)</span> and <span
+class="math inline">\(\nu_1=(c/t_g)\exp(b/(k_BT))\)</span>. Both
+specifications hold with <span class="math inline">\(u=0\)</span>. This
+is an exact counterexample to an inference from probabilities alone to
+barrier reduction, not a construction of a zero-work autonomous
+detector. Changing mobility, coupling or access to a reaction channel
+has its own physical control cost, which (9) does not specify.</p>
+<h3 id="transduction-energy-and-action">Transduction, energy and
+action</h3>
+<p>To infer incident work W, add the explicit transduction premise</p>
+<p><span class="math display">\[u\le\chi W,\qquad 0&lt;\chi&lt;\infty,
+\tag{10}\]</span></p>
+<p>with fixed dimensionless <span class="math inline">\(\chi\)</span>
+and with all sources contributing to barrier control included in W. Then
+(7) implies</p>
+<p><span class="math display">\[W\ge\frac{k_BT}{\chi}
+\left[\log\frac{c\tau}{a t_g}\right]_+. \tag{11}\]</span></p>
+<p>A stored-energy amplifier need not obey (10) for signal work alone.
+Nor is a barrier-height change automatically dissipated heat or reset
+work: it concerns the energy landscape along an escape path, not the
+work along the actual control trajectory. the conservative barrier’s
+cycle accounting remains necessary.</p>
+<p>For the mechanical interference model’s narrow-band wave input of
+angular frequency <span class="math inline">\(\omega\)</span>, canonical
+wave action is approximately <span
+class="math inline">\(W/\omega\)</span>. Under (10) its corresponding
+lower bound is the right side of (11) divided by <span
+class="math inline">\(\omega\)</span>. A finite-pulse wave-action
+definition must retain the mechanical interference model’s bandwidth
+qualification. Alternatively <span class="math inline">\(Wt_g\)</span>
+has action units but describes a different quantity. Neither choice
+removes <span class="math inline">\(T\)</span>, error rates, timing,
+transduction or frequency from the result.</p>
+<p>Within the stipulated rate-model class, <span
+class="math inline">\(T\to0\)</span> at fixed <span
+class="math inline">\(\nu\)</span> and fixed specifications sends the
+optimal b, u and W bound to zero while preserving all rate ratios. No
+microscopic low-temperature extrapolation is claimed. Allowing larger
+<span class="math inline">\(\chi\)</span> also removes a bound on signal
+work; allowing <span class="math inline">\(t_g\ge c\tau/a\)</span>
+removes the positive discrimination requirement. These are explicit
+class limits, not quantum predictions.</p>
 <h2 id="exclusive-shared-release-and-causal-timing">Exclusive shared
 release and causal timing</h2>
 <h3 id="one-release-permission-with-supplied-hazards">One release
@@ -397,12 +565,27 @@ href="https://github.com/arivero/navstokgap/blob/main/docs/batches/B67/quantum-p
 companion</a> supplies the recorded operational-premise comparison. No
 exhaustive priority search or independent proof acceptance is
 implied.</p>
+<p>For the activated-rate model, source context is limited. The existing
+<a
+href="https://github.com/arivero/navstokgap/blob/main/docs/batches/B23/harmonic-receiver-source-companion.md">B23
+companion</a>, Zwanzig p. 219 (21)–(24), supplies a bath-memory
+construction, not (1). One discovery search located Hänggi, Talkner and
+Borkovec, <em>Reaction-rate theory: fifty years after Kramers</em>,
+Rev. Mod. Phys. 62, 251–341 (1990), <a
+href="https://doi.org/10.1103/RevModPhys.62.251">DOI</a>. Its
+bibliographic metadata/abstract identify activated escape as established
+context. The PDF was opened but no rate formula is imported from it;
+this is not a passage or prior-art audit. Equations (1), (2) and (10)
+are declared premises; (3)–(8) and (11) are written consequences; (9)
+tests an omitted coupling premise. The displayed rate laws and
+transduction law are premises; the optimality calculation is internal
+written mathematics, not independent peer review.</p>
 <span id="decision-and-the-remaining-physical-obligation"></span><h2 id="consequence-for-state">Consequence for STATE</h2>
 <p>Clicks, exclusive fringe weights and a fixed-split coincidence
 exclusion have different premises. The retained passive-barrier and
 shared-release countermodels locate those differences explicitly.
-Further receiver tuning remains parked; any reliable-record floor needs
-a separately justified stability, retention and error law, and any
+Further receiver tuning remains parked; the thermal optimum retains its
+specified rate, timing, temperature and transduction premises, and any
 identification with physical <span class="math inline">\(\hbar\)</span>
 needs dynamics and calibration beyond dimensionless event statistics.
 The independent-setting CHSH question retains its separate proof and

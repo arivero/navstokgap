@@ -130,14 +130,14 @@ Wilson criterion, $g^2>24/\log(19/18)$, with $g^2>444$ sufficient.
 Neither sufficient criterion is a phase-transition threshold.
 
 The former explicit KS volume-uniform threshold was withdrawn. Its
-[corrected bound](kogut-susskind-strong-coupling-explicit.md) is
+[corrected bound](strong-coupling-uniform-gap.md#continuous-time-histories-and-the-corrected-overlap-criterion) is
 $$\Delta_{a,L}^{\rm KS}\ge
 \left(\frac83g^2-\frac{12P}{g^2}\right)\frac{\hbar c}{a},
 \qquad P=3(L/a)^3,$$
 on the stated periodic cubic lattices, with $L/a\ge4$. Its volume
 dependence prevents a uniform numerical threshold. The
 [Yarotsky application](strong-coupling-uniform-gap.md) and
-[perturbed target region](strong-coupling-target-box.md) retain
+[perturbed target region](strong-coupling-uniform-gap.md#bounded-local-perturbations-and-the-existential-target-region) retain
 existential volume-uniform statements. Their constants and perturbation
 tolerances do not transfer automatically to Wilson. These fixed-cutoff
 inputs leave arrival from the weak scaling trajectory and continuum

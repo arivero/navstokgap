@@ -31,8 +31,8 @@ The constraint is gauge invariant. It measures a flowed block $L^2$
 norm. It does **not** give a supremum or an adjoint-curvature operator
 norm bound. In particular, it cannot be substituted for the curvature
 upper bound used in the Jacobian estimates of
-[the Jacobian note](flow-jacobian-truncation-error.md) or the corrected
-[instability note, §1](flow-jacobian-truncation-error.md#instability-of-the-full-background-generator)
+[the Jacobian note](flow-conjugation-truncation.md#exact-continuum-variation-and-its-gauge-convention) or the corrected
+[instability note, §1](flow-conjugation-truncation.md#instability-of-the-full-background-generator)
 (relevant passages read). The original phrase “up to replacing a
 supremum by a block average” concealed an additional estimate; that
 identification is withdrawn.
@@ -151,7 +151,7 @@ can have zero modes: $s(x)=x^4$ has no coercive quadratic term at its
 minimum. Gauge degeneracy, boundary geometry, higher terms and
 uniform determinant bounds need separate treatment.
 
-The corrected [instability note, §2](flow-jacobian-truncation-error.md#instability-of-the-full-background-generator)
+The corrected [instability note, §2](flow-conjugation-truncation.md#instability-of-the-full-background-generator)
 (passage read) supplies a negative quadratic mode for a stationary
 constant background in its specified background-transverse sector.
 It excludes that background as a constrained minimum only if an
@@ -162,7 +162,7 @@ minimizer, is supplied here.
 ## A constant-background mode count
 
 Use the continuum background-covariant operator of
-[the instability note, §2](flow-jacobian-truncation-error.md#instability-of-the-full-background-generator) (passage
+[the instability note, §2](flow-conjugation-truncation.md#instability-of-the-full-background-generator) (passage
 read), in four Euclidean dimensions. For one charged complex field,
 with charge magnitude $q>0$ relative to $T^3$, its transverse
 polarizations have eigenvalues

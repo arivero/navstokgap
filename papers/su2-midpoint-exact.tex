@@ -2,6 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
+\DeclareUnicodeCharacter{1E93}{\d{z}}
 \usepackage{amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}
 \usepackage{longtable,booktabs,array,calc}
@@ -15,7 +16,7 @@
 \section{The SU(2) bridge midpoint in closed form: the curvature term is
 exact}\label{the-su2-bridge-midpoint-in-closed-form-the-curvature-term-is-exact}}
 
-\textbf{Result, 2026-09-27.} Proposition 6 of the
+Proposition 6 of the
 \href{series-parallel-gauge-refinement.md}{series/parallel note}
 described the midpoint of the Brownian bridge on \(SU(2)\), the building
 block of the non-abelian parallel insertion, only to leading order in
@@ -35,11 +36,11 @@ Proposition 6(b),
 \(\frac t{32}\cdot\frac2h=\frac t{4\theta}\tan\frac\theta4\). So the
 curvature term N2, the side-flux-dependent softening of the mid-face
 weight, is confirmed with no remainder of order \(t^2\) in the \(w=0\)
-sector: the only correction to the displayed formula is the
-exponentially small winding of the bridge around the group. This is the
-first exact non-abelian statement about the parallel insertion in three
-dimensions, and it settles the fundamental-representation part of the
-uniform Laplace remainder that Proposition 7 of the series/parallel note
+sector: the only correction to the displayed formula consists of
+exponentially small nonzero Cartan-image terms. This gives an exact
+nonabelian statement about the parallel insertion in three dimensions,
+and it settles the fundamental-representation part of the uniform
+Laplace remainder that Proposition 7 of the series/parallel note
 assumes, for the trace in the fundamental representation (the image
 terms are of the stated order, and not uniformly so as
 \(\theta\to2\pi\)).
@@ -284,12 +285,12 @@ computation of Theorem 1, with the Clebsch--Gordan coefficients of
 \subsection{6. The spin-1 matrix and isolated
 cube}\label{the-spin-1-matrix-and-isolated-cube}}
 
-\textbf{Theorem 4 (2026-09-27, GPT-6 Astra; refereed by Fable the same
-day, all fifteen items verified by hand, no errors).} Notation of this
-section: \(E\) in the image bounds, \(A_0\), \(A_1\), \(B(x)\) and
-\(P_j\) are local to Theorem 4 and differ from the quantities of the
-same names in Theorems 1 and 3. The spin-1 midpoint matrix is exactly
-determined by two real entries \(\lambda_0=\Lambda^1_{00}\) and
+\textbf{Theorem 4 (spin-1 midpoint matrix; internal written checks).}
+Notation of this section: \(E\) in the image bounds, \(A_0\), \(A_1\),
+\(B(x)\) and \(P_j\) are local to Theorem 4 and differ from the
+quantities of the same names in Theorems 1 and 3. The spin-1 midpoint
+matrix is exactly determined by two real entries
+\(\lambda_0=\Lambda^1_{00}\) and
 \(\lambda_1=\Lambda^1_{11}=\Lambda^1_{-1,-1}\). The formulas below give
 both entries, including winding, for every \(t>0\) and
 \(0<\theta<2\pi\). They involve a Gaussian tail, which retains

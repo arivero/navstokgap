@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>One action constant from composition and spatial rotations</title>
+<title>Composition and action normalization: reciprocal mechanics, rotations and spin phases</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,57 +79,173 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>One action constant from composition and spatial rotations</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/rotation-composition-universality.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/rotation-composition-universality.pdf">PDF</a></p><p><strong>After refereeing (Fable, 2026-09-27).</strong> The identity
-<span class="math inline">\([L_x,L_y]=i\sum_ih_iL_{iz}\)</span> is
-exact, so Theorem 1’s closure requirement restates <span
-class="math inline">\(h_i=h\)</span>; its content is the premise it
-names, that the measured additive angular momentum is the same multiple
-of the rotation generator for every body. The genuine dynamical result
-is equation (10): if each body’s Newton equations hold with its own
-constant in a shared product, any pair with a nonzero mixed force
-derivative <span
-class="math inline">\(\partial_{ia}\partial_{jb}V\)</span> must have
-<span class="math inline">\(h_i=h_j\)</span>. Interaction forces a
-common constant, with no appeal to centrality or angular momentum; <span
-class="math inline">\(h=0\)</span> stays admissible. Theorem 2 is a
-special case, with the sign of (8) corrected.</p>
-<p><strong>Result, 2026-09-27 (round 2).</strong> Independent
-constituent canonical algebras with constants <span
-class="math inline">\(h_i\)</span> obey <span
-class="math inline">\([L_x,L_y]=i\sum_i h_iL_{iz}\)</span>. Requiring
-the <strong>mechanical sum</strong> <span class="math inline">\(\mathbf
-L=\sum_i\mathbf q_i\times\mathbf p_i\)</span> to obey <span
-class="math inline">\([L_x,L_y]=ihL_z\)</span> as an identity on the
-full constituent algebra forces <span
-class="math inline">\(h_i=h\)</span> for every constituent (Theorem 1).
-Equivalently, at <span class="math inline">\(h\ne0\)</span>, requiring
-<span class="math inline">\(\mathbf L/h\)</span> to generate the same
-spatial rotation on every constituent fixes the same normalization.
-Admissible pair composition propagates this equality through a connected
-graph. Central interactions provide a second route if conservation of
-the mechanical sum is imposed under a common commutator evolution
-(Theorem 2).</p>
-<p>Both conclusions admit a common zero value. Spatial rotation
-covariance alone permits unequal <span
-class="math inline">\(h_i\)</span>: for nonzero constants the
-dimensionless generator is <span class="math inline">\(\sum_i\mathbf
-L_i/h_i\)</span>. The additional physical premise identifies this
-generator with the measured additive angular momentum divided by one
-action constant. Integer and half-integer representation labels
-constrain angular momenta relative to that constant; selecting its
-positive magnitude requires further physical input.</p>
-<p>These are elementary conditional results, with written proofs below.
-They test the user’s composition proposal following <a
-href="rivero-1998-conjecture-central-forces.html">round 1, §§4–5</a>
-(full-read). Here <strong><span class="math inline">\(h\)</span> is the
-reduced phase constant</strong>, so identification with quantum
-mechanics would give <span class="math inline">\(h=\hbar\)</span> and
-<span class="math inline">\(h_P=2\pi h\)</span>. The algebra permits
-signed real constants; positive floors use <span
-class="math inline">\(|h|\)</span>. All momenta are measured quantities
-of motion, with fixed mass and unit conventions throughout.</p>
-<h2 id="the-constituent-algebra-and-what-rotation-must-mean">1. The
-constituent algebra and what rotation must mean</h2>
+<h1>Composition and action normalization: reciprocal mechanics, rotations
+and spin phases</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/rotation-composition-universality.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/rotation-composition-universality.pdf">PDF</a></p><p>Interaction can constrain relative normalizations while leaving an
+absolute action coefficient free. In the canonical product algebra the
+decisive compatibility identity is <span
+class="math display">\[0=D[p_{ia},p_{jb}]=i(h_i-h_j)\partial_{ia}\partial_{jb}V.\]</span>
+Thus a Newton derivation and a nonzero mixed force derivative force
+equal constituent constants on each connected interaction component. The
+common zero branch remains admissible. Mechanical angular closure gives
+a separate normalization test under faithful constituent observables;
+spatial covariance alone permits unequal constants.</p>
+<p>The hierarchy begins with reciprocal spring calibration and ends with
+the extra phase premise on a spin sphere. Reciprocal forces fix inertia
+ratios. A supplied phase constant <span
+class="math inline">\(K&gt;0\)</span> makes global spin patching require
+<span class="math inline">\(2s/K\in\mathbb Z\)</span>. Neither the
+classical model, the algebraic equality nor the phase ratio selects an
+absolute nonzero physical <span class="math inline">\(\hbar\)</span>.
+Classical fluctuation composition has its own probabilistic hypotheses
+and remains in its <a href="composition-universality.html">separate
+treatment</a>.</p>
+<p>These are conditional written proofs and established geometric
+comparisons, not independent peer review or a claim of literature
+novelty. In the algebraic sections <span
+class="math inline">\(h\)</span> denotes a reduced phase constant:
+quantum identification would mean <span
+class="math inline">\(h=\hbar\)</span> and <span
+class="math inline">\(h_P=2\pi\hbar\)</span>. <span
+class="math inline">\(K\)</span> in the phase section is supplied, and
+equation labels M, A and P distinguish the three premise sets.</p>
+<h2 id="reciprocal-mechanical-calibration">Reciprocal mechanical
+calibration</h2>
+<h3 id="measured-response-and-reciprocal-completion">Measured response
+and reciprocal completion</h3>
+<p>Let two coordinates <span class="math inline">\(x,y\in\mathbb
+R\)</span> have the same length units and share physical time <span
+class="math inline">\(t\)</span>. Suppose their measured equations
+are</p>
+<p><span class="math display">\[\ddot x=-\alpha(x-y),\qquad
+\ddot y=\beta(x-y),\qquad \alpha,\beta&gt;0. \tag{M1}\]</span></p>
+<p>Both coefficients have units time<span
+class="math inline">\(^{-2}\)</span>. Isolated free motion would leave
+the sectors’ positive inertias <span
+class="math inline">\(m_1,m_2\)</span> independently arbitrary. Now
+require the specific mechanical completion</p>
+<p><span class="math display">\[L=\tfrac12m_1\dot x^2+\tfrac12m_2\dot
+y^2
+-\tfrac12k(x-y)^2,\qquad k&gt;0. \tag{M2}\]</span></p>
+<p>Here masses have mass units and <span
+class="math inline">\(k\)</span> has mass/time<span
+class="math inline">\(^2\)</span> units. This assumes a diagonal
+constant kinetic energy and one reciprocal position-dependent
+interaction. It is a physical model premise, not a consequence of
+observing arbitrary coupled motion. Its forces are <span
+class="math inline">\(F_1=-k(x-y)\)</span> and <span
+class="math inline">\(F_2=k(x-y)\)</span>. The Euler–Lagrange equations
+agree with (M1) exactly when</p>
+<p><span class="math display">\[m_1\alpha=m_2\beta=k,
+\qquad \frac{m_2}{m_1}=\frac\alpha\beta. \tag{M3}\]</span></p>
+<p>Thus fixed responses admit precisely the positive family <span
+class="math inline">\((m_1,m_2,k)=m_1(1,\alpha/\beta,\alpha)\)</span>,
+with the entries interpreted in their stated units. Coupling constrains
+relative normalization; equal inertias follow only if the two
+acceleration responses are equal.</p>
+<h3 id="exchange-currents-and-common-scaling">Exchange currents and
+common scaling</h3>
+<p>Writing <span class="math inline">\(r=x-y\)</span>, the conserved
+energy and total momentum are</p>
+<p><span class="math display">\[H=\tfrac12m_1\dot x^2+\tfrac12m_2\dot
+y^2+\tfrac12kr^2,
+\qquad P=m_1\dot x+m_2\dot y. \tag{M4}\]</span></p>
+<p>Indeed <span class="math inline">\(\dot T_1=-kr\dot x\)</span>, <span
+class="math inline">\(\dot T_2=kr\dot y\)</span>, and <span
+class="math inline">\(\dot V=kr(\dot x-\dot y)\)</span>, so <span
+class="math inline">\(\dot H=0\)</span>; the two forces give <span
+class="math inline">\(\dot P=0\)</span>. To display an exchange current,
+assign half the interaction energy to each sector: <span
+class="math inline">\(E_1=T_1+V/2\)</span>, <span
+class="math inline">\(E_2=T_2+V/2\)</span>. Then</p>
+<p><span class="math display">\[\dot E_1=-\tfrac{k}{2}r(\dot x+\dot
+y)=-\dot E_2. \tag{M5}\]</span></p>
+<p>The half split is an accounting convention; conservation of <span
+class="math inline">\(H\)</span> is independent of it. Generic initial
+data give nonzero exchange. Measuring power in an independently
+calibrated energy unit would add information beyond (M1).</p>
+<p>For every dimensionless <span
+class="math inline">\(\eta&gt;0\)</span>, replace <span
+class="math inline">\((m_1,m_2,k)\)</span> by <span
+class="math inline">\((\eta m_1,\eta m_2,\eta k)\)</span>. Equations
+(M1), all coordinate histories with the same initial positions and
+velocities, and their periods remain unchanged. <span
+class="math inline">\(L,H,P,E_i\)</span> and the currents in (M5) scale
+by <span class="math inline">\(\eta\)</span>. So does the trajectory
+action <span class="math inline">\(S=\int L\,dt\)</span> on any fixed
+time interval. Independent rescaling of only one sector generally
+violates (M3); common rescaling does not.</p>
+<p>An on-shell positive action diagnostic makes this freedom visible
+without cancellation in <span class="math inline">\(S\)</span>. Set
+<span class="math inline">\(M=m_1+m_2\)</span>, <span
+class="math inline">\(\mu=m_1m_2/M\)</span> and <span
+class="math inline">\(X=(m_1x+m_2y)/M\)</span>. Then</p>
+<p><span class="math display">\[L=\tfrac12M\dot X^2+\tfrac12\mu\dot
+r^2-\tfrac12kr^2,
+\qquad \omega^2=k/\mu=\alpha+\beta. \tag{M6}\]</span></p>
+<p>In the stationary centre frame choose <span
+class="math inline">\(r=A\cos(\omega t)\)</span>, <span
+class="math inline">\(A&gt;0\)</span>. With <span
+class="math inline">\(p_r=\mu\dot r\)</span>, its closed-orbit action
+is</p>
+<p><span class="math display">\[I=\frac1{2\pi}\oint p_r\,dr
+=\frac12\mu\omega A^2=\frac{E_{\rm rel}}\omega. \tag{M7}\]</span></p>
+<p>The integral follows from <span class="math inline">\(p_r\dot r=\mu
+A^2\omega^2\sin^2(\omega t)\)</span> over one period. It has action
+units. Common rescaling sends <span class="math inline">\(I\)</span> to
+<span class="math inline">\(\eta I\)</span> at fixed trajectory. Even
+for fixed masses and spring, the admitted small amplitudes <span
+class="math inline">\(A\downarrow0\)</span> send <span
+class="math inline">\(I\)</span> to zero. The full Lagrangian action
+over this stationary-centre period is zero because the kinetic and
+potential integrals coincide; (M7) must not be identified with that
+signed integral.</p>
+<p>The relative frequency is strictly positive for this fixed two-body
+model. The full system also has a free centre coordinate, so it has a
+zero-frequency mode. This is a finite-dimensional classical frequency
+statement, with no volume or continuum claim and no quantum energy
+gap.</p>
+<h3 id="connected-networks-and-the-cycle-test">Connected networks and
+the cycle test</h3>
+<p>The relative mechanism extends to a finite connected undirected graph
+of scalar coordinates, all measured in the same length and time units.
+On every edge <span class="math inline">\(\{i,j\}\)</span> suppose both
+directed responses <span
+class="math inline">\(a_{ij},a_{ji}&gt;0\)</span> are known:</p>
+<p><span class="math display">\[\ddot q_i=-\sum_{j\sim
+i}a_{ij}(q_i-q_j). \tag{M8}\]</span></p>
+<p>Seek only the mechanical class</p>
+<p><span class="math display">\[L=\tfrac12\sum_i m_i\dot q_i^2
+-\tfrac12\sum_{\{i,j\}}k_{ij}(q_i-q_j)^2,
+\qquad m_i&gt;0,\quad k_{ij}=k_{ji}&gt;0. \tag{M9}\]</span></p>
+<p>Comparison of coefficients requires <span class="math inline">\(m_i
+a_{ij}=m_j a_{ji}=k_{ij}\)</span>. Hence the necessary cycle condition
+is</p>
+<p><span class="math display">\[\prod_{\ell=0}^{s-1}
+\frac{a_{i_\ell i_{\ell+1}}}{a_{i_{\ell+1}i_\ell}}=1,
+\qquad i_s=i_0. \tag{M10}\]</span></p>
+<p>It is sufficient as well: choose any <span
+class="math inline">\(m_0&gt;0\)</span>, transport masses along a
+spanning tree using <span
+class="math inline">\(m_j/m_i=a_{ij}/a_{ji}\)</span>, and apply (M10) on
+each remaining edge’s fundamental cycle. This makes its transported
+ratio agree with the edge ratio. All masses are positive and define the
+required springs. Any two solutions have the same mass ratio along every
+edge; connectivity makes their quotient one common constant. A
+disconnected graph instead retains one constant per connected
+component.</p>
+<p>For a concrete failed test take a triangle with <span
+class="math inline">\(a_{12}=2\gamma\)</span> and all other directed
+edge coefficients <span class="math inline">\(\gamma&gt;0\)</span>. The
+cycle <span class="math inline">\(1\to2\to3\to1\)</span> has product 2.
+The required ratios would give <span
+class="math inline">\(m_2=2m_1\)</span>, <span
+class="math inline">\(m_3=m_2\)</span>, and <span
+class="math inline">\(m_1=m_3\)</span>, a contradiction. Such responses
+cannot have completion (M9). This rejects that diagonal-inertia
+reciprocal-spring model; it does not exclude completions with additional
+variables or a different kinetic form.</p>
+<span id="the-constituent-algebra-and-what-rotation-must-mean"></span><h2 id="constituent-algebras-and-the-meaning-of-rotations">Constituent
+algebras and the meaning of rotations</h2>
 <p>Take finitely many labelled bodies, <span
 class="math inline">\(i=1,\ldots,N\)</span>, with masses <span
 class="math inline">\(m_i&gt;0\)</span>, three spatial coordinates and
@@ -138,7 +254,7 @@ self-adjoint generators satisfying</p>
 <p><span class="math display">\[
 [q_{ia},q_{jb}]=[p_{ia},p_{jb}]=0,\qquad
 [q_{ia},p_{jb}]=i\delta_{ij}\delta_{ab}h_i1,
-\quad a,b\in\{x,y,z\}. \tag{1}
+\quad a,b\in\{x,y,z\}. \tag{A1}
 \]</span></p>
 <p>The scalars <span class="math inline">\(h_i\in\mathbb R\)</span>
 remain fixed when the body is put in a composite. Distinct constituent
@@ -155,14 +271,14 @@ domain representing these polynomials faithfully.</p>
 class="math inline">\(\epsilon_{xyz}=1\)</span>,</p>
 <p><span class="math display">\[
 L_{ia}=\sum_{b,c}\epsilon_{abc}q_{ib}p_{ic},\qquad
-L_a=\sum_iL_{ia}. \tag{2}
+L_a=\sum_iL_{ia}. \tag{A2}
 \]</span></p>
-<p>Each term in (2) has unambiguous ordering because <span
+<p>Each term in (A2) has unambiguous ordering because <span
 class="math inline">\(q_{ib}\)</span> and <span
 class="math inline">\(p_{ic}\)</span> commute for <span
 class="math inline">\(b\ne c\)</span>. The additivity and mechanical
-normalization in (2) are hypotheses. Independently rescaling each body’s
-momentum would change its measured quantity of motion and these
+normalization in (A2) are hypotheses. Independently rescaling each
+body’s momentum would change its measured quantity of motion and these
 hypotheses.</p>
 <p>Three distinct requirements can now be stated precisely.</p>
 <ul>
@@ -170,7 +286,7 @@ hypotheses.</p>
 class="math inline">\(q_i\mapsto Rq_i\)</span>, <span
 class="math inline">\(p_i\mapsto Rp_i\)</span> is an algebra
 automorphism for every <span class="math inline">\(R\in
-SO(3)\)</span>.</li>
+SO(A3)\)</span>.</li>
 <li><strong>Mechanical closure:</strong> for one real <span
 class="math inline">\(h\)</span>, <span
 class="math inline">\([L_a,L_b]=ih\sum_c\epsilon_{abc}L_c\)</span> on
@@ -193,18 +309,18 @@ additionally needs a strongly continuous unitary action with these
 generators. Lie commutator identities alone leave those domain and
 integrability obligations open. For <span
 class="math inline">\(h\ne0\)</span>, such an action is a representation
-of <span class="math inline">\(SU(2)\)</span>; descent to <span
-class="math inline">\(SO(3)\)</span> additionally requires a full <span
+of <span class="math inline">\(SU(A2)\)</span>; descent to <span
+class="math inline">\(SO(A3)\)</span> additionally requires a full <span
 class="math inline">\(2\pi\)</span> rotation to act as the identity.</p>
-<p>The round-1 phase <span
-class="math inline">\(e^{iL\theta/h_i}\)</span> yields (1) only after an
-additional canonical observable/quantization prescription. A single
+<p>The orbit-phase premise <span
+class="math inline">\(e^{iL\theta/h_i}\)</span> yields (A1) only after
+an additional canonical observable/quantization prescription. A single
 orbit’s angular descent condition by itself supplies neither the tensor
 algebra nor its mechanical generator identification. The present theorem
 begins at that explicit algebraic extension.</p>
-<h2 id="theorem-1-mechanical-closure-forces-a-shared-constant">2.
-Theorem 1: mechanical closure forces a shared constant</h2>
-<p><strong>Theorem 1.</strong> Under (1)–(2) and the monomial
+<span id="theorem-1-mechanical-closure-forces-a-shared-constant"></span><h2 id="mechanical-closure-forces-a-shared-constant">Mechanical closure
+forces a shared constant</h2>
+<p><strong>Theorem 1.</strong> Under (A1)–(A2) and the monomial
 independence hypothesis, mechanical closure holds for a scalar <span
 class="math inline">\(h\)</span> if and only if <span
 class="math inline">\(h_i=h\)</span> for all <span
@@ -217,7 +333,7 @@ class="math inline">\(i\)</span>.</p>
 <p><em>Proof.</em> The product rule for commutators gives</p>
 <p><span class="math display">\[
 [L_{ia},q_{jb}]=i\delta_{ij}h_i\sum_c\epsilon_{abc}q_{ic},\qquad
-[L_{ia},p_{jb}]=i\delta_{ij}h_i\sum_c\epsilon_{abc}p_{ic}. \tag{3}
+[L_{ia},p_{jb}]=i\delta_{ij}h_i\sum_c\epsilon_{abc}p_{ic}. \tag{A3}
 \]</span></p>
 <p>For example, writing <span
 class="math inline">\(L_{ix}=q_{iy}p_{iz}-q_{iz}p_{iy}\)</span> and
@@ -228,21 +344,21 @@ their commutator has exactly the surviving terms</p>
 \]</span></p>
 <p>Different bodies commute, so closure of the sum is equivalent to</p>
 <p><span class="math display">\[
-\sum_i(h_i-h)L_{iz}=0. \tag{4}
+\sum_i(h_i-h)L_{iz}=0. \tag{A4}
 \]</span></p>
-<p>The monomial <span class="math inline">\(q_{ix}p_{iy}\)</span> in (4)
-occurs only in <span class="math inline">\(L_{iz}\)</span>, with
+<p>The monomial <span class="math inline">\(q_{ix}p_{iy}\)</span> in
+(A4) occurs only in <span class="math inline">\(L_{iz}\)</span>, with
 coefficient <span class="math inline">\(h_i-h\)</span>. Independence
 makes that coefficient zero for each <span
 class="math inline">\(i\)</span>, including a constituent with <span
 class="math inline">\(h_i=0\)</span>. Conversely, equal constants give
 closure in all three directions by the same calculation.</p>
-<p>For generator identification, (3) gives, for example, <span
+<p>For generator identification, (A3) gives, for example, <span
 class="math inline">\([L_x,q_{iy}]=ih_iq_{iz}\)</span>, whereas the
 required action is <span class="math inline">\(ihq_{iz}\)</span>.
 Independence makes <span class="math inline">\(q_{iz}\ne0\)</span>,
 hence <span class="math inline">\(h_i=h\)</span>. The converse follows
-directly from (3). <span class="math inline">\(\square\)</span></p>
+directly from (A3). <span class="math inline">\(\square\)</span></p>
 <p>A restricted observable space needs the corresponding separation
 hypothesis in place of monomial independence: each relation <span
 class="math inline">\(\sum_i c_iL_{ia}=0\)</span> must force every <span
@@ -268,34 +384,34 @@ contexts.</p>
 <p><strong>Role of three dimensions.</strong> A single planar rotation
 generator has <span class="math inline">\([L_z,L_z]=0\)</span>, which
 tests no normalization. In three dimensions the non-abelian bracket in
-(4) compares the mechanical sums internally. Requiring the correct
+(A4) compares the mechanical sums internally. Requiring the correct
 action on each <span class="math inline">\(q_i,p_i\)</span> already
-compares normalizations in two dimensions by (3). Three dimensions
+compares normalizations in two dimensions by (A3). Three dimensions
 strengthen the closure test; generator identification itself needs only
 one nontrivial rotation plane.</p>
-<h2 id="rotation-covariance-and-the-interaction-test">3. Rotation
-covariance and the interaction test</h2>
+<span id="rotation-covariance-and-the-interaction-test"></span><h2 id="rotation-covariance-and-interaction-compatibility">Rotation
+covariance and interaction compatibility</h2>
 <h3 id="covariance-with-unequal-constants">Covariance with unequal
 constants</h3>
 <p>For arbitrary <span class="math inline">\(h_i\)</span>, each scalar
-canonical block in (1) is rotation invariant. An explicit associative
+canonical block in (A1) is rotation invariant. An explicit associative
 realization on polynomials is</p>
 <p><span class="math display">\[
 f*g=\mu\exp\left[\frac i2\sum_i h_i P_i\right] (f\otimes g),\qquad
 P_i=\sum_a\left(\partial_{q_{ia}}\otimes\partial_{p_{ia}}
--\partial_{p_{ia}}\otimes\partial_{q_{ia}}\right). \tag{5}
+-\partial_{p_{ia}}\otimes\partial_{q_{ia}}\right). \tag{A5}
 \]</span></p>
 <p>The exponential terminates on polynomials. The constant derivative
 operators commute, so either association of three factors gives the same
 exponential of the sum over their three pairings. Each <span
 class="math inline">\(P_i\)</span> is invariant under simultaneous
-spatial rotations. Thus (5) supplies covariance for every tuple <span
+spatial rotations. Thus (A5) supplies covariance for every tuple <span
 class="math inline">\((h_1,\ldots,h_N)\)</span>.</p>
 <p>If all <span class="math inline">\(h_i\ne0\)</span>, define</p>
 <p><span class="math display">\[
 K_a=\sum_i L_{ia}/h_i.
 \]</span></p>
-<p>Equations (3) give <span
+<p>Equations (A3) give <span
 class="math inline">\([K_a,K_b]=i\epsilon_{abc}K_c\)</span> (summed
 <span class="math inline">\(c\)</span>) and the correct rotations of all
 constituent observables. Concretely, on <span
@@ -320,18 +436,18 @@ class="math inline">\(F_{ij}\)</span> parallel to <span
 class="math inline">\(q_i-q_j\)</span>. It gives</p>
 <p><span class="math display">\[
 \dot{\mathbf L}
-=\sum_{i&lt;j}(q_i-q_j)\times F_{ij}=0. \tag{6}
+=\sum_{i&lt;j}(q_i-q_j)\times F_{ij}=0. \tag{A6}
 \]</span></p>
 <p>Equal and opposite forces together with centrality do the work here.
-Equation (6) uses neither a commutator nor an action constant.
+Equation (A6) uses neither a commutator nor an action constant.
 Transferring this conservation law to the deformed observable algebra
 needs a specified evolution law.</p>
 <p><strong>Theorem 2 (conservation propagates equality along interacting
-pairs).</strong> Assume (1), faithful configuration observables on open
+pairs).</strong> Assume (A1), faithful configuration observables on open
 sets, and a Hamiltonian</p>
 <p><span class="math display">\[
 H=\sum_i\frac{p_i^2}{2m_i}+\sum_{i&lt;j}V_{ij}(r_{ij}),\qquad
-r_{ij}=|q_i-q_j|. \tag{7}
+r_{ij}=|q_i-q_j|. \tag{A7}
 \]</span></p>
 <p>Assume commutator differentiation <span
 class="math inline">\([p_{ia},V]=-ih_i\partial_{q_{ia}}V\)</span> on a
@@ -354,34 +470,33 @@ V_{ij}=0\)</span>. Consequently</p>
 <p><span class="math display">\[
 [\mathbf L,V_{ij}]
 =i(h_i-h_j)q_i\times\nabla_i V_{ij}
-=+i(h_i-h_j)\frac{V_{ij}&#39;(r_{ij})}{r_{ij}}q_i\times q_j. \tag{8}
+=+i(h_i-h_j)\frac{V_{ij}&#39;(r_{ij})}{r_{ij}}q_i\times q_j. \tag{A8}
 \]</span></p>
 <p>The configuration factor is a nonzero observable on the stated open
 set. Conservation, equivalent to <span class="math inline">\([\mathbf
 L,H]=0\)</span>, forces <span class="math inline">\(h_i=h_j\)</span>.
-When constants agree on every interacting edge, (8) proves the converse
+When constants agree on every interacting edge, (A8) proves the converse
 conservation statement as well. <span
 class="math inline">\(\square\)</span></p>
 <p>One central harmonic interaction suffices as a polynomial test: <span
 class="math inline">\(V_{ij}=k_{ij}|q_i-q_j|^2/2\)</span>, <span
 class="math inline">\(k_{ij}&gt;0\)</span>, gives the exact defect <span
-class="math inline">\(+ik_{ij}(h_i-h_j)q_i\times q_j\)</span> (sign
-corrected 2026-09-27 after a Fable review; the conclusion is
-unaffected). This permits full configuration variation and keeps every
-step inside the polynomial algebra. Restriction to collinear
-configurations or to a pair’s fixed centre-of-mass frame would remove
-this particular torque test; conservation about arbitrary fixed origins
-restores its stated scope. An external central potential for each
-isolated body gives no such exchange test and allows different
-constants.</p>
+class="math inline">\(+ik_{ij}(h_i-h_j)q_i\times q_j\)</span> (the
+displayed sign includes the earlier correction). This permits full
+configuration variation and keeps every step inside the polynomial
+algebra. Restriction to collinear configurations or to a pair’s fixed
+centre-of-mass frame would remove this particular torque test;
+conservation about arbitrary fixed origins restores its stated scope. An
+external central potential for each isolated body gives no such exchange
+test and allows different constants.</p>
 <p>Theorem 2 compares the <span class="math inline">\(h_i\)</span> but
 leaves their common value relative to <span
 class="math inline">\(h_t\)</span> undetermined. Demanding the full
-Newton equations with the physical Hamiltonian (7) gives the stronger
+Newton equations with the physical Hamiltonian (A7) gives the stronger
 identities</p>
 <p><span class="math display">\[
 \dot q_i=\frac{h_i}{h_t}\frac{p_i}{m_i},\qquad
-\dot p_i=-\frac{h_i}{h_t}\nabla_i V. \tag{9}
+\dot p_i=-\frac{h_i}{h_t}\nabla_i V. \tag{A9}
 \]</span></p>
 <p>Requiring <span class="math inline">\(\dot q_i=p_i/m_i\)</span> for
 unrestricted momenta forces <span
@@ -393,18 +508,18 @@ class="math inline">\(D\)</span> with <span
 class="math inline">\(Dp_{ia}=-\partial_{ia}V\)</span>,</p>
 <p><span class="math display">\[
 0=D[p_{ia},p_{jb}]
-=i(h_i-h_j)\partial_{ia}\partial_{jb}V,\qquad i\ne j. \tag{10}
+=i(h_i-h_j)\partial_{ia}\partial_{jb}V,\qquad i\ne j. \tag{A10}
 \]</span></p>
 <p>A nonzero mixed force derivative again equates the constants. This is
-the main dynamical result of the note (reviewer’s assessment): it needs
-no centrality and no angular momentum, and it holds for every
-interacting pair. Equation (10) follows by applying the Leibniz rule to
-the zero cross commutator; it exposes the compatibility obligation of
-separate denominators. The common zero branch satisfies (10) and
-supports ordinary classical Hamiltonian evolution by a Poisson
+the main dynamical result of the note under the displayed derivation
+premise: it needs no centrality and no angular momentum, and it holds
+for every interacting pair. Equation (A10) follows by applying the
+Leibniz rule to the zero cross commutator; it exposes the compatibility
+obligation of separate denominators. The common zero branch satisfies
+(A10) and supports ordinary classical Hamiltonian evolution by a Poisson
 derivation.</p>
-<h2 id="what-happens-at-zero-and-what-spin-can-add">4. What happens at
-zero, and what spin can add</h2>
+<span id="what-happens-at-zero-and-what-spin-can-add"></span><h2 id="the-common-zero-branch-and-angular-representations">The common
+zero branch and angular representations</h2>
 <p><strong>Corollary (universality and positivity).</strong> Theorem 1
 forces a common real value, with <span
 class="math inline">\(h=0\)</span> allowed. If one constituent has an
@@ -415,7 +530,7 @@ Theorem 2 likewise permits all <span
 class="math inline">\(h_i=0\)</span>; its commutator clock then gives
 trivial evolution. Classical nontrivial dynamics uses the Poisson
 bracket instead.</p>
-<p>For the common family (5), all real <span
+<p>For the common family (A5), all real <span
 class="math inline">\(h\)</span> give associative algebras. At <span
 class="math inline">\(h=0\)</span> the product is ordinary
 multiplication. Spatial rotations remain non-abelian: their derivations
@@ -426,7 +541,7 @@ The Poisson algebra supplies the rotation structure while the
 multiplication algebra is commutative. For polynomial observables the
 common Moyal family has</p>
 <p><span class="math display">\[
-\lim_{h\to0}\frac{[f,g]_{*_h}}{ih}=\{f,g\}_{\rm P}. \tag{11}
+\lim_{h\to0}\frac{[f,g]_{*_h}}{ih}=\{f,g\}_{\rm P}. \tag{A11}
 \]</span></p>
 <p>Requiring a nontrivial rotation to be implemented specifically by
 <span class="math inline">\(\exp(-i\theta L_a/h)\)</span> selects <span
@@ -439,12 +554,12 @@ this choice open: pullback rotates classical phase-space functions in
 while measured classical angular momenta act by multiplication.</p>
 <p>For <span class="math inline">\(h\ne0\)</span>, supply self-adjoint
 angular generators integrating to a unitary <span
-class="math inline">\(SU(2)\)</span> representation. Its irreducible
+class="math inline">\(SU(A2)\)</span> representation. Its irreducible
 sectors have</p>
 <p><span class="math display">\[
 J^2=h^2j(j+1),\qquad J_z=hm,\qquad
 j\in\{0,\tfrac12,1,\tfrac32,\ldots\},\quad
-m=-j,-j+1,\ldots,j. \tag{12}
+m=-j,-j+1,\ldots,j. \tag{A12}
 \]</span></p>
 <p>Here <span class="math inline">\(J\)</span> denotes total angular
 momentum, including any supplied internal spin. To recall the
@@ -458,7 +573,7 @@ below. Its highest weight <span class="math inline">\(j\)</span> has
 <span class="math inline">\(-j\)</span>, so <span
 class="math inline">\(2j\)</span> is a nonnegative integer. A full
 rotation acts by <span class="math inline">\(e^{-2\pi
-im}=(-1)^{2j}\)</span>; <span class="math inline">\(SO(3)\)</span>
+im}=(-1)^{2j}\)</span>; <span class="math inline">\(SO(A3)\)</span>
 descent retains integer <span class="math inline">\(j\)</span>.</p>
 <p>For ordinary scalar orbital wavefunctions, <span
 class="math inline">\(L=q\times(-ih\nabla)\)</span> has integer orbital
@@ -471,17 +586,17 @@ additional internal degrees of freedom or an explicitly different state
 space. The central-force orbital construction supplies no such degrees
 of freedom by itself. If independent spin observables commute with the
 orbital variables, requiring <span class="math inline">\(J=L+S\)</span>
-to rotate those variables still gives (3), hence the same orbital
+to rotate those variables still gives (A3), hence the same orbital
 universality result. Requiring it also to rotate each nontrivial spin
 algebra fixes the spin normalization in the same way.</p>
-<p>Equation (12) supplies dimensionless spectral ratios. The Casimir is
+<p>Equation (A12) supplies dimensionless spectral ratios. The Casimir is
 discrete; its factor <span class="math inline">\(j(j+1)\)</span> is
 integer for integer <span class="math inline">\(j\)</span> and can be
 fractional for half-integer <span class="math inline">\(j\)</span>.
 Conditional on fixed <span class="math inline">\(|h|&gt;0\)</span>, the
 smallest nonzero <span class="math inline">\(J^2\)</span> among all
 integer sectors is <span class="math inline">\(2h^2\)</span>, and among
-all <span class="math inline">\(SU(2)\)</span> sectors it is <span
+all <span class="math inline">\(SU(A2)\)</span> sectors it is <span
 class="math inline">\(3h^2/4\)</span>. A chosen representation can omit
 these sectors; the scalar sector <span
 class="math inline">\(j=0\)</span> always remains an allowed
@@ -503,8 +618,9 @@ specified component and Casimir eigenvalues can further constrain <span
 class="math inline">\(j\)</span> and their ratios; this constitutes
 additional spectral data. The scale freedom of the representation
 conditions alone remains.</p>
-<h2 id="comparison-with-the-two-composition-and-dimensional-results">5.
-Comparison with the two composition and dimensional results</h2>
+<span id="comparison-with-the-two-composition-and-dimensional-results"></span><h2
+id="relation-to-fluctuation-composition-and-dimensional-selection">Relation
+to fluctuation composition and dimensional selection</h2>
 <p>The <a href="composition-universality.html">classical composition
 note, §§1–3</a> (full-read) concerns a fluctuation coefficient <span
 class="math inline">\(\kappa(m)\ge0\)</span> and independent
@@ -535,21 +651,21 @@ class="math inline">\(\mu=m_1m_2/M\)</span>,</p>
 R=\frac{m_1q_1+m_2q_2}{M},\quad r=q_1-q_2,\quad
 P=p_1+p_2,\quad p=\frac{m_2p_1-m_1p_2}{M}.
 \]</span></p>
-<p>Bilinearity in (1) gives</p>
+<p>Bilinearity in (A1) gives</p>
 <p><span class="math display">\[
 \begin{aligned}
 {}[R_a,P_b]&amp;=i\delta_{ab}\frac{m_1h_1+m_2h_2}{M},&amp;
 [r_a,p_b]&amp;=i\delta_{ab}\frac{m_2h_1+m_1h_2}{M},\\
 [R_a,p_b]&amp;=i\delta_{ab}\frac{\mu}{M}(h_1-h_2),&amp;
 [r_a,P_b]&amp;=i\delta_{ab}(h_1-h_2).
-\end{aligned} \tag{13}
+\end{aligned} \tag{A13}
 \]</span></p>
 <p>Thus canonical independence of the centre and relative algebras
 forces <span class="math inline">\(h_1=h_2\)</span>. The classical note
 has the corresponding covariance <span
 class="math inline">\(\operatorname{Cov}(\Delta R,\Delta
 r)=\Delta(\kappa_1-\kappa_2)/M\)</span>; for its Gaussian preparations
-vanishing covariance gives statistical independence. Equation (13)
+vanishing covariance gives statistical independence. Equation (A13)
 concerns commuting observable algebras, which can carry correlated or
 entangled states. The two independence premises have distinct meanings
 despite their matching coefficients.</p>
@@ -557,12 +673,12 @@ despite their matching coefficients.</p>
 (full-read) places these results as follows. Its Theorem B obtains a
 single Moyal constant under full affine symplectic covariance. Applying
 that premise to the combined phase space already includes
-transformations mixing bodies, including (13), whereas separate one-body
-covariance allows one constant per factor as in (5). Theorem 1 isolates
-a narrower comparison using physical angular generators; it leaves
-general star-product uniqueness to the stronger covariance theorem.
-Theorem A retains the common zero and nonzero families under its Newton
-equations. Theorems C and E give conditional disturbance and
+transformations mixing bodies, including (A13), whereas separate
+one-body covariance allows one constant per factor as in (A5). Theorem 1
+isolates a narrower comparison using physical angular generators; it
+leaves general star-product uniqueness to the stronger covariance
+theorem. Theorem A retains the common zero and nonzero families under
+its Newton equations. Theorems C and E give conditional disturbance and
 concentration bounds once <span class="math inline">\(|h|&gt;0\)</span>
 is supplied. Theorem D records action rescaling. The Gaussian state
 restriction of B’ supplies its own <span
@@ -576,13 +692,13 @@ dimensional note, Theorem A</a> (full-read) applies to a universal floor
 its form is</p>
 <p><span class="math display">\[
 g(c)=\left(\prod_r c_r^{a_r}\right)F(\pi_1,\ldots,\pi_s),\qquad
-\sum_r a_r d_r=(1,2,-1). \tag{14}
+\sum_r a_r d_r=(1,2,-1). \tag{A14}
 \]</span></p>
 <p>It reduces to a pure number times the product when the fixed
 constants have no independent dimensionless products. Rotation angles,
 group structure constants, <span class="math inline">\(j\)</span> and
 <span class="math inline">\(m\)</span> are dimensionless and add no
-action unit to (14). When the fixed constants admit no
+action unit to (A14). When the fixed constants admit no
 action-dimensional product, Theorem A allows only a zero or infinite
 universal floor; dimensionless rotations preserve that conclusion.
 Treating <span class="math inline">\(h\)</span> as a new independent
@@ -590,7 +706,7 @@ fixed constant makes <span class="math inline">\(|h|\)</span> the
 supplied unit. Deriving a universal <span
 class="math inline">\(|h|\)</span> from pre-existing constants instead
 requires dimensional homogeneity and the same covariance argument as
-(14); angular universality provides no value for its dimensionless
+(A14); angular universality provides no value for its dimensionless
 factor or proof of its positivity. For the fixed <span
 class="math inline">\(k_e=e^2/(4\pi\epsilon_0)\)</span>, <span
 class="math inline">\(c\)</span> and <span
@@ -598,17 +714,130 @@ class="math inline">\(G\)</span> of that note, this would read <span
 class="math inline">\(|h|=Ck_e/c\)</span>. The rotation theorem leaves
 <span class="math inline">\(C\)</span> undetermined. A coefficient and
 the infimum of a specified action observable also need a proved relation
-before (14) can be used as a floor statement.</p>
-<h2 id="consequence-for-state">6. Consequence for STATE</h2>
-<p>Item 2 gains conditional universality from mechanical
-angular-momentum composition: one constant per connected class follows
-from faithful rotation closure, or from conservation under the stated
-interacting commutator dynamics. The precise additional premise beyond
-round 1 is the identification of additive measured angular momentum with
-the common rotation generator. The remaining necessity task is a
-physical premise selecting a nonzero branch and an action unit; spin
-topology and Casimir discreteness leave that obligation open. All
-conclusions above are proved under their displayed hypotheses.</p>
+before (A14) can be used as a floor statement.</p>
+<h2 id="global-spin-phases">Global spin phases</h2>
+<h3 id="classical-patches-and-complete-dynamics">Classical patches and
+complete dynamics</h3>
+<p>Let the spin direction n lie on the unit sphere with polar
+coordinates <span class="math inline">\((\theta,\phi)\)</span>. Supply
+<span class="math inline">\(s&gt;0\)</span> with action units and
+define</p>
+<p><span class="math display">\[\omega_s=s\sin\theta\,d\theta\wedge
+d\phi,
+\qquad \int_{S^2}\omega_s=4\pi s. \tag{P1}\]</span></p>
+<p>For any smooth real Hamiltonian H, define the vector field by <span
+class="math inline">\(\iota_{X_H}\omega_s=-dH\)</span>. Nondegeneracy
+gives a unique smooth vector field; compactness gives its complete flow.
+Thus s may be any positive real value. There is no globally defined
+one-form with derivative <span class="math inline">\(\omega_s\)</span>,
+since the integral of an exact two-form on the closed sphere would
+vanish.</p>
+<p>Instead use regular north and south potentials</p>
+<p><span class="math display">\[\alpha_N=s(1-\cos\theta)d\phi,\qquad
+\alpha_S=-s(1+\cos\theta)d\phi. \tag{P2}\]</span></p>
+<p>Each has derivative <span class="math inline">\(\omega_s\)</span>. On
+a simply connected part of the overlap,</p>
+<p><span class="math display">\[\alpha_N-\alpha_S=2s\,d\phi=d(2s\phi).
+\tag{P3}\]</span></p>
+<p>The local actions <span class="math inline">\(S_U=\int[\alpha_U(\dot
+n)-H(n)]dt\)</span> differ by an endpoint term. Their fixed-endpoint
+variations agree, yielding the same global Hamiltonian equation. The
+azimuth is not single-valued on the entire overlap; going around it
+changes <span class="math inline">\(2s\phi\)</span> by <span
+class="math inline">\(4\pi s\)</span>. This constant ambiguity does not
+change the equations. Classical variational consistency requires the
+local derivatives to agree, not a globally single-valued real action
+value.</p>
+<p>As a concrete clock, take <span class="math inline">\(H=-\Omega
+s\cos\theta\)</span>, where <span class="math inline">\(\Omega\)</span>
+has inverse time units. The equation gives <span
+class="math inline">\(\dot\phi=\Omega\)</span>, <span
+class="math inline">\(\dot\theta=0\)</span>. Multiplying s and H by the
+same positive factor leaves this physical-time motion intact.</p>
+<h3 id="the-additional-phase-premise">The additional phase premise</h3>
+<p>Now supply <span class="math inline">\(K&gt;0\)</span> with action
+units and ask for phase transport compatible with the local factors
+<span class="math inline">\(\exp(iS_U/K)\)</span>. On the overlap the
+transition phase, up to convention for its inverse, is</p>
+<p><span
+class="math display">\[g_{NS}(\phi)=\exp(i2s\phi/K).\]</span></p>
+<p>This must be single-valued when <span
+class="math inline">\(\phi\)</span> advances by <span
+class="math inline">\(2\pi\)</span>. Hence</p>
+<p><span class="math display">\[\exp(i4\pi s/K)=1
+\quad\Longleftrightarrow\quad \frac{2s}{K}\in\mathbb Z.
+\tag{P4}\]</span></p>
+<p>The same condition follows by spanning a closed loop with a surface:
+two spanning surfaces differ by an integer number of spheres, so their
+geometric actions differ by <span class="math inline">\(4\pi s\)</span>
+times an integer. Equation (P4) makes the exponent independent of this
+choice. For open paths the transport is a map between endpoint phase
+fibres, rather than a gauge-independent scalar.</p>
+<p>The extra premise is a U(P1) phase with curvature proportional to
+<span class="math inline">\(\omega_s/K\)</span>. Equation (P4) is its
+compatibility condition. The classical symplectic form alone supplies no
+such phase, no interference rule and no K. Prequantization also leaves
+further state-space and measurement choices open.</p>
+<h3 id="common-scaling-local-caps-and-coupled-spheres">Common scaling,
+local caps and coupled spheres</h3>
+<p><strong>Common rescaling.</strong> If (s,H,K) satisfies the classical
+and phase conditions, so does <span class="math inline">\((\eta s,\eta
+H,\eta K)\)</span> for every <span
+class="math inline">\(\eta&gt;0\)</span>. Both the Hamiltonian flow and
+the dimensionless phase remain unchanged. Thus even phase consistency
+fixes a ratio rather than an absolute dimensional constant.</p>
+<p><strong>Local contraction.</strong> With H=0, the geometric action
+around a latitude bounding a north-pole cap is</p>
+<p><span class="math display">\[A(\theta_0)=2\pi
+s(1-\cos\theta_0)\longrightarrow0
+\quad(\theta_0\downarrow0). \tag{P5}\]</span></p>
+<p>These are trial loops, not nonconstant solutions for H=0. They test
+local action resolution: quantization of the total sphere flux allows
+arbitrarily small nonzero cap actions. It does not impose a minimum
+polygonal cell or invalidate ordinary time subdivision. At fixed K and
+s&gt;0, (P4) instead restricts the allowed total sphere area, giving
+<span class="math inline">\(s\ge K/2\)</span> in that family.</p>
+<p><strong>Two coupled spheres.</strong> Take the product with form
+<span class="math inline">\(\omega_{s_1}\oplus\omega_{s_2}\)</span> and
+any smooth interaction, for example <span class="math inline">\(H=J
+n_1\cdot n_2\)</span> with J in energy units. It defines complete
+classical dynamics for arbitrary <span
+class="math inline">\(s_1,s_2&gt;0\)</span>, including <span
+class="math inline">\(s_2/s_1=\sqrt2\)</span>. A common prequantization
+phase constant would require</p>
+<p><span class="math display">\[2s_1/K=m_1,\qquad 2s_2/K=m_2,
+\qquad m_1,m_2\in\mathbb Z_{&gt;0}. \tag{P6}\]</span></p>
+<p>Restriction to each sphere with the other held fixed proves these
+necessary conditions; product transition functions make them sufficient
+for this prequantization construction. Thus <span
+class="math inline">\(s_2/s_1=m_2/m_1\)</span> must be rational.
+Classical coupling admits the irrational example, while a single-K phase
+bundle excludes it. The exclusion comes from the added phase structure,
+not from a failure of reciprocal Hamiltonian mechanics. Even a permitted
+rational ratio leaves infinitely many choices obtained by K replaced by
+K/n.</p>
+<h2 id="source-boundary-for-spin-patching">Source boundary for spin
+patching</h2>
+<p>F. Bonechi, A. S. Cattaneo and M. Zabzine, <em>Geometric quantization
+and non-perturbative Poisson sigma model</em>, Advances in Theoretical
+and Mathematical Physics <strong>10</strong>, 683–712 (2006), <a
+href="https://arxiv.org/abs/math/0507223v3">arXiv:math/0507223v3</a>,
+explicitly attributes its integrality condition to requirements on a
+path integral. Coverage here: one discovery query and its arXiv
+abstract; no full-proof or exact sphere-formula audit. The local
+potentials, variational patching and tests (4)–(6) are written out
+above. The source was not read for the exact sphere formulas; those
+calculations are the displayed written derivation, with no independent
+review or novelty claim.</p>
+<h2 id="consequence-for-state">Consequence for STATE</h2>
+<p>A connected reciprocal network fixes compatible mass ratios;
+canonical Newton derivations or mechanical rotation closure equate
+constituent algebra constants; a common spin phase imposes an integral
+ratio. These implications retain their different premises. Their common
+scale freedom, the classical zero branch and arbitrarily small local cap
+actions survive. Identification of a universal nonzero physical <span
+class="math inline">\(\hbar\)</span> still needs independent physical
+preparation, state/dynamics and calibration laws.</p>
 
 </main>
 <footer class="site"><div class="wrap">

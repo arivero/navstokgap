@@ -1,6 +1,6 @@
 # The confinement scale in three bands, with published numbers, and the verification restated gauge-invariantly
 
-Later qualifications: [reasons to stop](reasons-to-stop-as-research.md) rejects the proposed crossover certificate as a currently available route; [mass-gap openings](mass-gap-openings.md) §1 warns of scalar softening; [the October 1 audit](corpus-audit-2026-10-01.md) §3 identifies the unsupported blocking and continuum claims.
+Later qualifications: [reasons to stop](mass-gap-openings.md#correlation-inequalities-and-the-transfer-they-require) rejects the proposed crossover certificate as a currently available route; [mass-gap openings](mass-gap-openings.md) §1 warns of scalar softening; [the October 1 audit](corpus-audit-2026-10-01.md) §3 identifies the unsupported blocking and continuum claims.
 
 > **Correction (2026-10-02).** The earlier claim that three strong-side
 > blocking steps are standard once mixing is certified is withdrawn.
@@ -171,7 +171,7 @@ rate. No such verification is performed here. The proposed small
 boxes are exploratory sizes; the earlier claim of a three-to-four
 order reduction in the required problem size is withdrawn because
 no sufficient size is known. The later
-[reasons-to-stop note](reasons-to-stop-as-research.md) (relevant passages
+[reasons-to-stop note](mass-gap-openings.md#correlation-inequalities-and-the-transfer-they-require) (relevant passages
 read) rejects physical-crossover certification as a currently supplied
 route and redirects effort toward weak-side RG. Its historical box
 counts do not replace the explicit four-dimensional count above.

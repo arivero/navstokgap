@@ -557,8 +557,7 @@ $\frac12-\delta$ (weak) with $\delta<\frac16$, suffice for one step.
 
 ## 7b. The coefficients for $SU(N)$ and $SU(3)$
 
-**Result (Claude, 2026-09-29; written derivation, refereed by Fable,
-ACCEPT).** With the
+**Formal one-loop group factor.** With the
 metric $\langle X,Y\rangle=-2\operatorname{tr}XY$ used throughout, the order-$t$ coefficients (1) for
 $G=SU(N)$ are those of $SU(2)$ multiplied by $N/2$:
 $$\delta_t^{12}=\delta_t^{13}=\frac{Nt}{48}\int_{\mathcal B}\frac qR+O(t^2),\qquad

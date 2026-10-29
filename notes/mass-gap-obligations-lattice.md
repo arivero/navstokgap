@@ -506,7 +506,7 @@ The latter rate additionally needs $g^2>6/\log(177/176)$ to be positive.
 The leading-activity figure $176$, linearization $1056$ and sufficient integer
 $1059$ are different statements. Neither criterion is a phase boundary.
 For KS, the explicit volume-uniform $388$ threshold is withdrawn; the
-[finite-volume correction](kogut-susskind-strong-coupling-explicit.md) is
+[finite-volume correction](strong-coupling-uniform-gap.md#continuous-time-histories-and-the-corrected-overlap-criterion) is
 $\delta^{\rm phys}\ge(8/3)g^2-12|\mathcal P|/g^2$ under its stated lattice
 restrictions. The [Yarotsky application](strong-coupling-uniform-gap.md)
 retains existential volume uniformity. These are distinct operators and bounds.
@@ -540,11 +540,11 @@ None fixes the shape of the KS gapped set or a four-dimensional continuum gap.
 
 The [gauge atlas](halving-atlas.md) owns the refinement-depth map. A local
 [action cost and background count](large-field-action-lower-bound.md) prove
-no normalized rarity theorem. A [kernel tail](flow-jacobian-truncation-error.md)
+no normalized rarity theorem. A [kernel tail](flow-conjugation-truncation.md#exact-continuum-variation-and-its-gauge-convention)
 proves no Hamiltonian relative comparison. The
 [signed operator test](large-field-operator-inequality.md) diagnoses one
 localization/surface-loss construction, not every possible Hamiltonian method.
-The [crossover comparison](reasons-to-stop-as-research.md) retains what the
+The [crossover comparison](mass-gap-openings.md#correlation-inequalities-and-the-transfer-they-require) retains what the
 examined correlation and finite-certification tools would actually require.
 
 ## 8. Consequence for STATE

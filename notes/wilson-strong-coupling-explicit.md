@@ -40,7 +40,7 @@ $\log(g^2/432)$. [Openings](mass-gap-openings.md) §2, Opening 1, reports a
 curvature criterion that would give $g^2>32$ if its normalization
 conversion, unchecked there, stands. The Kogut--Susskind explicit
 threshold contrasted in §4 was withdrawn on 2026-10-02
-([KS note](kogut-susskind-strong-coupling-explicit.md)).
+([KS note](strong-coupling-uniform-gap.md#continuous-time-histories-and-the-corrected-overlap-criterion)).
 [The bands note](confinement-scale-bands.md) §1 separates the
 all-representation activity from the fundamental normalization, as the
 correction above now does.
@@ -54,7 +54,7 @@ $$\Delta_W\ \ge\ \frac{\hbar c}{a}\,4\log\frac{1}{176\,(e^{6/g^2}-1)}
 \qquad(g^2\ge1059),$$
 uniformly in the volume. The threshold that Yarotsky's theorem supplies
 for the Kogut--Susskind Hamiltonian is $g_0^2\sim10^{101}$
-([threshold note](kogut-susskind-strong-coupling-explicit.md)). The Wilson
+([threshold note](strong-coupling-uniform-gap.md#continuous-time-histories-and-the-corrected-overlap-criterion)). The Wilson
 statement has an explicit threshold because the Euclidean character
 expansion is a polymer gas of plaquette sets covering each of their
 links at least twice, with no time discretization to pay for. Every
@@ -353,7 +353,7 @@ with $u$ replaced by $176\rho$. The Jaffe--Witten statement asks for the
 continuum theory and is indifferent to the regularization, so either
 Hamiltonian serves for T2. The one with an explicit volume-uniform
 threshold is $H_W$: the Kogut--Susskind explicit threshold was withdrawn
-on 2026-10-02 ([KS note](kogut-susskind-strong-coupling-explicit.md)),
+on 2026-10-02 ([KS note](strong-coupling-uniform-gap.md#continuous-time-histories-and-the-corrected-overlap-criterion)),
 which keeps Yarotsky's existential threshold. The anisotropic limit
 $a_t\to0$ that turns $\mathcal T$ into $e^{-a_tH_{\rm KS}/\hbar c}$ sends
 the temporal plaquette activity to one, outside the expansion, which is

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The self-sufficiency contrast: where Newton&#x27;s axioms leave motion undefined, the theory with h &gt; 0 defines it</title>
+<title>Coulomb completion and its classical limit: domains, collisions and preparation</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,76 +79,44 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>The self-sufficiency contrast: where Newton’s axioms leave motion
-undefined, the theory with <span class="math inline">\(h&gt;0\)</span>
-defines it</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/self-sufficiency-contrast.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/self-sufficiency-contrast.pdf">PDF</a></p><p>The thesis in STATE says that Newton’s mechanics is the large-action
-regime of a theory with <span class="math inline">\(h&gt;0\)</span>, and
-that it needs <span class="math inline">\(h\)</span> because its own
-axioms do not make a complete theory of motion. This note proves the
-first piece of evidence for that claim as one theorem with four parts,
-for Kepler’s force. The classical flow of <span
-class="math inline">\(V=-k/r\)</span> is incomplete: every
-zero-angular-momentum datum that moves inward, or is bound, reaches the
-centre in finite time, with the explicit collision time <span
-class="math inline">\(t_c=\tfrac\pi2\sqrt{mr_0^3/2k}\)</span> for fall
-from rest, and Newton’s axioms give no continuation there. The quantum
-Hamiltonian <span
-class="math inline">\(-\tfrac{h^2}{2m}\Delta-k/r\)</span> is
-self-adjoint on the domain of the Laplacian and generates a global
-unitary group for every state and every <span
-class="math inline">\(h&gt;0\)</span>, by Kato’s theorem, cited with its
-hypotheses. The same contrast holds for the quartic between the
-fixed-<span class="math inline">\(h\)</span> unitary limit and the
-classical-first construction that needs a branch rule. And the classical
-trajectory is a derived object of the <span
-class="math inline">\(h&gt;0\)</span> theory: for quadratic forces the
-centroid of any state obeys Newton’s equation exactly at every <span
-class="math inline">\(h\)</span>, and for Kepler’s force a coherent
-state follows the orbit in the large-action regime for finite times away
-from the collision set. Section 5a recovers Hepp’s hypotheses and
-supplies the weighted localization and first-moment bounds needed for
-Coulomb. Parts (a), (c) and the quadratic half of (d) were proved in the
-first version; (b) rests on a cited theorem. Theorem 1 was refereed by
-GPT-6.1 Sol (Codex) in two bounded passes on 2026-10-01, REFINE then
-ACCEPT on its statement and proof as printed; the reports are in <a
-href="https://github.com/arivero/navstokgap/blob/main/reviews/2026-10-01-theorem1-self-sufficiency-contrast-referee.md"><code>reviews/2026-10-01-theorem1-self-sufficiency-contrast-referee.md</code></a>.
-The October 1 assessment did not endorse Proposition 2. Its replacement
-in §5b gives the admissible <span class="math inline">\(h\)</span>-sets
-under explicit selection premises. Dirac’s finite-potential-energy
-selection excludes its critical endpoint; the critical Schur-form and
-specified cutoff limits include it. The Klein–Gordon strict-energy
-construction has an open endpoint, whereas its radial principal
-Friedrichs operator includes that endpoint. A radial branch is not a
-theorem about the full Klein–Gordon evolution. These are conditional
-action thresholds, not a proof that every completion of Newton’s
-mechanics needs <span class="math inline">\(h\)</span>. Original note by
-Claude Fable, 2026-10-01; revision and proof status recorded below.</p>
-<p><strong>Dated revision, 2026-10-02 (Kepler localization).</strong>
-The October 1 version left (L) as an assumption and used centroid
-language without moment bounds. Section 5 now proves (L) for a fixed
-smooth bounded regularization and the stated Gaussian preparations,
-using centered weighted Sobolev estimates and Hardy’s inequality. It
-also proves position and momentum centroid convergence separately. The
-primary Hepp statement is identified below; its norm approximation alone
-is not used to control a singular multiplier. These additions are
-written derivations, not an independent verification or a new referee
-acceptance.</p>
-<p><strong>Dated correction, 2026-10-02 (selection and
-endpoints).</strong> The original Proposition 2 used <span
-class="math inline">\(h&gt;h_{\min}\)</span>, left equality unsettled,
-and nevertheless concluded that any <span class="math inline">\(h\ge
-h_{\min}\)</span> was admissible. It also described a chosen
-Klein–Gordon branch as defining motion without an added rule. The
-replacement below withdraws those unqualified conclusions. It separates
-the domains and selection criteria that decide equality; the original
-October 1 text remains in Git history and its referee assessment remains
-linked above.</p>
-<p>Notation: <span class="math inline">\(h\)</span> is the reduced phase
-constant, <span class="math inline">\(m&gt;0\)</span> the mass, <span
-class="math inline">\(k&gt;0\)</span> the force constant, <span
-class="math inline">\(r=|x|\)</span> in <span
-class="math inline">\(\mathbb R^3\)</span>; the planar case is a
-remark.</p>
+<h1>Coulomb completion and its classical limit: domains, collisions and
+preparation</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/self-sufficiency-contrast.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/self-sufficiency-contrast.pdf">PDF</a></p><p>For <span class="math inline">\(V=-k/r\)</span> in three dimensions,
+the inward radial classical flow reaches a collision in finite time,
+whereas the nonrelativistic Coulomb Hamiltonian <span
+class="math inline">\(-h^2\Delta/(2m)-k/r\)</span> on the specified
+Laplacian domain generates global unitary motion for every supplied
+reduced action <span class="math inline">\(h&gt;0\)</span>. From rest at
+<span class="math inline">\(r_0\)</span>, the classical collision time
+is <span class="math inline">\(t_c=(\pi/2)\sqrt{mr_0^3/(2k)}\)</span>.
+The contrast diagnoses incomplete point-state dynamics; it does not
+exclude classical continuations with an added collision or state
+rule.</p>
+<p>Theorem 1 separates this global operator statement from
+classical-limit recovery. Quadratic-force centroids obey Newton’s
+equation exactly. For Coulomb trajectories on fixed collision-free
+intervals, the stated Gaussian preparations, smooth regularization and
+weighted localization/Hardy estimates supply the singular-potential
+control and position/momentum centroid bounds in §5. A norm
+approximation alone controls no singular multiplier. The quartic
+comparison likewise separates an existing fixed-action unitary limit
+from a classical branch rule.</p>
+<p>The relativistic comparison in §5b has selection-dependent domains
+and endpoints. Dirac’s finite-potential-energy choice excludes critical
+equality; the critical Schur form or specified cutoff limits include it.
+Strict-energy Klein–Gordon construction has an open endpoint, while its
+radial principal Friedrichs operator includes equality. A chosen radial
+branch is not a construction of the full Klein–Gordon evolution. These
+are conditional thresholds, not a necessity theorem for physical <span
+class="math inline">\(\hbar\)</span>.</p>
+<p>Notation: <span class="math inline">\(h\)</span> is a supplied
+reduced phase constant (quantum identification <span
+class="math inline">\(h=\hbar\)</span>, <span
+class="math inline">\(h_P=2\pi\hbar\)</span>), <span
+class="math inline">\(m&gt;0\)</span> the mass, <span
+class="math inline">\(k&gt;0\)</span> the force constant and <span
+class="math inline">\(r=|x|\)</span>. Written model checks are internal;
+cited source theorems retain their reading labels. The planar case is a
+separate remark.</p>
 <h2 id="statement">1. Statement</h2>
 <p><strong>Theorem 1 (self-sufficiency contrast for Kepler’s
 force).</strong></p>

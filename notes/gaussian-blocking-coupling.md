@@ -1,20 +1,6 @@
 # Gaussian product blocking: the tree-level coupling never moves
 
-**After refereeing (GPT-6 Astra), 2026-09-28.** G1: **REFINE**, with
-corrections applied below. The alias sum, its normalization, the $n=0$
-contribution and the closedness/projector argument are **ACCEPT**.
-Iteration is **REFINE**: the covariance must be bounded near nonzero
-aliases; the centred $O(K^2)$ conclusion requires that order for the
-input. Constants may grow with iteration depth. Each unstaggered index
-pair uses a staggered index outside that pair; the witnesses may differ
-between pairs. The harmonic mode is separate from $K\to0$.
-The sharp-blocking caution is **ACCEPT**: the
-[composition note](four-dimensional-composition.md), Theorem 2, proves
-an explicit divergent covariance bound. Its §3 checks that the delta
-constraint in Bietenholz--Wiese retains spatial averaging.
-
-**Result, 2026-09-28 (Claude; G1 refereed with refinements above).** For
-the free lattice gauge field in $D$ dimensions with heat time $t$, one
+For the free lattice gauge field in $D$ dimensions with heat time $t$, one
 isotropic product-blocking step $a\mapsto2a$ gives
 
 $$C'(K)=2^{4-D}t\,[P_{\rm cont}(\hat K)+O(K)]$$
@@ -45,6 +31,9 @@ nondegenerate covariance fixed point (composition note, Theorem 2).
 (§3, equations (3.1)--(3.6), passage) uses spatially averaged gauge
 variables even with an exact delta constraint. These are distinct
 choices of blocking map.
+
+The estimates are internal written checks; constants may depend on finite
+iteration depth. No independent peer review is claimed.
 
 ## 1. Setting
 

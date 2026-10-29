@@ -1,6 +1,6 @@
 # The SU(2) bridge midpoint in closed form: the curvature term is exact
 
-**Result, 2026-09-27.** Proposition 6 of the
+Proposition 6 of the
 [series/parallel note](series-parallel-gauge-refinement.md) described the
 midpoint of the Brownian bridge on $SU(2)$, the building block of the
 non-abelian parallel insertion, only to leading order in the heat time,
@@ -19,8 +19,8 @@ $2\cos\frac\theta4\,[1-\frac t{32}(1+\frac2{h(\theta)})]$, because
 $\frac t{32}\cdot\frac2h=\frac t{4\theta}\tan\frac\theta4$. So the curvature
 term N2, the side-flux-dependent softening of the mid-face weight, is
 confirmed with no remainder of order $t^2$ in the $w=0$ sector: the only
-correction to the displayed formula is the exponentially small winding
-of the bridge around the group. This is the first exact non-abelian
+correction to the displayed formula consists of exponentially small
+nonzero Cartan-image terms. This gives an exact nonabelian
 statement about the parallel insertion in three dimensions, and it
 settles the fundamental-representation part of the uniform Laplace
 remainder that Proposition 7 of the series/parallel note assumes, for
@@ -229,7 +229,7 @@ tool for them.
 
 ## 6. The spin-1 matrix and isolated cube
 
-**Theorem 4 (2026-09-27, GPT-6 Astra; refereed by Fable the same day, all fifteen items verified by hand, no errors).** Notation of this section: $E$ in the image bounds, $A_0$, $A_1$, $B(x)$ and $P_j$ are local to Theorem 4 and differ from the quantities of the same names in Theorems 1 and 3. The spin-1 midpoint matrix is
+**Theorem 4 (spin-1 midpoint matrix; internal written checks).** Notation of this section: $E$ in the image bounds, $A_0$, $A_1$, $B(x)$ and $P_j$ are local to Theorem 4 and differ from the quantities of the same names in Theorems 1 and 3. The spin-1 midpoint matrix is
 exactly determined by two real entries
 $\lambda_0=\Lambda^1_{00}$ and
 $\lambda_1=\Lambda^1_{11}=\Lambda^1_{-1,-1}$.

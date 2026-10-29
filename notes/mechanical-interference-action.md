@@ -216,8 +216,8 @@ numerical or symbolic verification was used.
 Source context is the [B18 companion](../docs/batches/B18/checkerboard-recurrence-source-companion.md)
 and [checkerboard comparison](checkerboard-dynamics.md): their norm/probability
 construction motivates the comparison but does not supply the string junction
-or receiver model. [Q07](spin-action-patching.md) isolates the phase premise;
-[Q06](reciprocal-coupling-normalization.md) isolates reciprocal calibration.
+or receiver model. [Q07](rotation-composition-universality.md#global-spin-phases) isolates the phase premise;
+[Q06](rotation-composition-universality.md#reciprocal-mechanical-calibration) isolates reciprocal calibration.
 This note gives its own elementary derivation and coordinator consistency
 review. Independent proof review and bounded literature comparison remain
 required before ledger promotion; no novelty claim is made.

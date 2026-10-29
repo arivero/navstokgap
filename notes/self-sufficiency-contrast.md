@@ -1,63 +1,34 @@
-# The self-sufficiency contrast: where Newton's axioms leave motion undefined, the theory with $h>0$ defines it
+# Coulomb completion and its classical limit: domains, collisions and preparation
 
-The thesis in STATE says that Newton's mechanics is the large-action
-regime of a theory with $h>0$, and that it needs $h$ because its own
-axioms do not make a complete theory of motion. This note proves the
-first piece of evidence for that claim as one theorem with four parts,
-for Kepler's force. The classical flow of $V=-k/r$ is incomplete:
-every zero-angular-momentum datum that moves inward, or is bound,
-reaches the centre in finite time, with the explicit collision time
-$t_c=\tfrac\pi2\sqrt{mr_0^3/2k}$ for fall from rest, and Newton's
-axioms give no continuation there. The quantum Hamiltonian
-$-\tfrac{h^2}{2m}\Delta-k/r$ is self-adjoint on the domain of the
-Laplacian and generates a global unitary group for every state and
-every $h>0$, by Kato's theorem, cited with its hypotheses. The same
-contrast holds for the quartic between the fixed-$h$ unitary limit and
-the classical-first construction that needs a branch rule. And the
-classical trajectory is a derived object of the $h>0$ theory: for
-quadratic forces the centroid of any state obeys Newton's equation
-exactly at every $h$, and for Kepler's force a coherent state follows
-the orbit in the large-action regime for finite times away from the
-collision set. Section 5a recovers Hepp's hypotheses and supplies the
-weighted localization and first-moment bounds needed for Coulomb.
-Parts (a), (c) and the quadratic half of (d) were proved in the first
-version; (b) rests on a cited theorem. Theorem 1 was
-refereed by GPT-6.1 Sol (Codex) in two bounded passes on 2026-10-01,
-REFINE then ACCEPT on its statement and proof as printed; the reports
-are in
-[`reviews/2026-10-01-theorem1-self-sufficiency-contrast-referee.md`](../reviews/2026-10-01-theorem1-self-sufficiency-contrast-referee.md).
-The October 1 assessment did not endorse Proposition 2. Its replacement
-in §5b gives the admissible $h$-sets under explicit selection premises.
-Dirac's finite-potential-energy selection excludes its critical endpoint;
-the critical Schur-form and specified cutoff limits include it. The
-Klein--Gordon strict-energy construction has an open endpoint, whereas
-its radial principal Friedrichs operator includes that endpoint. A
-radial branch is not a theorem about the full Klein--Gordon evolution.
-These are conditional action thresholds, not a proof that every
-completion of Newton's mechanics needs $h$. Original note by Claude
-Fable, 2026-10-01; revision and proof status recorded below.
+For $V=-k/r$ in three dimensions, the inward radial classical flow reaches a
+collision in finite time, whereas the nonrelativistic Coulomb Hamiltonian
+$-h^2\Delta/(2m)-k/r$ on the specified Laplacian domain generates global
+unitary motion for every supplied reduced action $h>0$. From rest at $r_0$,
+the classical collision time is $t_c=(\pi/2)\sqrt{mr_0^3/(2k)}$. The
+contrast diagnoses incomplete point-state dynamics; it does not exclude
+classical continuations with an added collision or state rule.
 
-**Dated revision, 2026-10-02 (Kepler localization).** The October 1
-version left (L) as an assumption and used centroid language without
-moment bounds. Section 5 now proves (L) for a fixed smooth bounded
-regularization and the stated Gaussian preparations, using centered
-weighted Sobolev estimates and Hardy's inequality. It also proves
-position and momentum centroid convergence separately. The primary
-Hepp statement is identified below; its norm approximation alone is
-not used to control a singular multiplier. These additions are written
-derivations, not an independent verification or a new referee acceptance.
+Theorem 1 separates this global operator statement from classical-limit
+recovery. Quadratic-force centroids obey Newton's equation exactly. For
+Coulomb trajectories on fixed collision-free intervals, the stated Gaussian
+preparations, smooth regularization and weighted localization/Hardy estimates
+supply the singular-potential control and position/momentum centroid bounds
+in §5. A norm approximation alone controls no singular multiplier.
+The quartic comparison likewise separates an existing fixed-action unitary
+limit from a classical branch rule.
 
-**Dated correction, 2026-10-02 (selection and endpoints).** The original
-Proposition 2 used $h>h_{\min}$, left equality unsettled, and nevertheless
-concluded that any $h\ge h_{\min}$ was admissible. It also described a
-chosen Klein--Gordon branch as defining motion without an added rule.
-The replacement below withdraws those unqualified conclusions. It
-separates the domains and selection criteria that decide equality;
-the original October 1 text remains in Git history and its referee
-assessment remains linked above.
+The relativistic comparison in §5b has selection-dependent domains and
+endpoints. Dirac's finite-potential-energy choice excludes critical equality;
+the critical Schur form or specified cutoff limits include it. Strict-energy
+Klein–Gordon construction has an open endpoint, while its radial principal
+Friedrichs operator includes equality. A chosen radial branch is not a
+construction of the full Klein–Gordon evolution. These are conditional
+thresholds, not a necessity theorem for physical $\hbar$.
 
-Notation: $h$ is the reduced phase constant, $m>0$ the mass, $k>0$ the
-force constant, $r=|x|$ in $\mathbb R^3$; the planar case is a remark.
+Notation: $h$ is a supplied reduced phase constant (quantum identification
+$h=\hbar$, $h_P=2\pi\hbar$), $m>0$ the mass, $k>0$ the force constant and
+$r=|x|$. Written model checks are internal; cited source theorems retain their
+reading labels. The planar case is a separate remark.
 
 ## 1. Statement
 

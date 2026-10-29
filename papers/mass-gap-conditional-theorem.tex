@@ -2,6 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
+\DeclareUnicodeCharacter{1E93}{\d{z}}
 \usepackage{amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}
 \usepackage[hidelinks]{hyperref}
@@ -16,12 +17,13 @@ volume-uniform lattice gap bound, and continuum existence stays a
 separate
 obligation}\label{the-map-as-one-conditional-theorem-h1-and-h2-give-a-volume-uniform-lattice-gap-bound-and-continuum-existence-stays-a-separate-obligation}}
 
-Later corrections: \href{reasons-to-stop-as-research.md}{reasons to
-stop} rejects certification of H2 at \(\beta_W\simeq6\) by any certified
-method known here; \href{confinement-scale-bands.md}{the bands note}
-(correction of 2026-10-02) makes box sides \(3\)--\(5\) trial sizes,
-withdraws the reduction to three open blocking steps and corrects the
-energy conversion;
+Later corrections:
+\href{mass-gap-openings.md\#correlation-inequalities-and-the-transfer-they-require}{reasons
+to stop} rejects certification of H2 at \(\beta_W\simeq6\) by any
+certified method known here; \href{confinement-scale-bands.md}{the bands
+note} (correction of 2026-10-02) makes box sides \(3\)--\(5\) trial
+sizes, withdraws the reduction to three open blocking steps and corrects
+the energy conversion;
 \href{mass-gap-obligations-lattice.md\#existing-estimates-and-examined-routes}{the
 position note} (correction of 2026-10-02) fixes the strong-coupling
 threshold set; \href{corpus-audit-2026-10-01.md}{the October 1 audit} §3
@@ -251,19 +253,20 @@ distance \(r\) of \(\Phi_0\).
 
 \emph{What is known about H1.} At small effective coupling, rigorous
 small-field renormalization (Balaban and others, metadata level, as
-listed in \href{reasons-to-stop-as-research.md}{reasons to stop})
-controls effective actions in finite volume with unspecified constants;
-no source read here derives (a)--(c) from it. For the repository's one
-explicit small-field step, a scaling estimate with crude constants puts
-the remainder threshold at \(g^2\sim10^{-12}\) if an unproved order-one
-propagator decay rate holds, and at \(g^2\sim10^{-35}\) at the proved
-rate
-(\href{mass-gap-obligations-lattice.md\#existing-estimates-and-examined-routes}{position
-note}). The final steps, in which the continuum-scaled \(\xi/a\) passes
-from about \(10\) to about \(1\), are the confinement-scale problem;
-\(\log_210\simeq3.3\) doublings is a kinematic count and does not show
-that only these steps are open (\href{confinement-scale-bands.md}{bands
-note} §§1, 2b). Part (c) can fail for block maps in general:
+listed in
+\href{mass-gap-openings.md\#correlation-inequalities-and-the-transfer-they-require}{reasons
+to stop}) controls effective actions in finite volume with unspecified
+constants; no source read here derives (a)--(c) from it. The
+repository's \href{small-field-step-gaussian.md}{Gaussian blocking
+treatment} proves a tube gap and a distinct soft-constraint decay
+criterion. Its interacting remainder test is conditional; the former
+numerical thresholds mixed lattice norms and hard/soft covariances and
+supply no certified region for (a)--(c). The final steps, in which the
+continuum-scaled \(\xi/a\) passes from about \(10\) to about \(1\), are
+the confinement-scale problem; \(\log_210\simeq3.3\) doublings is a
+kinematic count and does not show that only these steps are open
+(\href{confinement-scale-bands.md}{bands note} §§1, 2b). Part (c) can
+fail for block maps in general:
 \href{https://arxiv.org/abs/hep-lat/9210032}{van Enter, Fernández and
 Sokal} (J. Stat. Phys. 72 (1993) 879; abstract read, as recorded in the
 bands note §2b) give non-Gibbsian images.
@@ -327,9 +330,10 @@ the scalar channel softens (precision of 2026-09-23,
 \(5\) are trial sizes, and no sufficient size is known. For them a
 certified bound is an integral over \(1728\) to \(16000\) real
 dimensions with a supremum over boundary conditions (bands note §2).
-\href{reasons-to-stop-as-research.md}{Reasons to stop} records that no
-certified method known here reaches \(\beta_W\simeq6\); certified
-polymer enumeration is proved only for \(\beta_W\lesssim10^{-2}\)
+\href{mass-gap-openings.md\#correlation-inequalities-and-the-transfer-they-require}{Reasons
+to stop} records that no certified method known here reaches
+\(\beta_W\simeq6\); certified polymer enumeration is proved only for
+\(\beta_W\lesssim10^{-2}\)
 (\href{mass-gap-obligations-lattice.md\#existing-estimates-and-examined-routes}{position
 note}, correction of 2026-10-02).
 
@@ -520,12 +524,14 @@ with \(K(a_0)\), never reach item 5: the passage to the continuum needs
 \textbf{Jaffe--Witten and T3.} Item 5 supplies the lower half of the
 Jaffe--Witten clause \(0<m<\infty\) for a continuum theory constructed
 by other means. The upper half is the bound \(m\le M_0/M_{-1}\) of
-\href{moment-hierarchy-upper-bounds.md}{the moment-hierarchy note},
-which assumes the Osterwalder--Schrader axioms and a flowed correlator
-\(C_0\not\equiv0\), that is, nontriviality. T3 asks the scaled gap
-\(\Delta(a_0)/(\hbar c\Lambda)\) to converge. Item 4 bounds its lower
-limit by \(\gamma_m/(a_*\Lambda)\) and is silent on convergence.
-\href{intermediate-region-finite-verification.md}{The
+\href{finiteness-half-flowed-susceptibility.md\#positive-spectral-measures-and-the-observable-channel}{the
+spectral upper-bound treatment}, with a nonzero admissible Hamiltonian
+insertion and finite positive moments \(M_0,M_{-1}\). Four-dimensional
+flow ultraviolet finiteness alone does not establish the insertion or
+infrared hypotheses. The observed channel can miss lower states. T3 asks
+the scaled gap \(\Delta(a_0)/(\hbar c\Lambda)\) to converge. Item 4
+bounds its lower limit by \(\gamma_m/(a_*\Lambda)\) and is silent on
+convergence. \href{intermediate-region-finite-verification.md}{The
 finite-verification note} §4 relates T3 to the convergence of blocking
 trajectories under its assumption of exact low-energy reductions; that
 relation is heuristic.

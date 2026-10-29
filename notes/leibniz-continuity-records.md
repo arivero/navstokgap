@@ -1,7 +1,6 @@
 # Leibniz's law of continuity, read on records, selects a positive action floor for motions
 
-**Result, 2026-09-29 (Claude; written derivation and passage readings;
-internally reviewed by Fable with REFINE, corrections applied).** In the mark model of
+In the mark model of
 the [Planck paper](planck-gap-paper.md) (§3), the infimum of the error with
 which a non-adaptive protocol, read by tests invariant under the unknown
 initial position and velocity, decides Newton's comparison, inertia against
@@ -602,5 +601,6 @@ division of material parts to experiment. For the
 scholion: three Leibniz entries (1676, 1687, 1704), Newton's Rule III and
 Query 31, Galileo's weight on yielding ground (1638), and the Galileo--Cavalieri--Guldin layer
 are supplied with their three obligations;
-the paper's §9 carries a pointer. §§1--4 are refereed (Fable, REFINE,
-applied), and §§2b, 4b and 4c by a second Fable pass (REFINE, applied), and §4d by a third (REFINE, applied: Galileo's weight itself sinks into the ground, and his protocol is the paper's §10).
+the paper's §9 carries a pointer. The written model checks of these sections
+were internal. The corrected Galileo reading retains that the weight itself
+sinks into the ground and the protocol is the paper's §10.

@@ -1,48 +1,26 @@
-# Openings for the mass gap, and why it is not special to SU(3)
+# Gauge crossover mechanisms: spectral scope, comparison tools and source evidence
 
-Recorded 2026-09-23 at the user's request and **parked**: the Planck-gap
-paper comes first, and none of these is being attacked now, except
-possibly the fourth, which is the link from the Planck-gap work. The note
-answers two questions the user asked and corrects one statement of the
-map.
+A physical continuum gap requires a constructed nontrivial theory and a
+positive finite physical spectral edge along a controlled weak-coupling
+trajectory. It does **not** require a gap at every bare coupling of a chosen
+lattice action. The latter all-coupling property is a separate possible
+strengthening. Numerical bulk transitions for a Wilson action do not determine
+the gapped set of the distinct Kogut–Susskind operator.
 
-**Correction, 2026-10-02 (strong-side comparison).** Opening 1's
-comparison now follows the maintained Wilson exponential-activity
-bound and the withdrawn Kogut--Susskind numerical threshold. Its own
-curvature normalization is still unchecked. This changes the cited
-strong-side baseline, not the status of the proposed curvature route.
+The four mechanisms below preserve their source evidence and missing estimates:
+curvature, a centre-stabilized deformation, a three-dimensional comparison and
+spectral valley lifting. Correlation inequalities, finite certification and
+flow give possible additional tools, not an exhaustive classification of all
+constructive methods. Every auxiliary relaxation rate, loop/flux comparison
+and physical Hamiltonian gap must name its operator and sector. The
+[conditional transfer theorem](mass-gap-conditional-theorem.md) and
+[spectral obligations](mass-gap-obligations-lattice.md) own those hypotheses.
 
-**The gap is expected for every compact simple non-abelian group.**
-Lattice evidence shows gapped glueball spectra for $SU(N)$ from $N=2$ to
-large $N$, with masses smooth in $1/N^2$, and for the other classical
-groups; the dividing line is between abelian and non-abelian, since
-compact $U(1)$ in four dimensions has a proven massless phase at weak
-coupling. $SU(3)$ fixes the constants; a method that works will almost
-surely be group-general.
+The sources motivate an expected gap across compact simple nonabelian groups;
+they prove no group-universality theorem here. Existing reading labels are
+retained, and new research is suspended during consolidation.
 
-**A precision on the map.** The [position note](mass-gap-obligations-lattice.md#existing-estimates-and-examined-routes)
-says that the conjecture is T2$'$ together with T3, given T4, and the
-[obligations map](mass-gap-obligations-lattice.md) says that T3
-presupposes T2$'$. T3 needs less: a gap $\delta_\infty(g)>0$ on some
-interval $(0,g_1)$ along the scaling curve. T2$'$, a gap at every lattice
-coupling, is a property of a particular lattice action, and numerical Wilson-action evidence for a first-order bulk
-transition at $SU(N\ge5)$ does not by itself identify the gapped set
-of the distinct Kogut--Susskind operator. For $SU(3)$ with the Wilson
-action the bulk behaviour is a crossover, so T2$'$ remains plausible
-there; the conditional theorem of the
-[conditional-theorem note](mass-gap-conditional-theorem.md), stated along
-the trajectory, needs no T2$'$ at all.
-
-**Four openings,** ranked by how directly they reach the place where the
-map ends, the control of about six blocking steps at order-one coupling.
-
-1. Curvature: the Bakry--Émery criterion and its multiscale form.
-2. The centre-stabilized theory on $\mathbb R^3\times S^1$ at small radius.
-3. Three dimensions first.
-4. The Planck-gap link: Simon's valley lifting, a floor that holds for
-   every state.
-
-## 1. Evidence across groups
+## Evidence across groups and lattice actions
 
 - **$SU(N)$.** Glueball masses and string tensions computed for $N$ from
   $2$ to about $12$ are finite and extrapolate smoothly in $1/N^2$ (Lucini
@@ -89,8 +67,8 @@ coupling $\beta_A$. In the $(\beta_F,\beta_A)$ plane a line of first-order
 bulk transitions ends at a critical point (Bhanot and Creutz 1981). For
 small $N$ the Wilson axis $\beta_A=0$ passes beside the endpoint and shows
 a rapid crossover; from $N=5$ it crosses the line, and the transition
-strengthens with $N$. The large-$N$ limit makes a non-analyticity between
-strong and weak lattice coupling unavoidable. In two dimensions, where
+strengthens with $N$. These cited models motivate a large-$N$ nonanalyticity; they establish
+no necessity theorem for every lattice action. In two dimensions, where
 the lattice theory is exactly solvable, it is analytic at every finite
 $N$ and has a third-order transition at a critical 't Hooft coupling at
 $N=\infty$ (Gross and Witten,
@@ -180,44 +158,35 @@ large $N$ a lattice route meets the bulk transition, which it would have
 to avoid with a bulk-preventing action or with the centre-stabilized
 volume independence of opening 2, itself a large-$N$ construction.
 
-**The panorama with $\hbar$ explicit.** This repository writes the action
-as $S=-\frac{\hbar}{4g^2}\int F^a_{\mu\nu}F^{a\mu\nu}\,d^3x\,c\,dt$ with $g$
-dimensionless ([G07](low-dimensional-mass-gap.md), Proposition 7), so the
-weight $e^{iS/\hbar}$ contains $g$ alone and $\hbar$ is hidden inside it:
-with a classical coupling $g_{\rm cl}$, $S=-\frac1{4g_{\rm cl}^2}\int\cdots$,
-one has $g^2=\hbar g_{\rm cl}^2$. Three consequences follow.
+### Physical action, rank and limiting order
 
-- *The 't Hooft limit is a classical limit.* A diagram with $E$
-  propagators, $V$ vertices and genus $h$ carries $(\hbar\lambda_{\rm cl})^{E-V}N^{2-2h}$
-  with $\lambda_{\rm cl}=g_{\rm cl}^2N$ ('t Hooft,
-  [Nucl. Phys. B **72**, 461, 1974](https://doi.org/10.1016/0550-3213(74)90154-0),
-  metadata). The loop parameter is $\lambda=\hbar g_{\rm cl}^2N$, so
-  $N\to\infty$ at fixed $\lambda$ is $\hbar\to0$ with $\hbar N$ fixed at fixed
-  $g_{\rm cl}$, and $1/N^2=(\hbar g_{\rm cl}^2/\lambda)^2$: the genus
-  expansion is an expansion in $\hbar^2$. Yaffe formulates large-$N$
-  limits in general as classical mechanics
-  ([Rev. Mod. Phys. **54**, 407, 1982](https://doi.org/10.1103/RevModPhys.54.407),
-  metadata). In holography it is literal: the bulk Newton constant in
-  anti-de Sitter units is of order $1/N^2$, so the bulk loop expansion is
-  the $1/N^2$ expansion.
-- *The gap is non-perturbative in $\hbar$.* With the two-loop scale of
-  the [obligations map](mass-gap-obligations-lattice.md) §5 and
-  $b_0=11N/(48\pi^2)$, $mc^2\propto\frac{\hbar c}a\exp\bigl(-\frac{24\pi^2}{11\,\hbar g_{\rm cl}^2N}\bigr)$
-  times a power of $\hbar g_{\rm cl}^2N$: at fixed $N$, $a$ and $g_{\rm cl}$
-  it vanishes faster than any power of $\hbar$, the way a tunnelling
-  splitting does, which gives one precise reading of Jaffe and Witten's
-  remark that the gap is "not classically visible". It depends on $\hbar$ and $N$
-  only through $\hbar N$, so the 't Hooft limit is the classical limit
-  along which the gap survives.
-- *The small volume is a power of $\hbar$.* G07's zero-mode gap
-  $\delta_1g^{2/3}\hbar c/L$ is $\delta_1\hbar^{4/3}g_{\rm cl}^{2/3}c/L$: a floor
-  of the Planck-gap kind, a power of $\hbar$ from the zero-point energy that
-  lifts the valleys. The two regimes meet at the crossover $z\simeq2$ of
-  the [valley note](torus-valley-potential.md). Opening 4 lives in the
-  power-law regime, where the Planck-gap methods apply; the
-  infinite-volume gap lives in the non-perturbative one.
+The convention is
+$$S=-\frac{\hbar}{4g^2}\int F^a_{\mu\nu}F^{a\mu\nu}d^3x\,c\,dt,
+ \qquad g^2=\hbar g_{\rm cl}^2,\quad \lambda=g^2N.$$
+The usual large-$N$ limit holds physical $\hbar$ and $\lambda$ fixed,
+therefore changes $g_{\rm cl}^2$. Its vacuum ribbon expansion has topological
+weights $N^{2-2\mathfrak g}$; 't Hooft, *Nucl. Phys. B* **72** (1974) 461,
+[DOI](https://doi.org/10.1016/0550-3213(74)90154-0), and Yaffe, *RMP* **54**
+(1982) 407, [DOI](https://doi.org/10.1103/RevModPhys.54.407), are retained
+at metadata level. Large-$N$ factorization can define classical collective
+dynamics. Equating this with the physical $\hbar\to0$ limit of a fixed-rank
+theory would change what is held fixed. Formally keeping $g_{\rm cl}$ fixed
+and $\hbar N$ fixed is another parameter path, not that usual limit.
 
-## 2. The openings
+Conditional on a gap proportional to the RG scale, the weak-coupling
+running gives the schematic energy
+$$\Delta\ \propto\ \frac{\hbar c}{a}
+ \exp\left[-\frac{24\pi^2}{11\hbar g_{\rm cl}^2N}\right]$$
+times a power of the dimensionless coupling. This is scaling orientation,
+not a constructed spectrum or a fixed-volume asymptotic theorem. Its explicit
+$\hbar c/a$ prefactor survives outside the function of $\lambda$; the full
+energy therefore does not depend only on $\hbar N$. In the separately
+controlled zero-mode truncation, $\delta_1g^{2/3}\hbar c/L$ instead equals
+$\delta_1\hbar^{4/3}g_{\rm cl}^{2/3}c/L$. Matching that truncation to the
+full small-volume field theory requires the
+[renormalized transfer estimates](weak-coupling-feshbach-reduction.md).
+
+## Four scoped mechanisms
 
 ### Opening 1: curvature
 
@@ -254,7 +223,7 @@ all-representation polymer bound
 ([note](dobrushin-uniqueness-wilson.md)). The former Wilson figure $176$
 was a leading-activity estimate; the former Kogut--Susskind figure $388$
 was withdrawn on October 2
-([note](kogut-susskind-strong-coupling-explicit.md)). The latter keeps
+([note](strong-coupling-uniform-gap.md#continuous-time-histories-and-the-corrected-overlap-criterion)). The latter keeps
 an existential volume-uniform strong-coupling theorem and an explicit
 finite-volume bound, not a certified numerical uniform threshold.
 If the curvature conversion and physical transfer stand, the comparison
@@ -279,10 +248,10 @@ function on the coarse configuration manifold, and the criterion needs
 $\operatorname{Ric}+\operatorname{Hess}S_{\rm eff}$ bounded below at every
 scale. At weak coupling the Hessian is degenerate along gauge orbits and
 along the abelian valleys, and the curvature of the group has to carry
-those directions. **First note if opened:** check the conversion to
-$g^2>32$; compute the curvature budget for $SU(2)$ and $SU(3)$ against
-the Hessian of the Wilson action; and state exactly what lower bound one
-blocking step must preserve.
+those directions. The conversion to $g^2>32$, the precise operator controlled and the
+curvature budget against the Wilson Hessian remain unchecked in this
+treatment. Multiscale transport requires a named lower bound preserved by
+the actual generated interaction.
 
 ### Opening 2: the centre-stabilized theory at small radius
 
@@ -294,25 +263,21 @@ order parameters which distinguish the small and large radius regimes"
 ([PRD **78**, 065035, 2008](https://doi.org/10.1103/PhysRevD.78.065035),
 abstract). The mechanism at small radius is Polyakov's monopole plasma,
 which Göpfert and Mack made rigorous for three-dimensional compact $U(1)$
-at every coupling. **Target if opened:** a rigorous mass gap for the
-deformed theory at small radius, with explicit constants. That would be a
-theorem about a deformed theory; carrying it to $\mathbb R^4$ is the
-adiabatic-continuity conjecture.
+at every coupling. A rigorous estimate with explicit constants would concern that deformed
+theory. Carrying it to undeformed $\mathbb R^4$ Yang–Mills remains an
+additional adiabatic-continuity conjecture.
 
 ### Opening 3: three dimensions first
 
-In three dimensions $g^2$ has the dimensions of energy, the theory is
-superrenormalizable, and the coupling at lattice scale is $g^2a/\hbar c$,
-which vanishes as a power of $a$. The weak-side deficit of twelve orders
-of magnitude found in
-[the small-field threshold note](small-field-step-decay-and-threshold.md)
-comes from the logarithmic running of four dimensions, and in three
-dimensions the ultraviolet steps shrink geometrically, so the
-constant-chasing that failed in four dimensions may close. The
-[one-function note](three-dimensional-gap-one-function.md) reduces the
-problem to a lower bound $f(x)\ge f_->0$ on one function of one variable.
-A three-dimensional gap uniform in the spacing is open and would be a
-major result by itself.
+In the convention of the [three-dimensional treatment](three-dimensional-gap-one-function.md),
+$\lambda_3=\hbar g_{\rm cl}^2$ has inverse-length units,
+$E_3=\hbar c\lambda_3$ is the energy scale and the dimensionless lattice
+coupling is $\lambda_3a$. Superrenormalizable ultraviolet scaling supplies a
+different problem from four-dimensional logarithmic running. The corrected
+[Gaussian remainder diagnostic](small-field-step-gaussian.md) proves no
+three-dimensional closure or numerical threshold by dimensional substitution.
+A physical positive lower bound on the scaling function, nonzero-mode control
+and a continuum construction remain distinct open requirements.
 
 ### Opening 4: the Planck-gap link
 
@@ -337,28 +302,111 @@ states, and the ones that survive rest on the commutator alone: the
 phase between Newton's polygon and the parabola, and the cost of
 disturbance. Simon's inequality is of the surviving kind, a spectral
 statement, so the valley lifting is the mass-gap instance of the lesson
-the Planck paper draws. **First step if opened:** hypothesis (H3) of
+the Planck paper draws. The missing target is hypothesis (H3) of
 the [Feshbach note](weak-coupling-feshbach-reduction.md), the gap of the
 zero-mode Hamiltonian $h_3$ plus the even valley potential $U(a)$, proved
-by a Simon-type operator inequality with every constant explicit. That is
-the lower side of the small-volume corner S at weak coupling, and it
-stays within reach of the Planck-gap methods.
+by a Simon-type operator inequality with every constant explicit. That is a conditional lower-side target in the small-volume regime; its
+nonzero-mode transport is not proved by the oscillator inequality alone.
 
-## 3. Consequence for STATE
+## Correlation inequalities and the transfer they require
 
-The September 23 record left the mass-gap track paused; the subsequent
-September 26 user direction in STATE restored it as a main goal.
-This note records the four openings
-and the answer on groups: the gap is expected for every compact simple
-non-abelian group, and $SU(3)$ is the group that fixes the constants. The
-map's statement that the conjecture is T2$'$ with T3 is too strong:
-T3, with a gap on an interval $(0,g_1)$ along the scaling curve, is what
-is needed, and numerical Wilson-action bulk evidence does not establish failure of
-the Kogut--Susskind T2$'$ property. If one
-opening is taken up next, it is the fourth, which uses the Planck-gap
-methods directly; the first carries the most promise, and its first
-check is the conversion of Shen, Zhu and Zhu's threshold to $g^2>32$.
-The October 2 comparison uses the current Wilson sufficient bounds
-and records the withdrawn KS explicit threshold. It establishes no
-new curvature normalization, numerical uniform KS threshold or
-continuum gap.
+If Wilson loop expectations increase with $\beta_W$, an area-law string
+tension defined by the corresponding limit is nonincreasing where the limit
+and comparison are valid. A lower area-law bound can then transfer from a
+weaker to a stronger coupling. Monotonicity of a loop expectation alone does
+not imply monotonicity of a connected correlator, its decay exponent or the
+vacuum-sector spectral gap. Both terms of a truncated correlator may increase.
+The old claim that this closes every stronger-coupling channel is withdrawn.
+
+Ginibre's
+method needs the interaction to lie in a cone of products of
+single-site functions satisfying the duplicate-variables condition.
+For the character cone of $SU(2)$ the single-site condition reduces to
+$$\int\!\!\int\prod_{i=1}^n\big(\chi_i(x)-\chi_i(y)\big)\,dx\,dy
+=\sum_{S\subseteq\{1..n\}}(-1)^{|S^c|}\,N_S\,N_{S^c},\qquad
+N_S=\dim\operatorname{Hom}\Big(1,\bigotimes_{i\in S}V_i\Big),$$
+which vanishes for odd $n$, equals $2N_{1234}+2(\delta_{12}\delta_{34}+\delta_{13}\delta_{24}+\delta_{14}\delta_{23})\ge0$
+for $n=4$, and is positive in every case computed at $n=6$ (six spin
+$\tfrac12$: $70$; six spin $1$: $100$; four spin $\tfrac12$ and two spin
+$1$: $28$; six spin $2$: $260$). The single-site condition is therefore
+no obstruction as far as checked. The obstruction is that the plaquette
+term $\operatorname{Re}\operatorname{tr}(U_1U_2U_3U_4)$ is not a
+nonnegative combination of products of single-link functions: the
+abelian proof writes $\cos(\theta_1+\dots)$ through sums and differences
+of angles, which uses the commutativity of the group, and no usable positive plaquette decomposition for the matrix product
+is established by the examined construction. The second Griffiths inequality was not established by the sources read here for $SU(2)$ and $SU(3)$ lattice gauge
+theory; no proof or counterexample is supplied here, and the centre-based
+inequalities that do exist are listed in
+the tools-and-source table below.
+
+The finite checks are not an all-order character-cone theorem. The obstacle
+identified here is the absence of the needed positive plaquette decomposition
+in the examined construction, not a proof that every correlation inequality
+for a nonabelian theory is impossible.
+
+## Tools and source scope
+
+These are the sources previously cited in this family, at **metadata level**
+unless a linked canonical proof records a deeper read. They are leads and
+scope comparisons, not independently verified universal impossibility claims.
+
+| Tool/source | Potential input | Missing transfer |
+| --- | --- | --- |
+| Ginibre, CMP 16 (1970) 310; Aizenman–Barsky–Fernández, JSP 47 (1987) 343 | Positive cones and Ising-type sharpness | A nonabelian plaquette interaction satisfying the required hypotheses |
+| Mack–Petkova, Ann. Phys. 123 (1979) 442 and 125 (1980) 117; Tomboulis–Yaffe, CMP 100 (1985) 313 | Centre, electric-flux and vortex/loop comparisons | A vacuum-sector physical spectral bound; a string tension is a different observable |
+| Fröhlich–Israel–Lieb–Simon, CMP 62 (1978) 1 | Reflection-positive chessboard bounds for specified events | Good-region mixing and a normalized block free-energy estimate |
+| Fröhlich–Simon–Spencer, CMP 50 (1976) 79 | Gaussian-domination/infrared techniques for their stated spin interactions | The needed domination for the nonquadratic plaquette product; nonabelian target curvature alone is not the failure reason |
+| Knabe, JSP 52 (1988) 627 | A finite-size gap criterion under frustration-free hypotheses | Those hypotheses are not verified for interacting KS at general coupling; this does not exhaust all finite-size criteria |
+| [Finite mixing proposal](intermediate-region-finite-verification.md), [Dobrushin proof](dobrushin-uniqueness-wilson.md) | A certified supremum over boundary conditions could imply a Wilson-transfer gap | No certificate at the physical crossover or for the generated interaction is supplied |
+| [Exact flow conjugation](flow-conjugation-truncation.md) | Spectrum-preserving change of variables | New effective decomposition, relative error and iterative control |
+| [Small-volume bridge](weak-coupling-feshbach-reduction.md) | Compressed zero-mode estimates with a named complement/Schur target | Renormalized cutoff-uniform transfer and passage to large physical volume |
+
+A signed spin-foam representation does not make the original Wilson probability
+weight negative, and positive plaquette coefficients do not make every
+recoupling amplitude positive. Centre comparisons, electric-flux sectors and
+glueball correlations must name the sector they control. The 2007 approximate
+centre-decimation proposal (arXiv:0707.2179, metadata) was not established as
+a theorem by this repository's reading.
+
+Gauge fixing can change a conditional specification; merely subtracting a
+maximal-tree fraction from a neighbour count does not prove a new Dobrushin
+coefficient. The earlier numerical suggestion $444\mapsto330$ is unsupported
+here. Likewise, neither a perturbative four-dimensional Langevin construction
+nor its obstruction is proved by this source survey; an auxiliary stochastic
+clock is not a physical energy gap.
+
+## Finite certification and the actual interaction
+
+The earlier illustrative boxes at $\beta_W\simeq6$ had roughly $216$–$2000$
+links, hence thousands of integration variables. These are scale estimates
+from the [bands note](confinement-scale-bands.md), not a complexity theorem
+excluding every certification method. Monte Carlo by itself is not a certified
+supremum over boundary conditions. A rigorous polymer enumeration needs an
+analytic tail and its own convergence region. The explicit Wilson criteria
+here prove sufficient strong-coupling regions, not limits on all possible
+future methods. The [strong-coupling proofs](wilson-strong-coupling-explicit.md)
+and [Dobrushin criterion](dobrushin-uniqueness-wilson.md) own their constants.
+
+The weak side has exact Gaussian and conditional remainder tests in
+[Gaussian blocking](small-field-step-gaussian.md). The corrected covariance
+sum and soft/hard distinction supply no certified nonlinear threshold.
+The [mid-plane notebook](su2-midplane-small-field.md) later proves different
+retained-barrier weak-strip estimates. Their coefficients and cutoff/volume
+hypotheses cannot be silently substituted for a physical-coupling full integral.
+
+After blocking, all generated interactions must be controlled. There is no
+proved arrival in the completely analytic set at order-one coupling and no
+proved universal statement that all difficulty is one fixed unknown lattice
+interaction. A possible mixing certificate at that scale would still need
+stable transport from the weak trajectory, physical spectral visibility,
+nontriviality and continuum reconstruction.
+
+## Consequence for STATE
+
+The examined mechanisms retain a concrete boundary: curvature normalization
+and physical transfer, removal of the deformation, continuum/nonzero-mode
+control, or a normalized state-uniform operator estimate. Loop monotonicity,
+signed recoupling, finite certification proposals and unitary flow do not
+supply those steps automatically. No exhaustive impossibility result or
+certified intermediate-coupling arrival is asserted. Physical action, rank,
+volume, lattice cutoff and auxiliary time retain distinct limiting orders.

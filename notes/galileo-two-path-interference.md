@@ -1,14 +1,6 @@
 # Galileo's comparison as two-path interference
 
-**After refereeing (Fable, 2026-09-27).** Lemma 1, the conversions
-$K_\tau=F^2\tau^3/(24m)=(F/4v)A=\tau\Delta E/12$, the error law and the
-polygon-phase match, and Theorem 3(a),(c) are accepted. Theorem 3(b)
-holds for the relative-averaging prescription stated there (see after
-(12)). "Two-path interference" here means a controlled-unitary
-comparison, and the $n$ passes are product copies; Proposition 2 is not
-used by Theorem 3.
-
-**Result, 2026-09-27 (round 3).** A coherent, endpoint-matched comparison
+A coherent, endpoint-matched comparison
 of Newton's impulsive chord with Galileo's constant-force parabola has
 action difference
 
@@ -43,6 +35,10 @@ independent physical obligation. All results below are proved under
 their displayed hypotheses; the scale-selection step remains open.
 
 The symbol $\hbar$ is the supplied reduced quantum phase constant, with physical Planck action $h_P=2\pi\hbar$. The time mesh and instrument resolution remain separate. Varying or averaging inverse values in the limiting theorems below is a formal family-of-models prescription, not an experiment that varies nature's constant or an automatic record-resolution law.
+
+The comparison uses controlled unitaries and product copies; Proposition 2
+is not used in the limiting Theorem 3. Its relative averaging prescription
+is part of the hypothesis. Model checks are internal, not independent review.
 
 ## 1. The Galileo area and the two histories
 

@@ -103,6 +103,6 @@ operator comparisons with signs, domains and accumulated errors controlled.
 Neither formalism has its missing estimates discharged by choosing it. The
 surface loss above diagnoses the specified trial construction; it proves no
 universal failure of Hamiltonian methods or success of a Euclidean continuum
-gap construction. Keep the [flow locality](flow-jacobian-truncation-error.md),
+gap construction. Keep the [flow locality](flow-conjugation-truncation.md#exact-continuum-variation-and-its-gauge-convention),
 [action/entropy](large-field-action-lower-bound.md) and
 [ground-state transfer](ground-state-measure-transfer.md) hypotheses separate.

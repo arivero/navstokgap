@@ -3,12 +3,12 @@
 2026-09-14. Historical context; STATE owns dispatch.
 
 2. **Physical selection mechanism — next autonomous research.**
-   [Q06](../../notes/reciprocal-coupling-normalization.md) constructs reciprocal
+   [Q06](../../notes/rotation-composition-universality.md#reciprocal-mechanical-calibration) constructs reciprocal
    energy exchange: fixed acceleration responses determine inertia ratios,
    with a cycle-consistency test, while a common energy/action factor survives.
    Q04--Q06 remain exploratory; no ledger promotion. Further adjustable
    stabilizers and spring-network variants are parked.
-   [Q07](../../notes/spin-action-patching.md) gives the local actions and overlap
+   [Q07](../../notes/rotation-composition-universality.md#global-spin-phases) gives the local actions and overlap
    rule: phase consistency quantizes 2s/K, while classical dynamics admits any
    s>0. A coupled irrational-ratio pair separates the premises; local loop
    actions remain continuous. This is exploratory, not ledger-promoted.
@@ -21,7 +21,7 @@
    mechanical barrier: thresholds trade missed gates for double events;
    preloading reduces signal cost by storing readiness energy. Reset must
    account for it. This remains exploratory; threshold tuning is parked.
-   [Q10](../../notes/thermal-receiver-reliability.md) derives exact dark-retention
+   [Q10](../../notes/local-detector-coincidences.md#thermal-retention-and-response-deadlines) derives exact dark-retention
    and response feasibility in an activated-rate model. A fixed prefactor and
    barrier coupling give a temperature/timing/error-dependent barrier-change
    floor; input work needs a separate transduction premise. Kinetic gating

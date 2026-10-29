@@ -1,7 +1,7 @@
 # State
 
 Updated 2026-10-29. **Maintained-argument consolidation complete; new research suspended.**
-The maintained [catalog](../notes/index.md) organizes canonical arguments by
+The **96-note** maintained [catalog](../notes/index.md) organizes canonical arguments by
 question and dependency. This page owns the live priorities; proofs and exact
 assumptions belong in the linked notes. Historical handouts and internal model
 scores describe earlier texts and do not certify current arguments.
@@ -27,7 +27,9 @@ from time mesh, lattice spacing, record resolution and a bare regulator.
 | What do cusp completion and copying imply? | [Cusp floors and histories](../notes/newton-cusp-preparation-floor.md), [Gaussian sector](../notes/central-limit-canonical-gaussian-sector.md), [meter/shear countertest](../notes/gaussian-meter-entropy-floor.md) |
 | What survives a cut or a quantum record? | [Cut energy/phase/information](../notes/cut-measure-newton.md), [mark model](../notes/mark-cost-and-statistical-floor.md), [general quantum resources](../notes/record-distance-path-length.md) |
 | What do full classical apparatus records determine? | [Receiver memory](../notes/conservative-harmonic-receiver.md), [readout](../notes/autonomous-finite-readout.md), [calibration fibres](../notes/calibration-tolerance-recovery.md), [force/minimax](../notes/causal-force-information.md) |
+| Which composition and phase premises compare action constants? | [Mechanical/algebraic calibration](../notes/rotation-composition-universality.md) |
 | What do classical fluctuation composition and detector events imply? | [Composition and noise laws](../notes/composition-universality.md), [clicks and coincidence bounds](../notes/local-detector-coincidences.md) |
+| What do spectral upper estimates require? | [Variational trials](../notes/lattice-gap-upper-bounds.md), [admissible insertions and moments](../notes/finiteness-half-flowed-susceptibility.md) |
 | Which gauge estimates survive the continuum limit? | [Spectral obligations](../notes/mass-gap-obligations-lattice.md), [refinement atlas](../notes/halving-atlas.md) |
 
 ## Questions retained after consolidation

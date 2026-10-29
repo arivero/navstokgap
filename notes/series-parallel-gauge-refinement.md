@@ -1,6 +1,6 @@
 # Series and parallel: where the gauge insertion law stops closing
 
-**Result, 2026-09-26.** Halve one lattice direction of a heat-kernel
+Halve one lattice direction of a heat-kernel
 lattice gauge theory in $D$ dimensions. The step splits exactly into two
 kinds of move. Faces containing the refined direction are cut in two;
 these *series* moves integrate out exactly in every dimension, by the
@@ -222,8 +222,7 @@ $$|\mathcal D|\le\Bigl(\frac{a^2K^2}{16}+\frac{(Ga)^2}{8}\Bigr)
 
 *Proof.* Use $2t+v\ge2t$ and $v\le ta^2|k|^2/4$ in (5). $\square$
 
-**Corollary 2$_s$ (a cut at fraction $s$; added 2026-09-27, atlas §1b;
-refereed by Fable 2026-09-28, accepted).**
+**Corollary 2$_s$ (a cut at fraction $s$).**
 Cut every direction-1 cell at $x_1=(\ell+s)a_1$, $0<s<1$, and give each
 transverse face the heat time $\lambda_3a_2a_3/\ell_1$ with $\ell_1$ its dual length in
 direction 1 (the trapezoid weight). The two layers adjacent to any old
@@ -289,7 +288,7 @@ splits it into its noise part ($v$) and its displacement part
 ($\Phi_\ell-\Phi_{\ell+1}$). Tomboulis's attempt to bound the exact
 decimation between Migdal--Kadanoff-type approximations
 ([arXiv:0707.2179](https://arxiv.org/abs/0707.2179), abstract; not
-established as a theorem, see [what-would-unblock](reasons-to-stop-as-research.md#tools-and-source-scope))
+established as a theorem, see [what-would-unblock](mass-gap-openings.md#tools-and-source-scope))
 worked on the same parallel step.
 
 **The comparison with Newton.** Both eliminations complete a square,
@@ -584,9 +583,7 @@ clause of P($\alpha$). The non-abelian terms N1--N3 are absent here, so
 Theorem 5 tests the large-field and representative bookkeeping, and
 leaves the curvature and commutator terms to the $SU(2)$ cube.
 
-**Corollary 5$_s$ (compact $U(1)$, a cut at fraction $s$; 2026-09-28;
-refereed by Fable the same day, which supplied the uniform bound of step
-(d), checked here).** Take the hypotheses of Theorem 5 with the trapezoid
+**Corollary 5$_s$ (compact $U(1)$, a cut at fraction $s$).** Take the hypotheses of Theorem 5 with the trapezoid
 weights of Corollary 2$_s$, a cut at fraction $s\in(0,1)$, and the
 representative $\bar\Phi=(1-s)\Phi_\ell+s\Phi_{\ell+1}$. Put
 $c^*_s=\pi^2/(1+4s(1-s))\in[\pi^2/2,\pi^2]$, $r_s=e^{-(c^*_s-\pi\varepsilon)/t}$,

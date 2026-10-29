@@ -1,20 +1,6 @@
 # The bridge midpoint on a compact group at any cut: windings and the centre
 
-**After refereeing (GPT-6 Astra, 2026-09-28).** A1 and A1': ACCEPT the
-single- and several-cut identities, with REFINE for metric identifications,
-regularity and the extended-character iteration spelled out below. A2:
-ACCEPT both reductions; correct the SU(2) theorem number and the bridge
-orientation. A3--A4: ACCEPT the centre criterion, torsion, phases and
-norms; REFINE the focal-point and relative-exponent qualifications. A5:
-ACCEPT the numerical threshold; REFINE its application and the screening
-discussion. The image expansion carries signed polynomial amplitudes;
-the probability-mixture and topological-winding readings for simply
-connected groups are REJECTED. The thin-vortex placement remains a
-semiclassical interpretation of exact central phases. All checks used
-written derivations.
-
-**Result, 2026-09-28 (Claude; refereed with corrections above).** Let $G$
-be a compact connected simply connected Lie group with a bi-invariant
+Let $G$ be a compact connected simply connected Lie group with a bi-invariant
 metric, let $t>0$, and take
 the heat-kernel bridge of total heat time $t$ from $e$ to $g=e^{iX}$, cut
 at fraction $s\in(0,1)$, so that the first piece has heat time $st$. For
@@ -83,6 +69,11 @@ sector; nonzero images give exponentially small corrections at the
 identity. With generator $\Delta/2$, the coefficients in powers of $t$
 are $(R/12)^k/k!$; $(R/6)^k/k!$ uses heat time for $\Delta$.
 No novelty is claimed for the method.
+
+The Cartan-image amplitudes are signed polynomials. A positive winding
+mixture is available for $U(1)$, while the simply connected nonabelian image
+labels are not topological winding sectors. Thin-vortex placement remains a
+semiclassical interpretation. Checks are internal written derivations.
 
 ## 1. Conventions
 
@@ -169,7 +160,10 @@ $v'+\kappa'$ lies off a wall.
 (iii) *Square.* $s|v|^2+(1-s)|v+\kappa|^2=|v+(1-s)\kappa|^2+s(1-s)|\kappa|^2$.
 
 (iv) *Poisson summation* over $P$, whose dual lattice is $Q^\vee$:
-$\sum_{v\in P}f(v)={\rm vol}(\mathfrak t^*/P)^{-1}\sum_{H\in Q^\vee}\hat f(H)$ with
+
+$$\sum_{v\in P}f(v)={\rm vol}(\mathfrak t^*/P)^{-1}\sum_{H\in Q^\vee}\hat f(H).$$
+
+Here
 $\hat f(H)=\int f(y)e^{-2\pi i\langle y,H\rangle}dy$. With $y=u-(1-s)\kappa$ one has
 $\langle y+\kappa,X\rangle=\langle u,X\rangle+s\langle\kappa,X\rangle$ and $\langle y,H\rangle=\langle u,H\rangle-(1-s)\langle\kappa,H\rangle$, so
 
@@ -235,7 +229,7 @@ $\pi(\frac it Z-(1-s)\kappa)/\pi(\frac itZ)=\prod_{\alpha>0}\bigl(1+i(1-s)t\lang
 curvature correction; for $SU(2)$ at $s=\frac12$ it is the factor
 $1+ikt/(2\theta)$ behind the $-\frac t{2\theta}k\sin\frac{k\theta}2$ term of the $SU(2)$ note.
 
-## 3. Reductions (Corollary 2; A2: ACCEPT with orientation and numbering corrections)
+## 3. Reductions (Corollary 2)
 
 *$U(1)$.* The abelian calculation uses $P=Q^\vee=\mathbb Z$,
 $\pi\equiv1$, $\rho=0$, $\langle n,H\rangle=nH$, $X=\theta$:
@@ -269,7 +263,7 @@ The cube statement in Theorem 3 also uses independence of its four
 bridges. Thus every image agrees, while the character identity alone
 supplies no higher-spin diagonal entries.
 
-## 4. The centre (Corollary 3; A3: ACCEPT, geometric scope refined)
+## 4. The centre (Corollary 3)
 
 *Proof.* Two weights of one representation differ by an element of the
 root lattice $Q$, so $e^{2\pi i(1-s)\langle\kappa,H\rangle}$ is independent of $\kappa$ for every $\lambda$ iff
@@ -304,7 +298,7 @@ The identity has the unique constant minimizing geodesic. The word
 focal refers here to the degeneracy of the exponential map at the
 nontrivial central endpoints.
 
-## 5. $SU(3)$ (Corollary 4; A4: ACCEPT, image-size qualification refined)
+## 5. $SU(3)$ (Corollary 4)
 
 Use $\mathfrak t=\{H\in\mathbb R^3:\sum H_i=0\}$, $Q^\vee=\mathfrak t\cap\mathbb Z^3$, $|H|^2=2\sum H_i^2$. The weights of $\mathbf3$
 are $\kappa_i=e_i-\frac13(1,1,1)$, so $\langle\kappa_i,H\rangle=H_i$: the image $H$ carries the phase
@@ -362,7 +356,7 @@ additional measure information: the amplitudes in (1) and (1$'$)
 include signed Weyl polynomials. In particular $G_H$ alone gives no
 probability for such a vortex.
 
-### 5b. Fundamental trisection with its first image shells (Round 5B B1)
+### 5b. Fundamental trisection and first image shells
 
 For $t>0$, write $X=\operatorname{diag}(x_1,x_2,x_3)$ with
 $\sum x_i=0$ and initially $A_\rho(X)\ne0$. Put $u=t/3$,

@@ -174,5 +174,5 @@ and normalization above have written derivations.
 Topology supplies a conditional sector-energy floor; gradient competition
 can supply size at fixed coefficients. Neither determines physical $\hbar$,
 quantum states/instruments or a universal positive action. The separate
-[reciprocal-coupling test](reciprocal-coupling-normalization.md) asks what
+[reciprocal-coupling test](rotation-composition-universality.md#reciprocal-mechanical-calibration) asks what
 interaction fixes about relative normalizations.

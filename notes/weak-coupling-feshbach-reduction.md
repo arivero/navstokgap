@@ -130,7 +130,7 @@ With these sizes the three inequalities that Lemma 1 needs are:
 
 Given (H1)--(H3), Lemma 1 with $\mu=E_\perp+\frac{2\pi\hbar c}{L}(1-C_1g^{2/3})$ and $a_1-\eta<\mu$ (true for small $g$ since $a_1-a_0=O(g^{2/3}\hbar c/L)$ and $a_0-E_\perp=O(g^{2/3}\hbar c/L)$) yields $$\Delta\ \ge\ \delta_1^{(3)}\,g^{2/3}\,\frac{\hbar c}{L}\,\big(1-Cg^{2/3}\big).$$ This conditional bound would give the lower side of the small-volume corner S,
 comparable with the upper side obtained in
-[the Polyakov-average note](polyakov-average-gap-bound.md) up to pure
+[the Polyakov-average note](lattice-gap-upper-bounds.md#spatial-polyakov-loop-trials) up to pure
 numbers, and it is the leading term of Lüscher's expansion (abstract,
 B78) as a two-sided bound.
 

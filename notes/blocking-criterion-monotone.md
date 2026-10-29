@@ -87,7 +87,7 @@ Algebraically the criterion is no better than its $M=1$ analogue if
 $\delta(g;M)\le M^2\delta(g;1)$, assuming both are defined with compatible
 boundary conventions. This condition has not been established for all
 couplings. A one-sided upper bound such as the
-[Polyakov variational bound](polyakov-average-gap-bound.md) cannot supply
+[Polyakov variational bound](lattice-gap-upper-bounds.md#spatial-polyakov-loop-trials) cannot supply
 the missing lower comparison with $\delta(g;1)$.
 
 ## 3. Running coupling and generated interactions

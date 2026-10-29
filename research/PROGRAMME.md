@@ -105,7 +105,7 @@ removed. This exploratory result limits a receiver class; its dimensionless
 statistics supply no action scale. Shared-preparation models require a
 separate test involving independently chosen local settings.
 
-[Q10's thermal receiver test](../notes/thermal-receiver-reliability.md)
+[Q10's thermal receiver test](../notes/local-detector-coincidences.md#thermal-retention-and-response-deadlines)
 combines a dark retention interval with a response deadline. Its activated-rate
 model yields an exact barrier-change floor proportional to temperature and a
 logarithmic timing/error contrast. A fixed signal-to-work coupling is needed
@@ -123,7 +123,7 @@ the traveling wave's spacetime Lagrangian action is zero. This exploratory
 result tests Q07's physical phase premise without ledger promotion. Localized
 event formation and its energy source remain a distinct receiver question.
 
-[Q06's reciprocal coupling test](../notes/reciprocal-coupling-normalization.md)
+[Q06's reciprocal coupling test](../notes/rotation-composition-universality.md#reciprocal-mechanical-calibration)
 constructs conservative exchange with measured acceleration responses.
 Reciprocity determines relative inertias, subject to a network cycle condition;
 one common energy/action multiplier survives. This exploratory construction

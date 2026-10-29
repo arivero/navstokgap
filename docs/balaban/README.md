@@ -80,7 +80,7 @@ belong to each theorem and must be retained when using it.
    inverse and stability of a partition function do not establish the
    gap of the physical Hamiltonian. Our [conditional theorem](../../notes/mass-gap-conditional-theorem.md)
    retains continuum reconstruction, nontriviality and the spectral limit
-   as separate obligations. The [threshold note](../../notes/small-field-step-decay-and-threshold.md)
+   as separate obligations. The [threshold note](../../notes/small-field-step-gaussian.md#hard-conditioning-and-soft-constraint-decay)
    also records why sharpening the constants of its existing estimate
    does not reach the intended physical window.
 

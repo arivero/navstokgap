@@ -1,14 +1,10 @@
 # Superdeterminism lives below every resolution; a floor gives it a lifetime
 
-**Result, 2026-09-29 (Claude; written derivation, refereed by Fable with
-REFINE, corrections applied below).**
-Classical mechanics is deterministic, so the settings of a Bell test are
-functions of the initial data; the statistical independence of settings
-and hidden variables that Bell's theorem needs is an assumption of
-typicality on those data, taken with the Liouville measure. Superdeterminism
-is the choice of atypical data. The proposition below shows where such
-data must hide when the setting device is chaotic: in structure of the
-device's initial ensemble finer than any fixed phase-space resolution.
+A connected mixing Anosov setting map and the stated uniformly resolved
+conditional preparation laws give an exponential bound on setting/hidden-data
+covariance. Deterministic dynamics alone supplies neither statistical
+independence nor its failure. The preparation resolution $\delta$ below is
+an additional premise, not a derived action floor.
 For a preparation whose device part is resolved at scale $\delta$, the
 covariance between any bounded hidden variable $f$ and a setting chosen
 $n$ steps later obeys
@@ -166,7 +162,6 @@ A small addition to the Newton side: for chaotic setting devices a floor
 on the prepared state makes Bell's measurement dependence decay
 exponentially after an Ehrenfest-type onset, and the continuum limit
 $h\to0$ reopens the loophole. It is a statement about what the floor buys,
-with the floor assumed; the necessity question is unchanged. Refereed
-(Fable, REFINE; items applied: connectedness and mixing, product
-formulation, hypotheses (a)--(c), scope of the floor, citation roles,
-style).
+with the floor assumed; the necessity question is unchanged. The
+connectedness, mixing, conditional product formulation and hypotheses (a)--(c)
+are essential. Written model checks were internal, not independent peer review.

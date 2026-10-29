@@ -49,7 +49,7 @@ Newton sources: [insertion action](../notes/newton-insertion-action.md),
 
 Gauge sources: [series/parallel](../notes/series-parallel-gauge-refinement.md),
 [lattice obligations](../notes/mass-gap-obligations-lattice.md),
-[target box](../notes/strong-coupling-target-box.md),
+[target box](../notes/strong-coupling-uniform-gap.md#bounded-local-perturbations-and-the-existential-target-region),
 [small-field notebook](../notes/su2-midplane-small-field.md),
 [4D composition](../notes/four-dimensional-composition.md).
 

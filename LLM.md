@@ -29,10 +29,9 @@ using a named analytic toolkit. The universal lifting conjecture remains open.
 Hilbert kinematics. A covariance inequality or a classical branch probability
 alone supplies neither quantum states nor quantum instruments.
 4. **Universality and calibration.** [Dimensional units](notes/action-unit-dimensional-selection.md),
-[relative mechanical calibration](notes/reciprocal-coupling-normalization.md),
-[classical noise composition](notes/composition-universality.md),
-[interaction/rotations](notes/rotation-composition-universality.md) and
-[global spin patching](notes/spin-action-patching.md) answer distinct questions.
+[mechanical/algebraic composition and spin phases](notes/rotation-composition-universality.md),
+and [classical noise composition](notes/composition-universality.md) retain
+distinct physical premises.
 A common coefficient can still be zero or have arbitrary supplied magnitude.
 No universal measured physical $\hbar$ has been derived from Newtonian completion.
 
@@ -102,11 +101,11 @@ distinguish normalized spectral shape, free amplitude, supplied feedback scale
 and a work lower bound. A lower bound is not an attainable optimum; cross-field
 thermal universality remains conjectural.
 - Gauge gaps name their operator. The Wilson polymer and Dobrushin sufficient
-regions are explicit; the [KS uniform numerical threshold](notes/kogut-susskind-strong-coupling-explicit.md)
+regions are explicit; the [KS uniform numerical threshold](notes/strong-coupling-uniform-gap.md#continuous-time-histories-and-the-corrected-overlap-criterion)
 was withdrawn. Existential strong-coupling volume uniformity survives. Positivity
 at every bare coupling is stronger than the weak scaling trajectory requires.
 - [Flow conjugation](notes/flow-conjugation-truncation.md) preserves spectra and
-multiplication norms. [Auxiliary Gaussian locality](notes/flow-jacobian-truncation-error.md)
+multiplication norms. [Auxiliary Gaussian locality](notes/flow-conjugation-truncation.md#exact-continuum-variation-and-its-gauge-convention)
 is not a Hamiltonian relative bound; the full Landau growth is $gB-k_\parallel^2$,
 not $2gB$. The actual gauge-modified Jacobian has extra terms.
 - [Large-field action/model counts](notes/large-field-action-lower-bound.md)
@@ -116,8 +115,17 @@ The [signed operator comparison](notes/large-field-operator-inequality.md)
 retains conditional localization assumptions and diagnoses one construction.
 - [Agmon](notes/agmon-ground-state-suppression.md) controls the global excess;
 [ground-state transfer](notes/ground-state-measure-transfer.md) requires matching
-the anisotropic measure and projector limits. [Moments](notes/moment-hierarchy-upper-bounds.md)
-provide upper spectral bounds even when all inverse moments are finite.
+the anisotropic measure and projector limits. [Spectral upper bounds](notes/finiteness-half-flowed-susceptibility.md)
+require admissible Hamiltonian insertions and infrared moments; four-dimensional
+flow UV finiteness alone supplies neither. A channel edge can miss the global
+gap. All inverse moments may be finite at edge zero, although their complete
+sequence can determine that channel's edge.
+- [Gaussian blocking](notes/small-field-step-gaussian.md) keeps two-link angle
+normalization and infinity-norm shell counting consistent. Hard conditioning,
+soft-constraint decay and the conditional interacting remainder are distinct.
+- [Semisimple Gauss law](notes/lattice-gap-upper-bounds.md#semisimple-gauss-law-and-the-limits-of-the-dressing-argument)
+excludes constant-colour electric trials. The former universal string-cost
+claim for every field-dependent dressed trial was not proved.
 - [Compact-group images](notes/sun-midpoint-centre.md) are signed Cartan-image
 expansions; a positive winding mixture is proved for $U(1)$ only. Flat holonomies
 remain in the [mid-plane action](notes/su2-midplane-order-t.md); plaquette fluxes

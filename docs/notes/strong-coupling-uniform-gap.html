@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The strong-coupling gap of the Kogut–Susskind Hamiltonian is uniform in the volume</title>
+<title>Kogut–Susskind strong coupling: stability, finite-volume bounds and history estimates</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,303 +79,544 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>The strong-coupling gap of the Kogut–Susskind Hamiltonian is uniform
-in the volume</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/strong-coupling-uniform-gap.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/strong-coupling-uniform-gap.pdf">PDF</a></p><p>Statement T2 of <a href="mass-gap-obligations-lattice.html">the
-obligations map</a> holds in Hamiltonian form: for every compact
-connected gauge group <span class="math inline">\(G\)</span> and every
-lattice size, the Kogut–Susskind Hamiltonian at coupling <span
-class="math inline">\(g\ge g_0(G)\)</span> has a non-degenerate ground
-state and a gap <span class="math display">\[\Delta_{a,L}\ \ge\
-\gamma\,\frac{g^2}{2}\,C_2(R_{\min})\,\frac{\hbar c}{a},\]</span> with
-<span class="math inline">\(\gamma&gt;0\)</span> independent of the
-lattice size, and the physical (gauge-invariant) gap is at least as
-large. The proof is a hypothesis check against Yarotsky’s Theorem 1 on
-relatively bounded perturbations of classical lattice systems (Commun.
-Math. Phys. 261 (2006) 799, Sections 1 and Theorem 1 read at passage
-level): the electric term is a classical Hamiltonian in the Peter–Weyl
-partition with a product ground state and unit local gap after
-normalization, and the magnetic term is a bounded,
-translation-invariant, finite-range perturbation whose normalized size
-is <span class="math inline">\(\beta(g)=48N^2/[g^4(N^2-1)]\)</span> for
-<span class="math inline">\(SU(N)\)</span>, so the theorem’s smallness
-condition <span
-class="math inline">\(\beta\le\beta_*(3,\Lambda_0)\)</span> is the
-strong-coupling condition <span
-class="math inline">\(g^4\ge48N^2/[(N^2-1)\beta_*]\)</span>. The same
-theorem gives the infinite-volume ground state and exponential
-clustering at these couplings. The constants <span
-class="math inline">\(\beta_*\)</span> and <span
-class="math inline">\(\gamma\)</span> are existential in Yarotsky’s
-statement, so <span class="math inline">\(g_0\)</span> is a well-defined
-but not numerically explicit threshold. The result does not distinguish
-abelian from non-abelian groups; that distinction is T2<span
-class="math inline">\(&#39;\)</span>, and the rest of the problem is the
-descent of <span class="math inline">\(g_0\)</span> to zero along the
-scaling curve. No claim is promoted.</p>
-<h2 id="the-hamiltonian-in-yarotskys-normalization">1. The Hamiltonian
-in Yarotsky’s normalization</h2>
-<p>Notation as in <a href="mass-gap-obligations-lattice.html">the
-obligations map</a> §1: periodic cubic lattice <span
-class="math inline">\(\Lambda=(\mathbb Z/N_s\mathbb Z)^3\)</span>, links
-<span class="math inline">\(\mathcal E\)</span>, plaquettes <span
-class="math inline">\(\mathcal P\)</span>, <span
-class="math inline">\(\mathcal H=L^2(G^{\mathcal E})\)</span>, and <span
+<h1>Kogut–Susskind strong coupling: stability, finite-volume bounds and
+history estimates</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/strong-coupling-uniform-gap.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/strong-coupling-uniform-gap.pdf">PDF</a></p><p>The Kogut–Susskind Hamiltonian has a volume-uniform strong-coupling
+gap by Yarotsky’s established local-perturbation theorem. For <span
+class="math inline">\(SU(3)\)</span> the theorem also covers the
+translation-invariant, gauge-invariant few-link perturbations and
+link-local electric deformations specified below. Its constants and the
+location of the resulting target region are existential.</p>
+<p>At a fixed volume the physical electric-loop gap has an explicit
+two-sided min–max estimate. Continuous-time histories give additional
+conditional overlap bounds and restricted shape counts. They supply
+<strong>no explicit volume-uniform KS threshold</strong>: the old values
+<span class="math inline">\(g^2=79,388\)</span> and the associated
+uniform rates were withdrawn because late roots, general shapes and
+normalized true-vacuum correlations were not controlled. The corrections
+are incorporated at each estimate below. Wilson-transfer thresholds
+concern a different operator and remain in their <a
+href="wilson-strong-coupling-explicit.html">own proof</a>.</p>
+<p>All gaps below are energies, with physical unit <span
+class="math inline">\(\hbar c/a\)</span>. Positivity along a
+weak-coupling scaling trajectory, cutoff removal and physical
+reconstruction are separate obligations; positivity at every bare
+coupling is an optional stronger property of a lattice action.</p>
+<span id="hypothesis-check"></span><span id="the-hamiltonian-in-yarotskys-normalization"></span><h2 id="hamiltonian-and-the-local-stability-theorem">Hamiltonian and the
+local stability theorem</h2>
+<p>On a periodic cubic spatial lattice <span
+class="math inline">\(\Lambda=(\mathbb Z/N_s\mathbb Z)^3\)</span>, with
+links <span class="math inline">\(\mathcal E\)</span> and plaquettes
+<span class="math inline">\(\mathcal P\)</span>, use <span
 class="math display">\[H=\frac{\hbar
-c}{a}\Big[\frac{g^2}{2}\sum_{\ell}(-\Delta_\ell)
-+\frac{2}{g^2}\sum_{p}\big(N-\operatorname{Re}\operatorname{tr}U_p\big)\Big].\]</span>
-Let <span class="math inline">\(C_2\equiv C_2(R_{\min})\)</span> be the
-smallest nonzero Casimir eigenvalue of <span
-class="math inline">\(-\Delta\)</span> on <span
-class="math inline">\(L^2(G)\)</span>; for <span
-class="math inline">\(SU(N)\)</span> with <span
-class="math inline">\(\operatorname{tr}T^aT^b=\tfrac12\delta^{ab}\)</span>,
-<span class="math inline">\(C_2=(N^2-1)/(2N)\)</span>. Divide by the
-unit <span class="math inline">\(\varepsilon_0=(g^2/2)C_2\,\hbar
-c/a\)</span>: <span
-class="math display">\[\frac{H}{\varepsilon_0}=\sum_{x\in\Lambda}h_x+\sum_{x\in\Lambda}\phi_x,\qquad
-h_x=\frac1{C_2}\sum_{i=1}^3(-\Delta_{(x,x+e_i)}),\qquad
-\phi_x=\frac{4}{g^4C_2}\sum_{i&lt;j}\big(N-\operatorname{Re}\operatorname{tr}U_{p(x,i,j)}\big),\]</span>
-where <span class="math inline">\(p(x,i,j)\)</span> is the plaquette
-with corner <span class="math inline">\(x\)</span> spanned by <span
-class="math inline">\(e_i,e_j\)</span>. Every link belongs to exactly
-one <span class="math inline">\(h_x\)</span> and every plaquette to
-exactly one <span class="math inline">\(\phi_x\)</span>, so the two sums
-reproduce <span class="math inline">\(H/\varepsilon_0\)</span>.</p>
-<h2 id="hypothesis-check">2. Hypothesis check</h2>
-<p>Yarotsky’s setting (Section 1 of the paper): a lattice <span
-class="math inline">\(\mathbb Z^\nu\)</span>, site spaces <span
-class="math inline">\(\mathcal H_x\)</span> possibly
-infinite-dimensional with a preferred vector <span
-class="math inline">\(\Omega_x\)</span>, translation-invariant
-interactions of finite range <span
-class="math inline">\(\Lambda_0\)</span>, a classical part <span
-class="math inline">\(H_0=\sum_xh_x\)</span> where <span
-class="math inline">\(h_x\)</span> is a function of a product partition
-of unity containing the projection onto <span
-class="math inline">\(\Omega_x\)</span> and satisfies <span
-class="math inline">\(h_x\Omega=0\)</span>, <span
-class="math inline">\(h_x\ge1\)</span> on the orthogonal complement of
-the product vector, and a perturbation <span
-class="math inline">\(\sum_x\phi_x\)</span> with each <span
-class="math inline">\(\phi_x\)</span> a symmetric form on <span
-class="math inline">\(\mathcal H_{\Lambda_0+x}\)</span> obeying <span
-class="math inline">\(|\phi_x(v,v)|\le\alpha\|h_x^{1/2}v\|^2+\beta\|v\|^2\)</span>
-with <span class="math inline">\(\alpha&lt;1\)</span>. Theorem 1 there:
-there are <span class="math inline">\(\alpha_*,\beta_*&gt;0\)</span>
-depending only on <span class="math inline">\(\nu\)</span> and <span
-class="math inline">\(\Lambda_0\)</span> such that if <span
-class="math inline">\(\alpha\le\alpha_*\)</span> and <span
-class="math inline">\(\beta\le\beta_*\)</span>, then for periodic cubic
-volumes <span class="math inline">\(H_\Lambda\)</span> has a
-non-degenerate ground state with a gap <span
-class="math inline">\(\gamma&gt;0\)</span> independent of <span
-class="math inline">\(\Lambda\)</span>, the ground states have a
-weak<span class="math inline">\(^*\)</span> thermodynamic limit, and
-that limit has exponentially decaying correlations.</p>
-<ol type="1">
-<li><em>Lattice and site spaces.</em> <span
-class="math inline">\(\nu=3\)</span>; <span
-class="math inline">\(\mathcal H_x=L^2(G)^{\otimes3}\)</span>, the three
-links leaving <span class="math inline">\(x\)</span>; <span
-class="math inline">\(\Omega_x\)</span> the constant function. Then
-<span class="math inline">\(\mathcal H_\Lambda=\bigotimes_x\mathcal
-H_x=L^2(G^{\mathcal E})\)</span> and <span
-class="math inline">\(\Omega_{\Lambda,0}\)</span> is the constant
-function on <span class="math inline">\(G^{\mathcal E}\)</span>.</li>
-<li><em>Partition and classicality.</em> On each link, Peter–Weyl gives
-the orthogonal partition of unity by isotypic projections <span
-class="math inline">\(P_R\)</span>, <span
-class="math inline">\(R\)</span> ranging over irreducible
-representations, with <span class="math inline">\(P_{\rm triv}\)</span>
-the projection onto constants. <span
-class="math inline">\(-\Delta_\ell=\sum_RC_2(R)P_R\)</span> is a
-function of this partition, so <span class="math inline">\(h_x\)</span>
-is a function of the product partition on <span
-class="math inline">\(\mathcal H_x\)</span>, and <span
-class="math inline">\(h_x\)</span> is self-adjoint and unbounded, as
-allowed.</li>
-<li><em>Local ground state and gap.</em> <span
-class="math inline">\(h_x\Omega_x=0\)</span>. On the orthogonal
-complement of <span class="math inline">\(\Omega_x\)</span> in <span
-class="math inline">\(\mathcal H_x\)</span> at least one of the three
-links carries a nontrivial representation, so <span
-class="math inline">\(h_x\ge C_2(R_{\min})/C_2=1\)</span> there:
-condition (1) of the paper holds with the range <span
-class="math inline">\(\Lambda_0=\{0\}\)</span> for <span
-class="math inline">\(h_x\)</span>, which may be enlarged to the common
-range below.</li>
-<li><em>Perturbation.</em> <span class="math inline">\(\phi_x\)</span>
-is multiplication by a continuous function on the twelve links of the
-three plaquettes at <span class="math inline">\(x\)</span>, whose sites
-lie in <span class="math inline">\(\Lambda_0+x\)</span> with <span
-class="math inline">\(\Lambda_0=\{0,1\}^3\)</span>; it is symmetric,
-bounded, and <span class="math inline">\(0\le
-N-\operatorname{Re}\operatorname{tr}U_p\le2N\)</span> gives <span
-class="math display">\[|\phi_x(v,v)|\le\beta\|v\|^2,\qquad
-\beta=\frac{4}{g^4C_2}\cdot3\cdot2N=\frac{24N}{g^4C_2}
-=\frac{48N^2}{g^4(N^2-1)}\ \ (SU(N)),\]</span> so condition (2) holds
-with <span class="math inline">\(\alpha=0\)</span> and this <span
-class="math inline">\(\beta\)</span>.</li>
-<li><em>Translation invariance and periodicity.</em> <span
-class="math inline">\(h_x\)</span> and <span
-class="math inline">\(\phi_x\)</span> are translates of <span
-class="math inline">\(h_0\)</span> and <span
-class="math inline">\(\phi_0\)</span>, and the lattice is a periodic
-cube, the case in which the paper states Theorem 1.</li>
-</ol>
-<p><strong>Theorem (T2, Hamiltonian form).</strong> Let <span
-class="math inline">\(\beta_*=\beta_*(3,\{0,1\}^3)\)</span> and <span
-class="math inline">\(\gamma\)</span> be the constants of Yarotsky’s
-Theorem 1 for this range. For every <span
-class="math inline">\(g\)</span> with <span
-class="math inline">\(48N^2/[g^4(N^2-1)]\le\beta_*\)</span>, that is
-<span class="math inline">\(g\ge
-g_0(N)=\big(48N^2/[(N^2-1)\beta_*]\big)^{1/4}\)</span>, and every <span
-class="math inline">\(N_s\ge2\)</span>: <span
-class="math inline">\(H\)</span> has a non-degenerate ground state, and
-<span class="math display">\[\Delta_{a,L}\ \ge\
-\gamma\,\varepsilon_0=\gamma\,\frac{g^2}{2}\,\frac{N^2-1}{2N}\,\frac{\hbar
-c}{a}.\]</span> The physical gap obeys <span
-class="math inline">\(\Delta^{\rm phys}_{a,L}\ge\Delta_{a,L}\)</span> by
-Theorem 1(3) of the obligations map. The ground states have a
-thermodynamic limit <span class="math inline">\(\omega\)</span> with
-exponentially decaying correlations of local observables.</p>
-<p><em>Proof.</em> Items 1–5 are the hypotheses of Yarotsky’s Theorem 1
-with <span class="math inline">\(\alpha=0\le\alpha_*\)</span> and <span
-class="math inline">\(\beta\le\beta_*\)</span>; its conclusions 1–3 are
-the statements, after multiplying the normalized gap <span
-class="math inline">\(\gamma\)</span> by <span
-class="math inline">\(\varepsilon_0\)</span>. The inheritance by the
-physical sector is the positivity argument already written for T1. <span
+c}{a}\left[\frac{g^2}{2}\sum_\ell(-\Delta_\ell)
++\frac2{g^2}\sum_p(N-\operatorname{Re}\operatorname{tr}U_p)\right].\]</span>
+For <span class="math inline">\(SU(N)\)</span>, <span
+class="math inline">\(\operatorname{tr}T^aT^b=\delta^{ab}/2\)</span> and
+<span class="math inline">\(C_2(R_{\min})=(N^2-1)/(2N)\)</span>. Write
+<span class="math inline">\(\varepsilon_0=g^2C_2/2\)</span> in lattice
+energy units. Each site space <span class="math inline">\(\mathcal
+H_x=L^2(G)^{\otimes3}\)</span> contains its three outgoing links, with
+preferred constant vector <span class="math inline">\(\Omega_x\)</span>.
+The Peter–Weyl isotypic projections give a product partition of unity,
+and <span
+class="math display">\[h_x=C_2^{-1}\sum_{i=1}^3(-\Delta_{(x,x+e_i)})\]</span>
+is a function of that partition, vanishes on <span
+class="math inline">\(\Omega_x\)</span> and is at least one on its
+orthogonal complement.</p>
+<p>Yarotsky, <em>CMP</em> <strong>261</strong> (2006) 799, §1 and
+Theorem 1 (<strong>passage read</strong>), applies to these possibly
+infinite-dimensional site spaces and a translation-invariant
+finite-range bounded perturbation. For range <span
+class="math inline">\(\Lambda_0\)</span> there are positive <span
+class="math inline">\(\beta_*(3,\Lambda_0)\)</span> and <span
+class="math inline">\(\gamma\)</span> such that a normalized local
+perturbation norm at most <span class="math inline">\(\beta_*\)</span>
+leaves a simple ground state and gap at least <span
+class="math inline">\(\gamma\)</span>, uniformly in periodic volume. It
+also gives thermodynamic ground states and clustering for a fixed
+consistent interaction. The bounded case uses relative coefficient <span
+class="math inline">\(\alpha=0\)</span>; no numerical value of <span
+class="math inline">\(\beta_*\)</span> is supplied by the statement.</p>
+<p>Assign each of the three plaquettes <span
+class="math inline">\(p(x,i,j)\)</span>, <span
+class="math inline">\(i&lt;j\)</span>, to <span
+class="math inline">\(x\)</span>. After division by <span
+class="math inline">\(\varepsilon_0\)</span>, their positive potential
+has local norm at most <span
+class="math display">\[\beta(g)=\frac{24N}{g^4C_2}
+=\frac{48N^2}{g^4(N^2-1)}.\]</span> Its sites lie in <span
+class="math inline">\(x+\{0,1\}^3\)</span>. Thus, for <span
+class="math inline">\(N_s\ge2\)</span> and <span
+class="math inline">\(\beta(g)\le\beta_*(3,\{0,1\}^3)\)</span>, <span
+class="math display">\[\Delta^{\rm phys}_{a,L}\ge\Delta_{a,L}
+\ge\gamma\frac{g^2C_2}{2}\frac{\hbar c}{a}.\]</span> This is a direct
+hypothesis check, not a new proof of the borrowed theorem. For a compact
+connected group with a specified faithful unitary representation of
+dimension <span class="math inline">\(d_R\)</span>, the same sufficient
+estimate is <span
+class="math inline">\(g^4\ge24d_R/(C_2\beta_*)\)</span>. For the
+unperturbed elliptic Hamiltonian, positivity improvement gives a unique
+positive ground state, and gauge invariance of that vector follows from
+uniqueness and normalization (<a
+href="mass-gap-obligations-lattice.html">finite-lattice proof</a>). The
+physical subspace reduces <span class="math inline">\(H\)</span> and
+contains its ground state, proving gap inheritance.</p>
+<p>The displayed sufficient <span class="math inline">\(g_0\)</span> is
+bounded as <span class="math inline">\(N\to\infty\)</span> at fixed
+<span class="math inline">\(g\)</span>. At fixed ’t Hooft coupling <span
+class="math inline">\(\lambda=g^2N\)</span>, its condition instead grows
+with <span class="math inline">\(N\)</span>. Neither fact transports
+this theorem to <span class="math inline">\(g(a)\to0\)</span>.</p>
+<h2
+id="bounded-local-perturbations-and-the-existential-target-region">Bounded
+local perturbations and the existential target region</h2>
+<p>In units <span class="math inline">\(\hbar c/a=1\)</span> let <span
+class="math display">\[H=H_E&#39;-g^{-2}\sum_pw_p-\sum_jd_j,\qquad
+w_p=\operatorname{tr}U_p+\operatorname{tr}U_p^\dagger,\quad
+\|w_p\|\le6.\]</span> Assume all of the following for <span
+class="math inline">\(SU(3)\)</span>:</p>
+<ul>
+<li><span
+class="math inline">\(H_E&#39;=\sum_{\ell,R}e&#39;(R)P_R^\ell\)</span>
+is link-local and translation invariant, <span
+class="math inline">\(e&#39;({\rm triv})=0\)</span>, and <span
+class="math inline">\(e&#39;(R)\ge\varepsilon&#39;\)</span> for every
+nontrivial <span class="math inline">\(R\)</span>, where <span
+class="math inline">\(\varepsilon&#39;=(1-\eta_E)2g^2/3\)</span>, <span
+class="math inline">\(0\le\eta_E&lt;1\)</span>.</li>
+<li>Each <span class="math inline">\(d_j\)</span> is bounded,
+self-adjoint and gauge invariant, on a connected set of at most <span
+class="math inline">\(q\)</span> links. The family is translation
+covariant and <span
+class="math inline">\(\sum_{j\ni\ell}\|d_j\|\le\eta\)</span> for every
+link.</li>
+<li><span class="math inline">\(q\ge1\)</span>, <span
+class="math inline">\(N_s\ge2q+1\)</span>, and <span
+class="math inline">\(\Lambda_q=\{-q,\ldots,q\}^3\)</span>.</li>
+</ul>
+<p>Let <span class="math inline">\(n_x(j)\)</span> count support links
+based at <span class="math inline">\(x\)</span> and distribute each term
+by <span
+class="math display">\[\delta_x=\sum_j\frac{n_x(j)}{|\operatorname{supp}d_j|}d_j.\]</span>
+Then <span class="math inline">\(\sum_x\delta_x=\sum_jd_j\)</span>,
+<span class="math inline">\(\|\delta_x\|\le3\eta\)</span>, and its
+support lies in <span class="math inline">\(x+\Lambda_q\)</span>:
+connectedness and at most <span class="math inline">\(q\)</span> links
+give the stated radius. Dividing by <span
+class="math inline">\(\varepsilon&#39;\)</span> gives an on-site
+electric part with unit gap and local perturbation <span
+class="math display">\[\phi_x=-\frac1{\varepsilon&#39;g^2}\sum_{i&lt;j}w_{p(x,i,j)}
+-\frac{\delta_x}{\varepsilon&#39;},\qquad
+\|\phi_x\|\le\frac1{1-\eta_E}
+\left(\frac{27}{g^4}+\frac{9\eta}{2g^2}\right).\]</span> The difference
+between 54 in the uncentered <span class="math inline">\(SU(3)\)</span>
+estimate above and 27 here comes from subtracting the magnetic scalar
+constant; both are sufficient bounds with their specified ranges.</p>
+<p><strong>Stability theorem.</strong> With <span
+class="math inline">\(\beta_q^*=\beta_*(3,\Lambda_q)\)</span> and the
+corresponding <span class="math inline">\(\gamma_q&gt;0\)</span>, the
+condition <span
+class="math display">\[\frac{27}{g^4}+\frac{9\eta}{2g^2}\le(1-\eta_E)\beta_q^*,
+\quad\text{equivalently}\quad
+\eta\le\frac{2(1-\eta_E)\beta_q^*}{9}g^2-\frac6{g^2}\]</span> implies a
+simple gauge-invariant ground state and <span
+class="math display">\[\Delta^{\rm phys}_{a,L}\ge\Delta_{a,L}
+\ge\gamma_q(1-\eta_E)\frac{2g^2}{3}\frac{\hbar c}{a}.\]</span> Here
+<span class="math inline">\(\eta\)</span> is a numerical local norm in
+lattice energy units. The target region opens at <span
+class="math inline">\(g^4\ge27/[(1-\eta_E)\beta_q^*]\)</span>.</p>
+<p><em>Proof.</em> The preceding grouping verifies Yarotsky’s
+hypotheses. A unique normalized ground ray transforms under <span
+class="math inline">\(SU(3)^\Lambda\)</span> by a continuous
+one-dimensional character. The Lie algebra is semisimple, so its
+derivative vanishes; connectedness makes the character trivial. The
+ground state is therefore physical even though general <span
+class="math inline">\(d_j\)</span> need not preserve positivity. The
+reducing physical subspace inherits the lower bound. <span
 class="math inline">\(\square\)</span></p>
-<p>For a general compact connected <span
-class="math inline">\(G\)</span> the same holds with <span
-class="math inline">\(C_2=C_2(R_{\min})\)</span> and the bound <span
-class="math inline">\(N-\operatorname{Re}\operatorname{tr}U_p\le2\dim\)</span>
-in place of <span class="math inline">\(2N\)</span>; the threshold is
-<span class="math inline">\(g_0^4=24\dim/(C_2\beta_*)\)</span>.</p>
-<h2 id="the-abelian-comparison-and-a-finite-volume-bound">3. The abelian
-comparison and a finite-volume bound</h2>
-<p>For compact <span class="math inline">\(U(1)\)</span> take magnetic
-term <span class="math inline">\((2/g^2)\sum_p(1-\cos\theta_p)\)</span>
-and electric term <span class="math inline">\((g^2/2)\sum_\ell
-n_\ell^2\)</span>. On a periodic cubic lattice with <span
-class="math inline">\(N_s\ge4\)</span>, Gauss’s law forces a nonzero
-charge network to contain a cycle, whose shortest length is four. A
-plaquette loop realizes it, so the physical electric gap is exactly
-<span class="math inline">\(2g^2\hbar c/a\)</span>. With <span
-class="math inline">\(P=3N_s^3\)</span>, subtracting the scalar magnetic
-constant leaves an operator of norm at most <span
-class="math inline">\(2P/g^2\)</span> in units <span
-class="math inline">\(\hbar c/a\)</span>. Min–max bounds the two lowest
-eigenvalue shifts separately and therefore <span
+<p>The bound is uniform for a volume-dependent family satisfying the
+same hypotheses. A thermodynamic state assertion additionally uses one
+consistent infinite-lattice interaction, or the appropriate convergent
+family. The borrowed theorem does not automatically cover
+nontranslation-invariant perturbations, disconnected supports of
+unbounded diameter, or an arbitrary nonlocal diagonal electric energy.
+Its range dependence is existential; a <span
+class="math inline">\(2^{-q}\)</span> law is not part of this
+theorem.</p>
+<h2 id="physical-electric-loops-and-exact-finite-volume-bounds">Physical
+electric loops and exact finite-volume bounds</h2>
+<p>For the unperturbed <span class="math inline">\(SU(3)\)</span>
+operator write <span class="math inline">\(H=H_E-W+6P/g^2\)</span>, with
+<span class="math inline">\(P=3N_s^3\)</span> and <span
+class="math display">\[E(\sigma)=\frac{g^2}{2}\sum_\ell C_2(r_\ell)
+\ge\varepsilon|S(\sigma)|,\quad \varepsilon=2g^2/3,
+\qquad \|W\|\le6P/g^2.\]</span> Gauss’s law excludes a vertex with only
+one excited incident link. Nonabelian invariant networks may branch;
+they need not be unions of flux loops. Every nonempty finite graph of
+minimum degree at least two contains a cycle. For <span
+class="math inline">\(N_s\ge4\)</span> its length is at least four. A
+plaquette character realizes four fundamental links and is orthogonal to
+the electric vacuum, so the physical electric gap is exactly <span
+class="math inline">\(4\varepsilon\)</span>. Shorter periodic lattices
+need separate winding counts; the unrestricted electric gap is only
+<span class="math inline">\(\varepsilon\)</span>.</p>
+<p>Min–max bounds the shifts of each of the two lowest levels by <span
+class="math inline">\(\|W\|\)</span>: <span
+class="math display">\[\left(\frac83g^2-\frac{12P}{g^2}\right)\frac{\hbar
+c}{a}
+\le\Delta^{\rm phys}_{a,L}\le
+\left(\frac83g^2+\frac{12P}{g^2}\right)\frac{\hbar c}{a}.\]</span> At
+each fixed volume the ratio to <span class="math inline">\(g^2\hbar
+c/a\)</span> tends to <span class="math inline">\(8/3\)</span>. The
+sufficient <span class="math inline">\(g^4\ge9P\)</span> gives lower
+coefficient <span class="math inline">\(4/3\)</span> but grows with
+volume. It cannot establish a uniform threshold.</p>
+<h3 id="the-abelian-comparison-and-a-finite-volume-bound">The abelian
+comparison and a finite-volume bound</h3>
+<p>For <span class="math inline">\(U(1)\)</span> use <span
+class="math inline">\(H_E=(g^2/2)\sum n_\ell^2\)</span> and magnetic
+potential <span
+class="math inline">\((2/g^2)\sum(1-\cos\theta_p)\)</span>. The same
+four-edge argument gives <span
 class="math display">\[\left(2g^2-\frac{4P}{g^2}\right)\frac{\hbar c}{a}
 \le\Delta^{\rm phys}_{a,L}\le
 \left(2g^2+\frac{4P}{g^2}\right)\frac{\hbar c}{a},\qquad
-L=N_sa.\]</span> At fixed <span class="math inline">\(N_s\)</span>, the
-ratio to <span class="math inline">\(g^2\hbar c/a\)</span> tends to
-<span class="math inline">\(2\)</span> as <span
-class="math inline">\(g\to\infty\)</span>; the lower bound gives no
-volume-uniform threshold. The corresponding <span
-class="math inline">\(SU(3)\)</span> finite-volume calculation and the
-incomplete continuous-time polymer count are in <a
-href="kogut-susskind-strong-coupling-explicit.html">the continuous-time
-note</a>.</p>
-<p>The existential Yarotsky theorem applies to both groups. Their weak
-sides differ: for <span class="math inline">\(SU(3)\)</span> the
-perturbative slope is <span class="math inline">\(d g^2/d\log
-a=2b_0g^4+O(g^6)\)</span>, <span
-class="math inline">\(b_0=11/(16\pi^2)\)</span>, while the continuum
-pure photon has no perturbative self-interaction. Guth (Phys. Rev. D 21
-(1980) 2291) and Fröhlich–Spencer (Commun. Math. Phys. 83 (1982) 411)
-are metadata-level sources for a weak-coupling massless phase of compact
-lattice <span class="math inline">\(U(1)\)</span>. Perturbative running
-is not an exact compact-lattice blocking identity and does not establish
-a single gapped interval, controlled arrival at the target box or
-continuum reconstruction. The former uniform <span
-class="math inline">\(4\lambda\)</span> rate and numerical box location
-are withdrawn; <a href="strong-coupling-target-box.html">the target
-box</a> is existential.</p>
-<h2 id="what-the-theorem-does-and-does-not-give">4. What the theorem
-does and does not give</h2>
-<ul>
-<li><em>Uniformity.</em> <span class="math inline">\(\gamma\)</span>
-depends only on <span class="math inline">\(\nu=3\)</span> and <span
-class="math inline">\(\Lambda_0=\{0,1\}^3\)</span>, so the bound holds
-for every lattice size at once. The extensive Kato bound of the
-obligations map §3 is replaced by a local one, which is exactly what the
-cluster structure of the perturbation provides.</li>
-<li><em>Large <span class="math inline">\(N\)</span>.</em> <span
-class="math inline">\(\beta\to48/g^4\)</span> as <span
-class="math inline">\(N\to\infty\)</span>, so <span
-class="math inline">\(g_0(N)\)</span> is bounded in <span
-class="math inline">\(N\)</span>: the strong-coupling gap is uniform in
-the rank at fixed bare <span class="math inline">\(g\)</span> in this
-convention. In the ’t Hooft normalization <span
-class="math inline">\(\lambda=g^2N\)</span> the threshold reads <span
-class="math inline">\(\lambda\ge g_0^2N\)</span>, growing with <span
-class="math inline">\(N\)</span>.</li>
-<li><em>Scale.</em> The gap is measured in <span
-class="math inline">\(\hbar c/a\)</span> and is proportional to <span
-class="math inline">\(g^2\)</span>: a supplied cutoff scale, as the
-dimensional census of <a href="low-dimensional-mass-gap.html">G07</a> §4
-requires at fixed <span class="math inline">\(g\)</span>. Nothing here
-survives <span class="math inline">\(a\to0\)</span> at fixed <span
-class="math inline">\(g\)</span>, and T3 asks for the behaviour along
-<span class="math inline">\(g(a)\to0\)</span>, outside the theorem’s
-range.</li>
-<li><em>Abelian case.</em> <span class="math inline">\(U(1)\)</span>
-satisfies every hypothesis with <span
-class="math inline">\(C_2(R_{\min})=1\)</span> (charge one) and <span
-class="math inline">\(\dim=1\)</span>, so it too is gapped uniformly in
-volume at strong coupling. The theorem is blind to the property that
-distinguishes the groups; that property enters only in T2<span
-class="math inline">\(&#39;\)</span>, where the abelian gap closes
-(Guth; Fröhlich–Spencer) and the non-abelian one is conjectured to
-persist.</li>
-<li><em>Explicitness.</em> <span class="math inline">\(\beta_*\)</span>
-and <span class="math inline">\(\gamma\)</span> exist by the theorem and
-are not given as numbers in its statement. A heuristic extraction of the
-time-discretized expansion gives <span class="math inline">\(\beta\simeq
-e^{-465}\)</span> and <span class="math inline">\(g_0^2\)</span> of
-order <span class="math inline">\(10^{102}\)</span> for <span
-class="math inline">\(SU(3)\)</span>, but the required support-weight
-bound is unproved; the continuous-time expansion of <a
-href="kogut-susskind-strong-coupling-explicit.html">the Kogut–Susskind
-note</a> gave <span class="math inline">\(g_0^2=388\)</span> (<span
-class="math inline">\(79\)</span> in the adjacent-growth class) with
-<span class="math inline">\(\gamma\to4\)</span>; that threshold was
-withdrawn on 2026-10-02 after its overlap count was found incomplete, so
-no explicit KS number stands. The descent problem does not depend on
-that number, only on the structure of the expansion.</li>
-<li><em>Relation to the small-volume end.</em> Yarotsky’s expansion is
-in the electric basis, where the ground state at <span
-class="math inline">\(g=\infty\)</span> is the constant function. At
-weak coupling the ground state concentrates near <span
-class="math inline">\(U_p=1\)</span> and the good variables are the
-constant modes of <a href="low-dimensional-mass-gap.html">G07</a> §3.3,
-with gap <span class="math inline">\(\delta_1g^{2/3}\hbar c/L\)</span>
-in the continuum small box. The two expansions use different bases and
-different small parameters (<span class="math inline">\(g^{-4}\)</span>
-and <span class="math inline">\(g^{2/3}\)</span>); T2<span
-class="math inline">\(&#39;\)</span> is the statement that the gap does
-not close between them.</li>
-</ul>
-<h2 id="consequence-for-state">5. Consequence for STATE</h2>
-<p>T2 is closed in Hamiltonian form as a corollary of an established
-theorem, with the threshold <span
-class="math inline">\(g_0(N)=(48N^2/[(N^2-1)\beta_*])^{1/4}\)</span>.
-The obligations table moves T2 to “established”; the open items are
-T2<span class="math inline">\(&#39;\)</span>, T3 and T4. The next
-theorem-sized target on the lattice route is a weak-coupling
-counterpart: a variational upper bound and, if possible, a lower bound
-on the Kogut–Susskind gap at small <span
-class="math inline">\(g\)</span> on a lattice whose side is small
-against <span class="math inline">\(\hbar c/\Lambda\)</span>, using the
-constant-mode ground state of C133 as the trial state, to connect the
-lattice gap <span class="math inline">\(\Delta_{a,L}\)</span> with the
-continuum small-volume corner and to locate the regime where neither
-expansion applies.</p>
+N_s\ge4.\]</span> The local stability theorem also gives a
+volume-uniform strong-coupling region for <span
+class="math inline">\(U(1)\)</span>. The weak sides differ: <span
+class="math inline">\(SU(3)\)</span> has perturbative <span
+class="math inline">\(d g^2/d\log a=2b_0g^4+O(g^6)\)</span>, <span
+class="math inline">\(b_0=11/(16\pi^2)\)</span>, whereas a pure
+continuum photon has no such self-interaction. Guth, <em>PRD</em>
+<strong>21</strong> (1980) 2291, and Fröhlich–Spencer, <em>CMP</em>
+<strong>83</strong> (1982) 411, are the retained metadata-level sources
+for the compact-lattice weak-coupling massless phase. Running alone
+proves neither controlled arrival at the target region nor continuum
+spectral transfer.</p>
+<h2
+id="continuous-time-histories-and-the-corrected-overlap-criterion">Continuous-time
+histories and the corrected overlap criterion</h2>
+<p>This is an additional candidate expansion, not the proof of the
+stability theorem. It also allows the more general diagonal physical
+<span class="math inline">\(H_E&#39;\)</span> commuting with
+exact-support projections <span class="math inline">\(P_S\)</span>, with
+<span
+class="math inline">\(E&#39;(\sigma)\ge\varepsilon&#39;|S|\)</span>.
+Assume <span class="math inline">\(N_s\ge\max(4,2q+1)\)</span>. Center
+the bounded <span class="math inline">\(d_j\)</span> in the electric
+vacuum; scalar subtraction can at most double the quoted local norm
+<span class="math inline">\(\eta\)</span>. Without centering, remote
+vacuum insertions need not carry energy damping.</p>
+<p>Duhamel’s ordered expansion of <span
+class="math inline">\(e^{-t(H_E&#39;-W-D)}\)</span> inserts plaquettes
+or <span class="math inline">\(d_j\)</span> terms. Resolving <span
+class="math inline">\(P_S\)</span> between them gives histories <span
+class="math inline">\(S_0=S_n=\emptyset\)</span> with insertion
+operators <span class="math inline">\(X_k\)</span>, gaps <span
+class="math inline">\(x_k=\tau_{k+1}-\tau_k\)</span> and <span
+class="math display">\[A(\gamma)=\sum_{k=1}^{n-1}|S_k|x_k,\qquad
+|w(\gamma)|\le\prod_k\|X_k\|e^{-\varepsilon&#39;A(\gamma)}.\]</span>
+Amplitudes can have either sign. Labels within an exact support are
+already summed in the operator norm. A plaquette changes only its four
+links and has at most 16 next-support outcomes; a <span
+class="math inline">\(q\)</span>-link insertion has at most <span
+class="math inline">\(2^q\)</span>. An irreducible physical history has
+<span class="math inline">\(|S_k|\ge4\)</span> between insertions.</p>
+<p>Disjoint link factors and chronological interleavings motivate a
+hard-core history gas, but a complete construction must still specify
+connected components and insertion-endpoint compatibility. The following
+overlap criterion is <strong>conditional on such a factorizing gas and
+its majorant</strong>. For an established measure-space gas, the KP
+theorem used here is Poghosyan–Ueltschi, <a
+href="https://arxiv.org/pdf/0811.4281">§2, Assumptions 1–2 and Theorem
+2.1</a> (passage read), including its finite-volume/time integrability
+premise.</p>
+<p>Set <span class="math inline">\(a(\gamma)=n+\lambda A\)</span>, <span
+class="math inline">\(\delta&#39;=\varepsilon&#39;-\lambda&gt;0\)</span>.
+The tilted majorant has insertion weights multiplied by <span
+class="math inline">\(e\)</span>. Let <span
+class="math inline">\(T_\ell\)</span> be the total excited duration and
+<span class="math inline">\(r_\ell\)</span> the number of maximal
+excitation intervals on link <span class="math inline">\(\ell\)</span>.
+Then <span class="math display">\[\sum_\ell T_\ell=A,\qquad
+\sum_\ell r_\ell\le\max(4,q)n.\]</span> An interval of length <span
+class="math inline">\(x&#39;\)</span> in another history can overlap
+these intervals under translations of total measure at most <span
+class="math inline">\(T_\ell+r_\ell x&#39;\)</span>. The multiplicity
+<span class="math inline">\(r_\ell\)</span> is essential.</p>
+<p>Let <span class="math inline">\(Q&#39;\)</span> majorize the sum over
+<strong>all</strong> connected shapes reaching a test link, including a
+sum over marked internal intervals, after integrating <span
+class="math inline">\(e^{-\delta&#39;|S_k|x_k}\)</span> on the positive
+orthant. Its length-marked version is at most <span
+class="math inline">\(Q&#39;/(4\delta&#39;)\)</span>, since <span
+class="math display">\[\int_0^\infty
+e^{-\delta&#39;|S|x}dx=\frac1{\delta&#39;|S|},\qquad
+\int_0^\infty xe^{-\delta&#39;|S|x}dx
+\le\frac1{4\delta&#39;}\frac1{\delta&#39;|S|}.\]</span> Therefore the
+overlap integral is at most <span
+class="math display">\[Q&#39;A(\gamma)+\frac{Q&#39;\max(4,q)}{4\delta&#39;}n(\gamma),\]</span>
+and sufficient conditional inequalities are <span
+class="math display">\[Q&#39;\le\lambda,\qquad
+Q&#39;\le\frac{4\delta&#39;}{\max(4,q)}.\]</span> For unperturbed
+plaquette histories this is <span
+class="math inline">\(Q_\lambda\le\lambda,\delta\)</span>, where
+explicitly <span
+class="math display">\[Q_\lambda=\sup_{\ell_0}\sum_{\text{shapes
+reaching }\ell_0}
+(n-1)h^n\prod_{k=1}^{n-1}(\delta|S_k|)^{-1},\qquad h=6e/g^2.\]</span>
+The old <span class="math inline">\(Q_\lambda\le4\delta\)</span> lost
+the endpoint multiplicity four. Neither version proves that the actual
+all-root majorant is small.</p>
+<h2 id="restricted-shape-counts-and-their-numerical-status">Restricted
+shape counts and their numerical status</h2>
+<p>Anchor the <strong>first</strong> insertion at the test link and
+require every later insertion to touch the current support. For the
+unperturbed gas four initial plaquettes give <span
+class="math inline">\(F=4h=24e/g^2\)</span>. Later choices are at most
+<span class="math inline">\(4|S|\cdot16\)</span>, whose factor <span
+class="math inline">\(|S|\)</span> is canceled by the preceding time
+integral. For the perturbed gas the same calculation gives <span
+class="math display">\[F&#39;=24e/g^2+e\eta2^q,\qquad
+u&#39;=\frac{384e/g^2+e\eta2^q}{\delta&#39;},\]</span> <span
+class="math display">\[B&#39;_\lambda\le F&#39;\sum_{m\ge1}m(u&#39;)^m
+=\frac{F&#39;u&#39;}{(1-u&#39;)^2}\le4F&#39;u&#39;\quad(u&#39;\le1/2).\]</span>
+This is a valid restricted count. It includes repeated insertions. It
+omits histories first reaching the test link later and pieces created
+remotely and subsequently bridged; hence <span
+class="math inline">\(B&#39;_\lambda\)</span> does not bound <span
+class="math inline">\(Q&#39;\)</span>.</p>
+<p>For general connected insertion graphs, assign consecutive link
+intervals to a spanning tree <span class="math inline">\(T\)</span>. A
+surviving energy inequality is <span class="math display">\[\sum_{e\in
+T}|\tau_{i(e)}-\tau_{j(e)}|\le A(\gamma),\qquad
+e^{-\delta A}\le\prod_{e\in T}e^{-\delta|\tau_i-\tau_j|}.\]</span> Each
+insertion has at most eight predecessor/successor link slots. This does
+not count the required root, interval marks and time-length
+multiplicities. The former <span class="math inline">\(u_{\rm
+gen}=24u\)</span> also allowed only three child plaquettes per parent
+link, excluding the repeated plaquette that creates and annihilates a
+loop. Changing that factor to four would give a formal <span
+class="math inline">\(32u\)</span>, still without a proved marked count.
+Neither is a certified KP parameter.</p>
+<p>For <span class="math inline">\(\eta=\eta_E=0\)</span>, write <span
+class="math inline">\(\lambda=\varepsilon(1-\theta)\)</span>, <span
+class="math inline">\(\delta=\varepsilon\theta\)</span>, <span
+class="math inline">\(0&lt;\theta&lt;1\)</span>. Then <span
+class="math display">\[u=\frac{576e}{\theta g^4},\qquad
+g^4\ge\frac{1152e}{\theta},\quad
+g^8\ge\frac{82944e^2}{\theta\min(\theta,1-\theta)}\]</span> are
+sufficient for the displayed restricted <span
+class="math inline">\(B_\lambda\)</span> inequalities only.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(\theta\)</span></th>
+<th>sufficient integer <span class="math inline">\(g^2\)</span> for
+those restricted inequalities</th>
+<th>candidate <span class="math inline">\(4\lambda\)</span>, not a
+proved Hamiltonian rate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(1/2\)</span></td>
+<td><span class="math inline">\(80\)</span></td>
+<td><span class="math inline">\(4g^2/3\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1/4\)</span></td>
+<td><span class="math inline">\(112\)</span></td>
+<td><span class="math inline">\(2g^2\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(1/10\)</span></td>
+<td><span class="math inline">\(177\)</span></td>
+<td><span class="math inline">\(2.4g^2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The former adjacent 79 rounds down: <span
+class="math inline">\(79^2&lt;2304e\)</span>. For the withdrawn formal
+<span class="math inline">\(24u\)</span> alone, <span
+class="math inline">\(24u=13824e/(\theta g^4)\)</span> and <span
+class="math inline">\(24u\le1/2\)</span> requires <span
+class="math inline">\(g^4\ge27648e/\theta\)</span>. Integers 388, 549,
+867 satisfy that <strong>algebraic condition</strong> at the three
+listed <span class="math inline">\(\theta\)</span> values; the old
+middle 548 was rounded down. None is a uniform gap threshold. The old
+additional <span
+class="math inline">\(g^8\ge1.47\times10^7/[\theta(1-\theta)]\)</span>
+inherited the unproved count.</p>
+<p>For the perturbed restricted count, <span
+class="math inline">\(\theta=1/2\)</span>, <span
+class="math inline">\(\eta_E=0.1\)</span> give <span
+class="math inline">\(\lambda=\delta&#39;=0.3g^2\)</span>. Requiring the
+formal <span class="math inline">\(B&#39;\)</span> majorant to meet the
+overlap conditions yields <span
+class="math display">\[e\eta2^q\le0.15g^2-384e/g^2,\qquad
+e\eta2^q\le0.6g^2/\max(4,q)-24e/g^2.\]</span></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(g^2\)</span></th>
+<th><span class="math inline">\(q=4\)</span> restricted <span
+class="math inline">\(\eta\)</span></th>
+<th><span class="math inline">\(q=8\)</span> restricted <span
+class="math inline">\(\eta\)</span></th>
+<th>binding condition for <span class="math inline">\(q=8\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(100\)</span></td>
+<td><span class="math inline">\(0.104\)</span></td>
+<td><span class="math inline">\(0.00655\)</span></td>
+<td>first</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(200\)</span></td>
+<td><span class="math inline">\(0.569\)</span></td>
+<td><span class="math inline">\(0.0210\)</span></td>
+<td>second</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(400\)</span></td>
+<td><span class="math inline">\(1.31\)</span></td>
+<td><span class="math inline">\(0.0428\)</span></td>
+<td>second</td>
+</tr>
+</tbody>
+</table>
+<p>Values are rounded down, in lattice energy units; the first
+insertion’s <span class="math inline">\(2^q\)</span> multiplicity is
+included. At large <span class="math inline">\(g^2\)</span>, <span
+class="math inline">\(\theta\le1/2\)</span>, the formal slope is <span
+class="math inline">\(4\theta(1-\eta_E)g^2/[3\max(4,q)e2^q]\)</span>.
+This is a property of the restricted count, not the existential
+theorem’s range dependence. The former suggestion to divide tolerances
+by 24 at the same couplings also fails algebraically: <span
+class="math inline">\(24u&#39;\le1/2\)</span> would require <span
+class="math inline">\(e\eta2^q\le0.00625g^2-384e/g^2\)</span>, with no
+nonnegative solution unless <span
+class="math inline">\(g^4\ge61440e\)</span>. None of these tables
+locates the proved target region.</p>
+<h2 id="from-normalized-true-vacuum-correlations-to-a-gap">From
+normalized true-vacuum correlations to a gap</h2>
+<p>Let <span class="math inline">\(\psi_0&gt;0\)</span> be the
+normalized true finite-volume ground state and <span
+class="math inline">\(f_A=(A-\langle A\rangle_0)\psi_0\)</span>, for
+bounded gauge-invariant multiplication observables, including
+whole-lattice supports. If <span class="math display">\[0\le\langle
+f_A,e^{-t(H-E_0)}f_A\rangle\le C_Ae^{-mt}
+\quad(t\ge0)\]</span> holds for every such <span
+class="math inline">\(A\)</span>, then <span
+class="math inline">\(\Delta^{\rm phys}\ge m\hbar c/a\)</span> in this
+dimensionless time convention. Indeed positive spectral mass below <span
+class="math inline">\(m-\zeta\)</span> would contradict the exponential
+bound. The <span class="math inline">\(f_A\)</span> are dense in the
+physical vacuum complement: truncate the gauge-invariant ratio <span
+class="math inline">\(f/\psi_0\)</span> and then center. Bounded
+spectral projections extend their vanishing from that dense set.
+Infinite volume additionally needs a named vacuum GNS representation and
+dense observable domain.</p>
+<p>This spectral lemma’s hypothesis has not been proved by the history
+count. For true-vacuum-centered <span class="math inline">\(A\)</span>,
+the rank-one ground projection gives only <span
+class="math display">\[\frac{\langle\Omega_0,e^{-TH}A^*e^{-tH}Ae^{-TH}\Omega_0\rangle}
+{\langle\Omega_0,e^{-(2T+t)H}\Omega_0\rangle}
+\longrightarrow\langle\psi_0,A^*e^{-t(H-E_0)}A\psi_0\rangle.\]</span> A
+proof of decay needs a normalized connected insertion bound uniform in
+boundary distance <span class="math inline">\(T\)</span> and volume.
+Individual four-link histories alone do not show that each correlation
+cluster spans area at least <span class="math inline">\(4t\)</span>.
+Thus <span class="math inline">\(m=4\lambda\)</span>, a uniform limiting
+coefficient four in electric-gap units, and any asserted <span
+class="math inline">\(O(g^{-4})\)</span> relative correction remain
+unproved here.</p>
+<h2
+id="time-discretized-comparison-and-its-missing-activity-bound">Time-discretized
+comparison and its missing activity bound</h2>
+<p>For the uncentered <span class="math inline">\(SU(3)\)</span>
+normalization the local perturbation is <span
+class="math inline">\(\beta\le54/g^4\)</span>. The earlier
+proof-extraction estimate assumed support entropy <span
+class="math inline">\(c^n\)</span>, <span
+class="math inline">\(c=80e\)</span>, per-site activity <span
+class="math inline">\(\rho^n\)</span>, and <span
+class="math inline">\(\sum_{n\ge1}(ce\rho)^n\le1\)</span>, hence <span
+class="math inline">\(\rho\le1/(160e^2)\)</span>. It further assumed
+<span class="math display">\[\rho_J=e^{-t_0},\qquad \rho_I=2et_0\beta
+e^{64t_0}.\]</span> The 64 is the proposed shadow volume <span
+class="math inline">\(|\{0,1\}^3|^2\)</span>; the insertion factor
+minimizes <span class="math inline">\(2\alpha
+e^{t_0\beta/\alpha}\)</span> at <span
+class="math inline">\(\alpha=t_0\beta\)</span>. Taking <span
+class="math inline">\(t_0=7.1\ge\log160+2\)</span> would require <span
+class="math display">\[\beta\le\frac{e^{-454.4}}{160e^2\,2e\cdot7.1},\qquad
+\log\beta\lesssim-465,\qquad
+\log g_0^2\simeq\tfrac12(\log54+465)\simeq234.5.\]</span> The resulting
+order <span class="math inline">\(10^{102}\)</span> is a
+<strong>heuristic extraction</strong>, not a numerical conclusion of
+Yarotsky’s theorem: conversion of full configuration weights and
+multiplicities into the assumed support-site bound is missing. Nor is
+<span class="math inline">\(e^{64t_0}\)</span> an unavoidable cost of
+all discretized methods. The alternative illustrative coordination
+estimate <span class="math inline">\(g^4\gtrsim54\cdot12e\)</span>,
+suggesting <span class="math inline">\(g^2\)</span> of order 40–70, has
+no applicable Kirkwood–Thomas or Datta–Kennedy constant proved here;
+those sources were read at metadata level only.</p>
+<span id="what-the-theorem-does-and-does-not-give"></span><h2 id="exact-low-energy-reductions-and-the-physical-scale">Exact
+low-energy reductions and the physical scale</h2>
+<p>Suppose a specified scheme gives <span
+class="math inline">\(H(a)\)</span> and <span
+class="math inline">\(H_{\rm eff}(2a)\)</span> whose spectra, with
+multiplicities and a common scalar shift, agree below <span
+class="math inline">\(E_c(a)&gt;E_0(a)\)</span>. Then <span
+class="math display">\[\Delta(H(a))\ge\min\{\Delta(H_{\rm
+eff}(2a)),E_c(a)-E_0(a)\}.\]</span> If a finite sequence reaches the
+stability theorem at <span class="math inline">\(a_s=2^sa_{\rm
+UV}\)</span>, in the same full or physical sector at every step,
+iteration gives <span class="math display">\[\Delta(H(a_{\rm
+UV}))\ge\min\left\{
+\gamma_q(1-\eta_{E,s})\frac{2g_s^2}{3}\frac{\hbar c}{a_s},
+\min_{k&lt;s}[E_c(a_k)-E_0(a_k)]\right\}.\]</span> Uniform positive
+physical margins and controlled <span class="math inline">\(a_s\)</span>
+are additional hypotheses as <span class="math inline">\(a_{\rm
+UV}\to0\)</span>; merely having finitely many positive margins at each
+cutoff is insufficient. An actual generated interaction must satisfy the
+theorem’s locality and covariance premises. Reconstruction, nontrivial
+spectral weight and the physical limit stay separate (<a
+href="mass-gap-obligations-lattice.html">spectral obligations</a>).</p>
+<p>The one-loop orientation <span class="math inline">\(n\simeq(g_{\rm
+weak}^{-2}-g_{\rm strong}^{-2})/0.0966\)</span> gives about 21 doublings
+from <span class="math inline">\(g^2=1/2\)</span> to a hypothetical
+order-<span class="math inline">\(10^2\)</span> endpoint, or order <span
+class="math inline">\(10^3\)</span> when the initial inverse coupling is
+100. These are extrapolations; the intermediate region and its
+corrections are uncontrolled. The <a
+href="weak-coupling-feshbach-reduction.html">small-volume Feshbach
+bridge</a> uses a different basis and small parameter and retains its
+ultraviolet caveat.</p>
+<h2 id="consequence-for-state">Consequence for STATE</h2>
+<p>The local stability theorem, exact finite-volume bounds, conditional
+history criterion and restricted numerical tests now share one
+maintained treatment. Only the first supplies volume uniformity. An
+explicit continuous-time threshold requires the missing all-root count
+and normalized true-vacuum correlation estimate; a physical continuum
+gap additionally requires cutoff-uniform transport and reconstruction
+along the weak trajectory.</p>
 
 </main>
 <footer class="site"><div class="wrap">
