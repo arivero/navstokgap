@@ -1,7 +1,7 @@
 # R20 review: exact phase ambiguity with a hidden clock
 
 C096–C097 are accepted as checked derivations for the pulse design and local
-preparation domains in [R20](../notes/hidden-clock-ambiguity.md).
+preparation domains in [R20](../notes/calibration-tolerance-recovery.md#clock-fibres-and-local-versus-global-recovery).
 
 - Smoothness: dividing the integrated momentum force by lambda removes its
   zero before extension to lambda=0. Finite-time smooth dependence includes

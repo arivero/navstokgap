@@ -1,7 +1,7 @@
 # R25 review: full-record compensation and exact shell saturation
 
 C106–C107 are accepted as checked written derivations in
-[R25](../notes/full-apparatus-preparation-ambiguity.md).
+[R25](../notes/calibration-tolerance-recovery.md#full-records-whole-shell-saturation-and-exact-energies).
 
 The free apparatus map includes probe and clock position drifts and is an
 invertible shear in fixed units. Preconditioning by its inverse makes the

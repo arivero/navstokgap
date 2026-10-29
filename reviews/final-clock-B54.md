@@ -1,7 +1,7 @@
 # R23 review: one persistent clock record restores the global inverse
 
 C102–C103 are accepted as checked derivations in
-[R23](../notes/final-clock-momentum-recovery.md).
+[R23](../notes/autonomous-finite-readout.md#complete-records-replace-clock-preparation-data).
 
 1. Integrating the clock force gives equation (2) exactly inside the linear
    cutoff regions. Compact finite-time smooth dependence includes derivatives

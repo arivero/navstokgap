@@ -4,7 +4,7 @@
 - Role: bounded primary-source librarian audit.
 - Requested route: Luna-low, independent if dispatched; no descendant.
 - Date: 2026-09-11.
-- Inputs: `notes/final-clock-momentum-recovery.md`,
+- Inputs: `notes/autonomous-finite-readout.md#complete-records-replace-clock-preparation-data`,
   `docs/batches/B52/clock-position-source-companion.md`,
   `docs/batches/B50/full-pointer-source-companion.md`.
 - Output: `docs/batches/B54/final-clock-source-companion.md`.

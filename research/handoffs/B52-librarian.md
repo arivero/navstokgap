@@ -4,7 +4,7 @@
 - Role: sole bounded librarian.
 - Requested model/effort: gpt-5.6-luna, low (as requested); effective settings were not independently reported.
 - Date: 2026-09-11.
-- Inputs: `notes/clock-position-local-recovery.md`, `notes/hidden-clock-ambiguity.md`, B48/B50/B51 source companions.
+- Inputs: `notes/autonomous-finite-readout.md#energy-assisted-local-recovery-and-its-global-obstruction`, `notes/calibration-tolerance-recovery.md#clock-fibres-and-local-versus-global-recovery`, B48/B50/B51 source companions.
 - Outputs: [`docs/batches/B52/clock-position-source-companion.md`](../../docs/batches/B52/clock-position-source-companion.md) and this handoff.
 
 ## Finding

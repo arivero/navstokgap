@@ -946,15 +946,21 @@
   },
   {
    "path": "notes/autonomous-finite-readout.md",
-   "title": "A finite mechanical clock and four persistent readout records",
-   "summary": "One finite mechanical clock and four probes reconstruct a known four-dimensional spring receiver at fixed latency with error/disturbance O(λ²), using preparation width b=λ³ and exact final momenta.",
+   "title": "Classical apparatus: construction, complete records and stable recovery",
+   "summary": "One autonomous finite-mass Hamiltonian apparatus has vanishing-error/disturbance quiet-preparation limits; exact nonlinear calibration and complete pointer/clock records give bounded-domain recovery. Impulsive repeated-cut readout has separate growing-probe resources.",
    "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "One finite mechanical clock and four probes reconstruct a known four-dimensional spring receiver at fixed latency with error/disturbance O(λ²), using preparation width b=λ³ and exact final momenta. Scope: Forces, masses, duration and clock energy stay bounded; preparation/record precision shrink. This is delayed reconstruction, not causal fresh measurements at each cut.",
+   "strongest_result": "One autonomous finite-mass Hamiltonian apparatus has vanishing-error/disturbance quiet-preparation limits; exact nonlinear calibration and complete pointer/clock records give bounded-domain recovery. Impulsive repeated-cut readout has separate growing-probe resources. Scope: Preparation precision, exact model, known incoming probe momenta and joint final record access are supplied. Delayed known-flow reconstruction differs from causal unknown-force prediction; energy-assisted recovery is local unless final clock records are included.",
    "status": "result",
-   "proof_status": "proved-refereed",
+   "proof_status": "mixed",
    "retrieval_priority": 1,
-   "current_relevance": "Specialist support when this mechanism is selected: One finite mechanical clock and four probes reconstruct a known four-dimensional spring receiver at fixed latency with error/disturbance O(λ²), using preparation width b=λ³ and exact final momenta.",
-   "relations": [],
+   "current_relevance": "Canonical apparatus dependency treatment: One autonomous finite-mass Hamiltonian apparatus has vanishing-error/disturbance quiet-preparation limits; exact nonlinear calibration and complete pointer/clock records give bounded-domain recovery. Impulsive repeated-cut readout has separate growing-probe resources.",
+   "relations": [
+    {
+     "type": "uses",
+     "target": "notes/conservative-harmonic-receiver.md",
+     "reason": "Uses its reduced four-dimensional receiver and finite-history observability."
+    }
+   ],
    "surprising": true,
    "route_closure": false,
    "keys": [
@@ -964,12 +970,65 @@
     "finite Hamiltonian apparatus",
     "four momentum records",
     "mechanical clock",
-    "delayed reconstruction"
+    "delayed reconstruction",
+    "classical-readout-refinement",
+    "R05",
+    "C066",
+    "C067",
+    "canonical shear probes",
+    "quiet preparation",
+    "cubic inverse sensitivity",
+    "mesh fourth power",
+    "growing apparatus mass",
+    "fixed-coupling-calibration",
+    "R16",
+    "C088",
+    "C089",
+    "fixed nonzero coupling",
+    "exact nonlinear calibration",
+    "lower Lipschitz",
+    "preparation contraction",
+    "four persistent momenta",
+    "full-pointer-recovery",
+    "R19",
+    "C094",
+    "C095",
+    "eight pointer coordinates",
+    "clock calibration",
+    "global receiver recovery",
+    "free pointer shear",
+    "C1 perturbation",
+    "clock-position-local-recovery",
+    "R21",
+    "C098",
+    "C099",
+    "known clock position",
+    "energy transversality",
+    "local inverse",
+    "unknown clock speed",
+    "scaled records",
+    "final-clock-momentum-recovery",
+    "R23",
+    "C102",
+    "C103",
+    "final clock momentum",
+    "global inverse",
+    "unknown speed",
+    "bounded receiver domain",
+    "nine records",
+    "full-clock-phase-recovery",
+    "R24",
+    "C104",
+    "C105",
+    "ten apparatus records",
+    "clock phase",
+    "known incoming momenta",
+    "weak coupling conditioning"
    ],
    "role": "result,calibration",
    "value": "used-calibration,surprising-result",
-   "limitations": "Forces, masses, duration and clock energy stay bounded; preparation/record precision shrink. This is delayed reconstruction, not causal fresh measurements at each cut.",
-   "content_coverage": "full read including later corrections and appendices"
+   "limitations": "Preparation precision, exact model, known incoming probe momenta and joint final record access are supplied. Delayed known-flow reconstruction differs from causal unknown-force prediction; energy-assisted recovery is local unless final clock records are included.",
+   "content_coverage": "Full source proofs and later corrections read; dependency-organized consolidation preserves exact constants, constructions and limitations. Historical coordinator/model checks are internal, not external peer review."
   },
   {
    "path": "notes/balaban-newton-time-blocking.md",
@@ -1071,34 +1130,6 @@
    "content_coverage": "Full lesson read after writing; Terra targeted written check of the causal proof and conceptual boundaries. Source nonlinear-cell statements retain their own proof scope. No numerical/symbolic verification or claim of complete proof review. October 27 update: new section-4 links and changed STATE consequence read with surrounding uniqueness/continuation argument; new sequel has its own targeted check."
   },
   {
-   "path": "notes/block-apparatus-composition.md",
-   "title": "Independent apparatus blocks restore extensive composition",
-   "summary": "Exact bounded-force centre risks add across independently budgeted record blocks; at r=3/2, k identical independent blocks give k times the saturated canonical risk product.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "Exact bounded-force centre risks add across independently budgeted record blocks; at r=3/2, k identical independent blocks give k times the saturated canonical risk product. Scope: A fixed global budget instead gives copy-count invariance. Regrouping preserves the original Cartesian constraints; replacing them with a global norm ball changes the apparatus class. Precision remains supplied.",
-   "status": "result",
-   "proof_status": "proved-refereed",
-   "retrieval_priority": 1,
-   "current_relevance": "Specialist support when this mechanism is selected: Exact bounded-force centre risks add across independently budgeted record blocks; at r=3/2, k identical independent blocks give k times the saturated canonical risk product.",
-   "relations": [],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R15",
-    "C086",
-    "C087",
-    "independent block budgets",
-    "l^r",
-    "centre minimax",
-    "extensive composition",
-    "shared resource"
-   ],
-   "role": "result,calibration",
-   "value": "used-calibration",
-   "limitations": "A fixed global budget instead gives copy-count invariance. Regrouping preserves the original Cartesian constraints; replacing them with a global norm ball changes the apparatus class. Precision remains supplied.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
    "path": "notes/blocking-criterion-monotone.md",
    "title": "Blocking and Schur bounds: the surface-to-gap obstruction",
    "summary": "Surface-to-gap criteria scale unfavourably in specified regimes.",
@@ -1188,82 +1219,20 @@
    "content_coverage": "full read including later corrections and appendices"
   },
   {
-   "path": "notes/calibrated-canonical-ambiguity.md",
-   "title": "Calibrated two-energy records still hide both canonical coordinates",
-   "summary": "A fixed smooth pulse design admits an exact common-record receiver curve varying both x and P despite known nonzero first-probe displacement, receiver/apparatus energies and all ten final apparatus coordinates.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "A fixed smooth pulse design admits an exact common-record receiver curve varying both x and P despite known nonzero first-probe displacement, receiver/apparatus energies and all ten final apparatus coordinates. Scope: Positive canonical risk is preparation/design-relative and uniform only over weak coupling in that fixed class; a curve does not establish projected area. Later calibration/recovery notes refine the boundary.",
-   "status": "result",
-   "proof_status": "proved-refereed",
-   "retrieval_priority": 1,
-   "current_relevance": "Specialist support when this mechanism is selected: A fixed smooth pulse design admits an exact common-record receiver curve varying both x and P despite known nonzero first-probe displacement, receiver/apparatus energies and all ten final apparatus coordinates.",
-   "relations": [],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R28",
-    "fixed q1",
-    "two energies",
-    "full final apparatus",
-    "implicit function",
-    "canonical fibre",
-    "x P risk"
-   ],
-   "role": "result,calibration",
-   "value": "used-calibration",
-   "limitations": "Positive canonical risk is preparation/design-relative and uniform only over weak coupling in that fixed class; a curve does not establish projected area. Later calibration/recovery notes refine the boundary.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
-   "path": "notes/calibrated-displacement-ambiguity.md",
-   "title": "One calibrated displacement still leaves full receiver ambiguity",
-   "summary": "A constrained eleven-coordinate preparation chart and Borsuk–Ulam yield distinct receiver states with identical ten-component final apparatus records and fixed energies/first displacement.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "A constrained eleven-coordinate preparation chart and Borsuk–Ulam yield distinct receiver states with identical ten-component final apparatus records and fixed energies/first displacement. Scope: The uniform full-receiver norm risk need not lie in x or P; it proves neither canonical action-product nor area floor. calibrated-canonical-ambiguity supplies a separate pulse-design construction for both canonical coordinates.",
-   "status": "result",
-   "proof_status": "proved-refereed",
-   "retrieval_priority": 1,
-   "current_relevance": "Specialist support when this mechanism is selected: A constrained eleven-coordinate preparation chart and Borsuk–Ulam yield distinct receiver states with identical ten-component final apparatus records and fixed energies/first displacement.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/calibrated-canonical-ambiguity.md",
-     "reason": "The uniform full-receiver norm risk need not lie in x or P; it proves neither canonical action-product nor area floor. calibrated-canonical-ambiguity supplies a separate pulse-design construction for both canonical coordinates.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R27",
-    "Borsuk–Ulam",
-    "S10",
-    "calibrated displacement",
-    "two initial energies",
-    "full-state ambiguity",
-    "inverse shear"
-   ],
-   "role": "result,calibration",
-   "value": "used-calibration",
-   "limitations": "The uniform full-receiver norm risk need not lie in x or P; it proves neither canonical action-product nor area floor. calibrated-canonical-ambiguity supplies a separate pulse-design construction for both canonical coordinates.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
    "path": "notes/calibration-tolerance-recovery.md",
-   "title": "Calibration tolerance sets the recovery crossover",
-   "summary": "On the fixed R30 apparatus box, receiver recovery error is O((record error+calibration error)/λ); exact final records give matching canonical-risk product order min{1,(ε/λ)²}. At sufficiently weak coupling one record hides the entire bounded receiver domain.",
+   "title": "Preparation, calibration and exact-record fibres of a classical apparatus",
+   "summary": "A common inverse apparatus chart proves shell saturation, energy/calibration ambiguities, rank-controlled global recovery, matched tolerance/coupling crossover and directional calibration fibres. Signed-coupling symmetry cancels the proposed canonical tangent; finite-width quadratic quadratures retain a conditional curvature test.",
    "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "On the fixed R30 apparatus box, receiver recovery error is O((record error+calibration error)/λ); exact final records give matching canonical-risk product order min{1,(ε/λ)²}. At sufficiently weak coupling one record hides the entire bounded receiver domain. Scope: Four calibration tolerances are supplied resources; exact calibration recovers the receiver by three-calibration-global-recovery.",
+   "strongest_result": "A common inverse apparatus chart proves shell saturation, energy/calibration ambiguities, rank-controlled global recovery, matched tolerance/coupling crossover and directional calibration fibres. Signed-coupling symmetry cancels the proposed canonical tangent; finite-width quadratic quadratures retain a conditional curvature test. Scope: The calibrated global inverse uses a reduced fixed box and nonzero displacement; shell, full-state, coordinate-risk and projected-area claims have distinct hypotheses. Correlated estimates concern one local fibre; both projected curvature coefficients remain unproved nonzero. No universal action is selected.",
    "status": "result",
-   "proof_status": "proved-unrefereed",
+   "proof_status": "mixed",
    "retrieval_priority": 1,
-   "current_relevance": "Specialist support when this mechanism is selected: On the fixed R30 apparatus box, receiver recovery error is O((record error+calibration error)/λ); exact final records give matching canonical-risk product order min{1,(ε/λ)²}. At sufficiently weak coupling one record hides the entire bounded receiver domain.",
+   "current_relevance": "Canonical apparatus dependency treatment: A common inverse apparatus chart proves shell saturation, energy/calibration ambiguities, rank-controlled global recovery, matched tolerance/coupling crossover and directional calibration fibres. Signed-coupling symmetry cancels the proposed canonical tangent; finite-width quadratic quadratures retain a conditional curvature test.",
    "relations": [
     {
      "type": "uses",
-     "target": "notes/three-calibration-global-recovery.md",
-     "reason": "Four calibration tolerances are supplied resources; exact calibration recovers the receiver by three-calibration-global-recovery.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
+     "target": "notes/autonomous-finite-readout.md",
+     "reason": "Uses the common autonomous Hamiltonian, compact smooth-flow estimates and complete-record normal forms."
     }
    ],
    "surprising": false,
@@ -1275,31 +1244,136 @@
     "inverse coupling",
     "canonical minimax",
     "common record ball",
-    "weak coupling saturation"
+    "weak coupling saturation",
+    "fixed-preparation-ambiguity",
+    "R17",
+    "C090",
+    "C091",
+    "fixed preparation box",
+    "exact four records",
+    "momentum compensator",
+    "receiver shell patch",
+    "canonical projected area",
+    "position-preparation-ambiguity",
+    "R18",
+    "unknown probe positions",
+    "calibrated incoming momenta",
+    "clock reaction",
+    "narrow fixed pulses",
+    "equal-record shell fibre",
+    "lambda-squared response",
+    "hidden-clock-ambiguity",
+    "R20",
+    "hidden clock phase",
+    "fixed energy receiver",
+    "eight pointer records",
+    "early pulse design",
+    "implicit function",
+    "coordinate risk product",
+    "global-clock-speed-ambiguity",
+    "R22",
+    "two clock speeds",
+    "equal-energy shell",
+    "indefinite energy response",
+    "global branches",
+    "preparation width",
+    "full-apparatus-preparation-ambiguity",
+    "R25",
+    "C106",
+    "C107",
+    "full apparatus preparation",
+    "ten final records",
+    "energy shell",
+    "exact compensation",
+    "minimax ellipse",
+    "energy-constrained-apparatus-ambiguity",
+    "R26",
+    "C108",
+    "C109",
+    "backward terminal flow",
+    "receiver sign",
+    "two exact energies",
+    "antipodal pair",
+    "calibrated-displacement-ambiguity",
+    "R27",
+    "Borsuk–Ulam",
+    "S10",
+    "calibrated displacement",
+    "two initial energies",
+    "full-state ambiguity",
+    "inverse shear",
+    "calibrated-canonical-ambiguity",
+    "R28",
+    "fixed q1",
+    "two energies",
+    "full final apparatus",
+    "canonical fibre",
+    "x P risk",
+    "two-calibration-branches",
+    "R29",
+    "two calibrated positions",
+    "full apparatus record",
+    "local inverse",
+    "global two branches",
+    "canonical ambiguity",
+    "three-calibration-global-recovery",
+    "R30",
+    "three calibrated positions",
+    "full ten-coordinate record",
+    "apparatus energy",
+    "global inverse",
+    "delta/lambda",
+    "single-calibration-fibres",
+    "R32",
+    "C121",
+    "B64",
+    "inverse response column",
+    "calibration fibre",
+    "Hermite interpolation",
+    "canonical diameter",
+    "zero projected area",
+    "correlated-calibration-response",
+    "R33",
+    "C122",
+    "C123",
+    "correlated calibration line",
+    "hidden y",
+    "signed coupling symmetry",
+    "quadratic response",
+    "local fibre",
+    "C092",
+    "C093",
+    "C096",
+    "C097",
+    "C100",
+    "C101",
+    "C110",
+    "C111",
+    "C112",
+    "C113",
+    "C114",
+    "C115",
+    "C116",
+    "C117",
+    "C118",
+    "C120"
    ],
    "role": "result,calibration",
    "value": "used-calibration",
-   "limitations": "Four calibration tolerances are supplied resources; exact calibration recovers the receiver by three-calibration-global-recovery.",
-   "content_coverage": "full read including later corrections and appendices"
+   "limitations": "The calibrated global inverse uses a reduced fixed box and nonzero displacement; shell, full-state, coordinate-risk and projected-area claims have distinct hypotheses. Correlated estimates concern one local fibre; both projected curvature coefficients remain unproved nonzero. No universal action is selected.",
+   "content_coverage": "Full source proofs and later corrections read; dependency-organized consolidation preserves exact constants, constructions and limitations. Historical coordinator/model checks are internal, not external peer review."
   },
   {
    "path": "notes/causal-force-information.md",
-   "title": "New information behind a delayed record",
-   "summary": "With exact past state but unknown future |f|≤F over delay ℓ, exact minimax errors are Fℓ²/(2m), Fℓ; the curved reachable lens has canonical area 2F²ℓ³/(3m).",
+   "title": "Bounded-force records: reachability, minimax recovery and composition",
+   "summary": "Exact force lenses and clipped-cut areas, a symmetric-fibre minimax theorem, all three finite-horizon phase-risk regimes, independent composition and shared/block budget laws are proved in one information model.",
    "thematic_area": "Newton/action",
-   "strongest_result": "With exact past state but unknown future |f|≤F over delay ℓ, exact minimax errors are Fℓ²/(2m), Fℓ; the curved reachable lens has canonical area 2F²ℓ³/(3m). Scope: Delay/force resources set the scale; both vanish when refined. reachable-cut-composition composes the full phase-space region across cuts.",
+   "strongest_result": "Exact force lenses and clipped-cut areas, a symmetric-fibre minimax theorem, all three finite-horizon phase-risk regimes, independent composition and shared/block budget laws are proved in one information model. Scope: Known initial state, arbitrary bounded force, nondisturbing records and supplied deterministic error bands are premises. No whole-class speed ceiling or back-reaction is included. Precision/delay refinement closes the action-risk products; a shared norm budget differs from independent apparatus budgets.",
    "status": "result",
-   "proof_status": "proved-refereed",
+   "proof_status": "mixed",
    "retrieval_priority": 2,
-   "current_relevance": "Durable supporting result or route constraint: With exact past state but unknown future |f|≤F over delay ℓ, exact minimax errors are Fℓ²/(2m), Fℓ; the curved reachable lens has canonical area 2F²ℓ³/(3m).",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/reachable-cut-composition.md",
-     "reason": "Delay/force resources set the scale; both vanish when refined. reachable-cut-composition composes the full phase-space region across cuts.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-    }
-   ],
+   "current_relevance": "Canonical apparatus dependency treatment: Exact force lenses and clipped-cut areas, a symmetric-fibre minimax theorem, all three finite-horizon phase-risk regimes, independent composition and shared/block budget laws are proved in one information model.",
+   "relations": [],
    "surprising": false,
    "route_closure": false,
    "keys": [
@@ -1310,12 +1384,80 @@
     "bounded-force lens",
     "reachable region",
     "canonical area",
-    "double integrator"
+    "double integrator",
+    "reachable-cut-composition",
+    "R08",
+    "C072",
+    "C073",
+    "sheared Minkowski sum",
+    "momentum fibre",
+    "conditional canonical area",
+    "finite-precision-cut",
+    "R09",
+    "C074",
+    "C075",
+    "clipped reachable lens",
+    "Minkowski area",
+    "position precision",
+    "residual delay",
+    "thin momentum fibre",
+    "two-position-recovery",
+    "R10",
+    "C076",
+    "C077",
+    "finite difference",
+    "bounded force",
+    "delay",
+    "epsilon over separation",
+    "indistinguishable-phase-bound",
+    "R11",
+    "C078",
+    "C079",
+    "complete noisy history",
+    "blind delay",
+    "convex symmetric fibre",
+    "exact minimax risks",
+    "finite-horizon-minimax",
+    "R13",
+    "C082",
+    "C083",
+    "bounded curvature",
+    "three velocity regimes",
+    "transient aggregate loss",
+    "earliest saturation",
+    "minimax-composition",
+    "R12",
+    "product central fibres",
+    "linear minimax radii",
+    "centre total momentum",
+    "aligned errors",
+    "extensive action product",
+    "aggregate record loss",
+    "variance mismatch",
+    "shared-record-budget",
+    "R14",
+    "C084",
+    "C085",
+    "shared record budget",
+    "ell-r norm",
+    "center of mass",
+    "minimax exponent",
+    "block-apparatus-composition",
+    "R15",
+    "C086",
+    "C087",
+    "independent block budgets",
+    "l^r",
+    "centre minimax",
+    "extensive composition",
+    "shared resource",
+    "C080",
+    "C081"
    ],
    "role": "result",
    "value": "used-calibration",
-   "limitations": "Delay/force resources set the scale; both vanish when refined. reachable-cut-composition composes the full phase-space region across cuts.",
-   "content_coverage": "full read including later corrections and appendices"
+   "limitations": "Known initial state, arbitrary bounded force, nondisturbing records and supplied deterministic error bands are premises. No whole-class speed ceiling or back-reaction is included. Precision/delay refinement closes the action-risk products; a shared norm budget differs from independent apparatus budgets.",
+   "content_coverage": "Full source proofs and later corrections read; dependency-organized consolidation preserves exact constants, constructions and limitations. Historical coordinator/model checks are internal, not external peer review."
   },
   {
    "path": "notes/checkerboard-dynamics.md",
@@ -1378,76 +1520,6 @@
    "role": "result,calibration",
    "value": "known-boundary,used-calibration",
    "limitations": "Measurement/operation restrictions are stipulated; no apparatus realization or action unit follows. reversible-interaction-premise tests the additional genuine-interaction premise.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
-   "path": "notes/classical-readout-refinement.md",
-   "title": "Classical readout under cut refinement",
-   "summary": "Two classical impulsive canonical probes per cut, prepared with phase widths O(mesh⁴), recover the hidden spring receiver uniformly with O(mesh) error and O(mesh³) accumulated disturbance.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "Two classical impulsive canonical probes per cut, prepared with phase widths O(mesh⁴), recover the hidden spring receiver uniformly with O(mesh) error and O(mesh³) accumulated disturbance. Scope: Probe count/mass grows, switching is external, final records are exact, and preparation precision improves. autonomous-finite-readout supplies the later finite-mass fixed-latency construction.",
-   "status": "result",
-   "proof_status": "proved-refereed",
-   "retrieval_priority": 1,
-   "current_relevance": "Specialist support when this mechanism is selected: Two classical impulsive canonical probes per cut, prepared with phase widths O(mesh⁴), recover the hidden spring receiver uniformly with O(mesh) error and O(mesh³) accumulated disturbance.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/autonomous-finite-readout.md",
-     "reason": "Probe count/mass grows, switching is external, final records are exact, and preparation precision improves. autonomous-finite-readout supplies the later finite-mass fixed-latency construction.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R05",
-    "C066",
-    "C067",
-    "canonical shear probes",
-    "quiet preparation",
-    "cubic inverse sensitivity",
-    "mesh fourth power",
-    "growing apparatus mass"
-   ],
-   "role": "result,calibration",
-   "value": "used-calibration",
-   "limitations": "Probe count/mass grows, switching is external, final records are exact, and preparation precision improves. autonomous-finite-readout supplies the later finite-mass fixed-latency construction.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
-   "path": "notes/clock-position-local-recovery.md",
-   "title": "A known clock position permits stable local recovery",
-   "summary": "Initial clock position, exact receiver energy and eight final pointer records recover receiver, probe positions and unknown clock momentum on one fixed transverse preparation patch, with record-error/coupling stability.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "Initial clock position, exact receiver energy and eight final pointer records recover receiver, probe positions and unknown clock momentum on one fixed transverse preparation patch, with record-error/coupling stability. Scope: Local-patch knowledge and known incoming probe momenta are premises; full-shell global recovery fails in global-clock-speed-ambiguity. The canonical risk product closes as record errors vanish.",
-   "status": "result",
-   "proof_status": "proved-unrefereed",
-   "retrieval_priority": 1,
-   "current_relevance": "Specialist support when this mechanism is selected: Initial clock position, exact receiver energy and eight final pointer records recover receiver, probe positions and unknown clock momentum on one fixed transverse preparation patch, with record-error/coupling stability.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/global-clock-speed-ambiguity.md",
-     "reason": "Local-patch knowledge and known incoming probe momenta are premises; full-shell global recovery fails in global-clock-speed-ambiguity. The canonical risk product closes as record errors vanish.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R21",
-    "C098",
-    "C099",
-    "known clock position",
-    "energy transversality",
-    "local inverse",
-    "unknown clock speed",
-    "scaled records"
-   ],
-   "role": "result,calibration",
-   "value": "used-calibration",
-   "limitations": "Local-patch knowledge and known incoming probe momenta are premises; full-shell global recovery fails in global-clock-speed-ambiguity. The canonical risk product closes as record errors vanish.",
    "content_coverage": "full read including later corrections and appendices"
   },
   {
@@ -1590,13 +1662,13 @@
   {
    "path": "notes/conservative-harmonic-receiver.md",
    "title": "A conservative receiver and the origin of a correlation scale",
-   "summary": "Finite conservative spring receivers have zero long-window response; an increasing chain has a plateau only under stated preparation and limit order. Sections 8–9 contain the full two-body cut-state and three-body memory proofs; later sections consolidate calibration.",
+   "summary": "Finite conservative harmonic receivers have zero long-window response; the prepared increasing-chain plateau depends on limit order and closes under its hard speed-support condition. Exact two-body cut/reset and three-body elimination/observability proofs retain the missing classical memory.",
    "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "Fixed-energy position-only kernels fail semigroup composition and independent reset refinement freezes motion; retaining phase restores composition. In the three-body chain tagged phase has exact receiver memory, recoverable from two nearby exact phase samples.",
+   "strongest_result": "Finite conservative harmonic receivers have zero long-window response; the prepared increasing-chain plateau depends on limit order and closes under its hard speed-support condition. Exact two-body cut/reset and three-body elimination/observability proofs retain the missing classical memory. Scope: Receiver energy and modal preparation supply all action scales. Resets alter the experiment, exact two-time recovery becomes ill-conditioned, and the apparatus/calibration/minimax proofs now reside in their separate canonical treatments.",
    "status": "result",
    "proof_status": "mixed",
    "retrieval_priority": 2,
-   "current_relevance": "Consolidated receiver proof and calibration reference, preserving the R03/R04 results and the complete R03–R33 sequence.",
+   "current_relevance": "Canonical apparatus dependency treatment: Finite conservative harmonic receivers have zero long-window response; the prepared increasing-chain plateau depends on limit order and closes under its hard speed-support condition. Exact two-body cut/reset and three-body elimination/observability proofs retain the missing classical memory.",
    "relations": [],
    "surprising": true,
    "route_closure": false,
@@ -1606,9 +1678,6 @@
     "low-frequency density",
     "thermodynamic order of limits",
     "hard speed ceiling",
-    "R03–R33",
-    "calibration recovery",
-    "correlated curvature",
     "C062–C065",
     "R03",
     "R04",
@@ -1629,8 +1698,8 @@
    ],
    "role": "synthesis,calibration",
    "value": "used-calibration,synthesis,surprising-result",
-   "limitations": "Resets alter the experiment; two-time recovery becomes ill-conditioned, and the final correlated-fibre curvature test remains open and parked. Some later specialized derivations remain in linked notes.",
-   "content_coverage": "Full receiver note and the former R03/R04 source notes read; the full R03/R04 written derivations and their source and internal-review records are incorporated in §§8–9. Other sections retain their individual proof and reading status."
+   "limitations": "Receiver energy and modal preparation supply all action scales. Resets alter the experiment, exact two-time recovery becomes ill-conditioned, and the apparatus/calibration/minimax proofs now reside in their separate canonical treatments.",
+   "content_coverage": "Full source proofs and later corrections read; dependency-organized consolidation preserves exact constants, constructions and limitations. Historical coordinator/model checks are internal, not external peer review."
   },
   {
    "path": "notes/constructive-qft-one-time.md",
@@ -1677,41 +1746,6 @@
    "value": "infrastructure,synthesis",
    "limitations": "Supplied hbar>0 and established Feynman–Kac and spectral inputs; bounded-cylinder reconstruction only. Does not derive a full unbounded-field axiom hierarchy, 4D Yang–Mills, an SU(3) matrix gap, relativistic covariance or positive-action necessity.",
    "content_coverage": "Full note read after writing; assembled from established semigroup and path-measure results without a separate referee check."
-  },
-  {
-   "path": "notes/correlated-calibration-response.md",
-   "title": "Correlated calibration errors suppress the canonical response",
-   "summary": "A selected correlated calibration line suppresses canonical ranges on one common-record fibre. Signed-coupling symmetry cancels the proposed tangent coefficient exactly; moving-reference terminal quadratures give homogeneous quadratic response and a conditional curvature lower bound.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "A selected correlated calibration line suppresses canonical ranges on one common-record fibre. Signed-coupling symmetry cancels the proposed tangent coefficient exactly; moving-reference terminal quadratures give homogeneous quadratic response and a conditional curvature lower bound. Scope: This is local-fibre support, not global minimax recovery; both projected curvature coefficients remain unproved nonzero. action-scale-obstructions parks further apparatus continuation.",
-   "status": "result",
-   "proof_status": "mixed",
-   "retrieval_priority": 0,
-   "current_relevance": "Normally suppress unless the query names this mechanism: A selected correlated calibration line suppresses canonical ranges on one common-record fibre. Signed-coupling symmetry cancels the proposed tangent coefficient exactly; moving-reference terminal quadratures give homogeneous quadratic response and a conditional curvature lower bound.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/action-scale-obstructions.md",
-     "reason": "This is local-fibre support, not global minimax recovery; both projected curvature coefficients remain unproved nonzero. action-scale-obstructions parks further apparatus continuation.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R33",
-    "C122",
-    "C123",
-    "correlated calibration line",
-    "hidden y",
-    "signed coupling symmetry",
-    "quadratic response",
-    "local fibre"
-   ],
-   "role": "result,calibration",
-   "value": "used-calibration",
-   "limitations": "This is local-fibre support, not global minimax recovery; both projected curvature coefficients remain unproved nonzero. action-scale-obstructions parks further apparatus continuation.",
-   "content_coverage": "full read including later corrections and appendices"
   },
   {
    "path": "notes/corpus-audit-2026-10-01.md",
@@ -1961,41 +1995,6 @@
    "content_coverage": "October 2 changed content and surrounding argument read; written derivations and source passages reviewed by the revising agent, not independently verified."
   },
   {
-   "path": "notes/energy-constrained-apparatus-ambiguity.md",
-   "title": "Exact apparatus energy leaves a receiver-sign ambiguity",
-   "summary": "Terminal zero probe phase, backward Hamiltonian flow and an energy adjustment produce an exact receiver-sign pair with identical full final apparatus records and both initial energies fixed. Canonical risks stay positive as coupling decreases.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "Terminal zero probe phase, backward Hamiltonian flow and an energy adjustment produce an exact receiver-sign pair with identical full final apparatus records and both initial energies fixed. Canonical risks stay positive as coupling decreases. Scope: Fixed preparation width and receiver excitation supply the scale; two points establish neither area nor exact minimax value. calibrated-displacement-ambiguity removes reliance on sign symmetry.",
-   "status": "result",
-   "proof_status": "proved-unrefereed",
-   "retrieval_priority": 1,
-   "current_relevance": "Specialist support when this mechanism is selected: Terminal zero probe phase, backward Hamiltonian flow and an energy adjustment produce an exact receiver-sign pair with identical full final apparatus records and both initial energies fixed. Canonical risks stay positive as coupling decreases.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/calibrated-displacement-ambiguity.md",
-     "reason": "Fixed preparation width and receiver excitation supply the scale; two points establish neither area nor exact minimax value. calibrated-displacement-ambiguity removes reliance on sign symmetry.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R26",
-    "C108",
-    "C109",
-    "backward terminal flow",
-    "receiver sign",
-    "two exact energies",
-    "ten final records",
-    "antipodal pair"
-   ],
-   "role": "result,calibration",
-   "value": "used-calibration",
-   "limitations": "Fixed preparation width and receiver excitation supply the scale; two points establish neither area nor exact minimax value. calibrated-displacement-ambiguity removes reliance on sign symmetry.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
    "path": "notes/energy-depot-action-selection.md",
    "title": "Nonlinear feedback selects an action only while its energy source supplies power",
    "summary": "An explicit dissipative oscillator/depot model loses all action with finite fuel; replenishment above P_c gives attracting J_*=(P−P_c)/(2γω) for positive seeds.",
@@ -2021,41 +2020,6 @@
    "role": "result,calibration",
    "value": "used-calibration,known-boundary",
    "limitations": "The power/frequency law supplies the scale, and exact rest persists. Equal power gives equal energy rather than universal action; the model is effective dissipative dynamics, not a closed Hamiltonian field construction.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
-   "path": "notes/final-clock-momentum-recovery.md",
-   "title": "Final clock momentum restores global receiver recovery",
-   "summary": "Eight final pointer coordinates plus final clock momentum recover receiver, incoming probe positions and unknown clock speed globally on a fixed bounded domain at small positive coupling. Reaction is included; exact receiver energy is unnecessary.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "Eight final pointer coordinates plus final clock momentum recover receiver, incoming probe positions and unknown clock speed globally on a fixed bounded domain at small positive coupling. Reaction is included; exact receiver energy is unnecessary. Scope: Initial clock position and incoming probe momenta remain supplied. Record precision controls the vanishing canonical risk product; full-clock-phase-recovery hides clock offset too.",
-   "status": "result",
-   "proof_status": "proved-unrefereed",
-   "retrieval_priority": 0,
-   "current_relevance": "Normally suppress unless the query names this mechanism: Eight final pointer coordinates plus final clock momentum recover receiver, incoming probe positions and unknown clock speed globally on a fixed bounded domain at small positive coupling. Reaction is included; exact receiver energy is unnecessary.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/full-clock-phase-recovery.md",
-     "reason": "Initial clock position and incoming probe momenta remain supplied. Record precision controls the vanishing canonical risk product; full-clock-phase-recovery hides clock offset too.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R23",
-    "C102",
-    "C103",
-    "final clock momentum",
-    "global inverse",
-    "unknown speed",
-    "bounded receiver domain",
-    "nine records"
-   ],
-   "role": "result,calibration",
-   "value": "used-calibration",
-   "limitations": "Initial clock position and incoming probe momenta remain supplied. Record precision controls the vanishing canonical risk product; full-clock-phase-recovery hides clock offset too.",
    "content_coverage": "full read including later corrections and appendices"
   },
   {
@@ -2087,69 +2051,6 @@
    "content_coverage": "full read including later corrections and appendices"
   },
   {
-   "path": "notes/finite-horizon-minimax.md",
-   "title": "Exact finite-horizon phase recovery",
-   "summary": "Exact bounded-force position/momentum minimax risks have acceleration, two-arc and saturation regimes, with momentum saturation at T=4√(mε/F). Product fibres compose exactly; averaging records can lose both coordinates during mixed regimes.",
-   "thematic_area": "Newton/action",
-   "strongest_result": "Exact bounded-force position/momentum minimax risks have acceleration, two-arc and saturation regimes, with momentum saturation at T=4√(mε/F). Product fibres compose exactly; averaging records can lose both coordinates during mixed regimes. Scope: Known initial state, deterministic error band and complete-history access are premises; no speed ceiling or back-reaction is included. Refining ε closes the action-risk product.",
-   "status": "result",
-   "proof_status": "proved-unrefereed",
-   "retrieval_priority": 2,
-   "current_relevance": "Durable supporting result or route constraint: Exact bounded-force position/momentum minimax risks have acceleration, two-arc and saturation regimes, with momentum saturation at T=4√(mε/F). Product fibres compose exactly; averaging records can lose both coordinates during mixed regimes.",
-   "relations": [],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R13",
-    "C082",
-    "C083",
-    "bounded curvature",
-    "complete noisy history",
-    "three velocity regimes",
-    "transient aggregate loss",
-    "earliest saturation"
-   ],
-   "role": "result,calibration",
-   "value": "used-calibration",
-   "limitations": "Known initial state, deterministic error band and complete-history access are premises; no speed ceiling or back-reaction is included. Refining ε closes the action-risk product.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
-   "path": "notes/finite-precision-cut.md",
-   "title": "Finite position precision and the reachable action area",
-   "summary": "Derives exact terminal canonical area from a clipped bounded-force lens, with additive precision/delay and mixed extrusion terms; area vanishes uniformly when position error and residual delay vanish together.",
-   "thematic_area": "refinement/comparison",
-   "strongest_result": "Derives exact terminal canonical area from a clipped bounded-force lens, with additive precision/delay and mixed extrusion terms; area vanishes uniformly when position error and residual delay vanish together. Scope: A central record can retain finite momentum width while area closes. Non-disturbing record access is supplied; two-position-recovery addresses recovery of both coordinates.",
-   "status": "result",
-   "proof_status": "proved-refereed",
-   "retrieval_priority": 1,
-   "current_relevance": "Specialist support when this mechanism is selected: Derives exact terminal canonical area from a clipped bounded-force lens, with additive precision/delay and mixed extrusion terms; area vanishes uniformly when position error and residual delay vanish together.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/two-position-recovery.md",
-     "reason": "A central record can retain finite momentum width while area closes. Non-disturbing record access is supplied; two-position-recovery addresses recovery of both coordinates.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R09",
-    "C074",
-    "C075",
-    "clipped reachable lens",
-    "Minkowski area",
-    "position precision",
-    "residual delay",
-    "thin momentum fibre"
-   ],
-   "role": "result,calibration",
-   "value": "used-calibration",
-   "limitations": "A central record can retain finite momentum width while area closes. Non-disturbing record access is supplied; two-position-recovery addresses recovery of both coordinates.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
    "path": "notes/finiteness-half-flowed-susceptibility.md",
    "title": "The finiteness half of the mass gap is the nonvanishing of one smeared susceptibility",
    "summary": "The zero-momentum Feynman–Bijl bound reduces finite excitation energy to one finite derivative expectation and positive flowed susceptibility, with volume cancellation. In free Maxwell theory the computed susceptibility and gradient expectation cancel the coupling and give 8ℏc/(3√πt).",
@@ -2178,41 +2079,6 @@
    "role": "result",
    "value": "known-boundary",
    "limitations": "The continuum limit requires a finite coupling-weighted derivative expectation and positive flowed susceptibility, with spectral convergence; Euclidean 4D flow does not prove these Hamiltonian equal-time limits. The bound does not establish a positive gap.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
-   "path": "notes/fixed-coupling-calibration.md",
-   "title": "Fixed coupling permits precise calibrated readout",
-   "summary": "Exact nonlinear calibration of the finite four-record apparatus permits arbitrarily precise receiver reconstruction at one fixed nonzero coupling as preparation and final-record errors shrink. Accuracy times bounded disturbance also tends to zero.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "Exact nonlinear calibration of the finite four-record apparatus permits arbitrarily precise receiver reconstruction at one fixed nonzero coupling as preparation and final-record errors shrink. Accuracy times bounded disturbance also tends to zero. Scope: Dynamics/calibration knowledge, improved precision and fixed latency are resources; fixed coupling alone creates no floor. fixed-preparation-ambiguity holds incoming width positive instead.",
-   "status": "result",
-   "proof_status": "proved-refereed",
-   "retrieval_priority": 1,
-   "current_relevance": "Specialist support when this mechanism is selected: Exact nonlinear calibration of the finite four-record apparatus permits arbitrarily precise receiver reconstruction at one fixed nonzero coupling as preparation and final-record errors shrink. Accuracy times bounded disturbance also tends to zero.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/fixed-preparation-ambiguity.md",
-     "reason": "Dynamics/calibration knowledge, improved precision and fixed latency are resources; fixed coupling alone creates no floor. fixed-preparation-ambiguity holds incoming width positive instead.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R16",
-    "C088",
-    "C089",
-    "fixed nonzero coupling",
-    "exact nonlinear calibration",
-    "lower Lipschitz",
-    "preparation contraction",
-    "four persistent momenta"
-   ],
-   "role": "result,calibration",
-   "value": "used-calibration",
-   "limitations": "Dynamics/calibration knowledge, improved precision and fixed latency are resources; fixed coupling alone creates no floor. fixed-preparation-ambiguity holds incoming width positive instead.",
    "content_coverage": "full read including later corrections and appendices"
   },
   {
@@ -2248,34 +2114,6 @@
    "role": "result,obstruction",
    "value": "known-boundary,decisive-obstruction",
    "limitations": "Binding, regularity and upper speed/force ceilings do not select positivity; closed-orbit-force-action extends the excitation-dependent bound beyond circles.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
-   "path": "notes/fixed-preparation-ambiguity.md",
-   "title": "Positive preparation width hides receiver states from exact records",
-   "summary": "Unknown incoming probe momenta exactly compensate a two-dimensional receiver-shell patch at one common four-momentum record, giving positive position/momentum risk and projected canonical area bounds.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "Unknown incoming probe momenta exactly compensate a two-dimensional receiver-shell patch at one common four-momentum record, giving positive position/momentum risk and projected canonical area bounds. Scope: Fixed-width Cartesian preparation support and four-record access supply the obstruction; this is reconstruction risk, not an accuracy–disturbance lower bound. Extra calibration/records change the compatible fibre.",
-   "status": "result",
-   "proof_status": "proved-refereed",
-   "retrieval_priority": 1,
-   "current_relevance": "Specialist support when this mechanism is selected: Unknown incoming probe momenta exactly compensate a two-dimensional receiver-shell patch at one common four-momentum record, giving positive position/momentum risk and projected canonical area bounds.",
-   "relations": [],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R17",
-    "C090",
-    "C091",
-    "fixed preparation box",
-    "exact four records",
-    "momentum compensator",
-    "receiver shell patch",
-    "canonical projected area"
-   ],
-   "role": "result,calibration",
-   "value": "used-calibration",
-   "limitations": "Fixed-width Cartesian preparation support and four-record access supply the obstruction; this is reconstruction risk, not an accuracy–disturbance lower bound. Extra calibration/records change the compatible fibre.",
    "content_coverage": "full read including later corrections and appendices"
   },
   {
@@ -2431,111 +2269,6 @@
    "content_coverage": "full read including later corrections and appendices"
   },
   {
-   "path": "notes/full-apparatus-preparation-ambiguity.md",
-   "title": "Full final apparatus records can hide the entire receiver energy shell",
-   "summary": "Unknown incoming apparatus coordinates compensate receiver changes while preserving every final apparatus record; sufficiently weak positive coupling can hide the entire fixed-energy shell. Its projected ellipse gives exact coordinate minimax risks.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "Unknown incoming apparatus coordinates compensate receiver changes while preserving every final apparatus record; sufficiently weak positive coupling can hide the entire fixed-energy shell. Its projected ellipse gives exact coordinate minimax risks. Scope: the floor depends on preparation widths and receiver energy; supplying apparatus preparation restores recovery. Additional total-energy constraints are treated in energy-constrained ambiguity.",
-   "status": "result",
-   "proof_status": "proved-refereed",
-   "retrieval_priority": 1,
-   "current_relevance": "Specialist support when this mechanism is selected: Unknown incoming apparatus coordinates compensate receiver changes while preserving every final apparatus record; sufficiently weak positive coupling can hide the entire fixed-energy shell. Its projected ellipse gives exact coordinate minimax risks.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/energy-constrained-apparatus-ambiguity.md",
-     "reason": "the floor depends on preparation widths and receiver energy; supplying apparatus preparation restores recovery. Additional total-energy constraints are treated in energy-constrained ambiguity.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R25",
-    "C106",
-    "C107",
-    "full apparatus preparation",
-    "ten final records",
-    "energy shell",
-    "exact compensation",
-    "minimax ellipse"
-   ],
-   "role": "calibration,result",
-   "value": "used-calibration",
-   "limitations": "the floor depends on preparation widths and receiver energy; supplying apparatus preparation restores recovery. Additional total-energy constraints are treated in energy-constrained ambiguity.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
-   "path": "notes/full-clock-phase-recovery.md",
-   "title": "Complete final apparatus records replace the initial clock calibration",
-   "summary": "Joint final pointer and clock phase-space data globally recover the receiver and unknown incoming positions/clock phase on a bounded domain, with reaction retained. At fixed nonzero coupling, record errors tending to zero remove reconstruction risk.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "Joint final pointer and clock phase-space data globally recover the receiver and unknown incoming positions/clock phase on a bounded domain, with reaction retained. At fixed nonzero coupling, record errors tending to zero remove reconstruction risk. Scope: incoming probe momenta remain supplied; unknown full apparatus preparation restores ambiguity in R25.",
-   "status": "result",
-   "proof_status": "proved-unrefereed",
-   "retrieval_priority": 0,
-   "current_relevance": "Normally suppress unless the query names this mechanism: Joint final pointer and clock phase-space data globally recover the receiver and unknown incoming positions/clock phase on a bounded domain, with reaction retained. At fixed nonzero coupling, record errors tending to zero remove reconstruction risk.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/full-apparatus-preparation-ambiguity.md",
-     "reason": "incoming probe momenta remain supplied; unknown full apparatus preparation restores ambiguity in R25.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R24",
-    "C104",
-    "C105",
-    "ten apparatus records",
-    "clock phase",
-    "global inverse",
-    "known incoming momenta",
-    "weak coupling conditioning"
-   ],
-   "role": "calibration,result",
-   "value": "used-calibration",
-   "limitations": "incoming probe momenta remain supplied; unknown full apparatus preparation restores ambiguity in R25.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
-   "path": "notes/full-pointer-recovery.md",
-   "title": "Full pointer records recover receiver and unknown probe positions",
-   "summary": "Eight final pointer coordinates globally recover a bounded receiver state and unknown probe positions at sufficiently small positive coupling, including clock reaction. Explicit inverse bounds make coordinate-risk product vanish with record precision.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "Eight final pointer coordinates globally recover a bounded receiver state and unknown probe positions at sufficiently small positive coupling, including clock reaction. Explicit inverse bounds make coordinate-risk product vanish with record precision. Scope: initial clock phase and probe momenta are supplied, and joint classical record access is assumed. Hidden clock removes that calibration premise.",
-   "status": "result",
-   "proof_status": "proved-unrefereed",
-   "retrieval_priority": 0,
-   "current_relevance": "Normally suppress unless the query names this mechanism: Eight final pointer coordinates globally recover a bounded receiver state and unknown probe positions at sufficiently small positive coupling, including clock reaction. Explicit inverse bounds make coordinate-risk product vanish with record precision.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/hidden-clock-ambiguity.md",
-     "reason": "initial clock phase and probe momenta are supplied, and joint classical record access is assumed. Hidden clock removes that calibration premise.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R19",
-    "C094",
-    "C095",
-    "eight pointer coordinates",
-    "clock calibration",
-    "global receiver recovery",
-    "free pointer shear",
-    "C1 perturbation"
-   ],
-   "role": "calibration,result",
-   "value": "used-calibration",
-   "limitations": "initial clock phase and probe momenta are supplied, and joint classical record access is assumed. Hidden clock removes that calibration premise.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
    "path": "notes/galilei-continuous-spin-classical.md",
    "title": "Continuous spin in Galilei mechanics: a transverse boost moment",
    "summary": "The zero-mass continuous-spin label is a transverse boost moment, realized by a signed-mass dipole; elementary orbit curves have fixed physical time, and nonzero momentum precludes an energy lower bound. A supplied Poincaré energy gap gives a boost–momentum uncertainty floor proportional to ℏΔ/c², while a positive continuous-spin label still permits energy approaching zero.",
@@ -2651,46 +2384,6 @@
    "content_coverage": "full read including later corrections and appendices"
   },
   {
-   "path": "notes/global-clock-speed-ambiguity.md",
-   "title": "Distinct clock speeds give identical full pointer records on the shell",
-   "summary": "An early-pulse apparatus admits two distinct clock speeds and equal-energy receiver states with identical full pointer records, persisting with positive-coupling reaction and separating both receiver coordinates.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "An early-pulse apparatus admits two distinct clock speeds and equal-energy receiver states with identical full pointer records, persisting with positive-coupling reaction and separating both receiver coordinates. Scope: this is a design-existence, preparation-dependent coordinate-risk bound, not canonical area. It preserves local calibrated recovery; final clock momentum repairs the missing record.",
-   "status": "result",
-   "proof_status": "proved-unrefereed",
-   "retrieval_priority": 0,
-   "current_relevance": "Normally suppress unless the query names this mechanism: An early-pulse apparatus admits two distinct clock speeds and equal-energy receiver states with identical full pointer records, persisting with positive-coupling reaction and separating both receiver coordinates.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/clock-position-local-recovery.md",
-     "reason": "this is a design-existence, preparation-dependent coordinate-risk bound, not canonical area. It preserves local calibrated recovery; final clock momentum repairs the missing record.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-    },
-    {
-     "type": "uses",
-     "target": "notes/final-clock-momentum-recovery.md",
-     "reason": "this is a design-existence, preparation-dependent coordinate-risk bound, not canonical area. It preserves local calibrated recovery; final clock momentum repairs the missing record.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R22",
-    "two clock speeds",
-    "equal-energy shell",
-    "eight pointer records",
-    "indefinite energy response",
-    "global branches",
-    "preparation width"
-   ],
-   "role": "calibration,result",
-   "value": "used-calibration",
-   "limitations": "this is a design-existence, preparation-dependent coordinate-risk bound, not canonical area. It preserves local calibrated recovery; final clock momentum repairs the missing record.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
    "path": "notes/ground-state-measure-transfer.md",
    "title": "Ground-state measure transfer: the slice identity is exact, the large-field estimate remains open",
    "summary": "Standard transfer-matrix spectral projection identifies the finite-lattice ground-state density with the infinite-time Euclidean slice marginal, transferring estimates actually proved for that marginal. It explains the scale-invariant four-dimensional large-field action cost.",
@@ -2795,40 +2488,6 @@
    "content_coverage": "full read including later corrections and appendices"
   },
   {
-   "path": "notes/hidden-clock-ambiguity.md",
-   "title": "An unknown clock hides an exact fixed-energy receiver phase",
-   "summary": "Unknown clock position/speed allows a smooth equal-record receiver family on an exact energy shell, with both canonical coordinates varying despite eight exact pointer records and known probe momenta.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "Unknown clock position/speed allows a smooth equal-record receiver family on an exact energy shell, with both canonical coordinates varying despite eight exact pointer records and known probe momenta. Scope: fixed pulse design and positive preparation widths give coordinate risks, not enclosed canonical area or a universal floor. Revealed clock information is progressively tested in local recovery.",
-   "status": "result",
-   "proof_status": "proved-unrefereed",
-   "retrieval_priority": 0,
-   "current_relevance": "Normally suppress unless the query names this mechanism: Unknown clock position/speed allows a smooth equal-record receiver family on an exact energy shell, with both canonical coordinates varying despite eight exact pointer records and known probe momenta.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/clock-position-local-recovery.md",
-     "reason": "fixed pulse design and positive preparation widths give coordinate risks, not enclosed canonical area or a universal floor. Revealed clock information is progressively tested in local recovery.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R20",
-    "hidden clock phase",
-    "fixed energy receiver",
-    "eight pointer records",
-    "early pulse design",
-    "implicit function",
-    "coordinate risk product"
-   ],
-   "role": "calibration,result",
-   "value": "used-calibration",
-   "limitations": "fixed pulse design and positive preparation widths give coordinate risks, not enclosed canonical area or a universal floor. Revealed clock information is progressively tested in local recovery.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
    "path": "notes/holography-lowest-dimensions.md",
    "title": "Holography in the lowest dimensions: at $d=0$ it is the wave-function identity, at $d=1$ it is the Schwarzian",
    "summary": "Exploratory dictionary compares Euclidean ground-state marginals and segment factorization with low-dimensional holography, then distinguishes gapless Schwarzian/SYK scales from a confining infrared cap.",
@@ -2861,41 +2520,6 @@
    "role": "synthesis,historical",
    "value": "synthesis",
    "limitations": "references are metadata-level and holographic interpretations are orientation; large-N capped geometries prove no SU(3) theorem. The usable standard marginal identity is in measure transfer.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
-   "path": "notes/indistinguishable-phase-bound.md",
-   "title": "A sharp information bound from indistinguishable motions",
-   "summary": "Convex symmetry and an explicit force-controlled pair give sharp coordinate minimax risks hidden by an entire bounded-noise position history, matching two-record recovery. At zero delay their product is 2√(mF) ε^(3/2).",
-   "thematic_area": "Newton/action",
-   "strongest_result": "Convex symmetry and an explicit force-controlled pair give sharp coordinate minimax risks hidden by an entire bounded-noise position history, matching two-record recovery. At zero delay their product is 2√(mF) ε^(3/2). Scope: sufficient preparation time, deterministic error bands and known initial state are required; precision/delay refinement closes the bound. Short horizons are solved in finite-horizon minimax.",
-   "status": "result",
-   "proof_status": "proved-refereed",
-   "retrieval_priority": 2,
-   "current_relevance": "Durable supporting result or route constraint: Convex symmetry and an explicit force-controlled pair give sharp coordinate minimax risks hidden by an entire bounded-noise position history, matching two-record recovery. At zero delay their product is 2√(mF) ε^(3/2).",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/finite-horizon-minimax.md",
-     "reason": "sufficient preparation time, deterministic error bands and known initial state are required; precision/delay refinement closes the bound. Short horizons are solved in finite-horizon minimax.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R11",
-    "C078",
-    "C079",
-    "bounded force",
-    "complete noisy history",
-    "blind delay",
-    "convex symmetric fibre",
-    "exact minimax risks"
-   ],
-   "role": "result",
-   "value": "infrastructure,known-boundary",
-   "limitations": "sufficient preparation time, deterministic error bands and known initial state are required; precision/delay refinement closes the bound. Short horizons are solved in finite-horizon minimax.",
    "content_coverage": "full read including later corrections and appendices"
   },
   {
@@ -3634,41 +3258,6 @@
    "content_coverage": "full read including later corrections and appendices"
   },
   {
-   "path": "notes/minimax-composition.md",
-   "title": "Worst-case information scales under mechanical composition",
-   "summary": "Cartesian bounded-error experiments compose exact scalar minimax radii by sums of absolute weighted radii. Identical constituents make the canonical risk product extensive; discarding constituent records can strictly increase momentum risk.",
-   "thematic_area": "Newton/action",
-   "strongest_result": "Cartesian bounded-error experiments compose exact scalar minimax radii by sums of absolute weighted radii. Identical constituents make the canonical risk product extensive; discarding constituent records can strictly increase momentum risk. Scope: these are separate coordinate risks under product admissibility, not variance coefficients or simultaneous per-trajectory errors. A mass-independent positive product fails this law. Uses indistinguishable pair.",
-   "status": "result",
-   "proof_status": "proved-refereed",
-   "retrieval_priority": 1,
-   "current_relevance": "Specialist support when this mechanism is selected: Cartesian bounded-error experiments compose exact scalar minimax radii by sums of absolute weighted radii. Identical constituents make the canonical risk product extensive; discarding constituent records can strictly increase momentum risk.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/indistinguishable-phase-bound.md",
-     "reason": "these are separate coordinate risks under product admissibility, not variance coefficients or simultaneous per-trajectory errors. A mass-independent positive product fails this law. Uses indistinguishable pair.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R12",
-    "product central fibres",
-    "linear minimax radii",
-    "centre total momentum",
-    "aligned errors",
-    "extensive action product",
-    "aggregate record loss",
-    "variance mismatch"
-   ],
-   "role": "result",
-   "value": "known-boundary,infrastructure",
-   "limitations": "these are separate coordinate risks under product admissibility, not variance coefficients or simultaneous per-trajectory errors. A mass-independent positive product fails this law. Uses indistinguishable pair.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
    "path": "notes/moment-hierarchy-upper-bounds.md",
    "title": "A monotone hierarchy of upper bounds from one flowed correlator, and why no bound of this kind can give $m>0$",
    "summary": "For a supplied positive spectral measure with finite nonzero moments, consecutive ratios upper-bound its spectral edge and improve toward negative indices. A gapless density suppressed faster than every power at zero has finite inverse moments, closing that positivity argument.",
@@ -4324,40 +3913,6 @@
    "content_coverage": "full read including later corrections and appendices"
   },
   {
-   "path": "notes/position-preparation-ambiguity.md",
-   "title": "Unknown probe positions can hide the receiver after momentum calibration",
-   "summary": "In a fixed admissible pulse design, unknown probe positions compensate a receiver-shell patch despite four initial and four final momenta being recorded; clock reaction supplies an invertible λ² response.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "In a fixed admissible pulse design, unknown probe positions compensate a receiver-shell patch despite four initial and four final momenta being recorded; clock reaction supplies an invertible λ² response. Scope: The reconstruction lower-bound product scales as (λb)² and is preparation-relative, not universal or a risk-vanishing theorem. Full-pointer-recovery tests the richer-record endpoint.",
-   "status": "result",
-   "proof_status": "proved-unrefereed",
-   "retrieval_priority": 0,
-   "current_relevance": "Normally suppress unless the query names this mechanism: In a fixed admissible pulse design, unknown probe positions compensate a receiver-shell patch despite four initial and four final momenta being recorded; clock reaction supplies an invertible λ² response.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/full-pointer-recovery.md",
-     "reason": "The reconstruction lower-bound product scales as (λb)² and is preparation-relative, not universal or a risk-vanishing theorem. Full-pointer-recovery tests the richer-record endpoint.",
-     "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R18",
-    "unknown probe positions",
-    "calibrated incoming momenta",
-    "clock reaction",
-    "narrow fixed pulses",
-    "equal-record shell fibre",
-    "lambda-squared response"
-   ],
-   "role": "result,calibration",
-   "value": "used-calibration,known-boundary",
-   "limitations": "The reconstruction lower-bound product scales as (λb)² and is preparation-relative, not universal or a risk-vanishing theorem. Full-pointer-recovery tests the richer-record endpoint.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
    "path": "notes/principia-constant-force-action.md",
    "title": "Newton's vanishing areas and the proposed action scale",
    "summary": "Exact Galileo areas give an endpoint-matched action defect and a carefully scoped Newtonian source anchor.",
@@ -4495,39 +4050,6 @@
    "role": "obstruction,result",
    "value": "decisive-obstruction,known-boundary",
    "limitations": "K remains freely rescalable, including zero; removing the cutoff first causes ultraviolet energy divergence. This closes linear reservoir amplitude selection, not causal nonlinear field–particle models; SED-zeta-radiation-link keeps its physical assumptions explicit.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
-   "path": "notes/reachable-cut-composition.md",
-   "title": "Reachable information across a classical cut",
-   "summary": "Bounded-force reachable sets compose exactly through the joint phase state, and observed cuts have explicit residual fibres and areas.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "For all measurable forces |f|≤F, K_T=S_bK_a+K_b; a position-conditioned momentum interval produces terminal area 2F²b³/(3m)+(Fb²/m)D, which vanishes near the endpoint without necessarily recovering momentum.",
-   "status": "result",
-   "proof_status": "proved-refereed",
-   "retrieval_priority": 2,
-   "current_relevance": "Durable classical cut-state dependency for both Newton recording closure and the refinement analogy; ideal observations supply no physical recording floor.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/causal-force-information.md",
-     "reason": "Continues R07's exact bounded-force lens geometry."
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R08",
-    "C072",
-    "C073",
-    "bounded-force lens",
-    "sheared Minkowski sum",
-    "momentum fibre",
-    "conditional canonical area"
-   ],
-   "role": "result,infrastructure",
-   "value": "infrastructure,known-boundary",
-   "limitations": "Pointwise force admissibility and non-disturbing ideal observations are premises; refining the latest record collapses area without necessarily recovering momentum. Finite-precision-cut tests realistic record errors.",
    "content_coverage": "full read including later corrections and appendices"
   },
   {
@@ -5398,44 +4920,6 @@
    "content_coverage": "full read including later corrections and appendices"
   },
   {
-   "path": "notes/shared-record-budget.md",
-   "title": "A shared record budget changes the composition exponent",
-   "summary": "Sharing an ℓr record budget across bodies changes the minimax composition exponent through resource accounting.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "For n identical bounded-force bodies the center-of-mass minimax radius is εn^(-1/r), and the saturated action-like error product scales as n^(1−3/(2r)).",
-   "status": "result",
-   "proof_status": "proved-refereed",
-   "retrieval_priority": 1,
-   "current_relevance": "This calibration warns against interpreting shared-apparatus scaling as a universal action law.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/finite-horizon-minimax.md",
-     "reason": "Imports the exact one-body bounded-force minimax functions."
-    },
-    {
-     "type": "uses",
-     "target": "notes/indistinguishable-phase-bound.md",
-     "reason": "Synchronous indistinguishable paths establish the lower bound."
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R14",
-    "C084",
-    "C085",
-    "shared record budget",
-    "ell-r norm",
-    "center of mass",
-    "minimax exponent"
-   ],
-   "role": "result,calibration",
-   "value": "used-calibration",
-   "limitations": "The anomalous exponent reflects apparatus-resource sharing; independent budgets in block composition restore the appropriate extensive composition.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
    "path": "notes/shared-resource-events.md",
    "title": "A shared release produces exclusive fringe-weighted events",
    "summary": "A prescribed classical shared-release receiver reproduces exclusive fringe probabilities with explicit finite-window and delay costs.",
@@ -5460,45 +4944,6 @@
    "role": "result,calibration",
    "value": "used-calibration",
    "limitations": "Shared control, linear hazards and readiness are supplied architecture. At vanishing energy, finite-window detection probability vanishes; this supplies neither local independent detection nor a universal action floor.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
-   "path": "notes/single-calibration-fibres.md",
-   "title": "One uncertain calibration leaves an exact receiver curve",
-   "summary": "One uncertain apparatus calibration leaves an exact equal-record receiver curve with design-dependent canonical ambiguity.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "The equal-record fibre tangent is a column of the inverse response matrix; an explicitly fixed pulse design makes both receiver coordinate diameters positive, with error products scaling as min(1,ε/λ)² while projected curve area is zero.",
-   "status": "result",
-   "proof_status": "proved-refereed",
-   "retrieval_priority": 0,
-   "current_relevance": "Specialist endpoint of classical reconstruction tests: fixed calibration uncertainty creates relative ambiguity, whereas refining it at fixed coupling restores precision.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/three-calibration-global-recovery.md",
-     "reason": "Uses the globally invertible full-record apparatus design and its response matrix."
-    },
-    {
-     "type": "continues",
-     "target": "notes/calibration-tolerance-recovery.md",
-     "reason": "Refines tolerance-versus-coupling conditioning into a single-calibration equal-record fibre."
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R32",
-    "C121",
-    "B64",
-    "inverse response column",
-    "calibration fibre",
-    "Hermite interpolation",
-    "canonical diameter",
-    "zero projected area"
-   ],
-   "role": "result,calibration",
-   "value": "used-calibration",
-   "limitations": "Projected curve area remains zero, arbitrary designs need nonzero cofactors, and ambiguity shrinks with calibration tolerance at fixed coupling. Uses tolerance recovery.",
    "content_coverage": "full read including later corrections and appendices"
   },
   {
@@ -6231,49 +5676,6 @@
    "content_coverage": "full read including later corrections and appendices"
   },
   {
-   "title": "Three calibrated positions give uniform global receiver recovery",
-   "thematic_area": "apparatus/reconstruction",
-   "status": "result",
-   "current_relevance": "Parked exact reconstruction endpoint; precision-relative apparatus ambiguities do not establish a universal positive action floor.",
-   "relations": [
-    {
-     "type": "continues",
-     "target": "notes/two-calibration-branches.md",
-     "reason": "Adds a fourth independent leading constraint to eliminate its global branch ambiguity on a reduced bounded class."
-    },
-    {
-     "type": "uses",
-     "target": "notes/autonomous-finite-readout.md",
-     "reason": "Uses the smooth finite Hamiltonian apparatus and ordinary signal rank."
-    },
-    {
-     "type": "uses",
-     "target": "notes/full-apparatus-preparation-ambiguity.md",
-     "reason": "Uses the full-record inverse apparatus chart."
-    }
-   ],
-   "path": "notes/three-calibration-global-recovery.md",
-   "summary": "Three exact initial probe-position calibrations, apparatus energy and full final apparatus data give uniform global receiver recovery on a bounded convex domain, for a fixed pulse design and suitably reduced fixed preparation box.",
-   "strongest_result": "Three exact initial probe-position calibrations, apparatus energy and full final apparatus data give uniform global receiver recovery on a bounded convex domain, for a fixed pulse design and suitably reduced fixed preparation box. Limit/reuse: Record-error amplification is O(1/λ); at fixed coupling its canonical product tends to zero. Calibration errors need [the tolerance extension](calibration-tolerance-recovery.md).",
-   "proof_status": "proved-refereed",
-   "retrieval_priority": 0,
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R30",
-    "three calibrated positions",
-    "full ten-coordinate record",
-    "apparatus energy",
-    "global inverse",
-    "delta/lambda",
-    "fixed preparation box"
-   ],
-   "role": "result,calibration",
-   "value": "used-calibration",
-   "limitations": "Record-error amplification is O(1/λ); at fixed coupling its canonical product tends to zero. Calibration errors need the tolerance extension.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
    "title": "What survives refinement: the pion, the Yang--Mills gap and Newton's action",
    "thematic_area": "refinement/comparison",
    "status": "conditional",
@@ -6463,82 +5865,6 @@
    "role": "result,infrastructure",
    "value": "infrastructure,open-mechanism",
    "limitations": "This is a one-loop effective potential, not an interacting excitation-gap proof or UV-uniform Schur estimate. Supports Feshbach H3; the cubic-lattice correction sign is borrowed.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
-   "title": "Two calibrated probe positions give local recovery and two global branches",
-   "thematic_area": "apparatus/reconstruction",
-   "status": "result",
-   "current_relevance": "Specialist reconstruction calibration separates local invertibility from globally equal complete records and preparation-relative canonical risk.",
-   "relations": [
-    {
-     "type": "continues",
-     "target": "notes/calibrated-canonical-ambiguity.md",
-     "reason": "Adds a second position calibration to its equal-record constrained apparatus."
-    },
-    {
-     "type": "uses",
-     "target": "notes/full-apparatus-preparation-ambiguity.md",
-     "reason": "Uses the exact full-record compensating apparatus chart."
-    }
-   ],
-   "path": "notes/two-calibration-branches.md",
-   "summary": "Two calibrated probe positions and both exact energies remove local degeneracy in a fixed apparatus design but leave two globally distinct receiver preparations with identical complete records and positive canonical separation.",
-   "strongest_result": "Two calibrated probe positions and both exact energies remove local degeneracy in a fixed apparatus design but leave two globally distinct receiver preparations with identical complete records and positive canonical separation. Limit/reuse: The preparation-relative bound is neither positive area nor sharp global minimax risk. A third calibration gives [uniform global recovery](three-calibration-global-recovery.md) on its stated reduced domain.",
-   "proof_status": "proved-refereed",
-   "retrieval_priority": 0,
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R29",
-    "two calibrated positions",
-    "energy shell",
-    "full apparatus record",
-    "local inverse",
-    "global two branches",
-    "canonical ambiguity"
-   ],
-   "role": "result,calibration",
-   "value": "used-calibration",
-   "limitations": "The preparation-relative bound is neither positive area nor sharp global minimax risk. A third calibration gives uniform global recovery on its stated reduced domain.",
-   "content_coverage": "full read including later corrections and appendices"
-  },
-  {
-   "path": "notes/two-position-recovery.md",
-   "title": "Two position records recover the phase state",
-   "summary": "Two bounded-error position records give simultaneous sharp errors for the stated causal position/momentum estimator, and both errors vanish when precision improves faster than sample separation and delay vanishes.",
-   "thematic_area": "apparatus/reconstruction",
-   "strongest_result": "Two bounded-error position records give simultaneous sharp errors for the stated causal position/momentum estimator, and both errors vanish when precision improves faster than sample separation and delay vanishes. Scope: Known initial state, non-disturbing records and a force ceiling are inputs; this is not optimal minimax recovery. The equal-error optimum is δ*=2√(mε/F), with momentum error 2√(mFε).",
-   "status": "result",
-   "proof_status": "proved-refereed",
-   "retrieval_priority": 1,
-   "current_relevance": "Supporting scope/route input: Two bounded-error position records give simultaneous sharp errors for the stated causal position/momentum estimator, and both errors vanish when precision improves faster than sample separation and delay vanishes.",
-   "relations": [
-    {
-     "type": "uses",
-     "target": "notes/reachable-cut-composition.md",
-     "reason": "Exact shear/force-lens propagation retains compatible phase-state fibres."
-    },
-    {
-     "type": "continues",
-     "target": "notes/indistinguishable-phase-bound.md",
-     "reason": "The later indistinguishable-pair calculation supplies a lower benchmark beyond this estimator upper bound."
-    }
-   ],
-   "surprising": false,
-   "route_closure": false,
-   "keys": [
-    "R10",
-    "C076",
-    "C077",
-    "finite difference",
-    "bounded force",
-    "delay",
-    "epsilon over separation"
-   ],
-   "limitations": "Known initial state, non-disturbing records and a force ceiling are inputs; this is not optimal minimax recovery. The equal-error optimum is δ*=2√(mε/F), with momentum error 2√(mFε).",
-   "role": "result,calibration",
-   "value": "used-calibration,known-boundary",
    "content_coverage": "full read including later corrections and appendices"
   },
   {

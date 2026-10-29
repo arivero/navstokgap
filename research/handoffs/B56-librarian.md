@@ -7,7 +7,7 @@
 - **Requested model/effort:** gpt-5.6-luna, low. Effective model/effort were
   not independently reported in this worker environment.
 - **Date:** 2026-09-12.
-- **Inputs:** `notes/full-apparatus-preparation-ambiguity.md`, inherited
+- **Inputs:** `notes/calibration-tolerance-recovery.md#full-records-whole-shell-saturation-and-exact-energies`, inherited
   `docs/batches/B48/fixed-preparation-source-companion.md` and
   `docs/batches/B55/full-clock-source-companion.md`; required repository
   instructions and routed skills.

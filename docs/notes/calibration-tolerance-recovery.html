@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Calibration tolerance sets the recovery crossover</title>
+<title>Preparation, calibration and exact-record fibres of a classical apparatus</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,142 +79,794 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>Calibration tolerance sets the recovery crossover</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/calibration-tolerance-recovery.md">Markdown source</a></p><p>On R30’s same fixed apparatus box, receiver reconstruction errors are
-bounded by a constant times (final-record error + calibration
-error)/coupling. With exact final records this rate has a matching
-canonical lower bound, up to fixed constants. At any fixed positive
-calibration tolerance, sufficiently weak coupling makes one complete
-record compatible with the entire bounded receiver domain. The
-coordinate minimax risks then equal their no-record values.</p>
-<p>R31, 2026-09-12. Retain <a
-href="three-calibration-global-recovery.html">R30</a>’s fixed nonzero c,
-pulses, small positive apparatus box about eta_c and receiver ball
-Z={H_s&lt;=E_max}, E_max&gt;0. All norms are its fixed component norms;
-calibration outputs C=(q_1,q_2,q_3,H_app) use fixed length and energy
-units. Instead of imposing C=C_* exactly, supply a reported vector C_obs
-with ||C(eta)-C_obs||&lt;=epsilon. Final record error is bounded by
-delta. These are deterministic support bounds, not stochastic variance
-assumptions. The physical unknowns range over the original box times Z,
-and initial pulse couplings vanish. Source coverage is in <a
-href="https://github.com/arivero/navstokgap/blob/main/references/batches/B62.md">B62</a>.</p>
-<h2 id="a-two-data-inverse-estimate">1. A two-data inverse estimate</h2>
-<p>Use R30’s inverse apparatus chart eta_lambda(w,a), a=S^{-1}Y, and
-D_lambda=[C(eta_lambda(w,a))-C(a)]/lambda. Its uniform receiver inverse
-margin holds independently of whether the supplied constraints are
-exact. For two initial preparations write C_1=C(eta), C_2=C(eta’), with
-records Y,Y’. Insert their actual constraints into the R30 comparison to
-obtain</p>
-<p><span class="math display">\[\|w-w&#39;\|\le 2\|L^{-1}\|
-\left[\frac{\|C_1-C_2\|}{\lambda}
-+(M_C/\lambda+M_D)\|S^{-1}\|\|Y-Y&#39;\|\right]
-\le\frac K\lambda(\|C_1-C_2\|+\|Y-Y&#39;\|). \tag{1}\]</span></p>
-<p>K is fixed over the bounded preparation and small coupling interval.
-Thus calibration precision and final-record precision are separate data
-resources, both amplified by the same sufficient inverse estimate.</p>
-<p>Choose any preparation in the compact box times Z consistent with
-both reported error bounds. It exists because the true preparation is
-consistent; a deterministic choice can be made by sequential coordinate
-minimization on this compact feasible set. Comparing it with the true
-preparation gives</p>
-<p><span class="math display">\[\|\widehat
-w-w\|\le\frac{2K}{\lambda}(\epsilon+\delta),\qquad
-\epsilon_x\epsilon_P\le4L_*P_*K^2
-                    ((\epsilon+\delta)/\lambda)^2. \tag{2}\]</span></p>
-<p>At fixed positive coupling both precisions tending to zero suffice. A
-joint weak-coupling limit is controlled when (epsilon+delta)/lambda
-tends to zero. The bound also applies componentwise with epsilon the
-largest of four calibration tolerances. The lower construction below
-permits the same positive epsilon in each component; setting some
-tolerances exactly zero is a different preparation restriction.</p>
-<h2 id="an-exact-common-record-ball-within-the-tolerance">2. An exact
-common-record ball within the tolerance</h2>
-<p>Take nominal receiver w=0 and nominal apparatus eta_c, and let
-Y_lambda=G_lambda(0,eta_c), C_obs=C(eta_c)=C_*. R25’s preconditioned
-contraction on R30’s enlarged chart gives a smooth compensator for every
-w in Z, with</p>
+<h1>Preparation, calibration and exact-record fibres of a classical
+apparatus</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/calibration-tolerance-recovery.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/calibration-tolerance-recovery.pdf">PDF</a></p><p>For the finite autonomous apparatus, exact final records can hide a
+whole receiver shell when incoming apparatus phase is unknown. Two
+initial energies and one or two probe-position calibrations still permit
+actual common-record canonical alternatives in selected fixed designs.
+Three calibrated positions and apparatus energy instead give global
+recovery on a sufficiently small fixed box. Finite calibration tolerance
+restores ambiguity with matched risk-product order <span
+class="math inline">\(\min\{1,(\varepsilon/\lambda)^2\}\)</span>. The
+direction of uncertainty matters: a correlated line can hide only an
+internal coordinate at leading order, and its first canonical tangent
+cancels exactly.</p>
+<p>These results consolidate C090–C093, C096–C101 and C106–C123 by their
+common inverse construction. The apparatus and its smooth-flow estimates
+are specified once in <a href="autonomous-finite-readout.html">the
+readout treatment</a>. Historical written coordinator/model checks are
+internal checks, not external peer review; literature novelty is
+unassessed. Distinct rank, topology and energy hypotheses below must not
+be inferred from one another.</p>
+<h2 id="common-apparatus-chart-and-the-meaning-of-risk">Common apparatus
+chart and the meaning of risk</h2>
+<p>Use the receiver <span class="math inline">\(z=(x,P,y,Q)\)</span>,
+energy <span class="math inline">\(H_s=z^TGz/2\)</span>, clock and four
+probes of the readout treatment. Put <span
+class="math inline">\(k_x=a-g^2/d&gt;0\)</span>. All norms use fixed
+component units <span class="math inline">\(L_*,P_*\)</span> for the
+canonical receiver coordinates. Let <span
+class="math inline">\(\eta\)</span> be all ten initial apparatus
+coordinates, <span class="math inline">\(G_\lambda(z,\eta)\)</span>
+their ten final coordinates at known <span
+class="math inline">\(T\)</span>, and <span
+class="math inline">\(S\)</span> the free apparatus shear</p>
+<p><span class="math display">\[(q_j,\pi_j,s,p_s)\mapsto
+(q_j+T\pi_j/M_j,\pi_j,s+Tp_s/M_c,p_s).\]</span></p>
+<p>On convex compact receiver/apparatus enlargements with strict cutoff
+and pulse margins, smooth finite-time flow gives</p>
+<p><span class="math display">\[F_\lambda:=S^{-1}G_\lambda=\eta+\lambda
+R_\lambda(z,\eta),\qquad
+\|D_\eta F_\lambda-I\|\le C\lambda\le\tfrac12,
+\quad\|D_zF_\lambda\|\le L\lambda.\]</span></p>
+<p>Derivatives of every finite order used below are bounded on smaller
+compact domains, including a small signed coupling interval. At a
+prescribed record <span class="math inline">\(a=S^{-1}Y\)</span>, the
+map <span class="math inline">\(\eta\mapsto a-\lambda
+R_\lambda(z,\eta)\)</span> is a contraction on an enlarged apparatus
+ball for <span class="math inline">\(a\)</span> near its centre. It
+defines a unique smooth inverse apparatus chart <span
+class="math inline">\(\eta_\lambda(z,a)\)</span>, with <span
+class="math inline">\(\eta_0(z,a)=a\)</span>. If <span
+class="math inline">\(Y=G_\lambda(z_*,\eta_*)\)</span>, then</p>
+<p><span class="math display">\[G_\lambda(w,\eta_\lambda(w))=Y,\qquad
+\|\eta_\lambda(w)-\eta_*\|\le2L\lambda\|w-z_*\|.\]</span></p>
+<p>Indeed <span
+class="math inline">\(\eta\mapsto\eta-F_\lambda(w,\eta)+F_\lambda(z_*,\eta_*)\)</span>
+contracts the radius-<span class="math inline">\(b/2\)</span> ball about
+<span class="math inline">\(\eta_*\)</span> into itself whenever <span
+class="math inline">\(\|w-z_*\|\le b/(4L\lambda)\)</span>. Its centre
+moves by at most <span class="math inline">\(b/4\)</span>, its
+derivative norm is at most <span class="math inline">\(1/2\)</span>, and
+its fixed point has the displayed bound. This includes exact nonlinear
+clock reaction. Counterfactual chart values may leave a smaller physical
+box while remaining in the enlarged smooth domain; segment proofs use
+this extension explicitly.</p>
+<p>For a deterministic estimator let <span
+class="math inline">\(\epsilon_x,\epsilon_P\)</span> be separate global
+worst-case errors. A common-record pair with coordinate separations
+<span class="math inline">\(\Delta x,\Delta P\)</span> forces <span
+class="math inline">\(\epsilon_x\ge|\Delta x|/2\)</span> and <span
+class="math inline">\(\epsilon_P\ge|\Delta P|/2\)</span>. These need not
+be errors on the same motion. A smooth curve may have positive
+coordinate-risk product but zero projected planar area. All products
+here have action units <span class="math inline">\(ML^2/T\)</span>,
+without a <span class="math inline">\(2\pi\)</span> factor, and are
+reconstruction risks, not accuracy–disturbance inequalities. Correlated
+choices used in a lower bound select points from the admitted Cartesian
+support; no probability law or positive probability for a fibre is
+assumed.</p>
+<h2 id="incomplete-records-and-preparation-width">Incomplete records and
+preparation width</h2>
+<p>First retain only four final probe momenta. Unknown incoming probe
+momenta <span class="math inline">\(u\)</span> have derivative <span
+class="math inline">\(D_uG=I+O(\lambda)\)</span>, while <span
+class="math inline">\(D_zG=O(\lambda)\)</span>. The same contraction
+hides every shell point within <span
+class="math inline">\(b/(4L\lambda)\)</span> of <span
+class="math inline">\(z_*\)</span>. At <span
+class="math inline">\(z_*=(0,0,\sqrt{2E/d},0)\)</span> the exact shell
+chart is</p>
+<p><span class="math display">\[w(x,P)=\left(x,P,\frac gd x+
+\sqrt{\frac{2E-k_xx^2-P^2/\mu}{d}},0\right).\]</span></p>
+<p>Choose <span class="math inline">\(r_0,C_0&gt;0\)</span> so its
+square <span class="math inline">\(|x|\le L_*r_0\)</span>, <span
+class="math inline">\(|P|\le P_*r_0\)</span> has positive radicand and
+<span class="math inline">\(\|w-z_*\|\le
+C_0\max(|x|/L_*,|P|/P_*)\)</span>. Then one record hides the whole
+square with</p>
+<p><span class="math display">\[r=\min\{r_0,b/(4LC_0\lambda)\},\qquad
+\epsilon_x\epsilon_P\ge L_*P_*r^2,\quad
+\operatorname{area}_{x,P}\ge4L_*P_*r^2.\]</span></p>
+<p>At fixed coupling the small-width rate is <span
+class="math inline">\(b^2\)</span>, matching the calibrated upper bound.
+At fixed width the displayed lower bound saturates as coupling weakens.
+No exact total apparatus energy has yet been imposed.</p>
+<p>If incoming momenta are revealed at zero but incoming positions <span
+class="math inline">\(q\)</span> remain unknown, the response has two
+coupling factors. With <span
+class="math inline">\(h(t)=e_x\Phi_te_P\)</span>, <span
+class="math inline">\(h(0)=0\)</span>, <span
+class="math inline">\(h&#39;(0)=1/\mu\)</span>, and <span
+class="math inline">\(f_j(t)=f_j(s_0+v_0t)\)</span>, its exact leading
+matrix is</p>
 <p><span
-class="math display">\[G_\lambda(w,\eta_\lambda(w))=Y_\lambda,\qquad
-\|\eta_\lambda(w)-\eta_c\|\le B\lambda\|w\|. \tag{3}\]</span></p>
-<p>For completeness, differentiate the chart identity at fixed a:</p>
-<p><span class="math display">\[D_w\eta_\lambda=-(D_\eta
-F_\lambda)^{-1}D_wF_\lambda.\]</span></p>
-<p>The inverse norm is at most 2 and ||D_wF_lambda||&lt;=L lambda on the
-enlarged chart. At a=S^{-1}Y_lambda the chart takes w=0 to eta_c.
-Integrating along the segment from 0 to w proves (3) with B=2L; this
-argument does not require the nominal apparatus displacement to
-vanish.</p>
-<p>Let R_Z=max_Z||w||&gt;0 and M bound ||DC|| on the apparatus chart,
-increasing M if necessary so M&gt;0. Reduce the fixed coupling ceiling
-until B lambda_* R_Z &lt;= rho/2, with rho the unchanged R30 preparation
-half-width. The full compensator then stays inside that box with half
-its margin. Reduce the ceiling also to keep the actual first
-displacement bounded away from zero, for example within half the fixed
-nominal |c| in its units.</p>
-<p>For</p>
-<p><span class="math display">\[t=\min\{1,\epsilon/(MB\lambda R_Z)\},
-\tag{4}\]</span></p>
-<p>every w in tZ satisfies</p>
-<p><span class="math display">\[\|C(\eta_\lambda(w))-C_*\|\le
-MB\lambda\|w\|\le\epsilon.\]</span></p>
-<p>These are exact full final records, with the same reported
-calibrations and apparatus energy. The receiver domain is a ball, so its
-dilation tZ remains admissible; no exact receiver energy was supplied in
-R30. Complete nonlinear reaction and free apparatus drift are included
-in (3). The compensating correlations select points from the admitted
-product domain; no prior correlation restriction or probability
-distribution is imposed.</p>
-<h2 id="canonical-minimax-bounds-and-exact-saturation">3. Canonical
-minimax bounds and exact saturation</h2>
-<p>For an estimator of (x,P) from (Y_obs,C_obs), define epsilon_x and
-epsilon_P as its separate worst-case absolute errors over all initial
-states in the fixed product domain and all reported data satisfying the
-error bounds. R_x and R_P are the respective infima over estimators. The
-optimal product below is the infimum of epsilon_x epsilon_P over joint
-canonical estimators; the same constructions attain both asserted
-coordinate upper bounds.</p>
-<p>Completing the receiver energy square, put k_x=a-g^2/d&gt;0 and</p>
-<p><span class="math display">\[X_E=\sqrt{2E_{\max}/k_x},\qquad
-P_E=\sqrt{2\mu E_{\max}}.\]</span></p>
-<p>The canonical projection of Z is k_x x<sup>2+P</sup>2/mu&lt;=2E_max.
-Its dilated copy tZ in the common record has coordinate extrema +/-tX_E
-and +/-tP_E. Consequently every global estimator has</p>
-<p><span class="math display">\[\epsilon_x\ge tX_E,\quad\epsilon_P\ge
-tP_E,\quad
-\epsilon_x\epsilon_P\ge t^2X_EP_E. \tag{5}\]</span></p>
-<p>For exact final records, (2), together with the constant-zero
-estimator and coordinatewise selection of the better guaranteed
-estimate, bounds the optimal coordinate risks above by min(X_E,2L_<em>K
-epsilon/lambda) and min(P_E,2P_</em>K epsilon/lambda). Thus on this
-fixed class the optimal canonical risk product has order</p>
-<p><span class="math display">\[\min\{1,(\epsilon/\lambda)^2\},
-\tag{6}\]</span></p>
-<p>up to positive constants with action units that depend on the fixed
-apparatus and energy bound. This comparison concerns epsilon&gt;0 and
-0&lt;lambda&lt;=lambda_*; at epsilon=0 and exact final records R30 gives
-zero risk.</p>
-<p>If epsilon&gt;=MB lambda R_Z, then t=1 and the constant-zero
-estimator attains both lower bounds exactly. The minimax coordinate
-risks and optimal product are</p>
-<p><span class="math display">\[R_x=X_E,\qquad R_P=P_E,\qquad
-\inf_{(\widehat x,\widehat P)}\epsilon_x\epsilon_P
-=X_EP_E=2E_{\max}\sqrt{\mu/k_x}. \tag{7}\]</span></p>
-<p>The canonical projection of this one compatible receiver set is then
-the full ellipse, of area pi X_E P_E. Both area and product have action
-units; their different factors reflect different observables. The
-displayed threshold is sufficient for saturation, not a claimed sharp
-transition constant.</p>
-<h2 id="meaning-and-next-test">4. Meaning and next test</h2>
-<p>Finite calibration tolerance restores a genuine identical-record
-ambiguity, not merely an ill-conditioned reconstruction formula. Weak
-coupling hides the receiver once its signal lies within the allowed
-initial calibration variation. The limiting risk is set by E_max and
-mechanical parameters; it is not a universal positive action scale. At
-fixed coupling improved supplied precision still closes the product.</p>
-<p>R32 should test whether four calibration tolerances are equivalent
-resources: keep q_1,q_2,q_3 exact and allow only apparatus-energy
-tolerance, then exchange which single constraint is uncertain. Identify
-actual canonical fibres, since the max-tolerance upper bound alone
-cannot decide their geometry.</p>
+class="math display">\[D_qG_\lambda=\lambda^2B(z)+O(\lambda^3),\]</span>
+<span class="math display">\[B_{jk}=K^2\int_0^T f_j(t)\int_0^t
+h(t-u)f_k(u)dudt
++\frac{K^2}{M_c}\int_0^T f&#39;_j(t)x^0(t)
+   \int_0^t(t-u)f&#39;_k(u)x^0(u)dudt.\]</span></p>
+<p>It follows by differentiating receiver and clock equations in <span
+class="math inline">\(q_k\)</span>: <span
+class="math inline">\(\partial_{q_k}x=-\lambda K\int_0^t
+h(t-u)f_k(u)du+O(\lambda^2)\)</span> and <span
+class="math inline">\(\partial_{q_k}s=-\lambda K
+M_c^{-1}\int_0^t(t-u)f&#39;_k(u)x^0(u)du+ O(\lambda^2)\)</span>. In
+particular the clock term cannot be discarded. Ordered disjoint pulses
+make <span class="math inline">\(B\)</span> lower triangular. Select
+independent signal times avoiding the isolated zeros of the nonzero
+analytic history at <span class="math inline">\(z_*\)</span>. For <span
+class="math inline">\(f_j(t)=\phi((t-t_j)/\delta)\)</span>, fixed smooth
+nonzero <span class="math inline">\(\phi\ge0\)</span>,</p>
+<p><span
+class="math display">\[B_{jj}=-\frac{K^2x^0(t_j)^2\delta}{M_cv_0^2}\int\phi^2
++O(\delta^2).\]</span></p>
+<p>The receiver term is <span
+class="math inline">\(O(\delta^3)\)</span>. For the clock term
+substitute scaled pulse variables: the inner integral of <span
+class="math inline">\((r-s)\phi&#39;(s)\)</span> is <span
+class="math inline">\(\int_{-\infty}^r\phi\)</span>, and integration by
+parts gives <span class="math inline">\(-\int\phi^2\)</span>. Choose
+sufficiently small positive <span class="math inline">\(\delta\)</span>
+once, making <span class="math inline">\(B_*\)</span> invertible.
+Preconditioning by <span
+class="math inline">\((\lambda^2B_*)^{-1}\)</span> gives a contraction
+when <span class="math inline">\(\|w-z_*\|\le\lambda b/(4C)\)</span>,
+with <span class="math inline">\(C\ge\|B_*^{-1}\|L\)</span>. The same
+shell square now has</p>
+<p><span class="math display">\[r=\min\{r_0,\lambda b/(4CC_0)\},\qquad
+\epsilon_x\epsilon_P\ge L_*P_*r^2,\quad
+\operatorname{area}_{x,P}\ge4L_*P_*r^2.\]</span></p>
+<p>This is a design-existence result, not a consequence of ordinary
+signal rank for every pulse design. Its lower bound closes as <span
+class="math inline">\(\lambda^2\)</span> at fixed <span
+class="math inline">\(b\)</span>; that does not prove the full risk
+tends to zero. Complete final pointer positions with known clock data
+instead give global recovery by <a
+href="autonomous-finite-readout.html#complete-records-replace-clock-preparation-data">the
+readout inverse</a>.</p>
+<h2 id="full-records-whole-shell-saturation-and-exact-energies">Full
+records, whole-shell saturation and exact energies</h2>
+<p>With the entire incoming apparatus box unknown, the common ten-record
+chart at the start applies without any signal-rank assumption. On <span
+class="math inline">\(H_s=E\)</span> let <span
+class="math inline">\(D=\max\|w-z_*\|\)</span>. If</p>
+<p><span
+class="math display">\[0&lt;\lambda\le\min\{\lambda_0,b/(4LD)\},\]</span></p>
+<p>one complete record hides the entire shell, with a <span
+class="math inline">\(b/2\)</span> box margin. Its canonical projection
+is exactly <span class="math inline">\(k_xx^2+P^2/\mu\le2E\)</span>:
+completing the energy square proves necessity, and the shell chart with
+the remaining energy in <span class="math inline">\(y\)</span> proves
+sufficiency. The constant estimator <span
+class="math inline">\((0,0)\)</span> attains both coordinate lower
+bounds, hence</p>
+<p><span class="math display">\[R_x=\sqrt{2E/k_x},\quad R_P=\sqrt{2\mu
+E},\quad
+\inf\epsilon_x\epsilon_P=2E\sqrt{\mu/k_x}.\]</span></p>
+<p>The projected area is <span class="math inline">\(\pi
+R_xR_P\)</span>. The stiffness <span class="math inline">\(k_x\)</span>
+is an energy projection coefficient, not asserted to be a normal-mode
+stiffness. At fixed <span class="math inline">\(\lambda\)</span> the
+local patch closes with <span class="math inline">\(b\)</span>; the
+saturation condition cannot then be kept as <span
+class="math inline">\(b\to0\)</span>.</p>
+<p>Supplying apparatus energy <span
+class="math inline">\(H_0=M_cv_0^2/2\)</span> removes many compensators,
+but not all ambiguity. Prescribe terminal zero probes, clock position
+<span class="math inline">\(s_0+v_0T\)</span>, and</p>
+<p><span class="math display">\[z(T)=r\Phi_Tz_*,\qquad
+p_s(T)=\sqrt{2M_c[H_0+E(1-r^2)]}.\]</span></p>
+<p>Backward exact flow has initial receiver <span
+class="math inline">\(Z_\lambda(r)\)</span> with <span
+class="math inline">\(Z_0(r)=rz_*\)</span>. The derivative of <span
+class="math inline">\(H_s(Z_0(r))-E\)</span> at <span
+class="math inline">\(r=1\)</span> is <span
+class="math inline">\(2E&gt;0\)</span>, so an implicit <span
+class="math inline">\(r_\lambda\)</span> makes initial receiver energy
+exactly <span class="math inline">\(E\)</span>. Endpoint interactions
+vanish; total-energy conservation makes apparatus energy exactly <span
+class="math inline">\(H_0\)</span>. Terminal zero probes give initial
+probe phase <span class="math inline">\(O(\lambda)\)</span> and
+receiver/clock reaction <span
+class="math inline">\(O(\lambda^2)\)</span>, so <span
+class="math inline">\(r_\lambda=1+O(\lambda^2)\)</span> and <span
+class="math inline">\(Z_\lambda=z_*+O(\lambda^2)\)</span>. At fixed
+positive box width both preparations fit within half its margin.</p>
+<p>Inside the linear cutoff regions <span
+class="math inline">\((z,q,\pi)\mapsto(-z,-q,-\pi)\)</span> leaves the
+clock and equations invariant. Terminal zero probes therefore give the
+same complete apparatus record for <span
+class="math inline">\(Z_\lambda\)</span> and <span
+class="math inline">\(-Z_\lambda\)</span>, with both energies equal.
+Global oddness of cutoffs is unnecessary. Choose <span
+class="math inline">\(z_*=(\sqrt{E/k_x},\sqrt{\mu
+E},(g/d)\sqrt{E/k_x},0)\)</span>. Then</p>
+<p><span
+class="math display">\[\epsilon_x\epsilon_P\ge|(Z_\lambda)_x(Z_\lambda)_P|
+\longrightarrow E\sqrt{\mu/k_x}&gt;0.\]</span></p>
+<p>For small coupling the bound is at least one quarter of this limit.
+This two-point construction asserts neither exact minimax saturation nor
+positive area. Its positive scale closes with receiver energy.</p>
+<h2 id="clock-fibres-and-local-versus-global-recovery">Clock fibres and
+local versus global recovery</h2>
+<p>Keep incoming momenta known at zero and only eight final pointer
+records. Their scaled map is <span
+class="math inline">\((-A_cz,q)+O_{C^1}(\lambda)\)</span>. The
+implicit-function theorem solves equal records as</p>
+<p><span class="math display">\[z_0(c)=A_c^{-1}A_{c_0}z_*,\quad
+q_0(c)=0,\qquad
+H_s(z_\lambda(c))=E.\]</span></p>
+<p>Interior pulse support gives <span
+class="math inline">\(\partial_sA=-AM/v\)</span> by integration by
+parts. Thus <span class="math inline">\(\partial_sz_0=Mz_*/v_0\)</span>
+and the offset derivative of energy is zero. To obtain a transverse
+speed direction choose early pulses <span
+class="math inline">\(f_j(s)=\phi((s-s_0-v_0\epsilon
+a_j)/(v_0\epsilon\eta))\)</span>, with distinct positive <span
+class="math inline">\(a_j\)</span> and fixed sufficiently small <span
+class="math inline">\(\eta&gt;0\)</span>. The moment matrix <span
+class="math inline">\(W_{jn}=\int\phi((u-a_j)/\eta)u^n/n!\,du\)</span>,
+<span class="math inline">\(n=0,1,2,3\)</span>, is invertible by its
+Vandermonde limit. With <span
+class="math inline">\(r=v_0/v\)</span>,</p>
+<p><span class="math display">\[\det
+A_{s_0,v}=D(r\epsilon)^{10}(1+O(\epsilon)),\quad D\ne0,
+\qquad\operatorname{tr}(-A^{-1}\partial_vA)=10/v_0+O(\epsilon)&gt;0.\]</span></p>
+<p>The exponent is four time integrations plus derivative orders <span
+class="math inline">\(0+1+2+3\)</span>; the analytic expansion holds
+also with one speed derivative. Fix sufficiently small positive <span
+class="math inline">\(\epsilon\)</span> once. Positive trace implies the
+symmetric energy form of <span
+class="math inline">\(B=-A^{-1}\partial_vA\)</span> has a positive
+direction: its <span class="math inline">\(G\)</span>-normalized trace
+equals <span class="math inline">\(\operatorname{tr}B\)</span>. Select a
+shell point in its open positive set avoiding <span
+class="math inline">\(P=0\)</span> and <span
+class="math inline">\(-ax+gy=0\)</span>. Then <span
+class="math inline">\(z_*^TGBz_*&gt;0\)</span> and both canonical
+entries of <span class="math inline">\(Mz_*\)</span> are nonzero. Solve
+energy for <span class="math inline">\(v=v_\lambda(s)\)</span>:</p>
+<p><span class="math display">\[v&#39;_\lambda(s_0)=O(\lambda),\qquad
+z&#39;_\lambda(s_0)=Mz_*/v_0+O(\lambda).\]</span></p>
+<p>On a fixed offset interval <span
+class="math inline">\(|s-s_0|\le\sigma\)</span> the two canonical
+derivatives retain signs and magnitudes at least <span
+class="math inline">\(k_x&#39;,k_P&#39;&gt;0\)</span>. Speed/position
+compensations are <span class="math inline">\(O(\lambda\sigma)\)</span>
+and fit fixed positive boxes. Its common-record endpoints imply <span
+class="math inline">\(\epsilon_x\epsilon_P\ge
+k_x&#39;k_P&#39;\sigma^2&gt;0\)</span>. This curve has no implied
+positive projected area. Revealing offset alone removes this family
+locally through the transverse energy derivative, as proved in <a
+href="autonomous-finite-readout.html#energy-assisted-local-recovery-and-its-global-obstruction">the
+local inverse</a>.</p>
+<p>On the whole shell, two speed branches remain possible. Factor the
+early pulse matrix before inversion, with <span
+class="math inline">\(O\)</span> having rows <span
+class="math inline">\(e_xM^n\)</span>:</p>
+<p><span
+class="math display">\[-A^{-1}\partial_vA=\frac1{v_0}O^{-1}\operatorname{diag}(1,2,3,4)O
++O(\epsilon).\]</span></p>
+<p>The factored analytic tail and its derivative are <span
+class="math inline">\(O(\epsilon)\)</span> after removing the fixed
+moment matrix and powers of <span
+class="math inline">\(r\epsilon\)</span>; a vanishing determinant
+estimate alone would not justify this inverse limit. Its leading map
+sends <span class="math inline">\(z\)</span> to <span
+class="math inline">\((x,2P,3y-2ax/g,4Q-2a\nu P/(g\mu))/v_0\)</span>. At
+<span class="math inline">\(Q=0\)</span> its energy form is</p>
+<p><span
+class="math display">\[v_0z^TGB^{(0)}z=g(x-y)(9x-5y)+2P^2/\mu.\]</span></p>
+<p>Choose <span class="math inline">\(L,p&gt;0\)</span> with <span
+class="math inline">\(2p^2/\mu&lt;4gL^2/5\)</span>. The normalized shell
+path through <span class="math inline">\((L,p,rL,0)\)</span>, <span
+class="math inline">\(0\le r\le7/5\)</span>, has opposite endpoint
+energy-response signs and positive canonical coordinates. Fix the design
+and then a sufficiently small speed separation <span
+class="math inline">\(d_v&gt;0\)</span>. At zero coupling equal records
+require <span
+class="math inline">\(z&#39;=A_{v_0+d_v}^{-1}A_{v_0}z=z+d_vBz+O(d_v^2)\)</span>;
+the energy mismatch changes sign along the path while both canonical
+separations exceed positive <span
+class="math inline">\(c_xd_v,c_Pd_v\)</span>. At positive coupling the
+invertible <span class="math inline">\((z&#39;,q&#39;)\)</span> record
+derivative continues this compact path uniformly with <span
+class="math inline">\(O(\lambda)\)</span> changes. Endpoint signs and
+margins persist; intermediate value gives an actual exact equal-energy,
+equal-record pair. For small coupling</p>
+<p><span class="math display">\[\epsilon_x\epsilon_P\ge
+c_xc_Pd_v^2/16&gt;0.\]</span></p>
+<p>This is an actual pair, not an inference from a zero tangent. Reading
+final clock momentum instead restores global recovery; reading its final
+position also replaces initial offset. Those inverse theorems and their
+precision constants are in the readout treatment.</p>
+<h2 id="calibration-constraints-reduce-to-receiver-rank">Calibration
+constraints reduce to receiver rank</h2>
+<p>Fix a nonzero initial displacement <span
+class="math inline">\(q_1=c\)</span>, small enough to lie within one
+quarter of the original apparatus box. Let <span
+class="math inline">\(\eta_c\)</span> have this displacement, all other
+probe coordinates zero, and nominal clock phase. The inverse apparatus
+chart centred there compensates any receiver in a bounded domain for
+sufficiently small coupling relative to the box width.</p>
+<p>Before using pulse rank, there is a design-independent full-state
+obstruction under <span class="math inline">\(H_s=E\)</span>, <span
+class="math inline">\(H_{\rm app}=H_0\)</span>, <span
+class="math inline">\(q_1=c\)</span>. Solve</p>
+<p><span
+class="math display">\[p_s=\sqrt{2M_c(H_0-\sum_j\pi_j^2/(2M_j))},\qquad
+y=\frac gd x+\sqrt{(2E-k_xx^2-P^2/\mu-Q^2/\nu)/d}.\]</span></p>
+<p>The free chart coordinates are <span
+class="math inline">\(x,P,Q,q_2,q_3,q_4,\pi_1,\ldots,\pi_4,s\)</span>,
+eleven in total. A fixed radius-<span class="math inline">\(r\)</span>
+Euclidean ball fits with strict radicands and half-box margins. Its
+boundary <span class="math inline">\(S^{10}\)</span> maps continuously
+to the ten final records. Borsuk–Ulam gives antipodal chart parameters
+with equal records. Equal-record ambient estimates imply <span
+class="math inline">\(\|\Delta\eta\|_2\le2L\lambda\|\Delta
+z\|_2\)</span>. Since chart coordinates are an orthogonal projection of
+fixed-unit initial coordinates,</p>
+<p><span
+class="math display">\[R_z\ge\frac{r}{\sqrt{1+4L^2\lambda^2}}&gt;0.\]</span></p>
+<p>This is a dimensionless full receiver-state risk. Separation may be
+in <span class="math inline">\(y,Q\)</span>; it does not prove a
+canonical product. The chart antipodes do not reverse <span
+class="math inline">\(c\)</span>, so the broken sign involution is not
+being reused.</p>
+<p>For canonical constructions set <span
+class="math inline">\(Y_\lambda=G_\lambda(\bar z,\eta_c)\)</span> and
+write <span class="math inline">\(\eta_\lambda(w)\)</span> for its
+compensator. Define</p>
+<p><span class="math display">\[A_j(w)=\int_0^Tt
+f_j(s_0+v_0t)x_w(t)dt,\qquad
+B_1(w)=\int_0^Tf_1(s_0+v_0t)\dot x_w(t)dt.\]</span></p>
+<p>Dividing calibration and energy residuals by coupling gives smooth
+limits</p>
+<p><span
+class="math display">\[\frac{q_j(\eta_\lambda(w))-q_j(\eta_c)}\lambda
+\longrightarrow-\frac K{M_j}A_j(w-\bar z),\qquad
+\frac{H_{\rm app}(\eta_\lambda(w))-H_0}\lambda
+\longrightarrow-KcB_1(w-\bar z).\]</span></p>
+<p>The exact drift identity is <span
+class="math inline">\(q_j(T)-T\pi_j(T)/M_j=q_j(0)+(\lambda K/M_j)\int t
+f_j(s)xdt\)</span>. Matching final clock momentum gives the initial
+clock-impulse difference; its energy variation is <span
+class="math inline">\(v_0\)</span> times that impulse. Integration by
+parts turns <span class="math inline">\(\int f&#39;_1xdt\)</span> into
+<span class="math inline">\(-\int f_1\dot xdt/v_0\)</span>, proving the
+energy row and its sign. Initial zero probe momenta have no first-order
+kinetic-energy variation. For every smooth numerator <span
+class="math inline">\(N\)</span> vanishing at zero coupling, <span
+class="math inline">\(N/\lambda=\int_0^1\partial_\lambda
+N(\theta\lambda,\cdot)d\theta\)</span>, which proves joint smooth
+divisibility, including receiver derivatives.</p>
+<p>With only <span class="math inline">\(q_1=c\)</span>, a narrow fixed
+pulse near a small <span class="math inline">\(\tau&gt;0\)</span> makes
+the two rows <span class="math inline">\(A_1,B_1\)</span> approximate
+<span class="math inline">\(x(\tau),\dot x(\tau)\)</span> after nonzero
+normalization. Their kernel contains a vector close to <span
+class="math inline">\(\Phi_{-\tau}(0,0,Y,0)\)</span>, with</p>
+<p><span class="math display">\[v_x=gY\tau^2/(2\mu)+O(\tau^4),\qquad
+v_P=-gY\tau+O(\tau^3),\]</span></p>
+<p>both nonzero. In their two-dimensional kernel <span
+class="math inline">\(W\)</span>, choose <span
+class="math inline">\(\bar z\ne0\)</span> <span
+class="math inline">\(G\)</span>-orthogonal to <span
+class="math inline">\(v\)</span>, scaled to <span
+class="math inline">\(H_s=E\)</span>. Then <span
+class="math inline">\(dH_s(\bar z),A_1,B_1\)</span> have rank three and
+common kernel <span class="math inline">\(\mathbb Rv\)</span>. Adding a
+parameter functional <span class="math inline">\(\ell(v)=1\)</span>
+gives an invertible four-equation implicit system. It continues an
+actual common-record shell curve <span
+class="math inline">\(w_\lambda(t)\)</span>, <span
+class="math inline">\(|t|\le\delta\)</span>, with <span
+class="math inline">\(w_\lambda(0)=\bar z\)</span> and <span
+class="math inline">\(\partial_tw_0(0)=v\)</span>. One fixed compact
+parameter/coupling rectangle retains half the two canonical derivative
+magnitudes and half-box apparatus margins. Its endpoints therefore
+give</p>
+<p><span
+class="math display">\[\epsilon_x\epsilon_P\ge\delta^2|v_xv_P|/4&gt;0.\]</span></p>
+<p>This pulse design can retain the ordinary four-signal matrix:
+analytic observability completes the first evaluation row with three
+disjoint times. The result is existence within the design class, not
+every pulse design.</p>
+<p>Adding <span class="math inline">\(q_2=0\)</span> gives the third row
+<span class="math inline">\(A_2\)</span>. Pulses near <span
+class="math inline">\(\tau,2\tau\)</span> have a rank-three kernel
+obtained from state <span class="math inline">\((0,0,Y,Q)\)</span> at
+<span class="math inline">\(\tau\)</span>, with <span
+class="math inline">\(Q&gt;0\)</span> and <span
+class="math inline">\(Y=-Q\tau/(3\nu)+O(\tau^3)\)</span> to make <span
+class="math inline">\(x(2\tau)=0\)</span>. Backward expansion gives</p>
+<p><span class="math display">\[v_x=-gQ\tau^3/(3\mu\nu)+O(\tau^5),\qquad
+v_P=5gQ\tau^2/(6\nu)+O(\tau^4).\]</span></p>
+<p>Fix positive widths preserving both nonzero entries and rank. Scale
+<span class="math inline">\(v\)</span> to <span
+class="math inline">\(\bar z\)</span> on the shell. At zero coupling the
+three linear constraints and energy have two roots <span
+class="math inline">\(\pm\bar z\)</span>, with invertible derivatives
+because <span class="math inline">\(dH_s(\pm\bar z)[\pm\bar
+z]=2E\)</span>. The exact compensated system continues both roots as
+<span class="math inline">\(w_+=\bar z\)</span>, <span
+class="math inline">\(w_-=-\bar z+O(\lambda)\)</span>. They have the
+same full record, energies and calibrations, with margins, and</p>
+<p><span
+class="math display">\[\epsilon_x\epsilon_P\ge\tfrac14|(w_+-w_-)_x(w_+-w_-)_P|
+\longrightarrow|\bar z_x\bar z_P|&gt;0.\]</span></p>
+<p>Each root is locally stably recoverable at each fixed positive
+coupling: eliminate the invertible apparatus-to-record derivative in the
+augmented fourteen-coordinate map; its Schur derivative is the
+four-equation residual derivative, with the three divided rows
+multiplied by <span class="math inline">\(\lambda\)</span>. It remains
+invertible. A sufficiently small convex neighbourhood gives a local
+lower Lipschitz estimate. These neighbourhoods/constants need not be
+uniform as <span class="math inline">\(\lambda\to0\)</span>. Two local
+inverses do not give global recovery.</p>
+<h2 id="four-exact-supplied-constraints-give-a-global-inverse">Four
+exact supplied constraints give a global inverse</h2>
+<p>Take a bounded convex receiver energy ball <span
+class="math inline">\(Z=\{H_s\le E_{\max}\}\)</span> and <span
+class="math inline">\(C(\eta)=(q_1,q_2,q_3,H_{\rm app})\)</span>, with
+supplied <span class="math inline">\(C_*=(c,0,0,H_0)\)</span>. Choose
+the third pulse nonzero on the preceding one-dimensional kernel, and a
+fourth completing the ordinary signal matrix. Analytic observability on
+any remaining interval guarantees both choices; choose positive widths
+preserving them. In fixed output units the matrix</p>
+<p><span
+class="math display">\[L=\begin{pmatrix}-KA_1/M_1\\-KA_2/M_2\\-KA_3/M_3\\-KcB_1\end{pmatrix}\]</span></p>
+<p>is invertible. Nonzero <span class="math inline">\(c\)</span> is
+essential. The physical apparatus box is now centred at <span
+class="math inline">\(\eta_c\)</span> with sufficiently small fixed
+half-width <span class="math inline">\(\rho&gt;0\)</span>, chosen after
+design. This may be smaller than the preceding two-branch box; no
+recovery theorem on that original larger box is claimed.</p>
+<p>For all nearby records use the enlarged inverse apparatus chart and
+define</p>
+<p><span class="math display">\[D_\lambda(w,a)=
+[C(\eta_\lambda(w,a))-C(a)]/\lambda.\]</span></p>
+<p>Subtracting <span class="math inline">\(C(a)\)</span> is necessary
+for joint smoothness when the record varies. At <span
+class="math inline">\(a=\eta_c\)</span> its zero-coupling receiver
+derivative is exactly <span class="math inline">\(L\)</span> for every
+<span class="math inline">\(w\in Z\)</span>. Uniform continuity permits
+a chart radius and then coupling ceiling such that</p>
+<p><span
+class="math display">\[\|L^{-1}(D_wD_\lambda-L)\|\le\tfrac12.\]</span></p>
+<p>Choose <span class="math inline">\(\rho\)</span> inside that chart
+(for example at most one eighth the enlarged radius), so all physical
+records and their segments stay in its domain. Receiver segment
+integration gives</p>
+<p><span class="math display">\[\|w-w&#39;\|\le2\|L^{-1}\|
+\|D_\lambda(w,a)-D_\lambda(w&#39;,a)\|.\]</span></p>
+<p>For equal records and exact <span
+class="math inline">\(C=C_*\)</span> the right side is zero. This proves
+uniform global recovery over the whole bounded domain, without supplying
+receiver energy or a local branch label. For different records, bounds
+<span class="math inline">\(M_C\ge\|DC\|\)</span>, <span
+class="math inline">\(M_D\ge\|D_aD_\lambda\|\)</span> give</p>
+<p><span
+class="math display">\[\|w-w&#39;\|\le2\|L^{-1}\|(M_C/\lambda+M_D)
+\|S^{-1}\|\|Y-Y&#39;\|\le K_z\|Y-Y&#39;\|/\lambda.\]</span></p>
+<p>The apparatus chart also bounds its own error by <span
+class="math inline">\(K_\eta(\|Y-Y&#39;\|+\lambda\|w-w&#39;\|)\)</span>.
+Minimum-residual fitting on the compact admitted class with record error
+<span class="math inline">\(\delta\)</span> yields <span
+class="math inline">\(\epsilon_x\epsilon_P\le4L_*P_*K_z^2(\delta/\lambda)^2\)</span>.
+This is an upper bound with supplied exact calibration and exact
+model.</p>
+<h2 id="tolerances-exact-ambiguity-and-matched-crossover">Tolerances,
+exact ambiguity and matched crossover</h2>
+<p>Allow a reported <span class="math inline">\(C_{\rm obs}\)</span>
+with <span class="math inline">\(\|C(\eta)-C_{\rm
+obs}\|\le\varepsilon\)</span>, independently of final-record error <span
+class="math inline">\(\delta\)</span>. The same inverse comparison,
+using actual <span class="math inline">\(C_1,C_2\)</span>, gives</p>
+<p><span class="math display">\[\|w-w&#39;\|\le\frac K\lambda
+(\|C_1-C_2\|+\|Y-Y&#39;\|).\]</span></p>
+<p>Choose any compact feasible preparation consistent with both data
+bands; it exists because the true preparation is feasible (sequential
+coordinate minimization makes a deterministic choice). Thus</p>
+<p><span class="math display">\[\|\widehat
+w-w\|\le2K(\varepsilon+\delta)/\lambda,\qquad
+\epsilon_x\epsilon_P\le4L_*P_*K^2
+((\varepsilon+\delta)/\lambda)^2.\]</span></p>
+<p>This covers separate component tolerances via their maximum. The
+matching ball below allows positive tolerance in all four components;
+some exactly known components require the directional test in the next
+section.</p>
+<p>At the reference record <span
+class="math inline">\(Y_\lambda=G_\lambda(0,\eta_c)\)</span>,
+differentiate the inverse chart: <span
+class="math inline">\(D_w\eta_\lambda=-(D_\eta
+F_\lambda)^{-1}D_wF_\lambda\)</span>. It follows that <span
+class="math inline">\(\|\eta_\lambda(w)-\eta_c\|\le
+B\lambda\|w\|\)</span>, <span class="math inline">\(B=2L\)</span>. Set
+<span class="math inline">\(R_Z=\max_Z\|w\|\)</span> and <span
+class="math inline">\(M_C&gt;0\)</span>. Reduce the fixed coupling
+ceiling until <span class="math inline">\(B\lambda
+R_Z\le\rho/2\)</span>, also retaining actual <span
+class="math inline">\(q_1\)</span> away from zero. Then the same
+complete record and reported <span class="math inline">\(C_*\)</span>
+hide the entire dilated receiver ball <span
+class="math inline">\(tZ\)</span>, where</p>
+<p><span class="math display">\[t=\min\{1,\varepsilon/(M_CB\lambda
+R_Z)\}.\]</span></p>
+<p>Indeed its calibration difference is at most <span
+class="math inline">\(M_CB\lambda\|w\|\)</span>. With <span
+class="math inline">\(X_E=\sqrt{2E_{\max}/k_x}\)</span> and <span
+class="math inline">\(P_E=\sqrt{2\mu E_{\max}}\)</span>, common-record
+coordinate endpoints force <span class="math inline">\(\epsilon_x\ge
+tX_E\)</span>, <span class="math inline">\(\epsilon_P\ge tP_E\)</span>.
+For exact final records, combine the feasible-estimator upper bound with
+the constant-zero estimator in each coordinate. The optimal product has
+matched order</p>
+<p><span
+class="math display">\[\min\{1,(\varepsilon/\lambda)^2\}\]</span></p>
+<p>with fixed positive action-unit constants. At <span
+class="math inline">\(\varepsilon=0\)</span> exact recovery holds. If
+<span class="math inline">\(\varepsilon\ge M_CB\lambda R_Z\)</span>, the
+whole ball is hidden and <span class="math inline">\(R_x=X_E\)</span>,
+<span class="math inline">\(R_P=P_E\)</span>, <span
+class="math inline">\(\inf\epsilon_x\epsilon_P=X_EP_E\)</span> exactly;
+its projected ellipse has area <span class="math inline">\(\pi
+X_EP_E\)</span>. This is a sufficient saturation threshold, not a sharp
+crossover constant. At fixed coupling improved calibration/record
+precision closes the product; at fixed positive tolerance weak coupling
+saturates it. Receiver energy is not supplied here.</p>
+<h2 id="one-uncertain-constraint-and-an-explicit-pulse-design">One
+uncertain constraint and an explicit pulse design</h2>
+<p>Use the exact coupled reference above, <span
+class="math inline">\(a_\lambda=S^{-1}Y_\lambda\)</span>, and</p>
+<p><span
+class="math display">\[T_\lambda(w)=[C(\eta_\lambda(w,a_\lambda))-C_*]/\lambda.\]</span></p>
+<p>It satisfies <span class="math inline">\(T_\lambda(0)=0\)</span>,
+<span class="math inline">\(T_0(w)=Lw\)</span>, and <span
+class="math inline">\(J_\lambda=D_wT_\lambda(0)=L+O(\lambda)\)</span>.
+The moving reference matters: <span
+class="math inline">\(T_\lambda=D_\lambda(w,a_\lambda)-D_\lambda(0,a_\lambda)\)</span>.
+Uniform inverse-function estimates give a fixed interval and actual
+curve</p>
+<p><span
+class="math display">\[w_{\lambda,j}(s)=T_\lambda^{-1}(se_j),\qquad
+|s|\le S:=\min\{s_0,\varepsilon/\lambda\}.\]</span></p>
+<p>It has exactly one uncertain calibration, <span
+class="math inline">\(C-C_*=\lambda se_j\)</span>, all other constraints
+exact, and one full final record. Its tangent is <span
+class="math inline">\(d_j+O(\lambda)\)</span>, <span
+class="math inline">\(d_j=L^{-1}e_j\)</span>. If <span
+class="math inline">\((d_j)_x(d_j)_P\ne0\)</span>, a smaller fixed
+neighbourhood preserves half both derivative magnitudes. Endpoints
+give</p>
+<p><span class="math display">\[\epsilon_x\epsilon_P\ge
+\tfrac14L_*P_*|(d_j)_x(d_j)_P|S^2.\]</span></p>
+<p>The preceding upper bound still holds with three zero tolerances,
+giving matched order <span
+class="math inline">\(\min\{1,(\varepsilon/\lambda)^2\}\)</span>. A zero
+leading entry calls for higher-order analysis, not an assertion of
+recovery. Every smooth projected curve patch has zero planar area
+despite positive coordinate risks.</p>
+<p>All four column tests can hold in one fixed design. Choose pulse
+centres <span class="math inline">\(\tau,2\tau,3\tau\)</span> with small
+fixed <span class="math inline">\(\tau&gt;0\)</span>. The output
+equation is <span class="math inline">\(x^{(4)}+\alpha x&#39;&#39;+\beta
+x=0\)</span>, where <span
+class="math inline">\(\alpha=a/\mu+d/\nu\)</span>, <span
+class="math inline">\(\beta=(ad-g^2)/(\mu\nu)\)</span>. In scaled
+initial-jet coordinates <span class="math inline">\((x,\tau\dot
+x,\tau^2\ddot x/2,\tau^3x^{(3)}/6)\)</span>, <span
+class="math inline">\(X(u)=x(\tau u)\)</span> solves <span
+class="math inline">\(X^{(4)}+\alpha\tau^2X&#39;&#39;+\beta\tau^4X=0\)</span>.
+Integration on <span class="math inline">\([0,3]\)</span> makes the map
+<span class="math inline">\((x(\tau),x(2\tau),x(3\tau),\tau\dot
+x(\tau))\)</span> an <span class="math inline">\(O(\tau^2)\)</span>
+perturbation of cubic Hermite interpolation. Its cardinal polynomials
+are</p>
+<table>
+<thead>
+<tr class="header">
+<th>Output</th>
+<th>Cardinal polynomial</th>
+<th>Initial value</th>
+<th>Initial derivative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><span class="math inline">\((u-2)(u-3)(3u-1)/4\)</span></td>
+<td><span class="math inline">\(-3/2\)</span></td>
+<td><span class="math inline">\(23/4\)</span></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><span class="math inline">\(-(u-1)^2(u-3)\)</span></td>
+<td><span class="math inline">\(3\)</span></td>
+<td><span class="math inline">\(-7\)</span></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><span class="math inline">\((u-1)^2(u-2)/4\)</span></td>
+<td><span class="math inline">\(-1/2\)</span></td>
+<td><span class="math inline">\(5/4\)</span></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><span class="math inline">\((u-1)(u-2)(u-3)/2\)</span></td>
+<td><span class="math inline">\(-3\)</span></td>
+<td><span class="math inline">\(11/2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>A homogeneous cubic with roots <span
+class="math inline">\(1,2,3\)</span> and derivative zero at <span
+class="math inline">\(1\)</span> vanishes, so this map is invertible.
+Substitution and differentiation verify the table. Initial momentum is
+<span class="math inline">\(\mu/\tau\)</span> times the second entry.
+For pulse integrals <span class="math inline">\(I_j&gt;0\)</span>,
+normalize calibration rows by <span
+class="math inline">\(\sigma_j=-KI_jj\tau/M_j\)</span> (<span
+class="math inline">\(j=1,2,3\)</span>) and <span
+class="math inline">\(\sigma_4=-KcI_1/\tau\)</span>. Their narrow-pulse
+limits are those Hermite rows. With support half-width at most <span
+class="math inline">\(h&lt;\tau/4\)</span>, mean-value bounds on <span
+class="math inline">\((te(t))&#39;/(j\tau)\)</span> and <span
+class="math inline">\(\tau e&#39;&#39;(t)\)</span> give a normalized
+matrix error <span class="math inline">\(\|N-\mathcal H_\tau\|\le C_\tau
+h\)</span>. If <span class="math inline">\(\|\mathcal
+H_\tau^{-1}\|C_\tau h&lt;1/2\)</span>, the inverse identity gives</p>
+<p><span class="math display">\[\|N^{-1}-\mathcal H_\tau^{-1}\|
+\le2\|\mathcal H_\tau^{-1}\|^2C_\tau h.\]</span></p>
+<p>Fix <span class="math inline">\(h\)</span> so this is below half the
+smallest of the eight nonzero canonical entries. Both determinants and
+all column tests persist. Analytic observability supplies a fourth
+disjoint ordinary signal pulse. The widths are now positive and fixed;
+no shrinking-pulse physical limit enters the risk theorem. For another
+design the exact tests are the two cofactors <span
+class="math inline">\(\operatorname{cof}_{j,1}(L),\operatorname{cof}_{j,2}(L)\)</span>
+being nonzero.</p>
+<h2
+id="correlated-uncertainty-and-the-corrected-quadratic-response">Correlated
+uncertainty and the corrected quadratic response</h2>
+<p>Instead admit the fixed calibration line <span
+class="math inline">\(C-C_*=\alpha r\)</span>, <span
+class="math inline">\(|\alpha|\le\varepsilon\)</span>, <span
+class="math inline">\(r=Le_y\)</span>, with this scalar normalization.
+It is not four independent error intervals. Its local reference-record
+curve is</p>
+<p><span class="math display">\[w_\lambda(s)=T_\lambda^{-1}(sr),\quad
+|s|\le S,
+\qquad w_0(s)=se_y,\quad w_\lambda(0)=0.\]</span></p>
+<p>Bounded mixed derivatives give <span
+class="math inline">\(\|w_\lambda(s)-se_y\|\le K_1\lambda|s|\)</span>.
+For this compact common-record segment alone, optimal scalar error is
+half the coordinate range, so <span class="math inline">\(R_x^{\rm
+loc}R_P^{\rm loc}\le L_*P_*K_1^2\min(\lambda
+s_0,\varepsilon)^2\)</span>. This is a conditional local-fibre estimate,
+not a global estimator bound.</p>
+<p>Set <span
+class="math inline">\(N(\lambda,w)=C(\eta_\lambda(w,a_\lambda))-C_*\)</span>
+and <span
+class="math inline">\(V(w)=\tfrac12\partial_\lambda^2N(0,w)\)</span>.
+Smooth inverse expansion gives</p>
+<p><span class="math display">\[w_\lambda(s)=se_y-\lambda
+L^{-1}V(se_y)+O(\lambda^2|s|).\]</span></p>
+<p>The proposed nonzero tangent coefficient is actually zero. In the
+fixed linear cutoff region coupling/receiver reversal gives <span
+class="math inline">\(G_{-\lambda}(-w,\eta)=G_\lambda(w,\eta)\)</span>
+and <span class="math inline">\(Y_{-\lambda}=Y_\lambda\)</span>.
+Uniqueness of the inverse chart implies <span
+class="math inline">\(N(-\lambda,-w)=N(\lambda,w)\)</span>, hence <span
+class="math inline">\(V\)</span> is even and <span
+class="math inline">\(DV(0)=0\)</span>. Moreover <span
+class="math inline">\(J_\lambda\)</span> is even, so <span
+class="math inline">\(J_\lambda=L+O(\lambda^2)\)</span>. The canonical
+tangent at the reference is <span
+class="math inline">\(O(\lambda^2)\)</span>.</p>
+<p>For completeness the actual finite-width quadratic coefficient is
+determined by terminal quadratures. In physical units put <span
+class="math inline">\(x_w=e_x\Phi_tw\)</span> and use expansion
+coefficients <span class="math inline">\(u=u^{(0)}+\lambda
+u^{(1)}+\lambda^2u^{(2)}+\cdots\)</span>. The first apparatus
+variations, with zero terminal data, are</p>
+<p><span class="math display">\[u_j(t)=-\frac
+K{M_j}\int_t^T(r-t)f_j(r)x_w(r)dr,
+\quad k_j(t)=K\int_t^Tf_j(r)x_w(r)dr,\]</span> <span
+class="math display">\[h(t)=-\frac{Kc}{M_c}\int_t^T(r-t)f&#39;_1(r)x_w(r)dr,
+\quad\ell(t)=Kc\int_t^Tf&#39;_1(r)x_w(r)dr.\]</span></p>
+<p>The first receiver variation is independent of <span
+class="math inline">\(w\)</span>, <span
+class="math inline">\(z^{(1)}(t)=-Kc\int_0^t\Phi_{t-r}e_Pf_1(r)dr\)</span>.
+It also occurs in the moving coupled reference. If <span
+class="math inline">\(\xi=e_xz^{(1)}\)</span>, the reference’s second
+terminal coefficients are the integrals <span
+class="math inline">\(-K\int f_j\xi\)</span>, <span
+class="math inline">\(-K\int(T-t)f_j\xi/M_j\)</span> for probe
+momentum/position, and <span class="math inline">\(-Kc\int
+f&#39;_1\xi\)</span>, <span
+class="math inline">\(-Kc\int(T-t)f&#39;_1\xi/M_c\)</span> for the
+clock. Thus <span
+class="math inline">\(a_\lambda=\eta_c+\lambda^2a_2+O(\lambda^4)\)</span>,
+with <span class="math inline">\(a_2\)</span> the inverse free shear
+applied to that vector. This is its final preconditioned record; the
+reference’s initial preparation stays exactly <span
+class="math inline">\(\eta_c\)</span>.</p>
+<p>Subtract the moving reference before second-order backward
+integration. The common <span class="math inline">\(x^{(1)}\)</span>
+terms cancel, leaving</p>
+<p><span class="math display">\[\Delta\ddot q_j^{(2)}=-Kf&#39;_jh
+x_w/M_j,\qquad
+\Delta\dot p_s^{(2)}=-K(c f&#39;&#39;_1h x_w+\sum_j
+f&#39;_jx_wu_j).\]</span></p>
+<p>The resulting calibration coefficients are</p>
+<p><span class="math display">\[V_j(w)=-\frac K{M_j}\int_0^Tt
+f&#39;_j(t)h(t)x_w(t)dt\quad(j=1,2,3),\]</span> <span
+class="math display">\[V_4(w)=v_0K\int_0^T(c f&#39;&#39;_1h
+x_w+\sum_jf&#39;_jx_wu_j)dt
++\frac{\ell(0)^2}{2M_c}+\sum_j\frac{k_j(0)^2}{2M_j}.\]</span></p>
+<p>The squared momenta are necessary initial kinetic-energy terms.
+Length/energy units match the respective outputs; convert them to the
+fixed component units before applying <span
+class="math inline">\(L^{-1}\)</span>. All first variations in these
+integrals are linear in <span class="math inline">\(w\)</span>, so <span
+class="math inline">\(V\)</span> is homogeneous quadratic, not just
+even. A free-reference calculation would retain incorrect constant
+forcing terms.</p>
+<p>With <span
+class="math inline">\(\beta=-\Pi_{x,P}L^{-1}V(e_y)\)</span> this
+yields</p>
+<p><span class="math display">\[\Pi_{x,P}w_\lambda(s)=\lambda
+s^2\beta+O(\lambda^2|s|),\qquad
+R_x^{\rm loc}R_P^{\rm loc}
+\le L_*P_*K_2^2(\lambda S^2+\lambda^2S)^2.\]</span></p>
+<p>If both <span class="math inline">\(\beta\)</span> entries are
+nonzero and each remainder is bounded by <span
+class="math inline">\(M\lambda^2|s|\)</span>, then <span
+class="math inline">\(S/\lambda\ge2M/\min(|\beta_x|,|\beta_P|)\)</span>
+permits comparison of <span class="math inline">\(s=0\)</span> with
+<span class="math inline">\(s=S\)</span>, giving</p>
+<p><span class="math display">\[R_x^{\rm loc}R_P^{\rm loc}\ge
+L_*P_*|\beta_x\beta_P|\lambda^2S^4/16.\]</span></p>
+<p>Opposite endpoints cancel the quadratic term and cannot prove this
+bound. Nonvanishing of both projected quadratures for the selected pulse
+family remains unproved. For <span class="math inline">\(S\)</span>
+comparable to or smaller than coupling, higher coupling terms may
+compete; the displayed lower bound is not asserted.</p>
+<h2 id="sources-and-consequence-for-state">Sources and consequence for
+STATE</h2>
+<p>The imported ingredients are smooth ODE dependence,
+contraction/inverse methods, Borsuk–Ulam, observability and Hermite
+interpolation. Their bounded source coverage and internal claim checks
+are retained in <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B48.md">B48</a>–<a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B66.md">B66</a>,
+with the detailed terminal-response capsules in <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B65.md">B65</a>
+and <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B66.md">B66</a>.
+The constrained charts, exact compensators, pulse matrices and
+quadratures above are the model derivations; no literature priority is
+claimed.</p>
+<p>For STATE, positive preparation-relative risk, universal action
+selection, and identification with physical <span
+class="math inline">\(\hbar\)</span> remain different claims.
+Whole-shell, energy-constrained, local-curve and global-recovery
+hypotheses are explicit here. Further calibration stages are parked by
+<a href="action-scale-obstructions.html">action-scale obstructions</a>;
+the conditional curvature test is retained without treating it as an
+active proof of necessity.</p>
 
 </main>
 <footer class="site"><div class="wrap">

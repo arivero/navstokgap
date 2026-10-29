@@ -65,7 +65,7 @@ Position alone generally loses momentum; eliminating another body can leave
 memory even after position and momentum are retained. Telegraph bridges give
 a constructive alternative to scalar convolution rigidity. Sources:
 [two-body cut state and three-body memory, §§8–9](../notes/conservative-harmonic-receiver.md),
-[reachable composition](../notes/reachable-cut-composition.md),
+[reachable composition](../notes/causal-force-information.md#endpoint-lens-causal-delay-and-exact-cut-composition),
 [telegraph bridge](../notes/telegraph-return-bridge.md).
 Purpose: identify the closure data before taking a continuum limit.
 
@@ -252,7 +252,7 @@ Hamiltonian. None supplies the missing premise of another chapter.
 | Placement | Material and reason |
 | --- | --- |
 | Historical excursus accompanying chapters 4–6 | Edition-local Newton, Galileo and ancient division passages; the Book I scholion is part of the argument's premises, not proof of a modern theorem |
-| Apparatus appendix | Calibration/clock/preparation/recovery sequence, routed through conservative-harmonic-receiver; preserve individual designs and counterexamples |
+| Apparatus appendix | [Receiver mechanics](../notes/conservative-harmonic-receiver.md), [autonomous readout](../notes/autonomous-finite-readout.md), [calibration fibres](../notes/calibration-tolerance-recovery.md), and [bounded-force minimax](../notes/causal-force-information.md); distinct designs, domains and counterexamples are retained in these canonical proofs |
 | Technical appendix | SU(3) constants, exact character expansions, explicit threshold calculations, reachable-set and minimax formulas |
 | Correction boxes | Bounded-support quantum mark failure; local/global Agmon; sharp-flux Gaussian nonclosure; torus holonomy; bare Feshbach UV |
 | Supporting model boxes | Ising Hermitian transfer, finite-depth spin gap, checkerboard composition, classical mechanical interference |

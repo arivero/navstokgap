@@ -3,7 +3,7 @@
 - **Task:** Audit R22 proposed C100--C101, with emphasis on local/global structural identifiability, the actual equal-energy distinct-speed pair, and positive-coupling persistence.
 - **Role/model/effort:** bounded librarian; requested Luna-low (no independent worker was launched); effective model/effort not independently reported.
 - **Date:** 2026-09-11.
-- **Inputs:** `notes/global-clock-speed-ambiguity.md`; B51 and B52 source companions; Principia-action and bibliography skill capsules.
+- **Inputs:** `notes/calibration-tolerance-recovery.md#clock-fibres-and-local-versus-global-recovery`; B51 and B52 source companions; Principia-action and bibliography skill capsules.
 - **Output:** `docs/batches/B53/global-clock-source-companion.md`.
 
 ## Source route and coverage

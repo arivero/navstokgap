@@ -1,229 +1,320 @@
-# A finite mechanical clock and four persistent readout records
+# Classical apparatus: construction, complete records and stable recovery
 
-A fixed finite-mass classical apparatus can reconstruct the initial state of
-R04's receiver with vanishing error and disturbance over a fixed positive
-observation time. Five apparatus coordinates suffice: one clock and four free
-probe pointers. The interaction is a smooth coordinate potential, all kinetic
-terms are positive, and force and coupling ceilings are uniform. The closing
-limit weakens the coupling and concentrates the incoming apparatus preparation;
-it retains exact access to four final momentum records. Thus these upper
-resource bounds alone do not select a positive accuracy–disturbance action.
+A finite autonomous Hamiltonian apparatus can reconstruct a known spring
+receiver after a fixed latency with arbitrarily small error and disturbance.
+At fixed nonzero coupling, exact nonlinear calibration instead permits
+vanishing reconstruction error with bounded disturbance. Complete final clock
+records replace initial clock calibration, provided incoming probe momenta
+are known. These are different limits of one apparatus; none derives a
+positive universal action. The complementary preparation obstructions and
+calibration thresholds are proved in
+[the calibration treatment](calibration-tolerance-recovery.md).
 
-This is a delayed reconstruction of a known deterministic trajectory. It
-supplies four physical records from which arbitrarily fine samples may be
-computed, with one fixed observation latency. It does not perform a fresh
-measurement at every refined cut. Preparation precision, final record access,
-and knowledge of the receiver dynamics are explicit resources of the result.
+This treatment consolidates C066–C069, C088–C089, C094–C105 and the
+construction lemmas used by C090–C123. Historical coordinator/model checks
+were internal written checks, not external peer review; novelty is unassessed.
+Source reading levels and the original internal checks remain in the linked
+B35, B37, B47 and B50–B55 records. All estimates below are written derivations.
 
-Proof status: C068–C069 accepted by written derivation and coordinator review,
-2026-09-10. Literature status: derived consequences, novelty unassessed;
-[B37](../references/batches/B37.md) and
-[review](../reviews/autonomous-readout-B37.md) record the bounded audit.
+## Receiver and one autonomous apparatus
 
-## 1. Fixed class and autonomous Hamiltonian
+The reduced three-body receiver of
+[the receiver treatment](conservative-harmonic-receiver.md#a-third-body-exact-memory-and-recoverable-history)
+has state $z=(x,P,y,Q)$ and
 
-Use the reduced three-body receiver of [R04](conservative-harmonic-receiver.md), with
-$z=(x,P,y,Q)$, positive masses $\mu=3m/2$, $\nu=m/2$, and
+$$H_s=\frac{P^2}{2\mu}+\frac{Q^2}{2\nu}
+ +\frac a2x^2-gxy+\frac d2y^2,\qquad
+(\mu,\nu,a,g,d)=(3m/2,m/2,9k/4,3k/4,5k/4).$$
 
-$$H_s(z)=\frac{P^2}{2\mu}+\frac{Q^2}{2\nu}
- +\frac a2x^2-gxy+\frac d2y^2,
-\qquad (a,g,d)=(9k/4,3k/4,5k/4).$$
+Here $m,k>0$, $ad-g^2>0$, and $P$ is canonical; physical tagged momentum
+is $2P/3$. Write $\Phi_t=e^{Mt}$ for its free flow and $G$ for its positive
+energy matrix, $H_s=z^TGz/2$. Fix $E,T>0$ and a compact convex receiver
+neighbourhood $Z$ containing $\{H_s\le E\}$, with an open enlargement for
+derivatives. Apparatus preparation and all norms use fixed positive component
+length/momentum units, including receiver units $L_*,P_*$. Constants may
+depend on these units, the design and $T$; they are not uniform as $T\to0$.
 
-Fix $m,k,E,T>0$ and initial receiver support $H_s=E$. The reference motion
-is $z^0(t)=\Phi_tz_0$ on $0\le t\le T$. The physical tagged momentum is
-$2P/3$; all products below use canonical $P$. Add a clock $(s,p_s)$ of
-mass $M_c>0$ and four probe pairs $(q_j,\pi_j)$ of fixed masses $M_j>0$.
-All coordinates have length units and all conjugate momenta momentum units;
-the phase domain is $\mathbb R^{14}$. The added total mass
-$M_c+\sum_j M_j$ is fixed.
+Add a clock $(s,p_s)$ of mass $M_c>0$ and four probes $(q_j,\pi_j)$ of
+masses $M_j>0$. With fixed stiffness $K>0$ and dimensionless coupling
+$0<\lambda\le\lambda_0$, take
 
-Let $X(x)$ and $R(q)$ be smooth bounded functions with bounded derivatives,
-equal to $x$ and $q$ respectively on fixed neighbourhoods containing the
-reference receiver trajectory and zero probe position. They have length units.
-For fixed dimensionless smooth compactly supported functions $f_j(s)$, put
+$$H_\lambda=H_s+\frac{p_s^2}{2M_c}+\sum_{j=1}^4\frac{\pi_j^2}{2M_j}
+ +\lambda K\sum_{j=1}^4 f_j(s)X(x)R(q_j).$$
 
-$$H_\lambda=H_s+\frac{p_s^2}{2M_c}
- +\sum_{j=1}^4\frac{\pi_j^2}{2M_j}
- +\lambda K\sum_{j=1}^4 f_j(s)X(x)R(q_j),
-\qquad 0<\lambda\le\lambda_0,$$
+$X,R$ are bounded smooth coordinate cutoffs, equal to their arguments on
+fixed trajectory neighbourhoods. Smooth nonnegative compactly supported
+$f_j$ have disjoint supports strictly inside the nominal clock path
+$s_0+v_0t$, $0<t<T$, $v_0>0$, with fixed endpoint margins. All five masses,
+pulse shapes, widths, derivatives and $T$ are fixed before any coupling or
+precision limit. Kinetic energy is positive; a fixed additive constant makes
+the bounded interaction plus Hamiltonian nonnegative. The finite-dimensional
+potential assumes neither spatial locality nor finite signal speed.
 
-where $K>0$ is a fixed stiffness and $\lambda$ is dimensionless. There is no
-external time dependence. A fixed additive constant can make the Hamiltonian
-nonnegative, since the interaction is uniformly bounded below. Its kinetic
-quadratic form is positive definite. The reduced receiver coupling is an
-internal-coordinate interaction; no spatial locality or finite signal speed
-is assumed for this finite-dimensional potential model.
+Energy conservation bounds receiver coordinates and momenta on the admitted
+energy class. Bounded cutoffs bound interaction forces globally. Together
+with compact initial apparatus boxes these give uniform force and speed
+ceilings over the fixed horizon; harmonic forces have no asserted global
+ceiling outside that energy class. Reducing $\lambda_0$ after design meets
+any positive apparatus-force ceiling and preserves cutoff margins, pulse
+traversal and positive clock momentum. Persistent momenta are stored after
+the clock exits all supports. Position records are at the known time $T$;
+unlimited bounded storage space is not asserted.
 
-Fix a nominal clock trajectory $s^0(t)=s_0+vt$, $v>0$. Place all supports of
-$f_j$ strictly inside $(s_0,s_0+vT)$ with a fixed endpoint margin. Their
-shapes, widths and derivatives are fixed before taking any limit. Preparation
-has full rectangular support of dimensionless half-width $b>0$ about
-$q_j=\pi_j=0$, $s=s_0$, $p_s=M_cv$, using fixed length and momentum units.
-An independent uniform density on this rectangle is admissible. Each $b>0$
-has positive phase volume. The class permits $b\downarrow0$; there is no
-lower phase-volume or temperature constraint. Energy, coordinate and momentum
-upper bounds are fixed across this class. In particular the clock has fixed
-positive nominal energy $M_cv^2/2$, which is never cooled to zero.
+## Four signals and the common smooth-flow estimates
 
-The interaction forces are bounded globally by constants independent of
-$\lambda,b$, including the clock force involving $f'_j$. The harmonic
-receiver forces are uniformly bounded on the admitted trajectories: conservation
-of $H_\lambda$, bounded interaction and positive receiver quadratic energy
-bound all receiver positions and momenta. Thus a common finite total force
-ceiling and speed ceiling hold on this preparation class. A global ceiling
-outside the admitted energy class is not asserted for the harmonic springs.
-Any prescribed positive apparatus-force ceiling can be met by reducing
-$\lambda_0$ after fixing the shapes. The constants may depend on $E,T$, all
-masses, $K$, the cutoffs and the chosen pulse shapes.
+The free output's first four derivative rows are
 
-## 2. Four fixed-duration signals determine the receiver state
+$$x=x_0,\quad \dot x=P_0/\mu,\quad
+\ddot x=(-ax_0+gy_0)/\mu,\quad
+x^{(3)}=-aP_0/\mu^2+gQ_0/(\mu\nu).$$
 
-The scalar history $x^0(t)=e_x\Phi_tz_0$ observes all four receiver
-coordinates. At $t=0$ the first four derivative rows are
+They form an invertible triangular observation matrix, with diagonal
+$1,1/\mu,g/\mu,g/(\mu\nu)$. Analyticity implies that the evaluation rows
+$e_x\Phi_t$ span four dimensions on any open time interval. Otherwise an
+annihilated vector would have identically zero output and all four initial
+coordinates zero. Select four independent evaluation times and then
+sufficiently narrow, positive, fixed pulse widths. Row-normalized pulse
+integrals approach these evaluation rows, so
 
-$$
-x=x_0,\qquad \dot x=P_0/\mu,\qquad
-\ddot x=(-a x_0+g y_0)/\mu,\qquad
-x^{(3)}=-aP_0/\mu^2+gQ_0/(\mu\nu).
-$$
+$$A_{c,j\cdot}=K\int_0^T f_j(s+vt)e_x\Phi_t\,dt,\qquad c=(s,v),$$
 
-The map from $z_0$ to these four derivatives is triangular with diagonal
-$1,1/\mu,g/\mu,g/(\mu\nu)$ and is invertible since $g>0$.
-Consequently the analytic row functions $e_x\Phi_t$ span four dimensions on
-any open time interval: a vector annihilated by every row on an interval has
-an analytic output identically zero and hence all four initial coordinates
-zero. Four distinct times $t_j\in(0,T)$ can therefore be selected with
-independent evaluation rows.
+are invertible. In a small fixed clock rectangle a uniform inverse margin
+$\|A_ch\|\ge\alpha\|h\|$, $\alpha>0$, follows by continuity.
+$A_cz$ has momentum units before component conversion.
 
-Choose nonnegative smooth bumps $f_j(s_0+vt)$ near those times, with
-disjoint supports and positive time integrals $c_j$. Their widths can be
-chosen positive and sufficiently small that the matrix
+In the linear cutoff regions the exact equations and integrals include
 
-$$\mathcal A_{j\cdot}=K\int_0^T f_j(s_0+vt)e_x\Phi_t\,dt$$
+$$\dot\pi_j=-\lambda Kf_j(s)x,\quad
+\dot P=-ax+gy-\lambda K\sum_jf_j(s)q_j,\quad
+\dot p_s=-\lambda K\sum_jf'_j(s)xq_j,$$
 
-is invertible: after dividing row $j$ by $Kc_j$, its limit as the design width
-shrinks is the independent evaluation row. Continuity of the determinant
-then gives a fixed nonzero width. This existence argument selects the design
-once; no pulse width shrinks with $\lambda$, $b$ or the output mesh. Small
-signal gains or poor conditioning enter the fixed constant
-$\|\mathcal A^{-1}\|$; there is no uniform bound as $T\downarrow0$.
-The rows carry the appropriate units so that $\mathcal A z_0$ is momentum.
-All following norms use the fixed component units of section 1.
+$$\pi_j(T)-u_j=-\lambda K\int_0^T f_j(s(t))x(t)dt,$$
+$$q_j(T)-q_j-Tu_j/M_j
+=-\frac{\lambda K}{M_j}\int_0^T(T-t)f_j(s(t))x(t)dt,$$
+$$p_s(T)-M_cv=-\lambda K\sum_j\int_0^T f'_j(s(t))x(t)q_j(t)dt,$$
+$$s(T)-s-vT=-\frac{\lambda K}{M_c}\sum_j
+ \int_0^T(T-t)f'_j(s(t))x(t)q_j(t)dt.$$
 
-## 3. Finite-duration motion, clock reaction and stored records
+Primes on pulses mean derivatives with respect to clock position. On a
+fixed compact preparation domain, variation of constants and the smooth
+finite-time variational equations bound coupled minus free trajectories by
+$O(\lambda)$ in $C^1$ in every initial variable. The same is true of the
+integrands and their initial derivatives. Dividing the momentum integral by
+$\lambda$ gives a smooth extension at zero coupling. Thus every scaled map
+below has a uniform $O_{C^1}(\lambda)$ remainder on a convex enlarged domain.
+Clock reaction is included, rather than replaced by an external clock.
+Smoothness also holds for a small signed coupling interval used only for
+Taylor proofs; physical coupling is positive.
 
-Uniformly over receiver data and allowed apparatus preparation, the probes,
-receiver disturbance and clock deviation obey
+Two reusable estimates organize all the recovery statements. If
+$F=L+R$ on a convex domain, $L$ has a global inverse margin $\beta>0$,
+and $\|DR\|\le\beta/2$, segment integration gives
 
-$$\sup_{[0,T]}(|q_j|+|\pi_j|)=O(b+\lambda),$$
-$$\sup_{[0,T]}\|z(t)-z^0(t)\|=O(\lambda b+\lambda^2),$$
-$$\sup_{[0,T]}\bigl(|s(t)-s^0(t)|+|p_s(t)-M_cv|\bigr)
- =O(b+\lambda^2).$$
+$$\|F(w)-F(w')\|\ge\tfrac\beta2\|w-w'\|.$$
 
-Here and below component sums mean dimensionless values. To prove these
-bounds, the global interaction-force bound gives
-$\dot\pi_j=O(\lambda)$; integrating it and $\dot q_j=\pi_j/M_j$
-gives the first estimate. For sufficiently small $\lambda,b$, the cutoffs
-are therefore linear along every admitted trajectory. Hamilton's equations
-then give exactly
+For a compact physical subset, a minimum-residual fit to data with error
+$\delta$ exists. Its exact output and the true output differ by at most
+$2\delta$, hence
 
-$$\dot\pi_j=-\lambda K f_j(s)x,\qquad
-\dot P=-ax+gy-\lambda K\sum_j f_j(s)q_j,$$
-$$\dot p_s=-\lambda K\sum_j f'_j(s)xq_j.$$
+$$\|\widehat w-w\|\le4\delta/\beta,\qquad
+\epsilon_x\epsilon_P\le16L_*P_*\delta^2/\beta^2.$$
 
-Variation of constants in the receiver equations gives the second estimate.
-The clock equation has force $O(\lambda b+\lambda^2)$, which together with
-its initial uncertainty gives $O(b+\lambda^2)$ over fixed $T$. Uniform
-energy bounds and cutoff margins justify these estimates by continuation.
-This proves the bounds without treating the clock as an unaffected external
-parameter. In particular $p_s>M_cv/2$ for small enough parameters, so the
-clock traverses every pulse and leaves their supports before $T$.
+These are sufficient stability bounds, not exact positive-error minimax
+constants. Segments need only stay in the enlarged convex domain, not on an
+energy shell. A pointwise rank calculation alone does not give this result.
 
-The four final momenta satisfy
+## Quiet preparation and fixed-coupling calibration
 
-$$\pi_j(T)=\pi_j(0)-\lambda(\mathcal A z_0)_j
+First prepare all ten apparatus coordinates in a full rectangular box of
+half-width $b>0$ about zero probe phase and $(s_0,M_cv_0)$. Each box has
+positive phase volume. Probe force integration gives $q,\pi=O(b+\lambda)$;
+receiver forcing then gives
+
+$$z(t)-\Phi_tz_0=O(\lambda b+\lambda^2),\qquad
+(s(t),p_s(t))-(s_0+v_0t,M_cv_0)=O(b+\lambda^2).$$
+
+Finite-time continuation justifies the linear cutoff equations uniformly.
+Inserting these estimates in the momentum integrals gives
+
+$$\boldsymbol\pi(T)=\boldsymbol\pi(0)-\lambda A z_0
  +O(\lambda b+\lambda^3).$$
 
-Indeed replace $s(t)$ and $x(t)$ in the integrated force by $s^0(t)$ and
-$x^0(t)$; bounded derivatives of $f_j$ give integrand error
-$O(b+\lambda^2)$, and multiplication by $\lambda$ gives the stated
-remainder. Once the clock has passed all supports, each $\pi_j$ and $p_s$
-is exactly conserved. The clock continues forward, so there is no later
-recoupling. These momenta are persistent mechanical records although their
-conjugate positions subsequently drift. The bounded-coordinate resource claim
-concerns the fixed observation horizon, not unlimited storage space.
+Consequently the first-order inverse $-A^{-1}\boldsymbol\pi(T)/\lambda$
+has error $O(b/\lambda+b+\lambda^2)$. Taking $b=\lambda^3$ makes both
+reconstruction and receiver disturbance $O(\lambda^2)$, with exact final
+momentum access. With final momentum error $\rho$, add $O(\rho/\lambda)$;
+$\rho=O(\lambda^3)$ retains the rate. For
 
-## 4. Reconstruction, action product and output refinement
+$$\mathcal U=\epsilon_x\sup_{0\le t\le T}|P(t)-P^0(t)|,$$
 
-Assume the final four momentum records can be accessed exactly. Define the
-calibrated estimate
+one obtains $0\le\mathcal U\le C L_*P_*\lambda^4\to0$.
+Clock mean energy, apparatus mass and duration stay fixed; incoming phase
+volume and record errors shrink. Reporting $\Phi_{t_i}\widehat z_0$ on
+any partition uses these same four records after latency $T$. This does not
+supply fresh causal measurements at every cut or recover an unknown force.
 
-$$\widehat z_0=-\mathcal A^{-1}\frac{\boldsymbol\pi(T)}{\lambda}.$$
+At nominal apparatus data the probes are $O(\lambda)$, and receiver/clock
+reaction is $O(\lambda^2)$. Differentiating their equations in $z_0$ preserves
+these orders: reaction derivatives contain $\lambda$ times a probe or its
+variation. The nominal nonlinear four-momentum map therefore obeys
 
-The incoming momenta are unknown but bounded by $O(b)$, so
+$$F_\lambda(z)=-\lambda A z+\mathcal R_\lambda(z),\qquad
+\|\mathcal R_\lambda\|_{C^1}\le C\lambda^3.$$
 
-$$\sup\|\widehat z_0-z_0\|
- =O(b/\lambda+b+\lambda^2).$$
+For small positive coupling its lower Lipschitz margin is
+$\lambda\alpha/2$. Fix one such coupling. Apparatus uncertainty $b$ and
+record error $\rho$ perturb the nominal record by at most
+$C_\lambda b+\rho$. Minimum-residual calibration on $H_s=E$ gives
 
-Choose $b=\lambda^3$. Then reconstructed initial-state error and receiver
-trajectory disturbance are both $O(\lambda^2)$. This choice keeps all masses,
-the receiver's initial preparation, observation duration, clock mean energy,
-pulse geometry and upper resource ceilings fixed. Probe incoming phase-volume
-and clock uncertainty shrink; coupling strength decreases within one fixed
-upper bound. A fixed nonzero coupling or a lower preparation-width constraint
-is a different class.
+$$\|\widehat z-z\|\le\frac4{\lambda\alpha}(C_\lambda b+\rho).$$
 
-For a precise action-valued observable put
+Thus exact nonlinear calibration removes the first-order inverse's fixed
+$O(\lambda^2)$ systematic remainder. At fixed coupling, shrinking $b,\rho$
+closes both reconstruction-coordinate product and $\mathcal U$, while
+receiver disturbance need only stay bounded. Exact model knowledge is
+supplied; no computational-efficiency or uncertain-model theorem is claimed.
+The record perturbations are contained in a small norm ball, without proving
+that every point of an independently specified oracle-error ball is realized.
 
-$$\epsilon_x=\sup|\widehat x_0-x_0|,\qquad
-D_P=\sup_{0\le t\le T}|P(t)-P^0(t)|,\qquad
-\mathcal U=\epsilon_xD_P.$$
+## Complete records replace clock preparation data
 
-Suprema include all permitted receiver and apparatus initial data. This is an
-accuracy–disturbance product for reconstruction of initial canonical position
-and finite-horizon canonical momentum disturbance, in units $ML^2/T$, without
-a $2\pi$ factor. It is not R05's intrinsic single-shear support product.
-For fixed length and momentum units $L_*,P_*$,
+Known incoming probe momenta are denoted $u$. When the clock data $c$ are
+known, subtract the known free drift $d_j(u)=Tu_j/M_j$ and use
 
-$$0\le\mathcal U\le C L_*P_*\lambda^4\longrightarrow0.$$
+$$F_{\lambda,c,u}(z,q)=((\pi(T)-u)/\lambda,q(T)-d(u))
+ =(-A_cz,q)+O_{C^1}(\lambda).$$
 
-Thus no uniform positive bound on this specified observable follows from
-fixed finite mass, finite duration, bounded forces and positive kinetic energy
-within this preparation and record-access class. The fixed nonzero clock
-energy does not change the conclusion.
+The leading inverse margin is $\beta=\min(\alpha,1)$. Eight final pointer
+coordinates recover $z,q$ globally on the fixed bounded domain, with
+$\delta=\max(\rho_\pi/\lambda,\rho_q)$. Unknown incoming positions may
+have fixed positive widths. The bound above gives product
+$16L_*P_*\delta^2/\beta^2$. The special position-response rank used in
+[the calibration obstruction](calibration-tolerance-recovery.md#incomplete-records-and-preparation-width)
+is unnecessary for this recovery theorem.
 
-For any partition of $[0,T]$, report
-$\widehat z(t_i)=\Phi_{t_i}\widehat z_0$. Boundedness of $\Phi_t$ gives
-uniform $O(\lambda^2)$ error relative to both the unmeasured reference and
-the actual receiver. Refining only the reporting partition uses the same four
-records and leaves all old estimated nodes unchanged. Taking also
-$\lambda\downarrow0$ changes the experiment but improves that common bound
-independently of the mesh. This is reconstruction after latency $T$ with
-known equations; causal repeated interventions, unknown forcing and model
-error are not covered by the theorem.
+If initial offset is known but speed is hidden, set $u=0$ and add final
+clock momentum. The leading map of the nine scaled records is
 
-If final record errors have component support width at most $r$ in fixed
-momentum units, the same estimator instead has bound
-$O((b+r)/\lambda+b+\lambda^2)$. For this scheme $r=O(\lambda^3)$
-suffices to retain the stated rate. A fixed nonzero $r$ prevents this particular
-weak-coupling estimate from proving convergence. That upper-bound observation
-is not an impossibility theorem for every estimator or apparatus.
+$$L(z,q,v)=(-A_vz,q,v).$$
 
-## 5. Source connection and next research obligation
+Let $D=\sup\|(\partial_v A_v)z\|$ on the domain. For output distance
+$d$, its last blocks give $|\Delta v|,\|\Delta q\|\le d$, and the first
+gives $\alpha\|\Delta z\|\le(1+D)d$. Hence the global inverse margin is
+$\beta=\min(1,\alpha/(1+D))$. The $O_{C^1}(\lambda)$ remainder reduces
+it at most to $\beta/2$. Use
+$\delta=\max(\rho_\pi/\lambda,\rho_q,\rho_c)$ in the common bound.
+This recovers speed jointly with reaction; $p_s(T)/M_c$ is not substituted
+as an exact initial speed. Exact receiver energy and a local-patch prior
+are unnecessary.
 
-Theurel's [existing B36 audit](../references/batches/B36.md) supplies the
-conserved-momentum record and isolates thermal preparation as an action-scale
-input; its delta interaction does not supply this finite-duration clock.
-Hermann–Krener's observability construction, routed through
-[B34](../docs/batches/B34/receiver-memory-source-companion.md), motivates using
-four output histories instead of shrinking R04's two-sample baseline. The
-explicit derivative-rank argument, autonomous equations and bounds above are
-written derivations for this apparatus.
+If initial offset also is hidden, add final clock position at $T$. With
+clock units $S_*,V_*$ and $\theta=TV_*/S_*$ the ten-record leading map is
 
-R06's bounded result advances the exclusion-of-zero test by identifying a
-finite apparatus counterclass with delayed records. The next task R07 is to
-fix a physically justified preparation or record-resolution restriction and
-require causal new information at shrinking latency. Specify that information
-task before seeking a lower bound; distinguish a latency or precision cost
-from a uniform positive action product. Theorem acceptance and the bounded
-prior-literature comparison are recorded separately in the ledger and review.
+$$L(z,q,s,v)=(-A_{s,v}z,q,s+\theta v,v).$$
+
+Let $D_s,D_v$ bound the signal's clock derivatives applied to receiver
+states. The inverse clock shear gives $|\Delta v|\le d$ and
+$|\Delta s|\le(1+\theta)d$, so an inverse margin is
+
+$$\beta=\min\{(1+\theta)^{-1},
+ \alpha/[1+D_s(1+\theta)+D_v]\}>0.$$
+
+Again subtract the $C\lambda$ Lipschitz remainder and use the common bound,
+now with $\delta=\max(\rho_\pi/\lambda,\rho_q,\rho_s,\rho_c)$.
+All ten unknowns $z,q,s,v$ are recovered on the whole bounded domain.
+These statements assume $u=0$ is known (the eight-record statement allows
+known nonzero $u$); they do not assert recovery with completely unknown
+incoming apparatus phase. Simultaneous classical access to final positions
+and momenta is supplied, not implemented by a second recording apparatus.
+
+## Energy-assisted local recovery and its global obstruction
+
+Without final clock records, a known initial offset and receiver energy can
+replace speed locally. At a selected shell point set
+$B=-A^{-1}\partial_vA$ and require $\tau=z_*^TGBz_*>0$.
+Append $H_s/E_*$ to the eight scaled pointer outputs. Its derivative kernel
+obeys $dq=0$, $dz=Bz_*dv$, and $\tau dv/E_*=0$, hence is zero. If this
+derivative is $J$, continuity gives one convex neighbourhood $U$ and
+$\gamma=\|J^{-1}\|^{-1}>0$ with
+$\sup_U\|D\mathcal G_\lambda-J\|\le\gamma/2$. Segment integration
+then gives the common recovery bound with $\beta=\gamma$ on a fixed
+shell patch times positive position/speed boxes inside $U$.
+
+Existence of the transverse design and the actual distinct-speed global
+pairs are proved together in
+[the clock-fibre construction](calibration-tolerance-recovery.md#clock-fibres-and-local-versus-global-recovery).
+Its full-shell branches do not contradict this local result: a supplied
+patch is information. The inverse constants may deteriorate as $\tau\to0$.
+Zero-coupling scaled extensions are proof devices; unscaled zero-coupling
+records contain no receiver signal.
+
+## Impulsive probes and actual repeated-cut refinement
+
+A different instrument performs fresh readouts at each cut. Its externally
+switched ideal Hamiltonian impulses are $G_x=\alpha x\pi$ and
+$G_P=\beta P\rho$, with $\alpha>0$ dimensionless, $[\beta]=T/M$ and
+canonical probes $(q,\pi),(r,\rho)$. Receiver/probe drift during impulses
+is omitted by definition. Exact symplectic shears give pre-cut estimates
+and kicks
+
+$$\widehat x=x+q/\alpha,\quad
+\widehat P=P+r/\beta-\alpha\pi,\quad
+d_x=\beta\rho,\quad d_P=-\alpha\pi.$$
+
+For full incoming rectangular half-widths $(s_q,t_q,s_r,t_r)$, exact support
+errors are $s_q/\alpha$, $s_r/\beta+\alpha t_q$, and disturbances are
+$\beta t_r,\alpha t_q$. Intrinsic products are $s_qt_q,s_rt_r$, in action
+units. Scaling all widths to zero through positive-volume classical
+preparations closes them; Liouville evolution of a fixed preparation imposes
+no lower bound across different initial preparations. Exact final position
+records and switching/preparation resources are supplied. These internal
+receiver couplings are not local interactions with particle 1 alone.
+
+For cut separation $\delta$, block the receiver flow as $(A_\delta,B_\delta;
+C_\delta,D_\delta)$ in observed/hidden pairs $u=(x,P),w=(y,Q)$. With
+$\widehat u_i=u_i+e_i$, the exact inversion error is
+
+$$\widehat w_i-w_i=B_\delta^{-1}
+ (e_{i+1}-A_\delta e_i+A_\delta d_i).$$
+
+The receiver proof gives
+
+$$B_\delta^{-1}=\begin{pmatrix}
+6\mu/(g\delta^2)+O(1)&-2/(g\delta)+O(\delta)\\
+-12\mu\nu/(g\delta^3)+O(\delta^{-1})&6\nu/(g\delta^2)+O(1)
+\end{pmatrix}.$$
+
+With fixed units and $\eta=\delta/t_*$, widths $O(\eta^p)$ therefore
+give hidden-state error $O(\eta^{p-3})$, including the intervening kick.
+At $N=T/\delta$ equal cuts the exact disturbance is
+$\sum_{j<i}\Phi_{(i-j)\delta}(d_j,0)$, hence $O(\eta^{p-1})$.
+For $p=4$ this gives uniform state reconstruction $O(\eta)$, disturbance
+and energy error $O(\eta^3)$, intrinsic products $O(\eta^8)$, and incoming
+free-probe kinetic-energy sum $O(\eta^7)$. The last sample is obtained by
+propagating the preceding hidden estimate, adding only $O(\eta^4)$ error.
+There is one sample interval of latency. Two fresh probes per cut require
+$2(N+1)=O(\eta^{-1})$ probe count and fixed-probe-mass total mass. Reset,
+switching, trapping, storage and recording costs are not included. Finite
+meshes are different interventions with a common unmeasured-trajectory limit,
+not restrictions of one measured law. Fixed error widths make this inversion
+ill-conditioned, without proving impossibility for every estimator.
+
+## Source scope and consequence for STATE
+
+The classical translation interaction is read in Katagiri v2 §5
+([B35 companion](../docs/batches/B35/readout-source-companion.md)); Theurel's
+thermal/conserved-momentum comparison is bounded by
+[B36](../references/batches/B36.md) and [B37](../references/batches/B37.md).
+The observability precedent is Hermann–Krener, routed through
+[B34](../docs/batches/B34/receiver-memory-source-companion.md).
+[B47](../references/batches/B47.md) and B50–B55 document smooth-flow and
+inverse methods; the explicit matrices, reaction estimates and global
+margins here are model derivations. Historical checks cover specified claims,
+not a general external referee certification.
+
+For STATE, delayed recovery of known dynamics, actual repeated interventions,
+and prediction under an unresolved force must remain separate. The latter
+has its own [bounded-force theory](causal-force-information.md). A physical
+restriction on preparation, complete-record access or calibration must be
+derived before any of these prepared information scales can exclude zero
+universally or identify a scale with physical $\hbar$.

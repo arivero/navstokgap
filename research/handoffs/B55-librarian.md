@@ -3,7 +3,7 @@
 - Task: R24 audit of full ten-coordinate clock-phase recovery; proposed C104--C105.
 - Role: bounded inherited-source audit; requested Luna-low, effective unknown unless independently reported.
 - Date: 2026-09-12.
-- Inputs: `notes/full-clock-phase-recovery.md`, `docs/batches/B54/final-clock-source-companion.md`, `docs/batches/B50/full-pointer-source-companion.md`.
+- Inputs: `notes/autonomous-finite-readout.md#complete-records-replace-clock-preparation-data`, `docs/batches/B54/final-clock-source-companion.md`, `docs/batches/B50/full-pointer-source-companion.md`.
 - Output: `docs/batches/B55/full-clock-source-companion.md`.
 
 ## Coverage

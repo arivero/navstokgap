@@ -2,7 +2,7 @@
 
 ## Completed bounded audit
 
-Read R20 (`notes/hidden-clock-ambiguity.md`) and the B50 source companion.
+Read R20 (`notes/calibration-tolerance-recovery.md#clock-fibres-and-local-versus-global-recovery`) and the B50 source companion.
 Audited one primary source within the authorized budget:
 
 Eduardo D. Sontag, “Dynamic compensation, parameter identifiability, and

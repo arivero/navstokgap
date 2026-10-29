@@ -1,6 +1,6 @@
 # B44 worker handoff
 
-Task: bounded librarian audit for R13, `notes/finite-horizon-minimax.md`.
+Task: bounded librarian audit for R13, `notes/causal-force-information.md#two-records-complete-histories-and-all-finite-horizons`.
 
 Role/settings: Luna requested low effort; effective model/effort were not
 independently reported. Completed 2026-09-11. No descendants. Inputs were

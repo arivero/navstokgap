@@ -232,7 +232,7 @@ record-error scaling; known offset remains a premise.
 
 **R21/B52 capsule:** [the inverse perturbation method](../docs/batches/B52/clock-position-source-companion.md)
 supports local recovery once exact energy supplies the missing speed equation.
-[R21](../notes/clock-position-local-recovery.md) proves a fixed-domain estimate;
+[R21](../notes/autonomous-finite-readout.md#energy-assisted-local-recovery-and-its-global-obstruction) proves a fixed-domain estimate;
 R22 tests full-shell ambiguity by comparing H_s(A_{v'}^{-1}A_v z) with H_s(z)
 for distinct speeds, then checking persistence in the interacting record map.
 Loss of a local inverse margin alone does not establish a common-record pair.
@@ -246,7 +246,7 @@ The source's all-input/all-time equivalence and this finite-record task have
 different observation domains.
 
 **R19/B50 capsule:** [Sideris](../docs/batches/B50/full-pointer-source-companion.md)
-supplies smooth dependence and variational equations. [R19](../notes/full-pointer-recovery.md)
+supplies smooth dependence and variational equations. [R19](../notes/autonomous-finite-readout.md#complete-records-replace-clock-preparation-data)
 uses the uniform block map (-A_c z,q) to recover all unknowns at fixed known
 clock data. For R20 vary the clock and solve the eight-record constraint for
 receiver and probe positions, then impose the receiver energy shell. The
@@ -261,14 +261,14 @@ use the scaled leading record map (-A z,q) to seek a uniform inverse estimate,
 keeping preparation and record access explicit.
 
 **R17/B48 capsule:** the [contraction precedent](../docs/batches/B48/fixed-preparation-source-companion.md)
-provides a quantitative compensation method. [R17](../notes/fixed-preparation-ambiguity.md)
+provides a quantitative compensation method. [R17](../notes/calibration-tolerance-recovery.md#incomplete-records-and-preparation-width)
 uses the incoming-momentum identity derivative and an interior preparation
 ball to hide a receiver shell patch from exact final records. R18 should
 reveal those initial momenta and test the initial-position response block;
 its rank/image and preparation margin decide whether compensation survives.
 
 **R16/B47 capsule:** Sideris Theorem 6.1 supplies smooth finite-time flow
-dependence. [R16](../notes/fixed-coupling-calibration.md) differentiates the
+dependence. [R16](../notes/autonomous-finite-readout.md#quiet-preparation-and-fixed-coupling-calibration) differentiates the
 apparatus equations, obtains a uniform inverse bound and removes the nominal
 calibration remainder at fixed coupling. [B47](batches/B47.md) preserves
 source coverage. R17 should hold incoming width fixed: use the derivative of
@@ -276,7 +276,7 @@ final records with respect to initial probe momenta to test compensating
 receiver changes. A preparation lower bound, rather than nominal calibration
 error, is the premise under examination.
 
-**R15/B46 capsule:** [independent block apparatuses](../notes/block-apparatus-composition.md)
+**R15/B46 capsule:** [independent block apparatuses](../notes/causal-force-information.md#shared-error-geometry-and-independently-budgeted-blocks)
 combine R12 product supports with R14 synchronous lifts. At r=3/2 independent
 identical blocks multiply the saturated product by their count. Matching one
 fixed global-budget risk requires shrinking block tolerances; equal risks do
@@ -285,7 +285,7 @@ Borrow explicit preparation-set accounting for R16: test whether fixed R06
 apparatus parameters prevent contraction of finite record errors. Record
 access and a physical positive precision premise decide the next step.
 
-**R14/B45 capsule:** [shared-budget recovery](../notes/shared-record-budget.md)
+**R14/B45 capsule:** [shared-budget recovery](../notes/causal-force-information.md#shared-error-geometry-and-independently-budgeted-blocks)
 uses the norm bound for an average and a synchronous lift to give exact centre
 risks. The saturated product scales as n^(1-3/(2r)); r=3/2 is invariant
 under copy count with one fixed global budget. [B45](batches/B45.md) supplies
@@ -302,7 +302,7 @@ Borrow the compatibility question for K01: can local fixed-time descriptions
 share one classical joint state? Track action calibration separately.
 That historical milestone proposed R19 and H11; current task selection is in STATE.
 
-**R13/B44 capsule:** [finite-horizon recovery](../notes/finite-horizon-minimax.md)
+**R13/B44 capsule:** [finite-horizon recovery](../notes/causal-force-information.md#two-records-complete-histories-and-all-finite-horizons)
 uses an acceleration rearrangement and the whole position strip to interpolate
 between free reachability and the established prepared pair. Position saturates
 at sqrt(2) scaled time; momentum at 4. R14 borrows the central-fibre formulation
@@ -311,7 +311,7 @@ aggregate image and centre risks before asserting a changed composition law.
 [B44](batches/B44.md) records bounded coverage and corrected source metadata.
 
 **R12/B43 capsule:** product central fibres yield additive scalar radii;
-[the composition note](../notes/minimax-composition.md) gives extensive
+[the composition note](../notes/causal-force-information.md#independent-composition-and-discarded-record-labels) gives extensive
 identical-copy action products and exact aggregate-record information loss.
 Ruan–Chirikjian §3.1 supplies Minkowski-sum context; the exact one-body input
 remains Seeber–Haimovich's hidden pair and sharp upper bound. R13 removes
@@ -323,7 +323,7 @@ suggests testing a shared-force/error constraint that destroys product fibres.
 
 **R11/B42 capsule:** Seeber–Haimovich Proposition 3.1, (10)–(12), already
 constructs a prepared zero-initial-state pair hidden by one complete noisy
-history. [R11](../notes/indistinguishable-phase-bound.md) combines this with
+history. [R11](../notes/causal-force-information.md#two-records-complete-histories-and-all-finite-horizons) combines this with
 R10 and symmetric convex recovery to give exact phase risks. R12 joins this
 result to [A08](../notes/composition-universality.md): derive worst-case radius
 composition before transferring a variance-addition universality theorem.
@@ -336,12 +336,12 @@ Section 6.2 supplies indistinguishable sampled parabolic arcs as a lower-bound
 strategy. R11 must preserve the same known initial state while constructing
 two compatible records; keep its estimator class separate from quasi-exact
 differentiators. [B41 companion](../docs/batches/B41/two-record-source-companion.md)
-records the source corrections and [R10](../notes/two-position-recovery.md)
+records the source corrections and [R10](../notes/causal-force-information.md#two-records-complete-histories-and-all-finite-horizons)
 the delayed mechanical upper bound to compare.
 
 **R09/B40 capsule:** Rohou–Jaulin's publisher abstract/introduction supplies
 bounded-error set-membership estimation; Debin–Fillastre §2 supplies classical
-mixed-area and support-function operations. [R09](../notes/finite-precision-cut.md)
+mixed-area and support-function operations. [R09](../notes/causal-force-information.md#finite-precision-cuts-and-exact-canonical-area)
 derives the exact clipped-lens area. R10 applies two position-strip constraints
 with exact propagation between them, testing momentum recovery against the
 competing precision and force errors. The physical question is attainable
@@ -351,7 +351,7 @@ records source scope, including the unread estimator theorem hypotheses.
 
 **R08/B39 capsule:** Bird et al., arXiv:2106.14831v3, abstract and §4.1
 Theorem 8, supply exact set propagation in a discrete hybrid setting.
-[R08](../notes/reachable-cut-composition.md) derives continuous-time
+[R08](../notes/causal-force-information.md#endpoint-lens-causal-delay-and-exact-cut-composition) derives continuous-time
 composition and observed-position fibres directly. R09 borrows propagation
 of the compatible joint set: intersect the old lens with a finite-width
 position strip before propagating; keep mass, force class and horizon fixed.
@@ -386,7 +386,7 @@ extension. Compare sampling with re-solving before assigning an effect to a cut.
 **R05/B35 capsule:** Katagiri v2 §5 supplies a classical canonical pointer
 coupling; [B35 companion](../docs/batches/B35/readout-source-companion.md)
 records the source-sign caveat. Two shears give preparation-dependent support
-action products. [R05](../notes/classical-readout-refinement.md) overcomes
+action products. [R05](../notes/autonomous-finite-readout.md#impulsive-probes-and-actual-repeated-cut-refinement) overcomes
 cubic observation sensitivity by fourth-power probe-width scaling, at growing
 probe count. Theurel's APS abstract led to the selected full-model reading in
 [B36](../docs/batches/B36/theurel-source-companion.md) and B37. A lower energy

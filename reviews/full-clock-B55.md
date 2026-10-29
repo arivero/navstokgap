@@ -1,7 +1,7 @@
 # R24 review: full final clock phase replaces initial calibration
 
 C104–C105 are accepted as checked derivations in
-[R24](../notes/full-clock-phase-recovery.md).
+[R24](../notes/autonomous-finite-readout.md#complete-records-replace-clock-preparation-data).
 
 The clock-position reaction follows by a second time integration of its force,
 giving the factor (T-t)/M_c. Smooth finite-time dependence includes initial

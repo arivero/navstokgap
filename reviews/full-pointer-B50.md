@@ -1,7 +1,7 @@
 # R19 review: uniform recovery with known incoming clock data
 
 C094–C095 are accepted as written model derivations in
-[R19](../notes/full-pointer-recovery.md). One sequential Luna-low B50 audit
+[R19](../notes/autonomous-finite-readout.md#complete-records-replace-clock-preparation-data). One sequential Luna-low B50 audit
 and coordinator source/proof review are complete; no numerical or symbolic
 verification scripts were used.
 

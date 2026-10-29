@@ -1,6 +1,6 @@
 # B59 librarian handoff
 
-- **Task:** bounded librarian audit of R28 note `calibrated-canonical-ambiguity.md`, proposed C112 exact common-record curve and C113 canonical lower bound.
+- **Task:** bounded librarian audit of R28 note `calibration-tolerance-recovery.md#calibration-constraints-reduce-to-receiver-rank`, proposed C112 exact common-record curve and C113 canonical lower bound.
 - **Role:** source/method audit; no coordinator-file edits.
 - **Requested model/effort:** gpt-5.6-luna, low. Effective model/effort was not independently reported.
 - **Date:** 2026-09-12.

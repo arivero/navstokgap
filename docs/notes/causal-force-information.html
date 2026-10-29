@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>New information behind a delayed record</title>
+<title>Bounded-force records: reachability, minimax recovery and composition</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,153 +79,551 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>New information behind a delayed record</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/causal-force-information.md">Markdown source</a></p><p>A delayed observer of a particle with an unknown bounded force has a
-sharp prediction error, even with perfect records of its earlier state.
-The joint position–momentum uncertainty is a curved reachable region
-with a finite phase-space area. Both scales come from the force budget
-and the delay; refining records strictly before the delay boundary
-leaves them unchanged.</p>
-<p>R07, 2026-09-10: C070–C071 accepted by written proof and <a
-href="https://github.com/arivero/navstokgap/blob/main/reviews/causal-information-B38.md">coordinator
-review</a>. <a
+<h1>Bounded-force records: reachability, minimax recovery and
+composition</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/causal-force-information.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/causal-force-information.pdf">PDF</a></p><p>An unresolved bounded force produces an exact curved endpoint lens.
+Noisy position histories instead produce three exact finite-horizon
+momentum-risk regimes, saturating at <span
+class="math inline">\(2\sqrt{mF\varepsilon}\)</span>. Both fit one
+symmetric-fibre minimax principle. Independent composition adds scalar
+radii; shared record budgets change the exponent because they change the
+admitted error set. Every positive action-valued quantity here depends
+on specified delay, force or precision. None selects a
+preparation-independent action.</p>
+<p>This is a classical deterministic information model: <span
+class="math inline">\(m,F&gt;0\)</span>, known initial <span
+class="math inline">\((q_0,p_0)\)</span>, <span
+class="math inline">\(\dot q=p/m\)</span>, <span
+class="math inline">\(\dot p=f\)</span>, every measurable <span
+class="math inline">\(|f|\le F\)</span>, and non-disturbing records with
+explicitly supplied precision/timing. There is no stochastic force law,
+apparatus back-reaction or speed ceiling on the whole class. Products
+multiply separate scalar minimax absolute errors; they are not
+simultaneous error lower bounds on each individual motion. Areas use
+<span class="math inline">\(dq\,dp\)</span>, with action units and no
+<span class="math inline">\(2\pi\)</span> normalization.</p>
+<p>This treatment consolidates C070–C087. Historical coordinator/model
+reviews were internal written checks, not external peer review. The
+long-horizon hidden pair and sharp finite difference match
+Seeber–Haimovich, Proposition 3.1 and Lemma 4.3/Theorem 4.1, as read in
+B41–B42. The remaining fixed-time, cut and composition formulas are
+derived below; exact publication priority is unassessed. Source capsules
+remain in B38–B46.</p>
+<h2 id="the-symmetric-fibre-minimax-principle">The symmetric-fibre
+minimax principle</h2>
+<p>Let <span class="math inline">\(U\)</span> be a convex centrally
+symmetric input set, <span class="math inline">\(A\)</span> a linear
+record map, <span class="math inline">\(L\)</span> one scalar linear
+target, and <span class="math inline">\(E\)</span> a closed symmetric
+convex record-error set. Known offsets are subtracted. Define</p>
+<p><span class="math display">\[K=\{u\in U:Au\in E\},\qquad
+r_L=\sup_{u\in K}|Lu|.\]</span></p>
+<p>This is exactly the minimax worst-case scalar error for records <span
+class="math inline">\(y=Au+e\)</span>, <span class="math inline">\(e\in
+E\)</span>. For two inputs compatible with one record, <span
+class="math inline">\((u-v)/2\in U\)</span> and <span
+class="math inline">\(A(u-v)/2\in E\)</span>, so their scalar outputs
+differ by at most <span class="math inline">\(2r_L\)</span>. The
+midpoint of the compatible output interval attains error at most <span
+class="math inline">\(r_L\)</span>. Conversely opposite central-fibre
+inputs share record zero and force the lower bound; approximating
+extremizers suffice if no maximum exists. For bounded-force histories,
+the <span class="math inline">\(L^\infty\)</span> ball is weak-star
+compact and position/momentum integrals are continuous, so maxima exist.
+Complete-history bands impose a closed intersection of pointwise
+inequalities. The proof applies equally to box errors and shared convex
+norm budgets. Coordinatewise midpoints attain both coordinate risks,
+without claiming a single worst motion realizes both errors for every
+estimator.</p>
+<h2 id="endpoint-lens-causal-delay-and-exact-cut-composition">Endpoint
+lens, causal delay and exact cut composition</h2>
+<p>With no new record after time zero, the endpoint increments at delay
+<span class="math inline">\(t\)</span> are</p>
+<p><span class="math display">\[v=\int_0^t f(s)ds,\qquad
+u=\frac1m\int_0^t(t-s)f(s)ds.\]</span></p>
+<p>The exact set <span class="math inline">\(K_t\)</span> is</p>
+<p><span class="math display">\[|d|\le1,\qquad |z-d/2|\le(1-d^2)/4,
+\qquad d=v/(Ft),\quad z=mu/(Ft^2).\]</span></p>
+<p>To prove the boundary, write <span
+class="math inline">\(f=2Fh-F\)</span>, <span class="math inline">\(0\le
+h\le1\)</span>, with fixed integral <span
+class="math inline">\(t(1+d)/2\)</span>. Its decreasing-weight position
+integral is largest when <span class="math inline">\(h=1\)</span> on the
+initial interval of that length and smallest when it is on the final
+interval. Subtracting the threshold weight makes the exchange inequality
+pointwise on both sides of that interval. Evaluating these one-switch
+forces gives the displayed bounds; convex combinations fill each
+fixed-impulse section. Constant opposite forces give coordinate
+half-ranges</p>
+<p><span class="math display">\[r_q=Ft^2/(2m),\qquad r_p=Ft,\qquad
+r_qr_p=F^2t^3/(2m).\]</span></p>
+<p>Inertial prediction attains both. Integrating the lens width gives
+its canonical area <span
+class="math inline">\(A(t)=2F^2t^3/(3m)\)</span>, a different
+normalization and observable from the risk product. Individual
+admissible trajectories include zero force.</p>
+<p>Let <span class="math inline">\(S_b(q,p)=(q+bp/m,p)\)</span> and
+<span class="math inline">\(K_0=\{0\}\)</span>. For <span
+class="math inline">\(T=a+b\)</span>,</p>
+<p><span class="math display">\[K_T=S_bK_a+K_b.\]</span></p>
+<p>Splitting each force integral proves one inclusion; concatenating
+arbitrary admissible segment forces proves the reverse. This converse
+uses the rectangular-in-time force class, without additional cross-time
+constraints. Every finite unobserved refinement therefore leaves the
+endpoint lens unchanged. Its segment areas cannot be added. Replacing
+the cut lens by its marginal rectangle strictly enlarges the terminal
+set: the spurious corner <span
+class="math inline">\((-Fa^2/(2m),Fa)\)</span> followed by <span
+class="math inline">\(+F\)</span> has total impulse <span
+class="math inline">\(FT\)</span> but position differs by <span
+class="math inline">\(Fa^2/m\)</span> from the only possible full-input
+trajectory with that impulse, namely <span
+class="math inline">\(f=F\)</span> almost everywhere. The joint state or
+its compatible fibre is necessary for exact propagation.</p>
+<p>An exact full phase-state record at time <span
+class="math inline">\(a\)</span> leaves a translate of <span
+class="math inline">\(K_b\)</span>. An exact position record with
+normalized displacement <span
+class="math inline">\(\zeta=m(q_a-q_0-p_0a/m)/(Fa^2)\in[-1/2,1/2]\)</span>
+leaves the momentum interval</p>
+<p><span
+class="math display">\[I_\zeta=p_0+Fa[1-\sqrt{2-4\zeta},-1+\sqrt{2+4\zeta}],\]</span></p>
+<p>of width <span
+class="math inline">\(D=Fa[\sqrt{2-4\zeta}+\sqrt{2+4\zeta}-2]\)</span>.
+The lens upper boundary is <span
+class="math inline">\(1/2-(d-1)^2/4\)</span> and the lower boundary
+<span class="math inline">\((d+1)^2/4-1/2\)</span>, proving these
+endpoints directly. The exact terminal set is <span
+class="math inline">\(\{(q_a+bp/m,p):p\in I_\zeta\}+K_b\)</span>, with
+area</p>
+<p><span class="math display">\[A(b)+Fb^2D/m.\]</span></p>
+<p>Apply the determinant-one inverse shear: the added interval is
+vertical, lengthening every lens section by <span
+class="math inline">\(D\)</span> over horizontal width <span
+class="math inline">\(Fb^2/m\)</span>. Central records leave <span
+class="math inline">\(D=2(\sqrt2-1)Fa\)</span>; extreme records give
+<span class="math inline">\(D=0\)</span>. Concavity bounds <span
+class="math inline">\(D\)</span> by the central value. As <span
+class="math inline">\(b\to0\)</span> the area closes uniformly, although
+central-record momentum width tends to <span
+class="math inline">\(2(\sqrt2-1)FT\)</span>. Area closure alone is not
+phase recovery.</p>
+<h2 id="finite-precision-cuts-and-exact-canonical-area">Finite-precision
+cuts and exact canonical area</h2>
+<p>Subtract inertial motion and let a record at <span
+class="math inline">\(a\)</span> specify <span
+class="math inline">\(|q-y|\le\varepsilon\)</span>. Put <span
+class="math inline">\(Q=Fa^2/(2m)\)</span>, <span
+class="math inline">\(l=\max(-Q,y-\varepsilon)\)</span>, <span
+class="math inline">\(r=\min(Q,y+\varepsilon)\)</span>; require <span
+class="math inline">\(l\le r\)</span>. For <span
+class="math inline">\(q\in[-Q,Q]\)</span> define</p>
+<p><span class="math display">\[L(q)=Fa[1-\sqrt{2-4mq/(Fa^2)}],\qquad
+U(q)=Fa[-1+\sqrt{2+4mq/(Fa^2)}].\]</span></p>
+<p>The exact compatible and terminal sets are <span
+class="math inline">\(C=\{l\le q\le r,L(q)\le p\le U(q)\}\)</span> and
+<span class="math inline">\(E=S_bC+K_b\)</span>. Writing <span
+class="math inline">\(w=r-l\)</span>, <span
+class="math inline">\(D_*=U(r)-L(l)\)</span> and <span
+class="math inline">\(A_C=\int_l^r(U-L)dq\)</span> gives</p>
+<p><span
+class="math display">\[|E|=A_C+\frac{2F^2b^3}{3m}+2Fbw+\frac{Fb^2}{m}D_*.\]</span></p>
+<p>An explicit primitive is</p>
+<p><span
+class="math display">\[A_C=\frac{F^2a^3}{m}[G(z_r)-G(z_l)],\quad
+z_q=mq/(Fa^2),\]</span> <span
+class="math display">\[G(z)=\frac{(2+4z)^{3/2}-(2-4z)^{3/2}}6-2z.\]</span></p>
+<p>For the area proof the inverse-sheared future lens is the integral
+sum of segments in directions <span
+class="math inline">\(g_s=(-s/m,1)\)</span> of half-weight <span
+class="math inline">\(Fds\)</span>, <span class="math inline">\(0\le
+s\le b\)</span>. Adding a segment <span class="math inline">\([-\alpha
+g,\alpha g]\)</span> to a convex planar set increases area by <span
+class="math inline">\(2\alpha\)</span> times the width of <span
+class="math inline">\(\det(x,g)\)</span> on that set. Section
+integration proves this even for a degenerate set. Successively adding
+finite segments separates their own area and the original-set width
+contributions. Step approximations to <span
+class="math inline">\(g_s\)</span> have support-function error at most
+<span class="math inline">\(F\int\|g_s-g_s^{(n)}\|ds\)</span>, so
+Hausdorff and convex-area continuity give</p>
+<p><span
+class="math display">\[|E|=|C|+|K_b|+2F\int_0^b\operatorname{width}_C(q+sp/m)ds.\]</span></p>
+<p>Since <span class="math inline">\(L,U\)</span> increase, that width
+is <span class="math inline">\(w+sD_*/m\)</span>. This proves the
+formula. Differentiating <span class="math inline">\(G\)</span> verifies
+the primitive. Its degenerate case <span
+class="math inline">\(l=r\)</span> is included. An unobserved full lens
+has <span class="math inline">\(w=Fa^2/m\)</span>, <span
+class="math inline">\(D_*=2Fa\)</span>, <span
+class="math inline">\(A_C=2F^2a^3/(3m)\)</span>; the four terms sum to
+<span class="math inline">\(A(a+b)\)</span>.</p>
+<p>As <span class="math inline">\(w\le2\varepsilon\)</span>, <span
+class="math inline">\(D_*\le2Fa\)</span>, <span
+class="math inline">\(A_C\le2Faw\)</span>,</p>
+<p><span
+class="math display">\[0\le|E|\le4FT\varepsilon+2F^2ab^2/m+2F^2b^3/(3m).\]</span></p>
+<p>Thus every joint <span
+class="math inline">\((\varepsilon,b)\to(0,0)\)</span> closes area
+uniformly at fixed <span class="math inline">\(F,m,T\)</span>. For
+central <span class="math inline">\(y=0\)</span>, <span
+class="math inline">\(b=0\)</span>, however, <span
+class="math inline">\(A_C=4(\sqrt2-1)Fa\varepsilon+o(\varepsilon)\)</span>
+and momentum width tends to <span
+class="math inline">\(2(\sqrt2-1)FT\)</span>. A fixed tolerance also
+gives no record-uniform positive area: a strip touching an extreme
+position at one point has zero area.</p>
+<h2 id="two-records-complete-histories-and-all-finite-horizons">Two
+records, complete histories and all finite horizons</h2>
+<p>Two position records at <span
+class="math inline">\(t_1=T-b-\delta\)</span>, <span
+class="math inline">\(t_2=T-b\)</span>, with errors <span
+class="math inline">\(\varepsilon_1,\varepsilon_2\)</span>, admit the
+causal estimator</p>
+<p><span class="math display">\[\widehat p=m(y_2-y_1)/\delta,\qquad
+\widehat q_T=y_2+b\widehat p/m.\]</span></p>
+<p>Its exact worst-case errors are</p>
+<p><span
+class="math display">\[B=m(\varepsilon_1+\varepsilon_2)/\delta+F\delta/2,
+\qquad R_p=B+Fb,\quad R_q=\varepsilon_2+bB/m+Fb^2/(2m).\]</span></p>
+<p>Indeed <span class="math inline">\(p(t_2)-m(q(t_2)-q(t_1))/\delta
+=\delta^{-1}\int_{t_1}^{t_2}(s-t_1)f(s)ds\)</span>. Integrate once more
+over <span class="math inline">\([t_2,T]\)</span> for position. Constant
+<span class="math inline">\(+F\)</span> on both final intervals and
+adverse errors <span
+class="math inline">\(e_1=+\varepsilon_1,e_2=-\varepsilon_2\)</span>
+attain both bounds. These are the stated estimator’s exact errors; known
+initial data can improve the minimax optimum at short horizons. Exact
+compatible sets can instead be propagated by alternating <span
+class="math inline">\(S_tC+K_t\)</span> with the corresponding record
+strips. They lie in a rectangle of area at most <span
+class="math inline">\(4R_qR_p\)</span>, an outer area bound.</p>
+<p>For equal tolerance <span class="math inline">\(\varepsilon\)</span>,
+the unconstrained finite-difference optimum is <span
+class="math inline">\(\delta_*=2\sqrt{m\varepsilon/F}\)</span>, <span
+class="math inline">\(B_*=2\sqrt{mF\varepsilon}\)</span>, provided <span
+class="math inline">\(\delta_*\le T-b\)</span>. Taking <span
+class="math inline">\(b=\delta_*\)</span> gives <span
+class="math inline">\(R_p=4\sqrt{mF\varepsilon}\)</span>, <span
+class="math inline">\(R_q=7\varepsilon\)</span>, product <span
+class="math inline">\(28\sqrt{mF}\varepsilon^{3/2}\)</span>. Generally
+<span class="math inline">\(\delta,b\to0\)</span> and <span
+class="math inline">\((\varepsilon_1+\varepsilon_2)/\delta\to0\)</span>
+suffice to recover both coordinates. A timing optimum outside the
+available horizon must be clipped.</p>
+<p>The exact complete-history optimum includes the transient. Let <span
+class="math inline">\(T\)</span> now mean the observed horizon, with
+records for every <span class="math inline">\(t\in[0,T]\)</span> of
+tolerance <span class="math inline">\(\varepsilon&gt;0\)</span>. Put
+<span class="math inline">\(\tau=\sqrt{m\varepsilon/F}\)</span>, <span
+class="math inline">\(s=T/\tau\)</span>. Then</p>
+<p><span class="math display">\[Q(T)=\varepsilon\min\{s^2/2,1\},\qquad
+P(T)=\sqrt{mF\varepsilon}\,V(s),\]</span> <span
+class="math display">\[V(s)=\begin{cases}
+s,&amp;0\le s\le\sqrt2,\\
+\sqrt{2s^2+4}-s,&amp;\sqrt2\le s\le4,\\
+2,&amp;s\ge4.
+\end{cases}\]</span></p>
+<p>Here is the full bounded-curvature proof. The central fibre consists
+of scaled paths <span class="math inline">\(x(0)=x&#39;(0)=0\)</span>,
+<span class="math inline">\(|x&#39;&#39;|\le1\)</span> and <span
+class="math inline">\(|x|\le1\)</span> on <span
+class="math inline">\([0,s]\)</span>. For terminal velocity <span
+class="math inline">\(v\ge0\)</span>, first <span
+class="math inline">\(v\le s\)</span>. For fixed <span
+class="math inline">\(v\)</span>, acceleration <span
+class="math inline">\(u=2w-1\)</span> has <span
+class="math inline">\(\int w=(s+v)/2\)</span>. Putting its positive part
+last minimizes the decreasing-weight endpoint integral, giving</p>
+<p><span class="math display">\[x(s)\ge(v^2+2sv-s^2)/4,\qquad
+v\le\sqrt{2s^2+4}-s.\]</span></p>
+<p>Subtract the weight at the switching point to verify the minimizing
+rearrangement pointwise, using the equal integrals. On the final <span
+class="math inline">\(v\)</span> time units, <span
+class="math inline">\(x&#39;(t)\ge v-(s-t)\)</span>, so <span
+class="math inline">\(2\ge x(s)-x(s-v)\ge v^2/2\)</span> and <span
+class="math inline">\(v\le2\)</span>. The lower envelope of these three
+bounds is <span class="math inline">\(V\)</span>: junctions are <span
+class="math inline">\(\sqrt2\)</span> and <span
+class="math inline">\(4\)</span>. Position has upper bound <span
+class="math inline">\(\min(s^2/2,1)\)</span>.</p>
+<p>For <span class="math inline">\(s\le\sqrt2\)</span>, <span
+class="math inline">\(u=+1\)</span> attains both endpoints. For <span
+class="math inline">\(\sqrt2\le s\le4\)</span>, put <span
+class="math inline">\(h=s-\sqrt{s^2/2+1}=(s-V(s))/2\)</span> and use
+<span class="math inline">\(u=-1\)</span> for <span
+class="math inline">\(h\)</span> then <span
+class="math inline">\(+1\)</span> for <span
+class="math inline">\(s-h\)</span>. The endpoint is <span
+class="math inline">\(x=1\)</span>, <span
+class="math inline">\(x&#39;=V\)</span>; its minimum at <span
+class="math inline">\(2h\)</span> is <span
+class="math inline">\(-h^2\ge-1\)</span> since <span
+class="math inline">\(0\le h\le1\)</span>. For <span
+class="math inline">\(s\ge4\)</span>, wait <span
+class="math inline">\(s-4\)</span>, use <span
+class="math inline">\(-1\)</span> for one unit then <span
+class="math inline">\(+1\)</span> for three units. This reaches <span
+class="math inline">\(-1\)</span> with zero velocity after two active
+units and ends at <span class="math inline">\(+1\)</span> with velocity
+<span class="math inline">\(2\)</span>. Opposite paths hide behind the
+same inertial record. The symmetric-fibre principle proves exact minimax
+attainment, including both junctions and <span
+class="math inline">\(T=0\)</span>.</p>
+<p>A blind interval <span class="math inline">\(b\ge0\)</span> after the
+observed horizon has exact risks</p>
+<p><span class="math display">\[P_b=P(T)+Fb,\qquad
+Q_b=Q(T)+bP(T)/m+Fb^2/(2m).\]</span></p>
+<p>The same extremizer maximizes both observed endpoint coordinates;
+append <span class="math inline">\(+F\)</span> to attain the bounds,
+while the triangle inequality supplies the upper bounds on the central
+fibre. In saturation the hidden preparation can also be described as
+<span class="math inline">\(-F,+F\)</span> for successive durations
+<span class="math inline">\(\tau\)</span>, reaching <span
+class="math inline">\(-\varepsilon\)</span> at rest, followed by <span
+class="math inline">\(+F\)</span> for <span
+class="math inline">\(2\tau\)</span> to reach <span
+class="math inline">\(+\varepsilon\)</span> with momentum <span
+class="math inline">\(2\sqrt{mF\varepsilon}\)</span>. Thus for <span
+class="math inline">\(T\ge4\tau\)</span> two records separated by <span
+class="math inline">\(2\tau\)</span> already attain exactly the
+complete-history coordinate risks, with the blind-delay extension above.
+Densifying records at fixed tolerance cannot improve them. The time
+<span class="math inline">\(4\tau\)</span> is the earliest momentum
+saturation time for this known-initial-state model. For this pair alone
+a speed ceiling holds if <span
+class="math inline">\(F(2\tau+b)/m&lt;c\)</span> and <span
+class="math inline">\(p_0=0\)</span>; a ceiling imposed on the entire
+force class requires a new proof.</p>
+<p>At short fixed-precision times <span
+class="math inline">\(QP=F^2T^3/(2m)\)</span>. At fixed positive <span
+class="math inline">\(T\)</span>, improving tolerance eventually gives
+<span class="math inline">\(QP=2\sqrt{mF}\varepsilon^{3/2}\to0\)</span>.
+Neither complete-history access nor a force ceiling selects irreducible
+noise.</p>
+<h2 id="independent-composition-and-discarded-record-labels">Independent
+composition and discarded record labels</h2>
+<p>For independent input/error classes and retained constituent records,
+central fibres are Cartesian products. For a scalar target <span
+class="math inline">\(\sum_i a_iL_i\)</span>, symmetry aligns
+constituent extremizers, so its exact minimax radius is <span
+class="math inline">\(\sum_i|a_i|r_i\)</span>. Compatible midpoint
+estimators and the common opposite central pair prove both directions.
+For total mass <span class="math inline">\(M=\sum m_i\)</span>, centre
+position and total canonical momentum therefore have</p>
+<p><span class="math display">\[Q_A=\sum_i m_iQ_i/M,\qquad
+P_A=\sum_iP_i.\]</span></p>
+<p>For two bodies, relative position and its conjugate <span
+class="math inline">\(p_r=\mu(p_1/m_1-p_2/m_2)\)</span> instead have
+<span class="math inline">\(Q_r=Q_1+Q_2\)</span>, <span
+class="math inline">\(P_r=\mu(P_1/m_1+P_2/m_2)\)</span>. Changing to
+centre/relative coordinates generally couples the admissible sets. This
+is a radius law, distinct from independent-variance addition.</p>
+<p>For force bounds <span class="math inline">\(F_i\)</span>, tolerances
+<span class="math inline">\(\varepsilon_i\)</span> and common observed
+<span class="math inline">\(T\)</span>, retaining only the weighted
+centre record has exactly the one-body image</p>
+<p><span class="math display">\[(M,F_\Sigma,E),\qquad
+F_\Sigma=\sum_iF_i,
+\quad E=\sum_i m_i\varepsilon_i/M.\]</span></p>
+<p>Every aggregate force <span class="math inline">\(f\)</span> and
+error <span class="math inline">\(e\)</span> lifts via <span
+class="math inline">\(f_i=F_if/F_\Sigma\)</span>, <span
+class="math inline">\(e_i=\varepsilon_i e/E\)</span>, preserving
+prescribed initial states and independence of forces/errors. Individual
+records in this lift need not be inertial. Conversely sums obey those
+bounds. Hence its exact risks <span
+class="math inline">\(Q_B,P_B\)</span> are the finite-horizon formulas
+above with these aggregate parameters, and information inclusion gives
+<span class="math inline">\(Q_B\ge Q_A\)</span>, <span
+class="math inline">\(P_B\ge P_A\)</span>.</p>
+<p>At <span
+class="math inline">\(T\ge\max_i4\sqrt{m_i\varepsilon_i/F_i}\)</span>,</p>
+<p><span class="math display">\[Q_A=Q_B=E,\quad
+P_A=2\sum_i\sqrt{m_iF_i\varepsilon_i},
+\quad P_B=2\sqrt{MF_\Sigma E}.\]</span></p>
+<p>The aggregate horizon condition follows because <span
+class="math inline">\(ME/F_\Sigma\)</span> is a force-weighted average
+of <span class="math inline">\(m_i\varepsilon_i/F_i\)</span>.
+Cauchy–Schwarz gives equality of momentum risks exactly when <span
+class="math inline">\(F_i/(m_i\varepsilon_i)\)</span> is common. Equal
+<span class="math inline">\(m,\varepsilon\)</span> with <span
+class="math inline">\(F_2=4F_1=4F\)</span> give <span
+class="math inline">\(P_A=6\sqrt{mF\varepsilon}\)</span> and <span
+class="math inline">\(P_B=2\sqrt{10mF\varepsilon}\)</span>.</p>
+<p>At finite horizons put <span
+class="math inline">\(A_i=F_iT^2/2\)</span>, <span
+class="math inline">\(B_i=m_i\varepsilon_i\)</span>. Then <span
+class="math inline">\(MQ_A=\sum\min(A_i,B_i)\)</span> and <span
+class="math inline">\(MQ_B=\min(\sum A_i,\sum B_i)\)</span>. Position
+loss is strict exactly when some <span
+class="math inline">\(A_i&lt;B_i\)</span> and some <span
+class="math inline">\(A_j&gt;B_j\)</span>: according to which sum is
+smaller the difference is respectively <span
+class="math inline">\(\sum(A_i-B_i)_+\)</span> or <span
+class="math inline">\(\sum(B_i-A_i)_+\)</span>. For equal
+masses/tolerances, <span class="math inline">\(F_1=F\)</span>, <span
+class="math inline">\(F_2=16F\)</span>, <span
+class="math inline">\(T=\sqrt{m\varepsilon/F}\)</span> give</p>
+<p><span class="math display">\[Q_A=3\varepsilon/4,\quad
+Q_B=\varepsilon,\quad
+P_A=9\sqrt{mF\varepsilon},\quad
+P_B=(\sqrt{714}-17)\sqrt{mF\varepsilon}&gt;P_A.\]</span></p>
+<p>Their products are <span
+class="math inline">\((27/4)\sqrt{mF}\varepsilon^{3/2}\)</span> and
+<span
+class="math inline">\((\sqrt{714}-17)\sqrt{mF}\varepsilon^{3/2}\)</span>;
+both coordinates can be lost in this transient. Identical <span
+class="math inline">\(n\)</span>-copy experiments instead give <span
+class="math inline">\(H_A=H_B=nH_1(T)\)</span> at every horizon,
+including <span class="math inline">\(H_1^{\rm
+sat}=2\sqrt{mF}\varepsilon^{3/2}\)</span>.</p>
+<p>If finite nonnegative radii depend only on mass and close separately
+under all positive-mass product compositions, then <span
+class="math inline">\(mQ(m)\)</span> and <span
+class="math inline">\(P(m)\)</span> are additive. Nonnegative additive
+functions are monotone and therefore linear, yielding <span
+class="math inline">\(Q(m)=q_*\)</span>, <span
+class="math inline">\(P(m)=p_*m\)</span>, <span
+class="math inline">\(H(m)=q_*p_*m\)</span>. A positive mass-independent
+product is impossible under these premises, already by identical
+doubling. Separate radius closure is an assumption, not inferred from
+product closure. The class <span class="math inline">\(F(m)=a m\)</span>
+and common <span class="math inline">\(\varepsilon\)</span> realizes the
+extensive case at <span
+class="math inline">\(T\ge4\sqrt{\varepsilon/a}\)</span>, with <span
+class="math inline">\(q_*=\varepsilon\)</span>, <span
+class="math inline">\(p_*=2\sqrt{a\varepsilon}\)</span>. It still
+supplies both scales.</p>
+<h2 id="shared-error-geometry-and-independently-budgeted-blocks">Shared
+error geometry and independently budgeted blocks</h2>
+<p>For <span class="math inline">\(n\)</span> identical constituents
+impose the pointwise budget <span
+class="math inline">\(\|e(t)\|_r\le\varepsilon\)</span>, <span
+class="math inline">\(1\le r\le\infty\)</span>, independently of forces.
+Set <span class="math inline">\(E_n=\varepsilon n^{-1/r}\)</span>, <span
+class="math inline">\(1/\infty=0\)</span>. Norm duality bounds the
+average error by <span class="math inline">\(E_n\)</span>. Equal errors
+attain it, and equal constituent forces lift every aggregate force at
+mass <span class="math inline">\(nm\)</span>, bound <span
+class="math inline">\(nF\)</span>. The full-record central fibre has
+displacements <span class="math inline">\(z_i\)</span> satisfying the
+same norm bound pointwise; their average has <span
+class="math inline">\(|z|\le E_n\)</span>, <span
+class="math inline">\(|mz&#39;&#39;|\le F\)</span>. Conversely every
+such scalar central path lifts synchronously with <span
+class="math inline">\(z_i=z\)</span>, errors <span
+class="math inline">\(-z_i\)</span>. Thus retaining all records or only
+the average gives exactly the same centre risks:</p>
+<p><span class="math display">\[Q_n=E_n\min(s_n^2/2,1),\quad
+P_n=n\sqrt{mFE_n}V(s_n),\quad s_n=T\sqrt{F/(mE_n)}.\]</span></p>
+<p>The synchronous lift meets the budget at every time. At blind delay
+<span class="math inline">\(b\)</span>, <span
+class="math inline">\(P_{n,b}=P_n+nFb\)</span>, <span
+class="math inline">\(Q_{n,b}=Q_n+bP_n/(nm)+Fb^2/(2m)\)</span>. In
+saturation,</p>
+<p><span class="math display">\[H_n^{\rm sat}=n^{1-3/(2r)}H_1^{\rm
+sat},\qquad
+T\ge4\sqrt{m\varepsilon/F}\,n^{-1/(2r)}.\]</span></p>
+<p><span class="math inline">\(r=2\)</span> gives <span
+class="math inline">\(n^{1/4}\)</span>, <span
+class="math inline">\(r=\infty\)</span> gives <span
+class="math inline">\(n\)</span>, <span
+class="math inline">\(r=1\)</span> gives <span
+class="math inline">\(n^{-1/2}\)</span>; <span
+class="math inline">\(r=3/2\)</span> gives copy-count invariance. For
+two quadratic-budget bodies this is <span
+class="math inline">\(2^{1/4}H_1^{\rm sat}\)</span>, with effective
+tolerance <span class="math inline">\(\varepsilon/\sqrt2\)</span>. At
+early times its product is <span
+class="math inline">\(F^2T^3/m\)</span>. This is a selected apparatus
+norm, not independent-preparation universality or a quantum phase
+constant.</p>
+<p>Now partition <span class="math inline">\(N\)</span> identical
+constituents into independently budgeted blocks of sizes <span
+class="math inline">\(n_j\)</span>, each with <span
+class="math inline">\(\|e^{(j)}\|_r\le\varepsilon_j\)</span>. Let <span
+class="math inline">\(E_j=\varepsilon_jn_j^{-1/r}\)</span>, <span
+class="math inline">\(w_j=n_j/N\)</span>, and write <span
+class="math inline">\(q(T,E),p(T,E)\)</span> for the one-constituent
+finite-horizon risks. The block lift and Cartesian support law give, for
+all constituent records or all block averages,</p>
+<p><span class="math display">\[Q_A=\sum_jw_jq(T,E_j),\qquad
+P_A=\sum_jn_jp(T,E_j).\]</span></p>
+<p>Keeping only the total centre record has exactly the single-body
+image with precision <span class="math inline">\(\bar
+E=\sum_jw_jE_j\)</span>, mass <span class="math inline">\(Nm\)</span>,
+force bound <span class="math inline">\(NF\)</span>. Lift any centre
+error by <span class="math inline">\(e_i=(E_j/\bar E)e\)</span> within
+block <span class="math inline">\(j\)</span>, and any total force by
+equal constituent shares. Thus <span class="math inline">\(Q_B=q(T,\bar
+E)\)</span>, <span class="math inline">\(P_B=Np(T,\bar E)\)</span>. At
+common saturation,</p>
+<p><span class="math display">\[Q_A=Q_B=\bar E,\quad
+P_A=2\sqrt{mF}\sum_jn_j\sqrt{E_j},\quad
+P_B=2N\sqrt{mF\bar E}.\]</span></p>
+<p>Strict concavity gives strict momentum loss unless all <span
+class="math inline">\(E_j\)</span> agree; at arbitrary finite horizons
+the formulas govern, without a general strictness claim. Equal blocks
+<span class="math inline">\(n_j=a\)</span>, <span
+class="math inline">\(\varepsilon_j=\varepsilon\)</span> give</p>
+<p><span class="math display">\[H_{\rm blocks}=k a^{1-3/(2r)}H_1^{\rm
+sat},\qquad
+H_{\rm global}=(ka)^{1-3/(2r)}H_1^{\rm sat},\qquad
+H_{\rm blocks}/H_{\rm global}=k^{3/(2r)}.\]</span></p>
+<p>The block saturation horizon suffices for both. At <span
+class="math inline">\(r=3/2\)</span> independently supplied identical
+blocks give <span class="math inline">\(kH_1\)</span>, while one fixed
+global allowance gives <span class="math inline">\(H_1\)</span>.
+Regrouping unchanged constraints is associative; giving every child a
+fresh allowance changes a sum constraint into a maximum constraint.</p>
+<p>For finite <span class="math inline">\(r\)</span> the smallest
+centred unweighted global ball containing the product of block balls has
+radius <span
+class="math inline">\(B=(\sum_j\varepsilon_j^r)^{1/r}\)</span>, attained
+by simultaneous saturation. For <span
+class="math inline">\(k&gt;1\)</span> and positive budgets the inclusion
+is strict: concentrate all <span class="math inline">\(B\)</span> in one
+block. No global ball equals the product, since restrictions to each
+block subspace would require radius <span
+class="math inline">\(\varepsilon_j\)</span>, inconsistent with
+simultaneous saturation. Equal blocks have <span
+class="math inline">\(B=k^{1/r}\varepsilon\)</span> and the same centre
+risks as the blocks at every horizon, despite the strictly larger error
+set. To match the original global <span
+class="math inline">\(\varepsilon\)</span> risks using separate equal
+blocks requires allowances <span class="math inline">\(\varepsilon
+k^{-1/r}\)</span>; their product is strictly contained in the matching
+global ball. At <span class="math inline">\(r=\infty\)</span> the
+Cartesian sets coincide. A tolerance budget is an admissible-error
+statement, not a derived energetic or monetary cost.</p>
+<h2 id="source-scope-and-consequence-for-state">Source scope and
+consequence for STATE</h2>
+<p><a
 href="https://github.com/arivero/navstokgap/blob/main/references/batches/B38.md">B38</a>
-identifies established bounded-input double-integrator machinery; these
-fixed-time formulas are derived specializations, with exact prior
-publication unassessed.</p>
-<h2 id="experiment-and-information-boundary">1. Experiment and
-information boundary</h2>
-<p>Take a particle on the line with mass <span
-class="math inline">\(m&gt;0\)</span>, on an observation window <span
-class="math inline">\([0,\ell]\)</span>, <span
-class="math inline">\(\ell&gt;0\)</span>. The state at zero, <span
-class="math inline">\((q_0,p_0)\)</span>, and the complete earlier
-history are known exactly. The observer receives no information about
-the force or state after zero before making a prediction at time <span
-class="math inline">\(\ell\)</span>. This is a delay assumption about
-the accessible records, not a minimum time axiom. The future force lies
-in the fixed admissible class</p>
-<p><span class="math display">\[\mathcal F=\{f\in
-L^\infty([0,\ell]):|f|\le F\text{ a.e.}\},\qquad F&gt;0.\]</span></p>
-<p>Both signs and independent future profiles are allowed by this
-information model. The external force is an unresolved input, rather
-than a previously reconstructed deterministic receiver. No probability
-law is assigned to it. For each <span class="math inline">\(f\)</span>
-the classical dynamics is</p>
-<p><span class="math display">\[\dot q=p/m,\qquad \dot p=f,\]</span></p>
-<p>with unique absolutely continuous momentum and continuously
-differentiable position. All experiments share the same accessible past.
-Constant or piecewise constant forces are permitted; they create no
-momentum impulses. If desired, set <span
-class="math inline">\(p_0=0\)</span> and choose <span
-class="math inline">\(F\ell/m&lt;c\)</span> to keep every admitted
-particle speed strictly below <span class="math inline">\(c\)</span>. A
-finite propagation law for the recording apparatus would need its own
-model.</p>
-<p>The exact endpoint increments from inertial prediction are</p>
-<p><span class="math display">\[v:=p(\ell)-p_0=\int_0^\ell f(s)ds,\qquad
-u:=q(\ell)-q_0-\frac{p_0\ell}{m}
-=\frac1m\int_0^\ell(\ell-s)f(s)ds.\]</span></p>
-<h2 id="sharp-causal-prediction-bounds">2. Sharp causal prediction
-bounds</h2>
-<p>For a deterministic predictor based only on the accessible records,
-define separate worst-case absolute errors <span
-class="math inline">\(R_q=\sup_{f\in\mathcal F}|\widehat
-q-q_f(\ell)|\)</span> and <span
-class="math inline">\(R_p=\sup_{f\in\mathcal F}|\widehat
-p-p_f(\ell)|\)</span>. The two forces <span
-class="math inline">\(f=+F\)</span> and <span
-class="math inline">\(f=-F\)</span> give indistinguishable input records
-and endpoint separations <span class="math inline">\(F\ell^2/m\)</span>
-in position and <span class="math inline">\(2F\ell\)</span> in momentum.
-The triangle inequality therefore gives</p>
-<p><span class="math display">\[R_q\ge\frac{F\ell^2}{2m},\qquad R_p\ge
-F\ell.\]</span></p>
-<p>The inertial predictor <span class="math inline">\((\widehat
-q,\widehat p)=(q_0+p_0\ell/m,p_0)\)</span> attains both bounds, since
-the endpoint integrals above have these absolute maxima. Thus the
-coordinatewise minimax errors and their product are</p>
-<p><span class="math display">\[r_q=\frac{F\ell^2}{2m},\qquad
-r_p=F\ell,\qquad
-r_qr_p=\frac{F^2\ell^3}{2m}.\]</span></p>
-<p>The product has action units <span
-class="math inline">\(ML^2/T\)</span>. It is a product of prediction
-risks for one information task, not a variance product or a
-measurement-disturbance relation. Its lower bound concerns estimators;
-individual admitted motions include the undisturbed inertial
-trajectory.</p>
-<h2 id="the-joint-uncertainty-region">3. The joint uncertainty
-region</h2>
-<p>Independent coordinate error bars obscure correlations between the
-two increments. Put <span class="math inline">\(d=v/(F\ell)\)</span> and
-<span class="math inline">\(z=mu/(F\ell^2)\)</span>. Their exact
-reachable region is</p>
-<p><span class="math display">\[\boxed{-1\le d\le1,\qquad
-\left|z-\frac d2\right|\le\frac{1-d^2}{4}.}\]</span></p>
-<p>To prove the upper boundary, fix <span
-class="math inline">\(v\)</span> and write <span
-class="math inline">\(f=2Fh-F\)</span> with <span
-class="math inline">\(0\le h\le1\)</span>. Then <span
-class="math inline">\(\int_0^\ell h(s)ds=a:=\ell(1+d)/2\)</span>. The
-decreasing weight <span class="math inline">\(\ell-s\)</span> makes its
-weighted integral largest when <span class="math inline">\(h=1\)</span>
-on <span class="math inline">\([0,a]\)</span> and zero afterwards.
-Indeed the integral of <span
-class="math inline">\([(\ell-s)-(\ell-a)]\,[h(s)-\mathbf1_{[0,a]}(s)]\)</span>
-is nonpositive on both sides of <span class="math inline">\(a\)</span>,
-while the constant-weight integral vanishes. Evaluating the weighted
-integral gives <span class="math inline">\(z=d/2+(1-d^2)/4\)</span>.
-Putting the positive-force portion last gives the lower boundary <span
-class="math inline">\(z=d/2-(1-d^2)/4\)</span>. Convex combinations of
-these two force profiles give every intermediate <span
-class="math inline">\(z\)</span> at the same <span
-class="math inline">\(d\)</span>. This proves necessity and sufficiency
-without a numerical reachability calculation.</p>
-<p>With canonical area measure <span
-class="math inline">\(dq\,dp=du\,dv\)</span>, the region has area</p>
-<p><span class="math display">\[\mathcal A_{\rm reach}
-=\frac{F^2\ell^3}{m}\int_{-1}^{1}\frac{1-d^2}{2}\,dd
-=\frac{2F^2\ell^3}{3m}.\]</span></p>
-<p>There is no <span class="math inline">\(2\pi\)</span> normalization:
-this is ordinary canonical area of the reachable set, not an orbital
-action. The extremal controls are the familiar one-switch bounded-force
-profiles of the double integrator.</p>
-<h2 id="what-the-result-selects">4. What the result selects</h2>
-<p>At fixed <span class="math inline">\(F,m,\ell\)</span> the unresolved
-endpoint region persists despite arbitrarily fine observation of the
-accessible past. This is genuine missing information relative to the
-stated observer, whereas R06 reconstructs a known deterministic flow
-from sufficient stored records. It does not require ontic
-randomness.</p>
-<p>The positive scale depends on the allowed force range and the
-observation delay. Taking <span
-class="math inline">\(F\downarrow0\)</span> at fixed <span
-class="math inline">\(m,\ell\)</span>, or <span
-class="math inline">\(\ell\downarrow0\)</span> at fixed <span
-class="math inline">\(m,F\)</span>, closes both action-valued
-quantities. A force ceiling alone specifies a worst-case class; it
-supplies no irreducible force fluctuation in every trajectory. A
-derivation of a universal action scale must explain what fixes the
-relevant force–delay combination and why the observer’s information
-boundary is physically unavoidable.</p>
-<h2 id="completed-comparison-insert-a-cut-inside-the-hidden-window">5.
-Completed comparison: insert a cut inside the hidden window</h2>
-<p><a href="reachable-cut-composition.html">R08</a> proves exact joint
-composition across an unobserved cut and derives the momentum fibre and
-terminal area after an observed position. It retains the same
-bounded-force class and total horizon. This connects the <a
-href="ancient-cuts-provenance.html">ancient-cut compatibility
-question</a> to an explicit classical information region. R09 now tests
-finite-precision position records and the joint precision/delay
-limit.</p>
-<p>The present formulas are elementary bounded-input reachability and
-deterministic minimax specializations. <a
-href="https://liberzon.csl.illinois.edu/teaching/cvoc/node85.html">Liberzon
-§4.4.1</a> supplies the classical double-integrator and one-switch
-control precedent. His task minimizes arrival time; our fixed-time lens
-is proved directly above. <a
-href="https://github.com/arivero/navstokgap/blob/main/docs/batches/B38/causal-information-source-companion.md">B38’s
-companion</a> records the one readable primary passage and two failed
-source routes.</p>
+reads Liberzon’s bounded-input double integrator and one-switch control
+passage; its arrival-time task differs from the fixed-time lens proved
+here. <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B39.md">B39</a>
+and <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B40.md">B40</a>
+record the cut and convex-area methods. <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B41.md">B41</a>–<a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B42.md">B42</a>
+identify the exact Seeber–Haimovich differentiation/pair match. <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B43.md">B43</a>–<a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B46.md">B46</a>
+record bounded coverage for product fibres, transient rearrangement,
+norm budgets and block composition. These retain their original reading
+labels; source capsules and internal checks do not establish publication
+priority.</p>
+<p>For STATE, a physical apparatus restriction on attainable bands and
+delays is still required. Known-flow delayed reconstruction is a
+different task, proved in <a href="autonomous-finite-readout.html">the
+apparatus treatment</a>. The exact lens area, coordinate-risk product
+and variance-based composition law have different meanings. Refining
+delay or precision closes the scales here; selecting one global error
+norm does not make it universal under independent apparatus
+composition.</p>
 
 </main>
 <footer class="site"><div class="wrap">

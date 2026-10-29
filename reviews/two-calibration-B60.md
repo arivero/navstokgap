@@ -1,7 +1,7 @@
 # R29 review: two regular roots with one global record
 
 C114–C115 are accepted as checked derivations in
-[R29](../notes/two-calibration-branches.md).
+[R29](../notes/calibration-tolerance-recovery.md#calibration-constraints-reduce-to-receiver-rank).
 
 1. The second pointer's exact drift identity gives W_0=-(K/M_2)A_2.
    Its numerator vanishes at zero coupling for every receiver state, so

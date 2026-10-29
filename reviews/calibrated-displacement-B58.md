@@ -1,7 +1,7 @@
 # R27 review: calibration leaves a topological receiver ambiguity
 
 C110–C111 are accepted as checked derivations in
-[R27](../notes/calibrated-displacement-ambiguity.md).
+[R27](../notes/calibration-tolerance-recovery.md#calibration-constraints-reduce-to-receiver-rank).
 
 - The initial interaction is absent. Solving the apparatus kinetic energy for
   positive p_s leaves eight apparatus coordinates after q_1=c is fixed.

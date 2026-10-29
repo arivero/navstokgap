@@ -122,7 +122,7 @@ results, while R03 returns the next investigation to the original cut problem.
 
 ## R05 consequence and next test
 
-[The readout test](../notes/classical-readout-refinement.md) adds two classical
+[The readout test](../notes/autonomous-finite-readout.md#impulsive-probes-and-actual-repeated-cut-refinement) adds two classical
 canonical probes to R04. The measured finite-mesh experiments change as cuts
 are added; they are not restrictions of one measured path law. With shrinking
 incoming widths, however, they converge uniformly to the same undisturbed

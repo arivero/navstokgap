@@ -7,7 +7,7 @@ work is to build valid connections between results and their premises.
 
 ## A completed connection
 
-[R11](../notes/indistinguishable-phase-bound.md) joins three existing tools:
+[R11](../notes/causal-force-information.md#two-records-complete-histories-and-all-finite-horizons) joins three existing tools:
 bounded-force reachability, symmetric convex optimal recovery, and robust
 differentiation. It gives a sharp classical information gap that survives dense
 observed cuts at fixed error tolerance. [B42](../references/batches/B42.md)
@@ -24,7 +24,7 @@ from being presented as discovery.
 | Composition → universal constant | Positive coefficient in a stated preparation class | Establish preparation independence as well as mass dependence |
 | Universal coefficient → quantum phase | Action parameter in the composition of amplitudes | Supply the dynamical identification; dimensions alone do not identify it |
 
-R12 completed the third-row test: [product minimax radii](../notes/minimax-composition.md)
+R12 completed the third-row test: [product minimax radii](../notes/causal-force-information.md#independent-composition-and-discarded-record-labels)
 give an extensive identical-copy action product and quantify the cost of losing
 constituent records. A08's invariant variance law does not transfer to this
 observable. R13 resolves the finite-horizon boundary with three exact momentum regimes

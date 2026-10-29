@@ -1,9 +1,9 @@
 # B58 librarian handoff
 
-- Task: bounded audit of the Borsuk–Ulam step in `notes/calibrated-displacement-ambiguity.md`.
+- Task: bounded audit of the Borsuk–Ulam step in `notes/calibration-tolerance-recovery.md#calibration-constraints-reduce-to-receiver-rank`.
 - Role/date: librarian; 2026-09-12.
 - Requested model/effort: Luna, low; effective model/effort not independently reported.
-- Inputs: `notes/calibrated-displacement-ambiguity.md`, `references/IDEA_BRIDGES.md` (R27 card), `docs/batches/B57/energy-symmetry-source-companion.md`.
+- Inputs: `notes/calibration-tolerance-recovery.md#calibration-constraints-reduce-to-receiver-rank`, `references/IDEA_BRIDGES.md` (R27 card), `docs/batches/B57/energy-symmetry-source-companion.md`.
 - Output: `docs/batches/B58/calibrated-displacement-source-companion.md`.
 
 ## Source and coverage

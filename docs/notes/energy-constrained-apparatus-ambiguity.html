@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Exact apparatus energy leaves a receiver-sign ambiguity</title>
+<title>Consolidated note — navstokgap</title><meta http-equiv="refresh" content="0; url=calibration-tolerance-recovery.html#full-records-whole-shell-saturation-and-exact-energies"><link rel="canonical" href="https://arivero.github.io/navstokgap/notes/calibration-tolerance-recovery.html">
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,119 +79,7 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>Exact apparatus energy leaves a receiver-sign ambiguity</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/energy-constrained-apparatus-ambiguity.md">Markdown source</a></p><p>Knowing both initial receiver energy and initial apparatus energy
-still permits two distinct receiver states with identical complete final
-apparatus records. For every sufficiently small positive coupling, a
-backward-flow construction gives an antipodal receiver pair inside the
-preparation box. The clock and both energy records agree exactly; both
-canonical reconstruction risks stay positive as coupling decreases at
-fixed preparation width.</p>
-<p>R26, 2026-09-12. Retain R06/R25’s finite apparatus and smooth
-coordinate interaction, fixed positive receiver energy E and observation
-time T. Let H_0=M_c v_0^2/2 be the nominal initial apparatus kinetic
-energy. All incoming apparatus coordinates are unknown within a fixed
-positive box about nominal clock phase and zero probe phase. Require
-exactly H_app=H_0, in addition to H_s=E. Pulse supports are absent at
-both endpoints. The record consists of all ten final apparatus
-coordinates and the two initial energies. Source coverage is in <a
-href="https://github.com/arivero/navstokgap/blob/main/references/batches/B57.md">B57</a>.</p>
-<h2 id="reverse-a-terminal-state-with-zero-probe-phase">1. Reverse a
-terminal state with zero probe phase</h2>
-<p>Let z_* be any receiver shell point and Phi_T its free evolution.
-Prescribe terminal data</p>
-<p><span class="math display">\[z(T)=r\Phi_Tz_*,\quad
-q(T)=\pi(T)=0,\quad
-s(T)=s_0+v_0T,\]</span> <span
-class="math display">\[p_s(T)=\sqrt{2M_c[H_0+E(1-r^2)]}.
-\tag{1}\]</span></p>
-<p>For r near 1 the square root is positive. Terminal total energy is
-exactly E+H_0 and the interaction is zero. Evolve the exact autonomous
-Hamiltonian backward for time T and denote its initial receiver state
-Z_lambda(r). Smooth finite-time dependence gives Z_0(r)=r z_*. Hence</p>
-<p><span
-class="math display">\[\partial_r[H_s(Z_0(r))-E]_{r=1}=2E&gt;0.\]</span></p>
-<p>The implicit-function theorem provides a smooth r_lambda near 1 such
-that</p>
-<p><span class="math display">\[H_s(Z_\lambda(r_\lambda))=E.
-\tag{2}\]</span></p>
-<p>At the resulting initial point all pulse supports are absent, by
-continuity of the strict free endpoint margin. Conservation of the total
-energy E+H_0 then gives H_app=H_0 exactly. Thus (2) imposes one energy
-and (1) plus conservation imposes the other; neither is merely an
-asymptotic equality.</p>
-<h2 id="bounds-and-preparation-margins">2. Bounds and preparation
-margins</h2>
-<p>On the backward interval, terminal zero probe coordinates and momenta
-imply q,pi=O(lambda). The receiver and clock reaction forces contain
-lambda q, so their deviations from the corresponding free paths are
-O(lambda squared). These bounds hold with r derivatives on a fixed small
-r interval, by the smooth variational equations and finite-time
-estimates. Therefore</p>
-<p><span class="math display">\[r_\lambda=1+O(\lambda^2),\qquad
-Z_\lambda(r_\lambda)=z_*+O(\lambda^2),\]</span> <span
-class="math display">\[p_s(T)=M_cv_0+O(\lambda^2). \tag{3}\]</span></p>
-<p>Initial probe phase differs from zero by O(lambda) and initial clock
-phase differs from (s_0,M_c v_0) by O(lambda squared). In fixed
-component units there is C with ||a(0)-a_*||&lt;=C lambda. For any
-sufficiently small fixed box half-width b&gt;0, take lambda_0 small
-enough that C lambda_0&lt;=b/2. Both the box margin and the linear
-cutoff regions then hold throughout the whole construction. All masses,
-durations and pulse widths stay fixed.</p>
-<p>The energy-constrained preparation is the shell times the
-intersection of the apparatus box with H_app=H_0. Interior margin refers
-to the box, not an open neighbourhood in the full ten-dimensional
-apparatus space.</p>
-<h2
-id="an-exact-symmetry-makes-a-second-preparation-with-the-same-record">3.
-An exact symmetry makes a second preparation with the same record</h2>
-<p>Inside the common linear cutoff regions, the involution</p>
-<p><span class="math display">\[\mathcal
-I:(z,q,\pi,s,p_s)\mapsto(-z,-q,-\pi,s,p_s) \tag{4}\]</span></p>
-<p>preserves the Hamiltonian and its equations: receiver and probe
-forces change sign, while the clock force contains the invariant
-products x q_j. The free energies are quadratic. Global oddness of the
-cutoff functions is unnecessary; both trajectories stay in the regions
-where X(x)=x and R(q)=q.</p>
-<p>Apply (4) to the trajectory constructed above. At T its probes are
-again exactly zero and its clock phase is unchanged. The complete final
-apparatus record is therefore identical. At the initial time the
-receiver states are exactly Z_lambda and -Z_lambda, both with energy E.
-Probe phases reverse sign, clock phase is unchanged, and apparatus
-kinetic energy is exactly H_0 for both. The symmetric preparation box
-admits both points with the same b/2 margin. This proves an actual pair
-rather than a dimension or tangent count.</p>
-<h2 id="canonical-risk-and-limit">4. Canonical risk and limit</h2>
-<p>Put k_x=a-g^2/d&gt;0 and choose the physical shell point</p>
-<p><span class="math display">\[z_*=(x_*,P_*,(g/d)x_*,0),\qquad
-x_*=\sqrt{E/k_x},\quad P_*=\sqrt{\mu E}. \tag{5}\]</span></p>
-<p>Here x_<em>,P_</em> denote state components, not the fixed component
-units. Its potential and kinetic energies are each E/2. Identical
-records for the antipodal pair force every deterministic estimator’s
-coordinate risks to obey</p>
-<p><span class="math display">\[\epsilon_x\ge |(Z_\lambda)_x|,\qquad
-\epsilon_P\ge |(Z_\lambda)_P|,\]</span> <span
-class="math display">\[\epsilon_x\epsilon_P\ge
-|(Z_\lambda)_x(Z_\lambda)_P|
-\longrightarrow E\sqrt{\mu/k_x}&gt;0 \quad(\lambda\downarrow0).
-\tag{6}\]</span></p>
-<p>The arrow concerns the displayed lower bound. In particular it is
-bounded below by E sqrt(mu/k_x)/4 for sufficiently small positive
-coupling, by keeping each coordinate at least half its limiting
-magnitude. The constant has action units; no 2 pi normalization is
-introduced. Neither exact minimax optimality nor a positive projected
-area is claimed for this two-point construction.</p>
-<p>The scale is set by receiver energy and stiffness/mass. The allowed
-weak- coupling regime depends on the positive preparation width. Exact
-energy information removes neither the symmetric preparation freedom nor
-the resulting global ambiguity. The common record was chosen by terminal
-zero probe phase; it need not be R25’s originally chosen nominal-record
-fibre.</p>
-<p>Next R27: test whether a known nonzero incoming probe displacement
-breaks this sign ambiguity while exact initial energies and full final
-records remain supplied. Separate breaking this particular involution
-from proving global recovery, and keep the admissible preparation-energy
-intersection explicit.</p>
-
+<h1>Note consolidated</h1><p>This material is now part of <a href="calibration-tolerance-recovery.html#full-records-whole-shell-saturation-and-exact-energies">Preparation, calibration and exact-record fibres of a classical apparatus</a>. The original source remains in repository history.</p>
 </main>
 <footer class="site"><div class="wrap">
 <p><strong>Comments, corrections and questions are welcome as repository

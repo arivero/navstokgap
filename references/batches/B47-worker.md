@@ -4,7 +4,7 @@
   finite-dimensional readout at fixed small nonzero coupling.
 - **Requested route:** Luna, low explicit (worker artifact; no descendants).
 - **Date:** 2026-09-11.
-- **Inputs:** `notes/fixed-coupling-calibration.md`;
+- **Inputs:** `notes/autonomous-finite-readout.md#quiet-preparation-and-fixed-coupling-calibration`;
   `docs/batches/B37/autonomous-readout-source-companion.md`;
   `skills/principia-action/SKILL.md`; `skills/navstokgap-bibliography/SKILL.md`.
 - **Outputs:** `docs/batches/B47/fixed-calibration-source-companion.md` and

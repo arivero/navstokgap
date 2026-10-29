@@ -5,7 +5,7 @@
   only. Effective run: no worker/retrieval was performed; this is an inherited
   audit.
 - Date: 2026-09-12.
-- Inputs: `notes/two-calibration-branches.md`,
+- Inputs: `notes/calibration-tolerance-recovery.md#calibration-constraints-reduce-to-receiver-rank`,
   `docs/batches/B59/calibrated-canonical-source-companion.md`, and the
   applicable project/skill instructions.
 - Output: `docs/batches/B60/two-calibration-source-companion.md`.

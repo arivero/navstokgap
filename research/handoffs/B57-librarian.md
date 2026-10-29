@@ -3,7 +3,7 @@
 - Task: audit inherited-source support for R26/C108--C109 (energy constraint and receiver-sign ambiguity).
 - Role: bounded librarian; requested model/effort: Luna / low. Effective model/effort: not independently reported.
 - Date: 2026-09-12.
-- Inputs: `notes/energy-constrained-apparatus-ambiguity.md`; inherited companions `docs/batches/B56/full-apparatus-source-companion.md` and `docs/batches/B54/final-clock-source-companion.md`; required skills and protocol read.
+- Inputs: `notes/calibration-tolerance-recovery.md#full-records-whole-shell-saturation-and-exact-energies`; inherited companions `docs/batches/B56/full-apparatus-source-companion.md` and `docs/batches/B54/final-clock-source-companion.md`; required skills and protocol read.
 - Output: `docs/batches/B57/energy-symmetry-source-companion.md`.
 
 ## Coverage and findings

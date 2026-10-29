@@ -4,7 +4,7 @@
 - **Role:** source audit; no shared indexes, state, claims, or task-board edits.
 - **Requested model/effort:** gpt-5.6-luna, low. Effective runtime model/effort were not independently reported by the tool environment.
 - **Date:** 2026-09-11.
-- **Inputs:** `notes/fixed-preparation-ambiguity.md` (R17); B47 inherited smooth-dependence capsule; `docs/batches/B47/fixed-calibration-source-companion.md`; `research/ACTION_FIELD_TARGET.md`; Principia/action and bibliography instructions.
+- **Inputs:** `notes/calibration-tolerance-recovery.md#incomplete-records-and-preparation-width` (R17); B47 inherited smooth-dependence capsule; `docs/batches/B47/fixed-calibration-source-companion.md`; `research/ACTION_FIELD_TARGET.md`; Principia/action and bibliography instructions.
 - **Outputs:** `docs/batches/B48/fixed-preparation-source-companion.md`; this handoff.
 
 ## Findings

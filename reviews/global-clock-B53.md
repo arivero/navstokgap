@@ -1,7 +1,7 @@
 # R22 review: actual global collisions survive interaction
 
 C100–C101 are accepted as written derivations for the fixed pulse design in
-[R22](../notes/global-clock-speed-ambiguity.md).
+[R22](../notes/calibration-tolerance-recovery.md#clock-fibres-and-local-versus-global-recovery).
 
 1. Factoring the moment matrix and powers through order three before inversion
    bounds the Taylor tail and its speed derivative by O(epsilon). This gives

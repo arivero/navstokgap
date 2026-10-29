@@ -1,6 +1,6 @@
 # B63 librarian handoff
 
-- Task: R32 stage 1 audit for `notes/single-calibration-fibres.md`; bounded librarian.
+- Task: R32 stage 1 audit for `notes/calibration-tolerance-recovery.md#one-uncertain-constraint-and-an-explicit-pulse-design`; bounded librarian.
 - Requested model/effort: Luna, low; no descendants. Effective model/effort was not independently reported.
 - Date: 2026-09-12.
 - Inputs: R32 note; B61 and B62 source companions/handoffs; `agents/PROTOCOL.md`; Principia-action and bibliography skills.

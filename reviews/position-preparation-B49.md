@@ -1,7 +1,7 @@
 # R18 review: the clock supplies an invertible position response
 
 C092–C093 are accepted as checked derivations for the fixed pulse design in
-[R18](../notes/position-preparation-ambiguity.md). The review is written,
+[R18](../notes/calibration-tolerance-recovery.md#incomplete-records-and-preparation-width). The review is written,
 with no numerical or symbolic verification scripts.
 
 1. On the nominal-clock, zero-incoming-momentum slice, initial positions stay

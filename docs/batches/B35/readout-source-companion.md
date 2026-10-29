@@ -2,7 +2,7 @@
 
 ## Scope and coverage
 
-Bounded audit of `notes/classical-readout-refinement.md` (R05), completed 2026-09-10. Two discovery query families, two primary sources, and two bounded HTML readings were used. No source originals were downloaded or added to tracked documents. Reading was limited to the passages named below.
+Bounded audit of `notes/autonomous-finite-readout.md#impulsive-probes-and-actual-repeated-cut-refinement` (R05), completed 2026-09-10. Two discovery query families, two primary sources, and two bounded HTML readings were used. No source originals were downloaded or added to tracked documents. Reading was limited to the passages named below.
 
 ## Queries
 

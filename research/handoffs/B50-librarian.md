@@ -3,7 +3,7 @@
 - **Task:** bounded prior-literature audit for R19, C094 (uniform global
   injectivity) and C095 (record-error action-product closure).
 - **Role:** librarian; requested model/effort: Luna, low. Date: 2026-09-11.
-- **Inputs:** `notes/full-pointer-recovery.md`; R18/B49 capsule in
+- **Inputs:** `notes/autonomous-finite-readout.md#complete-records-replace-clock-preparation-data`; R18/B49 capsule in
   `references/IDEA_BRIDGES.md` and `docs/batches/B49/position-preparation-source-companion.md`;
   B47 companion; `research/ACTION_FIELD_TARGET.md`.
 - **Output:** `docs/batches/B50/full-pointer-source-companion.md`.

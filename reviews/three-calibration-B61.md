@@ -1,7 +1,7 @@
 # R30 review: global recovery on a fixed preparation neighbourhood
 
 C116–C117 are accepted as checked derivations in
-[R30](../notes/three-calibration-global-recovery.md), with the reduced-box
+[R30](../notes/calibration-tolerance-recovery.md#four-exact-supplied-constraints-give-a-global-inverse), with the reduced-box
 hypothesis retained explicitly.
 
 1. Analytic observability ensures that a third pulse can detect the R29

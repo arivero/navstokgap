@@ -1,7 +1,7 @@
 # R28 review: both canonical coordinates remain ambiguous
 
 C112–C113 are accepted as checked derivations for the fixed pulse design in
-[R28](../notes/calibrated-canonical-ambiguity.md), 2026-09-12.
+[R28](../notes/calibration-tolerance-recovery.md#calibration-constraints-reduce-to-receiver-rank), 2026-09-12.
 
 1. R25's apparatus inverse applies about eta_c, whose calibrated displacement
    lies within b/4 of the original box centre. The compensator differs from

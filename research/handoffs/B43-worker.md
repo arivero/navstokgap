@@ -1,10 +1,10 @@
 # B43 worker handoff
 
-- **Task:** bounded librarian audit of R12 `notes/minimax-composition.md`.
+- **Task:** bounded librarian audit of R12 `notes/causal-force-information.md#independent-composition-and-discarded-record-labels`.
 - **Role:** Luna bibliographer; requested model `gpt-5.6-luna`, effort `low`.
 - **Effective model/effort:** not independently reported.
 - **Date:** 2026-09-11.
-- **Inputs:** R12 note; B42 minimax companion and `notes/indistinguishable-phase-bound.md`; A08 `notes/composition-universality.md`; Principia universality route.
+- **Inputs:** R12 note; B42 minimax companion and `notes/causal-force-information.md#two-records-complete-histories-and-all-finite-horizons`; A08 `notes/composition-universality.md`; Principia universality route.
 - **Outputs:** `references/batches/B43.md`; `docs/batches/B43/composition-source-companion.md`.
 - **Budget:** one discovery query; two primary sources; passage coverage within four-page/named-passage limit; no numerical or symbolic scripts.
 

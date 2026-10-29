@@ -3,7 +3,7 @@
 - **Task/role:** inherited-source audit for R30, C116 global inverse and C117 precision closure; librarian.
 - **Requested model/effort:** Luna, low (sequential worker; no descendants). Effective model/effort not independently reported.
 - **Date:** 2026-09-12.
-- **Inputs:** `notes/three-calibration-global-recovery.md`; `research/ACTION_FIELD_TARGET.md`; inherited `docs/batches/B60/two-calibration-source-companion.md`, `docs/batches/B50/full-pointer-source-companion.md`, and `docs/batches/B48/fixed-preparation-source-companion.md`; Principia-action and bibliography instructions.
+- **Inputs:** `notes/calibration-tolerance-recovery.md#four-exact-supplied-constraints-give-a-global-inverse`; `research/ACTION_FIELD_TARGET.md`; inherited `docs/batches/B60/two-calibration-source-companion.md`, `docs/batches/B50/full-pointer-source-companion.md`, and `docs/batches/B48/fixed-preparation-source-companion.md`; Principia-action and bibliography instructions.
 - **Outputs:** `docs/batches/B61/three-calibration-source-companion.md`.
 
 ## Coverage and findings

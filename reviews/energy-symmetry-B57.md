@@ -1,7 +1,7 @@
 # R26 review: equal-energy antipodal receiver preparations
 
 C108–C109 are accepted as checked derivations in
-[R26](../notes/energy-constrained-apparatus-ambiguity.md).
+[R26](../notes/calibration-tolerance-recovery.md#full-records-whole-shell-saturation-and-exact-energies).
 
 - Terminal clock momentum in (1) is real near r=1 and fixes total energy
   E+H_0 exactly. At zero coupling initial receiver energy is r squared E;

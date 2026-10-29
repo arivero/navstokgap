@@ -3,7 +3,7 @@
 - Task: R33 stage 1 audit, correlated calibration direction `r=L e_y`.
 - Role: bounded librarian; requested Luna, low, unverified; no descendants.
 - Date: 2026-09-12.
-- Inputs: `notes/correlated-calibration-response.md`; inherited B63/B62
+- Inputs: `notes/calibration-tolerance-recovery.md#correlated-uncertainty-and-the-corrected-quadratic-response`; inherited B63/B62
   companions and handoffs; `AGENTS.md`; `agents/PROTOCOL.md`; Principia-action
   and bibliography skills.
 - Outputs: `docs/batches/B65/correlated-response-source-companion.md` and this

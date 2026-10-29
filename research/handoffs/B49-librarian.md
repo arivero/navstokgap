@@ -4,7 +4,7 @@
 - **Role:** librarian audit; no descendants.
 - **Requested model/effort:** gpt-5.6-luna, low. Effective settings were not independently reported.
 - **Date:** 2026-09-11.
-- **Inputs:** `notes/position-preparation-ambiguity.md`; `docs/batches/B48/fixed-preparation-source-companion.md`; `docs/batches/B47/fixed-calibration-source-companion.md`; R17 handoff; Principia-action and bibliography instructions.
+- **Inputs:** `notes/calibration-tolerance-recovery.md#incomplete-records-and-preparation-width`; `docs/batches/B48/fixed-preparation-source-companion.md`; `docs/batches/B47/fixed-calibration-source-companion.md`; R17 handoff; Principia-action and bibliography instructions.
 - **Outputs:** `docs/batches/B49/position-preparation-source-companion.md`.
 
 ## Source coverage

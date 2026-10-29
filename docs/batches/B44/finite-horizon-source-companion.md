@@ -4,7 +4,7 @@
 
 This is a bounded R13 librarian audit dated 2026-09-11. The audit asks whether
 the exact known-initial-state finite-horizon radii in
-`notes/finite-horizon-minimax.md` have a direct literature match: the scaled
+`notes/causal-force-information.md#two-records-complete-histories-and-all-finite-horizons` have a direct literature match: the scaled
 momentum radius
 \(V(s)=s\) for \(s\le\sqrt2\),
 \(V(s)=\sqrt{2s^2+4}-s\) for \(\sqrt2\le s\le4\), and \(V(s)=2\) thereafter;

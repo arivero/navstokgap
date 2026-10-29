@@ -49,28 +49,28 @@ C070–C071 quantify a genuine new-information task. The scale depends on force
 budget and delay and closes when either shrinks. One Luna-low bounded source
 audit and coordinator written proof/source review are complete.
 
-**R08/B39 complete:** [reachable cut composition](../notes/reachable-cut-composition.md)
+**R08/B39 complete:** [reachable cut composition](../notes/causal-force-information.md#endpoint-lens-causal-delay-and-exact-cut-composition)
 preserves the endpoint lens across unobserved cuts and gives the exact terminal
 area after phase or position observation. Position-conditioned area can close
 while momentum uncertainty stays finite. C072–C073 have one Luna-low bounded
 audit and coordinator written proof/source review.
 
-**R09/B40 complete:** [finite position precision](../notes/finite-precision-cut.md)
+**R09/B40 complete:** [finite position precision](../notes/causal-force-information.md#finite-precision-cuts-and-exact-canonical-area)
 gives the exact clipped-lens terminal area and uniform closure for every joint
 precision/delay limit, C074–C075. One Luna-low audit and coordinator review
 separate the derived formula from set-membership and mixed-area precedents.
 
-**R10/B41 complete:** [two-record recovery](../notes/two-position-recovery.md)
+**R10/B41 complete:** [two-record recovery](../notes/causal-force-information.md#two-records-complete-histories-and-all-finite-horizons)
 gives exact estimator-specific errors and a positive-delay sequence recovering
 both coordinates with vanishing action-error product (C076–C077). The core
 finite-difference bound and optimum have an exact literature match.
 
-**R11/B42 complete:** [indistinguishable motions](../notes/indistinguishable-phase-bound.md)
+**R11/B42 complete:** [indistinguishable motions](../notes/causal-force-information.md#two-records-complete-histories-and-all-finite-horizons)
 give exact coordinate minimax risks even for the entire noisy position history,
 with shared initial state (C078–C079). The established prepared pair connects
 reachability to recovery; positive precision supplies the scale.
 
-**R12/B43 complete:** [minimax composition](../notes/minimax-composition.md)
+**R12/B43 complete:** [minimax composition](../notes/causal-force-information.md#independent-composition-and-discarded-record-labels)
 proves additive scalar radii for product information and an extensive canonical
 risk product for identical copies. Keeping only the centre record has an exact
 single-body image and strictly worsens momentum risk for unequal force/precision
@@ -78,85 +78,85 @@ ratios. Mass-only coordinate-radius closure gives an extensive action product,
 so A08's variance universality does not transfer (C080–C081). One Luna-low
 bounded audit and coordinator written/source review are complete.
 
-**R13/B44 complete:** [finite-horizon recovery](../notes/finite-horizon-minimax.md)
+**R13/B44 complete:** [finite-horizon recovery](../notes/causal-force-information.md#two-records-complete-histories-and-all-finite-horizons)
 proves three exact momentum regimes, earlier position saturation and sharp
 blind-delay risks from known initial phase. Product/aggregate composition
 holds at every horizon; mixed regimes can lose both position and momentum
 information (C082–C083). One Luna-low bounded audit and coordinator written
 proof/source review are complete; novelty remains unassessed.
 
-**R14/B45 complete:** [shared budgets](../notes/shared-record-budget.md)
+**R14/B45 complete:** [shared budgets](../notes/causal-force-information.md#shared-error-geometry-and-independently-budgeted-blocks)
 give exact centre risks by synchronous projection/lift. A quadratic budget
 changes the saturated n-copy product to n^(1/4); a general l^r budget gives
 n^(1-3/(2r)), including copy-count invariance at r=3/2 (C084–C085).
 One Luna-low audit and coordinator written/source review are complete.
 
-**R15/B46 complete:** [block apparatus composition](../notes/block-apparatus-composition.md)
+**R15/B46 complete:** [block apparatus composition](../notes/causal-force-information.md#shared-error-geometry-and-independently-budgeted-blocks)
 gives exact finite-horizon block risks and aggregate-record loss. At r=3/2,
 k independent identical blocks have k times the saturated one-block product.
 Matching the fixed global-budget risks requires shrinking each block allowance
 by k^(-2/3). Equal centre risks need not mean equal error sets (C086–C087).
 One Luna-low audit and coordinator written/source review are complete.
 
-**R16/B47 complete:** [fixed-coupling calibration](../notes/fixed-coupling-calibration.md)
+**R16/B47 complete:** [fixed-coupling calibration](../notes/autonomous-finite-readout.md#quiet-preparation-and-fixed-coupling-calibration)
 has a uniform nonlinear inverse bound for R06's four final records. Contracting
 preparation and final-record errors closes the accuracy–disturbance product
 at fixed nonzero coupling, masses and duration (C088–C089). Disturbance itself
 is merely bounded. One Luna-low source audit and coordinator review completed.
 
-**R17/B48 complete:** [fixed preparation ambiguity](../notes/fixed-preparation-ambiguity.md)
+**R17/B48 complete:** [fixed preparation ambiguity](../notes/calibration-tolerance-recovery.md#incomplete-records-and-preparation-width)
 constructs a two-dimensional fixed-energy shell patch with one exact final
 record, compensated by unknown incoming probe momenta with interior box
 margins. Both canonical reconstruction risks and their product have positive
 preparation-dependent lower bounds (C090–C091). One sequential Luna-low audit
 and coordinator written/source review are complete; novelty is unassessed.
 
-**R18/B49 complete:** [position preparation](../notes/position-preparation-ambiguity.md)
+**R18/B49 complete:** [position preparation](../notes/calibration-tolerance-recovery.md#incomplete-records-and-preparation-width)
 still hides a shell patch after initial probe momenta are revealed. A fixed
 pulse design uses finite-clock reaction to make the order-two position response
 invertible, yielding exact compensation and preparation-dependent canonical
 bounds (C092–C093). The saved Luna-low audit and coordinator review are complete.
 
-**R19/B50 complete:** [full pointer recovery](../notes/full-pointer-recovery.md)
+**R19/B50 complete:** [full pointer recovery](../notes/autonomous-finite-readout.md#complete-records-replace-clock-preparation-data)
 proves a uniform global inverse for eight final pointer coordinates with known
 incoming clock data and probe momenta. The unknown initial-position box stays
 fixed; improving final record precision closes the canonical error product
 (C094–C095). One sequential Luna-low audit and coordinator review are complete.
 
-**R20/B51 complete:** [hidden clock ambiguity](../notes/hidden-clock-ambiguity.md)
+**R20/B51 complete:** [hidden clock ambiguity](../notes/calibration-tolerance-recovery.md#clock-fibres-and-local-versus-global-recovery)
 gives an exact common-eight-record family on the receiver energy shell. A fixed
 pulse design supplies the transverse energy-speed derivative; unknown offset
 leaves a receiver phase interval and positive canonical risk product (C096–C097).
 The interval and preparation supply the scale. One sequential Luna-low audit
 and coordinator source/proof review are complete.
 
-**R21/B52 complete:** [clock-position local recovery](../notes/clock-position-local-recovery.md)
+**R21/B52 complete:** [clock-position local recovery](../notes/autonomous-finite-readout.md#energy-assisted-local-recovery-and-its-global-obstruction)
 uses exact receiver energy and revealed clock position to recover the receiver,
 probe positions and hidden initial clock momentum on one fixed local shell
 patch. A uniform inverse bound closes the canonical error product with final
 record error at fixed coupling (C098–C099). One sequential Luna-low audit and
 coordinator source/proof review are complete. R22 settles the full-shell test.
 
-**R22/B53 complete:** [global speed ambiguity](../notes/global-clock-speed-ambiguity.md)
+**R22/B53 complete:** [global speed ambiguity](../notes/calibration-tolerance-recovery.md#clock-fibres-and-local-versus-global-recovery)
 constructs actual equal-energy, equal-record pairs at distinct fixed clock
 speeds, with revealed offset. The early-pulse energy response has both signs;
 implicit continuation and an intermediate-value argument preserve the pairs
 at positive coupling. C100–C101 give preparation-dependent canonical risks.
 
-**R23/B54 complete:** [final clock momentum](../notes/final-clock-momentum-recovery.md)
+**R23/B54 complete:** [final clock momentum](../notes/autonomous-finite-readout.md#complete-records-replace-clock-preparation-data)
 restores uniform global recovery of receiver state, incoming positions and
 initial speed. Exact receiver energy and local patch information are unnecessary:
 the inverse holds on a bounded convex receiver domain. Record precision closes
 the canonical product with preparation fixed (C102–C103). One Luna-low
 existing-source audit and coordinator source/proof review completed.
 
-**R24/B55 complete:** [full clock phase](../notes/full-clock-phase-recovery.md)
+**R24/B55 complete:** [full clock phase](../notes/autonomous-finite-readout.md#complete-records-replace-clock-preparation-data)
 replaces both initial clock coordinates by their final records. A global
 inverse and canonical precision closure hold on the bounded receiver domain
 (C104–C105). The note consolidates R19–R24 by preparation and record access.
 One Luna-low inherited-source audit and coordinator proof review completed.
 
-**R25/B56 complete:** [full preparation ambiguity](../notes/full-apparatus-preparation-ambiguity.md)
+**R25/B56 complete:** [full preparation ambiguity](../notes/calibration-tolerance-recovery.md#full-records-whole-shell-saturation-and-exact-energies)
 compensates receiver changes in all ten final apparatus coordinates with a
 b/2 interior preparation margin (C106). At fixed positive box width and
 sufficiently weak coupling, one record hides the entire receiver energy shell;
@@ -164,33 +164,33 @@ the coordinate minimax risks equal their no-record values exactly (C107).
 One sequential Luna-low inherited-source audit and coordinator written review
 completed; novelty is unassessed.
 
-**R26/B57 complete:** [energy-constrained ambiguity](../notes/energy-constrained-apparatus-ambiguity.md)
+**R26/B57 complete:** [energy-constrained ambiguity](../notes/calibration-tolerance-recovery.md#full-records-whole-shell-saturation-and-exact-energies)
 constructs an antipodal receiver pair with the same full final apparatus
 record and exact initial energies E,H_0. Backward flow and a scalar adjustment
 preserve box margins; sign symmetry preserves the record. C108–C109 give a
 positive energy-dependent risk lower bound. One inherited-source Luna-low
 audit and coordinator proof review completed.
 
-**R27/B58 complete:** [calibrated displacement](../notes/calibrated-displacement-ambiguity.md)
+**R27/B58 complete:** [calibrated displacement](../notes/calibration-tolerance-recovery.md#calibration-constraints-reduce-to-receiver-rank)
 leaves exact equal-record receiver pairs despite both supplied initial energies.
 An eleven-coordinate preparation chart and Borsuk–Ulam give the pair; uniform
 flow bounds give a positive full-state risk in fixed component units (C110–C111).
 One sequential Luna-low theorem audit and coordinator proof review completed.
 
-**R28/B59 complete:** [calibrated canonical ambiguity](../notes/calibrated-canonical-ambiguity.md)
+**R28/B59 complete:** [calibrated canonical ambiguity](../notes/calibration-tolerance-recovery.md#calibration-constraints-reduce-to-receiver-rank)
 constructs a fixed smooth pulse design and exact common-record curve with
 separation in both x and P, retaining nonzero calibration and both energies.
 C112–C113 give a preparation- and energy-dependent canonical risk product
 uniform at weak coupling. One Luna-low audit and coordinator review completed.
 
-**R29/B60 complete:** [two-calibration branches](../notes/two-calibration-branches.md)
+**R29/B60 complete:** [two-calibration branches](../notes/calibration-tolerance-recovery.md#calibration-constraints-reduce-to-receiver-rank)
 gives local recovery at two distinct exact common-record preparations. A fixed
 pulse design leaves a canonical kernel line; opposite shell roots persist
 at positive coupling with both energies and calibrations. C114–C115 give
 global canonical ambiguity despite those local inverses. One inherited-source
 Luna-low audit and coordinator proof review completed.
 
-**R30/B61 complete:** [three calibrations](../notes/three-calibration-global-recovery.md)
+**R30/B61 complete:** [three calibrations](../notes/calibration-tolerance-recovery.md#four-exact-supplied-constraints-give-a-global-inverse)
 give uniform global recovery on a bounded convex receiver domain and a
 sufficiently small fixed apparatus box. Exact receiver energy is redundant;
 record refinement closes the canonical product with an O(1/lambda) inverse
@@ -236,7 +236,7 @@ ill-conditioned as their separation shrinks. Coupling fixes the memory kernel,
 while cooling closes prepared action scales. C064–C065 have one completed
 Luna-low audit and coordinator written/source review.
 
-**R05/B35 complete:** [the readout note](../notes/classical-readout-refinement.md)
+**R05/B35 complete:** [the readout note](../notes/autonomous-finite-readout.md#impulsive-probes-and-actual-repeated-cut-refinement)
 gives exact canonical probe errors and back-reaction. Shrinking incoming widths
 close the support action products; fourth-power mesh preparation yields uniform
 first-power hidden-state recovery and third-power trajectory disturbance.

@@ -123,7 +123,7 @@ This is the Schauder (Lévy--Ciesielski) expansion of $\delta x$ in the
 Cameron--Martin space $H^1_0[0,\tau]$, adapted to an arbitrary nested cut
 sequence; for dyadic cuts it is the textbook expansion
 ([Ciesielski 1961](https://doi.org/10.1090/S0002-9947-1961-0132591-2); metadata). The
-[reachability note](reachable-cut-composition.md) has the same cubic law
+[reachability note](causal-force-information.md#endpoint-lens-causal-delay-and-exact-cut-composition) has the same cubic law
 for the area $2F^2t^3/(3m)$ of the reachable lens of a cut. The bridge's own
 conditional variance shows the same nested additivity with a quadratic
 law: for diffusion constant $D$, $\int_0^L{\rm Var}(X_u\mid{\rm ends})\,du=DL^2/6$, and a cut

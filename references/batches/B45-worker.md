@@ -3,7 +3,7 @@
 - Task: bounded librarian audit of R14 shared pointwise record-error budget.
 - Requested route: Luna, low effort; no descendants.
 - Date: 2026-09-11.
-- Inputs: `notes/shared-record-budget.md`, `docs/batches/B44/finite-horizon-source-companion.md`, R14 task state, Principia-action and bibliography guidance.
+- Inputs: `notes/causal-force-information.md#shared-error-geometry-and-independently-budgeted-blocks`, `docs/batches/B44/finite-horizon-source-companion.md`, R14 task state, Principia-action and bibliography guidance.
 - Outputs: `docs/batches/B45/shared-budget-source-companion.md`.
 - Coverage: two exact search queries and two selected primary passages, recorded in the companion.
 - Result: standard optimal-recovery and convex-norm precedents found; no exact mechanical projection/lift or (n^{1-3/(2r)}) exponent match. Novelty unassessed.
