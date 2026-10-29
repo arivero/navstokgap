@@ -163,8 +163,9 @@ select that sector or an absolute action normalization.
 
 Ody–Ryder [1994](https://arxiv.org/abs/hep-th/9402137v1), §2, pp. 4–7,
 equations (2.1)–(2.26), was read for the static degree, square completion
-and arbitrary-scale ingredients; [Q04 internal check](../reviews/topological-sector-Q04.md)
-records that bounded primary-source comparison. The Lorentzian time law,
+and arbitrary-scale ingredients. This is a static source match; it does
+not supply the Lorentzian kinetic term or crossing-time prescription.
+The Lorentzian time law,
 half-energy crossing diagnostic and spectrum comparison are the specified
 model tests here. The generalized Skyrme-bound
 [2014 source](https://arxiv.org/abs/1311.2939) was read at abstract level

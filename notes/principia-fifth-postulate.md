@@ -396,8 +396,9 @@ classical union.
 It also has an exact, non-Gaussian form. Write $P_a$ for the spectral
 projection of $q-q_0$ on $[-a,a]$ and $Q_b$ for that of $p-p_0$ on $[-b,b]$.
 
-**Theorem E (complementarity).** Let $\hbar\ne0$ and $c=ab/|\hbar|$. For every
-state, the probabilities $\alpha^2=\langle P_a\rangle$ and $\beta^2=\langle Q_b\rangle$
+**Theorem E (complementarity).** Let $\hbar\ne0$ and $c=ab/|\hbar|$.
+In the regular Schrödinger representation, including its multiplicities,
+every normal state has probabilities $\alpha^2=\langle P_a\rangle$ and $\beta^2=\langle Q_b\rangle$
 satisfy
 
 $$\arccos\alpha+\arccos\beta\ \ge\ \arccos\sqrt{\lambda_0(c)},$$

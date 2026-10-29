@@ -24,6 +24,8 @@ The [dependency paths](research/dependencies.md) route the arguments;
 [obstructions](research/obstructions.md) preserve countertests and exact failure
 scopes. Former note URLs redirect to canonical sections. Internal model reviews
 and retrieval priorities confer neither independent peer review nor novelty.
+Completed work is recorded briefly in the existing catalog; retired handoffs,
+status snapshots and internal score/review files remain in git history.
 
 Read [AGENTS](AGENTS.md) and [LLM](LLM.md) before working. New research is
 suspended during consolidation. Preserve unrelated changes and use written

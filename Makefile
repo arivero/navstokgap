@@ -22,7 +22,7 @@ check:
 	sha256sum -c docs/SHA256SUMS
 
 programme:
-	pandoc research/PROGRAMME.md --standalone --to=latex --top-level-division=section --template=papers/programme-template.tex -o papers/research-programme.tex
+	$(error Programme snapshots are retired; use research/STATE.md)
 
 paper:
 	@test -n "$(NOTE)" || (echo "usage: make paper NOTE=<slug> (builds notes/<slug>.md only)"; exit 1)
@@ -38,14 +38,15 @@ paper:
 	grep -c "Overfull" .build/$(NOTE)/$(NOTE).log | sed 's/^/overfull boxes: /'
 
 papers:
-	$(error Disabled as a routine gate: use make paper NOTE=<slug>; scripts/build_papers.py remains for an explicit full rebuild)
+	$(error Full rebuild disabled: use make paper NOTE=<slug> or scripts/build_papers.py --paper <slug>)
 
 figures:
 	$(error Disabled: the legacy figure script runs mathematical verification; preserve existing figures and use written proofs)
 
-publication: papers
-	$(PYTHON) scripts/package_publication.py
-	$(PYTHON) scripts/package_publication.py --paper classical-spins-operational-closure
+publication:
+	@test -n "$(PAPER)" || (echo "usage: make publication PAPER=<slug>"; exit 1)
+	$(PYTHON) scripts/build_papers.py --paper "$(PAPER)"
+	$(PYTHON) scripts/package_publication.py --paper "$(PAPER)"
 
 site:
 	$(PYTHON) scripts/build_site.py

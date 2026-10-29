@@ -240,7 +240,7 @@ six-dimensional integrand instead has superficial degree three, so the
 formal scaling is $g^2(\Lambda L)^3$ and its smallness would require
 $g(\Lambda L)^{3/2}\ll1$. The Berry coefficient below also needs its
 charge and polarization multiplicities rechecked; it is not a certified
-constant. See the [corpus audit](corpus-audit-2026-10-01.md) §3.
+constant. See the [obstruction map](../research/obstructions.md).
 The estimates refer to a specified $SU(2)$ abelian-valley calculation
 with cutoff $\Lambda$, not an $SU(3)$ or continuum gap theorem.
 

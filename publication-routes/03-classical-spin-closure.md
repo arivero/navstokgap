@@ -27,8 +27,8 @@ The initial construction is in
 P06 now supplies a standalone [LaTeX manuscript](../papers/classical-spins-operational-closure.tex),
 [compiled PDF](../out/papers/classical-spins-operational-closure.pdf) and
 [PDF-inclusive bundle](../out/publications/classical-spins-operational-closure.zip).
-The [claim-to-source review](../reviews/spin-publication-P06.md) maps the
-consolidated results to their existing audits. [B76](../reviews/spin-publication-B76.md)
+The [claim-to-source derivation](../papers/classical-spins-operational-closure.tex) maps the
+consolidated results to their existing audits. [B76](../papers/classical-spins-operational-closure.tex)
 completes bounded result-specific positioning: use a conceptual worked example,
 with the explicit spin pair and finite-repair proof as its distinctive content.
 Classical extensions and transformation-relative preparation equivalence have
@@ -65,7 +65,7 @@ priority claim would require broader coverage.
 
 ## P07 editorial readiness completed
 
-The [author decision sheet](../reviews/publication-readiness-P07.md) compares
+The [author decision sheet](../research/pdf-audit.md) compares
 both completed drafts and records their bounded editorial revisions. The gas
 paper remains first for author review. Author details, destination and article
 type remain to be supplied before venue preparation or submission. Current

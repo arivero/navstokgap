@@ -145,8 +145,9 @@ Primary material remains in [source companions](docs/README.md) and the
 [bibliography](references/library.bib). The claim-specific reading label
 (metadata, abstract, passage or full-read) determines what was checked; a DOI
 lookup alone validates no theorem or historical interpretation. The
-[dated corpus audit](notes/corpus-audit-2026-10-01.md) preserves internal scores
-of earlier versions. Use current canonical statements for science.
+[current obstruction map](research/obstructions.md) routes to the actual
+countermodels and corrected claims. Retired internal scores and handoffs
+remain only in git history; short catalog phrases record completed work.
 [Papers](research/pdf-audit.md) distinguishes generated current treatments,
 independent manuscripts and historical snapshots. Build only the changed note;
 [AGENTS](AGENTS.md) and `make check` enforce document integrity without mathematical

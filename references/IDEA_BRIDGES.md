@@ -2,13 +2,13 @@
 
 Select the task in [STATE](../research/STATE.md), then read its capsule here.
 These cards route existing bibliography into the selected premise decision.
-They do not schedule work. [STRATEGY](../research/STRATEGY.md) governs whether
+They do not schedule work. [STRATEGY](../AGENTS.md) governs whether
 an additional calculation or source batch is useful. Older suggestions below
 are retained context; their words "next" and "current" describe that milestone.
 
 ## Conservative topological selection — Q04
 
-[Q04 review](../reviews/topological-sector-Q04.md): Ody--Ryder section 2,
+[Q04 derivation](../notes/topological-sector-action-selection.md): Ody--Ryder section 2,
 pp. 6--7, (2.21)--(2.26) -> fixed-degree static sigma solitons with arbitrary
 size and fixed energy -> [Q04](../notes/topological-sector-action-selection.md)
 tests the action over a half-energy-radius crossing time -> topology retains

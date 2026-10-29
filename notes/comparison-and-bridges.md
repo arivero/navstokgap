@@ -292,7 +292,7 @@ space, its clock and generator, its scale transformation and its limiting
 procedures. Then state the desired estimate and identify which structures it
 shares with the companion field problem.
 
-The present [mechanics programme](../research/PROGRAMME.md) starts with
+The present [mechanics programme](../research/STATE.md) starts with
 action variations and operational resolution, then moves to operator spectra.
 This comparison supplies the transfer questions for that sequence. Its proposed
 bridges remain conditional on the listed constructions and estimates; the

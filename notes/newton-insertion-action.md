@@ -85,8 +85,13 @@ $$D_{C,F}=\frac{F^2\tau^3}{24m}
  =\frac{F}{2v}A_{\rm chord,fall}
  =\frac{F}{4v}A_{\rm inertial,fall}=\frac{\tau\Delta E}{12}.$$
 
-A common total derivative added to $L$ cancels because the endpoints and
-times agree. The bare inertial and falling paths have different vertical
+A common ordinary point-function term $dG(q,t)/dt$ added to $L$ cancels
+because the endpoints and times agree. A velocity-dependent $G$ changes
+the endpoint data required by that statement: adding
+$d(\kappa\dot y)/dt$ changes this chord-minus-parabola action by
+$-\kappa F\tau/m$, since their endpoint velocities differ. That is a
+higher-derivative Lagrangian, outside this point-mechanics convention.
+The bare inertial and falling paths have different vertical
 endpoints; an observable phase comparison needs endpoint/control phases.
 
 For a partition $0=t_0<\cdots<t_N=T$ with steps $\tau_j$, the polygon
@@ -158,7 +163,9 @@ $$A_R[q_R]-A_R[\operatorname{ch}_R]
 
 This preserves precisely the matched-endpoint lens and its normalization,
 not the inertial tangent sector. Source/proof context:
-[B11](../research/handoffs/B11.md) records the interrupted source audit and limited coordinator reading; it supplies no completed independent review.
+The named source passages above support the geometric comparison. Its
+written calculation is internal; no independent historical or proof review
+is claimed.
 
 ## Controlled reunion of the inertial and falling arms
 

@@ -14,19 +14,25 @@ $$A'\!\int\!\big(V-N|\mathcal P|\big)\big|\nabla\Omega\big|^2d\mu
 +A'\big(2C_2-K\big)\big\langle V-N|\mathcal P|\big\rangle
 +B'\operatorname{Var}_\Omega(V)=0,
 \qquad K=\!\int\!|\nabla\Omega|^2,$$
-and they make the comparison-principle attempt at a pointwise bound
-explicit: with $\varphi=e^{-\lambda V/2}$ the operator
-$L=-A'\Delta+(B'V-e_0)$ satisfies $L\varphi\ge0$ precisely above a
-threshold $V_*\simeq N|\mathcal P|$, so the maximum principle bounds
-$\Omega$ only above the extensive Haar mean. **The pointwise Gibbs
-domination therefore fails for the same reason as the Agmon bound**: the
-ground-state energy $e_0$ is extensive and enters every comparison, so a
-local excess is never in the region where the comparison bites. The
-obstruction is that the Hamiltonian ground state is characterized by a
-global variational principle while the Euclidean weight $e^{-S_w}$ is
-local by construction, and no manipulation of the eigenvalue equation
-alone repairs that. Constants explicit; the two identities and the sum
-rule are exact; nothing promoted.
+and give a sufficient positivity region for the comparison function
+$\varphi=e^{-\lambda V/2}$. Its threshold and prefactor depend on total
+ground energy and global normalization data. This supplies no
+volume-uniform local bound. The limitation concerns these particular
+comparison functions; it is not an impossibility theorem for Gibbs
+domination or every use of the eigenvalue equation.
+
+Fix a finite periodic three-dimensional spatial cubic lattice with
+four distinct links per plaquette. Use normalized product Haar measure,
+the product bi-invariant metric with
+$\operatorname{tr}(T^aT^b)=\delta^{ab}/2$, and
+$V=\sum_p(N-\operatorname{Re}\operatorname{tr}U_p)$. Set
+$A'=g^2/2$, $B'=2/g^2$ and
+$H=(\hbar c/a)[A'(-\Delta)+B'V]$. The smooth positive ground state
+$\Omega$ is normalized by $\int\Omega^2d\mu=1$ and satisfies
+$[A'(-\Delta)+B'V]\Omega=e_0\Omega$; its finite-lattice existence and
+simplicity are [T1](mass-gap-obligations-lattice.md). The Laplacian
+identity extends to other four-distinct-link geometries; the numerical
+gradient estimate below uses the stated spatial incidence.
 
 ## 1. The Laplacian of the magnetic energy
 
@@ -52,7 +58,8 @@ $\Delta V=\Delta\sum_p(N-\operatorname{Re}\operatorname{tr}U_p)
 
 ## 2. The gradient of the magnetic energy
 
-**Proposition 2.** For $SU(2)$, $|\nabla V|^2\le16\,V$ pointwise on
+**Proposition 2.** On the periodic three-dimensional spatial cubic lattice
+with four plaquettes per link, for $SU(2)$, $|\nabla V|^2\le16\,V$ pointwise on
 $\mathcal M$. For general $SU(N)$, $|\nabla V|^2\le16\,N\,V$.
 
 *Proof.* For one link of one plaquette, the completeness relation of
@@ -119,64 +126,53 @@ for $SU(2)$, using $|\nabla V|^2\le16V$ and Proposition 1.
 then $L\varphi\ge0$ on $\{V\ge V_*\}$ with
 $$V_*=\frac{\big(e_0-2A'\lambda C_2N|\mathcal P|\big)_+}{B'-4A'\lambda^2-2A'\lambda C_2},$$
 and the maximum principle gives
-$$\Omega(U)\ \le\ \Big(\max_{\{V<V_*\}}\frac{\Omega}{\varphi}\Big)\,e^{-\lambda V(U)/2}
+$$\Omega(U)\ \le\ \Big(\max_{\{V\le V_*\}}\frac{\Omega}{\varphi}\Big)\,e^{-\lambda V(U)/2}
 \qquad\text{for all }U .$$
 
 *Proof.* Set $u=\Omega/\varphi$. From $L\Omega=0$,
 $0=-A'\varphi\Delta u-2A'\nabla u\!\cdot\!\nabla\varphi+u\,L\varphi$. At an
 interior maximum of $u$ one has $\nabla u=0$ and $\Delta u\le0$, so the
 first two terms are $\ge0$ and $u\,L\varphi\le0$; since $u>0$, the
-maximum lies in $\{L\varphi\le0\}\subset\{V<V_*\}$. $\square$
+maximum lies in $\{L\varphi\le0\}\subset\{V\le V_*\}$. $\square$
 
 **Where it stops.** With $e_0\le B'N|\mathcal P|$, the threshold obeys
 $$V_*\ \le\ N|\mathcal P|\;\frac{B'-2A'\lambda C_2}{B'-4A'\lambda^2-2A'\lambda C_2}
 \ \xrightarrow[\lambda\to0]{}\ N|\mathcal P| ,$$
-so the comparison function controls $\Omega$ only relative to its values
-on the set where $V$ is below the **extensive** Haar mean. The bound
-that results,
-$\Omega\le C\,e^{-\lambda(V-V_*)/2}$ with $C$ determined on
-$\{V<V_*\}$, is again a statement about the global excess. A local
-excess of $n$ plaquettes leaves $V$ far below $V_*\simeq N|\mathcal P|$,
-so the bound says nothing about it, exactly as in
-[the global/local note](agmon-ground-state-suppression.md).
+This is an upper bound on the threshold, not a proof that its actual
+value is asymptotic to the Haar mean. The resulting comparison uses a
+constant determined on the global sublevel $\{V\le V_*\}$. A local event
+need not force a global excess. No volume-uniform local probability
+estimate follows from the available bounds on that threshold and
+normalization constant, as in
+[the Agmon argument](agmon-ground-state-suppression.md).
 
-## 5. The structural reason, stated once
+## 5. Global comparisons and local probability
 
-Both attempts, Agmon and comparison, use the eigenvalue equation
-$-A'\Delta\Omega+(B'V-e_0)\Omega=0$, in which $e_0$ is the **total**
-ground-state energy and is extensive. Any inequality derived from it
-compares the total potential with the total energy, so it distinguishes
-configurations only by their global excess. The Euclidean weight
-$e^{-S_w}=\prod_pe^{-(2/g_E^2)V_p}$ factorizes over plaquettes and
-therefore separates configurations locally by construction, with no
-reference to a total energy.
+The two comparisons use the eigenvalue equation
+$-A'\Delta\Omega+(B'V-e_0)\Omega=0$ and its total ground energy.
+The weighted identity and exponential trial function control global
+potential excess. Their failure to prove local suppression does not
+exclude a different Hamiltonian argument.
 
-This is the precise content of the observation in
-[the typical-field note](flow-conjugation-truncation.md#free-field-size-is-a-benchmark-not-a-supremum-bound): the
-Hamiltonian formulation has a state and a global eigenvalue equation
-where the Euclidean formulation has a local weight. The three notes
-since then have tried the two standard ways of extracting a local
-statement from a global equation, and both stop at the same place. A
-local statement would need an input of a different kind, for instance a
-proof that the ground state is a Gibbs state for a local potential, or
-the transfer-matrix identification of $\Omega^2$ with a Euclidean
-measure on a time slice, which is the route the constructive programme
-takes.
+The Wilson density $e^{-S_w}=\prod_pe^{-(2/g_E^2)V_p}$ prices an action
+change locally, but shared links and the partition function prevent
+this unnormalized factorization from being a probability theorem.
+The [slice representation](ground-state-measure-transfer.md) is a
+different exact identity at fixed temporal spacing. Passing to the
+Hamiltonian requires convergence of the ground-state projectors;
+transferring a local bound requires the same anisotropic slice
+observable and constants uniform in all claimed limits.
 
 ## 6. Consequence for STATE
 
-The question named in
-[the global/local note](agmon-ground-state-suppression.md) §4 is answered in the
-negative by Proposition 4: pointwise Gibbs domination of the
-Kogut--Susskind ground state does not follow from the eigenvalue
-equation, for the same extensivity reason as the Agmon bound. What the
-attempt produced instead is worth keeping: the exact relations
-$\Delta V=4C_2(N|\mathcal P|-V)$ and $|\nabla V|^2\le16V$, and the exact
-ground-state sum rule of Proposition 3, which constrains the magnetic
-variance in terms of kinetic quantities. The line of attack that remains is the transfer-matrix identification of
-the ground-state measure with a Euclidean measure, carried out in
-[the transfer note](ground-state-measure-transfer.md): $|\Omega|^2d\mu$ is
-the time-slice marginal of the four-dimensional Wilson measure, so every
-local Euclidean estimate transfers, and the local large-field bound
-becomes available in its standard scale-invariant form
-$e^{-c\eta^2/g^2}$.
+The exact Laplacian/gradient identities and sum rule survive, with
+the setting above and the periodic three-dimensional plaquette incidence
+used in the gradient proof. Proposition 4 gives the stated global
+comparison; it neither proves nor disproves every possible Gibbs
+domination bound. The [Agmon tail](agmon-ground-state-suppression.md)
+also controls a global excess with finite-volume constants.
+
+No normalized interacting local suppression
+$C e^{-c\eta^2/g^2}$ follows from either eigenfunction comparison,
+plaquette action factorization or the slice identity alone. The missing
+local probability and signed operator estimates remain separate.

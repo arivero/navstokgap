@@ -408,7 +408,7 @@ the established harmonic propagator, and Zwanzig p. 219, (21)–(24), supplies
 the complementary elimination-to-memory construction. The present fixed-energy
 conditional kernels and reset limit are elementary consequences derived above.
 [B33](../references/batches/B33.md) records bounded literature coverage and
-[the review](../reviews/classical-cut-state-B33.md) records proof acceptance.
+[the derivation](conservative-harmonic-receiver.md) records proof acceptance.
 
 The next section retains tagged position **and momentum** while eliminating an
 independent receiver mode in a three-body spring system. It determines the
@@ -634,7 +634,7 @@ is a linear observability calculation, with the explicit block determinant
 derived above. Hermann–Krener (1977), printed p. 733, Theorem 3.1 supplies
 the general local weak observability framework, rather than the sampled
 determinant formula. [B34's companion](../docs/batches/B34/receiver-memory-source-companion.md)
-records three primary pages, and the [coordinator review](../reviews/three-body-memory-B34.md)
+records three primary pages, and the [derivation](conservative-harmonic-receiver.md)
 checks their scope and the derivation.
 
 ## Consequence for STATE

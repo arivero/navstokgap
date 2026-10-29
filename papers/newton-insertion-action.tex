@@ -2,6 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
+\DeclareUnicodeCharacter{1E93}{\d{z}}
 \usepackage{amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}
 \usepackage{longtable,booktabs,array,calc}
@@ -136,10 +137,14 @@ For \(\eta=Ft(\tau-t)/(2m)\) this is
  =\frac{F}{2v}A_{\rm chord,fall}
  =\frac{F}{4v}A_{\rm inertial,fall}=\frac{\tau\Delta E}{12}.\]
 
-A common total derivative added to \(L\) cancels because the endpoints
-and times agree. The bare inertial and falling paths have different
-vertical endpoints; an observable phase comparison needs
-endpoint/control phases.
+A common ordinary point-function term \(dG(q,t)/dt\) added to \(L\)
+cancels because the endpoints and times agree. A velocity-dependent
+\(G\) changes the endpoint data required by that statement: adding
+\(d(\kappa\dot y)/dt\) changes this chord-minus-parabola action by
+\(-\kappa F\tau/m\), since their endpoint velocities differ. That is a
+higher-derivative Lagrangian, outside this point-mechanics convention.
+The bare inertial and falling paths have different vertical endpoints;
+an observable phase comparison needs endpoint/control phases.
 
 For a partition \(0=t_0<\cdots<t_N=T\) with steps \(\tau_j\), the
 polygon interpolating exact trajectory values has
@@ -215,9 +220,9 @@ instead,
 
 This preserves precisely the matched-endpoint lens and its
 normalization, not the inertial tangent sector. Source/proof context:
-\href{../research/handoffs/B11.md}{B11} records the interrupted source
-audit and limited coordinator reading; it supplies no completed
-independent review.
+The named source passages above support the geometric comparison. Its
+written calculation is internal; no independent historical or proof
+review is claimed.
 
 \hypertarget{controlled-reunion-of-the-inertial-and-falling-arms}{%
 \subsection{Controlled reunion of the inertial and falling

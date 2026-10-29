@@ -2,6 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
+\DeclareUnicodeCharacter{1E93}{\d{z}}
 \usepackage{amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}
 \usepackage{longtable,booktabs,array,calc}
@@ -166,21 +167,30 @@ What the segment is, read as a state rather than as an amplitude, is
 sharper. Regard \(K_T(x,y)\) as the wave function of a state on the two
 boundary points, an element of \(\mathcal H\otimes\mathcal H\). Its
 Schmidt decomposition is the spectral one,
-\[K_T=\sum_ne^{-TE_n/\hbar}\ \psi_n\otimes\overline{\psi_n},\] which is
-the thermofield double at inverse temperature \(\beta=2T\). The two ends
-are entangled with Schmidt weights \(p_n\propto e^{-2TE_n/\hbar}\), so
-the entanglement entropy between them equals the thermal entropy at
-\(\beta=2T\) and decays, for large \(T\), as
-\[S_{\rm ent}(T)\ \simeq\ d_1\Big(\frac{2T\Delta}{\hbar}+\log\frac1{d_1}\Big)e^{-2T\Delta/\hbar},\]
-with \(d_1\) the degeneracy of the first excited level. \textbf{The gap
-is the rate at which the two ends of the segment disentangle as the bulk
-lengthens.} Factorization of the wormhole at large \(T\) and
-disentanglement of the thermofield double are the same statement. For
-the Yang--Mills slab of \href{ground-state-measure-transfer.md}{the
-transfer note}, the wave functional
-\(\Psi(U_{-T},U_T)=\langle U_T|e^{-2TH/\hbar}|U_{-T}\rangle\) of the two
-boundary slices is the thermofield double of the lattice Hamiltonian at
-\(\beta=2T\), and the gap is the disentanglement rate of the two slices.
+\[K_T=\sum_ne^{-TE_n/\hbar}\ \psi_n\otimes\overline{\psi_n},\] which,
+after normalization and identification of the second factor with the
+conjugate Hilbert space, is the thermofield double at physical inverse
+temperature \(\beta_E=2T/\hbar\). Assume a simple ground state, an
+isolated first excitation \(\Delta\) of finite degeneracy \(d_1\), and a
+heat trace finite at some positive inverse temperature. The two ends are
+entangled with Schmidt weights \(p_n\propto e^{-2TE_n/\hbar}\), so their
+entropy equals the thermal entropy and has large-\(T\) asymptotics
+\[S_{\rm ent}(T)=d_1\left(1+\frac{2T\Delta}{\hbar}\right)
+ e^{-2T\Delta/\hbar}+o(e^{-2T\Delta/\hbar}).\] After subtracting
+\(E_0\), put \(x=2T\Delta/\hbar\). The partition function is
+\(1+d_1e^{-x}\) plus higher-energy terms, and
+\(S=\log Z+\beta_E\langle H-E_0\rangle\) gives the coefficient. The
+\(d_1\) states are separate Schmidt weights; there is no \(\log(1/d_1)\)
+term. \textbf{The gap is the rate at which the two ends of the segment
+disentangle as the bulk lengthens.} Factorization of the wormhole at
+large \(T\) and disentanglement of the thermofield double are the same
+statement. For the Yang--Mills slab of
+\href{ground-state-measure-transfer.md}{the transfer note}, the wave
+functional \(\Psi(U_{-T},U_T)=\langle U_T|e^{-2TH/\hbar}|U_{-T}\rangle\)
+of the two boundary slices is the thermofield double of the lattice
+Hamiltonian at \(\beta_E=4T/\hbar\). Its entropy uses the same formula
+with \(T\) replaced by \(2T\). The semigroup duration, physical inverse
+temperature and energy gap retain these conversion factors.
 
 The ensemble wormholes of Section 3, a cylinder joining two circles,
 have no one-dimensional counterpart: a connected one-manifold with two

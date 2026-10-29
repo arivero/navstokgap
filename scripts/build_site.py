@@ -20,6 +20,7 @@ including its keyboard-operated refinement slider and no-JavaScript fallback.
 import datetime
 import html
 import json
+import os
 import re
 import subprocess
 import sys
@@ -32,6 +33,16 @@ OUT_SOURCES = DOCS / "sources"
 REPO = "https://github.com/arivero/navstokgap"
 BLOB = f"{REPO}/blob/main"
 SITE_URL = "https://arivero.github.io/navstokgap/"
+
+# Retired process pages route to their maintained scientific/navigation owner.
+# No duplicate Markdown report or score table remains behind these URLs.
+PAGE_REDIRECTS = {
+    "notes/corpus-audit-2026-10-01.html": "maps/obstructions.html",
+    "maps/programme-evolution.html": "maps/dependencies.html",
+    "maps/site-audit.html": "research.html",
+    "maps/navigation-test.html": "maps/dependencies.html",
+    "maps/synthesis-opportunities.html": "maps/book-map.html",
+}
 
 # Former public note URLs remain usable after their content is consolidated.
 # Values are the maintained note slug and its section anchor.
@@ -856,6 +867,20 @@ NOTE_FRAGMENT_REDIRECTS = {'action-unit-dimensional-selection': {'setting': ('ac
                               'which-limits-of-newtons-construction-reach-the-zero-branch': ('zero-branch-reachability',
                                                                                              'consequence-for-state')}}
 
+# Retain headings changed while integrating retired review corrections.
+NOTE_FRAGMENT_REDIRECTS.setdefault("magnetic-energy-identities", {}).update({
+    "the-structural-reason-stated-once": ("magnetic-energy-identities", "global-comparisons-and-local-probability"),
+})
+NOTE_FRAGMENT_REDIRECTS.setdefault("su3-constants", {}).update({
+    "what-does-not-change": ("su3-constants", "scope-and-consequence-for-state"),
+    "consequence-for-state": ("su3-constants", "scope-and-consequence-for-state"),
+})
+NOTE_FRAGMENT_REDIRECTS.setdefault("lieb-robinson-kogut-susskind", {}).update({
+    "correlation-length-at-strong-coupling": ("lieb-robinson-kogut-susskind", "clustering-and-the-microscopic-range"),
+    "the-velocity-at-weak-coupling-and-lattice-causality": ("lieb-robinson-kogut-susskind", "weak-coupling-and-physical-causality"),
+    "what-the-bound-supplies-and-what-openness-still-needs": ("lieb-robinson-kogut-susskind", "gap-stability-is-a-separate-input"),
+})
+
 CSS = """
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -1023,7 +1048,8 @@ def write_search_files(generated):
         raise ValueError("Invalid public IndexNow ownership key")
     key_file = DOCS / f"{key}.txt"
     key_file.write_text(key + "\n", encoding="utf-8")
-    redirects = {f"docs/notes/{slug}.html" for slug in NOTE_REDIRECTS}
+    redirects = ({f"docs/notes/{slug}.html" for slug in NOTE_REDIRECTS}
+                 | {f"docs/{path}" for path in PAGE_REDIRECTS})
     paths = sorted(name.removeprefix("docs/") for name in generated
                    if name.startswith("docs/") and name.endswith(".html")
                    and name not in redirects)
@@ -1277,8 +1303,7 @@ search.addEventListener('input', () => {
     out_maps = DOCS / "maps"
     out_maps.mkdir(parents=True, exist_ok=True)
     maps = ["dependencies", "book-map", "obstructions", "notation-and-scales",
-            "refinement-correspondences", "programme-evolution", "site-audit",
-            "synthesis-opportunities", "navigation-test", "pdf-audit"]
+            "refinement-correspondences", "pdf-audit"]
     for slug in maps:
         source = ROOT / "research" / f"{slug}.md"
         def map_link(m):
@@ -1425,9 +1450,25 @@ search.addEventListener('input', () => {
 
     # Remove retired generated pages before writing the manifest and sitemap.
     stale = [q for q in OUT_NOTES.glob("*.html")
-             if q.stem not in slugs and q.stem not in NOTE_REDIRECTS]
+             if q.stem not in slugs and q.stem not in NOTE_REDIRECTS
+             and q.relative_to(DOCS).as_posix() not in PAGE_REDIRECTS]
     for q in stale:
         q.unlink()
+
+    for old, destination in PAGE_REDIRECTS.items():
+        target = DOCS / destination
+        if not target.is_file():
+            raise ValueError(f"Missing retired-page destination: {old} -> {destination}")
+        output = DOCS / old
+        relative = os.path.relpath(target, output.parent)
+        meta = (f'<meta http-equiv="refresh" content="0; url={relative}">'
+                f'<link rel="canonical" href="{SITE_URL}{destination}">')
+        body = ('<h1>Maintained argument</h1><p>The completed process record '
+                'has been retired. Current proofs and dependencies are at '
+                f'<a href="{relative}">the maintained treatment</a>. '
+                'Earlier versions remain in repository history.</p>')
+        output.write_text(page("Maintained argument — navstokgap", body,
+                               root="../", extra_meta=meta), encoding="utf-8")
 
     # Declare every generated file, so that check_repository.py can skip them
     # while keeping the source-companion and checksum rules for real sources.

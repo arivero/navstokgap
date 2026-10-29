@@ -1,7 +1,7 @@
 # B22 observable access: source companion
 
 Status: coordinator reviewed for G02; see the
-[review](../../../reviews/observable-access-B22.md).
+[derivation](../../../notes/susceptibility-gap.md).
 
 Result: Levin–Peres–Wilmer supplies the exact product-chain spectral facts
 needed for C045–C046, but in two distinct normalizations. Chapter 12 treats a

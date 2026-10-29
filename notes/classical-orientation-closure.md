@@ -264,7 +264,7 @@ remain. Neither local rotation averaging nor ancilla/discard closure was
 needed for this first-order restriction. Source: the
 [held original](../docs/batches/B70/de-la-Torre-Masanes-Short-Mueller-2011.pdf),
 PDF pp. 3–4, equations (4), (6), (8)–(14);
-[B77 internal check](../reviews/reversible-generator-B77.md).
+[B77 derivation](classical-orientation-closure.md).
 
 ## Consequence for STATE
 

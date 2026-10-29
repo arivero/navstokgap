@@ -1,6 +1,6 @@
 # The confinement scale in three bands, with published numbers, and the verification restated gauge-invariantly
 
-Later qualifications: [reasons to stop](mass-gap-openings.md#correlation-inequalities-and-the-transfer-they-require) rejects the proposed crossover certificate as a currently available route; [mass-gap openings](mass-gap-openings.md) §1 warns of scalar softening; [the October 1 audit](corpus-audit-2026-10-01.md) §3 identifies the unsupported blocking and continuum claims.
+Later qualifications: [reasons to stop](mass-gap-openings.md#correlation-inequalities-and-the-transfer-they-require) rejects the proposed crossover certificate as a currently available route; [mass-gap openings](mass-gap-openings.md) §1 warns of scalar softening; [obstruction map](../research/obstructions.md) identifies the unsupported blocking and continuum claims.
 
 > **Correction (2026-10-02).** The earlier claim that three strong-side
 > blocking steps are standard once mixing is certified is withdrawn.
@@ -230,7 +230,7 @@ blocking steps. [The conditional-theorem note](mass-gap-conditional-theorem.md)
 organizes proposed mixing and RG hypotheses; invoking it here does not
 discharge them. Continuum existence, Osterwalder--Schrader or Wightman
 axioms, nontriviality, and a finite positive physical spectral gap
-remain separate obligations, as the October 1 audit §3 emphasizes.
+remain separate obligations, as the spectral obligations require.
 
 ## 3. What this changes
 

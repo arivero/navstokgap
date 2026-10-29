@@ -213,7 +213,23 @@ narrow-resonance cancellation. This is a failure of the chosen viscous model
 and spectrum together, not a theorem about every causal extended-charge model.
 Source context: [B23](../docs/batches/B23/harmonic-receiver-source-companion.md),
 Zwanzig equations (16)–(17), (23), (25)–(30), passages distinguishing friction,
-forcing and bath preparation; [Q02 internal review](../reviews/radiation-noise-Q02.md).
+forcing and bath preparation. For a homogeneous isotropic transverse field,
+if $u(\omega)d\omega$ is the total positive-frequency energy density,
+isotropy and equal electric/magnetic energy give
+$u(\omega)=3\epsilon_0S_E(\omega)/\pi$. With electromagnetic mode
+density $\omega^2/(\pi^2c^3)$ the chosen spectrum therefore means
+energy $K\omega$ per mode. Without those field hypotheses its coefficient
+is only a chosen one-component noise normalization.
+
+[Boyer 1969](https://harvest.aps.org/v2/journals/articles/10.1103/PhysRev.182.1374/fulltext),
+pp. 1374–1376 and 1379–1380, passage read with formula-OCR limitations,
+supplies the spectral/resonance precedent and warns of the ultraviolet
+failure of the dipole/nonrelativistic approximation.
+[Boyer 1975](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.11.790),
+abstract read only, explicitly supplies the random homogeneous boundary
+condition and its Planck normalization. The locally viscous response above
+and the third-order response below remain different models; neither
+selects a nonzero background amplitude.
 
 ## Lorentz-invariant spectral form and conditional Planck calibration
 

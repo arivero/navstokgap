@@ -105,11 +105,11 @@ This is a review draft, not a submitted or accepted paper. Author identity,
 affiliation and submission declarations have not been invented. Next is a
 reader-focused editorial review and resolution of any exact prior-art lead,
 followed by author completion and explicit submission direction. See
-[P05 handoff](../research/handoffs/P05.md).
+[P05 argument](../papers/same-collisions-different-transport.tex).
 
 ## P07 editorial readiness completed
 
-The [author decision sheet](../reviews/publication-readiness-P07.md) compares
+The [author decision sheet](../research/pdf-audit.md) compares
 both completed drafts and records their bounded editorial revisions. The gas
 paper remains first for author review. Author details, destination and article
 type remain to be supplied before venue preparation or submission. Current

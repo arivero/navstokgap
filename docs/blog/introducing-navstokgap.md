@@ -130,7 +130,7 @@ controlled, derive its estimate, then follow that estimate as the model changes.
 The repository is organized for a fresh agent or a human reader to resume it.
 There are source originals and reading notes, a claim ledger, an idea register,
 small executable checks, LaTeX manuscripts and generated PDFs. The
-[research programme](https://github.com/arivero/navstokgap/blob/main/research/PROGRAMME.md)
+[research programme](https://github.com/arivero/navstokgap/blob/main/research/STATE.md)
 sets the sequence; the task board names the next bounded pieces of work.
 
 Luna and Sol have roles in bibliography and source collation, with calculation

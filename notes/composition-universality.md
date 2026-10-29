@@ -181,7 +181,7 @@ independence; the ordered process is not mixing. The
 [collision manuscript](../papers/collision-action-relaxation.tex), §§5--6,
 [PDF](../out/papers/collision-action-relaxation.pdf), contains both proofs
 and the Palm residual-time calculation; [B26](../references/batches/B26.md)
-and its [internal review](../reviews/ordered-preparation-B26.md) record the
+and its [derivation](composition-universality.md) record the
 comparison. Matching these mechanical scales establishes no universal floor.
 
 ## A conditional Brownian record floor

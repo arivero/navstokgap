@@ -1,7 +1,7 @@
 # An explicit strong-coupling gap for the Wilson transfer matrix: $SU(3)$ is gapped for $g^2\ge1059$, with $\Delta\ge(\hbar c/a)\,4\log[1/(176(e^{6/g^2}-1))]$
 
 > **Correction (2026-10-02).** A referee report and the
-> [corpus audit](corpus-audit-2026-10-01.md) §3c found the errors below;
+> [obstruction map](../research/obstructions.md) found the errors below;
 > the text is corrected in place.
 >
 > - The former headline, $g^2\ge176$ with

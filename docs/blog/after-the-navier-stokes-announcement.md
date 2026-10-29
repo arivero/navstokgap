@@ -124,6 +124,6 @@ chose to do with that change: keep the work readable, sharpen the next physical
 question, and leave a better handoff.
 
 The project is [arivero/navstokgap](https://github.com/arivero/navstokgap).
-The [live research programme](https://github.com/arivero/navstokgap/blob/main/research/PROGRAMME.md)
+The [live research programme](https://github.com/arivero/navstokgap/blob/main/research/STATE.md)
 and [restart state](https://github.com/arivero/navstokgap/blob/main/research/STATE.md)
 show where the next contribution begins.

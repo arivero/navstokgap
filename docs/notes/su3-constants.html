@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SU(3) in four dimensions: every constant of this programme, evaluated</title>
+<title>SU(3) constants and conditional spectral comparisons</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,8 +79,7 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>SU(3) in four dimensions: every constant of this programme,
-evaluated</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/su3-constants.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/su3-constants.pdf">PDF</a></p><p>With the goal narrowed to <span class="math inline">\(SU(3)\)</span>,
+<h1>SU(3) constants and conditional spectral comparisons</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/su3-constants.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/su3-constants.pdf">PDF</a></p><p>With the goal narrowed to <span class="math inline">\(SU(3)\)</span>,
 each bound proved in these notes becomes a number. The group data are
 <span class="math display">\[N=3,\quad \dim G=8,\quad
 C_2(R_{\rm f})=\frac{N^2-1}{2N}=\frac43,\quad
@@ -89,37 +88,14 @@ Z(G)=\mathbb Z_3,\]</span> in the normalization <span
 class="math inline">\(\operatorname{tr}T^aT^b=\tfrac12\delta^{ab}\)</span>,
 and the one- and two-loop coefficients are <span
 class="math display">\[b_0=\frac{11N}{48\pi^2}=\frac{11}{16\pi^2}=0.06966,\qquad
-\frac{b_1}{2b_0^2}=\frac{51}{121}=0.4215 .\]</span> The consequences,
-collected: the strong-coupling criterion of <a
-href="strong-coupling-uniform-gap.html">the T2 note</a> reads <span
-class="math inline">\(54/g^4\le\beta_*\)</span>; the gap it gives is
-<span class="math inline">\(\Delta_{a,L}\ge\tfrac23\gamma g^2\,\hbar
-c/a\)</span>; the unperturbed flux-loop gap is <span
-class="math inline">\(\tfrac83g^2\hbar c/a\)</span>; the Lieb–Robinson
-velocity is <span
-class="math inline">\(v\le96e\,c/g^2\simeq261\,c/g^2\)</span>; the exact
-identities are <span class="math inline">\(\Delta
-V=\tfrac{16}3(3|\mathcal P|-V)\)</span> and <span
-class="math inline">\(|\nabla V|^2\le48V\)</span>; the number of
-renormalization doublings from a bare coupling <span
-class="math inline">\(g_{\rm UV}^2=1/2\)</span> to a strong-coupling
-threshold is <span
-class="math display">\[n\simeq\frac{1}{2b_0\log2}\Big(\frac1{g_{\rm
-UV}^2}-\frac1{g_{\rm thr}^2}\Big)\le\frac{2}{0.0966}\simeq21,\]</span>
-fewer than the thirty of <span class="math inline">\(SU(2)\)</span>
-because the coupling runs faster; and the flowed upper bound <span
-class="math inline">\(4.26\,\hbar c/\sqrt{8t}\)</span> is unchanged,
-because in the free limit the eight gluon species multiply numerator and
-denominator equally. Two features of <span
-class="math inline">\(SU(3)\)</span> that <span
-class="math inline">\(SU(2)\)</span> lacks are recorded in Section 4:
-the defining representation is complex, so <span
-class="math inline">\(\operatorname{tr}U_p\)</span> is complex and the
-plaquette term keeps only its real part, and the centre is <span
-class="math inline">\(\mathbb Z_3\)</span>, so a periodic box carries
-<span class="math inline">\(27\)</span> electric-flux sectors instead of
-<span class="math inline">\(8\)</span>. Constants explicit; nothing
-promoted.</p>
+\frac{b_1}{2b_0^2}=\frac{51}{121}=0.4215 .\]</span> The tables
+specialize group factors, running coefficients and stated conditional
+bounds. The Kogut–Susskind stability threshold remains existential.
+One-loop running to order-one coupling is an extrapolation. A <span
+class="math inline">\(SU(3)\)</span> field gap is not obtained by
+substituting group constants into the proved <span
+class="math inline">\(SU(2)\)</span> matrix theorem. Locality upper
+bounds and observed-channel estimates retain their separate scope.</p>
 <h2 id="group-data">1. Group data</h2>
 <table>
 <colgroup>
@@ -200,9 +176,9 @@ class="math inline">\(\beta\le\beta_*(3,\{0,1\}^3)\)</span> becomes
 g_0=\Big(\frac{54}{\beta_*}\Big)^{1/4},\]</span> and the gap is <span
 class="math display">\[\Delta_{a,L}\ \ge\
 \gamma\,\frac{g^2}{2}\,\frac43\,\frac{\hbar c}{a}
-=\frac{2\gamma}{3}\,g^2\,\frac{\hbar c}{a}.\]</span> The unperturbed
-physical excitation, a single plaquette flux loop in the fundamental,
-costs <span class="math inline">\(2C_2g^2\hbar c/a=\tfrac83g^2\hbar
+=\frac{2\gamma}{3}\,g^2\,\frac{\hbar c}{a}.\]</span> A single plaquette
+flux-loop excitation in the fundamental, costs <span
+class="math inline">\(2C_2g^2\hbar c/a=\tfrac83g^2\hbar
 c/a\)</span>.</p>
 <p><strong>Feynman–Bijl, strong coupling</strong> (<a
 href="lattice-gap-upper-bounds.html">upper-bound note</a> Corollary 3).
@@ -220,13 +196,13 @@ sides.</p>
 href="lieb-robinson-kogut-susskind.html">note</a>). Four plaquettes per
 link and <span class="math inline">\(\|w_p\|\le12\hbar c/(ag^2)\)</span>
 give <span class="math inline">\(J\le48\hbar c/(ag^2)\)</span> and <span
-class="math display">\[v=\frac{2eaJ}{\hbar}\ \le\ \frac{96\,e\,c}{g^2}\
-\simeq\ \frac{261\,c}{g^2},\]</span> so the lattice light cone exceeds
-<span class="math inline">\(c\)</span> for <span
-class="math inline">\(g^2&lt;261\)</span>, that is throughout any regime
-of interest, and the strong-coupling correlation length is <span
-class="math inline">\(\xi\le C&#39;\,a\,/(\gamma
-g^4)\cdot\tfrac94\)</span>.</p>
+class="math inline">\(v_{\rm LR}\le48C_{\rm LR}c/g^2\)</span>. The
+former <span class="math inline">\(96e\,c/g^2\simeq261c/g^2\)</span>
+uses the unverified <span class="math inline">\(C_{\rm LR}=2e\)</span>
+normalization. It implies no actual superluminal speed. The gap gives
+<span class="math inline">\(\hbar v_{\rm LR}/\Delta\le72C_{\rm
+LR}a/(\gamma g^4)\)</span>; a clustering length also retains microscopic
+range.</p>
 <p><strong>Exact identities</strong> (<a
 href="magnetic-energy-identities.html">note</a>). With <span
 class="math inline">\(C_2=4/3\)</span> and <span
@@ -238,21 +214,23 @@ that note holds with <span class="math inline">\(2C_2=8/3\)</span>.</p>
 href="blocking-criterion-monotone.html">criterion note</a>). The block
 criterion is <span class="math inline">\(\beta_{\rm
 block}=72M^2/(g^2\delta(g;M))\)</span> and the direct one is <span
-class="math inline">\(\beta_{\rm direct}=24/g^4\)</span>, so the ratio
-at strong coupling is <span class="math inline">\(3M^2/8\)</span> as
-before, blocking losing by <span class="math inline">\(3/2\)</span>
-already at <span class="math inline">\(M=2\)</span>.</p>
-<p><strong>Small volume</strong> (<a
-href="low-dimensional-mass-gap.html">G07</a> Proposition 7). The
-constant-mode sector has <span class="math inline">\(D=3\)</span> and
-gauge group <span class="math inline">\(SU(3)\)</span>, so the matrix
-model runs over <span class="math inline">\(\vec x_i\in\mathbb
-R^8\)</span> with the structure constants of <span
-class="math inline">\(SU(3)\)</span> in place of the cross product; the
-gap keeps the form <span
-class="math inline">\(\delta_1^{(3)}g^{2/3}\hbar c/L\)</span> with a
-pure number <span class="math inline">\(\delta_1^{(3)}\)</span> specific
-to the group.</p>
+class="math inline">\(\beta_{\rm direct}=72/g^4\)</span>, from <span
+class="math inline">\(32N/C_2=72\)</span>, so the ratio at strong
+coupling is <span class="math inline">\(3M^2/8\)</span> as before,
+blocking losing by <span class="math inline">\(3/2\)</span> already at
+<span class="math inline">\(M=2\)</span>.</p>
+<p><strong>Small volume.</strong> A spatially constant <span
+class="math inline">\(SU(3)\)</span> sector has three vectors in <span
+class="math inline">\(\mathbb R^8\)</span> with the <span
+class="math inline">\(SU(3)\)</span> structure constants. Homogeneity
+gives the candidate energy scale <span
+class="math inline">\(g^{2/3}\hbar c/L\)</span> if that matrix
+Hamiltonian has a positive first gap. The <a
+href="low-dimensional-mass-gap.html">explicit matrix proof</a> is for
+<span class="math inline">\(SU(2)\)</span>. The <span
+class="math inline">\(SU(3)\)</span> spectral input and the full field
+theory’s nonzero-mode comparison are additional obligations, not proved
+group substitutions.</p>
 <h2 id="the-step-count">3. The step count</h2>
 <p>With <span
 class="math inline">\(2b_0\log2=2(0.06966)(0.6931)=0.09657\)</span>, the
@@ -292,11 +270,12 @@ class="math inline">\(1/g_{\rm thr}^2\to0\)</span></th>
 class="math inline">\(31.1\)</span>, <span
 class="math inline">\(62.1\)</span>, since <span
 class="math inline">\(b_0\)</span> is smaller by <span
-class="math inline">\(2/3\)</span>. <strong>The <span
-class="math inline">\(SU(3)\)</span> problem needs about a third fewer
-steps than <span class="math inline">\(SU(2)\)</span></strong> at the
-same bare coupling, which is the only quantitative respect in which the
-physical case is easier.</p>
+class="math inline">\(2/3\)</span>. <strong>This one-loop extrapolation
+gives about a third fewer steps for <span
+class="math inline">\(SU(3)\)</span> than <span
+class="math inline">\(SU(2)\)</span></strong> under the same
+bare-coupling convention. It is not a certified blocking trajectory or
+an assessment of total proof difficulty.</p>
 <h2 id="two-features-specific-to-su3">4. Two features specific to <span
 class="math inline">\(SU(3)\)</span></h2>
 <p><strong>The defining representation is complex.</strong> For <span
@@ -314,47 +293,38 @@ variance <span class="math inline">\(\tfrac12\)</span> rather than <span
 class="math inline">\(1\)</span>; and charge conjugation is a nontrivial
 symmetry, so the spectrum splits into <span
 class="math inline">\(C\)</span>-even and <span
-class="math inline">\(C\)</span>-odd sectors, and the glueball channel
-relevant to the gap is <span class="math inline">\(C\)</span>-even.</p>
+class="math inline">\(C\)</span>-odd sectors, and a <span
+class="math inline">\(C\)</span>-even glueball insertion probes its own
+channel. This does not prove that the channel contains the global lowest
+excitation.</p>
 <p><strong>The centre is <span class="math inline">\(\mathbb
 Z_3\)</span>.</strong> The valley minima of <a
 href="torus-valley-potential.html">the valley note</a> §4 lie at
 holonomies that are central, so there are three per direction and <span
 class="math inline">\(27\)</span> electric-flux sectors on a
 three-torus, against <span class="math inline">\(8\)</span> for <span
-class="math inline">\(SU(2)\)</span>. The tunnelling barrier between
-them is the same <span class="math inline">\(O(\hbar c/L)\)</span>, and
-the sector structure is what the small-volume spectrum organizes itself
-by.</p>
-<h2 id="what-does-not-change">5. What does not change</h2>
-<p>The structural results are group-independent and stand as
-written:</p>
-<ul>
-<li>the seven closed routes of <a
-href="mass-gap-obligations-lattice.html#existing-estimates-and-examined-routes">the
-position note</a> §3, each closed by an argument that uses no property
-of the group beyond compactness and non-abelianness;</li>
-<li>the moment hierarchy and the reduction of <span
-class="math inline">\(m&lt;\infty\)</span> to one flowed correlator,
-where the free-limit value <span class="math inline">\(4.26\,\hbar
-c/\sqrt{8t}\)</span> is unchanged because the <span
-class="math inline">\(\dim G=8\)</span> species multiply the
-susceptibility and the gradient term equally;</li>
-<li>the equivalence of T2<span class="math inline">\(&#39;\)</span> with
-the absence of a zero-temperature phase transition;</li>
-<li>the three places where the non-abelian structure is isolated, all of
-which are statements about the commutator and hold for <span
-class="math inline">\(SU(3)\)</span> with the <span
-class="math inline">\(SU(3)\)</span> structure constants.</li>
-</ul>
-<h2 id="consequence-for-state">6. Consequence for STATE</h2>
-<p>Specializing to <span class="math inline">\(SU(3)\)</span> fixes
-every constant and shortens the step count to about twenty-one doublings
-from <span class="math inline">\(g_{\rm UV}^2=1/2\)</span>. It changes
-no structural conclusion, and the open obligations are those of <a
-href="mass-gap-obligations-lattice.html#existing-estimates-and-examined-routes">the
-position note</a> §5. The next work should be carried out with these
-numbers in place, and any new bound should be reported in them.</p>
+class="math inline">\(SU(2)\)</span>. These labels and central holonomy
+minima do not determine spectral weights or prove a physical gap. The
+quoted <span class="math inline">\(O(\hbar c/L)\)</span> barrier is the
+scale of the specified one-loop valley calculation.</p>
+<span id="what-does-not-change"></span><span id="consequence-for-state"></span><h2 id="scope-and-consequence-for-state">5. Scope and consequence for
+STATE</h2>
+<p>The <a href="mass-gap-obligations-lattice.html">spectral
+obligations</a> establish neither an exhaustive no-go classification of
+Hamiltonian methods nor an equivalence between all-coupling positivity
+and absence of every phase transition. The <a
+href="finiteness-half-flowed-susceptibility.html">susceptibility/moment
+argument</a> needs a nonzero admissible Hamiltonian insertion and
+infrared moments. Four-dimensional flow finiteness alone supplies
+neither.</p>
+<p>In the specified free Gaussian example the channel estimate <span
+class="math inline">\(4.26\,\hbar c/\sqrt{8t}\)</span> is unchanged when
+eight colour species multiply numerator and denominator. It is not an
+interacting physical gap bound without the observable, domain and limit
+premises.</p>
+<p>The group constants survive. Kogut–Susskind and Wilson thresholds,
+formal running counts, matrix truncations, observed channels and
+physical continuum limits retain their individual hypotheses.</p>
 
 </main>
 <footer class="site"><div class="wrap">

@@ -355,7 +355,7 @@ derive the reference action. The
 and its running-coefficient section, contains the full arbitrary-partition
 proof and source reading; the [PDF](../out/papers/regulator-limits.pdf),
 [B08](../references/batches/B08.md) and its
-[review](../reviews/regulator-limits-B08.md) retain the detailed record.
+[derivation](../papers/regulator-limits.tex) retain the detailed record.
 The manuscript also gives a bounded-speed shrinking sine example with a
 fixed action defect and growing acceleration, and a separate scalar
 stationary-phase/delta-weight calculation. Those examples motivate testing

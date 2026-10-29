@@ -166,9 +166,21 @@ class="math inline">\(\eta(t)=a t(T-t)\)</span> has</p>
 m2\int_0^T\dot\eta^2dt
 =\frac{ma^2T^3}{6}\longrightarrow0.\]</span></p>
 <p>The comparison paths need not be solutions of the boundary-value
-problem. A positive Dirichlet Hessian controls cost relative to
-variation norm; it does not bound that norm away from zero. The
-independently useful <a
+problem. A smooth scalar action law alone also says nothing about
+proximity in a chosen path topology. For example, in the subspace <span
+class="math inline">\(\mathcal P=\{0\}\cup(1/2,3/2)\subset\mathbb
+R\)</span>, set <span class="math inline">\(S(0)=0\)</span> and <span
+class="math inline">\(S(x)=(x-1)^2\)</span> on the other component. The
+family <span class="math inline">\(q_0=0\)</span>, <span
+class="math inline">\(q_a=1+a\)</span> for <span
+class="math inline">\(0&lt;|a|&lt;1/2\)</span> has <span
+class="math inline">\(S(q_a)=a^2\)</span>, but does not converge to
+<span class="math inline">\(q_0\)</span>. A claim about nearby paths
+therefore requires continuity of the variation in that topology; the
+displayed polynomial mechanical variation has it even in <span
+class="math inline">\(H^1\)</span>. A positive Dirichlet Hessian
+controls cost relative to variation norm; it does not bound that norm
+away from zero. The independently useful <a
 href="https://github.com/arivero/navstokgap/blob/main/papers/action-gap-foundations.tex">foundations
 manuscript</a> retains the smooth-potential and relativistic
 speed-margin extensions, the normalized Hessian estimate, and the
@@ -584,12 +596,91 @@ supplied angular quantum unit. Essential self-adjointness, distinguished
 extensions and endpoint dynamics have different thresholds; the precise
 Dirac and Klein–Gordon domains are in <a
 href="self-sufficiency-contrast.html">self-sufficiency</a>, not inferred
-from the classical inequality. Sources: Boyer’s equations (19)–(20),
-(37)–(42), read in <a
-href="https://github.com/arivero/navstokgap/blob/main/references/batches/B27.md">B27</a>;
-the internal <a
-href="https://github.com/arivero/navstokgap/blob/main/reviews/kepler-collapse-Q14.md">Q14
-comparison</a> records the historical energy correspondence.</p>
+from the classical inequality. Boyer’s equations (19)–(20), (37)–(42)
+were read in <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B27.md">B27</a>.</p>
+<h3
+id="sommerfeld-energies-and-quantum-coulomb-thresholds-c130">Sommerfeld
+energies and quantum Coulomb thresholds (C130)</h3>
+<p>For <span class="math inline">\(0&lt;E&lt;mc^2\)</span> and <span
+class="math inline">\(\ell&gt;k/c\)</span>, the classical radial
+identity is</p>
+<p><span class="math display">\[c^2p_r^2=E^2-m^2c^4+\frac{2Ek}{r}
++\frac{k^2-c^2\ell^2}{r^2}.\]</span></p>
+<p>It supplies both the collision-free bound domain above and the radial
+action. Put <span class="math inline">\(A=m^2c^4-E^2\)</span>, <span
+class="math inline">\(B=Ek\)</span>, <span
+class="math inline">\(C=c^2\ell^2-k^2\)</span>, with turning radii <span
+class="math inline">\(r_1&lt;r_2\)</span> satisfying <span
+class="math inline">\(r_1+r_2=2B/A\)</span>, <span
+class="math inline">\(r_1r_2=C/A\)</span>. Then</p>
+<p><span class="math display">\[\begin{aligned}
+J_r&amp;=\frac1{2\pi}\oint p_r\,dr
+=\frac1{\pi c}\int_{r_1}^{r_2}
+       \frac{\sqrt{A(r_2-r)(r-r_1)}}r\,dr\\
+&amp;=\frac1c\left[\frac{Ek}{\sqrt{m^2c^4-E^2}}
+                 -\sqrt{c^2\ell^2-k^2}\right].
+\end{aligned}\]</span></p>
+<p>The evaluation uses <span
+class="math inline">\(\int_a^b\sqrt{(b-r)(r-a)}\,dr/r
+=\pi(a+b)/2-\pi\sqrt{ab}\)</span> for <span
+class="math inline">\(0&lt;a&lt;b\)</span>, obtained by <span
+class="math inline">\(r=\tfrac12[(a+b)+(b-a)\cos\theta]\)</span> or the
+cited generic integral. The circular orbit has <span
+class="math inline">\(J_r=0\)</span>. The additional old-quantum rules
+<span class="math inline">\(J_r=n_r\hbar\)</span>, <span
+class="math inline">\(\ell=n_\varphi\hbar\)</span>, with integer <span
+class="math inline">\(n_r\ge0\)</span>, positive integer <span
+class="math inline">\(n_\varphi\)</span>, and <span
+class="math inline">\(n_\varphi&gt;k/(\hbar c)\)</span>, give
+Sommerfeld’s energy formula</p>
+<p><span class="math display">\[E=mc^2\left[1+
+\frac{\nu^2}{(n_r+\sqrt{n_\varphi^2-\nu^2})^2}\right]^{-1/2},
+\qquad \nu=\frac{k}{\hbar c}.\]</span></p>
+<p>For the ordinary subcritical Dirac–Coulomb spectrum this numerical
+formula agrees with the energies after setting <span
+class="math inline">\(n_\varphi=|\kappa_D|=j+1/2\)</span> and supplying
+the allowed Dirac quantum numbers. In particular, its allowed <span
+class="math inline">\(n_r=0\)</span> levels equal the classical circular
+energy at <span class="math inline">\(\ell=\hbar|\kappa_D|\)</span>. The
+comparison reconstructs neither spin states nor degeneracies, and does
+not derive either quantization rule or physical <span
+class="math inline">\(\hbar\)</span>.</p>
+<p>The scalar Klein–Gordon equation provides a related, different check.
+For <span class="math inline">\(\psi=u(r)Y_{lm}/r\)</span> in the
+minimally coupled point potential,</p>
+<p><span
+class="math display">\[\hbar^2c^2u&#39;&#39;+\left[E^2-m^2c^4+\frac{2Ek}{r}
++\frac{k^2-\hbar^2c^2l(l+1)}{r^2}\right]u=0.\]</span></p>
+<p>Its origin exponents obey <span
+class="math inline">\((\sigma-1/2)^2=(l+1/2)^2-\nu^2\)</span>. The
+reality threshold therefore has the classical form with <span
+class="math inline">\(\ell=\hbar(l+1/2)\)</span>, whereas the regular
+bound-state energies contain the different radial shift:</p>
+<p><span class="math display">\[E_{n_r,l}=mc^2\left[1+
+\frac{\nu^2}{(n_r+1/2+\sqrt{(l+1/2)^2-\nu^2})^2}\right]^{-1/2}.\]</span></p>
+<p>For the Dirac radial system the corresponding exponent is <span
+class="math inline">\(s=\sqrt{\kappa_D^2-\nu^2}\)</span>. These
+discriminants identify formal point-Coulomb threshold expressions. They
+do not give the essential self-adjointness threshold, choose a boundary
+condition when several extensions exist, or imply that a self-adjoint
+energy becomes complex. Those domain questions, including critical
+equality, belong to <a href="self-sufficiency-contrast.html">the Coulomb
+completion proof</a>.</p>
+<p>The source match is the established Sommerfeld–Dirac coincidence: <a
+href="https://arxiv.org/abs/2401.07485">Suslov 2024</a>, pp. 1–3 and
+5–7, equations (1)–(6), (26)–(32), passage read; and <a
+href="https://arxiv.org/abs/1311.7405">Bouaziz 2013</a>, pp. 3–4,
+equations (3)–(7), passage read for ordinary scalar Coulomb theory. <a
+href="https://doi.org/10.1007/BF01889408">Biedenharn 1983</a> and
+Sommerfeld 1916, DOI 10.1002/andp.19163561702, were checked at metadata
+level only. <a
+href="https://doi.org/10.1070/PU1972v014n06ABEH004735">Zeldovich–Popov</a>,
+abstract read, concerns finite-nuclear-size level diving near <span
+class="math inline">\(Z_c\simeq170\)</span>; it is a different critical
+problem. These reading records and the written radial calculation
+replace the retired Q14 internal-review file as C130’s evidence; no
+independent peer review or novelty claim follows.</p>
 <span id="strategic-consequence"></span><h2 id="consequence-for-state">Consequence for STATE</h2>
 <p>Dimensional homogeneity limits the form of a possible universal
 floor; admitted similarities and the fixed smooth small-circle family

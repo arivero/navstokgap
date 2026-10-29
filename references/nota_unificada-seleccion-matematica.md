@@ -65,7 +65,7 @@ filosófica, sin prioridad para una derivación matemática de este programa.
 El [estado vivo](../research/STATE.md) mantiene R31 como siguiente tarea y
 H11 como cotejo de dos testigos. Las divisiones H10/H11 propuestas por S4 y S5
 en el §7 de la nota importada son incompatibles entre sí y no sustituyen las
-[tareas actuales](../research/TASKS.md). Las correcciones del §6 son pistas
+[tareas actuales](../research/STATE.md). Las correcciones del §6 son pistas
 para cotejo, no cambios ya aplicados a los archivos históricos.
 
 ## 4. Procedencia y alcance de esta incorporación

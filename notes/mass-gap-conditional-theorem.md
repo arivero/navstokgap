@@ -1,9 +1,8 @@
 # The map as one conditional theorem: H1 and H2 give a volume-uniform lattice gap bound, and continuum existence stays a separate obligation
 
-Later corrections: [reasons to stop](mass-gap-openings.md#correlation-inequalities-and-the-transfer-they-require) rejects certification of H2 at $\beta_W\simeq6$ by any certified method known here; [the bands note](confinement-scale-bands.md) (correction of 2026-10-02) makes box sides $3$--$5$ trial sizes, withdraws the reduction to three open blocking steps and corrects the energy conversion; [the position note](mass-gap-obligations-lattice.md#existing-estimates-and-examined-routes) (correction of 2026-10-02) fixes the strong-coupling threshold set; [the October 1 audit](corpus-audit-2026-10-01.md) §3 lists this note's overclaims (relevant passages read).
+Later corrections: [reasons to stop](mass-gap-openings.md#correlation-inequalities-and-the-transfer-they-require) rejects certification of H2 at $\beta_W\simeq6$ by any certified method known here; [the bands note](confinement-scale-bands.md) (correction of 2026-10-02) makes box sides $3$--$5$ trial sizes, withdraws the reduction to three open blocking steps and corrects the energy conversion; [the position note](mass-gap-obligations-lattice.md#existing-estimates-and-examined-routes) (correction of 2026-10-02) fixes the strong-coupling threshold set; [obstruction map](../research/obstructions.md) lists this note's overclaims (relevant passages read).
 
-> **Correction (2026-10-02).** A referee report and the October 1 audit
-> found that the conclusion outran the hypotheses. The changes, made in
+> **Correction (2026-10-02).** The earlier conclusion outran its stated hypotheses. The changes, made in
 > place below:
 >
 > 1. *Scope.* "Nothing else is missing", "a proof of the mass gap for

@@ -80,5 +80,5 @@ rounding-model double limit; test 4 is listed there as prior art to audit.
    literature on the arrow and quantum measurement, before any claim ID.
 
 Related: [I001](I001-action-field.md), [I002](I002-newton-polygon-threshold.md),
-the [cut-point target](../research/CUT_POINT_TARGET.md) and the
+the [cut-point target](../notes/quantum-blocks-construct-newton.md) and the
 [maintained composition result](../notes/composition-universality.md).

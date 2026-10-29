@@ -26,6 +26,12 @@ slug, a scientific synonym and a structural dependency in retrieval. Typed
 models without retaining duplicate prose. Check a correcting relation before
 reusing an older source or manuscript.
 
+Completed task IDs and former handoff/review filenames are aliases on their
+canonical catalog entries. `completed_work` records the outcome in one short
+phrase. Read the maintained proof and source companion; retired process
+records and scores are recoverable from git history and are not live
+instructions or independent proof evidence.
+
 Form a small direct query from the mechanism, model, result IDs and likely
 failure modes. Search both catalog and **full corpus**, including source
 companions and manuscripts:

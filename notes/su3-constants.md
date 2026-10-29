@@ -1,4 +1,4 @@
-# SU(3) in four dimensions: every constant of this programme, evaluated
+# SU(3) constants and conditional spectral comparisons
 
 With the goal narrowed to $SU(3)$, each bound proved in these notes
 becomes a number. The group data are
@@ -10,24 +10,12 @@ in the normalization $\operatorname{tr}T^aT^b=\tfrac12\delta^{ab}$, and
 the one- and two-loop coefficients are
 $$b_0=\frac{11N}{48\pi^2}=\frac{11}{16\pi^2}=0.06966,\qquad
 \frac{b_1}{2b_0^2}=\frac{51}{121}=0.4215 .$$
-The consequences, collected: the strong-coupling criterion of
-[the T2 note](strong-coupling-uniform-gap.md) reads $54/g^4\le\beta_*$;
-the gap it gives is $\Delta_{a,L}\ge\tfrac23\gamma g^2\,\hbar c/a$; the
-unperturbed flux-loop gap is $\tfrac83g^2\hbar c/a$; the Lieb--Robinson
-velocity is $v\le96e\,c/g^2\simeq261\,c/g^2$; the exact identities are
-$\Delta V=\tfrac{16}3(3|\mathcal P|-V)$ and $|\nabla V|^2\le48V$; the
-number of renormalization doublings from a bare coupling
-$g_{\rm UV}^2=1/2$ to a strong-coupling threshold is
-$$n\simeq\frac{1}{2b_0\log2}\Big(\frac1{g_{\rm UV}^2}-\frac1{g_{\rm thr}^2}\Big)\le\frac{2}{0.0966}\simeq21,$$
-fewer than the thirty of $SU(2)$ because the coupling runs faster; and
-the flowed upper bound $4.26\,\hbar c/\sqrt{8t}$ is unchanged, because
-in the free limit the eight gluon species multiply numerator and
-denominator equally. Two features of $SU(3)$ that $SU(2)$ lacks are
-recorded in Section 4: the defining representation is complex, so
-$\operatorname{tr}U_p$ is complex and the plaquette term keeps only its
-real part, and the centre is $\mathbb Z_3$, so a periodic box carries
-$27$ electric-flux sectors instead of $8$. Constants explicit; nothing
-promoted.
+The tables specialize group factors, running coefficients and stated
+conditional bounds. The Kogut--Susskind stability threshold remains
+existential. One-loop running to order-one coupling is an extrapolation.
+A $SU(3)$ field gap is not obtained by substituting group constants
+into the proved $SU(2)$ matrix theorem. Locality upper bounds and
+observed-channel estimates retain their separate scope.
 
 ## 1. Group data
 
@@ -60,7 +48,7 @@ $$g\ \ge\ g_0=\Big(\frac{54}{\beta_*}\Big)^{1/4},$$
 and the gap is
 $$\Delta_{a,L}\ \ge\ \gamma\,\frac{g^2}{2}\,\frac43\,\frac{\hbar c}{a}
 =\frac{2\gamma}{3}\,g^2\,\frac{\hbar c}{a}.$$
-The unperturbed physical excitation, a single plaquette flux loop in the
+A single plaquette flux-loop excitation in the
 fundamental, costs
 $2C_2g^2\hbar c/a=\tfrac83g^2\hbar c/a$.
 
@@ -75,11 +63,12 @@ sides.
 
 **Lieb--Robinson** ([note](lieb-robinson-kogut-susskind.md)). Four
 plaquettes per link and $\|w_p\|\le12\hbar c/(ag^2)$ give
-$J\le48\hbar c/(ag^2)$ and
-$$v=\frac{2eaJ}{\hbar}\ \le\ \frac{96\,e\,c}{g^2}\ \simeq\ \frac{261\,c}{g^2},$$
-so the lattice light cone exceeds $c$ for $g^2<261$, that is throughout
-any regime of interest, and the strong-coupling correlation length is
-$\xi\le C'\,a\,/(\gamma g^4)\cdot\tfrac94$.
+$J\le48\hbar c/(ag^2)$ and $v_{\rm LR}\le48C_{\rm LR}c/g^2$.
+The former $96e\,c/g^2\simeq261c/g^2$ uses the unverified
+$C_{\rm LR}=2e$ normalization. It implies no actual superluminal
+speed. The gap gives
+$\hbar v_{\rm LR}/\Delta\le72C_{\rm LR}a/(\gamma g^4)$;
+a clustering length also retains microscopic range.
 
 **Exact identities** ([note](magnetic-energy-identities.md)). With
 $C_2=4/3$ and $N=3$,
@@ -90,16 +79,17 @@ $2C_2=8/3$.
 
 **Blocking** ([criterion note](blocking-criterion-monotone.md)). The
 block criterion is $\beta_{\rm block}=72M^2/(g^2\delta(g;M))$ and the
-direct one is $\beta_{\rm direct}=24/g^4$, so the ratio at strong
+direct one is $\beta_{\rm direct}=72/g^4$, from $32N/C_2=72$, so the ratio at strong
 coupling is $3M^2/8$ as before, blocking losing by $3/2$ already at
 $M=2$.
 
-**Small volume** ([G07](low-dimensional-mass-gap.md) Proposition 7). The
-constant-mode sector has $D=3$ and gauge group $SU(3)$, so the matrix
-model runs over $\vec x_i\in\mathbb R^8$ with the structure constants of
-$SU(3)$ in place of the cross product; the gap keeps the form
-$\delta_1^{(3)}g^{2/3}\hbar c/L$ with a pure number $\delta_1^{(3)}$
-specific to the group.
+**Small volume.** A spatially constant $SU(3)$ sector has three
+vectors in $\mathbb R^8$ with the $SU(3)$ structure constants.
+Homogeneity gives the candidate energy scale $g^{2/3}\hbar c/L$ if
+that matrix Hamiltonian has a positive first gap. The
+[explicit matrix proof](low-dimensional-mass-gap.md) is for $SU(2)$.
+The $SU(3)$ spectral input and the full field theory's nonzero-mode
+comparison are additional obligations, not proved group substitutions.
 
 ## 3. The step count
 
@@ -115,9 +105,9 @@ $$n=\frac{1}{0.09657}\Big(\frac1{g_{\rm UV}^2}-\frac1{g_{\rm thr}^2}\Big).$$
 | $1/4$ | $41.4$ | $2.9\times10^{12}$ |
 
 For $SU(2)$ the same table reads $15.5$, $31.1$, $62.1$, since
-$b_0$ is smaller by $2/3$. **The $SU(3)$ problem needs about a third
-fewer steps than $SU(2)$** at the same bare coupling, which is the only
-quantitative respect in which the physical case is easier.
+$b_0$ is smaller by $2/3$. **This one-loop extrapolation gives about a third
+fewer steps for $SU(3)$ than $SU(2)$** under the same bare-coupling convention. It is not a certified
+blocking trajectory or an assessment of total proof difficulty.
 
 ## 4. Two features specific to $SU(3)$
 
@@ -129,38 +119,30 @@ $\int(\operatorname{tr}U)^2dU=0$ used in
 [the upper-bound note](lattice-gap-upper-bounds.md) Corollary 3 holds
 for $N\ge3$ and gives Haar variance $\tfrac12$ rather than $1$; and
 charge conjugation is a nontrivial symmetry, so the spectrum splits into
-$C$-even and $C$-odd sectors, and the glueball channel relevant to the
-gap is $C$-even.
+$C$-even and $C$-odd sectors, and a $C$-even glueball insertion probes its own channel. This does not
+prove that the channel contains the global lowest excitation.
 
 **The centre is $\mathbb Z_3$.** The valley minima of
 [the valley note](torus-valley-potential.md) §4 lie at holonomies that
 are central, so there are three per direction and $27$ electric-flux
-sectors on a three-torus, against $8$ for $SU(2)$. The tunnelling
-barrier between them is the same $O(\hbar c/L)$, and the sector
-structure is what the small-volume spectrum organizes itself by.
+sectors on a three-torus, against $8$ for $SU(2)$. These labels and central holonomy minima do not determine spectral
+weights or prove a physical gap. The quoted $O(\hbar c/L)$ barrier
+is the scale of the specified one-loop valley calculation.
 
-## 5. What does not change
+## 5. Scope and consequence for STATE
 
-The structural results are group-independent and stand as written:
+The [spectral obligations](mass-gap-obligations-lattice.md) establish
+neither an exhaustive no-go classification of Hamiltonian methods nor
+an equivalence between all-coupling positivity and absence of every
+phase transition. The [susceptibility/moment argument](finiteness-half-flowed-susceptibility.md)
+needs a nonzero admissible Hamiltonian insertion and infrared moments.
+Four-dimensional flow finiteness alone supplies neither.
 
-- the seven closed routes of [the position note](mass-gap-obligations-lattice.md#existing-estimates-and-examined-routes) §3,
-  each closed by an argument that uses no property of the group beyond
-  compactness and non-abelianness;
-- the moment hierarchy and the reduction of $m<\infty$ to one flowed
-  correlator, where the free-limit value $4.26\,\hbar c/\sqrt{8t}$ is
-  unchanged because the $\dim G=8$ species multiply the susceptibility
-  and the gradient term equally;
-- the equivalence of T2$'$ with the absence of a zero-temperature phase
-  transition;
-- the three places where the non-abelian structure is isolated, all of
-  which are statements about the commutator and hold for $SU(3)$ with
-  the $SU(3)$ structure constants.
+In the specified free Gaussian example the channel estimate
+$4.26\,\hbar c/\sqrt{8t}$ is unchanged when eight colour species
+multiply numerator and denominator. It is not an interacting physical
+gap bound without the observable, domain and limit premises.
 
-## 6. Consequence for STATE
-
-Specializing to $SU(3)$ fixes every constant and shortens the step count
-to about twenty-one doublings from $g_{\rm UV}^2=1/2$. It changes no
-structural conclusion, and the open obligations are those of
-[the position note](mass-gap-obligations-lattice.md#existing-estimates-and-examined-routes) §5. The next work should be
-carried out with these numbers in place, and any new bound should be
-reported in them.
+The group constants survive. Kogut--Susskind and Wilson thresholds,
+formal running counts, matrix truncations, observed channels and
+physical continuum limits retain their individual hypotheses.

@@ -21,11 +21,11 @@ def main():
     pdf = ROOT / "out" / "papers" / f"{paper}.pdf"
     provenance = ROOT / ".build" / paper / "publication-input.json"
     if not source.is_file() or not pdf.is_file() or not provenance.is_file():
-        raise SystemExit("Run make publication: source, compiled PDF and build record are required")
+        raise SystemExit("Run make publication PAPER=<slug>: source, compiled PDF and build record are required")
     files = {source.name: source.read_bytes(), pdf.name: pdf.read_bytes()}
     hashes = {name: sha256(data).hexdigest() for name, data in files.items()}
     if json.loads(provenance.read_text()) != hashes:
-        raise SystemExit("Publication source/PDF differs from its build record; run make publication")
+        raise SystemExit("Publication source/PDF differs from its build record; run make publication PAPER=<slug>")
     if not files[pdf.name].startswith(b"%PDF-"):
         raise SystemExit("Publication PDF has an invalid header")
     files["manifest.json"] = (json.dumps(hashes, indent=2) + "\n").encode()

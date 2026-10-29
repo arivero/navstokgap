@@ -5,17 +5,10 @@ Language models reading this repository cold should also read
 at what level, what is open, which errors were already caught, and the
 verified prior art. This file says how to work here.
 
-Read `research/STATE.md` (one page: what is being worked on and why) and
-the note it points to. Then read the latest handout,
-[`research/handoffs/HANDOFF-2026-10-01-CLAUDE-NEWTON.md`](research/handoffs/HANDOFF-2026-10-01-CLAUDE-NEWTON.md),
-requested for a fresh Claude view of Newton and quantisation: current
-construction, proof scope and exact next calculation. The
-[September 23 handout](research/handoffs/HANDOFF-2026-09-23.md) is the
-earlier proof-review and source snapshot. Nothing else is required
-reading. Older governance
-files (PROGRAMME, STRATEGY, TASKS, PROTOCOL, the skill, old handoffs) are
-context, and where they demand more bookkeeping than this file, this file
-wins. Explicit user instructions take precedence over everything here.
+Read `research/STATE.md` for the current question and the maintained
+argument it points to. These instructions, STATE and the catalog replace
+the retired handoffs, task lists and programme versions. Explicit user
+instructions take precedence over everything here.
 
 [`notes/index.md`](notes/index.md) is the compact full-read retrieval
 catalog. Its priorities measure relevance to the present programme;
@@ -83,12 +76,13 @@ the consequence for STATE. That section is the only required bookkeeping
 besides the STATE edit.
 
 Do not create handoffs for completed work, task rows, decision blocks,
-programme versions, source batches, claim rows, validation narratives or
-review files. Git history is the record. If work is interrupted, leave one
-paragraph at the top of the note saying where it stopped. (Exception, user
-direction 2026-09-23: at the end of a long session the user may ask for a
-handout for the next agent, kept in `research/handoffs/` and pointed to
-from "Start here"; write one only when asked.)
+programme versions, source batches, claim rows, validation narratives,
+internal review files or score tables. Record completed work in one short
+phrase in the existing catalog; integrate corrections and unique proof
+content into their arguments. Preserve source passages and reading coverage
+in existing companions. Git history retains former process records. If work
+is interrupted, leave one paragraph at the top of the actual note saying
+where it stopped; STATE is the only live status page.
 
 `claims/LEDGER.md` is retained for the claims already in it. Add a row only
 for a result another note will cite by ID, with the proof location and an
@@ -107,9 +101,10 @@ allowed.
 inspect PDF pages as images, and never restore rebuilt PDFs by comparison.
 `make check` (link and checksum integrity) is cheap and may be run.
 
-No parallel subagents. Work alone under the current direction; a sequential
-6.1 Terra or 6.1 Sol consultation is permitted when needed. Preserve unrelated
-uncommitted work. Attribute completed batches with “6 Astra High” as requested.
+No parallel subagents. Work alone under the current user direction; only
+a necessary menial task may be delegated to 6.1 Terra. Preserve unrelated
+uncommitted work. Attribute this continuation with “6.1 Sol Max” under
+the user's latest correction.
 
 Keep STATE short. Do not restate a result in more than one place.
 
@@ -120,7 +115,8 @@ Keep STATE short. Do not restate a result in more than one place.
 - `claims/LEDGER.md`: cited-by-ID results, frozen format.
 - `docs/`, `references/`: sources, companions, bibliography.
 - `papers/`, `out/papers/`: LaTeX and PDFs generated from notes.
-- `scripts/`, `reviews/`, `research/handoffs/`, `ideas/`: tooling and history.
+- `scripts/`, `skills/`: tooling and repository retrieval.
+- `ideas/`: originating questions and model proposals; STATE owns priorities.
 
 Commits and pushes to the existing GitHub repository are authorized after
 each result or status change; end commit messages with the model's

@@ -9,17 +9,17 @@ source and artifact versions.
 
 Build only a changed note with `make paper NOTE=<slug>`. Compilation and
 extracted-text checks establish document integrity, not independent proof review.
-Historical/internal model scores are dated source evidence, not current verdicts.
+Retired internal score reports and programme snapshots are preserved only in git history.
 
 ## Current artifact coverage
 
-The catalog covers **101 PDFs**.
+The catalog covers **99 PDFs**.
 
 | Classification | Count |
 | --- | --- |
 | current synthesis | 3 |
 | current technical manuscript | 68 |
-| historical research snapshot | 4 |
+| historical research snapshot | 2 |
 | older version | 2 |
 | orphan manuscript | 6 |
 | working manuscript | 18 |
@@ -38,6 +38,5 @@ replacement govern reuse.
 | [classical-spins-operational-closure](../out/papers/classical-spins-operational-closure.pdf) | Independent article exposition; later generator and source qualifications are in the maintained orientation treatment. [Canonical treatment](../notes/classical-orientation-closure.md). |
 | [collision-action-relaxation](../out/papers/collision-action-relaxation.pdf) | Full bath calculation and matched-preparation C050–C051 construction; the composition note uses its results. [Canonical treatment](../notes/composition-universality.md). |
 | [regulator-limits](../out/papers/regulator-limits.pdf) | Independent arbitrary-partition determinant and stationary-phase derivations; no universal positive action floor. [Canonical treatment](../notes/groupoid-quantum-newton-states.md). |
-| [research-programme](../out/papers/research-programme.pdf) | Explicitly historical programme snapshot; AGENTS and STATE govern current work. |
 | [same-collisions-different-transport](../out/papers/same-collisions-different-transport.pdf) | Standalone teaching exposition of the matched-parameter/Palm-clock counterexample; its technical proof remains in the collision manuscript. [Canonical treatment](../notes/composition-universality.md). |
 | [time-refinement](../out/papers/time-refinement.pdf) | Compact independent free-kernel, bridge and unitary-generator exposition; the general insertion treatment has wider scope. [Canonical treatment](../notes/refinement-composition-and-limit.md). |

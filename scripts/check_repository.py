@@ -29,6 +29,20 @@ class NavigationPage(HTMLParser):
 
 def main():
     errors = []
+    # Completed process records belong in git; STATE and catalog stay live.
+    for folder in ("research/handoffs", "reviews", "agents"):
+        directory = ROOT / folder
+        if directory.exists() and any(p.is_file() for p in directory.rglob("*")):
+            errors.append(f"Retired process records reintroduced: {folder}")
+    for name in ("research/note-scores.md", "research/note-scores.json",
+                 "research/PROGRAMME.md", "research/TASKS.md",
+                 "research/STRATEGY.md", "research/STATE-history-2026-09-12.md",
+                 "notes/corpus-audit-2026-10-01.md",
+                 "papers/research-programme.tex",
+                 "out/papers/research-programme.pdf",
+                 "out/papers/corpus-audit-2026-10-01.pdf"):
+        if (ROOT / name).exists():
+            errors.append(f"Retired status/review artifact reintroduced: {name}")
     # User hard rule: the default verification target is document integrity only.
     makefile = (ROOT / "Makefile").read_text()
     match = re.search(r"^check:\n((?:\t[^\n]*\n)*)", makefile, re.MULTILINE)

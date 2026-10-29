@@ -1,7 +1,8 @@
-"""Build accepted paper PDFs from the repository root, without shell escape."""
+"""Build one explicitly selected manuscript; never dispatch a corpus rebuild."""
 
-from pathlib import Path
+from argparse import ArgumentParser
 from hashlib import sha256
+from pathlib import Path
 import json
 import os
 import re
@@ -11,199 +12,50 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def run(command, env=None, cwd=ROOT):
-    result = subprocess.run(command, cwd=cwd, env=env, text=True, capture_output=True)
+def run(command, *, cwd=ROOT, env=None):
+    result = subprocess.run(command, cwd=cwd, env=env, text=True,
+                            stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     if result.returncode:
-        print(result.stdout[-10000:])
-        print(result.stderr[-5000:])
-        raise SystemExit(f"Command failed ({result.returncode}): {command}")
+        raise SystemExit(result.stdout[-6000:])
 
 
 def main():
-    for executable in ("pandoc", "pdflatex", "bibtex"):
-        if shutil.which(executable) is None:
-            raise SystemExit(f"Missing {executable}; see research/TOOLS.md")
-    run(["pandoc", "research/PROGRAMME.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/programme-template.tex",
-         "-o", "papers/research-programme.tex"])
-    env = os.environ.copy()
-    run(["pandoc", "notes/cut-point-consistency.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=Cut-point consistency and an action remainder",
-         "-o", "papers/cut-point-consistency.tex"])
-    # Use repo-relative bibliography paths regardless of the aux output directory.
-    run(["pandoc", "notes/physical-cut-speed.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=A physical cut: elastic reversal, finite speed and memory",
-         "-o", "papers/physical-cut-speed.tex"])
-    run(["pandoc", "notes/telegraph-return-bridge.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=A finite-speed return bridge: cuts and midpoint crossover",
-         "-o", "papers/telegraph-return-bridge.tex"])
-    run(["pandoc", "notes/composition-universality.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=A shared action coefficient from classical composition",
-         "-o", "papers/composition-universality.tex"])
-    run(["pandoc", "notes/checkerboard-dynamics.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=One action scale, two rules for composing paths",
-         "-o", "papers/checkerboard-dynamics.tex"])
-    run(["pandoc", "notes/susceptibility-gap.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=When an action plateau controls a spectral gap",
-         "-o", "papers/susceptibility-gap.tex"])
-    run(["pandoc", "notes/interacting-ising-gap.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=A uniform relaxation gap with nearest-neighbour interactions",
-         "-o", "papers/interacting-ising-gap.tex"])
-    run(["pandoc", "notes/ising-hermitian-transfer.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=The Ising gap and its local Hermitian parent",
-         "-o", "papers/ising-hermitian-transfer.tex"])
-    run(["pandoc", "notes/bounded-acceleration-return.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=A sharp mechanical cost for a finite-duration reversal",
-         "-o", "papers/bounded-acceleration-return.tex"])
-    env["BIBINPUTS"] = str(ROOT) + os.pathsep + env.get("BIBINPUTS", "")
-    run(["pandoc", "notes/conservative-harmonic-receiver.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=A conservative receiver and the origin of a correlation scale",
-         "-o", "papers/conservative-harmonic-receiver.tex"])
-    run(["pandoc", "notes/action-scale-obstructions.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=Classical action scales: obstructions, conditional bounds and quantum premises",
-         "-o", "papers/action-scale-obstructions.tex"])
-    run(["pandoc", "notes/energy-depot-action-selection.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=Energy feedback and the selection of an action scale",
-         "-o", "papers/energy-depot-action-selection.tex"])
-    run(["pandoc", "notes/topological-sector-action-selection.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=Topology, contraction and the missing action scale",
-         "-o", "papers/topological-sector-action-selection.tex"])
-    run(["pandoc", "notes/stabilized-topology-action-scale.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=Size stabilization and action normalization",
-         "-o", "papers/stabilized-topology-action-scale.tex"])
-    run(["pandoc", "notes/reciprocal-coupling-normalization.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=Reciprocal exchange and mechanical normalization",
-         "-o", "papers/reciprocal-coupling-normalization.tex"])
-    run(["pandoc", "notes/spin-action-patching.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=Global spin actions and the phase premise",
-         "-o", "papers/spin-action-patching.tex"])
-    run(["pandoc", "notes/mechanical-interference-action.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=Mechanical interference and action calibration",
-         "-o", "papers/mechanical-interference-action.tex"])
-    run(["pandoc", "notes/passive-threshold-events.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=Passive thresholds, event formation and action scales",
-         "-o", "papers/passive-threshold-events.tex"])
-    run(["pandoc", "notes/thermal-receiver-reliability.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=Thermal retention and trigger discrimination",
-         "-o", "papers/thermal-receiver-reliability.tex"])
-    run(["pandoc", "notes/shared-resource-events.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=Shared resources and exclusive receiver events",
-         "-o", "papers/shared-resource-events.tex"])
-    run(["pandoc", "notes/local-detector-coincidences.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=Independent local receivers and coincidence constraints",
-         "-o", "papers/local-detector-coincidences.tex"])
-    run(["pandoc", "notes/shared-readiness-chsh.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=Shared readiness, independent settings and action units",
-         "-o", "papers/shared-readiness-chsh.tex"])
-    run(["pandoc", "notes/finite-depth-spin-gap.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=Local entangling gates and a uniform energy gap",
-         "-o", "papers/finite-depth-spin-gap.tex"])
-    run(["pandoc", "notes/action-unit-dimensional-selection.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=A universal action floor needs a fixed action unit",
-         "-o", "papers/action-unit-dimensional-selection.tex"])
-    run(["pandoc", "notes/newton-insertion-action.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=Galileo, Newton refinement and the Planck-scale question",
-         "-o", "papers/newton-insertion-action.tex"])
-    run(["pandoc", "notes/newton-mark-floor.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=The cost of a mark: a Newton-age floor for the Galileo comparison",
-         "-o", "papers/newton-mark-floor.tex"])
-    run(["pandoc", "notes/planck-gap-derivation.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=The Planck gap as a theorem",
-         "-o", "papers/planck-gap-derivation.tex"])
-    run(["pandoc", "notes/planck-gap-probabilistic.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=The probabilistic Planck gap",
-         "-o", "papers/planck-gap-probabilistic.tex"])
-    run(["pandoc", "notes/mark-cost-and-statistical-floor.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=The mark cost and the statistical floor",
-         "-o", "papers/mark-cost-and-statistical-floor.tex"])
-    run(["pandoc", "notes/planck-gap-paper.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=The cost of a mark: Newton's vanishing sagitta and a floor of order hbar",
-         "-o", "papers/planck-gap-paper.tex"])
-    run(["pandoc", "notes/low-dimensional-mass-gap.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=Solved low-dimensional mass gaps and the positive-action question",
-         "-o", "papers/low-dimensional-mass-gap.tex"])
-    run(["pandoc", "notes/action-floor-yang-mills-gap.md", "--standalone", "--to=latex",
-         "--top-level-division=section", "--template=papers/research-note-template.tex",
-         "-V", "note-title=An action floor produces the Yang--Mills quantum-mechanical gap",
-         "-o", "papers/action-floor-yang-mills-gap.tex"])
-    output = ROOT / "out" / "papers"
-    output.mkdir(parents=True, exist_ok=True)
-    for paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
-                  "classical-action-field", "collision-action-relaxation",
-                  "cut-point-consistency", "physical-cut-speed", "telegraph-return-bridge",
-                  "composition-universality", "checkerboard-dynamics",
-                  "susceptibility-gap", "interacting-ising-gap", "ising-hermitian-transfer",
-                  "bounded-acceleration-return",
-                  "conservative-harmonic-receiver", "action-scale-obstructions", "research-programme",
-                  "same-collisions-different-transport", "classical-spins-operational-closure",
-                  "energy-depot-action-selection", "topological-sector-action-selection",
-                  "stabilized-topology-action-scale", "reciprocal-coupling-normalization",
-                  "spin-action-patching", "mechanical-interference-action",
-                  "passive-threshold-events", "thermal-receiver-reliability",
-                  "shared-resource-events", "local-detector-coincidences",
-                  "shared-readiness-chsh", "finite-depth-spin-gap",
-                  "action-unit-dimensional-selection", "newton-insertion-action",
-                  "newton-mark-floor", "planck-gap-derivation",
-                  "planck-gap-probabilistic",
-                  "mark-cost-and-statistical-floor",
-                  "planck-gap-paper",
-                  "low-dimensional-mass-gap", "action-floor-yang-mills-gap"):
-        build = ROOT / ".build" / paper
+    parser = ArgumentParser(description=__doc__)
+    parser.add_argument("--paper", required=True, help="One maintained-note or standalone TeX slug")
+    slug = parser.parse_args().paper
+    if not re.fullmatch(r"[A-Za-z0-9_-]+", slug):
+        parser.error("paper must be one plain manuscript slug")
+    source = ROOT / "papers" / f"{slug}.tex"
+    note = ROOT / "notes" / f"{slug}.md"
+    output = ROOT / "out" / "papers" / f"{slug}.pdf"
+    build = ROOT / ".build" / slug
+    if note.is_file():
+        run(["make", "paper", f"NOTE={slug}"])
+    else:
+        if not source.is_file() or source.name.endswith("-template.tex"):
+            parser.error(f"no manuscript source for {slug}")
         build.mkdir(parents=True, exist_ok=True)
+        env = os.environ.copy()
+        env["BIBINPUTS"] = str(ROOT) + os.pathsep + env.get("BIBINPUTS", "")
         command = ["pdflatex", "-no-shell-escape", "-halt-on-error",
-                   "-interaction=nonstopmode", f"-output-directory={build}",
-                   f"papers/{paper}.tex"]
-        run(command, env)
-        if paper in ("action-gap-foundations", "time-refinement", "regulator-limits",
-                     "classical-action-field", "collision-action-relaxation"):
-            run(["bibtex", paper], env, cwd=build)
-        run(command, env)
-        run(command, env)
-        log = (build / f"{paper}.log").read_text(errors="replace")
-        errors = re.findall(r"[^\n]*(?:undefined|Rerun to get cross-references)[^\n]*", log)
-        if errors:
-            raise SystemExit(f"Unresolved references in {paper}: {errors}")
-        warnings = re.findall(r"Overfull \\[hv]box[^\n]*", log)
-        if warnings:
-            raise SystemExit(f"Layout overflow in {paper}: {warnings}")
-        shutil.copy2(build / f"{paper}.pdf", output / f"{paper}.pdf")
-        if paper in ("same-collisions-different-transport", "classical-spins-operational-closure"):
-            source = ROOT / "papers" / f"{paper}.tex"
-            pdf = output / f"{paper}.pdf"
-            provenance = {p.name: sha256(p.read_bytes()).hexdigest() for p in (source, pdf)}
-            (build / "publication-input.json").write_text(json.dumps(provenance, indent=2) + "\n")
-        print(f"Built out/papers/{paper}.pdf")
+                   "-interaction=nonstopmode", f"-output-directory={build}", str(source)]
+        run(command, env=env)
+        aux = build / f"{slug}.aux"
+        if aux.is_file() and r"\bibdata" in aux.read_text(errors="replace"):
+            run(["bibtex", slug], cwd=build, env=env)
+        run(command, env=env)
+        run(command, env=env)
+        output.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(build / output.name, output)
+    if not output.read_bytes().startswith(b"%PDF-"):
+        raise SystemExit(f"Invalid compiled PDF: {output}")
+    log = (build / f"{slug}.log").read_text(errors="replace")
+    if "Missing character:" in log or "Overfull " in log:
+        raise SystemExit(f"Inspect layout/glyph warnings in {build / (slug + '.log')}")
+    record = {source.name: sha256(source.read_bytes()).hexdigest(),
+              output.name: sha256(output.read_bytes()).hexdigest()}
+    (build / "publication-input.json").write_text(json.dumps(record, indent=2) + "\n")
+    print(f"Built {source.relative_to(ROOT)} and {output.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

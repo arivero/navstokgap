@@ -2,6 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
+\DeclareUnicodeCharacter{1E93}{\d{z}}
 \usepackage{amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}
 \usepackage[hidelinks]{hyperref}
@@ -281,8 +282,24 @@ chosen viscous model and spectrum together, not a theorem about every
 causal extended-charge model. Source context:
 \href{../docs/batches/B23/harmonic-receiver-source-companion.md}{B23},
 Zwanzig equations (16)--(17), (23), (25)--(30), passages distinguishing
-friction, forcing and bath preparation;
-\href{../reviews/radiation-noise-Q02.md}{Q02 internal review}.
+friction, forcing and bath preparation. For a homogeneous isotropic
+transverse field, if \(u(\omega)d\omega\) is the total
+positive-frequency energy density, isotropy and equal electric/magnetic
+energy give \(u(\omega)=3\epsilon_0S_E(\omega)/\pi\). With
+electromagnetic mode density \(\omega^2/(\pi^2c^3)\) the chosen spectrum
+therefore means energy \(K\omega\) per mode. Without those field
+hypotheses its coefficient is only a chosen one-component noise
+normalization.
+
+\href{https://harvest.aps.org/v2/journals/articles/10.1103/PhysRev.182.1374/fulltext}{Boyer
+1969}, pp.~1374--1376 and 1379--1380, passage read with formula-OCR
+limitations, supplies the spectral/resonance precedent and warns of the
+ultraviolet failure of the dipole/nonrelativistic approximation.
+\href{https://journals.aps.org/prd/abstract/10.1103/PhysRevD.11.790}{Boyer
+1975}, abstract read only, explicitly supplies the random homogeneous
+boundary condition and its Planck normalization. The locally viscous
+response above and the third-order response below remain different
+models; neither selects a nonzero background amplitude.
 
 \hypertarget{lorentz-invariant-spectral-form-and-conditional-planck-calibration}{%
 \subsection{Lorentz-invariant spectral form and conditional Planck

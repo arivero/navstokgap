@@ -2,7 +2,7 @@
 
 The accepted source support is Teschl's author-hosted proof of smooth ODE
 parameter dependence. The worker's secondary-reference route remains in
-[its handoff](../../../research/handoffs/B66.md); the coordinator added the
+[its argument](../../../references/batches/B66.md); the coordinator added the
 primary route below after that audit ended.
 
 ## Primary passage coverage
@@ -41,4 +41,4 @@ positive-width pulses. The source does not settle either projected component.
 The worker's proof concerns prompted explicit signed-domain and linear-cutoff
 premises, reference-record coefficients a_2, the second-coefficient convention,
 energy square terms, and a quantitative S/lambda condition. Coordinator
-resolution is in [the review](../../../reviews/correlated-variation-B66.md).
+resolution is in [the derivation](../../../notes/calibration-tolerance-recovery.md).
