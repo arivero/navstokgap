@@ -2,101 +2,76 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
+\DeclareUnicodeCharacter{1E93}{\d{z}}
 \usepackage{amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}
 \usepackage[hidelinks]{hyperref}
-\hypersetup{pdftitle={Which limits of Newton's construction reach the zero branch},pdfauthor={navstokgap research working notes}}
+\hypersetup{pdftitle={Coherence, resolution and the classical zero-branch limit},pdfauthor={navstokgap research working notes}}
 \newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
-\hypertarget{which-limits-of-newtons-construction-reach-the-zero-branch}{%
-\section{Which limits of Newton's construction reach the zero
-branch}\label{which-limits-of-newtons-construction-reach-the-zero-branch}}
+\hypertarget{coherence-resolution-and-the-classical-zero-branch-limit}{%
+\section{Coherence, resolution and the classical zero-branch
+limit}\label{coherence-resolution-and-the-classical-zero-branch-limit}}
 
-The thesis under test (user, 2026-10-01): Newton's mechanics exists only
-with a positive action scale, no zero branch is continuously reachable,
-and the family of theories has a gap in the sense of the mass gap. This
-note states the thesis as a claim about limits and proves, in the
-simplest cases, which of Newton's own limits reach the zero theory and
-which do not. Result: with Gaussian preparations and Gaussian marks,
-Galileo's comparison has a record family that is the same for every
-value of the constant (Theorem 1), so there is no gap there. For a
-determinate preparation, one definite velocity at each place, the
-complete coordinate record has no limit as the constant tends to zero
-wherever two or more of its streams cross with distinct actions, or a
-limit different from Newton's where they cross with equal actions, while
-every smeared record converges to Newton's branch-weighted density
-(Theorem 2, any finite partition; Theorem 3, exactly, for inertial
-motion with a graded velocity inside its fold interval; Theorem 4, for a
-Kepler swarm whose windings overlap). The same swarm attached as an
-incoherent mixture of coherent states whose widths vanish with \(h\) has
-a complete record that converges to Newton's branch-weighted density at
-every fixed time (Theorem 5, exact for quadratic forces), so the gap
-requires coherence between the launch points of the crossing streams.
-The gap thesis therefore holds in the topology of complete records of
-determinate preparations wherever streams cross and the preparation is
-coherent, and fails in the topology of smeared records, for statistical
-preparations, and for incoherent attachments. Refinement with records is
-the one Newtonian limit in which the zero theory is the regular side.
-Proofs are written derivations by Claude Fable (2026-10-01); the
-stationary phase, Poisson summation and almost-periodicity facts used
-are standard and named. Refereed by GPT-6.1 Sol (Codex) on 2026-10-01:
-Theorem 1, the Lemma, Theorem 2's expansion and smeared limit, Theorem
-3(a), the Poisson step and Theorem 4(a) accepted; the frequency
-condition of Theorem 2(i), the resolution and thickness corollaries, the
-Airy constant and the Kepler times refined; the universal late-time
-claims first made in Theorems 3(b) and 4(b) rejected by counterexample
-and replaced by the local statements now printed. The corrections are
-applied below. Theorem 5 (§4c) was refereed separately by GPT-6.1 Sol
-(Codex) in three bounded passes on 2026-10-01: REFINE (critical values,
-uniformity, part (c), units), REFINE (one modulus), then ACCEPT on the
-statement and proof as printed; the reports are kept in
-\href{../reviews/2026-10-01-theorem5-coherence-necessity-referee.md}{\texttt{reviews/2026-10-01-theorem5-coherence-necessity-referee.md}}.
+For a fixed finite partition with several nondegenerate stationary
+paths, the coherent pointwise coordinate record converges as its
+supplied phase-action parameter \(h\downarrow0\) \textbf{exactly when
+every nonzero action-frequency coefficient vanishes} (Theorem 2). Two
+illuminated branches with distinct actions fail this criterion. Equal
+actions or several branches permit cancellations; crossing streams alone
+do not imply failure of a pointwise classical limit.
 
-Throughout, \(h\) denotes the reduced phase constant, as in the
-\href{rivero-1998-conjecture-central-forces.md}{1998-conjecture note};
-the recording notes write \(\kappa=h/2\).
+Smeared records converge to the classical branch-weighted density under
+the stated nonstationary-phase hypotheses. Independently, Gaussian
+preparation and coordinate-mark laws for quadratic forces vary
+continuously with \(h\), and an incoherent mixture of narrowing packets
+reaches the same classical swarm at every fixed time: weakly as
+measures, locally uniformly at regular record values (Theorems 1 and 5).
+Critical values retain their explicit qualifications. These
+countermodels show why any pointwise interference obstruction requires
+an actual coherence and resolution premise.
 
-\hypertarget{the-thesis-as-a-statement-about-limits}{%
-\subsection{1. The thesis as a statement about
-limits}\label{the-thesis-as-a-statement-about-limits}}
+The fringe contrast is dimensionless, not a spectral gap or a selected
+positive action. The free fold and radial Hooke/Kepler examples retain
+their exact constructions and local-time hypotheses. Written
+stationary-phase, Gaussian transport and almost-periodicity arguments,
+including incorporated internal checks, establish no universal
+persistence after crossings, necessity of a resolution threshold, or
+impossibility of classical completion. Model reviews are not independent
+peer review or novelty evidence.
 
-For each \(h>0\) let \(T_h\) be the theory with phase constant \(h\):
-its dynamics and its record law. The dilation \(h\mapsto\mu h\) is an
-isomorphism (\href{principia-fifth-postulate.md}{fifth-postulate note,
-Theorem B and §7}; \href{https://arxiv.org/abs/quant-ph/9803035}{Rivero
-1998, eq. (10)}, full read), so \(\{T_h:h>0\}\) is one theory in
-different units. The zero theory \(T_0\) is Newton's. The thesis says
-that \(T_0\) is not the limit of \(T_h\) as \(h\to0\) in any topology
-intrinsic to Newton's construction: the scale is generated by the
-construction, and zero is isolated. This is the mechanical form of a
-mass gap, where the continuum limit generates the scale and the massless
-theory is not reached by the coupling.
+\hypertarget{parameter-preparation-and-topology}{%
+\subsection{1. Parameter, preparation and
+topology}\label{parameter-preparation-and-topology}}
 
-Known results fix what the thesis can mean. The limit \(h\to0\) is
-singular, with phases \(e^{iS/h}\) that have no pointwise limit
-{[}@Berry2002; metadata{]}. Yet in weak topologies and for finite times
-the classical theory is reached: coherent states follow classical
-trajectories for finite times {[}@Hepp1974; metadata{]}, Egorov's
-theorem transports smooth observables classically up to \(O(h)\) for
-finite times, and Wigner measures give the weak limits of densities
-{[}@LionsPaul1993; metadata{]}. So the thesis is false for smeared
-records at finite time, and can be true only in stronger topologies.
-Newton's construction supplies three candidates: complete records, the
-densities themselves rather than their smearings; the all-time limit;
-and refinement, with or without records at the inserted times. The rest
-of the note tests each.
+Here \(h\) is an arbitrary \textbf{reduced phase-action coefficient},
+not \(h_P=2\pi\hbar\). Identifying one member with physical quantum
+dynamics would supply \(h=\hbar\); that calibration is not derived. The
+recording convention is \(\kappa=h/2\). Neither \(h\) nor a position
+resolution is the dimensionless \(\epsilon=\hbar/S_0\) or a time mesh.
 
-Deformation families cannot see a gap. The Moyal family, the Fisher
-field law and its sheet realizations
-(\href{score-constrained-ensemble.md}{score-constrained note}, §§6--8)
-are continuous in the constant by construction and contain the zero
-branch. The tangent groupoid glues the \(\varepsilon=0\) fibre
-continuously to the \(\varepsilon>0\) fibres
-(\href{principia-fifth-postulate.md}{fifth-postulate note, §7}), so the
-kinematics is continuous at zero as well. A gap, if it exists, lives in
-the dynamics and the records.
+Let \(T_h\) denote a specified dynamics, preparation and record law,
+with classical \(T_0\) as the comparison. A dilation can relate \(h\)
+values only while rescaling the other dimensional data as prescribed by
+the \href{principia-fifth-postulate.md}{fifth-postulate} and
+\href{rivero-1998-conjecture-central-forces.md}{Rivero} constructions.
+Holding the classical preparation, couplings and record protocol fixed
+while varying \(h\) is not merely changing units; the action ratios and
+interference change.
+
+The claim being tested is continuity of those particular laws, not
+existence of a classical theory. The oscillatory factors \(e^{iS/h}\)
+can fail pointwise convergence while smooth-observable and fixed-time
+classical limits exist. Coherent-state transport {[}@Hepp1974;
+metadata{]}, Egorov estimates and Wigner measures {[}@LionsPaul1993;
+metadata{]} concern their respective hypotheses and weaker topologies.
+Exact-record, smeared-record, all-time and refining-instrument limits
+must therefore be named separately. The
+\href{groupoid-quantum-newton-states.md}{groupoid construction} provides
+another continuous state/observable comparison; its continuity does not
+prove or refute every stronger record limit.
 
 \hypertarget{theorem-1-galileos-comparison-has-no-gap}{%
 \subsection{2. Theorem 1: Galileo's comparison has no
@@ -200,9 +175,13 @@ value \(\omega\) of \(S_a(y)-S_b(y)\) over ordered pairs, put
 distinct action values. For \(K=2\) with \(S_1(y)\neq S_2(y)\) the
 condition is \(c_1(y)c_2(y)=0\). The limit \(B_0\) is Newton's
 branch-weighted density
-\(D_{0,\pi}(|O|^2)=\sum_a|O(z_a)|^2/|\det S''_\pi(z_a)|\) only if no two
-illuminated branches share an action. (ii) \emph{Smeared record.} For
-every \(\varphi\in C_c^\infty(Y)\),
+\(D_{0,\pi}(|O|^2)=\sum_a|O(z_a)|^2/|\det S''_\pi(z_a)|\) exactly when
+the total equal-action cross contribution vanishes:
+\(\sum_s\sum_{a<b:\,S_a=S_b=s}2\operatorname{Re}(c_a\bar c_b)=0\). No
+shared action among illuminated branches is sufficient, not necessary.
+For example, equal-action coefficients \(c_1=1,c_2=i\) give \(B_0=2\),
+the diagonal classical value despite both branches being illuminated.
+(ii) \emph{Smeared record.} For every \(\varphi\in C_c^\infty(Y)\),
 \[\int\varphi(y)|A_h(y)|^2dy\longrightarrow
 \sum_a\int\varphi(y)\frac{|O(z_a(y))|^2}{|\det S''_\pi(z_a(y))|}dy
 \qquad(h\downarrow0).\tag{4}\]
@@ -264,26 +243,26 @@ smeared topology of (ii) is the opposite order.
 \(\varphi_\delta\) itself, and \(\int\varphi_\delta=1\); the remaining
 terms are as before. \(\square\)
 
-Thus the complete record of a determinate preparation with several paths
-does not reach Newton's density as \(h\downarrow0\), by non-convergence
-in the generic case of distinct actions and by a wrong limit in the
-symmetric case of equal actions, while its smearing always does. Theorem
-1 of the 1998-conjecture note is the case \(d=1\), \(K=3\), \(y=0\) of
-(i), including the retained cross term of the two mirror paths; smearing
-in \(y\) removes that term by (ii), because the mirror paths arrive at
-\(y=0\) with opposite momenta.
+The exact criterion permits non-convergence, a nonclassical limit or the
+classical limit, depending on the frequency sums and equal-action cross
+terms. Two illuminated distinct-action branches force non-convergence at
+the fixed point. Equal-action branches need not give a wrong limit:
+their cross terms can cancel. The three-path symmetric example in the
+\href{rivero-1998-conjecture-central-forces.md}{1998-conjecture
+treatment} retains its specified nonzero mirror-path cross term;
+smearing removes it by the distinct arrival-momentum argument. That
+example is not a theorem about all crossings.
 
 \hypertarget{b.-the-invariant-discontinuous-at-zero-fringe-visibility}{%
 \subsection{3b. The invariant discontinuous at zero: fringe
 visibility}\label{b.-the-invariant-discontinuous-at-zero-fringe-visibility}}
 
-A mass gap is a number that is positive for every value of the coupling
-and zero for the free theory. The dilation \(h\mapsto\mu h\) forbids any
-scale from playing that role here, so whatever is discontinuous at zero
-must be dimensionless. It is the leading contrast of the fringes in (3).
-This is an interference contrast, not a spectral gap, and it generates
-no scale; the sense in which it is the thesis's invariant is stated at
-the end of the section.
+A physical spectral gap belongs to a specified Hamiltonian, sector and
+limiting order. Positivity at every bare coupling is a separate
+strengthening, not its definition. The witness here is instead the
+leading dimensionless fringe contrast in (3), under the displayed
+coherent two-branch assumptions. Its dependence on record resolution
+supplies no action unit or spectral gap.
 
 \textbf{Proposition (leading visibility).} Let \(y_0\in Y\) be a record
 point with two illuminated nondegenerate branches, \(K=2\), and write
@@ -338,14 +317,13 @@ its own leading contrast \(2\sqrt{\rho_a\rho_b}/\sum_c\rho_c\) at its
 own spacing \(2\pi h/|p_a-p_b|\). For inertia with graded velocity
 (Theorem 3) the branch densities are \(a(q_a)^2/|1+p_0'(q_a)t/m|\); for
 the Kepler swarm (Theorem 4) they are
-\(a(\phi'_a)^2/|1+I_0'\Omega't|_a\). In every case \(V_0\) is computed
-from Newton's multi-stream density and is positive wherever two
-illuminated streams cross, the same along the whole family \(h>0\) as
-\(h\downarrow0\), and zero at \(h=0\). In the thesis's sense this is the
-invariant: the leading contrast is constant along the family and jumps
-to zero at its endpoint. It is not a spectral gap, it is dimensionless,
-and it generates no scale; what it measures is the discontinuity of the
-family at zero in the complete-record topology.
+\(a(\phi'_a)^2/|1+I_0'\Omega't|_a\). These are pair amplitudes before
+equal action frequencies are grouped. The actual record is governed by
+the sums \(B_\omega\) of Theorem 2: cancellations can remove
+frequencies. The two-branch local leading contrast is independent of
+\(h\) at fixed classical data under its assumptions, but that is a
+dimensionless record statement. It neither proves a universal pointwise
+failure at every crossing nor generates a physical action scale.
 
 \hypertarget{c.-imprecision-actions-at-both-ends}{%
 \subsection{3c. Imprecision actions at both
@@ -412,7 +390,10 @@ sheet; the premise that selects it over the mixture is determinacy at
 each \(h\) in the sense of a conditional momentum spread of order \(h\)
 (the sheet separation \(2\kappa\,\partial_q\log\rho\) of the
 \href{score-constrained-ensemble.md}{score note}) rather than
-\(\sqrt h\). The classical swarm alone does not make that selection.
+\(\sqrt h\). The classical swarm alone does not make that selection. The
+exact incoherent-limit theorem in §4c does not rely on extrapolating the
+linearized visibility formula beyond its amplitude and phase-error
+regime.
 
 \textbf{Proposition (coherence length).} Attach the same swarm as a
 mixture over centres \(c\) of components \(a_\sigma(q-c)e^{iS_0(q)/h}\)
@@ -450,23 +431,25 @@ optical language this is mutual coherence between the launch points of
 the two streams. It is this quantity, not purity of the whole swarm,
 that the second premise must assert at each \(h\).
 
-\textbf{Proposition (large-action regime).} Fix \(h>0\) and the geometry
-of the comparison, and scale the masses by \(\lambda\) at fixed
-velocities, fixed record resolution \(\delta\) and fixed velocity
-imprecision \(\Delta v\) of the preparation. Then momenta, actions, the
-arrival momentum difference \(\Delta p\) and the momentum thickness
-\(\Delta=\lambda m\Delta v\) all scale by \(\lambda\), the arrival
-points, branch densities and \(V_0\) are unchanged, and the two
-imprecision actions \(\delta\Delta p\) and \(\Delta\,\Delta q_0\) grow
-like \(\lambda\). For Gaussian kernels the leading contrast is
+\textbf{Proposition (large-action regime).} For free motion, or when
+forces are scaled with mass so the acceleration and trajectories stay
+fixed, fix \(h>0\) and the geometry of the comparison, and scale the
+masses by \(\lambda\) at fixed velocities, fixed record resolution
+\(\delta\) and fixed velocity imprecision \(\Delta v\) of the
+preparation. Then momenta, actions, the arrival momentum difference
+\(\Delta p\) and the momentum thickness \(\Delta=\lambda m\Delta v\) all
+scale by \(\lambda\), the arrival points, branch densities and \(V_0\)
+are unchanged, and the two imprecision actions \(\delta\Delta p\) and
+\(\Delta\,\Delta q_0\) grow like \(\lambda\). For Gaussian kernels the
+leading contrast is
 \(V_0\exp[-\lambda^2(\delta\Delta p_1/h)^2/2]\exp[-\lambda^2(m\Delta v\,\Delta q_0/h)^2/2]\),
 with \(\Delta p_1\) the difference at \(\lambda=1\), and tends to zero
 as \(\lambda\to\infty\); the record converges to Newton's
 branch-weighted density by Theorem 2(ii) and (4\('\)). The large-action
 regime at fixed \(h\) is therefore the regime in which Newton's
 mechanics is recovered, and it is defined by comparison with \(h\): the
-same family read as \(h\to0\) with exact preparations and records,
-Theorems 2--4, has no limit.
+same family read as \(h\to0\) with exact coherent records can fail to
+converge when Theorem 2(i) has a nonzero action-frequency coefficient.
 
 \emph{Proof.} Under the scaling the classical trajectories are
 unchanged, \(S\mapsto\lambda S\), and the arguments of \(\hat\varphi\)
@@ -478,35 +461,37 @@ unchanged arrival map. \(\square\)
 \subsection{4. Theorem 3: inertial motion with a graded
 velocity}\label{theorem-3-inertial-motion-with-a-graded-velocity}}
 
-Newton's simplest motion already shows the gap when the preparation is
-determinate and its velocity varies along it. Let \(h>0\), \(V=0\), and
-prepare
+Free coherent motion permits the pointwise interference test when its
+illuminated arrival branches satisfy the frequency criterion. Let
+\(h>0\), \(V=0\), and prepare
 \[\psi_0(q)=a(q)e^{iS_0(q)/h},\qquad a\in C_c^\infty(\mathbb R)\ \text{real},
-\qquad p_0=S_0'.\tag{5}\] Each particle at \(q\) has the definite
-velocity \(p_0(q)/m\). The free propagator is exact, so
-\[\psi_t(x)=\Big(\frac{m}{2\pi iht}\Big)^{1/2}\int a(q)\,
+\qquad p_0=S_0'.\tag{5}\] The classical swarm assigns velocity
+\(p_0(q)/m\) at \(q\); in the quantum state this is a phase-gradient
+current, not a sharp conditional canonical momentum. The free propagator
+is exact, so \[\psi_t(x)=\Big(\frac{m}{2\pi iht}\Big)^{1/2}\int a(q)\,
 e^{i\Phi_x(q)/h}dq,\qquad
 \Phi_x(q)=\frac{m(x-q)^2}{2t}+S_0(q).\tag{6}\] Critical points of
 \(\Phi_x\) are the arrivals \(q+p_0(q)t/m=x\), and
-\(\Phi_x''(q)=m/t+p_0'(q)\). With \(M_-=\inf p_0'\) and
-\(M_+=\sup p_0'\) over the support of \(a\), define the fold interval by
+\(\Phi_x''(q)=m/t+p_0'(q)\). Choose a compact interval \(I\) containing
+\(\operatorname{supp}a\) and put \(M_-=\inf_I p_0'\) and
+\(M_+=\sup_I p_0'\). Define the candidate fold-time interval by
 \[t_*=\frac{m}{\max(0,-M_-)},\qquad t^*=\frac{m}{\max(0,-M_+)},\qquad
 t_*\le t^*\le\infty,\tag{7}\] with \(m/0=\infty\): for \(t_*<t<t^*\) the
-derivative \(1+p_0'(q)t/m\) takes both signs on the support, and outside
-that interval it does not.
+derivative \(1+p_0'(q)t/m\) takes both signs on \(I\); outside that
+interval its sign is fixed there. These extrema alone guarantee neither
+illumination of a fold nor three arrivals.
 
 \textbf{Theorem 3.} (a) For \(0<t<t_*\) the arrival map
-\(q\mapsto q+p_0(q)t/m\) is a diffeomorphism of \(\mathbb R\), every
-\(x\) has one arrival \(q_*(x)\), and
+\(q\mapsto q+p_0(q)t/m\) is strictly increasing on \(I\). A record point
+has at most one illuminated arrival \(q_*(x)\), and where it exists
 \(|\psi_t(x)|^2\to a(q_*(x))^2/(1+p_0'(q_*(x))t/m)\) pointwise, the
-classical transported density, zero outside the transported support: the
-complete record reaches the zero branch before the fold. The same holds
-for \(t>t^*\) when \(t^*<\infty\), with the orientation reversed. (b)
-For \(t_*<t<t^*\) the arrival map is not monotone on the support, and
-there is an open interval of \(x\) whose points have three nondegenerate
-arrivals \(q_1<q_2<q_3\) in the support. On any record interval where
-exactly \(K\ge2\) illuminated nondegenerate arrivals exist, Theorem 2
-applies with \(d=1\) and the free coefficients
+classical transported density; the limit is zero outside the transported
+support: the complete record reaches the zero branch before the fold.
+The same holds for \(t>t^*\) when \(t^*<\infty\), with the orientation
+reversed. (b) The candidate fold interval permits several arrivals but
+does not force an illuminated three-branch interval. On any record
+interval where exactly \(K\ge2\) illuminated nondegenerate arrivals
+exist, Theorem 2 applies with \(d=1\) and the free coefficients
 \(c_a=\sqrt{m/t}\,e^{-i\pi/4}a(q_a)e^{i\pi\sigma_a/4}/|\Phi_x''(q_a)|^{1/2}\):
 the complete record converges as \(h\downarrow0\) only under the
 frequency condition of Theorem 2(i), and every smearing in \(x\)
@@ -518,15 +503,13 @@ singular contribution,
 \(|\psi_t(x_c)|^2\sim(2\pi m/t)\,\mathrm{Ai}(0)^2(2/|b|)^{2/3}a(q_c)^2\,h^{-1/3}\).
 
 \emph{Proof.} (a) For \(t<t_*\), \(1+p_0'(q)t/m\ge1-t\max(0,-M_-)/m>0\),
-so the arrival map is strictly increasing and onto; one-dimensional
+so the arrival map is strictly increasing on \(I\); one-dimensional
 stationary phase in (6) gives \(|\psi_t|^2\to(m/t)\,a^2/|\Phi_x''|\),
 the stated ratio, and zero outside the transported support by
 nonstationary phase. For \(t>t^*\) the derivative is negative throughout
-and the map is decreasing and onto. (b) For \(t_*<t<t^*\) the derivative
-changes sign on the support, so the map has a local maximum and a local
-minimum there and, by the intermediate value theorem, the values between
-them are taken three times; the arrivals are nondegenerate away from the
-two fold values. The final momenta
+and the map is strictly decreasing on \(I\). (b) On a specified interval
+of several nondegenerate illuminated arrivals, stationary phase applies
+to each branch. The final momenta
 \(\partial_x\Phi_x(q_a)=m(x-q_a)/t=p_0(q_a)\) are distinct because the
 \(q_a\) are distinct and \(x=q_a+p_0(q_a)t/m\). Theorem 2 applies with
 the displayed coefficients, whose moduli squared are the classical
@@ -535,18 +518,18 @@ branch densities. (c) Stationary phase at a cubic point gives
 against the prefactor \((m/2\pi ht)^{1/2}\); squaring gives the constant
 and the power. \(\square\)
 
-A swarm with an affine velocity profile, \(p_0=-\beta q\), has
-\(M_-=M_+=-\beta\), so \(t_*=t^*=m/\beta\): it passes through a focal
-instant and never folds, and its complete record reaches the zero branch
-at every other time. A swarm with faster particles behind slower ones
-and a non-affine profile folds for \(t_*<t<t^*\), with \(t^*=\infty\)
-when \(p_0'\) is somewhere nonnegative. Inside the fold interval the
-zero branch is unreachable by complete records on the three-stream
-interval; the fringe spacing \(2\pi h/|p_a-p_b|\) tends to zero without
-the record settling, and the classical multi-stream density is recovered
-only by smearing, an operation external to the determinate construction.
-The classical density is singular at the fold point; its spatial
-divergence and the \(h^{-1/3}\) divergence of (c) are different limits.
+A swarm with affine velocity profile \(p_0=-\beta q\), \(\beta>0\), has
+\(t_*=t^*=m/\beta\): it passes through a focal instant and reaches the
+classical record at every other fixed time. Non-affine profiles require
+their actual arrival-map test. The existing example
+\(p_0(q)=m(q^2-q)/t\) at the indicated time gives \(F_t(q)=q^2\):
+derivative sign change and a fold produce two regular arrivals on a
+symmetric illuminated support, not three. Thus derivative extrema alone
+did not justify the former three-stream assertion. At an illuminated
+nondegenerate fold the spatial classical singularity and the
+\(h^{-1/3}\) quantum density asymptotic in part (c) are different
+limits. Away from critical values, pointwise convergence is governed by
+the frequency criterion, with smeared convergence as in Theorem 2.
 
 \hypertarget{b.-theorem-4-central-forces-on-the-radial-cycle-hooke-against-kepler}{%
 \subsection{4b. Theorem 4: central forces on the radial cycle, Hooke
@@ -592,135 +575,160 @@ spread \(\Delta I=\max I_0-\min I_0\) on the support and support length
 \iint a(\phi')\,e^{i\Phi_k(\phi',I)/h}\,d\phi'\,dI,\qquad
 \Phi_k=S_0(\phi')+I(\phi-\phi'+2\pi k)-E(I)t.\tag{10}\] The critical
 points of \(\Phi_k\) are \(I=I_0(\phi')\) and
-\(\phi-\phi'+2\pi k=\Omega(I)t\): the body prepared at \(\phi'\) arrives
-at \(\phi\) after \(k\) turns. The Hessian determinant is
-\(-(1+I_0'(\phi')\Omega'(I_0(\phi'))t)\). Define the fold time and, for
-\(I_0\) monotone on the support so that \(\Omega(I_0)\) is monotone
-there, the lapping time
-\[t_*=\frac1{\max(0,\,-I_0'\,\Omega'(I_0))}\in(0,\infty],\qquad
-t_{\rm lap}=\frac{2\pi-|a|}{|\Omega(I_0(b))-\Omega(I_0(a_-))|}\in(0,\infty],\tag{11}\]
-with \(a_-<b\) the endpoints of the support and \(1/0=\infty\). The
-image of the support under the arrival map has length at most
-\(|a|+t\,|\Omega(I_0(b))-\Omega(I_0(a_-))|\), with equality while the
-map is monotone.
+\(\phi-\phi'+2\pi k=\Omega(I_0(\phi'))t\). The Hessian determinant is
+\(-[1+tI_0'(\phi')\Omega'(I_0(\phi'))]\). Choose a connected interval
+\(J=[a_-,b]\) of length \(\ell_J=b-a_-<2\pi\) containing the launch
+support and staying inside the physical action range. Set
 
-\textbf{Theorem 4.} (a) \emph{Hooke.} \(E\) is affine in \(I\), the
-\(I\)-integral in (10) is a delta function, and for every \(h>0\) and
-every \(t\)
-\[|\psi_t(\phi)|^2=a(\phi-2\omega t)^2\quad(\text{mod }2\pi):\tag{12}\]
-the swarm rotates rigidly, the complete anomaly record is the same for
-every \(h\), and the zero branch is reached at all times. (b)
-\emph{Kepler, or any \(\Omega'\neq0\).} For \(t<\min(t_*,t_{\rm lap})\)
-every \(\phi\) has at most one arrival and
-\(|\psi_t(\phi)|^2\to a(\phi')^2/|1+I_0'(\phi')\Omega'(I_0(\phi'))t|\)
-pointwise. If \(I_0\) is monotone on the support and
-\(t_{\rm lap}<t_*\), which is the condition
-\((2\pi-|a|)\max I_0'<\Delta I\) when \(\Omega'<0\) and \(I_0'>0\), then
-for \(t_{\rm lap}<t<t_*\) the arrival map is monotone with image longer
-than \(2\pi\), and every \(\phi\) in the overlap has exactly two
-arrivals of different winding; distinct arrivals at the same \(\phi\)
-always have distinct actions \(I_a\), so Theorem 2 and its Corollary
-apply with \(\phi\) as record variable and \(I\) as momentum: the
-complete anomaly record converges as \(h\downarrow0\) only under the
-frequency condition of Theorem 2(i), every smeared record converges to
-the classical density \(\sum_a a(\phi'_a)^2/|1+I_0'\Omega't|_a\), and a
-record of angular resolution \(\delta\) reaches it if
-\(h/(\delta\min|I_a-I_b|)\to0\). The same conclusions hold on any record
-interval with finitely many illuminated nondegenerate arrivals, however
-they arise, by folding as in Theorem 3(b) or by overlap of windings; no
-universal statement is made for later times, since an inverted monotone
-map can again be injective with a short image. (c) \emph{Kepler times.}
-Exactly,
-\(t_*=[3mk^2\max_{\operatorname{supp}a}(I_0'/(I_0+\ell)^4)]^{-1}\),
-infinite when the maximum is nonpositive, and for monotone \(I_0\),
-\(t_{\rm lap}=(2\pi-|a|)/|\Omega(I_0(b))-\Omega(I_0(a_-))|\). For a
-narrow swarm, \(\Delta I\ll I+\ell\), with a short support,
-\(|a|\ll2\pi\),
-\[t_{\rm lap}\simeq\frac{2\pi(I+\ell)^4}{3mk^2\,\Delta I}
-=\frac{T\,(I+\ell)}{3\,\Delta I}=\frac{T^2}{\Delta T},\qquad
-t_*\simeq\frac{(I+\ell)^4}{3mk^2\max I_0'}\ \ (\max I_0'>0),\tag{13}\]
-with \(\Delta T=3T\Delta I/(I+\ell)\) the spread of periods:
-\(T^2/\Delta T\) is the leading full-turn dephasing time of such a
-swarm. For a uniform gradient, \(t_{\rm lap}<t_*\) needs the support to
-span more than half a turn, \(|a|>\pi\); otherwise the fold comes first
-and the mechanism of Theorem 3(b) applies on the circle. Both times are
-classical, independent of \(h\).
+\[\begin{gathered}
+ A_t(\phi')=\phi'+t\Omega(I_0(\phi')),\qquad
+ J_t=1+tI_0'\Omega'(I_0),\\
+ t_*^{-1}=\max_J(0,-I_0'\Omega'(I_0)),\\
+ \Delta\Omega=\Omega(I_0(b))-\Omega(I_0(a_-)).
+\end{gathered}\tag{11}\]
 
-\emph{Proof.} The eigenfunctions are \(e^{i(n+\alpha)\phi}\) with
-eigenvalues \(E(h(n+\alpha))\), and the preparation's coefficients are
-\(c_n=(2\pi)^{-1}\int a\,e^{i[S_0(\phi')-h(n+\alpha)\phi']/h}d\phi'\).
-With \(\nu=n+\alpha\) and \(I=h\nu\) the evolved state is
-\(\sum_nG(n+\alpha)\) for
-\(G(\nu)=(2\pi)^{-1}\int a(\phi')e^{i[S_0(\phi')+h\nu(\phi-\phi')-E(h\nu)t]/h}d\phi'\),
-a Schwartz function of \(\nu\): for \(h\nu\) outside the range of
-\(I_0\) the \(\phi'\)-phase has no stationary point and integration by
-parts gives rapid decay, and derivatives in \(\nu\) only add polynomial
-factors. Poisson summation,
+Here \(1/0=\infty\). Before \(t_*\), \(A_t\) is increasing on \(J\), and
+its lifted image width is \textbf{exactly}
+\(W(t)=\ell_J+t\Delta\Omega\). The sign matters: a negative
+\(\Delta\Omega\) compresses this interval. A support with holes or zeros
+can remove illuminated arrivals even when the geometric image overlaps
+itself on the circle.
+
+\textbf{Theorem 4 (the stipulated angle-record model).}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  \emph{Hooke.} For \(E(I)=\omega(2I+\ell)\), the \(I\) integral in (10)
+  is a delta function and
+\end{enumerate}
+
+\[|\psi_t(\phi)|^2=|a(\phi-2\omega t)|^2\quad(\mathrm{mod}\ 2\pi).\tag{12}\]
+
+The rigidly rotating angle density is independent of \(h\) at all times.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \emph{Nondegenerate arrivals.} If \(J_t>0\) on \(J\) and
+  \(W(t)<2\pi\), a circle record has at most one illuminated arrival. At
+  regular values its pointwise limit is
+  \(|a(\phi')|^2/|1+tI_0'(\phi')\Omega'(I_0(\phi'))|\) when that arrival
+  exists and zero otherwise. If \(\Delta\Omega>0\), geometric wrapping
+  starts at
+\end{enumerate}
+
+\[t_{\rm wrap}=\frac{2\pi-\ell_J}{\Delta\Omega},\]
+
+provided the increasing-map condition persists through that time. In the
+window \(2\pi<W(t)<4\pi\), the circle overlap has two geometric
+preimages; where both are illuminated, the two-branch stationary-phase
+criterion applies. Larger widths can give more arrivals, so ``exactly
+two for every later time'' is not asserted. More generally, on any
+interval with finitely many illuminated nondegenerate arrivals, the
+frequency criterion of Theorem 2 and its smeared-record conclusion
+apply, with angle \(\phi\) as record and arrival action
+\(I_a=\partial_\phi\Phi_a\) as its momentum. Distinct arrivals have
+distinct \(I_a\), but their \emph{stationary phase values} can still
+coincide at a record point; the equal-action cross-term test remains
+necessary. Resolution \(h/(\delta\min_{a\ne b}|I_a-I_b|)\to0\) is
+sufficient on the same regular compact windows, not a universal
+necessary threshold.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \emph{Kepler signs and times.} For (8),
+\end{enumerate}
+
+\[t_*^{-1}=3mk^2\max_J\left(0,\frac{I_0'}{(I_0+\ell)^4}\right).\]
+
+If \(I_0'<0\), then \(\Omega'<0\) gives an increasing
+\textbf{stretching} map, \(t_*=\infty\) and \(\Delta\Omega>0\); the
+preceding \(t_{\rm wrap}\) applies. If \(I_0'>0\), the map
+\textbf{compresses} before its first fold and cannot wrap there, because
+\(W(t)<\ell_J<2\pi\). The former positive-gradient pre-fold lapping and
+half-turn criterion are withdrawn. After complete orientation reversal,
+if \(J_t<0\) throughout \(J\), its width is \(|\ell_J+t\Delta\Omega|\);
+for \(\Delta\Omega<0\) it reaches \(2\pi\) at
+\((2\pi+\ell_J)/|\Delta\Omega|\), only if that monotone reversed regime
+actually holds. Mixed-sign/folded regimes need the actual arrival count.
+
+For a narrow action spread \(\Delta I\ll I+\ell\), the \textbf{absolute}
+frequency spread is \(|\Omega'|\Delta I\simeq3mk^2\Delta I/(I+\ell)^4\).
+Thus the full-turn dephasing scale and candidate fold scale remain
+
+\[t_{\rm dephase}\simeq\frac{2\pi(I+\ell)^4}{3mk^2\Delta I}
+ =\frac{T(I+\ell)}{3\Delta I}=\frac{T^2}{\Delta T},\qquad
+ t_*\simeq\frac{(I+\ell)^4}{3mk^2\max_J I_0'}
+ \quad(\max_J I_0'>0),\tag{13}\]
+
+where \(\Delta T\simeq3T\Delta I/(I+\ell)\). A short-support stretching
+wrap time has the additional factor \(1-\ell_J/(2\pi)\); a monotone
+orientation-reversed wrap time has \(1+\ell_J/(2\pi)\). Equation (13) is
+not a sign-independent theorem of first record overlap. These are
+classical times, independent of \(h\).
+
+\emph{Proof.} For the twisted Fourier modes \(e^{i(n+\alpha)\phi}\), the
+preparation coefficients are
+\(c_n=(2\pi)^{-1}\int a(\phi')e^{i[S_0(\phi')-h(n+\alpha)\phi']/h}d\phi'\).
+Put \(\nu=n+\alpha\) and \(I=h\nu\). The evolved sum is
+\(\sum_nG(n+\alpha)\), where
+
+\[G(\nu)=(2\pi)^{-1}\int a(\phi')
+ e^{i[S_0(\phi')+h\nu(\phi-\phi')-E(h\nu)t]/h}d\phi'.\]
+
+It is Schwartz in \(\nu\) under the stated polynomial derivative bounds:
+outside the compact range of \(I_0\), integration by parts in \(\phi'\)
+gives rapid decay. Poisson summation,
 \(\sum_nG(n+\alpha)=\sum_ke^{2\pi ik\alpha}\int G(\nu)e^{-2\pi ik\nu}d\nu\),
-with \(k\to-k\) and \(d\nu=dI/h\), is (10). (a) For
-\(E=\omega(2I+\ell)\) the \(I\)-integral is
-\((2\pi h)^{-1}\int e^{iI(\phi-\phi'+2\pi k-2\omega t)/h}dI =\delta(\phi-\phi'+2\pi k-2\omega t)\),
-so
-\(\psi_t(\phi)=\sum_ke^{-2\pi ik\alpha-i\omega\ell t/h} a(\phi+2\pi k-2\omega t)e^{iS_0(\phi+2\pi k-2\omega t)/h}\);
-one \(k\) contributes at each \(\phi\) because \(|a|<2\pi\), and (12)
-follows. (b) For \(t<t_*\) the arrival map
-\(\phi'\mapsto\phi'+\Omega(I_0(\phi'))t\) has derivative
-\(1+I_0'\Omega't>0\), so it is injective on the support; its image is an
-interval of length at most \(|a|+t|\Omega(I_0(b))-\Omega(I_0(a_-))|\),
-which is less than \(2\pi\) for \(t<t_{\rm lap}\), so no two windings
-overlap: one nondegenerate critical point at each \(\phi\) of the image,
-none elsewhere up to \(O(h^\infty)\). Two-dimensional stationary phase
-in (10) with the prefactor \((2\pi h)^{-1}\) gives the pointwise limit;
-the Hessian is \(\begin{pmatrix}I_0'&-1\\-1&-t\Omega'\end{pmatrix}\)
-with determinant \(-(1+tI_0'\Omega')\). For monotone \(I_0\) and
-\(t_{\rm lap}<t<t_*\) the map is still monotone, its image is an
-interval of length exactly
-\(|a|+t|\Omega(I_0(b))-\Omega(I_0(a_-))|>2\pi\), and the points of the
-circle covered twice are covered by two support points whose windings
-differ by one. Two arrivals \((\phi'_1,k_1)\), \((\phi'_2,k_2)\) at the
-same \(\phi\) with the same action \(I\) would satisfy
-\(\phi'_1-\phi'_2=2\pi(k_1-k_2)\), hence coincide because \(|a|<2\pi\);
-so distinct arrivals have distinct actions, and
-\(\partial_\phi\Phi_k=I\) at the critical point is the record momentum
-of Theorem 2. (c) Insert (8) into (11): \(|\Omega'|\Delta I\) is the
-frequency spread for monotone \(I_0\), \(T=2\pi(I+\ell)^3/(mk^2)\),
-\(T\propto(I+\ell)^3\) gives \(\Delta T/T=3\Delta I/(I+\ell)\), and
-\(t_{\rm lap}<t_*\) is (11) rearranged. \(\square\)
+followed by \(k\mapsto-k\) and \(d\nu=dI/h\), proves (10). For the
+affine Hooke energy, the \(I\) integral is
+\(\delta(\phi-\phi'+2\pi k-2\omega t)\); only one lift contributes
+because \(\ell_J<2\pi\). Its remaining factors are pure phases, proving
+(12).
 
-Proposition X and Kepler's law thus fall on opposite sides of the thesis
-in the record Newton's astronomy actually makes. The isochronous force
-keeps the zero branch for all time; the Kepler force loses it for a
-swarm with a spread of periods once its windings overlap, which for a
-narrow swarm spanning more than half a turn happens at the lapping time,
-of order \(T^2/\Delta T\), the time after which the fast bodies have
-gained a full turn on the slow ones, and otherwise once the swarm folds.
-While streams overlap the complete record of anomalies carries fringes
-of angular spacing \(2\pi h/|I_a-I_b|\) that never settle; no claim is
-made for all later times. A stationary preparation, the whole ring at
-one action, is an eigenstate and reaches the zero branch trivially; the
-gap needs a localized swarm with a spread of actions. In the radial
-record \(r\), by contrast, even Hooke's swarm has two branches with
-opposite radial momenta whenever it straddles a turning point, so there
-the gap appears for both forces during each turning passage; the anomaly
-record is the one that separates them. In the laboratory coordinate
-\(x\) of a one-dimensional Hooke swarm the same holds with the exact
-harmonic propagator: the arrivals solve
-\(x=q\cos\omega t+p_0(q)\sin\omega t/(m\omega)\) and the fold condition
-is \(\cos\omega t+p_0'(q)\sin\omega t/(m\omega)=0\), which every
-non-affine \(p_0\) meets within a half period; an affine \(p_0\) meets
-it only at a focal instant, where all bodies pass one point and no
-second branch forms.
+When \(J_t\) has one sign, injectivity on \(J\) and the \textbf{signed
+endpoint difference} give \(W(t)\), or its absolute value for reversed
+orientation. Reducing an interval of width less than \(2\pi\) modulo
+\(2\pi\) gives at most one preimage; a width between \(2\pi\) and
+\(4\pi\) gives at most two. Stationary phase uses the Hessian
+\(\left(\begin{smallmatrix}I_0'&-1\\-1&-t\Omega'\end{smallmatrix}\right)\),
+whose determinant is \(-J_t\), yielding the stated branch density. If
+two arrivals have the same \(I\), the arrival equations give
+\(\phi'_1-\phi'_2=2\pi(k_1-k_2)\); since \(\ell_J<2\pi\) they coincide.
+Thus distinct arrivals have distinct record momenta, justifying smeared
+nonstationary phase. Pointwise interference still uses the
+stationary-action frequency sums. Inserting
+\(\Omega'=-3mk^2/(I+\ell)^4\) proves the sign claims; expanding the
+frequency difference and \(T\propto(I+\ell)^3\) gives (13). \(\square\)
 
-One more scope remark. A single body prepared as one packet of angular
-width \(\sigma_\phi\) has action spread
-\(\Delta I\sim h/(2\sigma_\phi)\), so its lapping time (11) grows like
-\(1/h\), as does the fold time of a single packet in Theorem 3 whose
-velocity gradient is set by its own width. At any fixed time, then, a
-single body's complete record reaches the zero branch; this is the
-familiar power-law Ehrenfest time of an integrable system. The thesis
-concerns swarms of \(h\)-independent extent, which is what the complete
-record of an ensemble describes, and Newton's single trajectory is
-immune at fixed time.
+The observable here is a \textbf{stipulated angle record}. Its spectral
+agreement with the planar problem does not identify it with the physical
+radial or astronomical measurement. The planar angular condition
+\(\ell/h\in\mathbb Z\) also restricts the admitted parameter
+subsequences. Continuous-\(h\) non-convergence need not survive an
+arbitrary selected subsequence, so the formal angle-family result is not
+automatically a theorem for that physical slice. A uniform ring at one
+action is stationary and has no such localization mechanism; a localized
+coherent swarm needs its actual arrival and frequency conditions. No
+universal late-time or force-law-only exclusion follows.
+
+For the laboratory coordinate of a harmonic swarm the classical arrival
+map is \(x=q\cos\omega t+p_0(q)\sin\omega t/(m\omega)\), with a fold
+only where \(\cos\omega t+p_0'\sin\omega t/(m\omega)=0\), and the
+required illumination and nondegeneracy. This is a different record from
+the angle model. For a narrow, approximately minimum-uncertainty
+unchirped angular packet with fixed width \(\sigma_\phi\), the estimate
+\(\Delta I\sim h/(2\sigma_\phi)\) makes the dephasing time grow as
+\(1/h\). It gives no universal free-fold time for arbitrary packets or
+chirps. Fixed-time localization limits require their own shrinking
+phase-space-width assumptions, as in Theorem 5 below.
 
 \hypertarget{c.-theorem-5-the-incoherent-attachment-reaches-zero}{%
 \subsection{4c. Theorem 5: the incoherent attachment reaches
@@ -730,11 +738,13 @@ The coherence-length proposition of §3c says what a fixed coherence
 length does. This section removes the premise entirely and proves that
 without it the gap is absent: a determinate swarm attached to the
 \(h>0\) theory as an incoherent mixture of coherent states whose widths
-vanish with \(h\) has a complete coordinate record that converges to
-Newton's branch-weighted density at every fixed time. The theorem is
-exact for quadratic forces, the setting of Theorem 3, where the coherent
-attachment (5) has no limit inside its fold interval. The gap of this
-note therefore requires the coherence premise.
+vanish with \(h\) has a coordinate law converging weakly to the
+classical pushforward at every fixed time, with pointwise convergence at
+regular record values. Critical values retain part (b)'s separate
+qualifications. The theorem is exact for quadratic forces, the setting
+of Theorem 3, where a coherent attachment (5) can fail the frequency
+criterion on a regular multiple-arrival interval. The gap of this note
+therefore requires the coherence premise.
 
 \emph{Setting.} Let \(H=p^2/2m+V\) with \(\deg V\le2\), so the classical
 flow \(\Phi_t\) is affine with linear part
@@ -895,177 +905,52 @@ taken at infinite time first; at fixed finite time both vanish
 continuously as \(h\to0\). The first is a hidden count and the second a
 phase, so neither is a record; their observable counterpart is the
 breakdown of the classical limit after the Ehrenfest time, which Theorem
-3 exhibits inside the fold interval for inertial motion. The all-time
-limit therefore supports the thesis only through crossing streams, which
-is already Theorems 3--4.
-
-\hypertarget{what-the-thesis-is-and-what-it-needs}{%
-\subsection{6. What the thesis is, and what it
-needs}\label{what-the-thesis-is-and-what-it-needs}}
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Galileo's comparison with statistical preparations has no
-  gap.} Theorem 1 makes the record family constant in \(h\). Any gap
-  argument run on the parabola with Gaussian preparations and marks will
-  fail, for the same reason the deformation families fail.
-\item
-  \textbf{Determinate preparations whose streams cross have the gap, in
-  complete records.} Theorems 2 and 3 prove it on every finite partition
-  and exactly for inertia with graded velocity inside its fold interval;
-  Theorem 4 proves it for a Kepler swarm whose windings overlap, in the
-  anomaly record. Beyond Galileo the thesis holds in this topology
-  wherever streams cross; no universal late-time statement is made.
-\item
-  \textbf{Hooke and Kepler separate.} In the anomaly record, Proposition
-  X's isochronous force keeps the zero branch for all time (Theorem
-  4(a)), while Kepler's force loses it for a swarm with a spread of
-  periods once its windings overlap, at the lapping time of order
-  \(T^2/\Delta T\) for a narrow swarm spanning more than half a turn
-  (Theorem 4(b), (c)). The gap is a property of the force law and of the
-  swarm.
-\item
-  \textbf{Single bodies are immune at fixed time.} A single packet has
-  action spread of order \(h\), so its lapping and fold times grow like
-  \(1/h\) (§4b); the gap concerns swarms of \(h\)-independent extent.
-\item
-  \textbf{Two limits of one family.} Read as \(h\to0\) at fixed
-  classical data with exact preparations and records, the family has no
-  limit where coherent streams cross (Theorems 2--4). Read as the
-  large-action regime at fixed \(h\), with physical imprecisions held
-  fixed, every imprecision action exceeds \(h\) and Newton is recovered
-  (large-action proposition, §3c). Newton's mechanics is the second
-  limit, and that limit is defined by comparison with \(h\).
-\item
-  \textbf{Smeared records and statistical preparations reach zero.} This
-  is the content of the weak-limit theorems named in §1, and of (4).
-\item
-  \textbf{Refinement with records reverses the roles.} The zero theory
-  is the regular side of that limit.
-\item
-  \textbf{The thesis is an order of limits.} By the Corollary to Theorem
-  2, a record of resolution \(\delta\) reaches Newton if
-  \(h/(\delta\Delta p)\to0\). ``Complete records'' means \(\delta\to0\)
-  before \(h\to0\): the record limit is taken first, as the continuum
-  limit is taken first in the mass gap.
-\item
-  \textbf{The invariant discontinuous at zero is a contrast, not a
-  spectral gap.} The leading fringe visibility
-  \(2\sqrt{\rho_1\rho_2}/(\rho_1+\rho_2)\) of a complete record where
-  two streams cross is fixed by Newton's branch densities, the same
-  along the family \(h>0\), and zero at \(h=0\) (§3b). The dilation
-  symmetry makes it dimensionless; it generates no scale. In this form
-  the thesis asserts a discontinuity of the family at zero in the
-  complete-record topology; a positive Newtonian action scale is not
-  derived from it.
-\item
-  \textbf{Both ends must be exact.} The leading contrast is damped by
-  \(|\hat\varphi(\delta\Delta p/h)|\) at the record and by
-  \(|\hat w_0(\Delta\,\Delta q_0/h)|\) at the preparation (§3c): it is
-  full when both imprecision actions are small compared with \(h\),
-  Gaussian contrast vanishes when either ratio grows without bound, and
-  finite ratios give partial contrast. Newton's construction has both
-  imprecisions zero; a classical swarm attached as a mixture of
-  localized states has thickness \(\sqrt h\) and no Gaussian contrast,
-  while components of any \(h\)-independent coherence length \(\sigma\)
-  keep the \(h\)-independent partial contrast
-  \(e^{-\Delta q_0^2/(8\sigma^2)}\) (coherence-length proposition, §3c),
-  and the incoherent attachment with vanishing widths converges to
-  Newton's density at every fixed time (Theorem 5): the second premise
-  is mutual coherence between the launch points of crossing streams at
-  each \(h\), and it is necessary.
-\end{itemize}
-
-The thesis is therefore exactly as strong as two premises: that records
-are complete, the densities themselves rather than their smearings, and
-that preparations are determinate, one velocity at each place. Neither
-is foreign to Newton. A determinate preparation is the Newtonian
-default, every body with its own velocity; the statistical preparation
-of Theorem 1 is the extra assumption the Planck paper makes with its
-Gaussian marks. The second is the fifth postulate's joint determinacy
-(\href{principia-fifth-postulate.md}{fifth-postulate note}) read as a
-preparation, Newton's \emph{velocitas ultima} assigned to every particle
-of the ensemble. The first is the records reading already required by
-\href{leibniz-continuity-records.md}{Leibniz continuity}. It is also
-Newton's own topology. His limits are exact: the Section I scholium asks
-the reader to think of the vanishing quantities ``semper diminuendas
-sine limite'', always diminishing without limit, and the geometry of the
-comparison has no floor at any resolution
-(\href{planck-gap-paper.md}{Planck paper, §2, Proposition 1}). Newton's
-construction contains no apparatus resolution; the ultimate ratio is the
-exact record, and the resolution limit is taken inside the geometry
-before any constant enters. Read in that topology, the \(h>0\) family is
-Theorem 2(i)'s complete record. The smeared topology adds a resolution
-\(\delta\) that the construction does not contain; the Planck paper's
-marks are that modern addition. The gap claim and the Leibniz claim rest
-on the same reading of records, and the gap claim adds determinacy of
-the preparation. Under those two premises the statement ``Newton exists
-only with a positive scale'' has the precise form: the construction
-without branch data exists for every \(h>0\) and refines without extra
-data (1998-conjecture note, Theorem 2(b)), while at \(h=0\) it needs a
-branch rule (Theorem 1 there) and, wherever its streams cross, is not
-the limit of the \(h>0\) records (Theorems 2--4 here). With either
-premise dropped, the zero branch is reached. The determinate classical
-swarm does not by itself select the coherent attachment (5) over the
-mixture of localized states; that selection, an \(h\)-independent
-coherence length between the launch points of crossing streams (§3c), is
-the quantum half of the second premise and remains a premise.
+3 exhibits inside the fold interval for inertial motion. These examples
+compare orders of limits; without an actual observable they give no
+additional complete-record theorem or positive-action selection.
 
 \hypertarget{consequence-for-state}{%
-\subsection{7. Consequence for STATE}\label{consequence-for-state}}
+\subsection{6. Consequence for STATE}\label{consequence-for-state}}
 
-The gap thesis is located, refereed, and has its central-force case. It
-holds for complete records of determinate preparations wherever their
-streams cross (Theorems 2--3), and in the anomaly record it separates
-the force laws: Hooke keeps the zero branch for all time, Kepler loses
-it once a swarm's windings overlap, at the lapping time of order
-\(T^2/\Delta T\) for a narrow swarm spanning more than half a turn
-(Theorem 4). It fails for Galileo's comparison with Gaussian
-preparations and marks (Theorem 1), for smeared records, and for
-refinement with records; a record of resolution \(\delta\) reaches
-Newton if \(h/(\delta\Delta p)\to0\). The invariant discontinuous at
-zero is the leading fringe visibility
-\(2\sqrt{\rho_1\rho_2}/(\rho_1+\rho_2)\) of a complete record where two
-streams cross, fixed by Newton's branch densities, the same along the
-family \(h>0\) and zero at \(h=0\) (§3b), with full contrast when the
-record and preparation imprecision actions \(\delta\Delta p\) and
-\(\Delta\,\Delta q_0\) are both small compared with \(h\) (§3c); it is a
-contrast, not a spectral gap, and generates no scale. Consequences: the
-Planck paper's Gaussian parabola cannot carry the gap argument, which
-belongs to the Kepler swarm; the two premises, complete records as the
-record-limit-first order and determinate preparations as Newton's
-default together with an \(h\)-independent coherence length between the
-launch points of crossing streams, are the gap's hypotheses and the next
-things to defend, the first with the Leibniz records reading. The
-large-action proposition of §3c separates the two readings of the
-family: Newton's mechanics is the large-action regime of the theory with
-\(h>0\), defined by comparison with \(h\), and not the \(h\to0\) limit
-with exact data. At \(h>0\) the Coulomb and Kepler Hamiltonians are
-self-adjoint and their dynamics global {[}@Kato1951; metadata{]}, where
-the classical problem has collision singularities and the
-classical-first construction needs a branch rule (1998-conjecture note,
-Theorems 1 and 2(b)); the theory with \(h>0\) is self-sufficient where
-Newton's axioms leave motion undefined. Two theories must be kept apart
-here. Theorem 5 concerns nineteenth-century classical mechanics, the
-Liouville transport of a swarm along a smooth complete flow, and shows
-it is reached from the \(h>0\) theory along recorded or imprecise
-preparations. The thesis in its strong form concerns Newton's mechanics
-itself, the theory of motion from his axioms, which is incomplete where
-the classical flow fails; that it requires \(h>0\) to exist as a theory,
-with the large-action regime as its only completion, is not decided by
-Theorem 5 and is the claim the self-sufficiency contrast begins to test.
-Theorem 5 proves that the gap requires the coherence premise: the
-incoherent attachment of the same swarm, with widths vanishing with
-\(h\), reaches Newton's density at every fixed time, exactly for
-quadratic forces. The referee's scope verdict stands: no universal
-persistence after folds or lapping, no necessary resolution threshold,
-and no positive Newtonian action scale are proved here. Further exact
-cases available: the radial record of a Hooke swarm at a turning
-passage, and the classical-first route read with \(\varepsilon\) in
-place of \(h\), where Theorem 2(i) says the unselected construction at
-zero exists only for single-path problems. Reject a gap argument run
-inside a deformation family, on Gaussian preparations of the parabola,
-or on smeared records, and reject presenting the non-commutation of
-\(h\to0\) with \(t\to\infty\) as a record without an observable.
+The pointwise coherent criterion, finite-resolution estimate and
+incoherent countermodel answer different limit questions. On compact
+regular record windows, \(h/(\delta\Delta p)\to0\) is a
+\textbf{sufficient} resolution condition for the classical smeared
+limit, not a necessary one; frequency cancellation and Fourier zeros are
+retained exceptions. The preparation-thickness and coherence-length
+propositions give their additional curvature and amplitude conditions. A
+classical swarm with one velocity at each launch point does not choose a
+coherent quantum attachment over an incoherent one.
+
+For quadratic dynamics, the Gaussian marks add recoil variance
+\(h^2/(4\sigma_j^2)\) per mark. Thus the finite-record family is
+continuous in \(h\), not constant in \(h\). Under coherent two-branch
+hypotheses the leading visibility can instead remain
+\(2\sqrt{\rho_1\rho_2}/(\rho_1+\rho_2)\) as \(h\downarrow0\). These
+statements coexist because their preparations and record limits differ.
+The Hooke/Kepler angle examples retain their signed wrapping conditions;
+\(T^2/\Delta T\) is the narrow-swarm full-turn dephasing scale, not a
+sign-independent first-overlap theorem. There is no universal late-time
+obstruction.
+
+A vanishing-action limit and a large-action regime at fixed \(h\) also
+vary different data. Their distinction does not prove that classical
+mechanics exists only as one of them. Classical initial-value
+construction,
+\href{newton-cusp-preparation-floor.md\#the-trajectory-state-completion}{cusp-history
+completion} and singular \href{self-sufficiency-contrast.md}{domain
+selection} have separate hypotheses. The interpretation of exact
+Newtonian geometry or Leibniz's text as a physical complete-record rule
+remains a historical/physical premise, not a consequence of the
+interference calculation.
+
+The open selection question is whether an independently justified
+physical preparation and instrument law enforces the required coherence
+and resolution, and then whether any resulting coefficient is universal
+and equals physical \(\hbar\). The constructions here supply no such
+necessity or calibration. This treatment remains separate from the
+Gaussian mark bound and classical existence proofs for its exact
+multi-frequency criterion, coherent/incoherent attachments, fold/angle
+constructions and two-ended imprecision laws. New research remains
+paused during consolidation.
 \end{document}

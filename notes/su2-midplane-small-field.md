@@ -1,30 +1,30 @@
 # The SU(2) mid-plane on its small-field set: bounds and the missing comparison
 
-**Latest results, §§36--37 (2026-09-30):** exact dressed hard-core
-activities satisfy (112) in a weak recoupling strip. A centered quadratic
-reference also has a fixed moving-mean source radius and the subtracted
-barrier bound (177), of the form (113). Its nonlinear transfer, the
-other subtractions and physical recoupling remain open.
+The strongest retained result is a normalized weak-recoupling construction:
+under the explicit chart, rarity and $L\ge640$ assumptions of §36, the
+exact dressed hard-core activities satisfy both bounds in (112). The centered
+quadratic moving-mean test in §37 proves the subtracted barrier source bound
+(177). Its Gaussian reference, source-independent coefficients and finite local
+mean dependence are assumptions; transfer to the actual nonlinear source law
+(113), physical recoupling to one and stable iteration remain open.
 
-**After refereeing (GPT-6 Astra, 2026-09-28).** Claim-by-claim review of
-Claude's derivation: **A1 ACCEPT** (with the inverse notation corrected);
-**A2 REFINE** (complete image pairing, explicit constants, endpoint range,
-and the distinction between a bridge and the interacting measure);
-**A3 REFINE** (local convexity survives with corrected midpoint curvature
-and defined derivative constants); **A4 REJECT** (Proposition 4 is false
-under Hypothesis I, already along a flat-holonomy path; its covariance,
-gauge comparison and Taylor estimates also have missing premises);
-**A5 REFINE** (the Peierls arithmetic survives with corrected curvature
-constant; the logarithmic size condition remains conditional). The
-accepted results are Lemmas 1--2 and the corrected local Lemma 3 below.
-The normalized small-field comparison remains open. The original proof
-and its attribution are preserved in git history.
+The argument proceeds from inverse decay and local convexity, through the
+flat-holonomy counterexample and covariant response, to barrier comparison,
+connected large-field insertions, dressing and sources. The classical value,
+Gaussian, barriered interacting and weak-strip results have different hypotheses.
+The unrestricted original normalized comparison is false under Hypothesis I
+(§5). No continuum construction or physical Yang--Mills gap follows here.
+All review checks recorded below are repository-internal, not independent peer
+review or evidence of literature novelty.
 
 Take one halving of direction 1 in $1+2$ dimensions, with gauge group
 $SU(2)$, heat time $t=\lambda_3a=\hbar g_{\rm cl}^2a$, and
 
 $$\varepsilon=t^{1/2-\delta},\qquad \eta=2\varepsilon,
 \qquad 0<\delta<1/6.$$
+
+Here $\varepsilon$ is the small-field chart radius, distinct from physical
+$\hbar$, the regulator $\hbar/S_0$, lattice spacing and a record resolution.
 
 All operator norms below use the Euclidean norm on the three real colour
 components, $[T_a,T_b]=\epsilon_{abc}T_c$, $|T_a|=1$. Distances on $SU(2)$
@@ -56,7 +56,7 @@ squared-distance term necessarily vanishes there. Count each bridge
 denominator once, either in $S$ or outside the integral. Include the
 old-face ratios in the external normalization $B(U)$.
 
-Keep Claude's soft-barrier definition explicit:
+Use the soft-barrier definition:
 
 $$W_\eta(\xi)=\sum_e w_\eta(|\xi_e|),\qquad
 \mu_U(d\xi)=Z_s(U)^{-1}e^{-S(\xi;U)-W_\eta(\xi)}d\xi,
@@ -78,7 +78,7 @@ tail bound to (2), bounding the probability that any of $2N$ edges is
 large, and comparing the two partition functions are additional tasks.
 Even for independent bridges the union bound carries a factor $2N$.
 
-## 2. Lemma 1: covariant inverse decay (A1 ACCEPT)
+## 2. Lemma 1: covariant inverse decay
 
 Let $C_A$ be the oriented face-edge incidence operator with each entry
 an adjoint rotation of the background connection. Set
@@ -109,7 +109,7 @@ This is a bound on the sum of operator products at a given order.
 It supplies no bound of $3^{-L}$ for each individual path with the same
 constant after absolute path counting.
 
-## 3. Lemma 2: heat kernel and bridge tail (A2 REFINE)
+## 3. Lemma 2: heat kernel and bridge tail
 
 For $0<t\le1$ and $0\le\theta\le2\pi$,
 
@@ -158,7 +158,7 @@ In particular the leading pair is
 $$e^{-(4\pi^2+\psi^2)/(2t)}
 [(2\pi-\psi)e^{2\pi\psi/t}-(2\pi+\psi)e^{-2\pi\psi/t}],$$
 
-as in Claude's calculation. Pairing the remaining images too removes
+as in the image calculation. Pairing the remaining images too removes
 the apparent singularity from division by $\sin(\psi/2)$.
 
 For $\theta\le1$, the absolute remainder relative to
@@ -189,7 +189,7 @@ against Haar measure of mass one. At $r=\eta=2\varepsilon$ and
 $|X|\le\varepsilon\le1$ the gain is $e^{-4\varepsilon^2/t}$.
 This proof uses the two endpoint triangle inequalities through $m_*$.
 
-## 4. Lemma 3: a corrected local convexity theorem (A3 REFINE)
+## 4. Lemma 3: local convexity with its support assumptions
 
 The midpoint background face logarithm $Y_g=\log(m_{*\partial g})$
 obeys $|Y_g|\le3\varepsilon$. To see this, compare its four edges to
@@ -255,7 +255,7 @@ The soft measure (2) has the weaker pointwise error
 $C_3(\varepsilon+c_0)$ on its full support. Its barrier Hessian can be
 arbitrarily large. These distinctions matter in §5.
 
-## 5. Proposition 4: verdicts and the corrected conditional implication
+## 5. Failure of the original normalized comparison and the surviving implication
 
 The original Hypothesis I asked for a $C^2$ path $U(s)$ from $1$ to $U$
 with $|X_p(s)|\le2\varepsilon$,
@@ -405,7 +405,7 @@ with the harmonic data fixed. All constants in (18) are explicit in
 the supplied hypotheses; proving them uniformly in the plane is still
 part of the problem.
 
-## 6. What stays open for the weak (18) of the mid-plane note (A5 REFINE)
+## 6. Weak comparison: tail arithmetic, winding and size conditions
 
 (a) **Small-field comparison.** The tasks include barrier moment control,
 a background-covariant local response estimate, independent admissible
@@ -452,9 +452,9 @@ need absorption into a slightly smaller rate or a $\log\log(1/t)$
 correction. Lemma 1 alone proves (4); a winding estimate for the
 normalized interacting free energy still requires a separate argument.
 
-## 7. Part B: quasi-local response and the obstruction to plaquette telescoping
+## 7. Quasi-local response and the obstruction to plaquette telescoping
 
-**Result, GPT-6 Astra, 2026-09-28.** A covariance version of Lemma 1
+**Covariance result.** A covariance version of Lemma 1
 gives a plane-uniform locality theorem for local perturbations of the
 potential, under the explicit analytic hypotheses below. Converting
 this to independent plaquette perturbations needs a further gauge
@@ -486,7 +486,7 @@ Bibliography entries: `HelfferSjostrand1994`, `Helffer1993Kac`.
 
 ### 7.2 A covariance theorem with the same decay constants
 
-**After refereeing Theorem 5 (Claude, 2026-09-28).** ACCEPT. The
+**Internal scope check.** ACCEPT. The
 representation (22) is the Helffer--Sjöstrand formula; $\mathcal B\ge6I$ holds because
 $L\ge0$ and the on-site Hessians are nonnegative, and $\mathcal B^{-1}$ keeps the edge
 index; $\mathcal R$ is multiplication by a range-one matrix function of norm at
@@ -665,9 +665,9 @@ bound, and Part A's barrier and large-field issues remain. This is the
 precise obstruction reached in Part B. All claims of P($\alpha$) and
 the normalized expansion (18) of the mid-plane note remain conditional.
 
-## 8. Round 9: cancellation in flux response
+## 8. Cancellation in flux response
 
-**After refereeing (Claude, 2026-09-28).** §8.1 ACCEPT, checked in full:
+**Internal scope check.** §8.1 ACCEPT, checked in full:
 Woodbury gives $G=\frac14(I-C^*PC)$, hence (28); the slab form (29) vanishes at
 constant flux and gives $-|x|^2/(4t)$ for opposite layers, both as in
 Proposition 2; $8I+L=12I-\mathsf A$ and the walk series give the weighted row
@@ -679,7 +679,7 @@ Coulomb lift $X^3(k)/(e^{i\kappa}-1)$ of a soft flux produces the $1/\kappa$ res
 of charged curvature), consistent with the gauge-invariant expectation of
 §6; it fixes that (27) must be posed covariantly. §8.3 ACCEPT.
 
-### 8.1 Exact Gaussian reference (GPT-6 Astra, 2026-09-28)
+### 8.1 Exact Gaussian reference
 
 Use the unrestricted abelian Gaussian in one slab with boundary links
 $a_0,a_1$. Retain their harmonic components
@@ -828,9 +828,9 @@ plane-uniform weighted sums, the normalized interacting barrier moments,
 the full winding remainder and the large-field comparison. The Gaussian
 identity and formal expansion supply no such all-order remainder bound.
 
-## 9. Round 11: a tree-transported flux response
+## 9. A tree-transported flux response
 
-**Part 1, GPT-6 Astra, 2026-09-28; definition, unrefereed.** A fixed
+A fixed
 tree gives a gauge-covariant finite-volume chart. Its response retains
 the path dependence of comparisons between different faces.
 
@@ -962,13 +962,13 @@ path-cost construction. Uniform barrier moments, holonomy-dependent
 winding control and the large-field comparison must then transfer the
 formal coefficients to the normalized $h$; iteration remains a further step.
 
-## 10. Round 12: the complete classical cubic on the strip
+## 10. The complete classical cubic on the strip
 
-**After refereeing §10 (Claude, 2026-09-28).** ACCEPT as a formal
+**Internal scope check.** ACCEPT as a formal
 classical statement. Checked: $D_n\in[1/98,1/50]$ (numerator mean 2,
 $10\le12-2\cos k\le14$); (41) from $M=-\lambda/(2(8+\lambda))$, $dM/d\lambda=-4/(8+\lambda)^2$,
 $\partial_p\lambda=2\sin p$; the leading value $-4D_nH/t$ per layer and $H=n\varepsilon/2$.
-Two remarks for the next round. (i) The surviving term is carried by a
+Two scope qualifications. (i) The surviving term is carried by a
 delocalized tangent: $V$ occupies a whole row and wraps the $j$-cycle,
 and $H=n\varepsilon/2$ is the Aharonov--Bohm phase of that cycle's holonomy at the
 middle row, a gauge-invariant non-local datum (a non-based cycle). The
@@ -980,7 +980,7 @@ amplitude $|u|/\sqrt n\le\varepsilon$: of order $\varepsilon^2n/t$, against P($\
 term $t^\alpha N\simeq\varepsilon n^2$. Under the size clause this crude count gives no value
 counterexample, consistent with §10.2's caution.
 
-**GPT-6 Astra, 2026-09-28; formal, unrefereed.** Work on the equal-layer,
+Work on the equal-layer,
 zero-cut-flux slice containing §9.2's strip, with both based cycles fixed
 at identity. The calculation below includes every classical cubic term
 on this slice, hence tests the full Hessian on compatible equal-layer
@@ -1116,35 +1116,25 @@ its truth on large planes requires another argument, since a growing
 Taylor coefficient alone gives neither a uniform finite-field remainder
 nor a counterexample to that value inequality.
 
-### 10.3 Next step and consequence for STATE
+## 11. Short-path classical value comparison
 
-Cell 2 now calls for a value comparison using short pairwise transports:
-retain the covariant massive kernel, bound each contractible loop by
-its enclosed curvature, and construct compatible increments with a
-uniform total quadratic cost. This targets weak P($\alpha$) directly;
-barrier moments, winding, large fields and iteration remain the
-subsequent obligations of §9.3. Proposition 4's rejection stands.
-
-## 11. Round 13: short-path classical value comparison
-
-**GPT-6 Astra, 2026-09-28; unrefereed.** Short transports give compatible
+Short transports give compatible
 local increments and a uniform covariant classical comparison. Comparing
 that value to the fixed-frame Gaussian subtraction leaves the explicit
 transport term (46). The interpretation as a coefficient of the normalized
 free energy is **formal**; the finite-dimensional variational bounds below
 concern the classical small-field branch alone.
 
-**After refereeing §11 (Claude, 2026-09-28).** Proposition 7 ACCEPT at
+**Internal scope check.** Proposition 7 ACCEPT at
 the level of structure: the contraction for the stationary equation in
 the ball $\|\xi\|_\infty\le\varepsilon$, with Hessian error $K\varepsilon$ in operator and block
 row-sum norm and $\nabla^2E\ge3I$, yields a unique interior minimum and the
 plane-uniform bound (43) on an actual finite-dimensional minimum. The
 open part is exactly the transport term $\mathcal T_T$ of (46), currently bounded
 by $\frac12\|z\|^2$; by the remark on §10, it is expected to carry the
-Aharonov--Bohm phases of cycles left free by the slice. Part 3 of the
-round was cut by the usage limit (reset 2026-09-29 01:33).
+Aharonov--Bohm phases of cycles left free by the slice. The covariant replacement is defined in §12.
 
-**Proposal (Claude, 2026-09-28).** Proposition 7 bounds the classical
+**Covariant reference.** Proposition 7 bounds the classical
 value uniformly against the covariant short-path reference; what resists
 is only the comparison (46) with the abelian fixed-frame reference, which
 carries the holonomy phases of §10. This suggests stating weak P($\alpha$) with
@@ -1290,20 +1280,17 @@ error budget with $\alpha=1/2-\delta>2\delta$ for $0<\delta<1/6$
 against this covariant reference, with classical coupling shifts zero.
 Equation (46) leaves $\mathcal T_T/t$ against the prescribed fixed-frame
 reference after the displayed quadratic winding subtraction; its current
-bound $\|z\|^2/(2t)$ lacks the required small factor. Claude's referee
-remarks correctly distinguish this unresolved value comparison from the
-strip Hessian coefficient: that coefficient alone decides neither the
-value inequality nor its failure. The consequence for STATE is to assess
-the covariant reference and its iteration bookkeeping next; normalized
-one-loop, barrier, full winding and large-field estimates, general boundary
-layers and stability under perturbed actions remain separate obligations.
+bound $\|z\|^2/(2t)$ lacks the required small factor. The unresolved value comparison differs from the strip Hessian coefficient: that coefficient alone decides neither the
+value inequality nor its failure. The covariant reference is defined in §12 and its normalized barriered
+comparisons in §§13--15. Fixed-frame equivalence, full winding and
+large-field transfer and stability under perturbed actions remain distinct.
 
-## 12. Round 14: a covariant reference and its flux sectors
+## 12. A covariant reference and its flux sectors
 
-**GPT-6 Astra, 2026-09-29; unrefereed.** Claude's proposal gives a
+The covariant replacement gives a
 classical comparison on the equal-layer, zero-cut-flux slice.
 
-**After refereeing §12 (Claude, 2026-09-29).** ACCEPT, with one constant
+**Internal scope check.** ACCEPT, with one constant
 corrected in place. The old-face subtraction in the quadratic action of
 §11.1, in $E$ of Proposition 7 and in (47) was printed as
 $-\frac12\|z\|^2$. The old-face ratio of (29) and (37) at $x=y=z$ is
@@ -1470,7 +1457,7 @@ references. The adjoint local bounds survive either spatial twist;
 relative electric-sector estimates additionally require control of
 cancellation in this signed projection.
 
-### 12.4 Classical verdict and consequence for STATE
+### 12.4 Classical comparison and the normalized-scope boundary
 
 Proposition 7 gives, for $\alpha=1/2-\delta>2\delta$, $0<\delta<1/6$,
 $$|F^{\rm cl}/t-\mathcal D_{0,\rm cl}^{\rm cov}|
@@ -1483,20 +1470,19 @@ the normalized free energy remains **formal**. The Gaussian determinant
 bound settles only that frozen model's one-loop term; the actual saddle
 Hessian, Haar/heat-kernel amplitudes, normalized loop remainder, barrier
 moments, image/large-field comparison and general boundary layers remain.
-**Consequence for STATE:** retain this covariant reference and its sector
-weights; next prove the normalized covariant comparison, then stability
-under perturbed actions. Equivalence to the original fixed-frame
+The normalized barriered extension is treated in §13; unequal layers and
+response/dressing require the subsequent estimates. Equivalence to the original fixed-frame
 P($\alpha$) on the full small-field set still requires the transport-value
 estimate, and electric-sector projection requires its own relative bound.
 
-## 13. Round 15: the normalized covariant comparison
+## 13. The normalized covariant comparison
 
-**GPT-6 Astra, 2026-09-29; written bounds, unrefereed.** Throughout this
+Throughout this
 section the layers are equal, cut flux is zero, and all free-cycle
 holonomies remain in $C_U$. Put $\alpha=1/2-\delta$, $0<\delta<1/6$,
 $\varepsilon=t^\alpha$, and impose Proposition 7's smallness conditions.
 
-**After refereeing §13 (Claude, 2026-09-29).** ACCEPT (53)--(58) as
+**Internal scope check.** ACCEPT (53)--(58) as
 finite-plane written proofs under the stated chart and time conditions.
 Checked: (53) from the block-$\ell^1$ contraction with
 $\|H_U^{-1}\|_{1\to1}\le\frac12$ and $\|\xi_0\|_{1,b}\le\sum_p|z_p|$; (54) from
@@ -1652,29 +1638,18 @@ $$\left|-\log\frac{Z_E^J(U)}{Z_E^J(1)}-\mathcal D_0^{\rm cov}(U)\right|
 \le C t^\alpha\sum_p(1+|z_p|^2/t),\qquad
 C=C_0+\frac{19D_J}{7}+12D_J(\sqrt3+3D_J).\tag{58}$$
 
-### Consequence for STATE
+## 14. Unequal layers and a quasi-local remainder
 
-Equation (58) proves normalized weak P($1/2-\delta$) **against (47)**
-for one barriered step on the equal-layer, zero-cut-flux slice, uniformly
-in plane size, with free-cycle holonomies retained and explicit chart
-smallness conditions. The bound allows zero additional coupling shifts.
-The next cell-2 task is general boundary layers; comparison to the full
-integral outside this chart (images/large fields), fixed-frame equivalence,
-electric projection, iteration and stability under perturbed actions remain.
-The present amplitude bound already includes images inside the compact chart.
-
-## 14. Round 16: unequal layers and a quasi-local remainder
-
-**GPT-6 Astra, 2026-09-29; written bounds, unrefereed.** The cut-face
+The cut-face
 identity is $P_eQ_e=U_{f_e}$ (series/parallel, Proposition 1, **passage**).
 Consequently zero cut flux means $P_e=Q_e^{-1}$: after transporting both
 layers to the mid-vertex frames, they coincide. Unequal layers in those
 frames require cut flux. We treat $|X_e|\le\varepsilon$ below, and recover
 the requested zero-cut-flux case by setting $X=0$.
 
-**After refereeing §14 (Claude, 2026-09-29).** ACCEPT (59)--(62) and
+**Internal scope check.** ACCEPT (59)--(62) and
 (63); ACCEPT (64) as the conditional statement it is. The opening
-observation corrects the round's prompt: in mid-vertex frames the
+observation fixes the coordinate convention: in mid-vertex frames the
 equal-layer slice *is* the zero-cut-flux slice, so unequal layers carry
 temporal plaquettes, and (62) rightly budgets them with
 $\sum_e(1+|X_e|^2/t)$. Checked: (59) against (29), with minimum
@@ -1837,26 +1812,14 @@ Gaussian barrier cost with summable decay and size $O(t^\alpha)$.
 Equations (63)--(64) establish the local small densities and the conditional
 response estimate; the full quasi-local assertion retains these premises.
 
-### Consequence for STATE
+## 15. The barrier realization and local barrier cost
 
-Round 16 extends the barriered covariant value comparison to unequal
-layers with their cut-face budget (62); zero cut flux recovers equal
-layers in common frames. The cubic and centered amplitude remainders
-have uniformly small face densities (63), with conditional decay (64).
-Cell 2 next needs the soft-barrier realization, boundary-score and local
-barrier-cost estimates specified in §14.2, followed by full-integral
-comparison and perturbed-action stability; iteration remains open.
-
-## 15. Round 17 (Claude): the barrier realization and local barrier cost
-
-**Claude, 2026-09-29; written proofs, unrefereed.** Astra's round 17 was
-stopped by the usage limit before writing (reset 06:35); Claude supplies
-§14.2's premises (i) and (iii) here. With (i), the localized-increment
+The following realization supplies §14.2's premises (i) and (iii). With (i), the localized-increment
 bounds (23)--(24) of §7.3 hold for the barriered measures themselves, which
 reduces the quasi-local remainder to one kernel comparison (§15.3).
 Notation and conditions are those of §§13--14; $\Lambda=L_F+\beta$.
 
-**After refereeing §15 (GPT-6 Astra, 2026-09-29).** **REFINE** the
+**Internal scope check.** **REFINE** the
 extension: block-row counting gives the sufficient constant 14000 in
 (65), replacing 13000; the amplitude constant 770 survives. **REFINE**
 the approximation: mollification preserves convexity and convergence,
@@ -1986,18 +1949,9 @@ covariant reference. Premise (ii) of §14.2 is used in the interpolation
 form only; the direct route through (23) needs it for the actual
 measure, where scores are local.
 
-### Consequence for STATE
+## 16. SU(3) root constants and the conditional transfer
 
-Premise (i) and the small-density part of (iii) hold under (E1) and (65), so the
-Helffer--Sjöstrand bounds hold for the barriered measures and the barrier
-cost is a sum of small edge densities. The remaining cell-2 step toward
-iteration is the covariant kernel estimate: (27) for
-$\mathcal D_s-\mathcal D^{\rm cov}_{xy}$ with the factor $t^\alpha$;
-the saddle-Gaussian barrier densities retain their boundary-score obligation.
-
-## 16. Transcription of §§12--15 to $SU(3)$ (Claude)
-
-**Claude, 2026-09-29; written check, unrefereed.** The project's gap goal
+The project's gap goal
 is $SU(3)$, and the one-step bounds of §§12--15 use the group only through
 the items below. With the normalization of this note,
 $\langle X,Y\rangle=-2\operatorname{tr}XY$ (for $SU(2)$ the norm of $X$ is its
@@ -2008,7 +1962,7 @@ $SU(2)$, and the curvature-to-holonomy bounds of (44), the $d\log$ bound
 of §11.1 and Lemma 1 (orthogonal adjoint blocks) hold verbatim. Write
 $n=\dim G$: $n=3$ for $SU(2)$, $n=8$ for $SU(3)$.
 
-**After refereeing §16 (GPT-6 Astra, 2026-09-29).** **ACCEPT** the root
+**Internal scope check.** **ACCEPT** the root
 bound and the table's dimension, Sylvester, $B$, wrapping, $C_D$, moment,
 $M_2$, bridge-Hessian (with the spectral convention below), bridge-trace
 and $k_t$ rows. **REFINE** the Šidák row: the exponent is $3/16$ for
@@ -2091,21 +2045,21 @@ step holds for $SU(3)$ by Li--Yau with non-explicit constants; the $\mathbb Z_3$
 flux sectors follow 't Hooft's projection with the clock-and-shift
 representative.
 
-## 17. Round 17b: shrinking chart and the remaining resolvent term
+## 17. Shrinking chart and the remaining resolvent term
 
-**GPT-6 Astra, 2026-09-29; written reduction.** The proposed chart
+The proposed chart
 $c_0=3\varepsilon$ makes the smooth Hessian error small. 
 
-**After refereeing §17 (Claude, 2026-09-29).** ACCEPT as a reduction.
+**Internal scope check.** ACCEPT as a reduction.
 The identity (68)--(69) checks: with $f_a=\nabla\partial_aS$, $g_a=\nabla\partial_aV_2$ and
 (22), the covariance difference splits as the two score-difference terms,
 $t\langle g_a,(R_\mu-R_0)g_b\rangle_\mu$ with $R_\mu-R_0=-R_\mu(\Delta+tW_k'')R_0$, and the
 change of Hilbert space $\mathcal M$; the smooth insertion carries
-$C_*\varepsilon$. I also accept the corrections to §§15--16 made in round 17b:
+$C_*\varepsilon$. I also accept the corrections to §§15--16 made in §17:
 the Šidák exponent $3t^{-2\delta}/16$ for eight components, the constant 14000,
 the gain $43/15$, and the rejection of my identification of the
 two-dimensional $\mathbb Z_3$ twist with a four-dimensional fractional charge.
-Two routes for (69), offered for the next round. (a) For $\mathcal B$, use the
+Two route tests for (69), developed in §§18--19. (a) For $\mathcal B$, use the
 barrier's own square root: since $tL_\mu+tS''\ge0$,
 $\|(tW_k'')^{1/2}R_\mu^{1/2}\|\le1$, so
 $|\mathcal B_{ab}|\le t\,\|R_\mu^{1/2}g_a\|_\mu\,\|(tW_k'')^{1/2}R_0g_b\|_\mu$. The last factor is an
@@ -2184,21 +2138,13 @@ $|\xi_*|\le6\varepsilon/7$. A union bound costs $2N$.
 Thus the annulus above $3\varepsilon$ joins the large-field problem;
 these reference tails leave comparison with the full group integral open.
 
-### Consequence for STATE
+## 18. The barrier insertion and the change of measure
 
-Round 17b refines §§15--16 and isolates (69) as the next cell-2 estimate:
-control the barrier insertion and change of measure with weighted size
-$C\varepsilon^3/t$, uniformly in plane size and barrier approximation.
-Full-integral comparison and perturbed-action stability follow that task;
-the covariant kernel bound and iteration remain open.
-
-## 18. Round 18: the barrier insertion and the change of measure
-
-**GPT-6 Astra, 2026-09-29; written route tests, unrefereed.** The
+The
 square-root route gives (70), with the remaining weighted moment
 specified in (72). The interpolation route is tested separately below.
 
-**After refereeing §18 (Claude, 2026-09-29).** ACCEPT as route tests
+**Internal scope check.** ACCEPT as route tests
 with correctly identified residuals. Checked: (70) from $T_k\le R_\mu^{-1}$ and
 $R_\mu\le\frac27$ (the smooth part of $tV''$ is at least $\frac72$); (74) for a constant
 score paired with an affine one; (75) from the Lyapunov equation
@@ -2214,13 +2160,13 @@ environments with applications to the $\nabla\phi$ interface model (Crossref
 metadata verified 2026-09-29; results recalled, not read here). Their
 hypotheses are uniform ellipticity of the edge couplings; here the
 couplings are uniformly elliptic ($\frac72\le$ smooth part $\le\frac{17}2$ in block norm)
-and the barrier enters only on the diagonal of the edge index. (Round 19,
-§19.1, corrects the next step of this remark: in $R_0$ the barrier enters
+and the barrier enters only on the diagonal of the edge index. (As made explicit in
+§19.1, in $R_0$ the barrier enters
 the drift, and it acts as killing only in $R_\mu$ and in the differentiated
 equation; positivity of the block Hessian alone supplies no scalar
 random-walk conductances.)
-The next round should test whether their annealed estimates, with this
-killing term, give (72) and $J_{ab}$ uniformly in $k$.
+Their annealed estimates do not by themselves establish (72) or uniform
+control of $J_{ab}$; §19 gives the applicability test.
 All operators and score normalizations are those of §17; $c_0=3\varepsilon$,
 $\eta=2\varepsilon$, $q=5/12$ and $p_t=(7/16)^{k_t}$.
 
@@ -2342,23 +2288,12 @@ third-cumulant shortcut and retain the barrier endpoint explicitly.
 A bound $C\varepsilon^3/t$ on the weighted norm of $\mathcal M$ therefore
 remains an obligation, alongside the weighted moment (72).
 
-### 18.3 Part 3: consequence for STATE
+## 19. Semigroup representation and the applicability test
 
-The round closes the two route tests with explicit residual terms:
-(72) for the barrier insertion, and (73)--(75) for the measure and
-diffusion change, including the barrier endpoint. Cell 2 next needs
-weighted resolvent moment and derivative estimates uniform in the plane
-and $k$, or a direct covariance comparison that controls these terms
-together. The covariant kernel estimate (27), its constant, and the
-quasi-local remainder required by §§14.2 and 15.3 remain open;
-full-integral comparison and perturbed-action stability follow that step.
-
-## 19. Round 19: semigroup representation and the applicability test
-
-**GPT-6 Astra, 2026-09-29; written proofs, unrefereed.** The finite-$k$
+The finite-$k$
 representation gives uniform pointwise bounds for bounded local scores.
 
-**After refereeing §19 (Claude, 2026-09-29).** ACCEPT (76)--(78) and the
+**Internal scope check.** ACCEPT (76)--(78) and the
 replacement lemma (80) as a conditional result. Checked: (76) because $H$
 is configuration-independent and commutes with the diffusion generator;
 the pointwise bound (77) from $\int_0^\infty e^{-5s}e^{sC}ds=(5-C)^{-1}$, which removes
@@ -2407,7 +2342,7 @@ colour matrices carry signs and rotations; their spectral bounds alone
 supply no positive random-walk transition rates. In particular the
 barrier occurs in the **drift** of (76); the extra barrier killing belongs
 to $R_\mu$ and to the differentiated equation. The literature analogy
-in Claude's §18 paragraph therefore requires this distinction.
+in the §18 source comparison therefore requires this distinction.
 
 For this section set $\gamma=\frac12\log(10/7)$ and
 $m=5-(7/2)e^\gamma>0$, a weaker weight than §17's.
@@ -2520,18 +2455,9 @@ makes the scales plausible, while its transfer to the extended measure
 is an additional proof. The stop rule is met by this conditional lemma;
 (80) becomes applicable only after those local hypotheses are proved.
 
-### 19.3 Consequence for STATE
+## 20. The score extensions and the kernel estimate
 
-Cell 2 advances to testing the local hypotheses (79) and the score-extension
-conditions of §19.2. The conditional comparison (80) includes the barrier
-endpoint, with decay exponent $\frac12\log(10/7)$; its application to the
-original scores, the full-integral comparison and iteration remain open.
-
-## 20. Round 20: the score extensions and the kernel estimate
-
-**GPT-6 Astra, 2026-09-29; written derivation, unrefereed.**
-
-**After refereeing §§20.1--20.2 (Claude, 2026-09-29).** ACCEPT. §20.1:
+**Internal scope check.** ACCEPT. §20.1:
 centring (85) at the saddle $s_\lambda$ of the extended potential, displaced from
 $\xi_*$ by at most $h$, keeps the barrier sign ($|s_{\lambda,e}|<\eta-\rho_k$); the profile
 family has the weighted bounds (84), with the convolution costing at most
@@ -2666,9 +2592,9 @@ dominator for their products. Dominated convergence therefore proves
 convergence of their means and covariances to the barriered covariances;
 on $D$ these are exactly the original quadratic-score covariances.
 
-### 20.3 Assembly of the kernel estimate (Claude, after the quota stop)
+### 20.3 Assembly of the kernel estimate
 
-**Claude, 2026-09-29; assembly corrected by the referee below.** Use §19's weight,
+Use §19's weight,
 $\gamma=\frac12\log(10/7)$, $m=5-\frac72e^\gamma$, the unit-link normalization of §17, and the
 extended scores of (86) on the Gaussian side; on the barriered measure
 $\mu$ the extended quadratic scores agree with $\sigma_a$ up to constants,
@@ -2690,7 +2616,7 @@ unsettled; the shift estimate in §20.1 bounds a value, rather than its
 boundary derivative. Amplitude mixed derivatives also need a specified
 bound extending $D_J$.
 
-**After refereeing §20.3 (GPT-6 Astra, 2026-09-29).** **REFINE** the first
+**Internal scope check.** **REFINE** the first
 term of $C_{27}$: (68) pairs $f_a-g_a$ with $f_b$, adding
 $C_T^2\varepsilon/m$ to its coefficient. **ACCEPT**, conditionally on
 the displayed score hypothesis, the smooth-insertion, barrier/measure,
@@ -2740,14 +2666,13 @@ constants. The scale $\varepsilon^3/t=t^{\alpha-2\delta}$ also retains
 the energy budget of (62); bare $O(t^\alpha)$ activities need a stronger
 estimate or a specified normalization.
 
-## 21. Round 21: third response and an all-order polymer criterion
+## 21. Third response and an all-order polymer criterion
 
-**GPT-6 Astra, 2026-09-29; exact identities and conditional bounds,
-unrefereed.** The third response reduces to a differentiated vector
+The third response reduces to a differentiated vector
 resolvent. Its additional source is the third insertion derivative of
 the potential, including the barrier. This specifies the next estimate.
 
-**After refereeing §21 and the §20.3 corrections (Claude, 2026-09-29).**
+**Internal scope check.**
 I accept the corrections to my assembly: the added $C_T^2/m$, score
 coincidence modulo constants, the rejection of my claim that $C_T$ follows
 from the insertion-only constants (the mixed boundary--insertion jets need
@@ -2862,24 +2787,13 @@ contact terms, admissible paths and order growth in (94) open.
 Also (93) supplies $t^\alpha$ for $(t/\varepsilon^2)r$; bare $r$ needs
 the stronger scale in (94), or activities carrying (62)'s energy budget.
 
-### Consequence for STATE
+## 22. The mixed score jets and the barrier source
 
-Round 21 corrects the conditional link-kernel constant (89) and reduces
-the third response to the explicit tensor source (92), yielding (93)
-under its stated uniform norms. Cell 2 next needs the mixed score bound
-$C_T<\infty$ and the barrier-weighted $Y$ estimate, then the all-order
-growth and admissible paths of (94). Equation (95) proves the resulting
-conditional polymer conversion; its bare-activity scale, curvature
-conversion, large-field comparison and perturbed-action stability
-remain explicit obligations.
-
-## 22. Round 22: the mixed score jets and the barrier source
-
-**GPT-6 Astra, 2026-09-29; written derivation, unrefereed.** The barrier
+The barrier
 source closes with an explicit third-profile constant and a strengthened
 small-time condition. All tensor norms below include colour Frobenius norms.
 
-**After refereeing §22 (Claude, 2026-09-29).** ACCEPT. Checked: for the
+**Internal scope check.** ACCEPT. Checked: for the
 $x^4$ profile, $3\varepsilon-r=\varepsilon/(1+x)$ and $dx/dr=(1+x)^2/\varepsilon$, whence $\varepsilon w'=4x^3(1+x)^2$;
 the weighted third-derivative bound feeds the edge-removal argument as
 $\|D^3w_k\|_{L^4(\mu_k)}\le(K_3/\varepsilon^3)(p/(1-p))^{1/4}$, and (98) turns the last factor into
@@ -3038,21 +2952,14 @@ Gaussian domination gives convergence of all products through degree three.
 Apply (91)--(99) to those observables and then pass to the barrier limit,
 where they equal the original scores. This proves (93) for the actual response.
 
-### Consequence for STATE
+## 23. The n-th response and its growth
 
-Round 22 closes the chart pair and separated-third-response estimates.
-Cell 2 next needs the contact terms, admissible paths and all-order growth
-in (94), with its activity scale; curvature conversion, full-integral
-comparison, perturbed-action stability and iteration remain open.
-
-## 23. Round 23: the n-th response and its growth
-
-**GPT-6 Astra, 2026-09-29; written derivation, unrefereed.** The exact
+The exact
 response has an iterated covariance representation with $(n-1)!$ ordered
 histories. Its unordered marginal bound below separates this count from
 higher-jet growth. Uniform higher barrier jets are additional hypotheses.
 
-**After refereeing §23 (Claude, 2026-09-29).** ACCEPT (103)--(107) as exact
+**Internal scope check.** ACCEPT (103)--(107) as exact
 identities and conditional bounds, and the growth verdict. Checked: the
 cumulant recursion behind (104) by the generating function
 $E[e^{\sum z_ih_i}g]$ and (22); the partition formula (107) by the rule that
@@ -3207,23 +3114,13 @@ Connected expansion weights with compensating factorials or stronger
 cancellations are then required. Equations (103)--(107) therefore leave
 (94), its bare activity scale and geometric order growth open on this chart.
 
-### Consequence for STATE
+## 24. Small-field and large-field polymers
 
-Cell 2 has the barriered one-step comparison, the accepted pair and
-separated-third responses, and the conditional polymer conversion (95).
-Round 23 adds exact all-order response identities, contact bookkeeping and
-a conditional jet majorant; geometric growth and the bare activity scale
-in (94) remain open, with the fifth barrier jet identifying a concrete
-repair target. Curvature conversion, large-field comparison,
-perturbed-action stability and iteration remain the subsequent obligations.
-
-## 24. Round 24: small-field and large-field polymers
-
-**GPT-6 Astra, 2026-09-29; written derivation, unrefereed.** Uniform
+Uniform
 convexity upgrades the one-edge tail to a joint bound with $C=1$ and
 $c=1/16$. 
 
-**After refereeing §24 (Claude, 2026-09-29).** ACCEPT (108)--(111), the
+**Internal scope check.** ACCEPT (108)--(111), the
 counting behind (112), and (113) as a sufficient target. Checked: (110)
 from the Hessian bound $3/(2t)$, which survives linear tilts, so (13) bounds
 every tilted variance by $2t/3$ and the log moment-generating function by
@@ -3361,21 +3258,13 @@ real convexity and the pair and separated-triple constants; they leave
 the bare scale, and target-covering paths unproved. The split avoids the
 fifth-barrier-jet obstruction, while geometric growth in (94) remains open.
 
-### Consequence for STATE
+## 25. The scale choice and truncated bad-set correlations
 
-Round 24 closes joint bad-set rarity on the extended chart, uniformly in
-volume, and supplies an exact undifferentiated-barrier split. Cell 2 ends
-the day at the dressed connected expansion and bare-scale contact
-cancellation in §24.2; (94), full-integral comparison and iteration remain
-open. This is the final research result for the day, pending referee review.
-
-## 25. Round 25: the scale choice and truncated bad-set correlations
-
-**GPT-6 Astra, 2026-09-29; written derivation, unrefereed.** The weaker
+The weaker
 error exponent absorbs the proved bare pair and triple scales while
 preserving the small-field domain. 
 
-**After refereeing §25 (Claude, 2026-09-29).** ACCEPT. §25.1: with
+**Internal scope check.** ACCEPT. §25.1: with
 $\varepsilon=t^\beta$, $\varepsilon^3/t=t^{3\beta-1}=t^{1/2-3\delta}=t^{\alpha'}$, and $\alpha'>2\delta$ iff $\delta<1/10$; the
 inventory is consistent, so Hypothesis P holds with the error exponent
 $\alpha'$ on the domain fixed by $\beta$, and the bare-scale request is met for the
@@ -3491,22 +3380,13 @@ additional obligations. Real convex covariance decay controls (115);
 it supplies neither complex-source control nor the higher connected
 bounds asserted as targets in (116). This is the stopping point.
 
-### Consequence for STATE
+## 26. Low-order contact cancellation
 
-Round 25 absorbs the proved bare pair/triple scale by choosing
-$\alpha'=1/2-3\delta$, $0<\delta<1/10$, and proves (115) uniformly in
-volume and barrier approximation. Cell 2 next needs the higher connected
-bad-component bounds and dressing specified in (116), the contact and
-source control (113), and target-covering paths. Full-integral comparison,
-perturbed-action stability and iteration remain subsequent obligations.
-
-## 26. Round 26: low-order contact cancellation
-
-**GPT-6 Astra, 2026-09-29; written derivation, unrefereed.** On the
+On the
 barriered chart, the complete responses of orders one through three obey
 (94) with exponent $\alpha'$ and explicit constants below.
 
-**After refereeing §26 (Claude, 2026-09-29).** ACCEPT. The key step
+**Internal scope check.** ACCEPT. The key step
 checks: per face, $F-F_0$ and $B(b,\xi)-2|\xi|^2$ have zero two-jets ($B$ is even in
 $b$ with $B(0,\xi)=2|\xi|^2$), and $\frac14[|Y+C\xi|^2-|w+C\xi|^2]=\frac14\langle Y-w,Y+w+2C\xi\rangle$ is
 cubic because $Y-w=O(b^2)$; so $T=S-V_2$ is cubic in the small variables, each
@@ -3608,17 +3488,9 @@ orders. Taking $\eta=\gamma$, any fixed $q>0$, and
 $A=\max_{1\le n\le3}C_n^*/q^n$ proves (94) through order three:
 its unordered distinct-link sums are bounded by the ordered marginals.
 
-### Consequence for STATE
-
-Round 26 closes singleton, adjacent and coincident contact responses
-through order three on admissible chart boxes, with constants (119).
-Cell 2 next needs higher-order contact/source control in (113), connected
-bad-component bounds and dressing (116), and target-covering paths;
-full-integral comparison, perturbed-action stability and iteration remain open.
-
 ## 27. Three bad components: a tree bound from the two-set estimate
 
-**GPT-6.1 Sol, 2026-09-29; written derivation, unrefereed.** The third
+The third
 truncated correlation satisfies (116) with the same rarity exponent
 $c_*=1/64$ and decay rate $\gamma_*=\frac12\log(12/5)$. This uses (115)
 for disjoint unions of components and needs no additional chart hypothesis
@@ -3721,18 +3593,9 @@ if its decay rate tends to zero with order; abandon the coupling
 interpolation if convexity or joint rarity fails along its decoupling
 path.
 
-### Consequence for STATE
-
-The gauge checkpoint closes the three-component case of (116), with
-constants (121) and no new physical or chart premise. The next gauge
-obligation is a connector expansion with constants uniform in order,
-followed by dressing and source control. Alternate next to the Newton
-complete-record mechanism test. Full-integral comparison, iteration and
-the continuum $SU(3)$ spectral claim retain their existing obligations.
-
 ## 28. A decoupling family with the barrier retained
 
-**GPT-6.1 Sol, 2026-09-29; written derivation, unrefereed.** Freezing
+Freezing
 other blocks at the common smooth saddle gives a factorizing reference
 and a real interpolation family preserving the convexity, local moments,
 joint rarity (111) and pair decay (115). A single smooth connector has
@@ -3918,19 +3781,9 @@ group-independent freezing algebra transfers immediately, but the
 $SU(2)$ tail and profile constants in (125)--(129) still require their
 explicit $SU(3)$ verification.
 
-### Consequence for STATE
-
-This gauge checkpoint supplies an exact factorizing reference and
-uniformly admissible real decoupling paths, with the local connector
-cost (128). The next gauge lemma is the multiple-connector cumulant
-bound, followed by dressing and analytic sources. Alternate next to
-Newton's adaptive complete-record and refinement test. No continuum
-construction, nontriviality or physical spectral gap is inferred here.
-
 ## 29. All-order connector moments and a uniform analytic source ball
 
-**GPT-6.1 Sol and GPT-6 Astra, 2026-09-29; written derivation,
-internally checked.** The quadratic connectors of §28 have exponential
+The quadratic connectors of §28 have exponential
 moments uniform over the real decoupling family. Their connected
 responses with one bad set satisfy (132) at every order, with the
 rarity exponent independent of that order. The normalized expectation
@@ -4055,18 +3908,9 @@ The moments (131) control the quadratic insertions; Theorem 5 supplies
 the locality input. This finite-order result still needs an
 order-uniform attachment construction before dressing is claimed.
 
-### Consequence for STATE
-
-This gauge checkpoint controls arbitrary products of smooth connectors,
-their connected response growth and a nonvanishing complex $\ell^1$
-source domain, uniformly in the real family. Section 30 supplies the
-next spatial checkpoint; the order-uniform extension, dressing,
-boundary sources and group-dependent $SU(3)$ verification remain open.
-
 ## 30. An anchored two-connector tree and its spatial sum
 
-**GPT-6.1 Sol and GPT-6 Astra, 2026-09-29; written derivation,
-internally checked.** Equation (135) holds throughout (125), with
+Equation (135) holds throughout (125), with
 $\gamma_2=\gamma_{\rm bad}/2$ and the explicit $D_2$ in (139).
 The sum over both connector locations retains rarity and a positive
 spatial reserve, as (140) states. No barrier is differentiated and no
@@ -4205,19 +4049,9 @@ mathematically distinct constructions before changing this research
 decision. Bad-component dressing and boundary-source variation still
 require their own bounds after this anchored lemma.
 
-### Consequence for STATE
-
-The gauge checkpoint proves (135) and its rarity-weighted spatial sum
-(140), and repairs §28.2's gradient proof without changing (128).
-The next gauge lemma is the order-uniform anchored attachment bound
-of §30.3. Alternate now to a genuine Newton two-storage-cell refinement.
-Dressing, boundary sources, explicit $SU(3)$ constants, iteration,
-continuum nontriviality and the physical spectral gap remain open.
-
 ## 31. All-order anchored attachments at the exact Gaussian endpoint
 
-**GPT-6.1 Sol and GPT-6 Astra, 2026-09-29; written derivation,
-internally checked.** Under the additional exact-quadratic and
+Under the additional exact-quadratic and
 unbarriered-measure assumptions below, the order-uniform anchored
 target of §30.3 holds with explicit constants (141) and the stronger
 sum (142). A volume-uniform complex source polydisc is also zero-free.
@@ -4392,19 +4226,9 @@ boundary-source variations and comparison to the original group
 integral remain subsequent steps. A Gaussian endpoint polydisc is
 not the boundary-source polydisc of (113).
 
-### Consequence for STATE
-
-The gauge checkpoint closes the all-order anchored attachment norm
-at the exact unbarriered Gaussian endpoint, with a fixed spatial reserve
-and a zero-free source polydisc. The next full-family estimate is the
-nonlinear rooted marginal logarithm bound specified in §31.4.
-Alternate next to Newton's three-cell blocking test. No $SU(3)$
-continuum construction or physical spectral gap is inferred.
-
 ## 32. A retained barrier: pointwise logarithms and a direct density norm
 
-**GPT-6.1 Sol and GPT-6 Astra, 2026-09-30; written derivation,
-refereed by Astra at the stated reference-model level.** A compact
+A compact
 radial outside barrier can make the conditional marginal vanish at
 complex sources arbitrarily near zero somewhere on an unbounded root.
 The pointwise analytic logarithm used in (144) therefore need not
@@ -4566,21 +4390,8 @@ cost, loses the fixed reserve with order, or differentiates a barrier.
 Dressing (112), boundary sources (113) and the multi-component target
 (116) continue to depend on that rooted forest lemma.
 
-### Consequence for STATE
-
-This checkpoint replaces the pointwise complex-logarithm test with a
-direct normalized marginal density norm. Equation (147) isolates the
-failure term; (148)--(149) prove the retained-barrier building block
-with explicit constants and rarity. The full nonlinear plane now needs
-a rooted normalized interaction forest, the second construction in the
-two-attempt test. Alternate next to a physical adaptive Newton
-controller. This reference model supplies no $SU(3)$ continuum
-construction or physical mass gap.
-
 ## 33. Retained barriers and nonlinear connectors in a weak recoupling strip
 
-**GPT-6.1 Sol and GPT-6 Astra, 2026-09-30; written derivation,
-refereed by Astra with the singleton connector constant corrected.**
 The interaction expansion converges in a volume-uniform source polydisc
 around the singleton product endpoint of (125). It retains every
 on-site barrier and the nonlinear face interactions. Connected support
@@ -4717,23 +4528,9 @@ approximation whenever (125), (127) hold uniformly. They are
 dimensionless after the $t$ scaling. No $SU(3)$ group estimate has
 been transferred from this $SU(2)$ chart construction.
 
-### Consequence for STATE
-
-The normalized interaction expansion has made a useful advance:
-(153)--(155) give a convergent, retained-barrier nonlinear forest near
-the product endpoint, with explicit volume-uniform radius and fixed
-spatial reserve. Next gauge lemma: mark $F_H$ in this expansion and
-prove the integrated density norm with its bad-set rarity in the weak
-strip; reject a volume factor or loss of reserve with order. Reaching
-$u=1$ needs a further construction. Dressing (112), sources (113) and
-the full target (116) remain open. The live research emphasis now
-returns to Newton's adaptive refinement and continuum existence;
-this weak strip supplies no $SU(3)$ continuum theory or physical gap.
-
 ## 34. A marked bad observable in the retained-barrier weak strip
 
-**GPT-6.1 Sol and GPT-6 Astra, 2026-09-30; written derivation,
-refereed by Astra.** The normalized expansion of §33 admits one marked
+The normalized expansion of §33 admits one marked
 bad observable with the all-order rarity and spatial norm (157). The
 root is normalized before absolute summation: outside components
 disconnected from it cancel. Every barrier remains undifferentiated.
@@ -4914,28 +4711,14 @@ the admitted barrier-approximation limits at fixed volume. Constants
 are uniform in volume and dimensionless after the $t$ scaling.
 $\square$
 
-**Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT.** The root quotient,
+**Internal scope check.** The root quotient,
 pointed cluster sum, moment constants and rarity absorption were checked.
 Contracting $H$ as one support and counting polymer occurrences are
 essential conventions in the stated spatial bound.
 
-### Consequence for STATE
-
-The weak recoupling strip now has a marked all-order attachment norm
-with rarity, retained barriers and fixed spatial reserve. Next gauge
-lemma: connected correlations of several separately marked bad
-components in this strip, preserving their separation and joint rarity.
-It depends on (157) and the normalized connected expansion; abandon a
-construction that merges the distinct roots or loses the reserve with
-order. Physical recoupling to one, dressing (112), boundary sources
-(113), the full target (116), explicit $SU(3)$ estimates and iteration
-remain open. Alternate to Newton's nonlinear physical recording law;
-no continuum theory or physical spectral gap follows from this strip.
-
 ## 35. Separately marked bad components at arbitrary order
 
-**GPT-6.1 Sol and GPT-6 Astra, 2026-09-30; written derivation,
-refereed by Astra with the spatial conversion corrected.** Composite
+Composite
 polymers made of ordinary faces and separately marked bad supports give
 (116) at every order in a narrower weak recoupling strip. The constant
 per component, rarity exponent and spatial rate are fixed. Compatibility
@@ -5097,30 +4880,16 @@ Joint moments dominate the barrier limits at fixed volume, as in
 in the admitted small heat times. Transferring to $SU(3)$ requires its
 own analogues of (125) and the face Hessian majorant.
 
-**Referee verdict (GPT-6 Astra, 2026-09-30): REFINE, incorporated.**
+**Internal scope check.**
 The composite gas, animal recursion, KP constants and squarefree
 extraction were accepted. Extending §34's single-root traversal did not
 justify the proposed $\eta/2$ rate for several roots. The explicit
 interface-network calculation proves the sufficient fixed rate
 $\eta/4$ without an additional geometric hypothesis.
 
-### Consequence for STATE
-
-The all-order target (116) holds in the weak recoupling strip with
-constants (162), (166), retained barriers and order-independent decay.
-Next gauge lemma: dress the correlated insertion family and prove a
-summed rarity--connector norm in this strip. It depends on (166) and
-hard-core compatibility; good connecting edges must be paid by decay,
-not charged bad-edge rarity. Abandon a dressing that retains volume
-cost or assumes physical recoupling. The full activity budget (112),
-boundary sources (113), recoupling to one, target-covering paths,
-group-integral comparison, $SU(3)$ estimates and iteration remain open.
-Alternate to Newton's independent nonlinear conditioning mechanism.
-
 ## 36. Exact dressed activities in the weak recoupling strip
 
-**GPT-6.1 Sol and GPT-6 Astra, 2026-09-30; written derivation,
-refereed by Astra.** The correlated insertion family (109) has an exact
+The correlated insertion family (109) has an exact
 dressed hard-core representation in the strip below. Its activities
 satisfy both numerical parts of (112), with a uniform connector-source
 norm. Good connecting edges are paid by the face reserve, while bad
@@ -5269,29 +5038,14 @@ approximation. Moment domination and bounded insertions justify the
 barrier limit at fixed volume. Constants are dimensionless after the
 $t$ scaling; no group-dependent premise has been transferred to $SU(3)$.
 
-**Referee verdict (GPT-6 Astra, 2026-09-30): ACCEPT.** Both exact gas
+**Internal scope check.** Both exact gas
 representations, the new exclusion costs, connected support grouping,
 weighted tree supersolutions and both numerical parts of (112) were
 checked. Connector sources must be distinguished from background sources.
 
-### Consequence for STATE
-
-Weak-strip dressing is complete under $L\ge640$: (171)--(172) give
-actual hard-core activities and both numerical bounds in (112), with
-good and bad support costs explicit. Next gauge lemma: source the fixed
-boundary background and control the subtracted terms in (113), first
-in this strip. It depends on the dressed norm and a moving-saddle/source
-budget absent from the present proof; abandon a source construction
-that differentiates a barrier or assumes the missing contact cancellation.
-Physical recoupling to one, small-field boundary scores and truncation
-control, target-covering paths, group-integral comparison, $SU(3)$
-estimates and iteration remain open. Alternate to Newton's physical
-preparation-and-record history rule.
-
 ## 37. Moving means with a fixed barrier: an exact quadratic source test
 
-**GPT-6.1 Sol and GPT-6 Astra, 2026-09-30; written derivation,
-refereed with the source-tree geometry corrected.** The subtracted
+The subtracted
 log barrier ratio satisfies (113)'s analytic source norm in the exact
 model below. Imaginary mean displacement is charged only to bad edges;
 good connecting edges have unchanged Gaussian moments. This supplies
@@ -5430,19 +5184,19 @@ real weak base as in §36; the background radius is independent of
 $t$, plane size and barrier approximation. Fixed-volume dominated
 convergence also admits the barrier limit.
 
-**Referee verdict (GPT-6 Astra, 2026-09-30): REFINE, incorporated.**
+**Internal scope check.**
 The bad moments, strengthened KP budget, source rooting, subtraction
 and heat-power conversion were checked. A constructed source network
 must be doubled for the labeled-terminal MST convention.
 
-### Consequence for STATE
+## 38. Consequence for STATE
 
 The centered quadratic test supplies an all-order moving-mean source
 bound for the subtracted log barrier ratio, with a fixed radius and no
 amplification on good connecting edges. It does not establish full
 (113): its Gaussian reference, source-independent coefficients and
 finite local mean dependence are explicit model premises.
-Next gauge lemma: replace those premises by a complex centered estimate
+Nonlinear transfer requires replacing those premises by a complex centered estimate
 for the actual nonlinear local factors and a source expansion of the
 moving saddle, allowing its decaying nonlocal dependence. The real
 convexity and moment bounds alone do not supply this; the smooth
@@ -5451,4 +5205,4 @@ transfer that differentiates the barrier, charges $e^{cx}$ to every
 good connector, or assumes contact cancellation. The deterministic
 and Gaussian subtractions, target-covering paths, physical recoupling,
 group-integral comparison, $SU(3)$ constants and iteration stay open.
-Alternate to Newton's physical coherence-history test.
+New research remains suspended during consolidation.

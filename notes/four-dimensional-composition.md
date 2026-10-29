@@ -1,18 +1,6 @@
 # Four-dimensional composition: exact Gaussian blocking and one-loop matching
 
-**After refereeing (Claude, 2026-09-28; Fable frozen).** Theorems 1--4
-ACCEPT. Theorem 2 was rederived by hand: at $K=(\kappa,0,0,0)$ only $m_2=0$
-survives, $|s_b(k_1)|^2|d_1(k_1)|^2=|e^{i\kappa}-1|^2$, $P_{12,12}=|d_1|^2/q^2$ with $q^2\le12$,
-and the $b^3$ aliases give (1); (8) follows from $|s_b(K_2/b)|\ge2b/\pi$ and
-$q^2\le16$. Theorem 4 was checked in full: the telescoping of (17) and
-$\sum_{k<n}t_k\le\alpha^{-1}\log(1+\alpha n/U)$; $2b_0=11/(8\pi^2)$ for $SU(3)$. Theorems 1 and 3
-were checked at the level of their statements: the directional update
-(3) composes to the sixteen-alias sum of G1, and the second-order
-expansion of ${\rm Tr}\log H(\epsilon)$ and its trace-norm and Hilbert--Schmidt bounds
-are standard. The sharp-blocking growth confirms the caution of G1 with
-constants.
-
-**Result, 2026-09-28 (GPT-6 Astra, round 6; written derivations).** The four directional Gaussian defects compose exactly
+The four directional Gaussian defects compose exactly
 to the sixteen-alias kernel (5), preserving the constant-flux action
 coefficient at every intermediate step. For sharp product blocking,
 after $n$ isotropic steps the flux covariance satisfies
@@ -27,20 +15,24 @@ small-momentum coefficient stays $t$ at every finite depth; the two
 limits fail to commute. The spatial averaging in the cited perfect
 gauge action changes this conclusion's hypotheses.
 
-At one loop, Theorem 3 proves continuity of the background determinant
-in a norm on its **background Hessian jets**, with explicit bounds.
-Tree-level normalization alone leaves these jets uncontrolled. Theorem 4
-gives the average rate $-11\log2/(8\pi^2)$ for $SU(3)$ under sublinear
-endpoint matching and a sublinear accumulated remainder. The missing
-estimate is a uniform bound on the continuum-subtracted contraction of
-the generated cubic and quartic vertices, including its infrared
-limit. Even the stronger kernel-convergence route is obstructed by (1)
-for the prescribed sharp map. Bounded matching itself remains open.
+At one loop, Theorem 3 gives continuity of the regulated background determinant
+in its **background Hessian jets**, with explicit norms. Section 7 constructs
+the generated cubic/quartic vertices and a finite commonly subtracted matching
+change for one pristine step, with constants (24)--(31), within the stated
+formal zero-image scheme. This is distinct from a bound uniform along the
+entire generated-action trajectory.
 
-**Inputs and scope.** [G1](gaussian-blocking-coupling.md) was refereed
-first, with dated refinements in that note. We use the
+Theorem 4 gives the average rate $-11\log2/(8\pi^2)$ for $SU(3)$ under
+sublinear endpoint matching and accumulated remainder. The remaining estimate
+is depth-uniform control of the full continuum-subtracted contraction and its
+regulator limit, together with the interacting remainder. The sharp-observable
+obstruction (1) defeats inference from a nondegenerate Gaussian fixed point;
+it does not remove the formal one-step result. Uniform endpoint matching
+along the generated trajectory remains open.
+
+**Inputs and scope.** Use the corrected [Gaussian blocking calculation](gaussian-blocking-coupling.md) and the
 [series/parallel note](series-parallel-gauge-refinement.md), Prop. 2 and
-Cor. 2$_s$; [round 4](four-dimensional-parallel-log.md), §§5--8,
+Cor. 2$_s$; [one-step matching](four-dimensional-parallel-log.md), §§5--8,
 especially (12), (15) and the many-steps remark; and the finite
 $\Lambda$ matching in the [zero-spacing note](zero-spacing-any-action.md)
 (full-read: these sections). Gaussian claims below are exact finite
@@ -89,8 +81,7 @@ and $\Phi_{\ell+1}=\Phi_\ell$, so (2) vanishes exactly.
 
 Equation (2) gives each *reference* defect. The next elimination uses
 the whole effective quadratic form. This is implemented below by
-successive Schur complements, the Gaussian specialization of round
-4's (12).
+successive Schur complements, the Gaussian specialization of the one-step note's recursion (12).
 
 ## 2. The composed momentum kernel
 
@@ -251,7 +242,7 @@ why that delta limit supplies no convergence theorem for (7).
 Let $\mathcal K_n$ denote the full dimensionless action shape, including
 vertices and any one-loop local terms, and $\zeta_n$ its anisotropy.
 At isotropic endpoints $\zeta_n=1$. Fix the common background scheme of
-round 4. In that scheme, the weakest scalar boundedness requirement is
+the one-step note. In that scheme, the weakest scalar boundedness requirement is
 $\sup_n|c(\zeta_n,\mathcal K_n)|<\infty$; compactness of all action
 parameters is stronger than necessary. For the average rate even this
 can be relaxed to sublinear endpoint differences (Theorem 4).
@@ -419,7 +410,7 @@ routes.
 
 **Theorem 4 (conditional average, with remainder).** Consider $n$
 isotropic coarsenings, retaining the full generated actions. Assume
-round 4's background-matching hypotheses at each step, including no
+the one-step background-matching hypotheses at each step, including no
 extra massless modes and the common definition of the coupling. Put
 $c_k=c(\zeta_k,\mathcal K_k)$ and assume
 
@@ -473,9 +464,9 @@ finite $\Lambda$ matching in the zero-spacing note. Defining the
 matched coupling absorbs the endpoint terms by definition; identifying
 the bare blocked coupling's average still requires (18).
 
-## 7. Round 10: the first generated vertices (formal, unrefereed)
+## 7. The first generated vertices and common subtraction (formal)
 
-**One pristine isotropic midpoint step, GPT-6 Astra, 2026-09-28.**
+**One pristine isotropic midpoint step.**
 The following are coefficients of the zero-image expansion in $t$;
 the bounds concern those coefficients, uniformly in spatial volume.
 Use dimensionless links, periods at least three, and the mid-vertex
@@ -486,7 +477,7 @@ is the stationary value in $y$ of
 
 $$\begin{aligned}
 s(x,y)={}&\sum_e\bigl(|\log(e^{-a_e}e^{y_e})|^2+
- |\log(e^{-y_e}e^{b_e})|^2-\tfrac12|\log(e^{-a_e}e^{b_e})|^2\bigr)
+ |\log(e^{-y_e}e^{b_e})|^2-\tfrac12|\log(e^{-a_e}e^{b_e})|^2\bigr)\\
  &+\tfrac14\sum_p|\log\prod_{e\in\partial p}e^{\epsilon_{pe}y_e}|^2,
  \qquad x=(a,b).
 \end{aligned}\tag{21}$$
@@ -562,18 +553,7 @@ Tree lengths are subadditive when kernels are joined, proving (25)
 from (23). In particular each kernel is bounded by $v_r e^{-\alpha\mathsf T}$.
 These are deliberately loose constants; $t^{-1}$ restores action units.
 
-**After refereeing §7 (Claude, 2026-09-28).** Formal statements
-ACCEPT. Checked: the Neumann bound $\|G_{ef}\|\le\frac14(3/7)^{d}$ from $4I\le H\le10I$
-($C^*C\le12$ in the three-dimensional mid-space); the identity (28) as the
-Schur-complement factorization $\log\det\mathcal H=\log\det D+\log\det(\mathcal H/D)$, which
-confines the one-step subtracted change to the eliminated block; the
-cancellation of the common massless $F^2$ logarithm in (28); and the
-arithmetic of (30), $D_*=3(16+448+8192+49152)=173424$. The constants in
-(24)--(31) are deliberately loose and finite; §7.2 is a fair conditional
-statement. Checked at the level of structure, with the Schur-test bounds
-(27) taken on trust.
-
-### 7.1. Part (2): one-loop contraction after common subtraction (formal)
+### 7.1. One-loop contraction after common subtraction (formal)
 
 The contraction uses the **full** blocked tree action: add the old-face
 and electric terms to (23), including cross bubbles with their cubic
@@ -652,6 +632,8 @@ $$|\mathcal I_{jk}|\le D_*:=3\left(
  \frac{a_*}{4}+\frac{7a_*^2}{64}+\frac{a_*^3}{32}
  +\frac{3a_*^4}{1024}\right). \tag{30}$$
 
+At $a_*=64$ this explicit constant is $D_*=173424$.
+
 For a unit flux in any one plane the full normalized conditional
 one-loop coefficient $d_{\mu\nu}=2A_{\mu\nu}$ therefore satisfies
 
@@ -684,7 +666,7 @@ Equation (29) supplies domination through the infrared limit, including
 the orbital response. This proves finite one-step matching within the
 stated formal scheme; depth-uniform (14) remains the next estimate.
 
-### 7.2. Part (3): the uniform iteration requirement (conditional)
+### 7.2. Uniform iteration requirements (conditional)
 
 To iterate [recursion (12)](four-dimensional-parallel-log.md) uniformly,
 each **updated** action, in rescaled lattice units, must have a conditional
@@ -705,7 +687,10 @@ Gaussian fixed point.
 
 ## 8. Consequence for STATE
 
-Cell 4 has explicit one-step vertices and a finite commonly subtracted
-one-loop matching change with constants (Round 10, formal, unrefereed).
-The iteration hypotheses are explicit in §7.2; proving them, especially
-(14), and controlling interacting remainders remain open.
+The exact sharp-blocking obstruction and regulated Hessian-jet criterion are
+separate from the one-step coefficients in the [matching treatment](four-dimensional-parallel-log.md).
+The commonly subtracted formal one-step change is finite with explicit constants
+(24)--(31). Depth-uniform endpoint matching (14), the updated-action hypotheses
+of §7.2 and interacting remainder control remain unproved. None is supplied by
+Gaussian kernel convergence, which fails for the stated sharp map. Internal
+written checks are not independent review; new research remains suspended.

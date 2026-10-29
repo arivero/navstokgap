@@ -17,7 +17,10 @@ search for later corrections instead of rereading whole maps each time.
 Resolve a former filename through the canonical entry's `keys` in
 [note-index.json](../../research/note-index.json) or the existing
 `NOTE_REDIRECTS` in `scripts/build_site.py`; read the destination argument
-rather than treating a deleted filename as lost mathematics. Include the old
+rather than treating a deleted filename as lost mathematics. Former section
+names resolve through `NOTE_FRAGMENT_REDIRECTS` in the same website builder;
+follow their surviving proof heading before reusing an old section citation.
+Include the old
 slug, a scientific synonym and a structural dependency in retrieval. Typed
 `uses`, `corrects`, `obstructs` and `continues` relations support recall across
 models without retaining duplicate prose. Check a correcting relation before

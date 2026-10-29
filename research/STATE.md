@@ -1,6 +1,6 @@
 # State
 
-Updated 2026-10-29. **Scientific consolidation; new research suspended.**
+Updated 2026-10-29. **Maintained-argument consolidation complete; new research suspended.**
 The maintained [catalog](../notes/index.md) organizes canonical arguments by
 question and dependency. This page owns the live priorities; proofs and exact
 assumptions belong in the linked notes. Historical handouts and internal model
@@ -12,7 +12,9 @@ The two open goals are independently justified necessity of a positive physical
 $\hbar$ for Newtonian completion, and construction of pure $SU(3)$ Yang–Mills
 on $\mathbb R^4$ with a finite positive physical mass gap. QCD's pion is a
 symmetry/spectral benchmark ([comparison](../notes/three-continuum-limits.md)).
-Keep classical existence, conditional covariance floors, quantum states/dynamics/
+Coherent point-record discontinuity is governed by the
+[frequency and preparation conditions](../notes/zero-branch-reachability.md),
+not crossing streams alone. Keep classical existence, conditional covariance floors, quantum states/dynamics/
 instruments, and universality/calibration of an action scale separate.
 For a specified characteristic action $S_0$, $\epsilon=\hbar/S_0$ differs
 from time mesh, lattice spacing, record resolution and a bare regulator.

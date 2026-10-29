@@ -79,54 +79,30 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>Inserting a point, subdividing a cell: how the limit is built</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/refinement-composition-and-limit.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/refinement-composition-and-limit.pdf">PDF</a></p><p><strong>Result and direction, 2026-09-26.</strong> The user’s
-insertion <span
-class="math inline">\((t_0,t_1,t_2,t_3)\mapsto(t_0,t_1,t_2,t_{2.6},t_3)\)</span>
-identifies the right local question: after adding a variable, how are
-the old observations and the dynamics recovered? For Galileo’s constant
-force, eliminating the new point gives an exact composition law and an
-explicit action correction. A summable-defect lemma then constructs a
-limit independent of the sequence of insertions. In <span
-class="math inline">\(1+1\)</span>-dimensional pure Yang–Mills, a
-heat-kernel convolution gives exact consistency under inserting an edge.
-In <span class="math inline">\(1+2\)</span> and <span
-class="math inline">\(1+3\)</span> dimensions the corresponding
-integration produces interactions among several boundary variables;
-their control is the renormalization problem.</p>
-<p>This is a constructive development of the <a
-href="three-continuum-limits.html">joint-paper plan</a>. The elementary
-proofs below assemble established ingredients, with no novelty claim.
-They produce the constant-force limit and the exact two-dimensional
-comparison, and specify sufficient estimates for further limits. The
-positive action necessity and the four-dimensional <span
-class="math inline">\(SU(3)\)</span> gap remain the two main goals; the
-pion remains a symmetry benchmark.</p>
-<p><strong>Foundational purpose (user, 2026-09-30).</strong> A
-reconstruction of quantum theory from the limits of classical mechanics
-is judged here by the constructions and estimates it enables, especially
-for continuum existence and the physical gap. Explaining why a change of
-resolution introduces an RG transformation would already be useful. The
-exact blocking identities below provide that structural explanation; the
-quantum weighting and its positive action scale remain stated
-premises.</p>
-<p><strong>All refinements and scale normalization, 2026-09-30 (GPT-6.1
-Sol; mathematical bounds in §§3c–3d checked by GPT-6 Astra).</strong>
-The harmonic curve is constructed without assuming it, uniformly over
-all admitted partitions and arbitrary mixtures of start and end kicks.
-The two finite conventions differ, while their limits agree. This gives
-a precise comparison with the user’s RG/’t Hooft thread. Mass
-cancellation in classical motion, classical gauge scale invariance and
-quantum dimensional transmutation are separated in §3d: refinement
-independence of a curve leaves its action normalization
-undetermined.</p>
-<p><strong>Further result, 2026-09-29 (GPT-6.1 Sol; written, §3b checked
-by GPT-6 Astra).</strong> For the end-kick harmonic polygon, §3b proves
-a finite Cauchy estimate uniform over unequal partitions and observation
-times. A weighted absolute-value norm supplies stability and telescoping
-insertion bounds without assuming the limiting curve. A finite
-force-balance residual tends to zero with the same mesh. This develops
-the specific norm obstacle exposed by the sister Lean formalization; it
-supplies no action floor or measurement law.</p>
+<h1>Inserting a point, subdividing a cell: how the limit is built</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/refinement-composition-and-limit.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/refinement-composition-and-limit.pdf">PDF</a></p><p>For fixed harmonic acceleration <span
+class="math inline">\(-wx\)</span>, <span
+class="math inline">\(w\ge0\)</span>, arbitrary positive partitions and
+independently mixed kick–drift orders construct the same motion and
+force law. The weighted finite estimates in §§3b–3c keep explicit
+insertion costs, partial-cell conventions and a rational short-window
+bound; no limiting curve is presumed. The <a
+href="balaban-ode-lesson.html">general Lipschitz construction</a> has
+broader force hypotheses, while these harmonic estimates give sharper
+constants and the specific source/formalization comparison.</p>
+<p>Endpoint elimination, quantum integration and physical recording are
+different operations. Constant-force elimination and arbitrary-partition
+Gaussian composition are exact with their stated scalar correction and
+supplied action coefficient. In <span class="math inline">\(1+1\)</span>
+gauge theory heat-kernel convolution supplies exact surface subdivision;
+higher-dimensional integration generates boundary interactions whose
+estimates must persist under iteration. The sufficient consistency norm
+in §7 does not prove a physical spectral gap or positive-action
+necessity.</p>
+<p>This is a dependency-based exposition of established ingredients and
+written bounds. Repository model checks are internal; source
+interpretations and formalization hypotheses are labelled where used.
+Physical <span class="math inline">\(\hbar\)</span>, a time step,
+lattice spacing and any other regulator remain distinct.</p>
 <h2 id="what-an-insertion-has-to-preserve">1. What an insertion has to
 preserve</h2>
 <p>Three operations occur at a new time <span
@@ -456,12 +432,11 @@ class="math inline">\([0,t]\)</span>, then (6e) twice: <span
 class="math display">\[\sup_{0\le t\le\tau}\|z_\pi(t)-z_\sigma(t)\|_\rho
 \le wB_\tau(\tau+\rho^{-1})(|\pi|+|\sigma|)\|z_0\|_\rho.
 \tag{6f}\]</span> This is a finite uniform Cauchy estimate, including
-unequal schedules and retained velocity. Completing the state space
-would construct a limit; identifying its force law and its historical
-geometric enclosure remain additional steps. No curve was supplied to
-prove (6b)–(6f). The norm change supplies a concrete finite input to the
-graph’s P3 obligation, rather than deducing P3 from an area
-invariant.</p>
+unequal schedules and retained velocity. Section 3c completes the state
+space and identifies the force law. The historical geometric enclosure
+remains a separate hypothesis. No curve was supplied to prove (6b)–(6f).
+The norm change supplies a concrete finite input to the graph’s P3
+obligation, rather than deducing P3 from an area invariant.</p>
 <p>There is also a finite input to force identification. Define the
 trapezoidal position sum, with no integral presumed, <span
 class="math display">\[T_\pi(t)=\sum_{j\text{
@@ -490,34 +465,34 @@ class="math inline">\(t=0\)</span> all sums are empty; at a completed
 vertex <span class="math inline">\(u=0\)</span>, so the identities
 retain the declared outgoing velocity. Thus the candidate curve family
 is paired with a vanishing finite force-balance residual, rather than
-only a stability estimate. Passing these sums to a continuous force law
-and proving the relevant geometric enclosure remain separate
-obligations.</p>
-<p><strong>Astra’s graph check (2026-09-29).</strong> The printed-stage
-edges from Lemma III Cor. 4 to Proposition I record a textual citation.
-They do not supply convergence of the generated polygon family: the
-lemma’s given-curve approximation and the graph’s P3 realization have
-different inputs. The graph’s attached <a
+only a stability estimate. Section 3c passes these sums to the
+continuous force law; the printed geometric enclosure remains
+separate.</p>
+<p><strong>Printed geometry and formalization scope.</strong> The
+printed-stage edges from Lemma III Cor. 4 to Proposition I record a
+textual citation. They do not supply convergence of the generated
+polygon family: the lemma’s given-curve approximation and the graph’s P3
+realization have different inputs. The graph’s attached <a
 href="https://github.com/arivero/newtonlean/blob/381d5e9/NewtonLimitDynamics/Polygon/Enclosure.lean">sector_ratio_reconstruction</a>
 (local full-read) explicitly assumes lower and upper limits and a
 geometric enclosure. Having that formal reference does not discharge
 those hypotheses. This check concerns graph metadata and code; the
-printed passages retain their existing repository attribution. Astra
-checked (6b)–(6h), including the single <span
-class="math inline">\(B_\tau\)</span> factor and the partial-cell sign
-in (6g). The finite estimate supplies P3’s Cauchy input and (6h)
-supplies force-consistency data; neither silently closes the graph’s
-limiting geometric or force-identification nodes. This is an internal
-mathematical check, separate from Lean compilation.</p>
-<p>The user’s alternative (2026-09-29) is to obtain surviving quantities
-by repeated block renormalization, without presupposing a limiting
-physical curve. In this fixed harmonic model the Cauchy bound forces a
-limit in the usual real-state completion. It does not establish that the
-full body–apparatus state has the same completion when refinement adds
-bath and memory variables. For that construction, specify the retained
-observables and their blocking maps; §7’s consistency estimate is a
-distinct route to their limiting laws. A finite area identity alone
-establishes neither kind of limit.</p>
+printed passages retain their existing repository attribution. The
+bounds retain the single <span class="math inline">\(B_\tau\)</span>
+factor and the partial-cell sign in (6g). The finite estimate supplies
+P3’s Cauchy input and (6h) supplies force-consistency data; neither
+silently closes the graph’s limiting geometric or force-identification
+nodes. This is an internal mathematical check, separate from Lean
+compilation.</p>
+<p>A distinct retained-observable construction is to obtain surviving
+quantities by repeated block renormalization, without presupposing a
+limiting physical curve. In this fixed harmonic model the Cauchy bound
+forces a limit in the usual real-state completion. It does not establish
+that the full body–apparatus state has the same completion when
+refinement adds bath and memory variables. For that construction,
+specify the retained observables and their blocking maps; §7’s
+consistency estimate is a distinct route to their limiting laws. A
+finite area identity alone establishes neither kind of limit.</p>
 <p>Here <span class="math inline">\(w\)</span> has units of inverse time
 squared and <span class="math inline">\(\rho\)</span> of inverse time;
 the norm has velocity units, and every coefficient multiplying it in
@@ -644,12 +619,12 @@ href="https://webspace.science.uu.nl/~hooft101/gthpub.html">publication
 list</a> (author metadata read) dates the renormalization papers to
 1971–73 and deterministic-QM papers to 1988–90; an immediate causal
 transition is not established by those dates.</p>
-<p><strong>Mathematical review (GPT-6 Astra, 2026-09-30):
-ACCEPT.</strong> The single <span class="math inline">\(B_\tau\)</span>
-amplification, interpolation and endpoint convention, completion and
-force-law passage were checked. The ’t Hooft source attribution is a
-separate passage check by Sol. The result concerns fixed harmonic
-dynamics, not arbitrary microscopic laws or an action floor.</p>
+<p><strong>Scope.</strong> The single <span
+class="math inline">\(B_\tau\)</span> amplification, interpolation and
+endpoint convention, completion and force-law passage were checked. The
+’t Hooft attribution is a separate source passage comparison. The result
+concerns fixed harmonic dynamics, not arbitrary microscopic laws or an
+action floor.</p>
 <h2
 id="d.-scale-invariance-cancelled-masses-and-the-action-that-remains">3d.
 Scale invariance, cancelled masses and the action that remains</h2>
@@ -827,11 +802,6 @@ dimensional scale, and action normalization. The harmonic curve
 construction proves the first in its model. Neither it nor mass
 cancellation selects a positive action unit, and dimensional
 transmutation alone proves no mass gap.</p>
-<p><strong>Scaling check (GPT-6 Astra, 2026-09-30): ACCEPT at the stated
-classical and one-loop levels.</strong> The passive-mass scope, dilation
-exponents, running sign, positive-coupling domain, retained-weight
-identity and explicit <span class="math inline">\(c,\hbar,G\)</span>
-dimensions were checked.</p>
 <h2 id="gauge-refinement-geometry-marginalization-and-reflection">4.
 Gauge refinement: geometry, marginalization and reflection</h2>
 <p>Take a finite oriented lattice <span
@@ -1154,55 +1124,24 @@ channel. The <a href="three-continuum-limits.html">spectral criteria</a>
 state the two limiting conclusions. Short-distance consistency and
 long-distance spectral control are complementary parts of one
 construction.</p>
-<h2 id="consequence-for-state-and-the-final-paper">8. Consequence for
-STATE and the final paper</h2>
-<p>The final paper should be organized around <strong>local insertion
-laws, their composition, and the quantity carried through the
-limit</strong>. The sequence is now concrete: the Newton action
-elimination (1), the arbitrary-partition construction (4)–(6), exact
-surface subdivision (9), and the higher-dimensional consistency estimate
-(12), followed by the physical spectral or record-cost estimate. Pion
-physics tests which symmetries those estimates preserve.</p>
-<p>The next bounded field-theory task is <strong>one <span
-class="math inline">\(1+2\)</span>-dimensional blocking step with its
-boundary interaction retained</strong>. Start with a subdivided finite
-cube and compatible reflection plane; specify its exact boundary weight
-via (11), then choose a renormalized local observable norm in which the
-difference from a proposed coarse weight can be bounded. The deliverable
-is one explicit estimate, with dependence on <span
-class="math inline">\(a\)</span>, <span
-class="math inline">\(\lambda_3\)</span> and boundary data, or the exact
-term preventing that estimate. Its purpose is to test summability, not
-to fit the answer to a one-plaquette action. The small-volume H3
-valley-lifting task remains the separate spectral mechanism to connect
-to this construction.</p>
-<p>For Newton, §§3b–3c now construct the harmonic curve and its force
-law, uniformly over unequal, nonnested refinements and arbitrary
-mixtures of the two force-consistent kick orders. The norm avoids the
-sister formalization’s pending quadratic inequality; its printed
-enclosure and formal P3 remain separate. Section 3d fits the user’s
-RG/’t Hooft and scale-invariance threads through a normalization
-obstruction and an explicit truncated running law: curve consistency,
-dimensional scale and action normalization require different proofs.
-Exact retained weights explain the appearance of RG as a change of
-resolution; useful continuum and spectral estimates remain its test. The
-<a
-href="sed-closure-under-recording.html#physical-adaptive-feedback-and-a-continuous-record">physical
-recording construction, §§8.11–8.14</a> also identifies an adaptive
-body–record continuum law and smeared recoil from finite pointers, with
-limiting-record closure at its supplied scale. <a
-href="sed-closure-under-recording.html#nonlinear-copies-defeat-the-classical-gaussian-extension">The
-nonlinear-copy test, §8.15</a> shows that the same Gaussian classical
-preparation fails beyond affine body copies. Its §8.16 derives the exact
-quantum generator correction, which changes conditional momentum while
-preserving record statistics, and excludes a positive classical
-transition kernel with that generator on the full canonical phase space.
-Next Newton lemma: compositional closure of nonlinear physical recording
-from an independent conditioning rule; reject an imported quantum kernel
-or a zero branch satisfying the same premises. The gauge frontier
-remains the <a
-href="su2-midplane-small-field.html#retained-barriers-and-nonlinear-connectors-in-a-weak-recoupling-strip">weak-strip
-marked density norm</a>.</p>
+<span id="consequence-for-state-and-the-final-paper"></span><h2 id="consequence-for-state">8. Consequence for STATE</h2>
+<p>The retained harmonic proof constructs both trajectory and force law
+for every admitted refinement sequence; it supplies no action
+normalization. Its sharper finite constants and rational norm argument
+remain useful beside the broader <a href="balaban-ode-lesson.html">ODE
+theorem</a>. Exact Gaussian/surface composition and the summable
+consistency criterion answer separate law-level questions, rather than
+repeating that initial-value proof.</p>
+<p>For higher-dimensional gauge fields the generated boundary
+interaction, response norm, cutoff/volume limits and reconstruction
+still need control. The <a href="su2-midplane-small-field.html">SU(2)
+barrier and weak-strip estimates</a> give current local results; they do
+not yet transport to physical recoupling and stable iteration. A full
+physical gap needs a further spectral estimate. Physical <a
+href="sed-closure-under-recording.html">recording laws</a> have their
+own conditional-noise, controller-memory and nonlinear-closure premises.
+None follows just by inserting an integration variable. New research
+remains paused during consolidation.</p>
 
 </main>
 <footer class="site"><div class="wrap">

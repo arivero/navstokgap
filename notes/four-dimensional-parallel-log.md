@@ -1,23 +1,8 @@
 # Four-dimensional parallel insertions: one-loop shifts and the logarithm
 
-**After refereeing (2026-09-28).** Sections 1--4 and the summary were
-refereed by Fable (all seven items accepted: the normalization and
-bounds (2)--(3), the dictionary, Theorem 1(a),(b) with their $D=3$
-reductions, and the infrared regularity of §4 were rederived by hand).
-Two wordings were changed: the test mid-connection is *trivial*, and one
-contrast sentence after Theorem 1(a) was rewritten. Sections 5--8 were
-checked by Claude: the traces $4C_AF^2$, $-4C_AF^2$, $-C_AF^2$, the
-coefficient $\frac{11C_A}{192\pi^2}$ and $\Delta u=-2b_0\log2$; the residue $1/(8\pi^2)$ of
-(16), the integrals (17) and the limit (18); the heat-time table of §5;
-and the identities (12)--(13). Theorem 2 is correctly labelled
-conditional. One remark was added after the telescoping paragraph of
-§6: over many steps the matching terms telescope, and bounded matching
-coefficients suffice for the average rate.
-
-**Result, 2026-09-28 (formal calculation and precise obstruction).** One
-directional cut in four dimensions has the six coupling shifts (4) and
+One directional cut in four dimensions has the six coupling shifts (4) and
 (10) below, as explicit, convergent Brillouin-zone integrals. They extend
-the refereed $SU(2)$ mid-plane calculation to three coupled transverse
+the $SU(2)$ mid-plane calculation with its incorporated corrections to three coupled transverse
 planes, arbitrary positive anisotropy and cut fraction $s$. The bridge
 mass makes every one-step integral regular at zero momentum.
 
@@ -35,9 +20,11 @@ times and the anisotropy to their initial values leaves that difference
 undetermined. The exact pushforward generates interactions already at
 tree level; carrying them through the next elimination is essential.
 Consequently four applications of the unperturbed one-step coefficients
-alone do not establish (1). The missing task is the finite matching of
-the generated action, or construction of a stationary action family
-under rescaled blocking. Numerical evaluation of one lattice integral
+alone do not establish (1). The missing task is matching along the full generated-action trajectory,
+or a stationary action family under rescaled blocking. The
+[composition treatment](four-dimensional-composition.md) supplies a formal
+finite matching change for one pristine step and states the further
+depth-uniform requirements. Numerical evaluation of one lattice integral
 would leave this obstruction in place.
 
 **Status and inputs.** Theorem 1 concerns coefficients of a formal,
@@ -52,8 +39,7 @@ heat-time table, Hypothesis P($\alpha$), including its size clause, and
 N3 and the winding qualification; the
 [midpoint formulas](su2-midpoint-exact.md), Theorems 1--4; and the
 [zero-spacing note](zero-spacing-any-action.md), perturbative column and
-finite $\Lambda$ matching (full-read: these sections). The new
-three-dimensional determinant has received no independent referee review.
+finite $\Lambda$ matching (full-read: these sections). These are internal written derivations, with no independent peer-review claim.
 
 ## 1. Normalization and a positive mid-space Hessian
 
@@ -457,7 +443,7 @@ $\zeta_{\rm in}=\zeta_{\rm out}$; the remaining endpoint difference
 requires $\mathcal K$ as well. Equation (12) changes $\mathcal K$ even
 when the table returns to row 0. $\square$
 
-*Remark (many steps; Claude, 2026-09-28).* Coarsen a very fine lattice $n$
+*Many-step telescoping.* Coarsen a very fine lattice $n$
 times, each step's output being the next step's input. Summing (15), the
 intermediate matching terms cancel as in the four-step telescoping:
 
@@ -554,10 +540,9 @@ meshes remains an additional obligation.
 
 ## 8. Consequence for STATE
 
-Atlas cell 4 gains formal anisotropic one-step integrals and a precise
-composition obstruction, with a conditional analytic recovery of
-$2b_0$. The next bounded four-dimensional task is to retain the
-Gaussian Schur complement and its nonabelian background completion
-through (12), then determine the finite endpoint matching in (15).
-This targets a concrete determinant identity; the D=3 normalized
-estimate and the separate infrared mass-gap obligation remain open.
+The formal anisotropic one-step coefficients, exact generated-action recursion
+(12) and conditional matching identity (15) retain their distinct assumptions.
+Finite endpoint matching for one pristine step and the repeated-step norm
+criteria are developed in [composition](four-dimensional-composition.md).
+They do not give depth-uniform control of the interacting generated action or
+a continuum theory with a physical spectral gap. New research remains paused.

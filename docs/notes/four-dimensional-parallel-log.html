@@ -80,32 +80,13 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </nav></div></header>
 <main class="wrap">
 <h1>Four-dimensional parallel insertions: one-loop shifts and the
-logarithm</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/four-dimensional-parallel-log.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/four-dimensional-parallel-log.pdf">PDF</a></p><p><strong>After refereeing (2026-09-28).</strong> Sections 1–4 and the
-summary were refereed by Fable (all seven items accepted: the
-normalization and bounds (2)–(3), the dictionary, Theorem 1(a),(b) with
-their <span class="math inline">\(D=3\)</span> reductions, and the
-infrared regularity of §4 were rederived by hand). Two wordings were
-changed: the test mid-connection is <em>trivial</em>, and one contrast
-sentence after Theorem 1(a) was rewritten. Sections 5–8 were checked by
-Claude: the traces <span class="math inline">\(4C_AF^2\)</span>, <span
-class="math inline">\(-4C_AF^2\)</span>, <span
-class="math inline">\(-C_AF^2\)</span>, the coefficient <span
-class="math inline">\(\frac{11C_A}{192\pi^2}\)</span> and <span
-class="math inline">\(\Delta u=-2b_0\log2\)</span>; the residue <span
-class="math inline">\(1/(8\pi^2)\)</span> of (16), the integrals (17)
-and the limit (18); the heat-time table of §5; and the identities
-(12)–(13). Theorem 2 is correctly labelled conditional. One remark was
-added after the telescoping paragraph of §6: over many steps the
-matching terms telescope, and bounded matching coefficients suffice for
-the average rate.</p>
-<p><strong>Result, 2026-09-28 (formal calculation and precise
-obstruction).</strong> One directional cut in four dimensions has the
-six coupling shifts (4) and (10) below, as explicit, convergent
-Brillouin-zone integrals. They extend the refereed <span
-class="math inline">\(SU(2)\)</span> mid-plane calculation to three
-coupled transverse planes, arbitrary positive anisotropy and cut
-fraction <span class="math inline">\(s\)</span>. The bridge mass makes
-every one-step integral regular at zero momentum.</p>
+logarithm</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/four-dimensional-parallel-log.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/four-dimensional-parallel-log.pdf">PDF</a></p><p>One directional cut in four dimensions has the six coupling shifts
+(4) and (10) below, as explicit, convergent Brillouin-zone integrals.
+They extend the <span class="math inline">\(SU(2)\)</span> mid-plane
+calculation with its incorporated corrections to three coupled
+transverse planes, arbitrary positive anisotropy and cut fraction <span
+class="math inline">\(s\)</span>. The bridge mass makes every one-step
+integral regular at zero momentum.</p>
 <p>The universal logarithm belongs to the matched, four-dimensional
 background-field determinant. Its coefficient is analytically</p>
 <p><span class="math display">\[2b_0=\frac{11N}{24\pi^2},\qquad
@@ -119,10 +100,13 @@ anisotropy to their initial values leaves that difference undetermined.
 The exact pushforward generates interactions already at tree level;
 carrying them through the next elimination is essential. Consequently
 four applications of the unperturbed one-step coefficients alone do not
-establish (1). The missing task is the finite matching of the generated
-action, or construction of a stationary action family under rescaled
-blocking. Numerical evaluation of one lattice integral would leave this
-obstruction in place.</p>
+establish (1). The missing task is matching along the full
+generated-action trajectory, or a stationary action family under
+rescaled blocking. The <a
+href="four-dimensional-composition.html">composition treatment</a>
+supplies a formal finite matching change for one pristine step and
+states the further depth-uniform requirements. Numerical evaluation of
+one lattice integral would leave this obstruction in place.</p>
 <p><strong>Status and inputs.</strong> Theorem 1 concerns coefficients
 of a formal, zero-image, bulk Laplace expansion. Its matrix and integral
 identities are written derivations; uniform remainder estimates remain
@@ -138,8 +122,8 @@ href="su2-midpoint-exact.html">midpoint formulas</a>, Theorems 1–4; and
 the <a href="zero-spacing-any-action.html">zero-spacing note</a>,
 perturbative column and finite <span
 class="math inline">\(\Lambda\)</span> matching (full-read: these
-sections). The new three-dimensional determinant has received no
-independent referee review.</p>
+sections). These are internal written derivations, with no independent
+peer-review claim.</p>
 <h2 id="normalization-and-a-positive-mid-space-hessian">1. Normalization
 and a positive mid-space Hessian</h2>
 <p>Set <span class="math inline">\(t=g^2=\hbar g_{\rm cl}^2\)</span>
@@ -581,10 +565,10 @@ remaining endpoint difference requires <span
 class="math inline">\(\mathcal K\)</span> as well. Equation (12) changes
 <span class="math inline">\(\mathcal K\)</span> even when the table
 returns to row 0. <span class="math inline">\(\square\)</span></p>
-<p><em>Remark (many steps; Claude, 2026-09-28).</em> Coarsen a very fine
-lattice <span class="math inline">\(n\)</span> times, each step’s output
-being the next step’s input. Summing (15), the intermediate matching
-terms cancel as in the four-step telescoping:</p>
+<p><em>Many-step telescoping.</em> Coarsen a very fine lattice <span
+class="math inline">\(n\)</span> times, each step’s output being the
+next step’s input. Summing (15), the intermediate matching terms cancel
+as in the four-step telescoping:</p>
 <p><span class="math display">\[u_n-u_0=-2b_0\,n\log2+c(\zeta_0,\mathcal
 K_0)-c(\zeta_n,\mathcal K_n)+\sum_{k&lt;n}O(t_k).\]</span></p>
 <p>Along the coarsening the couplings grow from a small initial value,
@@ -688,14 +672,14 @@ Finite matching terms and winding estimates can depend on the schedule.
 Uniform control for fractions tending to 0 or 1 and for arbitrary
 nonuniform meshes remains an additional obligation.</p>
 <h2 id="consequence-for-state">8. Consequence for STATE</h2>
-<p>Atlas cell 4 gains formal anisotropic one-step integrals and a
-precise composition obstruction, with a conditional analytic recovery of
-<span class="math inline">\(2b_0\)</span>. The next bounded
-four-dimensional task is to retain the Gaussian Schur complement and its
-nonabelian background completion through (12), then determine the finite
-endpoint matching in (15). This targets a concrete determinant identity;
-the D=3 normalized estimate and the separate infrared mass-gap
-obligation remain open.</p>
+<p>The formal anisotropic one-step coefficients, exact generated-action
+recursion (12) and conditional matching identity (15) retain their
+distinct assumptions. Finite endpoint matching for one pristine step and
+the repeated-step norm criteria are developed in <a
+href="four-dimensional-composition.html">composition</a>. They do not
+give depth-uniform control of the interacting generated action or a
+continuum theory with a physical spectral gap. New research remains
+paused.</p>
 
 </main>
 <footer class="site"><div class="wrap">

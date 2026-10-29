@@ -89,8 +89,12 @@ uncertainty, the Weyl relations or a universal positive $\hbar$.
 [force geometry](notes/causal-force-information.md) keep initial preparation,
 retained records, calibrated parameters, budgets and limiting order explicit.
 A reconstruction-error product is not a covariance action by definition.
-- [Coherent-stream limits](notes/zero-branch-reachability.md) need their coherence
-premise. The incoherent packet attachment recovers the classical swarm for
+- [Coherent-stream limits](notes/zero-branch-reachability.md) need the exact
+frequency-sum criterion as well as their coherence premise. Equal-action cross
+terms can cancel; derivative sign changes alone do not ensure three illuminated
+branches. Gaussian finite-record laws are continuous, not constant, in action.
+The angle model uses signed image width: a compressing Kepler gradient cannot
+wrap before folding; its dephasing scale is not an unconditional first-overlap time. The incoherent packet attachment recovers the classical swarm for
 quadratic forces. Fixed-interval [Coulomb recovery](notes/self-sufficiency-contrast.md)
 is distinct from collision continuation and extension/domain selection.
 - [Radiation/depot/thermal tests](notes/necessity-unit-and-indeterminacy.md)
