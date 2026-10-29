@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Closed trajectories: action from total turning and persistent excitation</title>
+<title>Consolidated note — navstokgap</title><meta http-equiv="refresh" content="0; url=action-unit-dimensional-selection.html#a-sharp-excitation-and-force-bound-for-all-closed-regular-orbits"><link rel="canonical" href="https://arivero.github.io/navstokgap/notes/action-unit-dimensional-selection.html">
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,105 +79,7 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>Closed trajectories: action from total turning and persistent
-excitation</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/closed-orbit-force-action.md">Markdown source</a></p><p>Every regular closed Newtonian or special-relativistic trajectory
-with a uniform speed floor and force ceiling has a positive canonical
-orbit-action bound. The circular bound of C059 is sharp in this larger
-class. A18, C060–C061; written proof and bounded B32 source review.</p>
-<h2 id="domain-and-action">Domain and action</h2>
-<p>Let <span class="math inline">\(q:\mathbb R/T\mathbb Z\to\mathbb
-R^d\)</span>, <span class="math inline">\(d\ge2\)</span>, be <span
-class="math inline">\(C^2\)</span>, with <span
-class="math inline">\(v(t)=|\dot q(t)|\ge v_*&gt;0\)</span>. In the
-relativistic case require <span
-class="math inline">\(v(t)&lt;c\)</span>, and set <span
-class="math inline">\(p=m\gamma\dot q\)</span>, <span
-class="math inline">\(\gamma=(1-v^2/c^2)^{-1/2}\)</span>, <span
-class="math inline">\(m&gt;0\)</span>. In the Newtonian case set <span
-class="math inline">\(p=m\dot q\)</span>. Assume <span
-class="math inline">\(|\dot p|\le F_{\max}\)</span> for a fixed <span
-class="math inline">\(F_{\max}&gt;0\)</span>. Periodicity includes
-matching endpoint tangents. Self-intersections are allowed. All
-assumptions concern one inertial frame.</p>
-<p>Define the normalized canonical orbit action</p>
-<p><span class="math display">\[J=\frac1{2\pi}\int_0^T p\cdot\dot q\,dt
-  =\frac1{2\pi}\int_0^T P(v)v\,dt,\]</span></p>
-<p>where <span class="math inline">\(P(v)=m\gamma v\)</span> or <span
-class="math inline">\(mv\)</span>. This equals <span
-class="math inline">\((2\pi)^{-1}\oint p\cdot dq\)</span> for a
-scalar-potential Hamiltonian with canonical momentum as specified. For
-forces involving a vector potential, mechanical and canonical momentum
-need separate treatment. The object here is orbit action, rather than an
-arbitrary Hamilton-action difference or a general covariance
-determinant.</p>
-<h2 id="total-turning-estimate">Total-turning estimate</h2>
-<p>Write <span class="math inline">\(n=\dot q/v\)</span> for the unit
-tangent and <span class="math inline">\(\mathcal K=\int_0^T|\dot
-n|dt\)</span> for total curvature. The classical Fenchel theorem for a
-closed regular curve gives <span class="math inline">\(\mathcal
-K\ge2\pi\)</span>. For arclength <span class="math inline">\(s\)</span>,
-<span class="math inline">\(|\dot n|dt=|dn/ds|ds\)</span>, identifying
-this integral with the source’s total curvature. <a
-href="https://github.com/arivero/navstokgap/blob/main/references/batches/B32.md">B32</a>
-verifies Milnor’s Theorem 3.4 and the smooth-curve identification. Since
-<span class="math inline">\(p=P(v)n\)</span> and <span
-class="math inline">\(n\cdot\dot n=0\)</span>,</p>
-<p><span class="math display">\[|\dot p|^2=\dot P^2+P^2|\dot n|^2,
-\qquad |\dot n|\le\frac{F_{\max}}{P(v)}
-\le\frac{F_{\max}}{P_*},\quad P_*=P(v_*).\]</span></p>
-<p>Integrating and then using monotonicity of <span
-class="math inline">\(P(v)v\)</span> proves</p>
-<p><span class="math display">\[
-T\ge\frac{P_*\mathcal K}{F_{\max}},\qquad
-J\ge\frac{P_*^2v_*}{F_{\max}}\frac{\mathcal K}{2\pi}
-\ge\frac{P_*^2v_*}{F_{\max}}.
-\]</span></p>
-<p>Thus the relativistic bound is <span
-class="math inline">\(m^2v_*^3/[F_{\max}(1-v_*^2/c^2)]\)</span> and its
-Newtonian counterpart is <span
-class="math inline">\(m^2v_*^3/F_{\max}\)</span>. The units are action;
-<span class="math inline">\(T\)</span> retains units of time. This
-extends C059 to noncentral forces and noncircular closed trajectories,
-provided their momenta and force bounds satisfy the stated domain.</p>
-<h2 id="sharpness-within-smooth-force-bounded-mechanics">Sharpness
-within smooth force-bounded mechanics</h2>
-<p>A circle at speed <span class="math inline">\(v_*\)</span> and radius
-<span class="math inline">\(R_*=P_*v_*/F_{\max}\)</span> has <span
-class="math inline">\(\mathcal K=2\pi\)</span>, <span
-class="math inline">\(|\dot p|=F_{\max}\)</span> and <span
-class="math inline">\(J=P_*R_*=P_*^2v_*/F_{\max}\)</span>. It can be
-realized by a smooth globally force-bounded confining central potential,
-rather than only a prescribed force along the orbit. Choose a smooth
-nondecreasing cutoff <span
-class="math inline">\(\chi:[0,\infty)\to[0,1]\)</span> equal to zero for
-<span class="math inline">\(s\le1/4\)</span> and to one for <span
-class="math inline">\(s\ge1/2\)</span>, and set</p>
-<p><span
-class="math display">\[V(r)=F_{\max}\int_0^r\chi(s/R_*)\,ds.\]</span></p>
-<p>The potential is constant near the origin and linear at large radius,
-so its Cartesian version is smooth and confining, with <span
-class="math inline">\(|\nabla V|\le F_{\max}\)</span>. At <span
-class="math inline">\(r=R_*\)</span> the circular force balance holds
-exactly. This realizes equality in the claimed bound with a complete
-regular orbit and fixed model parameters. It proves sharpness over the
-admissible model class, not attainability in every preassigned
-potential.</p>
-<h2 id="what-the-bound-asks-of-the-physical-programme">What the bound
-asks of the physical programme</h2>
-<p>Closedness supplies total turning. The force ceiling limits how
-quickly momentum can turn. The speed floor turns that duration into an
-action cost. These premises have separate roles. At fixed <span
-class="math inline">\(m,F_{\max}\)</span> the bound tends to zero as
-<span class="math inline">\(v_*\downarrow0\)</span>, consistently with
-C058’s small circles. The relativistic correction tends to the Newtonian
-value as <span class="math inline">\(c\to\infty\)</span>.</p>
-<p>A19 should test a weaker excitation premise suitable for oscillations
-that stop at turning points: can a fixed peak momentum or kinetic
-excursion, together with the force ceiling and periodicity, supply a
-positive action bound? This would replace the pointwise speed floor by
-an observable excursion. Its physical origin and any universal value
-remain a separate selection task.</p>
-
+<h1>Note consolidated</h1><p>This material is now part of <a href="action-unit-dimensional-selection.html#a-sharp-excitation-and-force-bound-for-all-closed-regular-orbits">Classical action selection: units, symmetries and orbital thresholds</a>. The original source remains in repository history.</p>
 </main>
 <footer class="site"><div class="wrap">
 <p><strong>Comments, corrections and questions are welcome as repository

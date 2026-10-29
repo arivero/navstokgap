@@ -218,7 +218,7 @@ Its broad-component variance and position separation grow as
 $\zeta\delta^{-3}$ and $\sqrt\zeta\,\delta^{-2}$, respectively. Thus it
 does not defeat a separately imposed finite preparation aperture or
 energy budget uniformly in $\delta$; the
-[resource-relative distinction](planck-gap-probabilistic.md) remains.
+[resource-relative distinction](record-distance-path-length.md#single-shot-displacement-and-the-aperture-theorem) remains.
 
 ## 4. Why the positive classical density is not a quantum state
 

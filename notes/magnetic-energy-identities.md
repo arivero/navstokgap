@@ -152,7 +152,7 @@ therefore separates configurations locally by construction, with no
 reference to a total energy.
 
 This is the precise content of the observation in
-[the typical-field note](typical-field-strength-window.md): the
+[the typical-field note](flow-jacobian-truncation-error.md#free-field-size-is-a-benchmark-not-a-supremum-bound): the
 Hamiltonian formulation has a state and a global eigenvalue equation
 where the Euclidean formulation has a local weight. The three notes
 since then have tried the two standard ways of extracting a local

@@ -77,7 +77,7 @@ coverage statements.
 
 Follow-up: [B73](../references/batches/B73.md) now records this match in the
 bibliography and claim ledger, with a separate
-[foundational assessment](../notes/ising-foundational-value.md).
+[foundational assessment](../notes/interacting-ising-gap.md#volume-coupling-global-mixing-and-physical-limits).
 
 The workflow lesson is that our audits have been stronger at verifying
 ingredients than at finding prior publication of the finished result.

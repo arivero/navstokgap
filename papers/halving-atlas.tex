@@ -1,616 +1,365 @@
 \documentclass[11pt,a4paper]{article}
-\usepackage{fontspec}
-\setmainfont{Noto Serif CJK SC}[ItalicFeatures={FakeSlant=0.2}]
-\newfontfamily\cjkupperfont{HanaMinB}
-\usepackage{newunicodechar}
-\newunicodechar{𣃈}{{\cjkupperfont\symbol{"230C8}}}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
 \usepackage{amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}
 \usepackage{longtable,booktabs,array,calc}
 \usepackage[hidelinks]{hyperref}
-\hypersetup{pdftitle={Atlas of halving: what one refinement step does, and what emerges, in each dimension},pdfauthor={navstokgap research working notes}}
+\hypersetup{pdftitle={Gauge refinement: exact steps, scale dependence and the infrared obligations},pdfauthor={navstokgap research working notes}}
 \newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
-\section{Atlas of halving: what one refinement step does, and what
-emerges, in each
-dimension}\label{atlas-of-halving-what-one-refinement-step-does-and-what-emerges-in-each-dimension}
+\hypertarget{gauge-refinement-exact-steps-scale-dependence-and-the-infrared-obligations}{%
+\section{Gauge refinement: exact steps, scale dependence and the
+infrared
+obligations}\label{gauge-refinement-exact-steps-scale-dependence-and-the-infrared-obligations}}
 
-\textbf{Purpose, 2026-09-27 (user direction: a collective understanding
-of the halving of the lattice and what emerges in each case and
-dimension, as the mid-term goal).} This note is the shared map. Each
-cell says what one halving does, what it leaves behind, and what
-survives the limit, with the status of the statement and the note that
-holds it. It adds no new theorem; it fixes one vocabulary so that the
-agents working here (Claude, GPT-6 Astra, Fable reviewers) and the user
-fill the same cells. Open cells are listed in §5.
+\textbf{Maintained scope.} Series convolution is exact; transverse
+elimination produces an effective interaction that must be retained and
+controlled. Refining a lattice adds ultraviolet modes. A physical mass
+gap and confinement are separate infrared claims: respectively a
+spectral bound and an area law. The estimates below organize the proof
+dependencies; no four-dimensional continuum gap is proved by this map.
 
-Status labels: \textbf{proved} (theorem in a repository note, reviewed
-or not as marked), \textbf{exact} (closed-form identity),
-\textbf{formal} (derivation assuming an unproved estimate),
-\textbf{known} (established literature, cited), \textbf{open}.
+One-loop transmutation supplies a possible physical scale, not a
+positive spectral coefficient. Normalization, volume uniformity,
+generated interactions, continuum reconstruction and visibility to
+physical observables remain explicit obligations. A coarse pushforward
+does not determine its fine conditional laws. Statuses refer to the
+linked written arguments or identified literature; internal model
+reviews are not independent peer review or novelty evidence.
 
-\subsection{1. The operation}\label{the-operation}
+\hypertarget{exact-operations-and-arbitrary-cuts}{%
+\subsection{1. Exact operations and arbitrary
+cuts}\label{exact-operations-and-arbitrary-cuts}}
 
-\textbf{Halving one direction} \(a_1\mapsto a_1/2\) of a lattice with
-plaquette heat times
-\(t_{\mu\nu}=\lambda_Da_\mu a_\nu/\prod_{\rho\ne\mu,\nu}a_\rho\)
-(\href{series-parallel-gauge-refinement.md}{series/parallel note}, eq.
-(1), small-field regime) splits exactly into two moves.
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Series move.} A face containing the refined direction is cut
-  in two; its heat time halves. Integrating the cutting edge is a
-  convolution of the two half-weights: character coefficients multiply.
-  For heat-kernel weights it closes exactly in every dimension.
-\item
-  \textbf{Parallel move.} A face transverse to the refined direction
-  gets a new copy in the mid-plane, both at doubled heat time.
-  Integrating the mid-plane leaves the factor \(\Psi\): a
-  \((D-1)\)-dimensional gauge theory whose edges carry Brownian-bridge
-  laws fixed by the coarse field. Pointwise products of weights add
-  their logarithms; the heat kernel is closed under this only up to
-  vortex terms (\href{zero-spacing-any-action.md}{zero-spacing note},
-  Proposition 1).
-\item
-  \textbf{Count.} A halving produces parallel moves in \(\binom{D-1}2\)
-  transverse planes. An isotropic step is \(D\) directional halvings;
-  the isotropic heat time scales as \(t\propto\lambda_Da^{4-D}\).
-\item
-  \textbf{Time-only halving} (Euclidean time at fixed spatial lattice)
-  sends the transverse heat times to infinity; the Hamiltonian limit
-  needs exponential (Wilson-type) magnetic weights (zero-spacing note,
-  §1).
-\end{itemize}
-
-\textbf{Newton's halving} is the one-dimensional case: inserting a time
-\(t_{2.6}\) in a cell is a series move
-(\href{refinement-composition-and-limit.md}{refinement note}, §2). A
-physical record at the inserted time is a new variable attached to the
-body, the analogue of a parallel insertion. Forgetting a Gaussian record
-is an exact parallel move with defect proportional to \(\hbar^2\), the
-identity for \(\hbar=0\) (\href{newton-record-parallel-move.md}{record
-as parallel move}).
-
-\subsubsection{1b. Cuts at any position (user remarks,
-2026-09-27/28)}\label{b.-cuts-at-any-position-user-remarks-2026-09-2728}
-
-Halving is the easiest cut; a cut at any fraction \(s\in(0,1)\) of a
-cell performs the same two moves, with \(s\) as a parameter.
+For spacing \(a_\mu\) in \(D\) Euclidean dimensions, use heat times
+\(t_{\mu\nu}=\lambda_Da_\mu a_\nu/\prod_{\rho\ne\mu,\nu}a_\rho\) in the
+small-field normalization of the
+\href{series-parallel-gauge-refinement.md}{series/parallel theorem}.
+Halving one direction produces:
 
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Series move.} The cut face splits into heat times \(st\) and
-  \((1-s)t\); the convolution returns \(t\) exactly, for heat-kernel
-  weights, in every dimension.
+  \textbf{Series:} a face containing that direction splits into two half
+  heat times. Integrating its new edge convolves weights; character
+  coefficients multiply. Heat kernels close exactly in every dimension.
 \item
-  \textbf{Parallel move.} With trapezoid (dual-length) face weights
-  every transverse face keeps heat time \(2t\), and the inserted edges
-  carry the bridge law at fraction \(s\), variance \(s(1-s)t_e\). The
-  free-field defect scales exactly by \(4s(1-s)\)
-  (\href{series-parallel-gauge-refinement.md}{Corollary 2\(_s\)}), and
-  the \(U(1)\) Theorem 5 holds for every \(s\) (Corollary 5\(_s\)
-  there): halving is the largest single step, and an off-centre cut is
-  gentler and shrinks the mesh less.
+  \textbf{Parallel:} each transverse face acquires a copy at doubled
+  heat time. The mid-plane integral is a \((D-1)\)-dimensional gauge
+  factor \(\Psi\) with coarse-field-conditioned bridge edges. Pointwise
+  products add logarithms, but heat-kernel closure has compact image
+  defects.
 \item
-  \textbf{Newton.} One cut spends exactly \(3s(1-s)K_\tau\) of the cell
-  action \(K_\tau=F^2\tau^3/(24m)\), the Cameron--Martin energy of the
-  Schauder hat it inserts; the shares add over any cut sequence and
-  exhaust \(K_\tau\) iff the mesh vanishes
-  (\href{cut-measure-newton.md}{cut-measure note}). The Galileo action
-  is an additive measure on the cut process, with the nested additivity
-  of the Lévy--Ciesielski construction of the Brownian bridge. With a
-  mark floor \(\kappa\), marks at any finite set of cuts distinguish the
-  force with squared statistical distance exactly the spent action over
-  \(\kappa\) (Proposition 7 there), so the cut measure and the record
-  measure coincide.
-\item
-  \textbf{Windings and images.} For \(U(1)\) a cut's bridge law is a
-  positive winding mixture: its weights are \(s\)-independent and the
-  shifts \(2\pi(1-s)W\) form \(\mathbb Z_2\) only at halving and
-  \(\mathbb Z_q\) at \(s=p/q\). For every compact simply connected group
-  the midpoint expectation of every character is exact, a sum over
-  weights of coroot image sums (\href{sun-midpoint-centre.md}{centre
-  note}, Theorems 1 and 1'). Its signed Weyl-polynomial amplitudes
-  describe relative Cartan images; positivity of a mixture and homotopy
-  winding sectors in the group are additional interpretations
-  unsupported by that expansion.
-\item
-  \textbf{Which part of the centre a cut reaches.} A cut at \(p/q\)
-  reaches exactly the subgroup \(\mathbb Z_{\gcd(q,N)}\) of the centre
-  of \(SU(N)\) (its Corollary 3). So the \(SU(2)\) halving carries
-  Dirac's belt trick, the image \(n\) acting by \((-1)^n\) on
-  half-integer spins, while dyadic refinement reaches only its identity
-  for \(SU(3)\) and a trisection carries the triality. Flipping one
-  mid-edge by a central element inserts thin centre flux into its
-  incident faces. Open: whether this ties refinement to centre vortices,
-  and whether triadic refinement suits \(SU(3)\) better. Astra's Round
-  5B Part A referee is complete (2026-09-28): the exact identities and
-  torsion criterion are accepted, with scope corrections.
-\item
-  \textbf{The rod.} The stick of \emph{Zhuangzi} 33,
-  一尺之捶，日取其半，萬世不竭, halved only in its remaining piece,
-  spends \(\frac67K_\tau\) and converges to a point, the Mohist 端 of
-  Canon B; refinement, which spends all of \(K_\tau\), cuts every piece
-  again (\href{cut-measure-newton.md}{cut-measure note}, §3). The
-  parallel with Zeno's dichotomy is recorded as convergence.
-\item
-  \textbf{The frame.} A cut at an arbitrary, even irrational, position
-  is the geometers' cut of Book I's closing scholium. The questions for
-  each cell become: does the limit depend on the cut sequence (for
-  Newton, no, proved in the \href{cut-measure-newton.md}{cut-measure
-  note}; for the free field, expected, a convergence question for the
-  discrete-exterior-calculus Hodge star that the trapezoid weights are,
-  see Corollary 2\(_s\)), and does the universal part survive when \(s\)
-  varies. For cell 4 it does, conditionally: for shape-regular schedules
-  under the matching hypotheses of the
-  \href{four-dimensional-parallel-log.md}{four-dimensional note} (its
-  §7), the coefficient per logarithm of the physical scale is \(2b_0\)
-  whatever the cut positions. An earlier guess here, \(\log(1/s)\) per
-  cut, follows one daughter only and omits the other's dual-volume
-  weight.
+  \textbf{Count:} there are \(\binom{D-1}{2}\) parallel planes per
+  directional halving. An isotropic step has \(D\) directional moves and
+  engineering heat time \(t=\lambda_Da^{4-D}\), before running is
+  included.
 \end{itemize}
 
-\subsection{2. The atlas by dimension}\label{the-atlas-by-dimension}
+A cut at any \(s\in(0,1)\) convolves heat times \(st\) and \((1-s)t\).
+Trapezoid dual lengths keep transverse copies at heat time \(2t\); the
+bridge variance is \(s(1-s)t_e\), and the free parallel defect is
+multiplied by \(4s(1-s)\). The
+\href{series-parallel-gauge-refinement.md}{series/parallel note},
+Corollaries \(2_s\) and \(5_s\), gives the exact free calculation and
+its \(U(1)\) extension. A cut schedule's physical scale change includes
+both daughters and their dual volumes; assigning \(\log(1/s)\) to one
+daughter alone loses that information.
+
+For compact \(U(1)\) the bridge is a positive winding mixture; weights
+are \(s\)-independent and shifts \(2\pi(1-s)W\) give \(\mathbb Z_q\) at
+\(s=p/q\). For simply connected compact groups the
+\href{sun-midpoint-centre.md}{exact character formula} is a signed
+Weyl-polynomial Cartan-image expansion, not a proved positive mixture of
+homotopy sectors. At a rational cut \(p/q\), the reached subgroup of the
+\(SU(N)\) centre is \(\mathbb Z_{\gcd(q,N)}\). Thus dyadic cuts see the
+\(SU(2)\) sign but only the identity in the \(SU(3)\) centre; trisection
+sees triality. A central mid-edge flip creates thin flux on incident
+faces. Whether those image terms organize physical centre vortices
+remains open.
+
+Newton's insertion is the series analogue. One cut spends
+\(3s(1-s)K_\tau\), \(K_\tau=F^2\tau^3/(24m)\); complete mesh refinement
+exhausts the cell correction. Its \href{cut-measure-newton.md}{cut
+geometry} proves the additive shares and conditional Gaussian record
+information. This analogy imports no gauge gap.
+
+\hypertarget{dimension-and-group-map}{%
+\subsection{2. Dimension and group map}\label{dimension-and-group-map}}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
-\(1+n\)
+Dimension
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Series move
+Exact part
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Parallel planes per halving
+Retained correction or scale
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-What one step leaves
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-What survives the limit
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Status and notes
+Surviving conclusion and proof status
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\(0+0\) & none (a single weight) & none & the weight \(k_t(U)\) itself;
-a single integral with an \(e^{-c/\hbar}\) structure & a large-\(N\)
-transition (Gross--Witten) & known; \href{dimension-ladder.md}{dimension
-ladder} \\
-\(1+0\) Newton & exact after one cubic counterterm \(-F^2h^3/(24M)\);
-the defect \(-F^2uvh/(8M)\) is a coboundary & none & a scalar &
-unobserved: the exact propagator at every \(\hbar\); recorded: a floor
-only if joint determinacy fails & proved;
-\href{refinement-composition-and-limit.md}{refinement note},
-\href{principia-fifth-postulate.md}{fifth postulate} \\
-\(1+1\) & exact (heat-kernel convolution) & 0 & nothing for heat
-kernels; for any action, \(a^{-2}(1-\hat c_R)\) & a
-conjugation-invariant Lévy exponent \(\psi(R)\); Yang--Mills iff
-Lindeberg; circle spectrum \(\hbar cL\psi(R)\); no local particle &
-proved (Theorem 2 of the zero-spacing note); known (Lévy) \\
-\(1+2\) & exact & 1 & free: an irrelevant quadratic form of relative
-size \(a^2K^2/16+(Ga)^2/8\); \(U(1)\): vortices of density
-\(e^{-\pi^2/(8t)}\); \(SU(N)\): coupling shifts \(O(t)\), curvature term
-explicit & free photon for \(U(1)\) at fixed \(\lambda_3\) (every
-lattice gap dies); conjectured gap \(C_3\hbar c\lambda_3\) for \(SU(N)\)
-& proved for free and \(U(1)\); formal for \(SU(N)\) (Proposition 7);
-see §3 \\
-\(1+3\) & exact & 3 & \(t=g^2\) fixed: coupling shifts that recur each
-step; large fields suppressed only as \((a\Lambda)^{2b_0c}\) & running
-coupling, \(\Lambda=\mu e^{-1/(2b_0g^2)}\); small instantons die
-(\(11N/3>4\)); dislocations need \(c>2/b_0\) (\(\tfrac{6}{11}\) of an
-instanton for \(SU(2)\)); \(U(1)\): Coulomb phase & known (running, 6/11
-criterion, Driver); the measure-level route fails for \(U(1)\)
-(proved) \\
-\(1+n\), \(n\ge4\) & exact & \(\binom n2\) & \(t\) grows as \(a\to0\) &
-no small-field regime; a phase transition, no established continuum
-limit & known (Creutz for \(SU(2)\) in 5D) \\
+\(0+0\) & One compact integral & \(e^{-c/t}\) image structures &
+Gross--Witten large-\(N\) transition is a different limit;
+\href{halving-atlas.md\#dimension-and-group-map}{dimension ladder} \\
+\(1+0\) mechanics & Constant-force series law after cubic scalar
+correction & \(-F^2uv(u+v)/(8m)\) insertion defect & Supplied-\(\hbar\)
+propagator, or classical motion at zero;
+\href{refinement-composition-and-limit.md}{refinement} \\
+\(1+1\) gauge & Heat-kernel series convolution; no parallel plane &
+General actions retain a conjugation-invariant Lévy exponent \(\psi(R)\)
+& Circle spectrum \(\hbar cL\psi(R)\); Yang--Mills under the specified
+Lindeberg condition; no local particle gap;
+\href{zero-spacing-any-action.md}{zero-spacing theorem} \\
+\(1+2\) gauge & One parallel plane; exact free Schur defect & Relative
+free defect \(a^2K^2/16+(Ga)^2/8\); compact \(U(1)\) image density
+\(e^{-\pi^2/(8t)}\) & At fixed physical \(\lambda_3\), compact \(U(1)\)
+tends to a free photon; \(SU(N)\) gap \(C_3\hbar c\lambda_3\) remains
+open \\
+\(1+3\) gauge & Three parallel planes; exact series move &
+Engineering-marginal \(t=\hbar g_{\rm cl}^2\) runs logarithmically;
+\(\Lambda\) is the transmutation scale & Nontrivial continuum theory and
+\(C\hbar c\Lambda>0\) remain open;
+\href{four-dimensional-composition.md}{four-dimensional composition} \\
+\(D>4\) & Series convolution still exact & \(t=\lambda_Da^{4-D}\) grows
+on refinement & No ultraviolet small-\(t\) regime by this scaling;
+higher-dimensional lattice phases are not a constructed continuum
+theory \\
 \end{longtable}
 
-The same heat time \(t=\hbar g_{\rm cl}^2a^{4-D}\) controls the column
-``what one step leaves''. For \(D<4\) refining and taking \(\hbar\to0\)
-push it the same way; in mechanics refining makes each cell more quantum
-(\href{dimension-ladder.md}{dimension ladder}, §2).
-
-\subsection{\texorpdfstring{3. The atlas for \(1+2\) by
-group}{3. The atlas for 1+2 by group}}\label{the-atlas-for-12-by-group}
+The detailed \(1+2\) distinctions are:
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Group
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Isolated cube
+One-cell or one-step control
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Full mid-plane
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-One step, measure level
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Iteration and limit
+Remaining dependency
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-free (\(\mathbb R^n\)) & exact & exact defect (Proposition 2 of the
-series/parallel note) & Gaussian, exact & blocked actions converge to a
-Gaussian fixed point (known, Bell--Wilson; for this blocking
-asserted) \\
-\(U(1)\) & exact (Proposition 3) & exact charge form, vortex bound
-(Proposition 4, Corollary) & one step equals the free step up to density
-\(e^{-\pi^2/(8t)}\) (Theorem 5, refereed); whole measure within TV
-\(2(L/a)^3e^{-\pi^2/(6\lambda_3a)}\) of the monopole-free part
-(\href{villain-monopole-refinement.md}{monopole note}) & free photon
-(Gross 1983, known) \\
-\(SU(2)\) & midpoint characters exact for every spin; spin-\(\frac12\)
-and spin-1 cube sectors exact, with matrix image bounds for spin 1
-(\href{su2-midpoint-exact.md}{closed form}, Theorems 1--4) &
-\href{su2-midplane-order-t.md}{formal order-\(t\) expansion}: cut shifts
-positive, transverse negative; other local operators have dimension at
-least six; explicit torus winding term & formal; one-step normalized
-small-field bound against a covariant reference proved (small-field
-§§13--14); iteration open & open \\
-\(SU(3)\) & curvature term explicit, softening \(t_j|X_j|^2/512\)
-(group-general form of Proposition 6) & small-field one-step normalized
-bounds transcribed from \(SU(2)\), \(\mathbb Z_3\) sectors, bridge tail
-by Li--Yau (\href{su2-midplane-small-field.md}{small-field §16},
-refereed by Astra with corrections); bulk order-\(t\) coefficients
-\(\frac32\) times \(SU(2)\)'s
-(\href{su2-midplane-order-t.md}{order-\(t\) §7b}); large fields open &
-formal & open; the gap \(C_3\hbar c\lambda_3\) is the infrared
-obligation \\
+Free \(\mathbb R^n\) & Exact Gaussian elimination and Schur composition
+& This blocking's full continuum comparison must be specified \\
+\(U(1)\) & Exact charge form and vortex bound; normalized whole-measure
+TV bound \(2(L/a)^3e^{-\pi^2/(6\lambda_3a)}\) & Continuum trajectory
+matters; \href{villain-monopole-refinement.md}{Villain/monopole
+proof} \\
+\(SU(2)\) & Midpoint characters at every spin; exact spin-\(1/2\) and
+spin-1 cube sectors with image bounds & Full spin sum and physical
+recoupling; \href{su2-midpoint-exact.md}{exact midpoint} \\
+\(SU(2)\) mid-plane & Formal order-\(t\) shifts: cut positive,
+transverse negative; normalized barriered weak-strip estimates &
+Nonlinear source estimate, recoupling, contact cancellation and
+iteration; \href{su2-midplane-small-field.md}{small-field proof},
+\href{su2-midplane-order-t.md}{order-\(t\) expansion} \\
+\(SU(3)\) & Group-general local curvature term \(t_j|X_j|^2/512\);
+formal bulk coefficients \(3/2\) times \(SU(2)\) & Large fields, exact
+physical matching, stable iteration and a positive infrared
+coefficient \\
 \end{longtable}
 
-\subsection{4. What emerges, read across the
-atlas}\label{what-emerges-read-across-the-atlas}
+\hypertarget{the-circle-rotor-and-a-zero-dimensional-integral}{%
+\subsubsection{The circle rotor and a zero-dimensional
+integral}\label{the-circle-rotor-and-a-zero-dimensional-integral}}
 
-Why ultraviolet halvings bear on an infrared gap is explained, for the
-paper, in the \href{uv-halving-ir-confinement.md}{didactic note}.
+The exact \(1+1\) circle spectrum \(E_R=\hbar c\lambda_2LC_2(R)/2\)
+equals \(\hbar^2C_2(R)/(2I)\) with \(I=1/(cg_{\rm cl}^2L)\), an inertia
+independent of \(\hbar\) at fixed classical coupling. The infinite-line
+theory instead has no local particle; its static-charge string tension
+is \(\hbar c\lambda_2C_2/2\). The
+\href{zero-spacing-any-action.md}{zero-spacing theorem} fixes the
+conventions.
+
+A \(0+0\) integral has no Hamiltonian time evolution. Its large-\(N\)
+transition is a limit in matrix size, not a continuum particle gap. For
+a stable quartic integral, asymptotic perturbation theory alone does not
+establish failure of Borel summation; the earlier unqualified claim of
+non-Borel-summability is withdrawn. No such claim is needed for the
+refinement argument.
+
+\hypertarget{why-ultraviolet-refinement-bears-on-an-infrared-gap}{%
+\subsection{3. Why ultraviolet refinement bears on an infrared
+gap}\label{why-ultraviolet-refinement-bears-on-an-infrared-gap}}
+
+Let \(\xi=\hbar/(mc)\) be a putative physical correlation length and
+\(L\) the box size. A continuum limit sends \(a/\xi\to0\) at fixed
+\(\xi/L\), followed by a separate infinite-volume limit when required.
+The lattice gap is \(\delta=aE/(\hbar c)\); for \(E=mc^2\) it is
+\(a/\xi\). A physical string tension has a different dimensionless
+combination \(a^2\sigma/(\hbar c)\). A halving halves the former and
+quarters the latter if the physical quantities survive. It does not
+calculate their positive coefficients.
+
+For \(D=4\), write \(t=\hbar g_{\rm cl}^2\) and \(b_0=11N/(48\pi^2)\).
+At one loop, \[
+ \mu\frac{dt}{d\mu}=-2b_0t^2+O(t^3),\qquad
+ \Lambda=\mu e^{-1/(2b_0t(\mu))}.
+\] The displayed \(\Lambda\) relation uses the one-loop truncation;
+higher orders add prefactors and scheme dependence. A measured coupling
+fixes one normalization of \(\Lambda\). A scheme change rescales it and
+the numbers \(C_i\) inversely so that a putative
+\(E_i=C_i\hbar c\Lambda\) is invariant. Neither running nor dimensional
+analysis proves \(C_i>0\).
+
+\hypertarget{exponential-corrections-and-the-spectral-coefficient}{%
+\subsubsection{Exponential corrections and the spectral
+coefficient}\label{exponential-corrections-and-the-spectral-coefficient}}
+
+Within the one-loop relation, \[e^{-\chi/t}=(a\Lambda)^{2b_0\chi}.\] A
+dimension-one lattice gap would have exponent \(2b_0\chi=1\). An image
+term with exponent greater than four can be suppressed even after
+counting \(O((L/a)^4)\) cells, provided its normalized boundary-uniform
+bound is proved. Root-image exponent \(\chi=8\pi^2\) gives \(11N/3\);
+the \(SU(3)\) trisection centre exponent \(24\pi^2\) gives \(33\). The
+dislocation criterion \(\chi>2/b_0\) is \(6/11\) of the instanton action
+for \(SU(2)\). These powers are a formal scaling diagnostic for the
+stated image exponents, not uniform estimates for every large field. The
+\href{zero-spacing-any-action.md}{zero-spacing treatment} and
+\href{sun-midpoint-centre.md}{centre calculation} preserve their precise
+scopes.
+
+Exponentially small terms have vanishing Taylor coefficients at zero
+coupling; a perturbative power series cannot establish their positive
+spectral weight. The earlier analogy to renormalon positions was sourced
+only to metadata and memory and supplies no identification of these
+image terms with a renormalon. It is not used as evidence.
+
+Below four dimensions \(\lambda_D=\hbar g_{\rm cl}^2\) carries length
+power \(D-4\), and dimensional energy is \(\hbar c\lambda_D^{1/(4-D)}\).
+This scales as \(\hbar^{3/2}\) in \(1+1\) and \(\hbar^2\) in \(1+2\) at
+fixed classical coupling. At \(D=4\) the running equation supplies an
+exponential scale instead of this dimensional power. This is an RG
+statement, not a derivation by formally setting \(D=4\) in the divergent
+exponent. The rotor and quartic matrix model have their own \(\hbar^2\)
+and \(\hbar^{4/3}\) laws, proved in the
+\href{low-dimensional-mass-gap.md}{low-dimensional comparison}.
+
+\hypertarget{two-uniformities-and-a-constructed-measure}{%
+\subsubsection{Two uniformities and a constructed
+measure}\label{two-uniformities-and-a-constructed-measure}}
+
+The number of steps between \(a\) and a fixed \(\xi\) grows as
+\(\log_2(\xi/a)\). Refinement adds weak-coupling steps at the
+ultraviolet end. A fixed range of physical scales near \(\xi\) still
+requires infrared control. The
+\href{confinement-scale-bands.md}{confinement-scale bands} collect the
+finite-lattice Wilson-action evidence; numerical bands or a finite
+verification proposal are not a certified mixing theorem.
+
+Uniformity in refinement depth as \(a\to0\) and uniformity in box size
+as \(L\to\infty\) are separate. If \(p_*\) is the coarse pushforward,
+then \(\langle F\rangle_{p_*\mu}=\langle F\circ p\rangle_\mu\) exactly,
+but many fine conditional measures have that same coarse law. A
+compatible refinement family must be constructed. Transport of a
+coarse-loop channel also requires spectral visibility to reach a gap for
+all relevant physical observables. Continuum nontriviality and
+reconstruction remain further steps.
+
+\hypertarget{supplied-action-lattice-gaps-and-physical-limits}{%
+\subsection{4. Supplied action, lattice gaps and physical
+limits}\label{supplied-action-lattice-gaps-and-physical-limits}}
+
+Compact \(U(1)\) in \(1+2\) has a lattice monopole gap that vanishes in
+the fixed-\(\lambda_3\) continuum limit (Gross). Along the Göpfert--Mack
+scaling \(\lambda_3a\simeq c_0/[2\log(1/a)]\), \(c_0\simeq4.99\), a
+massive Gaussian limit instead survives with divergent physical monopole
+density. The \href{villain-monopole-refinement.md}{monopole note} gives
+the source and trajectory qualifications. A lattice gap alone is thus
+insufficient.
+
+Physical \(\hbar\) is supplied in both Gaussian theories; it is not an
+independently derived lower bound on every action difference. Removing a
+mass gap need not remove quantum kinematics. Conversely a generated
+scale need not imply a mass gap: massless QCD under spontaneous chiral
+symmetry breaking has pions, and an infrared fixed point has gapless
+infrared behavior. The two-dimensional delta potential has a transmuted
+binding energy and a continuum above zero; its bound-state energy is not
+a field-theory mass-gap proof.
+\href{low-dimensional-mass-gap.md}{Low-dimensional models} and the
+\href{action-floor-yang-mills-gap.md}{action/gap comparison} retain
+these distinct mechanisms. Confinement and a physical spectral gap each
+require their own argument.
+
+\hypertarget{remaining-proof-obligations}{%
+\subsection{5. Remaining proof
+obligations}\label{remaining-proof-obligations}}
 
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Series moves never produce anything new.} In every dimension
-  they close exactly for heat-kernel weights, and in mechanics after one
-  scalar counterterm. The one-dimensional Newton problem and the
-  two-dimensional gauge theory are all series.
+  \textbf{Nonabelian spatial blocking:} extend the retained-barrier
+  estimates (112), (116) and centered quadratic source test (177) to the
+  full nonlinear source bound (113), physical recoupling, contact
+  cancellation, target-covering paths and perturbed-action iteration.
+  The \href{su2-midplane-small-field.md}{small-field notebook} holds the
+  constants and proofs; its individual stages are not independent
+  confirmations of the target theorem.
 \item
-  \textbf{Parallel moves carry everything that renormalizes.} Their
-  number, \(\binom{D-1}2\), is zero exactly where the theory is exactly
-  soluble.
+  \textbf{Four-dimensional depth:} control generated cubic/quartic
+  kernels, subtracted contractions, endpoint matching and the
+  accumulated remainder. The conditional composition theorem gives the
+  averaged \(-2b_0\log2\) coefficient only under those hypotheses.
+  \href{four-dimensional-parallel-log.md}{One-step parallel matching}
+  and \href{four-dimensional-composition.md}{Schur composition} prove
+  different parts.
 \item
-  \textbf{Additivity is universal; locality is one-dimensional}
-  (2026-09-28). Integrating out a Gaussian step leaves the Schur
-  complement of the action (the Dirichlet principle), and successive
-  Schur complements compose exactly ((13) of the
-  \href{four-dimensional-parallel-log.md}{four-dimensional note}); in
-  Newton's cell this is Theorem 2 of the
-  \href{cut-measure-newton.md}{cut-measure note}. Only one dimension
-  grants locality: the minimizer between two cut points is the chord, so
-  the blocked action is again nearest-neighbour and the series move
-  closes, as in \(1+1\). With transverse planes the Schur complement is
-  non-local, and its local truncation error is the parallel defect ((5)
-  and Corollary 2\(_s\) of the
-  \href{series-parallel-gauge-refinement.md}{series/parallel note}).
+  \textbf{Time-only halving:} at fixed spatial lattice, electric heat
+  kernels compose in series and exponential magnetic weights add in
+  parallel. Their noncommutation is controlled in the strong Trotter
+  limit for the compact-group Laplacian plus bounded magnetic potential
+  (Trotter 1959; Chernoff 1968; Kogut--Susskind 1975 and Creutz 1977,
+  metadata in the source companions). A norm rate needs separate
+  commutator domains. Spatial continuum uniformity does not follow from
+  this fixed-lattice Hamiltonian construction.
 \item
-  \textbf{The exponential ladder.} Each compact correction left by a
-  step is \(e^{-\chi/t}\), with dimensionless \(\chi>0\) (vortices,
-  monopoles, dislocations). In \(D<4\) it is summable per physical
-  volume at fixed coupling, so compact effects die; in \(D=4\) the
-  running turns it into a power of \(a\), so survival is a threshold
-  condition; in \(D>4\) there is no small \(t\). In \(1+3\) at one loop,
-  \(a\Lambda=e^{-1/(2b_0t)}\) with \(t=g^2(a)=\hbar g_{\rm cl}^2(a)\),
-  so \(e^{-\chi/t}=(a\Lambda)^{2b_0\chi}\) and \(2b_0\chi\) is the
-  scaling dimension of the correction. This is the bookkeeping of 't
-  Hooft's infrared renormalons, whose Borel-plane positions are fixed by
-  \(b_0\) and an operator dimension; the per-volume threshold
-  \(2b_0\chi=4\) sits at the gluon-condensate renormalon
-  (\href{https://doi.org/10.1007/978-1-4684-0991-8_17}{'t Hooft, Erice
-  1977, publ. 1979}; metadata, renormalon positions quoted from memory).
-  The generated gap is itself on the ladder conditionally: if
-  \(E_{\rm gap}\) is of order \(\hbar c\Lambda\), its dimensionless
-  lattice gap \(aE_{\rm gap}/(\hbar c)\) is of order
-  \(e^{-1/(2b_0g^2)}\), the member with \(2b_0\chi=1\). The bridge image
-  terms sit far above the per-volume threshold \(2b_0\chi=4\):
-  \(2b_0\chi=11N/3\) for root images (\(\chi=8\pi^2\)) and \(33\) for
-  the \(SU(3)\) centre images of a trisection (\(\chi=24\pi^2\),
-  \href{sun-midpoint-centre.md}{centre note}) (2026-09-28). These are
-  formal powers from near-identity image exponents; normalized bounds
-  uniform in boundary data and under iteration remain to prove.
+  \textbf{Cut schedules:} free-field shape convergence and nonabelian
+  generated weights require control beyond the one-cut factor
+  \(4s(1-s)\). Whether triadic \(SU(3)\) refinement helps organize large
+  fields is open.
 \item
-  \textbf{What survives is trajectory-dependent.} Compact \(U(1)\) in
-  \(1+2\) keeps a gap along \(\lambda_3a\simeq c_0/(2\log(1/a))\),
-  \(c_0\approx4.99\) the monopole exponent, where the monopole density
-  per physical volume diverges, and loses it at fixed \(\lambda_3\)
-  (Göpfert--Mack versus Gross).
+  \textbf{Records in the mechanical analogy:}
+  \href{mark-cost-and-statistical-floor.md}{Gaussian marks} and
+  \href{sed-closure-under-recording.md}{complete controllers} retain
+  conditional noise, conjugate recoil and weighted covariance budgets. A
+  total precision sum alone does not characterize arbitrary changing
+  triangular arrays. The \href{score-constrained-ensemble.md}{score
+  model} passes its branch-dependent composition test at every supplied
+  coefficient, including zero; composition alone selects no positive
+  action.
 \item
-  \textbf{The action floor survives what removes the mass gap} (user
-  observation, 2026-09-28). With \(t=\lambda_3a=\hbar g_{\rm cl}^2a\)
-  the compact corrections of a step, \(e^{-c/(\hbar g_{\rm cl}^2a)}\),
-  vanish as \(a\to0\) at fixed coupling and as \(\hbar\to0\) at fixed
-  \(g_{\rm cl}\) and \(a\), while the \(w=0\) Gaussian term of (9) of
-  the series/parallel note, of width set by \(\hbar\), remains. Both
-  \(U(1)\) continuum limits on record are Gaussian: Gross's photon, with
-  field-strength covariance \(\hbar g_{\rm cl}^2K_0\), and
-  Göpfert--Mack's free massive scalar, canonically normalized along a
-  trajectory on which \(\lambda_3\) diverges. The refinement removes the
-  lattice mass gap and keeps the unit of action, and \(h\) was first
-  measured in this gapless theory in \(1+3\), cavity radiation (Planck's
-  talk of 14 December 1900, written up as
-  \href{https://doi.org/10.1002/andp.19013090310}{Ann. Phys. 309, 553
-  (1901)}, through the resonators' energy elements; the field-mode
-  reading is \href{https://doi.org/10.1002/andp.19103381617}{Debye
-  1910}, metadata; a finite cavity keeps the box gap \(2\pi\hbar c/L\)).
-  Two gaps of different kinds: a mass gap, generated and
-  trajectory-dependent, and an action floor, supplied in
-  \(e^{-S/\hbar}\), that every cell of every limit keeps (each cut
-  weighted by \(e^{-{\rm share}/\hbar}\), cut-measure Prop. 4). In
-  \href{low-dimensional-mass-gap.md}{G07}'s terms both are unit
-  multiples of the fixed constants; the floor is supplied, while a
-  generated gap needs two scale-free structures that do not commute (G07
-  §1; \href{action-floor-yang-mills-gap.md}{G08}).
-\item
-  \textbf{Constants that emerge.} Mechanics: one scalar counterterm per
-  cell, and one action constant if joint determinacy is denied (Theorems
-  B and B\('\) of the fifth-postulate note). \(1+1\): the Lévy exponent
-  (one coupling for Yang--Mills). \(1+2\): one coupling, shifted
-  summably. \(1+3\): one scale \(\Lambda\) by dimensional transmutation.
+  \textbf{Infrared and reconstruction:} a nontrivial physical continuum
+  measure, volume-uniform spectral positivity, observable visibility and
+  an independent area-law argument remain necessary.
+  \href{mass-gap-obligations-lattice.md\#existing-estimates-and-examined-routes}{Mass-gap
+  position} and \href{mass-gap-obligations-lattice.md}{continuum
+  obligations} state the targets.
 \end{itemize}
 
-\subsection{5. Open cells}\label{open-cells}
+\hypertarget{consequence-for-state}{%
+\subsection{6. Consequence for STATE}\label{consequence-for-state}}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  \(SU(2)\) cube: \emph{filled through \(J=1\)}
-  (\href{su2-midpoint-exact.md}{Theorem 4}, exact diagonal entries,
-  image bounds and cube sector); \(J>1\) entries and control of the full
-  spin sum remain open.
-\item
-  \(SU(2)\) full mid-plane in \(1+2\):
-  \href{su2-midplane-order-t.md}{order-\(t\) calculation} refereed as
-  formal; \href{su2-midplane-small-field.md}{small-field note §§12--14},
-  Rounds 14--16, refereed by Claude: a covariant Gaussian reference with
-  't Hooft flux sectors, and normalized weak P(\(1/2-\delta\)) against
-  it for one barriered step, uniformly in plane size, for equal and
-  unequal boundary layers with the cut faces budgeted (saddle
-  determinant, Laplace remainder and amplitudes included; remainder
-  densities face-local in size). Rounds 17--24 (§§17--24, refereed): the
-  pair kernel (89), the link-coordinate form of (27), and the separated
-  third response (93) hold on the barriered chart with explicit
-  constants, uniformly in plane size; all-order response identities and
-  a barrier-jet obstruction (§23); an undifferentiated
-  small-field/large-field split with joint bad-set rarity \(p^{|H|/16}\)
-  (§24); the error exponent \(\alpha'=\frac12-3\delta\),
-  \(\delta<\frac1{10}\), absorbing the proved bare scales (§25); the
-  full response through third order, contacts included (§26, refereed).
-  §27 gives the three-bad-component tree bound (120), with rarity
-  \(p^{M/64}\) and decay \(\frac12\log(12/5)\); §28 gives a factorizing
-  reference, uniform convexity and rarity along real decoupling paths,
-  and the one-connector bound (128) (both written, unrefereed).
-  \href{su2-midplane-small-field.md\#29-all-order-connector-moments-and-a-uniform-analytic-source-ball}{§29}
-  controls arbitrary connector moments and connected growth, and gives a
-  uniform complex \(\ell^1\) source ball.
-  \href{su2-midplane-small-field.md\#30-an-anchored-two-connector-tree-and-its-spatial-sum}{§30}
-  proves the anchored two-connector tree (135) and its summed spatial
-  reserve (140), with the earlier gradient bound retained after a proof
-  repair.
-  \href{su2-midplane-small-field.md\#31-all-order-anchored-attachments-at-the-exact-gaussian-endpoint}{§31}
-  proves all-order anchored attachments (142) and a zero-free uniform
-  polydisc at the exact Gaussian, unbarriered endpoint (Sol/Astra,
-  written).
-  \href{su2-midplane-small-field.md\#32-a-retained-barrier-pointwise-logarithms-and-a-direct-density-norm}{§32}
-  isolates a pointwise complex-logarithm failure and proves the direct
-  all-order density norm (148) with radial barriers in a factorized
-  reference (2026-09-30, Sol/Astra, refereed).
-  \href{su2-midplane-small-field.md\#33-retained-barriers-and-nonlinear-connectors-in-a-weak-recoupling-strip}{§33}
-  gives a convergent nonlinear interaction expansion with retained
-  barriers, uniform weak-recoupling polydisc (154) and fixed spatial
-  reserve (Sol/Astra, refereed).
-  \href{su2-midplane-small-field.md\#34-a-marked-bad-observable-in-the-retained-barrier-weak-strip}{§34}
-  proves the marked norm (157) with rarity and fixed spatial reserve
-  (Sol/Astra, refereed).
-  \href{su2-midplane-small-field.md\#35-separately-marked-bad-components-at-arbitrary-order}{§35}
-  proves the all-order connected target (116) in the weak strip, with
-  constants (166) and fixed decay independent of order (Sol/Astra,
-  refereed).
-  \href{su2-midplane-small-field.md\#36-exact-dressed-activities-in-the-weak-recoupling-strip}{§36}
-  gives exact dressed hard-core activities satisfying both numerical
-  budgets (112) in the strip, with condition \(\log(1/p)\ge640\) and
-  connector-source norm (Sol/Astra, refereed).
-  \href{su2-midplane-small-field.md\#37-moving-means-with-a-fixed-barrier-an-exact-quadratic-source-test}{§37}
-  gives a fixed moving-mean source radius and the subtracted barrier
-  norm (177) in a centered quadratic model (Sol/Astra, refereed). Next:
-  complex centered nonlinear bounds and the moving saddle's decaying
-  source dependence; reject barrier differentiation and amplification on
-  every good connector. Full (113), recoupling to one and contact
-  cancellation remain open. Then target (94); then target-covering
-  paths, curvature conversion, full-integral comparison,
-  perturbed-action stability and iteration. The fixed-frame
-  transport-value comparison remains open; Proposition 4's rejection
-  stands.
-\item
-  Stability of Hypothesis P(\(\alpha\)) under iteration. \emph{For
-  \(U(1)\) in \(1+2\), reduced to exact Gaussian blocking} (Corollary
-  2\('\) of the \href{villain-monopole-refinement.md}{monopole note});
-  open for \(SU(N)\).
-\item
-  \(1+3\): \href{four-dimensional-composition.md}{composition}, Thms
-  1--4 refereed by Claude; §7 gives generated cubic/quartic kernels,
-  decay, finite one-step subtracted matching with explicit constants and
-  uniform iteration hypotheses (Round 10, formal, unrefereed);
-  \href{gaussian-blocking-coupling.md}{G1} refereed. Open: its (14),
-  uniform subtracted cubic/quartic contractions; sublinear endpoint
-  matching and remainder sum give the average \(-2b_0\log2\)
-  (conditional Theorem 4;
-  \href{four-dimensional-parallel-log.md}{one-step shifts} refereed).
-\item
-  Time-only halving. \emph{Structural reading, 2026-09-27, of known
-  results.} At fixed spatial lattice the electric faces make the series
-  moves: heat-kernel electric weights are a semigroup in the time step,
-  so they compose exactly. The magnetic faces make the parallel moves:
-  with exponential weights \(e^{-a_0V}\) they close exactly in their own
-  family, since products of such weights add the exponents. The whole
-  defect of a time halving is the non-commutation of the two families,
-  and it vanishes as \(a_0\to0\) by the Trotter product formula
-  (\href{https://doi.org/10.1090/S0002-9939-1959-0108732-6}{Trotter
-  1959}; \href{https://doi.org/10.1016/0022-1236(68)90020-7}{Chernoff
-  1968}; metadata; strong convergence for the Laplacian on \(G^E\) plus
-  a bounded magnetic potential). This is why the Hamiltonian limit
-  (\href{https://doi.org/10.1103/PhysRevD.11.395}{Kogut and Susskind
-  1975}; transfer matrix:
-  \href{https://doi.org/10.1103/PhysRevD.15.1128}{Creutz 1977};
-  metadata) exists at every fixed spatial lattice, while spatial halving
-  leaves the non-closing factor \(\Psi\). Open: an operator-norm rate,
-  which needs domain estimates for the commutator of the Laplacian with
-  \(V\).
-\item
-  \emph{Filled 2026-09-27 for Gaussian records}
-  (\href{newton-record-parallel-move.md}{record as parallel move}):
-  forgetting a record convolves momentum with variance
-  \(\hbar^2/(4\sigma^2)\); precisions add in parallel; refinement
-  converges iff \(\sum\sigma_j^{-2}<\infty\); identity for \(\hbar=0\).
-  \href{sed-closure-under-recording.md\#7-adaptive-records-innovation-replacement-and-refinement}{Complete-record
-  tests, §§6--7} (2026-09-29, written, unrefereed): the repaired
-  two-pointer model obeys the area floor iff its readout error/kick
-  determinant remains at least \(\kappa^2\) conditional on side records;
-  a noisy kick monitor breaks a marginally saturated repair. Adaptive
-  affinity is exact in the branchwise information (41); monitor
-  replacement has cost (46).
-  \href{refinement-composition-and-limit.md\#3c-all-refinement-sequences-and-two-microscopic-kick-orders}{All
-  refinements, §§3b--3d} construct the harmonic curve across unequal,
-  nonnested partitions and arbitrary start/end kick mixtures, following
-  the Lean norm obstacle (Sol/Astra, checked). The RG/'t Hooft
-  comparison separates curve universality, dimensional scale and action
-  normalization. Exact retained weights define the RG transformation;
-  their overall action factor rescales the quantum denominator as in
-  (6q), with \(c,\hbar,G\) kept explicit. Complete-record comparisons
-  retain the conditional noise budget (49).
-  \href{sed-closure-under-recording.md\#8-hamiltonian-memory-terminal-records-and-blocking}{Hamiltonian
-  memory, §8} realizes the monitor cost and proves terminal posterior
-  closure from the joint initial covariance restriction; linear blocking
-  preserves it for the same body. §§8.4--8.6 give a genuine two-time
-  physical copy refinement with an explicit relative kick and joint-law
-  defect (62), and a partition-uniform complete-record information bound
-  (63), even at zero action (Sol/Astra, written).
-  \href{sed-closure-under-recording.md\#87-an-associative-descriptor-with-the-physical-kicks-retained}{§§8.7--8.9}
-  retain every copy kick in associative Gaussian descriptors and prove a
-  partition-independent projected terminal law with the explicit mesh
-  rate (73). The three-cell residue (69) has rank two; the prescribed
-  pair plus one independent additive scalar cannot reproduce it
-  (2026-09-30, Sol/Astra, refereed).
-  \href{sed-closure-under-recording.md\#810-a-physical-adaptive-gain-controller-with-complete-record-closure}{§8.10}
-  includes physical adaptive gains and their conjugate recoil, with
-  complete-record posterior closure (76) and uniform continuity (77).
-  \href{sed-closure-under-recording.md\#812-a-continuous-body--record-limit-from-finite-physical-refinements}{§§8.11--8.14}
-  construct a continuous body--record law for the fixed physical
-  weighted-record policy, with path-Cauchy estimate (89), partition
-  independence, body curve (90) and posterior closure under the entire
-  declared limiting record (92) (Sol/Astra, refereed). The limiting
-  evolution (96) and smeared controller recoil (98) use the same finite
-  pointer increments.
-  \href{sed-closure-under-recording.md\#815-a-nonlinear-copy-isolates-the-missing-curvature-contribution}{§8.15}
-  disproves extension to unrestricted nonlinear classical body copies
-  (103); the quantum reference supplies a curvature term (104) and an
-  explicit Wigner-negativity witness (105). Its exact finite generator
-  \href{sed-closure-under-recording.md\#816-the-finite-generator-changes-conditional-momentum-not-the-record}{§8.16}
-  preserves record statistics while changing conditional momentum
-  variance (107); a positive classical transition family on the full
-  canonical phase space cannot realize it (109).
-  \href{sed-closure-under-recording.md\#817-weak-nonlinear-recording-fails-under-every-subdivision}{§§8.17--8.18}
-  show that weak nonlinear copies fail under every subdivision and the
-  full coordinate-record path, with uniform small-exposure probability
-
-  \begin{enumerate}
-  \def\labelenumii{(\arabic{enumii})}
-  \setcounter{enumii}{113}
-  \tightlist
-  \item
-    and a bounded curvature test (116) (Sol/Astra, refereed).
-    \href{sed-closure-under-recording.md\#819-local-score-data-do-not-close-free-evolution}{§8.19}
-    gives a finite free-record witness (122) against a local-score-only
-    state and its exact two-packet coherence completion (123)
-    (Sol/Astra, refereed).
-    \href{sed-closure-under-recording.md\#820-positive-tails-restore-reconstruction-not-uniform-stability}{§8.20}
-    restores exact phase reconstruction with positive tails, but proves
-    failure of uniform stability (128) in the specified local-data
-    metric; additive bridge-phase memory (129) retains the datum
-    (Sol/Astra, refereed).
-    \href{sed-closure-under-recording.md\#821-the-exact-energy-of-a-phase-bridge-and-its-cut-law}{§8.21}
-    gives the exact fixed-density bridge reduction and unread
-    score/current energy excesses (Sol, written, unrefereed); these are
-    static spatial identities, with physical phase transport open.
-    \href{sed-closure-under-recording.md\#822-a-shared-score-sign-realizes-copying-but-fails-two-completion-tests}{§8.22}
-    realizes the score correction by correlated classical preparation
-    and canonical copies; terminal conjugate access recovers the body
-    (140), and free Newtonian transport fails (144) (Sol/Astra, written,
-    internally checked).
-    \href{sed-closure-under-recording.md\#823-a-stationary-switching-process-repairs-the-gaussian-marginal}{§8.23}
-    repairs the Gaussian target by a stationary switching process and
-    balances mean kinetic energy; its force needs preparation
-    information in (151) (Sol/Astra, written, internally checked).
-    \href{score-constrained-ensemble.md}{Score-constrained ensembles}
-    gives the restricted field action and full transport-conjugate
-    action, including reservoirs. Fixed compact transfer shapes fail
-    even with Gaussian width; an evolving mode instead has an exact
-    positive non-Gaussian forward completion. A nonlinear copy generates
-    a quartic tail outside finite modes and an exact unread recoil cost
-    (Sol/Astra, written, internally checked). Its §§6--8 (Fable,
-    written, unrefereed) realize the two-sheet dynamics on every
-    positive solution and for all forward time on that orbit, with exact
-    mean cancellation of force and switch power; the controller is the
-    field pair within this architecture and, after records, the
-    record-dependent data of its family (refereed by GPT-6.1 Sol via
-    Codex, corrections applied), branch controllers pass the
-    two-unread-width test against a variance witness, and closure under
-    coordinate copies holds at every \(\kappa\ge0\) under a
-    branch-dependent protocol. Composition closure selects no
-    \(\kappa\), so the apparatus-closure route to positivity is closed.
-    \href{zero-branch-reachability.md}{Zero-branch reachability} locates
-    the gap thesis: Galileo's Gaussian comparison has a record family
-    constant in \(h\); determinate preparations lose the \(h\to0\) limit
-    of their complete record after the first fold (exact for inertia
-    with graded velocity, fold time \(m/\max(-p_0')\)), smeared records
-    never do. Its Thm 4 separates the force laws in the anomaly record
-    (Hooke rigid for every \(h\), a Kepler swarm loses the zero branch
-    once its windings overlap, at the lapping time of order
-    \(T^2/\Delta T\)), and §§3b--3c identify the invariant discontinuous
-    at zero, the leading fringe visibility
-    \(2\sqrt{\rho_1\rho_2}/(\rho_1+\rho_2)\), full when the record and
-    preparation imprecision actions are small compared with \(h\)
-    (refereed by GPT-6.1 Sol (Codex), corrections applied). Continuity
-    (91) also survives zero action. Adaptive timing, extra readouts and
-    the independent positive scale remain open.
-  \end{enumerate}
-\item
-  The infrared: from ultraviolet control in \(1+2\) to \(C_3>0\).
-\item
-  Cuts at any position (§1b), open rows: the free-field independence of
-  the limit from the cut sequence (a convergence question for the
-  discrete-exterior-calculus Hodge star on nested tensor grids); for
-  \(SU(3)\), whether triadic refinement, the only kind whose image terms
-  reach the centre (\href{sun-midpoint-centre.md}{centre note}),
-  organizes the large-field terms better than dyadic refinement.
-\end{enumerate}
-
-\subsection{6. Consequence for STATE}\label{consequence-for-state}
-
-STATE carries the mid-term goal and points here. Each result that fills
-a cell updates the cell in this note and nothing else; the notes that
-prove results remain the record.
+Exact refinement identities locate the missing estimates; they do not
+replace them. Keep ultraviolet control, infrared spectral positivity,
+confinement, construction of the continuum theory and the supplied
+action unit separate. The linked arguments hold the proofs and source
+evidence; this map supplies only their dependencies and scaling
+conventions.
 \end{document}

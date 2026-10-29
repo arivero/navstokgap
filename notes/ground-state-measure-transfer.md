@@ -1,6 +1,6 @@
 # Ground-state measure transfer: the slice identity is exact, the large-field estimate remains open
 
-Later corrections: [the operator-inequality note](large-field-operator-inequality.md) separates measure from operator control; [the corrected Jacobian note](flow-jacobian-truncation-error.md) and [instability note](flow-instability-large-field.md) withdraw the Hamiltonian truncation and sharp-crossover claims; [the lattice note](flow-conjugation-truncation.md) treats a different, single-step regime (relevant passages read).
+Later corrections: [the operator-inequality note](large-field-operator-inequality.md) separates measure from operator control; [the corrected Jacobian note](flow-jacobian-truncation-error.md) and [instability note](flow-jacobian-truncation-error.md#instability-of-the-full-background-generator) withdraw the Hamiltonian truncation and sharp-crossover claims; [the lattice note](flow-conjugation-truncation.md) treats a different, single-step regime (relevant passages read).
 
 > **Correction (2026-10-02).** The original title and lead claimed that
 > isotropic Wilson-measure estimates transfer verbatim to the
@@ -208,7 +208,7 @@ $$\log\mathbb P\left(|b_t|>\frac{\eta_t}{t}\right)
 +O\big(\log(\eta_t/g)\big),\qquad \eta_t/g\to\infty.$$
 The polynomial radial prefactor is not a constant uniform in threshold.
 The former $8\pi^2$ comparison from
-[the typical-field note](typical-field-strength-window.md), §3 (passage
+[the typical-field note](flow-jacobian-truncation-error.md#free-field-size-is-a-benchmark-not-a-supremum-bound), §3 (passage
 read), treated the trace variance as a scalar variance for the vector
 norm and cannot fix a constant here. Moreover, with $\ell^2=8t$, a
 threshold $\eta_\ell/\ell^2$ means $\eta_t=\eta_\ell/8$; even this
@@ -265,7 +265,7 @@ not prove a relative form bound for a conjugated Hamiltonian. Measure
 rarity also does not alone control a perturbation of unrestricted sign:
 that note's min-max and localized trial-state arguments, §3 (full-read),
 distinguish positive errors from negative wells. The later
-[instability correction](flow-instability-large-field.md), §§2 and 4
+[instability correction](flow-jacobian-truncation-error.md#instability-of-the-full-background-generator), §§2 and 4
 (passages read), supplies no sharp lower bound on truncation tails.
 The separate single-lattice-step discussion in
 [the lattice note](flow-conjugation-truncation.md), §§1--2 (passages read),

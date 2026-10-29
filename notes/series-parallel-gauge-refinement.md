@@ -289,7 +289,7 @@ splits it into its noise part ($v$) and its displacement part
 ($\Phi_\ell-\Phi_{\ell+1}$). Tomboulis's attempt to bound the exact
 decimation between Migdal--Kadanoff-type approximations
 ([arXiv:0707.2179](https://arxiv.org/abs/0707.2179), abstract; not
-established as a theorem, see [what-would-unblock](what-would-unblock.md))
+established as a theorem, see [what-would-unblock](reasons-to-stop-as-research.md#tools-and-source-scope))
 worked on the same parallel step.
 
 **The comparison with Newton.** Both eliminations complete a square,
@@ -606,7 +606,11 @@ $2Nr_{1/2}/(1-r_{1/2})$, $r_{1/2}=e^{-(\pi^2/2-\pi\varepsilon)/t}$, sharpens ste
 whose bound uniform in the parities was lossy.
 
 *Proof.* (a) *Midpoint law.* The bridge density is
-$\sum_{w_1,w_2}e^{-(P_e-m+2\pi w_1)^2/(2st_e)-(m+Q_e+2\pi w_2)^2/(2(1-s)t_e)}$. With
+
+
+$$\sum_{w_1,w_2}\exp\!\left[-\frac{(P_e-m+2\pi w_1)^2}{2st_e}-\frac{(m+Q_e+2\pi w_2)^2}{2(1-s)t_e}\right]$$
+
+. With
 $W=w_1+w_2$ fixed, the minimum over $m$ is $(\phi_e+2\pi W)^2/(2t_e)$, $\phi_e=P_e+Q_e$,
 the curvature is $1/(s(1-s)t_e)$, the prefactor is $(2\pi t_e)^{-1/2}$ for every
 $s$, and the centre is $\bar m_e+2\pi(1-s)W-2\pi w_2$; the last term vanishes

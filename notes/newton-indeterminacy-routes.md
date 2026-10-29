@@ -265,7 +265,7 @@ $D_j=p\circ M_j-p$ and $X_j=q\circ M_j-q$. Then (1) holds.
 $c(t)=Ft^2/(2m)-a-bt$. Translate the free initial state by
 $(c(0),mc'(0))$ to obtain the forced initial state. Between marks the
 offset is $(c(t),mc'(t))$. As in the
-[disturbance note](record-costs-disturbance.md), compare successive
+[disturbance note](record-distance-path-length.md#general-disturbance-theorem-with-an-unknown-preparation), compare successive
 hybrids which remove this offset immediately before or after mark $j$.
 Their difference is the canonical commutator
 $T(-w_j)M_jT(w_j)M_j^{-1}$, $w_j=(c_j,mc_j')$.

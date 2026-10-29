@@ -93,15 +93,13 @@ class="math inline">\(O(\sqrt\hbar)\)</span>, uniformly in the mesh on a
 fixed time interval. Together with the classical certificate this gives
 the requested joint observable limit.</p>
 <p>This is a <strong>bounded instance</strong>, not a proof of the
-universal <a
-href="classical-quantum-existence-conjecture.html">constructive lifting
-conjecture</a>. The input includes the conservative action and a
-globally Lipschitz force; the background analytic toolkit includes
-Nelson’s commutator theorem and the graph-domain propagation result
-cited below. No lower bound on <span class="math inline">\(V\)</span> or
-derivatives beyond the Lipschitz force are assumed. This real-time
-theorem does not construct a Euclidean probability measure for a
-potential unbounded below.</p>
+universal constructive lifting conjecture formulated below. The input
+includes the conservative action and a globally Lipschitz force; the
+background analytic toolkit includes Nelson’s commutator theorem and the
+graph-domain propagation result cited below. No lower bound on <span
+class="math inline">\(V\)</span> or derivatives beyond the Lipschitz
+force are assumed. This real-time theorem does not construct a Euclidean
+probability measure for a potential unbounded below.</p>
 <p>The loss of the earlier <span class="math inline">\(O(\hbar)\)</span>
 rate is necessary at this level of regularity: <span
 class="math inline">\(V(q)=q|q|/2\)</span> has globally Lipschitz force,
@@ -117,6 +115,132 @@ graph estimates, bounded extensions, the Duhamel integral, the all-<span
 class="math inline">\(L^2\)</span> Cauchy modulus and the kick domain
 are included below. The review is an internal model check, not
 independent peer review.</p>
+<h2
+id="constructive-lifting-the-conjecture-and-its-quantifiers">Constructive
+lifting: the conjecture and its quantifiers</h2>
+<p>A proof may contain mathematical information that its author never
+expresses in quantum terminology. Under the conjecture, a construction
+of classical motion would also give enough control to construct quantum
+evolution from the same mechanical data. A direct classical proof that
+never mentions a Hilbert space therefore does not by itself refute this
+interpretation. One must determine whether its assumptions and estimates
+permit the quantum construction.</p>
+<p>Literal textual inclusion would be a much stronger requirement on how
+people write proofs. Conversely, appending an unrelated quantum
+existence theorem to any classical proof would make containment
+uninformative. The intended requirement is an explicit construction
+whose convergence uses the classical data and estimates. Fix a named
+background analytic toolkit before the test. Every model-dependent
+hypothesis needed to apply those theorems must be supplied by the
+classical inputs or proved from them; adding a new dynamical restriction
+would weaken the containment claim.</p>
+<p>The word consistency also needs an identified object. Logical
+consistency concerns the absence of contradictions in specified axioms.
+Existence of a mathematical model can establish relative consistency
+within the mathematical foundation used to construct it. Existence of
+motion, uniqueness from initial data, continuous dependence, and
+continuation for all time are different analytic properties. The present
+programme addresses these analytic constructions and their relation to
+quantum dynamics. It has not formulated a reduction between formal
+arithmetical consistency statements for two axiomatic theories.</p>
+<p>A Hilbert-space representation alone would admit a classical example.
+For a complete Hamiltonian flow preserving phase volume, the operators
+<span class="math inline">\((U(t)f)(z)=f(\Phi_{-t}(z))\)</span> form a
+strongly continuous unitary group on <span
+class="math inline">\(L^2\)</span> of phase space. Stone’s theorem gives
+a self-adjoint generator; multiplying it by any <span
+class="math inline">\(h&gt;0\)</span> writes the same group as <span
+class="math inline">\(e^{-itH_h/h}\)</span>. Multiplication observables
+commute, and concentrating probability packets recover the classical
+trajectory. This Koopman representation would satisfy the weaker target
+without constructing the required noncommutative quantum
+observables.</p>
+<p>Fix a class <span class="math inline">\(\mathcal A\)</span> of
+mechanical actions, their state spaces, initial or boundary data, and
+finite refinement rules. A classical existence certificate means
+explicit estimates sufficient to construct the classical dynamics. For a
+polygon proof these may include a common bounded region on each finite
+time interval, a stability estimate and a force-balance residual tending
+to zero with the mesh. The admissible certificates must be specified
+before testing a proposed lift; defining them to include quantum
+convergence would assume the conclusion.</p>
+<p><strong>Constructive lifting conjecture.</strong> Fix the action
+class, certificate schema, quantum target and named background analytic
+toolkit. One construction procedure for that class takes any admissible
+mechanical data and classical certificate as input and constructs a
+compatible quantum family <span class="math inline">\(Q_\hbar\)</span>
+for <span class="math inline">\(\hbar\in E\subset(0,\infty)\)</span>
+with <span class="math inline">\(0\in\overline E\)</span>. Every
+model-dependent hypothesis used in the quantum construction must be
+supplied by those inputs or proved from them. The procedure must
+identify which certificate estimates control quantum refinement and the
+recovery of the classical dynamics on the stated preparations and
+observables. Additional dynamical restrictions cannot be introduced to
+complete the proof.</p>
+<p>The proposed interpretation requires a single construction procedure
+for the chosen class, rather than a separate unexplained choice for each
+certificate. A certificate schema must not exclude a counterexample
+after the test begins. A theorem for one class would establish a bounded
+lifting result; extending it to every classical existence proof remains
+the universal conjecture.</p>
+<p>Existence at one isolated <span
+class="math inline">\(\hbar&gt;0\)</span> cannot itself formulate an
+<span class="math inline">\(\hbar\to0\)</span> limit. The lifting
+statement therefore requires a family indexed by positive values
+accumulating at zero. Requiring every sufficiently small positive <span
+class="math inline">\(\hbar\)</span>, or every <span
+class="math inline">\(\hbar&gt;0\)</span>, strengthens that requirement.
+The current smooth-potential example constructs the quantum theory for
+every <span class="math inline">\(\hbar&gt;0\)</span>. This family
+requirement makes the proposed lifting statement more specific than a
+bare assertion that some quantum theory exists.</p>
+<p>The word compatible requires an observable statement. In the current
+example, fix <span class="math inline">\(z_0\)</span>, a finite <span
+class="math inline">\(T&gt;0\)</span>, a time <span
+class="math inline">\(t\in[0,T]\)</span> and <span
+class="math inline">\(a\in C_c^\infty(T^*\mathbb R)\)</span>. For the
+specified coherent preparations and partition vertices <span
+class="math inline">\(t_j\to t\)</span>, the required limit is <span
+class="math display">\[
+\left\langle\psi_{\hbar,\pi}(t_j),
+       \operatorname{Op}_\hbar^W(a)\psi_{\hbar,\pi}(t_j)\right\rangle
+\longrightarrow a(\Phi_t(z_0)),
+\qquad \hbar,|\pi|\longrightarrow0.    ag{C}
+\]</span> Here <span class="math inline">\(z_0\)</span> is the initial
+canonical state, <span class="math inline">\(\Phi_t\)</span> the
+constructed classical flow, <span
+class="math inline">\(\psi_{\hbar,\pi}(t_j)\)</span> the state after the
+first <span class="math inline">\(j\)</span> quantum cells, and <span
+class="math inline">\(\operatorname{Op}_\hbar^W\)</span> Weyl
+quantization. Partitions containing <span
+class="math inline">\(t\)</span> permit <span
+class="math inline">\(t_j=t\)</span>. The limit holds along every joint
+schedule with <span class="math inline">\(\hbar,|\pi|\to0\)</span>. A
+different action class may require different preparations, observables
+and topologies while retaining its specified noncommutative quantum
+target. Equation (1) does not require convergence of every quantum state
+to a single classical point.</p>
+<p>The common-hypothesis implication <span
+class="math inline">\(\mathcal H\Rightarrow[C\ \mathrm{and}\
+(\forall\hbar&gt;0)Q_\hbar]\)</span> is weaker than extracting the
+quantum construction from every certificate of <span
+class="math inline">\(C\)</span>. The theorem below covers the declared
+conservative <span class="math inline">\(C^{1,1}\)</span> class. The <a
+href="quantum-blocks-construct-newton.html">smooth quantum
+construction</a> separately supplies a Euclidean law and an <span
+class="math inline">\(O(\hbar)\)</span> mean rate under stronger
+derivative and lower-bound assumptions; the present rate is sharp at the
+weaker regularity.</p>
+<p>The <a href="rivero-1998-conjecture-central-forces.html">1998
+stationary-phase test</a> preserves the action differences, Hessian
+square-root weights and signatures lost by a classical critical-point
+distribution. Its fixed-partition remainder is not a uniform quantum
+refinement estimate. Classical completion at a cusp or wall also need
+not select a unique quantum preparation or boundary condition (<a
+href="cusp-quantum-preparation-selection.html">cusp</a>, <a
+href="dirichlet-wall-impulse.html">wall</a>). Neither the lifting
+conjecture nor this bounded theorem derives a universal positive
+physical action.</p>
 <h2 id="the-input-certificate-and-quantum-target">1. The input
 certificate and quantum target</h2>
 <p>Let <span class="math inline">\(m&gt;0\)</span>, <span
@@ -302,8 +426,8 @@ r_{\hbar,T,\psi}(\delta):=
 \longrightarrow0\quad(\delta\downarrow0).\tag{13a}
 \]</span> Unitarity and (13) bound each product-to-unitary difference by
 <span class="math inline">\(r_{\hbar,T,\psi}(|\pi|)\)</span>; the
-triangle inequality gives the conjecture note’s two-partition Cauchy
-criterion. The factor <span class="math inline">\(\hbar^{-2}B\)</span>
+triangle inequality gives the two-partition Cauchy criterion in the
+conjecture. The factor <span class="math inline">\(\hbar^{-2}B\)</span>
 need not remain bounded as <span
 class="math inline">\(\hbar\downarrow0\)</span>.</p>
 <h2 id="the-classical-and-quantum-polygons">4. The classical and quantum

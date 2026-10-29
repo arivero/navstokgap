@@ -22,7 +22,7 @@ draft from finite-dimensional Gaussian algebra.
 
 **Existing Newton route.** Newton’s projectile Scholium and Lemmas X–XI are
 covered by the existing constant-force companion
-`notes/principia-constant-force-action.md` (Motte/Chittenden 1846, printed
+`notes/newton-insertion-action.md#the-source-geometry-and-three-different-areas` (Motte/Chittenden 1846, printed
 pp. 89, 99–101, with the surrounding Section I passages through pp. 103–106).
 That historical source supports the parabola and lens ratios, not the modern
 arbitrary-partition action formula.

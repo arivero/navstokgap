@@ -369,7 +369,50 @@ constant, a universal apparatus restriction, or Planck's measured value.
 Those are separate physical tests. The bounded full-cell result is
 useful because it makes the alternatives quantitatively testable.
 
-## 7. Consequence for STATE
+## 7. Source comparison: full densities and locality
+
+Dimock's exposition concerns a three-dimensional lattice scalar $\phi^4$
+partition function. Its ultraviolet stability is neither a Yang--Mills
+construction nor a mass-gap theorem. The following are selected passages read,
+not an audit of the full proofs.
+
+- [Dimock I](../docs/balaban/Dimock_BalabanI_1108.1335v2.md), §2.1,
+  (15), (26)--(28), integrates against a normalized Gaussian noisy block-average
+  kernel and rescales; (28) preserves the total integral. Conditional elimination
+  of time coordinates here, or the exact Brownian-reference tower
+  $\rho_n=\mathbb E_0[\rho_{n+1}\mid\mathcal F_n]$, is a different map.
+  A tower identity alone supplies none of his uniform locality estimates.
+- Sections 2.2--2.3 separate background and Gaussian fluctuation. The one-cell
+  analogue retains its minimizing coordinate, covariance and normalization;
+  with interactions it retains the whole conditional law. The quartic derivative
+  (19) above already displays generated quadratic and constant terms; it is a
+  derivative at zero coupling, not convergence of a perturbation series.
+- Section 4.1, (176)--(180), and Theorem 14 propagate normalization, mass,
+  energy, quartic and polymer-remainder terms under small-coupling and sufficiently
+  large-block assumptions. A finite polynomial ansatz does not retain all of
+  that information. Section 4.5 introduces weakening parameters before clustering.
+- Small-field cutoffs (172)--(175) are only part of the analysis.
+  [Dimock II](../docs/balaban/Dimock_BalabanII_1212.5562v2.md), introduction,
+  §3.3 and Theorem 3.1, sums histories of regions, including large fields and
+  boundaries, with the block-size, mass, running-coupling and Part I counterterm
+  hypotheses. The identity $\prod_b[\chi_b+(1-\chi_b)]=1$ retains every pattern;
+  its good-region tests involve derivatives and nested regions, not just our
+  midpoint fluctuation. Our normalized tail estimate controls a complement
+  rather than deleting it.
+- Part I §2.4 and Lemma 6 earn Green-function locality through local inverses
+  and a convergent random-walk expansion. Part II §3.13, Lemmas 3.15--3.17,
+  localizes interactions, remainders and boundary terms; §3.14, Lemma 3.18,
+  clusters with holes. Correlated local fluctuations are not automatically
+  independent Gaussian variables. The time chain's conditional independence
+  holds for one halving and establishes no multiscale polymer estimate in
+  three or four dimensions.
+
+The [Bałaban ICM overview](../docs/balaban/Balaban_UltravioletStability_ICM1986_1987.md),
+printed pp.1260--1262 (text read), motivates this full-density discipline.
+The correspondence is about what estimates must be retained; no field-theory
+proof is transferred to mechanics or conversely.
+
+## 8. Consequence for STATE
 
 The first nonlinear time-elimination step is now controlled without
 replacing its law by a Gaussian: normalized tails, endpoint response,

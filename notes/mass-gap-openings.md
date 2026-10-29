@@ -20,7 +20,7 @@ compact $U(1)$ in four dimensions has a proven massless phase at weak
 coupling. $SU(3)$ fixes the constants; a method that works will almost
 surely be group-general.
 
-**A precision on the map.** The [position note](mass-gap-position.md)
+**A precision on the map.** The [position note](mass-gap-obligations-lattice.md#existing-estimates-and-examined-routes)
 says that the conjecture is T2$'$ together with T3, given T4, and the
 [obligations map](mass-gap-obligations-lattice.md) says that T3
 presupposes T2$'$. T3 needs less: a gap $\delta_\infty(g)>0$ on some

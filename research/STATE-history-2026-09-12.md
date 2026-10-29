@@ -436,12 +436,12 @@ partition refinement and physical-time relaxation separate.
 **A02/B10 are complete:** `papers/collision-action-relaxation.tex` derives a
 covariance observable relaxing in physical time to $(m+M)s^2/\nu$ for an
 elastic refreshed bath. Fifteen checks and a sequential Luna medium audit
-support C022–C024. **A03/B12 are complete:** [cut-point consistency](../notes/cut-point-consistency.md)
+support C022–C024. **A03/B12 are complete:** [cut-point consistency](../notes/quantum-blocks-construct-newton.md#projective-gaussian-preparation-and-raw-kinetic-action)
 proves the nonuniform chord bound and fixed-parameter restriction test.
 At fixed Gaussian preparation each inserted node adds expected kinetic action
 $\kappa/2$; retaining finite total defect by shrinking $\kappa$ changes old
 node marginals. C027–C029 have a Luna medium audit and nine exact checks.
-**A05/B13 are complete.** The [physical-cut note](../notes/physical-cut-speed.md)
+**A05/B13 are complete.** The [physical-cut note](../notes/telegraph-return-bridge.md#mechanical-cuts-and-the-sharp-speed-benchmark)
 gives an elastic momentum receiver, the sharp midpoint action bound
 $\kappa_{\rm mid}\le m\Delta(u-|v|)^2$, and a deterministic-drift theorem
 for ballistic position convolution laws. C030–C032 have a Luna medium audit
@@ -460,10 +460,10 @@ spatial-clock question as a secondary diagnostic.
 **B11 is ready to resume:** the original Sol medium audit of the supplied polygon
 ideas failed on authentication and left no worker artifacts; B12–B15 have since
 run successfully. The coordinator's
-[receding-centre draft](../notes/receding-centre-area-audit.md) and twelve exact
+[receding-centre draft](../notes/newton-insertion-action.md#a-genuine-receding-centre-subtract-before-taking-the-limit) and twelve exact
 checks are saved; claim acceptance awaits the resumed librarian audit.
 **M06** remains the force/acceleration and relativistic-action diagnostic from
-[the M05 note](../notes/newton-dimock-balaban-guide.md).
+[the M05 note](../notes/groupoid-quantum-newton-states.md#regulators-and-a-normalized-blocking-test).
 **B07a** completed the Wilson–Kogut common-observable reading and test;
 **B07b** retains the tangent-groupoid theorem. Each source task should change
 a premise, calculation or proof obligation.

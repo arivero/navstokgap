@@ -43,19 +43,56 @@ Keep three operations distinct:
   change predictions for correlated variables. Exact classical segment-action
   composition likewise differs from changing an approximate discretisation.
 
-The [one-cut calculation](cut-point-consistency.md), section 4, keeps the
+The [one-cut calculation](quantum-blocks-construct-newton.md#projective-gaussian-preparation-and-raw-kinetic-action), keeps the
 two surrounding endpoints fixed. It isolates the local action cost; it does
 not establish how all free vertices respond to a new global discretisation.
 
-## 3. Research consequence
+## Modern discrete-state and operator comparisons
 
-Keep a refinement-compatibility question alongside R05's mechanical readout.
-R04 asks what receiver information must cross an existing cut. The additional
-question asks how the relations on both sides are reconstructed when the cut
-is inserted. Specify which equations, observables and boundary conditions are
-held fixed before comparing the two constructions.
+The earlier conversation's list of discrete-substrate authors was unverified
+recall, not source evidence for a scientific conclusion. Its useful question
+is whether loss of classical state information supplies an action restriction.
+The relevant named source leads are 't Hooft's
+[1988 equivalence relations](https://doi.org/10.1007/BF01011560),
+[1999 dissipative system](https://doi.org/10.1088/0264-9381/16/10/316) and
+[2016 book](https://doi.org/10.1007/978-3-319-41285-6) (metadata only).
+No universal time-grain or information-loss necessity is established from those
+unread arguments. A finite reversible permutation already has a unitary
+realization with a self-adjoint logarithm whose spectrum can be bounded below;
+the phase eigenvalues leave logarithm branches and physical energy normalization
+undetermined. The former blanket assertion that a reversible automaton has no
+ground state was too strong.
 
-This is a source-provenance clarification and research question, with no new
-claim ID, positive-action result or Newton-influence attribution. The lineage
-is: Aristotle's division problem, our compatibility question, then the modern
-possibility of readjusting a discretised trajectory.
+A discrete tick and a force-dependent record resolution make different claims.
+The conditional [mark bounds](mark-cost-and-statistical-floor.md) neither
+require a universal time atom nor rule out an independently supplied smaller
+one. The [thermodynamic inequality](necessity-unit-and-indeterminacy.md#thermodynamic-information-costs-an-inequality-not-an-optimum)
+prices a stipulated information/work trade-off without deriving an absolute
+floor. The [superdeterminism model](superdeterminism-floor.md) has its own
+setting-device mixing and resolution assumptions; it is not a theorem about
+every deterministic substrate.
+
+Dedekind's cut specifies a real through two rational sets; a finite recorded
+interval is a different object. The [cut-energy proof](cut-measure-newton.md)
+counts cuts only after a positive record-share floor is supplied. Similarly,
+writing a spectral-triple differential as $[D,f]$ does not remove points:
+commutative function algebras still have evaluation states. A distance formula
+using $\|[D,f]\|\le1$ requires its spectral-triple assumptions. Setting
+$p=\hbar D$ supplies an action conversion rather than deriving one.
+These are modern mathematical comparisons, not ancient transmission claims.
+
+The [groupoid state theorem](groupoid-quantum-newton-states.md) separates
+geometric $\epsilon=\hbar/S_0$ from duration and mesh. A mark decision window
+cannot be declared a distance from its classical fiber by identifying all
+three parameters. The normalized free blocking test admits both zero and
+positive action coefficients; it supplies a concrete countertest to automatic
+scale selection.
+
+## Consequence for STATE
+
+Aristotle's anywhere-versus-simultaneous division question, exact sampling,
+re-solving a discretized boundary-value problem and marginalizing an inserted
+variable remain distinct. Modern discrete-state and noncommutative definitions
+add no historical influence or physical action-necessity theorem by analogy.
+The proofs and measured-source passages, rather than conversation chronology,
+govern the comparison.

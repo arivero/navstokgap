@@ -17,7 +17,7 @@ passages. No numerical/symbolic scripts or general interaction classification.
 
 ## Result and review
 
-[C127 proof](../../notes/hamiltonian-moment-descent.md): with u=e_y and
+[C127 proof](../../notes/classical-orientation-closure.md#a-complete-classical-interaction-fails-moment-descent): with u=e_y and
 v an equal mixture of +/-e_z or +/-e_x, all first/cross moments and energies
 agree initially. H=J u_z v_z gives exact allowed product-test probabilities
 (1-sin(Jt/S_A))/4 and 1/4. The hidden flow is complete and reversible but

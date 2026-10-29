@@ -83,42 +83,40 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 problem</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/quantum-blocks-construct-newton.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/quantum-blocks-construct-newton.pdf">PDF</a></p><p><strong>Result, 2026-10-27.</strong> For a smooth nonnegative
 potential on the line with bounded second and higher derivatives, we
 construct Euclidean <span class="math inline">\(0+1\)</span> quantum
-mechanics at every supplied <span class="math inline">\(h&gt;0\)</span>
-using time refinement and a normalized density at every dyadic scale.
-The reference fluctuations are Gaussian Brownian bridges, and the full
-interaction and large-field configurations are retained. Real-time
-evolution is the unitary group of the reconstructed self-adjoint
-Hamiltonian.</p>
+mechanics at every supplied <span
+class="math inline">\(\hbar&gt;0\)</span> using time refinement and a
+normalized density at every dyadic scale. The reference fluctuations are
+Gaussian Brownian bridges, and the full interaction and large-field
+configurations are retained. Real-time evolution is the unitary group of
+the reconstructed self-adjoint Hamiltonian.</p>
 <p>For every initial <span class="math inline">\((q_0,p_0)\)</span>,
 means of finite quantum time-slice products are a Cauchy family as both
-<span class="math inline">\(h\)</span> and the time mesh tend to zero.
-An explicit <span class="math inline">\(O(h+|\pi|)\)</span> estimate
-controls both scales simultaneously for the means, while the packet
-widths remain <span class="math inline">\(O(\sqrt h)\)</span>. Their
-limit solves <span class="math inline">\(\dot q=p/m\)</span>, <span
-class="math inline">\(\dot p=-V&#39;(q)\)</span>; it is the unique
-solution. An explicit bound compares any two positive values of <span
-class="math inline">\(h\)</span>. The proof does not assume a classical
-trajectory in advance. Its stability hypothesis and Gronwall estimate
-are the same ingredients used by Cauchy–Lipschitz, so the construction
-is a different route, not a weakening of that theorem. For smooth
-confining potentials with locally Lipschitz force, including the
-positive quartic, a cutoff and energy conservation construct the
+<span class="math inline">\(\hbar\)</span> and the time mesh tend to
+zero. An explicit <span class="math inline">\(O(\hbar+|\pi|)\)</span>
+estimate controls both scales simultaneously for the means, while the
+packet widths remain <span class="math inline">\(O(\sqrt
+\hbar)\)</span>. Their limit solves <span class="math inline">\(\dot
+q=p/m\)</span>, <span class="math inline">\(\dot p=-V&#39;(q)\)</span>;
+it is the unique solution. An explicit bound compares any two positive
+values of <span class="math inline">\(\hbar\)</span>. The proof does not
+assume a classical trajectory in advance. Its stability hypothesis and
+Gronwall estimate are the same ingredients used by Cauchy–Lipschitz, so
+the construction is a different route, not a weakening of that theorem.
+For smooth confining potentials with locally Lipschitz force, including
+the positive quartic, a cutoff and energy conservation construct the
 classical trajectory from quantum families with cutoff potentials. This
 argument does not prove the joint approximation estimate for the uncut
 quartic quantum evolution.</p>
-<p>For a didactic entry point, see <a
-href="newton-dimock-balaban-guide.html">Newton, quantum mechanics and
-Dimock–Balaban</a>: it traces the steps to specific source passages and
-introduces existence, uniqueness, continuation, magnetic forces and a
-separate hard-wall example. The theorem of this note remains the smooth
-scalar-potential construction stated above.</p>
-<p>This note is a new assembly of standard Feynman–Kac, conditional
+<p>The theorem concerns the displayed smooth scalar-potential class.
+Velocity-dependent forces, hard walls and singular/cusp selection are
+separate constructions, with their assumptions retained in the
+catalog.</p>
+<p>This treatment assembles of standard Feynman–Kac, conditional
 expectation and unitary-conjugation ingredients; no priority claim is
 made. The normalized-density architecture is inspired by Dimock–Balaban,
 not an import of their four-dimensional Yang–Mills estimates. The
 construction assumes a positive action parameter <span
-class="math inline">\(h\)</span>, and does not prove it necessary. A
+class="math inline">\(\hbar\)</span>, and does not prove it necessary. A
 separate tangent-groupoid formulation follows only after this
 theorem.</p>
 <p><strong>Targeted advisor check (GPT-6.1 Sol, 2026-10-27).</strong>
@@ -126,11 +124,17 @@ The finite-step identities, constants, joint Cauchy estimate, domain
 argument, quartic energy barrier and cusp counterexample were checked in
 writing. This is not an independent proof audit of the imported Wiener,
 Feynman–Kac, self-adjointness or spectral theorems. The centered <span
-class="math inline">\(O(h)\)</span> improvement below follows a
+class="math inline">\(O(\hbar)\)</span> improvement below follows a
 subsequent user-suggested calculation and is not covered by that earlier
 check.</p>
 <h2 id="hypotheses-and-the-quantum-theory-to-be-constructed">1.
 Hypotheses and the quantum theory to be constructed</h2>
+<p>The supplied action parameter is written <span
+class="math inline">\(\hbar\)</span> throughout. It is distinct from
+Planck’s <span class="math inline">\(h_P=2\pi\hbar\)</span>, the time
+mesh and the dimensionless <span
+class="math inline">\(\epsilon=\hbar/S_0\)</span> for a specified
+characteristic action <span class="math inline">\(S_0\)</span>.</p>
 <p>Let <span class="math inline">\(m&gt;0\)</span> and let <span
 class="math inline">\(V:\mathbb R\to\mathbb R\)</span> be <span
 class="math inline">\(C^\infty\)</span>, <span
@@ -144,16 +148,17 @@ nonlinear confining example is <span
 class="math display">\[V(x)=\tfrac12m\omega_0^2x^2+\lambda[1-\cos(x/\ell)],
 \qquad\omega_0,\lambda,\ell&gt;0.\tag{2}\]</span> Its curvature is
 bounded, while the force is not linear.</p>
-<p>For each <span class="math inline">\(h&gt;0\)</span>, set <span
-class="math display">\[H_h=-\frac{h^2}{2m}\frac{d^2}{dx^2}+V(x)\tag{3}\]</span>
+<p>For each <span class="math inline">\(\hbar&gt;0\)</span>, set <span
+class="math display">\[H_\hbar=-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}+V(x)\tag{3}\]</span>
 on <span class="math inline">\(L^2(\mathbb R)\)</span>. Its Friedrichs
 realization is nonnegative and self-adjoint; for this smooth
 bounded-below class the restriction to <span
 class="math inline">\(C_c^\infty(\mathbb R)\)</span> is a core. Put
-<span class="math display">\[U_h(t)=e^{-itH_h/h}.\tag{4}\]</span> The
-spectral theorem makes <span class="math inline">\(U_h\)</span> a
-strongly continuous unitary group. No classical ODE solution is used to
-define it. If <span class="math inline">\(V(x)\to\infty\)</span> at
+<span
+class="math display">\[U_\hbar(t)=e^{-itH_\hbar/\hbar}.\tag{4}\]</span>
+The spectral theorem makes <span class="math inline">\(U_\hbar\)</span>
+a strongly continuous unitary group. No classical ODE solution is used
+to define it. If <span class="math inline">\(V(x)\to\infty\)</span> at
 infinity, compactness of the form embedding and positivity improvement
 additionally give the unique vacuum and positive spectral gap as in <a
 href="constructive-qft-one-time.html">the preceding construction</a>.
@@ -171,26 +176,26 @@ S_\pi^E(q)=\sum_j
 \tag{5}
 \]</span> The normalized finite-lattice measure has endpoints <span
 class="math inline">\(q_0=x,q_N=y\)</span> and density proportional to
-<span class="math inline">\(e^{-S_\pi^E/h}\)</span> in the internal
+<span class="math inline">\(e^{-S_\pi^E/\hbar}\)</span> in the internal
 coordinates.</p>
 <p>Let <span class="math inline">\(B\)</span> be the Brownian bridge
 from <span class="math inline">\(x\)</span> to <span
 class="math inline">\(y\)</span> with variance parameter <span
-class="math inline">\(h/m\)</span> and mean <span
+class="math inline">\(\hbar/m\)</span> and mean <span
 class="math inline">\(b(t)=x+(y-x)t/T\)</span>. Its covariance is <span
 class="math display">\[\operatorname{Cov}[B(s),B(t)]
 =\frac hm\left(\min(s,t)-\frac{st}{T}\right).\tag{6}\]</span> With <span
 class="math inline">\(p_h(t;u,v)=\sqrt{m/(2\pi
 ht)}  \exp[-m(v-u)^2/(2ht)]\)</span>, the normalized kinetic factor
 <span
-class="math inline">\(\prod_jp_h(\delta_j;q_j,q_{j+1})/p_h(T;x,y)\)</span>
+class="math inline">\(\prod_jp_\hbar(\delta_j;q_j,q_{j+1})/p_\hbar(T;x,y)\)</span>
 is exactly the joint density of <span
 class="math inline">\(B(t_j)\)</span>. Define <span
 class="math display">\[W_\pi(B)=\sum_j\frac{\delta_j}{2}
        [V(B(t_j))+V(B(t_{j+1}))],\qquad
-Z_\pi=\mathbb E_0e^{-W_\pi(B)/h}.\tag{7}\]</span> The interpolated
+Z_\pi=\mathbb E_0e^{-W_\pi(B)/\hbar}.\tag{7}\]</span> The interpolated
 lattice measure is the pushforward of <span
-class="math inline">\(Z_\pi^{-1}e^{-W_\pi/h}d\mathbb P_0\)</span> by
+class="math inline">\(Z_\pi^{-1}e^{-W_\pi/\hbar}d\mathbb P_0\)</span> by
 polygonal interpolation.</p>
 <p>Brownian continuity gives uniform convergence of this interpolation
 to <span class="math inline">\(B\)</span>, and <span
@@ -198,15 +203,16 @@ class="math inline">\(W_\pi\to\int_0^T V(B(t))dt\)</span> almost surely,
 for every sequence of partitions with <span
 class="math inline">\(|\pi|\to0\)</span>. The weights lie in <span
 class="math inline">\([0,1]\)</span>. Consequently dominated convergence
-constructs the limit <span class="math display">\[d\nu_h=Z_h^{-1}
-e^{-h^{-1}\int_0^T V(B(t))dt}d\mathbb P_0,\qquad
-Z_h=\mathbb E_0e^{-h^{-1}\int_0^T V(B(t))dt}&gt;0.\tag{8}\]</span> It
-proves weak convergence of the polygonal measures on <span
-class="math inline">\(C([0,T])\)</span> and <span
-class="math inline">\(L^1(\mathbb P_0)\)</span> convergence of their
-<strong>lifted densities</strong>. The polygonal measures themselves are
-not asserted to converge in total variation to the non-polygonal path
-measure.</p>
+constructs the limit <span
+class="math display">\[d\nu_\hbar=Z_\hbar^{-1}
+e^{-\hbar^{-1}\int_0^T V(B(t))dt}d\mathbb P_0,\qquad
+Z_\hbar=\mathbb E_0e^{-\hbar^{-1}\int_0^T
+V(B(t))dt}&gt;0.\tag{8}\]</span> It proves weak convergence of the
+polygonal measures on <span class="math inline">\(C([0,T])\)</span> and
+<span class="math inline">\(L^1(\mathbb P_0)\)</span> convergence of
+their <strong>lifted densities</strong>. The polygonal measures
+themselves are not asserted to converge in total variation to the
+non-polygonal path measure.</p>
 <p>The normalization has an explicit finite-partition lower bound. Since
 <span class="math inline">\(V&#39;&#39;\le L\)</span>, Taylor’s
 inequality gives <span class="math inline">\(\mathbb EV(B(t))\le
@@ -214,28 +220,88 @@ V(b(t))+\frac L2\operatorname{Var}B(t)\)</span>. Writing <span
 class="math inline">\(M_{xy}=\max_{z\in[x,y]}V(z)\)</span>, using <span
 class="math inline">\(\operatorname{Var}B(t)\le hT/(4m)\)</span> and
 Jensen’s inequality yields <span class="math display">\[Z_\pi\ge
-\exp\!\left[-\frac{TM_{xy}}h-\frac{LT^2}{8m}\right]
+\exp\!\left[-\frac{TM_{xy}}\hbar-\frac{LT^2}{8m}\right]
 \quad\text{for every partition.}\tag{9}\]</span> Thus normalization and
 large-field paths are included at every mesh. The bound is finite for
-each <span class="math inline">\(h&gt;0\)</span> but is not uniform as
-<span class="math inline">\(h\to0\)</span>.</p>
+each <span class="math inline">\(\hbar&gt;0\)</span> but is not uniform
+as <span class="math inline">\(\hbar\to0\)</span>.</p>
+<h3
+id="projective-gaussian-preparation-and-raw-kinetic-action">Projective
+Gaussian preparation and raw kinetic action</h3>
+<p>The free reference has a useful distinction between consistency and
+scale selection. More generally give a partition’s centred bridge nodes
+covariance <span class="math inline">\(\kappa_\pi G(s,t)/m\)</span>,
+where <span class="math inline">\(G(s,t)=\min(s,t)-st/T\)</span> and
+<span class="math inline">\(\kappa_\pi\ge0\)</span>. A refinement
+retaining one interior time <span class="math inline">\(s\)</span> has
+the same marginal only if <span
+class="math inline">\(\kappa_{\pi&#39;}s(T-s)/(mT)=\kappa_\pi
+s(T-s)/(mT)\)</span>, hence the parameters agree. Any two nontrivial
+partitions have a common refinement; conversely fixed <span
+class="math inline">\(\kappa\)</span> gives exactly the required
+Gaussian covariance submatrices. The endpoint-only partition fixes no
+scale. The quantum Euclidean reference above chooses <span
+class="math inline">\(\kappa=\hbar\)</span>; a classical zero-width
+reference is also projectively consistent.</p>
+<p>For <span class="math inline">\(d=N-1\)</span> internal nodes, the
+free polygon’s excess kinetic action over the endpoint chord obeys <span
+class="math inline">\(2D_\pi/\kappa\sim\chi_d^2\)</span> at <span
+class="math inline">\(\kappa&gt;0\)</span>. This follows by whitening
+its positive Dirichlet quadratic form under the normalized Gaussian
+density. Therefore</p>
+<p><span class="math display">\[\mathbb ED_\pi=d\kappa/2,\qquad
+\operatorname{Var}D_\pi=d\kappa^2/2,\qquad
+\Pr(D_\pi&lt;d\kappa/4)\le8/d.\]</span></p>
+<p>The unnormalized action diverges in probability as nodes are added,
+whereas <span class="math inline">\(\widehat\kappa=2D_\pi/d\)</span> has
+mean <span class="math inline">\(\kappa\)</span> and variance <span
+class="math inline">\(2\kappa^2/d\)</span>. Its mean-square convergence
+estimates the supplied parameter; it is not an additive surviving
+action. A triangular family with <span
+class="math inline">\((N-1)\kappa_N\to\ell&gt;0\)</span> changes
+retained interior variances toward zero and is not restriction of one
+fixed-width experiment.</p>
+<p>At a new cut after duration <span class="math inline">\(a\)</span> in
+a cell of duration <span class="math inline">\(a+b\)</span>, the
+endpoint interpolation is <span class="math inline">\(\bar
+y=(bx+az)/(a+b)\)</span> and the exact splitting identity is</p>
+<p><span class="math display">\[\frac
+m2\left[\frac{(y-x)^2}a+\frac{(z-y)^2}b
+-\frac{(z-x)^2}{a+b}\right]
+=\frac{m(a+b)}{2ab}(y-\bar y)^2.\]</span></p>
+<p>The fixed-<span class="math inline">\(\kappa\)</span> conditional
+variance is <span class="math inline">\(\kappa ab/[m(a+b)]\)</span>, so
+the expected added kinetic cost is <span
+class="math inline">\(\kappa/2\)</span> at every split; it is zero for
+deterministic interpolation. This nonnegative kinetic addition is a
+different comparison from moving a sampled point onto a forced classical
+curve, whose action includes potential and whose chord defect <a
+href="newton-insertion-action.html#matched-endpoints-arbitrary-partitions-and-action-normalization">decreases
+under refinement</a>. Source coverage: Pitman–Yor <a
+href="https://arxiv.org/abs/1802.09679v1">2018</a>, printed pp. 6, 10,
+12–13, read for the bridge/restriction framework in <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B12.md">B12</a>;
+the independently retained <a
+href="https://github.com/arivero/navstokgap/blob/main/papers/regulator-limits.tex">regulator
+manuscript</a> gives the finite quadratic-form law. No hard-speed law or
+positivity selection follows.</p>
 <h2 id="the-exact-all-scale-retained-density">3. The exact all-scale
 retained density</h2>
 <p>For the dyadic partition let <span class="math inline">\(\mathcal
 F_n\)</span> be the sigma-algebra of the <span
 class="math inline">\(2^n+1\)</span> vertex values, and let <span
-class="math display">\[\rho=\frac{d\nu_h}{d\mathbb P_0},\qquad
+class="math display">\[\rho=\frac{d\nu_\hbar}{d\mathbb P_0},\qquad
 \rho_n=\mathbb E_0[\rho\mid\mathcal F_n].\tag{10}\]</span> These are
 densities relative to the <strong>normalized free bridge</strong>.
 Conditional expectation gives, exactly, <span
 class="math display">\[\rho_n=\mathbb E_0[\rho_{n+1}\mid\mathcal
 F_n],\quad
-\mathbb E_0\rho_n=1,\quad 0&lt;\rho_n\le Z_h^{-1}.\tag{11}\]</span> At
-level <span class="math inline">\(n+1\)</span>, conditional on level
+\mathbb E_0\rho_n=1,\quad 0&lt;\rho_n\le Z_\hbar^{-1}.\tag{11}\]</span>
+At level <span class="math inline">\(n+1\)</span>, conditional on level
 <span class="math inline">\(n\)</span>, the reference midpoint of a cell
 of length <span class="math inline">\(\delta=T/2^n\)</span> has mean
 <span class="math inline">\((a+b)/2\)</span> and variance <span
-class="math inline">\(h\delta/(4m)\)</span>; reference midpoints in
+class="math inline">\(\hbar\delta/(4m)\)</span>; reference midpoints in
 different cells are independent. The <em>interacting</em> conditional
 law is the product of these Gaussian reference laws multiplied by <span
 class="math inline">\(\rho_{n+1}/\rho_n\)</span>. The latter density
@@ -249,9 +315,9 @@ class="math display">\[\rho_n\longrightarrow\rho\quad\text{in
 exact normalized blocking tower at all scales. They use an already
 constructed Wiener measure as reference; they do not claim a
 lattice-only construction or a four-dimensional polymer estimate. In
-particular the <span class="math inline">\(Z_h^{-1}\)</span> bound does
-not give control uniform in <span
-class="math inline">\(h\downarrow0\)</span>.</p>
+particular the <span class="math inline">\(Z_\hbar^{-1}\)</span> bound
+does not give control uniform in <span
+class="math inline">\(\hbar\downarrow0\)</span>.</p>
 <p>The distinction between a finite lattice step and the complete
 effective density can be seen explicitly. Before any blocking, integrate
 the middle vertex <span class="math inline">\(z\)</span> of two cells of
@@ -266,14 +332,14 @@ class="math inline">\(F_\mu&#39;&#39;\ge\kappa_s\)</span>; there is a
 unique minimizer <span class="math inline">\(z_*\)</span> and the
 <strong>normalized</strong> conditional law satisfies <span
 class="math display">\[\mathbb P(|z-z_*|\ge r\mid a,b)
-\le 2\exp[-\kappa_s r^2/(2h)].\tag{14}\]</span> Indeed, integration by
-parts gives <span class="math inline">\(\mathbb
-E(z-z_*)^{2n}\le(2n-1)!!(h/\kappa_s)^n\)</span>; expand the hyperbolic
-cosine and optimize the exponential Markov bound. Conditioned on all
-retained vertices, the eliminated vertices are independent for this
-original nearest-neighbour lattice. After a blocking step the generated
-action must be kept: (13)–(14) cannot be iterated as though the original
-potential were unchanged.</p>
+\le 2\exp[-\kappa_s r^2/(2\hbar)].\tag{14}\]</span> Indeed, integration
+by parts gives <span class="math inline">\(\mathbb
+E(z-z_*)^{2n}\le(2n-1)!!(\hbar/\kappa_s)^n\)</span>; expand the
+hyperbolic cosine and optimize the exponential Markov bound. Conditioned
+on all retained vertices, the eliminated vertices are independent for
+this original nearest-neighbour lattice. After a blocking step the
+generated action must be kept: (13)–(14) cannot be iterated as though
+the original potential were unchanged.</p>
 <p>This is the precise <span class="math inline">\(0+1\)</span> version
 of the source lesson: retain the entire normalized effective density,
 not merely its background minimizer or an unnormalized large-field
@@ -287,37 +353,39 @@ there). The latter papers treat a three-dimensional scalar theory, not
 <h2 id="from-the-euclidean-limit-to-real-time-quantum-mechanics">4. From
 the Euclidean limit to real-time quantum mechanics</h2>
 <p>The Feynman–Kac theorem identifies the kernel of <span
-class="math inline">\(e^{-TH_h/h}\)</span> as <span
-class="math inline">\(K_h(T;x,y)=p_h(T;x,y)Z_h(x,y)\)</span>; (8) is the
-corresponding <strong>normalized bridge</strong>, not the kernel itself.
-It also makes the semigroup reflection positive in the ground-state
-construction when a normalizable ground state exists. Real time is
-defined by the self-adjoint operator through (4), not by treating the
-Euclidean probability law as a real-time probability law.</p>
+class="math inline">\(e^{-TH_\hbar/\hbar}\)</span> as <span
+class="math inline">\(K_\hbar(T;x,y)=p_\hbar(T;x,y)Z_\hbar(x,y)\)</span>;
+(8) is the corresponding <strong>normalized bridge</strong>, not the
+kernel itself. It also makes the semigroup reflection positive in the
+ground-state construction when a normalizable ground state exists. Real
+time is defined by the self-adjoint operator through (4), not by
+treating the Euclidean probability law as a real-time probability
+law.</p>
 <p>For finite real-time steps use the kick–drift product <span
-class="math display">\[T_{h,s}=D_{h,s}K_{h,s},\quad
-K_{h,s}=e^{-isV(Q)/h},\quad D_{h,s}=e^{-isP^2/(2mh)},
+class="math display">\[T_{\hbar,s}=D_{\hbar,s}K_{\hbar,s},\quad
+K_{\hbar,s}=e^{-isV(Q)/\hbar},\quad D_{\hbar,s}=e^{-isP^2/(2mh)},
 \quad P=-ih\,\partial_x.\tag{15}\]</span> The factors are unitary. Its
 products converge strongly to <span
-class="math inline">\(U_h(T)\)</span> under arbitrary positive
-partitions at each fixed <span class="math inline">\(h&gt;0\)</span>.
-Here is the needed arbitrary-partition argument.</p>
-<p>Write <span class="math inline">\(c_h=h^2/(2m)\)</span>, and take
-<span class="math inline">\(f\in C_c^\infty\)</span>. Integration by
-parts gives <span class="math display">\[
-\|H_hf\|^2=c_h^2\|f&#39;&#39;\|^2+\|Vf\|^2
-+2c_h\int V|f&#39;|^2-c_h\int V&#39;&#39;|f|^2
-\ge c_h^2\|f&#39;&#39;\|^2+\|Vf\|^2-c_hL\|f\|^2.\tag{15a}
+class="math inline">\(U_\hbar(T)\)</span> under arbitrary positive
+partitions at each fixed <span
+class="math inline">\(\hbar&gt;0\)</span>. Here is the needed
+arbitrary-partition argument.</p>
+<p>Write <span class="math inline">\(c_\hbar=\hbar^2/(2m)\)</span>, and
+take <span class="math inline">\(f\in C_c^\infty\)</span>. Integration
+by parts gives <span class="math display">\[
+\|H_hf\|^2=c_\hbar^2\|f&#39;&#39;\|^2+\|Vf\|^2
++2c_\hbar\int V|f&#39;|^2-c_\hbar\int V&#39;&#39;|f|^2
+\ge c_\hbar^2\|f&#39;&#39;\|^2+\|Vf\|^2-c_hL\|f\|^2.\tag{15a}
 \]</span> Since <span class="math inline">\(C_c^\infty\)</span> is an
 operator core, closure identifies <span
-class="math inline">\(D(H_h)=D(P^2)\cap D(V)\)</span> and controls the
-two component graph norms. For <span class="math inline">\(f\)</span> in
-this domain, <span
-class="math inline">\((T_{h,s}-I)f/s\to-iH_hf/h\)</span> strongly, and
-these difference quotients are uniformly bounded from the <span
-class="math inline">\(H_h\)</span> graph domain to <span
+class="math inline">\(D(H_\hbar)=D(P^2)\cap D(V)\)</span> and controls
+the two component graph norms. For <span
+class="math inline">\(f\)</span> in this domain, <span
+class="math inline">\((T_{\hbar,s}-I)f/s\to-iH_hf/\hbar\)</span>
+strongly, and these difference quotients are uniformly bounded from the
+<span class="math inline">\(H_\hbar\)</span> graph domain to <span
 class="math inline">\(L^2\)</span>. The orbit <span
-class="math inline">\(\{U_h(t)f:0\le t\le T\}\)</span> is graph-norm
+class="math inline">\(\{U_\hbar(t)f:0\le t\le T\}\)</span> is graph-norm
 compact. Thus the local first-order error is uniform on the orbit, and a
 telescoping sum over the cells proves the limit; density and unitarity
 extend it to all <span class="math inline">\(L^2\)</span> vectors. This
@@ -335,12 +403,12 @@ A joint quantum and time-mesh construction of Newton motion</h2>
 <p>Fix <span class="math inline">\(\omega&gt;0\)</span>, initial <span
 class="math inline">\((q_0,p_0)\)</span>, and the coherent packet <span
 class="math display">\[
-\psi_h(x)=\left(\frac{m\omega}{\pi h}\right)^{1/4}
-\exp\!\left[-\frac{m\omega(x-q_0)^2}{2h}
-            +\frac{i p_0(x-q_0)}h\right].\tag{16}
+\psi_\hbar(x)=\left(\frac{m\omega}{\pi \hbar}\right)^{1/4}
+\exp\!\left[-\frac{m\omega(x-q_0)^2}{2\hbar}
+            +\frac{i p_0(x-q_0)}\hbar\right].\tag{16}
 \]</span> Its position and momentum means are <span
 class="math inline">\(q_0,p_0\)</span>, with standard deviations <span
-class="math inline">\(\sqrt{h/(2m\omega)}\)</span> and <span
+class="math inline">\(\sqrt{\hbar/(2m\omega)}\)</span> and <span
 class="math inline">\(\sqrt{hm\omega/2}\)</span>.</p>
 <p>For a partition <span class="math inline">\(\pi\)</span>, apply the
 unitary kick and drift (15) successively. Let <span
@@ -353,13 +421,13 @@ C=\sqrt{\frac2{m\omega}},\quad
 a=\max\!\left(\omega,\frac L{m\omega}\right).\tag{17}\]</span> No
 Gaussian assumption is made about the state after the first step.</p>
 <p>The exact conjugation identities are <span
-class="math display">\[K_{h,s}^*QK_{h,s}=Q,\quad
-K_{h,s}^*PK_{h,s}=P-sV&#39;(Q),\quad
-D_{h,s}^*QD_{h,s}=Q+sP/m,\quad
-D_{h,s}^*PD_{h,s}=P.\tag{18}\]</span> Both finite factors preserve
-Schwartz space under the stated derivative bounds, so (18) is valid on
-each propagated Gaussian. For the kick, the triangle inequality in <span
-class="math inline">\(L^2\)</span> and <span
+class="math display">\[K_{\hbar,s}^*QK_{\hbar,s}=Q,\quad
+K_{\hbar,s}^*PK_{\hbar,s}=P-sV&#39;(Q),\quad
+D_{\hbar,s}^*QD_{\hbar,s}=Q+sP/m,\quad
+D_{\hbar,s}^*PD_{\hbar,s}=P.\tag{18}\]</span> Both finite factors
+preserve Schwartz space under the stated derivative bounds, so (18) is
+valid on each propagated Gaussian. For the kick, the triangle inequality
+in <span class="math inline">\(L^2\)</span> and <span
 class="math inline">\(\operatorname{sd}[V&#39;(Q)]\le
 L\,\operatorname{sd}(Q)\)</span> give <span
 class="math inline">\(\operatorname{sd}(P)_{\rm after}\le
@@ -369,69 +437,70 @@ class="math inline">\(s\,\operatorname{sd}(P)/m\)</span> to the position
 deviation. Therefore <span class="math display">\[W_{j+1}\le
 (1+s\omega)\left(1+\frac{sL}{m\omega}\right)W_j,
 \qquad
-W_j\le C\sqrt h\,e^{\beta T}.\tag{19}\]</span> These are finite-step
+W_j\le C\sqrt \hbar\,e^{\beta T}.\tag{19}\]</span> These are finite-step
 statements for the full quantum state.</p>
 <p>The means obey <span class="math display">\[p_{j+1}=p_j-s_j\langle
 V&#39;(Q)\rangle_j,\qquad
 q_{j+1}=q_j+\frac{s_jp_{j+1}}m.\tag{20}\]</span> Fix <span
-class="math inline">\(h_0&gt;0\)</span>, restrict <span
-class="math inline">\(0&lt;h\le h_0\)</span>, and use the phase-space
-norm <span
+class="math inline">\(\hbar_0&gt;0\)</span>, restrict <span
+class="math inline">\(0&lt;\hbar\le \hbar_0\)</span>, and use the
+phase-space norm <span
 class="math inline">\(\|(q,p)\|_\omega=|q|+|p|/(m\omega)\)</span>.
 Define <span class="math display">\[\begin{gathered}
-b=\frac{|V&#39;(0)|+LC\sqrt{h_0}e^{\beta T}}{m\omega},\\
+b=\frac{|V&#39;(0)|+LC\sqrt{\hbar_0}e^{\beta T}}{m\omega},\\
 R_T=e^{\beta T}\big(\|(q_0,p_0)\|_\omega+Tb\big),\qquad
-F_T=|V&#39;(0)|+L(R_T+C\sqrt{h_0}e^{\beta T}),\\
+F_T=|V&#39;(0)|+L(R_T+C\sqrt{\hbar_0}e^{\beta T}),\\
 C_\delta=\frac{F_T+LR_T}{m},\qquad
-C_h=\frac{\|V&#39;&#39;&#39;\|_\infty C^2e^{2\beta T}}{2m\omega},\qquad
+C_\hbar=\frac{\|V&#39;&#39;&#39;\|_\infty C^2e^{2\beta
+T}}{2m\omega},\qquad
 G_T=\frac{e^{aT}-1}{a}.
 \tag{21}
 \end{gathered}\]</span> Equation (19) and (20) imply recursively that
 every vertex mean has <span
 class="math inline">\(\|(q_j,p_j)\|_\omega\le R_T\)</span> and <span
 class="math inline">\(|\langle V&#39;(Q)\rangle_j|\le F_T\)</span>,
-independently of <span class="math inline">\(h\)</span> and <span
+independently of <span class="math inline">\(\hbar\)</span> and <span
 class="math inline">\(\pi\)</span>. For example, the recurrence for the
 norm is bounded by <span class="math inline">\(R_{j+1}\le e^{\beta
 s_j}R_j+s_jbe^{\omega s_j}\)</span>.</p>
 <p>Linearly interpolate the mean vertices, writing <span
-class="math inline">\(z_{h,\pi}(t)=(q_{h,\pi}(t),p_{h,\pi}(t))\)</span>.
+class="math inline">\(z_{\hbar,\pi}(t)=(q_{\hbar,\pi}(t),p_{\hbar,\pi}(t))\)</span>.
 Put <span class="math inline">\(\mathcal
 F(q,p)=(p/m,-V&#39;(q))\)</span>. On every cell the two components of
 the residual are bounded by <span class="math display">\[
-|\dot q_{h,\pi}-p_{h,\pi}/m|
+|\dot q_{\hbar,\pi}-p_{\hbar,\pi}/m|
      \le |\pi|F_T/m,\quad
-|\dot p_{h,\pi}+V&#39;(q_{h,\pi})|
-     \le \tfrac12\|V&#39;&#39;&#39;\|_\infty C^2h\,e^{2\beta T}
+|\dot p_{\hbar,\pi}+V&#39;(q_{\hbar,\pi})|
+     \le \tfrac12\|V&#39;&#39;&#39;\|_\infty C^2\hbar\,e^{2\beta T}
        +L|\pi|\,\omega R_T.\tag{22}
 \]</span> Consequently <span class="math display">\[\|\dot
-z_{h,\pi}-\mathcal F(z_{h,\pi})\|_\omega
-\le C_\delta|\pi|+C_h h.\tag{23}\]</span> The first residual is the
-difference between the interpolated momentum and its post-kick value;
-the second is the sum of the packet’s force bias and the motion of the
-interpolated position. For the bias, Taylor expand <span
+z_{\hbar,\pi}-\mathcal F(z_{\hbar,\pi})\|_\omega
+\le C_\delta|\pi|+C_\hbar \hbar.\tag{23}\]</span> The first residual is
+the difference between the interpolated momentum and its post-kick
+value; the second is the sum of the packet’s force bias and the motion
+of the interpolated position. For the bias, Taylor expand <span
 class="math inline">\(V&#39;\)</span> around the packet mean <span
 class="math inline">\(q_j=\langle Q\rangle_j\)</span>. Its linear term
 has zero expectation, so <span class="math display">\[
 |\langle V&#39;(Q)\rangle_j-V&#39;(q_j)|
 \le\tfrac12\|V&#39;&#39;&#39;\|_\infty\operatorname{Var}_j(Q)
-\le\tfrac12\|V&#39;&#39;&#39;\|_\infty C^2h\,e^{2\beta T}.\tag{23a}
+\le\tfrac12\|V&#39;&#39;&#39;\|_\infty C^2\hbar\,e^{2\beta T}.\tag{23a}
 \]</span> The bounded third derivative is part of the standing
 hypotheses. For quadratic potentials <span
 class="math inline">\(V&#39;&#39;&#39;=0\)</span> and the force-bias
 term vanishes exactly. This improves the mean error; (19) still gives
-widths of order <span class="math inline">\(\sqrt h\)</span>.</p>
+widths of order <span class="math inline">\(\sqrt \hbar\)</span>.</p>
 <p>The vector field <span class="math inline">\(\mathcal F\)</span> has
 Lipschitz constant at most <span class="math inline">\(a\)</span> in
 this norm. Integrating the residuals of two products with common initial
 data, and applying Gronwall, gives <span class="math display">\[
-\sup_{t\le T}\|z_{h,\pi}(t)-z_{k,\sigma}(t)\|_\omega
+\sup_{t\le T}\|z_{\hbar,\pi}(t)-z_{k,\sigma}(t)\|_\omega
 \le G_T\!\left[
 C_\delta(|\pi|+|\sigma|)
-+C_h(h+k)\right].\tag{24}
++C_\hbar(\hbar+k)\right].\tag{24}
 \]</span> Thus the means are Cauchy in <span
 class="math inline">\(C([0,T],\mathbb R^2)\)</span> as the two scales
-<span class="math inline">\(h\)</span> and <span
+<span class="math inline">\(\hbar\)</span> and <span
 class="math inline">\(|\pi|\)</span> tend to zero <strong>in any joint
 order</strong>. Let <span class="math inline">\(z=(q,p)\)</span> be
 their limit. Equation (23) passes to the integral equation <span
@@ -444,41 +513,43 @@ replacing <span class="math inline">\(p\)</span> by <span
 class="math inline">\(-p\)</span> and reversing time.</p>
 <p>Letting <span class="math inline">\((k,|\sigma|)\to(0,0)\)</span> in
 (24) yields the explicit joint bound <span class="math display">\[
-\sup_{t\le T}\|z_{h,\pi}(t)-z(t)\|_\omega
-\le G_T\big(C_\delta|\pi|+C_h h\big).\tag{26}
+\sup_{t\le T}\|z_{\hbar,\pi}(t)-z(t)\|_\omega
+\le G_T\big(C_\delta|\pi|+C_\hbar \hbar\big).\tag{26}
 \]</span> The constants are independent of the number of cells and of
-<span class="math inline">\(h\)</span> in <span
-class="math inline">\((0,h_0]\)</span>. Equation (26) is an
+<span class="math inline">\(\hbar\)</span> in <span
+class="math inline">\((0,\hbar_0]\)</span>. Equation (26) is an
 observable-level statement about the packet means; it is not an
 operator-norm estimate on real-time propagators and does not assert a
 real-time positive path measure.</p>
-<p>Finally fix <span class="math inline">\(h&gt;0\)</span>. At a fixed
-<span class="math inline">\(t\)</span>, choose partitions containing
-<span class="math inline">\(t\)</span>. Section 4 gives strong <span
-class="math inline">\(L^2\)</span> convergence of the product state to
-<span class="math inline">\(U_h(t)\psi_h\)</span>. Equations (19)–(21)
+<p>Finally fix <span class="math inline">\(\hbar&gt;0\)</span>. At a
+fixed <span class="math inline">\(t\)</span>, choose partitions
+containing <span class="math inline">\(t\)</span>. Section 4 gives
+strong <span class="math inline">\(L^2\)</span> convergence of the
+product state to <span
+class="math inline">\(U_\hbar(t)\psi_\hbar\)</span>. Equations (19)–(21)
 bound its position and momentum second moments uniformly. Strong <span
 class="math inline">\(L^2\)</span> convergence gives convergence of
 bounded position and momentum cutoffs, and the uniform second moments
 make the first-moment tails at most <span
 class="math inline">\(O(R^{-1})\)</span>. The first moments therefore
-converge to those of <span class="math inline">\(U_h(t)\psi_h\)</span>.
-For a general refining partition, use the product truncated at the last
-vertex before <span class="math inline">\(t\)</span>; the same
-graph-norm telescoping argument is uniform on compact time intervals.
-The bounds on vertex momenta and forces make the interpolated means
-equi-Lipschitz. Pointwise identification therefore upgrades to uniform
-convergence on <span class="math inline">\([0,T]\)</span>. Passing to
-the limit in (26) gives <span class="math display">\[
+converge to those of <span
+class="math inline">\(U_\hbar(t)\psi_\hbar\)</span>. For a general
+refining partition, use the product truncated at the last vertex before
+<span class="math inline">\(t\)</span>; the same graph-norm telescoping
+argument is uniform on compact time intervals. The bounds on vertex
+momenta and forces make the interpolated means equi-Lipschitz. Pointwise
+identification therefore upgrades to uniform convergence on <span
+class="math inline">\([0,T]\)</span>. Passing to the limit in (26) gives
+<span class="math display">\[
 \sup_{t\le T}
 \left\|(\langle Q\rangle_t,\langle P\rangle_t)-z(t)\right\|_\omega
-\le G_T C_h h.\tag{27}
+\le G_T C_\hbar \hbar.\tag{27}
 \]</span> This uses no differentiation of an unbounded quantum
 observable. It also proves the claimed consistency of the two limiting
 orders for these means. The construction assumes a semiclassical family
-<span class="math inline">\(h\downarrow0\)</span>; a single
-fixed-positive-<span class="math inline">\(h\)</span> theory does not
-have simultaneously sharp position and momentum.</p>
+<span class="math inline">\(\hbar\downarrow0\)</span>; a single
+fixed-positive-<span class="math inline">\(\hbar\)</span> theory does
+not have simultaneously sharp position and momentum.</p>
 <p>The Cauchy estimate and its domain argument are the present assembly.
 The broader relation between coherent quantum packets and classical
 orbits is established prior work, including <a
@@ -537,8 +608,8 @@ href="balaban-ode-lesson.html">polygon lesson</a> gives a comparable
 refinement/Cauchy proof.</p>
 <p>The route above first constructs a quantum family and then proves
 that its means form a Cauchy family as <span
-class="math inline">\(h\downarrow0\)</span>. Its quantitative inputs are
-normalized multiscale Euclidean control, self-adjoint real-time
+class="math inline">\(\hbar\downarrow0\)</span>. Its quantitative inputs
+are normalized multiscale Euclidean control, self-adjoint real-time
 evolution, a packet variance estimate, and the <strong>same</strong>
 Lipschitz/Gronwall stability that makes Cauchy–Lipschitz work. It gives
 the explicit approximation (26) and places the classical path beside

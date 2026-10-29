@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Current research dependency graph</title>
+<title>Argument dependencies</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,132 +79,13 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1 id="current-research-dependency-graph">Current research dependency
-graph</h1>
-<p>Navigation map, begun 2026-10-01; Newton paths updated 2026-10-28. <a
+<h1 id="argument-dependencies">Argument dependencies</h1>
+<p><a
 href="https://github.com/arivero/navstokgap/blob/main/research/STATE.md">STATE</a>
-selects work; this map does not change that queue. <a
-href="../notes/index.html">The catalog</a> covers every note. Solid
-arrows below indicate recommended reading order; the accompanying text
-identifies actual mathematical inputs and required corrections. Dashed
-arrows mark proposed extensions or supporting transfers, not established
-inputs to a completed continuum construction.</p>
-<pre class="mermaid"><code>flowchart TD
-  R[Exact insertion and arbitrary partitions] --&gt; S[Gauge series / parallel factorization]
-  R --&gt; C[Newton cut measure and polygon phase]
-  S --&gt; M[Compact-group midpoint identities]
-  M --&gt; O[Mid-plane order-t calculation]
-  O --&gt; B[Retained-barrier small-field estimates]
-  B --&gt; D[All-order weak-strip dressing]
-  D --&gt; Q[Quadratic moving-mean source test]
-  Q -.-&gt; N[Complex nonlinear saddle and full normalized comparison]
-  N -.-&gt; I[Stability, SU3 transfer, iteration]
-  S --&gt; G[4D Gaussian composition]
-  G -.-&gt; U[Depth-uniform generated-action matching]
-  I -.-&gt; V[Continuum construction and physical spectral weight]
-  U -.-&gt; V
-  T[Strong-coupling target box] -.-&gt; V
-  F[Renormalized small-volume Feshbach bridge] -.-&gt; V
-  C --&gt; P[Gaussian and general record costs]
-  P --&gt; A[Unit separate from indeterminacy]
-  A --&gt; Z[Statistical-speed conditional theorem]
-  Z --&gt; H[Complete-record and nonlinear recording tests]
-  H --&gt; E[Coherence memory and positive-tail stability]
-  E -.-&gt; X[Physical history rule with retained memory]
-  X -.-&gt; Y[Positive universal action necessity]</code></pre>
-<h2 id="gauge-the-next-calculation">Gauge: the next calculation</h2>
-<p>Read in this order:</p>
-<ol type="1">
-<li><a href="../notes/refinement-composition-and-limit.html">Refinement
-composition</a>, exact insertion identities and the summable-error
-criterion.</li>
-<li><a
-href="../notes/series-parallel-gauge-refinement.html">Series/parallel
-refinement</a>, Prop. 1: directional halving isolates the interacting
-mid-plane integral.</li>
-<li><a href="../notes/su2-midpoint-exact.html">SU(2) midpoint</a> and,
-when changing group or cut fraction, <a
-href="../notes/sun-midpoint-centre.html">centre-sensitive cuts</a>.
-Exact character traces do not supply all matrix entries or volume
-control.</li>
-<li><a href="../notes/su2-midplane-order-t.html">Order-t mid-plane
-calculation</a>, including torus holonomy and the normalized remainder
-obligation.</li>
-<li><a href="../notes/su2-midplane-small-field.html">Small-field
-notebook</a>, §§24–25 for targets (112), (113), (116), then §§33–37 for
-the actual current inputs.</li>
-</ol>
-<p>Durable inputs: uniform convexity and joint bad-set rarity, decaying
-response kernels with contacts accounted for, an undifferentiated
-barrier, and a convergent weak-recoupling gas. Section 35 supplies
-all-order connected bad-component control <strong>in its weak
-strip</strong>. Section 36 constructs exact dressed activities
-satisfying (112). Section 37 supplies a fixed source radius and the
-subtracted log-barrier bound (177) in a centered quadratic model. It is
-a test of part of (113), not the complete nonlinear integral.</p>
-<p>The next mathematical step is complex centered nonlinear control with
-decaying dependence of the moving saddle on boundary sources.
-Dependencies are the fixed-barrier contour/source accounting of §37 and
-the locality and connected-support reserves of §§33–36. Abandon a
-proposed estimate if it differentiates the barrier, charges moving-mean
-amplification to every good connector, assumes contact cancellation, or
-loses volume-uniform constants. Physical recoupling, target-covering
-paths, curvature conversion, group integral comparison, perturbed-action
-stability and iteration remain later obligations. Check group constants
-before transferring SU(2) results to SU(3).</p>
-<p>Keep these constraints within reach: <a
-href="../notes/agmon-ground-state-suppression.html">local/global
-Agmon</a>, <a href="../notes/blocking-criterion-monotone.html">blocking
-criterion</a>, <a href="../notes/flow-conjugation-truncation.html">flow
-versus coarse graining</a>, <a
-href="../notes/small-field-step-decay-and-threshold.html">explicit
-weak-side thresholds</a>, and <a
-href="../notes/reasons-to-stop-as-research.html">failed crossover
-bridges</a>. The <a href="obstructions.html">obstruction map</a> gives
-the scope of each failure.</p>
-<h2 id="gauge-four-dimensional-matching-and-the-spectral-exit">Gauge:
-four-dimensional matching and the spectral exit</h2>
-<p>For atlas cell 4 read <a
-href="../notes/gaussian-blocking-coupling.html">Gaussian blocking</a> →
-<a href="../notes/four-dimensional-parallel-log.html">parallel
-logarithm</a> → <a href="../notes/four-dimensional-composition.html">4D
-composition</a>, especially its (14) and §7. Exact Gaussian Schur
-composition and finite one-step subtractions are inputs; depth-uniform
-nonlinear contraction and remainder control remain open. A formal
-one-loop coefficient is not iteration.</p>
-<p>For a physical gap exit read <a
-href="../notes/mass-gap-obligations-lattice.html">lattice
-obligations</a>, with the <a
-href="../notes/mass-gap-openings.html">scaling-region correction</a>,
-then <a href="../notes/strong-coupling-target-box.html">strong-coupling
-target</a> and <a href="../notes/uv-halving-ir-confinement.html">UV
-halving/IR confinement</a>. Strong-coupling volume uniformity is
-durable. Reaching that box with controlled generated interactions from a
-weak-coupling scaling trajectory is open. T2′ at every bare coupling is
-stronger than the continuum argument needs. Construction, nontriviality,
-volume uniformity, physical time and surviving gauge-invariant spectral
-weight must each be supplied.</p>
-<p>For STATE’s supporting small-volume bridge read <a
-href="../notes/weak-coupling-feshbach-reduction.html">Feshbach
-reduction</a> → <a href="../notes/torus-valley-potential.html">torus
-valley</a>, together with the <a
-href="../notes/weak-coupling-feshbach-reduction.html">UV Schur
-correction</a>. H3 is the effective zero-mode valley-gap estimate. The
-full transfer also needs H1’s nonzero-mode separation and a
-renormalized/fibered H2 Schur bound; the bare-vacuum error is not
-uniform as the cutoff is removed. Spectral moment or trial-state upper
-bounds do not replace a positive lower bound. The displayed cutoff torus
-calculation uses SU(2); applying this supporting bridge to the main
-SU(3) goal also requires the corresponding group-dependent operator
-estimates.</p>
-<h2 id="newton-recent-dependency-paths">Newton: recent dependency
-paths</h2>
-<p>The <a
-href="../notes/newton-dimock-balaban-guide.html#recent-newton-synthesis">recent
-synthesis</a> states the results and their limitations. The paths below
-identify the proofs and countertests needed for a particular question;
-arrows indicate reading order, not a proof that one physical premise
-follows from another.</p>
+owns priorities; the <a href="../notes/index.html">catalog</a> owns
+coverage. Arrows below indicate mathematical input or reading order as
+specified, not an implication between physical premises. Former names
+resolve to canonical notes.</p>
 <table>
 <colgroup>
 <col style="width: 33%" />
@@ -214,197 +95,144 @@ follows from another.</p>
 <thead>
 <tr class="header">
 <th>Question</th>
-<th>Proof path</th>
-<th>Scope to keep</th>
+<th>Argument path</th>
+<th>Dependency that remains explicit</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>How does refinement construct classical motion?</td>
+<td>Classical initial-value construction</td>
+<td><a href="../notes/balaban-ode-lesson.html">Polygons and
+regularity</a></td>
+<td>Stability/residual estimates; the logarithmic arrival test replaces
+a sufficient Lipschitz hypothesis only in its conservative family</td>
+</tr>
+<tr class="even">
+<td>Endpoint elimination</td>
 <td><a href="../notes/balaban-newton-time-blocking.html">Time
-blocking</a> → <a href="../notes/balaban-ode-lesson.html">ODE lesson</a>
-→ <a href="../notes/newton-continuity-time-scales.html">non-Lipschitz
-time scales</a></td>
-<td>Endpoint and initial-value problems differ; unbounded slope alone
-does not imply nonuniqueness</td>
+blocking</a> → <a
+href="../notes/newton-nonlinear-time-cell.html">nonlinear cell</a></td>
+<td>Dirichlet contraction and normalized full conditional law; endpoint
+caustics differ from IVP failure</td>
 </tr>
-<tr class="even">
-<td>What quantum construction is available?</td>
-<td><a href="../notes/constructive-qft-one-time.html">Quartic <span
-class="math inline">\(0+1\)</span> theory</a> → <a
-href="../notes/quantum-blocks-construct-newton.html">packet
+<tr class="odd">
+<td>Quantum lift</td>
+<td><a href="../notes/lipschitz-certificate-quantum-lift.html">C1,1
+certificate</a> and <a
+href="../notes/quantum-blocks-construct-newton.html">smooth
 construction</a> → <a
-href="../notes/groupoid-quantum-newton-states.html">groupoid states</a>
-→ <a href="../notes/lipschitz-certificate-quantum-lift.html">Lipschitz
-lift</a></td>
-<td>Positive action and the relevant operator toolkit are supplied; the
-universal lifting conjecture is open</td>
-</tr>
-<tr class="odd">
-<td>How could the groupoid scale and <span
-class="math inline">\(\hbar\)</span> be related by RG?</td>
-<td><a href="https://arxiv.org/pdf/dg-ga/9710026">Rivero 1997, toy RG
-triangle</a> → <a href="https://arxiv.org/pdf/quant-ph/9803035">Rivero
-1998, two regulators</a> → <a
-href="../notes/rivero-1998-conjecture-central-forces.html">control-map
-test</a> → <a
-href="../notes/groupoid-quantum-newton-states.html">groupoid states and
-blocking</a></td>
-<td>The reference slice and controlled phase parameter are chosen.
-Construct the normalized control/blocking map and distinguish it from
-geometric zoom before claiming a physical running or selected <span
-class="math inline">\(\hbar\)</span></td>
+href="../notes/groupoid-quantum-newton-states.html">groupoid
+states</a></td>
+<td>Operator toolkit and supplied action; weaker and stronger regularity
+give different rates</td>
 </tr>
 <tr class="even">
-<td>Can a merger or continuity select a floor?</td>
-<td><a href="../notes/newton-cusp-preparation-floor.html">Cusp
-preparation floor</a> → <a
-href="../notes/central-limit-canonical-gaussian-sector.html">canonical
-central limit</a> → <a
-href="../notes/cusp-history-records-continuity.html">history and
-continuity</a></td>
-<td>The reversible point-compatibility clause may be vacuous; the later
-one-time continuity theorem uses actual Gaussian transport and
-additional copy closure. Neither identifies the floor with <span
-class="math inline">\(\hbar/2\)</span></td>
+<td>Cusp preparation floors</td>
+<td><a href="../notes/newton-cusp-preparation-floor.html">Merger,
+history and continuity</a> → <a
+href="../notes/central-limit-canonical-gaussian-sector.html">Gaussian-sector
+construction</a> → <a
+href="../notes/gaussian-meter-entropy-floor.html">meter/shear
+test</a></td>
+<td>Different state spaces, weak/W2 closure, actual Gaussian transport,
+independent copying and selective instruments</td>
 </tr>
 <tr class="odd">
-<td>What do classical completions and records allow?</td>
-<td><a href="../notes/cusp-history-records-continuity.html">History
-space and fine records</a> → <a
-href="../notes/gaussian-meter-entropy-floor.html">Gaussian meter and
-nonlinear shear</a>; compare <a
-href="../notes/conservative-harmonic-receiver.html">finite receiver
-memory</a></td>
-<td>History states retain future selection; the finite receiver does not
-realize cusp branching. The meter uses a diverging-aperture family; the
-shear only excludes the stated Gaussian-mixture repair</td>
+<td>Record geometry and bounds</td>
+<td><a href="../notes/cut-measure-newton.html">Cut energy</a> → <a
+href="../notes/mark-cost-and-statistical-floor.html">mark model</a>; <a
+href="../notes/record-distance-path-length.html">general quantum
+resources</a></td>
+<td>Gaussian availability and nuisance invariance differ from
+hybrid-state aperture and conjugate-disturbance hypotheses</td>
 </tr>
 <tr class="even">
-<td>Do refinement and quantization determine each other?</td>
+<td>Complete classical apparatus</td>
+<td><a href="../notes/conservative-harmonic-receiver.html">Receiver
+mechanics</a> → <a
+href="../notes/autonomous-finite-readout.html">autonomous readout</a> →
+<a href="../notes/calibration-tolerance-recovery.html">calibration
+fibres</a></td>
+<td>Actual hidden/controller state and calibrated access; no conversion
+of scalar reconstruction risks into covariance by definition</td>
+</tr>
+<tr class="odd">
+<td>Force-limited information</td>
+<td><a href="../notes/causal-force-information.html">Reachable lenses
+and minimax</a></td>
+<td>Specified force, delay, record precision and
+independent/shared/block budget geometry</td>
+</tr>
+<tr class="even">
+<td>Complete retained records</td>
+<td><a href="../notes/sed-closure-under-recording.html">Recording</a> →
+<a href="../notes/score-constrained-ensemble.html">score-constrained
+action</a></td>
+<td>Conditional terminal noise, conjugate recoil, path limits, nonlinear
+curvature and branch-dependent policies</td>
+</tr>
+<tr class="odd">
+<td>Quantum/classical records</td>
+<td><a href="../notes/zero-branch-reachability.html">Coherence
+countercase</a>, <a
+href="../notes/self-sufficiency-contrast.html">Coulomb
+completion</a></td>
+<td>Coherence, topology, singular-domain selection and fixed-interval
+localization remain separate</td>
+</tr>
+<tr class="even">
+<td>Gauge local step</td>
 <td><a
-href="../notes/classical-quantum-existence-conjecture.html">Existence
-conjecture</a> → <a
-href="../notes/lean-verification-quantum-newton.html">verification and
-ordering</a></td>
-<td>Fixed-action product convergence, joint-limit ray distance and
-factor ordering differ; Lean targets are not compiled proofs</td>
+href="../notes/series-parallel-gauge-refinement.html">Series/parallel</a>
+→ <a href="../notes/sun-midpoint-centre.html">compact-group
+characters</a> and <a href="../notes/su2-midpoint-exact.html">SU2 matrix
+sectors</a> → <a href="../notes/su2-midplane-order-t.html">order-t
+action</a> → <a
+href="../notes/su2-midplane-small-field.html">retained-barrier
+estimates</a></td>
+<td>Exact traces are not matrix entries; weak-strip (112)/(116) and
+quadratic (177) do not prove nonlinear (113), full recoupling or
+iteration</td>
 </tr>
 <tr class="odd">
-<td>Does a response ceiling select action?</td>
-<td><a href="../notes/newton-nonlinear-time-cell.html">Nonlinear
-cell</a> → <a
-href="../notes/newton-branch-response-action.html">branch-response
-theorem</a></td>
-<td>The weight and uniform ceiling are supplied; classical branch memory
-and thermal response are countercontrols</td>
+<td>Four-dimensional running</td>
+<td><a href="../notes/gaussian-blocking-coupling.html">Gaussian
+coefficient</a> → <a
+href="../notes/four-dimensional-parallel-log.html">one-step parallel
+matching</a> → <a
+href="../notes/four-dimensional-composition.html">generated-action
+composition</a></td>
+<td>Uniform subtracted cubic/quartic contractions, endpoint matching and
+remainder sum are open</td>
+</tr>
+<tr class="even">
+<td>Physical gauge spectrum</td>
+<td><a href="../notes/mass-gap-obligations-lattice.html">Lattice and
+limit obligations</a> with <a
+href="../notes/wilson-strong-coupling-explicit.html">Wilson</a>, <a
+href="../notes/dobrushin-uniqueness-wilson.html">Dobrushin</a> and <a
+href="../notes/strong-coupling-uniform-gap.html">KS</a> inputs</td>
+<td>Operators, physical units, volume/cutoff order, nontriviality and
+observable weight must match</td>
+</tr>
+<tr class="odd">
+<td>Small-volume transfer</td>
+<td><a
+href="../notes/weak-coupling-feshbach-reduction.html">Feshbach</a> → <a
+href="../notes/torus-valley-potential.html">torus valley</a></td>
+<td>Renormalized H1/H2 complement/Schur control and H3 gap, not ground
+energy alone</td>
 </tr>
 </tbody>
 </table>
-<h2 id="newton-earlier-recording-and-memory-mechanisms">Newton: earlier
-recording and memory mechanisms</h2>
-<p>These paths complement the recent cusp and meter tests:</p>
-<ol type="1">
-<li><a href="../notes/principia-fifth-postulate.html">Fifth
-postulate</a> → <a href="../notes/planck-gap-paper.html">Planck
-paper</a>: joint determinacy, Newton’s observable and resource-scoped
-record/disturbance bounds. The Gaussian floor uses non-adaptive
-independent marks and preparation-invariant tests; general instruments
-have their own body, apparatus and comparison-state resources.</li>
-<li><a href="../notes/necessity-unit-and-indeterminacy.html">Unit and
-indeterminacy</a> → <a
-href="../notes/newton-indeterminacy-routes.html">indeterminacy
-routes</a> → <a
-href="../notes/sed-closure-under-recording.html">recording notebook</a>,
-§§8.11–8.23: distinguish a radiation unit, statistical-speed premise,
-full controller records, nonlinear feedback and phase-memory tests.
-Terminal-conjugate recovery and energy exchange remain obligations.</li>
-<li><a href="../notes/score-constrained-ensemble.html">Score-constrained
-ensembles</a>: the canonical field action is restricted rather than an
-invariant Newtonian reduction. Its forward completion and
-branch-dependent copy protocol have explicit state/controller
-assumptions; composition closure alone selects no positive coefficient.
-Nonlinear recording generates modes outside the finite family and
-retains unread recoil energy.</li>
-</ol>
-<p>Supporting proofs: <a href="../notes/cut-measure-newton.html">cut
-measure</a>, <a href="../notes/record-costs-recoil.html">recoil</a>, <a
-href="../notes/record-costs-disturbance.html">disturbance</a>, and <a
-href="../notes/record-distance-path-length.html">path length</a>. The <a
-href="../notes/leibniz-continuity-records.html">Leibniz continuity</a>
-equivalence uses an optimized invariant Gaussian family, not every fixed
-protocol; <a
-href="../notes/stochastic-route-velocitas-ultima.html">stochastic
-composition</a> does not force its common coefficient to be nonzero; and
-<a href="../notes/sed-zeta-radiation-link.html">SED calibration</a>
-retains disputed Planck-spectrum and resonant-variable premises. Earlier
-countertests and their exact limits are in <a
-href="obstructions.html">obstructions</a>.</p>
-<h2 id="orientation-and-supporting-branches">Orientation and supporting
-branches</h2>
-<p>The principal proof inputs can be read separately from the diagram’s
-routing:</p>
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Established input</th>
-<th>Obligation it supplies</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Exact series pushforward and compact-group midpoint identities</td>
-<td>Defines the interacting mid-plane comparison; does not bound its
-normalized remainder</td>
-</tr>
-<tr class="even">
-<td>Convex reference, undifferentiated barrier, rarity and local
-connector majorants</td>
-<td>Hypotheses for the weak-strip connected and dressed estimates
-(116)/(112)</td>
-</tr>
-<tr class="odd">
-<td>Exact dressed gas and local affine moving means</td>
-<td>Quadratic subtracted source bound (177), a limited test of
-(113)</td>
-</tr>
-<tr class="even">
-<td>Gaussian block Schur maps and generated one-step vertices</td>
-<td>Formulation of the open depth-uniform subtracted matching estimate
-(14)</td>
-</tr>
-<tr class="odd">
-<td>Dirichlet action/cut hats and invariant Gaussian mark
-constraints</td>
-<td>Finite-grid distinguishability supremum; independent quantum
-instrument bounds use their own comparison-state hypotheses</td>
-</tr>
-<tr class="even">
-<td>Gaussian covariance/statistical-speed premise</td>
-<td>Conditional classical disturbance theorem; neither a radiation unit
-nor prior covariance alone supplies complete-record closure</td>
-</tr>
-<tr class="odd">
-<td>Compressed zero-mode gap, complementary-sector bound and relative
-Schur estimate</td>
-<td>Conditional spectral gap transfer; the required physical bounds and
-SU(3) estimates remain open</td>
-</tr>
-</tbody>
-</table>
-<p><a href="../notes/three-continuum-limits.html">Three continuum
-limits</a> keeps the pion comparison as a symmetry/spectral benchmark
-rather than a third construction programme. <a
-href="../notes/halving-atlas.html">Halving atlas</a> locates open cells;
-<a href="../notes/refinement-results.html">refinement results</a> is a
-compact theorem entry point, with later notebook sections needed for the
-current frontier. Historical proof architecture in
-<code>../newtonlean</code> is source/formalization context, not a
-Lean-build dependency of these modern calculations.</p>
+<p>The <a href="../notes/halving-atlas.html">gauge atlas</a> gives the
+dimension/group map; <a
+href="../notes/three-continuum-limits.html">three continuum limits</a>
+retains the distinct pion Ward identity and physical spectral criteria.
+The <a href="obstructions.html">obstruction map</a> identifies failed
+routes and countermodels that constrain every proposed extension. Source
+reading and mathematical proof status are recorded in each canonical
+treatment.</p>
 
 </main>
 <footer class="site"><div class="wrap">

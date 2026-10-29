@@ -154,7 +154,7 @@ next distinct test is global spin-action patching: distinguish classical
 symplectic consistency from consistency of a proposed phase $\exp(iS/K)$,
 and locate which premise, if any, forces integrality or fixes $K$.
 
-Source context is the [Q05 normalization calculation](stabilized-topology-action-scale.md)
+Source context is the [Q05 normalization calculation](topological-sector-action-selection.md#a-stabilized-three-dimensional-trial-family)
 and [conditional composition result](composition-universality.md). Their
 source audits are retained for their own claims. The present elementary
 mechanical construction has no new prior-art comparison yet; this exploratory

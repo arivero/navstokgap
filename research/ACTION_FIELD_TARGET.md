@@ -49,7 +49,7 @@ use. A supplied-hbar model is supporting evidence only.
 
 ## What the accepted evidence decides
 
-The [consolidation](../notes/action-scale-obstructions.md) connects these gates
+The [consolidation](../notes/action-unit-dimensional-selection.md#observables-and-the-admissible-class) connects these gates
 to the accepted proofs. Continuous action variations (C002), mechanical
 contractions (C056–C057) and fixed smooth-potential small circles (C058) defeat
 different proposed lower-bound premises. Exact apparatus constructions

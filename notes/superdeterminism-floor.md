@@ -144,7 +144,7 @@ with $d=2N$ for $N$ canonical pairs.
   carry no metric a floor could smooth; the automaton has its own floor,
   the cell, and a permutation of a finite set is periodic and never
   mixes, so a lifetime statement for it would need an infinite automaton
-  ([discrete-substrate note](discrete-substrate-actors.md)).
+  ([discrete-substrate note](ancient-cuts-provenance.md#modern-discrete-state-and-operator-comparisons)).
 - **Palmer's invariant set postulate** places states on a fractal,
   measure-zero invariant set and counterfactual settings off it
   ([Palmer 2009](https://doi.org/10.1098/rspa.2009.0080); read at the level

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The two reasons to stop, as research problems: what a correlation inequality would buy, what a certified verification cannot, and where the research is</title>
+<title>Gauge crossover: comparison tools and their missing estimates</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,38 +79,30 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>The two reasons to stop, as research problems: what a correlation
-inequality would buy, what a certified verification cannot, and where
-the research is</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/reasons-to-stop-as-research.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/reasons-to-stop-as-research.pdf">PDF</a></p><p>The user’s direction of 2026-09-17: the reasons recorded for stopping
-are reasons to research. Taking each seriously changes the map, and one
-earlier statement is corrected: a correlation inequality was called an
-unblocking, and it is less than that.</p>
-<p><strong>What a Griffiths-type inequality would buy.</strong> Such an
-inequality gives <span class="math inline">\(d\langle
-W(C)\rangle/d\beta_W\ge0\)</span> for Wilson loops. Consequences: the
-string tension is nonincreasing in <span
-class="math inline">\(\beta_W\)</span>, and the decay rate of any
-correlator of loop observables with vanishing mean is nonincreasing in
-<span class="math inline">\(\beta_W\)</span>. Control therefore
-transfers <strong>from weaker coupling to stronger coupling
-only</strong>: knowing a positive mass at <span
-class="math inline">\(\beta_W&#39;\)</span> gives it at every <span
-class="math inline">\(\beta_W\le\beta_W&#39;\)</span>. On the map of <a
-href="confinement-scale-bands.html">the bands note</a> this replaces the
-three strong-side blocking steps of band B by the single mixing
-statement H2, and it touches nothing on the weak side, where the problem
-is. The vacuum-sector gap itself, the <span
-class="math inline">\(0^{++}\)</span> channel, is the decay of a
-truncated correlator whose two terms both increase with <span
-class="math inline">\(\beta_W\)</span>, so even its monotonicity does
-not follow. A correlation inequality is a simplification of H1’s target,
-and no substitute for H1.</p>
-<p><strong>Where the standard proofs of such inequalities
-break.</strong> Ginibre’s method needs the interaction to lie in a cone
-of products of single-site functions satisfying the duplicate-variables
-condition. For the character cone of <span
-class="math inline">\(SU(2)\)</span> the single-site condition reduces
-to <span
+<h1>Gauge crossover: comparison tools and their missing estimates</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/reasons-to-stop-as-research.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/reasons-to-stop-as-research.pdf">PDF</a></p><p><strong>Maintained conclusion.</strong> The examined comparison and
+finite-block techniques provide possible ingredients for crossover
+control, not an exhaustive list of ways to prove a physical continuum
+gap. A normalized, volume-uniform mixing estimate must be established
+for the actual generated interaction. Neither a loop monotonicity
+statement nor a finite certification proposal supplies it by itself.
+Weak-to-strong transport, cutoff removal and physical reconstruction
+remain additional steps.</p>
+<h2
+id="correlation-inequalities-what-would-actually-transfer">Correlation
+inequalities: what would actually transfer</h2>
+<p>If Wilson loop expectations increase with <span
+class="math inline">\(\beta_W\)</span>, an area-law string tension
+defined by the corresponding limit is nonincreasing where the limit and
+comparison are valid. A lower area-law bound can then transfer from a
+weaker to a stronger coupling. Monotonicity of a loop expectation alone
+does not imply monotonicity of a connected correlator, its decay
+exponent or the vacuum-sector spectral gap. Both terms of a truncated
+correlator may increase. The old claim that this closes every
+stronger-coupling channel is withdrawn.</p>
+<p>Ginibre’s method needs the interaction to lie in a cone of products
+of single-site functions satisfying the duplicate-variables condition.
+For the character cone of <span class="math inline">\(SU(2)\)</span> the
+single-site condition reduces to <span
 class="math display">\[\int\!\!\int\prod_{i=1}^n\big(\chi_i(x)-\chi_i(y)\big)\,dx\,dy
 =\sum_{S\subseteq\{1..n\}}(-1)^{|S^c|}\,N_S\,N_{S^c},\qquad
 N_S=\dim\operatorname{Hom}\Big(1,\bigotimes_{i\in S}V_i\Big),\]</span>
@@ -135,84 +127,147 @@ is not a nonnegative combination of products of single-link functions:
 the abelian proof writes <span
 class="math inline">\(\cos(\theta_1+\dots)\)</span> through sums and
 differences of angles, which uses the commutativity of the group, and no
-analogue exists for a matrix product. To this author’s knowledge the
-second Griffiths inequality is open for <span
+analogue exists for a matrix product. The second Griffiths inequality
+was not established by the sources read here for <span
 class="math inline">\(SU(2)\)</span> and <span
-class="math inline">\(SU(3)\)</span> lattice gauge theory, with neither
-proof nor counterexample; the centre-based inequalities that do exist
-are listed in <a href="what-would-unblock.html">the what-would-unblock
-note</a> §1.</p>
-<p><strong>What a certified verification cannot do.</strong> H2 at <span
-class="math inline">\(\beta_W\simeq6\)</span> on a box of <span
-class="math inline">\(216\)</span> to <span
-class="math inline">\(2000\)</span> links asks for a certified bound on
-a supremum over boundary conditions of a total-variation distance
-between marginals of Gibbs measures on <span
-class="math inline">\(SU(3)^{|V|}\)</span>, an integral over <span
-class="math inline">\(1700\)</span> to <span
-class="math inline">\(16000\)</span> real dimensions. Certified
-quadrature in that dimension does not exist; transfer-matrix truncations
-in the character basis have state spaces exponential in the slice; Monte
-Carlo is not certified. The certified methods that exist are polymer
-expansions with computer-enumerated small polymers and analytic tails,
-and they converge only where the expansion does, which for the Wilson
-measure means <span class="math inline">\(\beta_W\)</span> of order
-<span class="math inline">\(0.1\)</span> to <span
-class="math inline">\(1\)</span>, never <span
-class="math inline">\(6\)</span>. So H2 cannot be supplied at the
-coupling where it is needed, by any method known to the author, and the
-rigorous reach of the strong side ends at <span
-class="math inline">\(\beta_W\sim1\)</span> at best, a factor of six
-below the crossover. The corresponding decision about the repository’s
-rules is therefore moot.</p>
-<p><strong>Where the research is.</strong> Both reasons point to the
-same place. The mass gap for <span class="math inline">\(SU(3)\)</span>
-is H1: control of the blocking steps from the weak side down to the
-coupling where the strong side takes over, and the strong side’s reach
-is <span class="math inline">\(\beta_W\sim1\)</span> in principle and
-<span class="math inline">\(0.0135\)</span> as proved. H1 splits into
-two sub-targets.</p>
-<ul>
-<li><em>H1a, sharpness.</em> Rigorous small-field renormalization exists
-(Balaban, Commun. Math. Phys. 95 (1984) 17; 109 (1987) 249; 119 (1988)
-243; 122 (1989) 175; Magnen, Rivasseau and Sénéor, Commun. Math. Phys.
-155 (1993) 325; Dimock’s exposition, Rev. Math. Phys. 25 (2013) 1330010;
-all metadata level) and holds for <span
-class="math inline">\(g^2\)</span> below an unspecified constant. The
-weak-side analogue of band B is the stretch between the coupling that a
-rigorous small-field step can handle with explicit constants and <span
-class="math inline">\(g^2\simeq1\)</span>, and its width is unknown
-because no explicit constant has ever been written down for one
-step.</li>
-<li><em>H1b, the physics.</em> The last steps, in which <span
-class="math inline">\(\xi/a\)</span> passes from about <span
-class="math inline">\(10\)</span> to about <span
-class="math inline">\(1\)</span>; three doublings at one loop.</li>
-</ul>
-<p><strong>The programme that follows.</strong> Write one blocking step
-of the Euclidean small-field renormalization for <span
-class="math inline">\(SU(3)\)</span> with explicit constants, in the
-form: block-averaged link variables; the fluctuation integral at
-quadratic order, which is Gaussian with a constraint and whose
-propagator decays on the scale of the block; the remainder as a polymer
-gas with an explicit Kotecký–Preiss threshold <span
-class="math inline">\(g_{\rm pert}^2\)</span>; and the bound on the
-distance of the effective interaction from the Wilson form. The pieces
-already in hand with constants are the large-field measure bound <span
-class="math inline">\(e^{-\eta^2/(4g^2)}\)</span> of <a
-href="large-field-action-lower-bound.html">the lower-bound note</a>, the
-sharpness of the flow’s growth (<a
-href="flow-instability-large-field.html">instability note</a>), and the
-lattice truncation (<a
-href="flow-conjugation-truncation.html">lattice-truncation note</a>).
-The deliverable of the first step is the number <span
-class="math inline">\(g_{\rm pert}^2\)</span>, the weak-side counterpart
-of the strong side’s <span class="math inline">\(0.0135\)</span>; the
-number of doublings between <span class="math inline">\(g_{\rm
-pert}^2\)</span> and <span class="math inline">\(g^2\simeq1\)</span> is
-then the honest width of the problem, in place of the crude “<span
-class="math inline">\(1/g^2\gtrsim10^2\)</span>” now on the map.
-Constants explicit; nothing promoted.</p>
+class="math inline">\(SU(3)\)</span> lattice gauge theory, ; no proof or
+counterexample is supplied here, and the centre-based inequalities that
+do exist are listed in <a
+href="reasons-to-stop-as-research.html#tools-and-source-scope">the
+what-would-unblock note</a> §1.</p>
+<p>The finite checks are not an all-order character-cone theorem. The
+obstacle identified here is the absence of the needed positive plaquette
+decomposition in the examined construction, not a proof that every
+correlation inequality for a nonabelian theory is impossible.</p>
+<h2 id="tools-and-source-scope">Tools and source scope</h2>
+<p>These are the sources previously cited in this family, at
+<strong>metadata level</strong> unless a linked canonical proof records
+a deeper read. They are leads and scope comparisons, not independently
+verified universal impossibility claims.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tool/source</th>
+<th>Potential input</th>
+<th>Missing transfer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ginibre, CMP 16 (1970) 310; Aizenman–Barsky–Fernández, JSP 47 (1987)
+343</td>
+<td>Positive cones and Ising-type sharpness</td>
+<td>A nonabelian plaquette interaction satisfying the required
+hypotheses</td>
+</tr>
+<tr class="even">
+<td>Mack–Petkova, Ann. Phys. 123 (1979) 442 and 125 (1980) 117;
+Tomboulis–Yaffe, CMP 100 (1985) 313</td>
+<td>Centre, electric-flux and vortex/loop comparisons</td>
+<td>A vacuum-sector physical spectral bound; a string tension is a
+different observable</td>
+</tr>
+<tr class="odd">
+<td>Fröhlich–Israel–Lieb–Simon, CMP 62 (1978) 1</td>
+<td>Reflection-positive chessboard bounds for specified events</td>
+<td>Good-region mixing and a normalized block free-energy estimate</td>
+</tr>
+<tr class="even">
+<td>Fröhlich–Simon–Spencer, CMP 50 (1976) 79</td>
+<td>Gaussian-domination/infrared techniques for their stated spin
+interactions</td>
+<td>The needed domination for the nonquadratic plaquette product;
+nonabelian target curvature alone is not the failure reason</td>
+</tr>
+<tr class="odd">
+<td>Knabe, JSP 52 (1988) 627</td>
+<td>A finite-size gap criterion under frustration-free hypotheses</td>
+<td>Those hypotheses are not verified for interacting KS at general
+coupling; this does not exhaust all finite-size criteria</td>
+</tr>
+<tr class="even">
+<td><a href="intermediate-region-finite-verification.html">Finite mixing
+proposal</a>, <a href="dobrushin-uniqueness-wilson.html">Dobrushin
+proof</a></td>
+<td>A certified supremum over boundary conditions could imply a
+Wilson-transfer gap</td>
+<td>No certificate at the physical crossover or for the generated
+interaction is supplied</td>
+</tr>
+<tr class="odd">
+<td><a href="flow-conjugation-truncation.html">Exact flow
+conjugation</a></td>
+<td>Spectrum-preserving change of variables</td>
+<td>New effective decomposition, relative error and iterative
+control</td>
+</tr>
+<tr class="even">
+<td><a href="weak-coupling-feshbach-reduction.html">Small-volume
+bridge</a></td>
+<td>Compressed zero-mode estimates with a named complement/Schur
+target</td>
+<td>Renormalized cutoff-uniform transfer and passage to large physical
+volume</td>
+</tr>
+</tbody>
+</table>
+<p>A signed spin-foam representation does not make the original Wilson
+probability weight negative, and positive plaquette coefficients do not
+make every recoupling amplitude positive. Centre comparisons,
+electric-flux sectors and glueball correlations must name the sector
+they control. The 2007 approximate centre-decimation proposal
+(arXiv:0707.2179, metadata) was not established as a theorem by this
+repository’s reading.</p>
+<p>Gauge fixing can change a conditional specification; merely
+subtracting a maximal-tree fraction from a neighbour count does not
+prove a new Dobrushin coefficient. The earlier numerical suggestion
+<span class="math inline">\(444\mapsto330\)</span> is unsupported here.
+Likewise, neither a perturbative four-dimensional Langevin construction
+nor its obstruction is proved by this source survey; an auxiliary
+stochastic clock is not a physical energy gap.</p>
+<h2 id="finite-certification-and-the-actual-interaction">Finite
+certification and the actual interaction</h2>
+<p>The earlier illustrative boxes at <span
+class="math inline">\(\beta_W\simeq6\)</span> had roughly <span
+class="math inline">\(216\)</span>–<span
+class="math inline">\(2000\)</span> links, hence thousands of
+integration variables. These are scale estimates from the <a
+href="confinement-scale-bands.html">bands note</a>, not a complexity
+theorem excluding every certification method. Monte Carlo by itself is
+not a certified supremum over boundary conditions. A rigorous polymer
+enumeration needs an analytic tail and its own convergence region. The
+explicit Wilson criteria here prove sufficient strong-coupling regions,
+not limits on all possible future methods. The <a
+href="wilson-strong-coupling-explicit.html">strong-coupling proofs</a>
+and <a href="dobrushin-uniqueness-wilson.html">Dobrushin criterion</a>
+own their constants.</p>
+<p>The weak side has explicit but restricted one-step tests in <a
+href="small-field-step-gaussian.html">Gaussian fluctuation control</a>
+and <a href="small-field-step-decay-and-threshold.html">decay/remainder
+thresholds</a>. The <a href="su2-midplane-small-field.html">mid-plane
+notebook</a> later proves different retained-barrier weak-strip
+estimates. Their coefficients and cutoff/volume hypotheses cannot be
+silently substituted for a physical-coupling full integral.</p>
+<p>After blocking, all generated interactions must be controlled. There
+is no proved arrival in the completely analytic set at order-one
+coupling and no proved universal statement that all difficulty is one
+fixed unknown lattice interaction. A possible mixing certificate at that
+scale would still need stable transport from the weak trajectory,
+physical spectral visibility, nontriviality and continuum
+reconstruction.</p>
+<h2 id="consequence-for-state">Consequence for STATE</h2>
+<p>The productive questions are the exact normalized estimates still
+missing, listed in the <a href="halving-atlas.html">gauge atlas</a>. The
+older claim of exactly two unblocking routes, the unsupported closed
+large-field tail and flow sharpness, and the assertion that all other
+methods fail are withdrawn. The retained source evidence explains what
+each examined method would require; it changes no open target into a
+theorem and initiates no new research during consolidation.</p>
 
 </main>
 <footer class="site"><div class="wrap">

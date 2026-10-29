@@ -19,4 +19,4 @@ and Proposition I pp. 103–104. Newton presents and answers the objection to
 ultimate proportions, distinguishes limits from least determinate magnitudes,
 and uses the limiting polygon in the area-law argument. This passage-level
 check supports attribution; the modern receding-centre derivation has its own
-[draft audit](../notes/receding-centre-area-audit.md).
+[draft audit](../notes/newton-insertion-action.md#a-genuine-receding-centre-subtract-before-taking-the-limit).

@@ -85,7 +85,7 @@ traditions pose related tests without supplying one common doctrine.
 ## 5. Newton: preserve the relation while the magnitudes vanish
 
 The Section I closing Scholium treats ultimate ratios and the limiting
-velocity; [our anchored reading](../notes/principia-constant-force-action.md)
+velocity; [our anchored reading](../notes/newton-insertion-action.md#the-source-geometry-and-three-different-areas)
 distinguishes Newton's language from later reconstructions. The useful lesson
 is to ask what relation survives vanishing magnitudes. The local defect of a
 smooth polygonal approximation may vanish while a properly specified ratio

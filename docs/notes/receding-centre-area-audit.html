@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The surviving area is the matched-endpoint arc–chord defect</title>
+<title>Consolidated note — navstokgap</title><meta http-equiv="refresh" content="0; url=newton-insertion-action.html#a-genuine-receding-centre-subtract-before-taking-the-limit"><link rel="canonical" href="https://arivero.github.io/navstokgap/notes/newton-insertion-action.html">
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,131 +79,7 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>The surviving area is the matched-endpoint arc–chord defect</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/receding-centre-area-audit.md">Markdown source</a></p><p>Draft coordinator derivation for B11 review, 2026-09-07. The supplied
-Sol commentary correctly computes a factor of two for a fixed parabola.
-A genuine central-force family distinguishes two comparisons: arc versus
-its inertial tangent, and arc versus its matched-endpoint chord. The
-latter supplies the stable connection to the existing action
-calculation.</p>
-<h2 id="exact-signed-area-identity">1. Exact signed-area identity</h2>
-<p>Put <span class="math inline">\(C_R=(0,R)\)</span> and orient
-increasing <span class="math inline">\(x\)</span> to the right and <span
-class="math inline">\(y\)</span> toward the centre. For a path starting
-at the origin, define its signed sectorial area</p>
-<p><span
-class="math display">\[A_R[\gamma]=\frac12\int_\gamma[x\,dy-(y-R)\,dx]
-=\frac R2\Delta x+\frac12\int_\gamma(x\,dy-y\,dx).\]</span></p>
-<p>For two paths with the same endpoints, the term proportional to <span
-class="math inline">\(R\)</span> cancels exactly. Their area difference
-is the signed area of the closed loop formed by the first path and the
-reversed second. This cancellation holds for every centre, before taking
-any limit.</p>
-<p>For the perpendicular constant-force parabola <span
-class="math inline">\(x=vt\)</span>, <span
-class="math inline">\(y=Ft^2/(2m)\)</span>, <span
-class="math inline">\(0\le t\le\tau\)</span>, <span
-class="math inline">\(F,v,m,\tau&gt;0\)</span>, the finite part is</p>
-<p><span class="math display">\[A_{\rm
-lens}=\frac{Fv\tau^3}{12m}.\]</span></p>
-<p>Its straight chord from the origin has <span
-class="math inline">\(\int(x\,dy-y\,dx)=0\)</span>, so this is the exact
-arc-minus-chord area. The inertial tangent <span
-class="math inline">\((vt,0)\)</span> happens also to give that
-subtraction for the fixed parabola, since both have the same horizontal
-endpoint. Their vertical endpoints differ.</p>
-<p>The positive ordinary areas satisfy</p>
-<p><span class="math display">\[A_{\rm
-tangent,arc}=\frac{Fv\tau^3}{6m}=2A_{\rm lens},\qquad
-A_{\rm tangent,chord}=\frac{Fv\tau^3}{4m}=3A_{\rm lens},\]</span></p>
-<p>and hence <span class="math inline">\(A_{\rm tangent,arc}=A_{\rm
-tangent,chord}-A_{\rm lens}\)</span>. The plus sign in the supplied
-geometrical explanation reverses this ordering.</p>
-<h2 id="a-genuine-receding-central-force">2. A genuine receding central
-force</h2>
-<p>Use the explicit classical family</p>
-<p><span class="math display">\[m\ddot q_R=\frac FR(C_R-q_R),\quad
-q_R(0)=(0,0),\quad\dot q_R(0)=(v,0),\qquad
-\omega_R^2=\frac{F}{mR}.\]</span></p>
-<p>The force is central for every finite <span
-class="math inline">\(R\)</span> and tends to the uniform field on
-bounded spatial sets. The exact solution is</p>
-<p><span class="math display">\[x_R(t)=\frac
-v{\omega_R}\sin(\omega_Rt),\qquad
-y_R(t)=R[1-\cos(\omega_Rt)].\]</span></p>
-<p>On every fixed compact time interval it tends to the parabola,
-while</p>
-<p><span
-class="math display">\[x_R(\tau)=v\tau-\frac{Fv\tau^3}{6mR}+O(R^{-2}).\]</span></p>
-<p>Angular momentum about <span class="math inline">\(C_R\)</span> is
-<span class="math inline">\(mRv\)</span>, so the actual arc and the
-inertial tangent each have signed sectorial area <span
-class="math inline">\(Rv\tau/2\)</span>. Their difference is exactly
-zero for every <span class="math inline">\(R\)</span>. In the
-finite-part decomposition the missing term is</p>
-<p><span class="math display">\[\frac
-R2[x_R(\tau)-v\tau]\longrightarrow-\frac{Fv\tau^3}{12m},\]</span></p>
-<p>which cancels the parabola’s finite part. Substituting the limiting
-parabola before subtracting the divergent reference therefore changes
-this comparison.</p>
-<p>Let <span class="math inline">\(\operatorname{ch}_R\)</span> instead
-join the actual arc endpoints. Then</p>
-<p><span class="math display">\[A_R[q_R]-A_R[\operatorname{ch}_R]
-=\frac{Rv}{2}\left[\tau-\frac{\sin(\omega_R\tau)}{\omega_R}\right]
-\longrightarrow\frac{Fv\tau^3}{12m}.\]</span></p>
-<p>Thus a genuine receding-centre construction recovers the lens when
-the chord shares the arc endpoints. This is a precise reusable version
-of the supplied geometrical idea. It does not require an identification
-of the arc and tangent sector differences in a varying central-force
-family.</p>
-<h2 id="action-normalization">3. Action normalization</h2>
-<p>For the constant-force Lagrangian <span
-class="math inline">\(L=m|\dot q|^2/2+Fy\)</span>, the existing
-matched-endpoint calculation gives</p>
-<p><span class="math display">\[S[q_{\rm chord}]-S[q_{\rm cl}]
-=\frac F{2v}A_{\rm lens}
-=\frac{F^2\tau^3}{24m}
-=\frac{\tau\Delta E_\perp}{12},\qquad
-\Delta E_\perp=\frac{F^2\tau^2}{2m}.\]</span></p>
-<p>The supplied identity <span class="math inline">\(6(F/v)A_{\rm
-lens}=\tau\Delta E_\perp\)</span> is also correct. It uses twice the
-matched-endpoint action difference before the factor six. Numerical
-normalization should be fixed rather than absorbed into an undefined
-threshold. <span class="math inline">\(\Delta E_\perp\)</span> is
-deterministic transverse work, distinct from a quantum energy
-uncertainty. Comparing the actual path to its inertial tangent changes
-the terminal point and loses endpoint-gauge invariance.</p>
-<h2 id="threshold-versus-exact-quantization">4. Threshold versus exact
-quantization</h2>
-<p>With <span class="math inline">\(h=2\pi\hbar\)</span> and equal
-angular steps <span class="math inline">\(\Delta\phi=2\pi/N\)</span>,
-the inequality <span class="math inline">\(J\Delta\phi\ge h\)</span>
-gives <span class="math inline">\(J\ge N\hbar\)</span>. For any positive
-integer <span class="math inline">\(N\)</span>, <span
-class="math inline">\(J=(N+1/2)\hbar\)</span> satisfies every one of
-these <span class="math inline">\(N\)</span> cell bounds and closes the
-angle at <span class="math inline">\(2\pi\)</span>, while lying off the
-asserted action lattice. An exact tiling assumption is therefore an
-extra premise in the supplied Claude argument. A threshold on
-comparison-path defects also requires an explicit map before being
-applied to orbital action-angle cells.</p>
-<p>For the supplied Kepler spectrum write <span
-class="math inline">\(E_N=-A/N^2\)</span>, <span
-class="math inline">\(A&gt;0\)</span>. If <span
-class="math inline">\(\omega_N=\hbar^{-1}dE_N/dN\)</span> and <span
-class="math inline">\(T_N=2\pi/\omega_N\)</span>, then</p>
-<p><span class="math display">\[\frac{(E_{N+1}-E_N)T_N}{h}
-=\frac{N(2N+1)}{2(N+1)^2}\longrightarrow1.\]</span></p>
-<p>The finite difference approaches the frequency rule; the derivative
-relation is exact. These algebraic checks assess the supplied
-conditional model and leave its physical selection premise explicit.</p>
-<h2 id="research-use">5. Research use</h2>
-<p>Use the arc–chord construction in A03’s nonuniform cut-point test.
-State the refinement law, conserved endpoint data, action normalization
-and physical condition proposed to exclude a vanishing remainder. Keep a
-supplied minimum cell axiom as a separate comparison branch. Historical
-attribution follows the Newton passage audit, not the modern
-calculation.</p>
-
+<h1>Note consolidated</h1><p>This material is now part of <a href="newton-insertion-action.html#a-genuine-receding-centre-subtract-before-taking-the-limit">Newton&#x27;s comparison: areas, action defects and controlled reunion</a>. The original source remains in repository history.</p>
 </main>
 <footer class="site"><div class="wrap">
 <p><strong>Comments, corrections and questions are welcome as repository

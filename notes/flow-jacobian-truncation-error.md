@@ -1,63 +1,19 @@
-# Gaussian tails for a covariant linearized flow; Hamiltonian truncation remains open
+# Gauge flow: Jacobian domains, Gaussian locality and unstable backgrounds
 
-Later corrections: [the instability note](flow-instability-large-field.md) withdraws exact sharpness; [the lattice note](flow-conjugation-truncation.md) separates one lattice step from fixed-scale continuum bounds; [the operator-inequality note](large-field-operator-inequality.md) supersedes the fixed-range competition in [the transfer note](ground-state-measure-transfer.md).
+**Maintained result.** A specified background-covariant linear flow has an
+absolute Gaussian kernel-tail bound under smooth bounded coefficients and an
+integrable full vector curvature norm. The unrestricted Jacobian of Lüscher's
+gauge-modified flow has additional linear terms. Neither its identification
+with that auxiliary propagator nor a Hamiltonian relative truncation bound is
+proved by the Gaussian estimate.
 
-> **Correction (2026-10-02).** The original title, lead and Corollary 3
-> identified a Gaussian Jacobian-kernel tail with a relative error of the
-> conjugated Hamiltonian and claimed it was small **exactly** on small
-> fields. Those operator and only-if claims are **withdrawn**. The
-> Nielsen--Olesen example grows at $gB$, not $2gB$, and supplies no spatial
-> tail lower bound. Proposition 1 now retains the variation of Lüscher's
-> gauge term; the simple covariant heat equation is a separately specified
-> background-covariant linear evolution, not the unrestricted Jacobian
-> of that gauge-modified flow. Proposition 2 uses the full curvature
-> block-operator norm and time-dependent propagators. Sections 3--4 give
-> an absolute kernel-tail bound, with its prefactor, rather than an
-> operator relative bound. The lattice-step claim at one flow radius,
-> the scale substitution and the reversed free-smoothing comparison are
-> corrected below. The claim that Hamiltonian methods have no access to
-> configuration probabilities is also withdrawn.
-
-For a smooth compact-Lie-algebra connection on $\mathbb R^3$, consider
-specifically the linear evolution
-$$\partial_s u_\mu=D(s)^2u_\mu+2[G_{\mu\nu}(s),u_\nu],
-\qquad D_\mu=\partial_\mu+[B_\mu,\cdot].$$
-It is obtained by adding a background-covariant gauge term to the
-ungauged linearization. Its propagator $J(t,0)$ has a Gaussian kernel
-majorant under the regularity and bounded-curvature hypotheses of
-Section 2. Define the pointwise curvature operator on vector fields by
-$$(\mathcal C(s,x)u)_\mu=\sum_{\nu=1}^3[G_{\mu\nu}(s,x),u_\nu],
-\qquad \Gamma(s)=\sup_x\|\mathcal C(s,x)\|_{\rm op},
-\qquad A_t=2\int_0^t\Gamma(s)\,ds.$$
-Then
-$$\|J(t,0;x,y)\|_{\rm op}\le e^{A_t}
-\frac{e^{-|x-y|^2/(4t)}}{(4\pi t)^{3/2}}.$$
-For $R=\kappa\sqrt{8t}$ the absolute discarded kernel mass is bounded by
-$$e^{A_t}\left[\operatorname{erfc}(\sqrt2\kappa)
-+\frac{2\sqrt2\kappa}{\sqrt\pi}e^{-2\kappa^2}\right].$$
-This is a sufficient range/curvature budget for this linear evolution.
-It is not a necessary small-field condition, a bound on the actual
-Jacobian in every gauge, or a relative form estimate for a conjugated
-kinetic operator. No continuum construction or mass gap follows.
-
-> **Sharpness corrected (2026-10-02).** In the constant chromomagnetic
-> model of [the instability note](flow-instability-large-field.md), §2
-> (full-read), $\Gamma=b=gB$, the curvature term has eigenvalue $2b$, but
-> the covariant Laplacian contributes $-b-k_\parallel^2$ on that mode.
-> The full growth rate is $b-k_\parallel^2$. This does not saturate
-> $e^{2bt}$ or prove a lower bound on the discarded spatial tail.
-
-> **Lattice scope corrected (2026-10-02).** Even granting the earlier
-> schematic normalization $a^2\Gamma\le\pi$, at $t=a^2/2$ and
-> $R=\sqrt{8t}$ the exponent budget is $\pi-2>0$, not small. Compactness
-> gives a finite coefficient budget, not accuracy at one flow radius.
-> Increasing $\kappa$ controls the continuum majorant for any fixed
-> finite budget; merely taking $\kappa>1$ is not a specified accuracy
-> guarantee. [The lattice note](flow-conjugation-truncation.md), §§1--4
-> (full-read), discusses bounded coefficients and longer lattice range.
-> A plaquette-angle bound is not by itself a proof of the above
-> continuum block-norm bound or a lattice Hamiltonian relative bound;
-> those require their own normalization and operator estimates.
+A constant chromomagnetic background gives a complementary counterexample to
+universal contraction: the full aligned mode grows at $gB-k_\parallel^2$,
+including the Landau cost. It does not saturate the curvature-only majorant
+$e^{2tgB}$ or give a discarded-tail lower bound. A free-field variance benchmark
+does not supply the necessary interacting supremum or probability estimate.
+These statements incorporate the earlier gauge, factor and sharpness corrections
+where their assumptions enter; source labels and written proofs follow.
 
 ## 1. The linearized flow and its gauge convention
 
@@ -285,17 +241,171 @@ in [the operator-inequality note](large-field-operator-inequality.md),
 Hamiltonian truncation estimate or conclude that every Hamiltonian
 route fails.
 
-## 6. Consequence for STATE
+## Instability of the full background generator
 
-The surviving result is a Gaussian majorant and explicit absolute
-kernel-tail budget for the specified background-covariant linear
-parabolic evolution, with a full vector curvature norm and a
-flow-interval bound. Small fields give a sufficient budget at suitable
-range; neither necessity nor sharpness is proved. The identification
-with Lüscher's unrestricted flow Jacobian and the conversion to a
-relative Hamiltonian truncation error remain open, as do lattice
-normalization, inverse-metric and density-derivative control and
-iteration. Single-step compact lattice bounds must be distinguished
-from fixed-scale continuum estimates. This correction supplies no
-continuum $SU(3)$ construction or mass gap. STATE and the catalogs are
-left to the caller, as requested.
+Let $\mathfrak g$ be a compact matrix Lie algebra with invariant inner
+product $\langle X,Y\rangle=-\operatorname{tr}(XY)$. Then
+$\operatorname{ad}(Z)$ is antisymmetric:
+$\langle[Z,X],Y\rangle=-\langle X,[Z,Y]\rangle$.
+
+**Proposition 1.** At each point, on $\mathfrak g$-valued vectors with
+inner product $\sum_\mu\langle u_\mu,v_\mu\rangle$, the operator
+$(Mu)_\mu=2[G_{\mu\nu},u_\nu]$ is symmetric.
+
+*Proof.*
+$$\langle Mu,v\rangle
+=2\sum_{\mu\nu}\langle[G_{\mu\nu},u_\nu],v_\mu\rangle
+=-2\sum_{\mu\nu}\langle u_\nu,[G_{\mu\nu},v_\mu]\rangle
+=2\sum_{\mu\nu}\langle u_\nu,[G_{\nu\mu},v_\mu]\rangle
+=\langle u,Mv\rangle.$$
+The two antisymmetries cancel. $\square$
+
+A finite-dimensional symmetric operator of norm $N$ has an eigenvalue
+of modulus $N$; symmetry does not determine its sign. Moreover,
+positive eigenvalues of $M$ alone do not determine those of $D^2+M$.
+For compactly supported fields, integration by parts gives
+$$\langle u,Lu\rangle=-\sum_\alpha\|D_\alpha u\|_2^2
++\langle u,Mu\rangle.$$
+The first term must be retained.
+
+The preceding Duhamel bound uses $\Gamma=\frac12\sup\|M\|$; its exponent is an upper bound only. The following example retains both terms of $L$.
+
+### The charged Landau mode
+
+We work with the Yang--Mills flow linearized at a stationary background
+$\bar A$, in **background-covariant gauge**. This specifies the operator
+rather than assuming that every gauge-modified flow has the same
+Jacobian. With $D=\partial+[\bar A,\cdot]$ and $D_\nu G_{\nu\mu}=0$,
+variation of the ungauged flow gives
+$$\partial_su_\mu=D^2u_\mu-D_\mu D_\nu u_\nu
++2[G_{\mu\nu},u_\nu].$$
+Adding the linear background-gauge term $D_\mu D_\nu u_\nu$ gives $L$.
+Equivalently, on a mode with $D_\nu u_\nu=0$, the ungauged linearization
+already agrees with $L$. This does not repair or identify the full
+Jacobian in every gauge convention of
+the gauge convention above.
+
+Choose an $SU(2)$ colour sector with $[T^3,E_+]=iE_+$, and absorb the
+coupling into the connection, so $G_{12}=bT^3$, $b=gB>0$.
+In symmetric gauge on the transverse plane,
+$$\bar A_1=-\frac b2x_2T^3,\qquad
+\bar A_2=\frac b2x_1T^3.$$
+On the $E_+$ component,
+$$D_1=\partial_1-\frac{ibx_2}{2},\qquad
+D_2=\partial_2+\frac{ibx_1}{2}.$$
+Writing $Q=D_1-iD_2$, integration by parts and $[D_1,D_2]=ib$
+give $Q^*Q=-(D_1^2+D_2^2)-b$ and $[Q,Q^*]=2b$.
+Thus the oscillator ladder has transverse magnetic-Laplacian energies
+$(2n+1)b$, $n=0,1,\ldots$. To fix the factor without relying on a
+bibliographic convention, its lowest mode can be checked directly:
+$$f(x_1,x_2)=e^{-b(x_1^2+x_2^2)/4},\qquad
+(D_1-iD_2)f=0,\qquad (D_1^2+D_2^2)f=-bf.$$
+On the two transverse vector components,
+$$M=\begin{pmatrix}0&2ib\\-2ib&0\end{pmatrix},\qquad
+M\binom f{-if}=2b\binom f{-if}.$$
+The charged complex notation represents real Lie-algebra fields by
+adding the conjugate charge sector. The vector
+$$u=(f,-if,0,\ldots)e^{ik_\parallel\cdot x_\parallel}$$
+is background-transverse, since $D_1f-iD_2f=0$. Consequently
+$$D^2u=-(b+k_\parallel^2)u,\qquad
+Lu=(b-k_\parallel^2)u.$$
+This supplies both the positive eigenvalue of $M$ and the Laplacian
+cost on the same vector. The two transverse polarizations at general
+Landau level have the spectral values
+$$\omega^2=k_\parallel^2+(2n+1)b\mp2b$$
+for $-L$. Here $k_\parallel^2$ is the sum of the squared momenta in
+directions outside the magnetic plane: one for spatial three-dimensional
+flow, two for four-dimensional Euclidean flow. The unstable branch is
+$$\omega^2=k_\parallel^2-b<0\quad\text{when }k_\parallel^2<b,$$
+and its gradient-flow growth is
+$$e^{-\omega^2s}=e^{(b-k_\parallel^2)s}.$$
+At $k_\parallel=0$ the rate is $b$, half the exponent coefficient
+$2b$ in the Duhamel majorant. That example therefore **does not saturate**
+the majorant. Whether a better universal bound holds for other
+backgrounds is not settled by this calculation.
+
+On the whole space the longitudinal plane waves are generalized modes;
+wave packets supported in $k_\parallel^2<b$ give growing $L^2$
+perturbations, with rates approaching $b$. Periodic longitudinal
+boundary conditions admit the zero-momentum mode. The constant field
+on the transverse plane has infinite total action; the calculation is
+a stationary-background spectral model, not a finite-action
+four-dimensional construction or a statement for arbitrary finite boxes.
+
+This is the instability historically associated with Nielsen and Olesen,
+[“An unstable Yang--Mills field mode,” Nucl. Phys. B144 (1978) 376--396](https://doi.org/10.1016/0550-3213(78)90377-2)
+(abstract read; the original spectral passage was not read here).
+The numerical factors used above are supported by the displayed
+calculation, not by that abstract or a normalization left implicit.
+
+### Action descent and growing perturbations
+
+For the unmodified gradient flow with its gradient-metric normalization,
+$$\frac{d}{ds}S(A_s)=-\|\nabla S(A_s)\|_2^2\le0.$$
+A constant abelian curvature has $D_\nu G_{\nu\mu}=0$ and is stationary.
+Its transverse unstable modes give negative Hessian directions,
+$\operatorname{Hess}S=-L$ on the background-transverse sector in the
+normalization of Section 2. Nearby trajectories can separate at rate
+$b-k_\parallel^2$ while descending the action. For the infinite-action
+background these are statements about the local equation and quadratic
+variation on admissible perturbations, rather than differentiation of
+an infinite total action.
+
+The original comparison with
+[the valley note](torus-valley-potential.md) is also corrected: constant
+commuting connections in its flat holonomy valley have $G=0$. They are
+not the nonzero constant chromomagnetic background considered here.
+The valley's zero-point potential is a different calculation and gives
+no justification for this saddle or its growth rate.
+
+## Free-field size is a benchmark, not a supremum bound
+
+From [the free-field calculation](finiteness-half-flowed-susceptibility.md) §5c, the flowed
+magnetic two-point function at coincident points is
+$$\big\langle b_{t,i}(0)b_{t,i}(0)\big\rangle
+=\int\!\frac{d^3k}{(2\pi)^3}\sum_i\tilde G_{ii}(k)
+=\int\!\frac{d^3k}{(2\pi)^3}\,\frac{g^2k}{2}\,e^{-2tk^2}\cdot2
+=\frac{g^2}{2\pi^2}\int_0^\infty\!k^3e^{-2tk^2}dk,$$
+and $\int_0^\infty k^3e^{-\alpha k^2}dk=1/(2\alpha^2)$ with $\alpha=2t$
+gives
+$$\big\langle|b_t|^2\big\rangle=\frac{g^2}{2\pi^2}\cdot\frac1{8t^2}=\frac{g^2}{16\pi^2t^2},
+\qquad \big\langle|b_t|^2\big\rangle^{1/2}=\frac{g}{4\pi\,t}.$$
+The flow time is the only scale, so the dimensionless combination is
+$$t\,\big\langle|b_t|^2\big\rangle^{1/2}=\frac{g}{4\pi},$$
+independent of $t$ and of the lattice spacing. In the interacting theory
+at scale $\ell=\sqrt{8t}$ the same estimate with the running coupling
+$g(\ell)$ is the leading perturbative statement.
+
+The displayed convention absorbs the quantum factor in $g^2$; writing
+$g^2=\hbar g_{\rm cl}^2$ restores physical $\hbar$ explicitly.
+A single-point Gaussian variance is neither a bound on the field supremum
+over a continuum region nor on the whole-interval curvature block norm.
+Substitution of $g/(4\pi t)$ into a deterministic kernel hypothesis is
+only a model estimate. Even for a Gaussian vector field, its component
+variance, radial tail, spatial correlation and continuum supremum require
+their own constants; the old scalar exponent $8\pi^2\eta^2/g^2$ and
+$V/(8t)^{3/2}$ independent-cell count did not prove such a theorem.
+Replacing $g$ by a running coupling is a perturbative suggestion, not a
+nonperturbative interacting probability bound.
+
+At $R=\kappa\sqrt{8t}$, the earlier schematic substitution gave
+$\exp[g/(2\pi)-2\kappa^2]$ and
+$\kappa^2\ge g/(4\pi)+1/2$ for tolerance $e^{-1}$. The exact tail
+above additionally has a polynomial prefactor and uses a supremum over
+all flow times. These numbers therefore remain illustrative scale
+bookkeeping, not a Hamiltonian truncation guarantee at any coupling.
+Hamiltonian ground states have configuration probabilities; their
+[transfer identity](ground-state-measure-transfer.md) does not turn an
+absolute auxiliary kernel bound into the required signed operator comparison.
+
+## Consequence for STATE
+
+Keep exact gauge variation, auxiliary kernel locality, background instability,
+free-field statistics and Hamiltonian form comparison as separate steps.
+At $\ell=\sqrt{8t}$ and $\Gamma\le\eta/\ell^2$, the growth budget is
+$\eta/4$; a sufficiently long range controls this kernel upper bound for
+any finite budget. No sharp cutoff crossover, normalized large-field tail,
+large-field exclusion theorem or continuum mass gap follows. The
+[finite-lattice conjugation](flow-conjugation-truncation.md) and
+[signed operator comparison](large-field-operator-inequality.md) retain their
+independent domains and missing estimates.

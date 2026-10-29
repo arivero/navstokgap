@@ -1,81 +1,33 @@
-# Newton's cell action as a measure on cuts
+# Refinement action: cut energy, quantum phase and Gaussian information
 
-**After refereeing (GPT-6 Astra, 2026-09-28).** A6: ACCEPT Proposition 6's
-Cameron--Martin norm, optimal equal-prior error and exact constant in the
-Planck mesh. REFINE the statement to two prescribed Gaussian bridge
-means with the same pinned endpoints and covariance, distinguish the
-variance rate from the diffusion coefficient, and identify the
-likelihood pairing as a Gaussian stochastic functional. The agreement
-with the mark model is structural: both have the sharp squared signal
-distance $2K_\tau/\hbar$ from the same Dirichlet energy. The bridge test
-attains its bound; the mark model approaches it by dense protocols.
-Both supply $\hbar>0$, leaving necessity unchanged.
+**Maintained result.** For a constant force $F\ne0$, mass $m>0$ and duration
+$\tau>0$, the chord/parabola energy is $K_\tau=F^2\tau^3/(24m)$.
+An inserted cut at fraction $s$ spends $3s(1-s)K_\tau$; orthogonal hat
+energies add and exhaust $K_\tau$ exactly when the mesh vanishes.
+Three uses of that same functional have different assumptions:
 
-**After refereeing (Fable, 2026-09-28).** Theorems 1--2, Corollary 3's
-arithmetic and the quotations were re-derived and accepted. Corrections
-applied: Proposition 4 now names the Kullback--Leibler divergence, the
-shift $\delta x$, the phase $K_\tau/\varepsilon$ and the Cameron--Martin normalizer, and its
-link to Rivero 1998 is stated as a counterpart; Corollary 5 separates a
-floor on a cell's action from a floor on a cut's share (a factor $\frac34$ for
-halving); §3 labels the two-quarter-cut schedule a construction and adds
-the alternating reading favoured by 𣃈必半; the Lévy--Ciesielski comparison
-names the right quantity.
+- Cut geometry is a classical energy identity and selects no positive action.
+- Supplied Weyl relations convert remaining polygon energy into a state-independent
+relative phase $\theta_N=F^2\sum_j\tau_j^3/(24m\hbar)$.
+It is observable through a specified coherent control; repeated passes change
+its resolution threshold.
+- A prescribed Euclidean Gaussian bridge gives KL information $K_\tau/\hbar$.
+Independent uncorrelated Gaussian position marks with a supplied product floor
+$\kappa$ have sharp finite-grid information
+$(K_\tau-\sum_jK_{\tau_j})/\kappa$, under the explicit availability assumptions
+below. These are not arbitrary quantum-instrument bounds.
 
-**Result, 2026-09-27 (atlas §1b, user remarks on arbitrary cuts and on
-the rod).** Let a constant force $F$ act on a body of mass $m$ over a cell
-of duration $\tau$, and let $\delta x$ be the chord minus the parabola (the chord
-is the inertial comparison path with the same endpoints). Its Galileo action
+The zero-force case has zero energy at every mesh; the mesh/exhaustion equivalence
+then has no content. The general-force extension below uses the Dirichlet Green
+functional; its mark bound is attainable in the specified dense construction
+for forces of one sign, not automatically for sign-changing forces.
 
-$$K_\tau=\frac m2\int_0^\tau\dot{\delta x}^2\,dt=\frac{F^2\tau^3}{24m}$$
-
-(the [two-path note](galileo-two-path-interference.md) writes the same
-quantity as $(F/4v)A=\tau\Delta E/12$) behaves as a measure on the process of
-cutting the cell.
-
-- **Theorem 1 (one cut).** A cut at fraction $s\in(0,1)$ spends exactly
-  $3s(1-s)K_\tau$, and this share equals the Cameron--Martin energy
-  $\frac m2\int\dot\phi^2$ of the Schauder hat $\phi$ that the cut inserts, of height
-  the sagitta $Fs(1-s)\tau^2/(2m)$.
-- **Theorem 2 (any cut sequence).** The hats of successive cuts are
-  orthogonal in the energy $\int\dot f\dot g$, so the spent shares add. Along any
-  sequence of cuts, at any positions and in any order, the total spent
-  equals $K_\tau-\sum_iK_{\tau_i}$ over the current pieces, and it tends to $K_\tau$
-  iff the mesh $\max_i\tau_i$ tends to zero; the remainder is at most
-  $K_\tau\max_i\tau_i^2/\tau^2$.
-- **Corollary 3 (the rod and the Mohist schedules).** Halving only the
-  remaining piece each day, the schedule of the stick in *Zhuangzi* 33,
-  spends $\frac67K_\tau$, and so does one halving a day taken alternately from
-  the front and the back. Removing a quarter from each end each day (two
-  quarter-cuts a day, a construction motivated by the Mohist "taking from
-  front and back") spends $\frac{27}{28}K_\tau$. All three leave a definite share
-  unspent forever, because they keep cut-off pieces of fixed length.
-- **Proposition 4 (weight of a cut).** Under the Euclidean path measure
-  of a free particle with variance rate $\hbar/m$ (Wiener measure), the
-  force signal in one cut has Kullback--Leibler divergence exactly
-  (spent share)$/\hbar$. In real time the same share, divided by the action
-  resolution, is the phase of the two-path comparison.
-- **Proposition 6 (the mark mesh as a Cameron--Martin threshold;
-  2026-09-28, refereed ACCEPT with the hypotheses of §5b).** Under the same path measure, the optimal
-  equal-prior test between force $F$ and no force in a cell, observing the
-  whole path with pinned ends, errs with probability $\Phi(-\sqrt{K_\tau/2\hbar})$. It
-  reaches $\epsilon$ iff $K_\tau\ge2z_{1-\epsilon}^2\hbar$, which is exactly the Planck paper's mark
-  mesh $\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}$, obtained there from real-time Gaussian
-  marks with Robertson's bound.
-- **Corollary 5 (a floor counts the cuts).** If every exhibited cut must
-  spend at least an action $\kappa>0$, at most $K_\tau/\kappa$ cuts can be exhibited,
-  whatever the schedule. For halving refinement, level $n$ is exhibited
-  iff $\frac34K_\tau8^{-n}\ge\kappa$. The Planck paper's mark mesh
-  $\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}$ is the cell whose action is $2z_{1-\epsilon}^2\hbar$;
-  its own halving spends $\frac32z_{1-\epsilon}^2\hbar$.
-
-Theorems 1 and 2 are elementary, and their content lies in the reading
-they give: Newton's refinement is a process that spends a fixed, finite
-action, with the nested additivity of the Lévy--Ciesielski construction
-of the Brownian bridge. Proposition 4 makes the correspondence exact: the
-action is the Cameron--Martin energy of the force's shift, decomposed
-over the hats. Corollary 5 is a consistency statement. It says where
-a floor, if present, stops the cutting, and leaves the necessity question
-of the [fifth-postulate note](principia-fifth-postulate.md) where it was.
+The calculations use standard Schauder/Cameron–Martin, Weyl and linear Gaussian
+methods. Source passages and historical interpretations are identified where
+used. Internal Astra/Fable reviews checked written formulas and prompted scope
+corrections; they are not independent peer review or literature novelty evidence.
+The [insertion treatment](newton-insertion-action.md) supplies the three-area
+source geometry and a distinct controlled-loop experiment.
 
 ## 1. One cut
 
@@ -108,14 +60,13 @@ algebraic form of Theorem 1. The share is largest for halving, $\frac34K_\tau$. 
 
 Each later cut acts inside one current piece, and Theorem 1 applies to
 that piece with its own $s$. The new hat is supported in the piece and
-vanishes at its ends; every earlier hat is linear there. The argument of
-§1 gives orthogonality to all earlier hats and to the other pieces'
+vanishes at its ends; every earlier hat is linear there. The one-cut argument gives orthogonality to all earlier hats and to the other pieces'
 remainders. After any finite set of cuts, with pieces $\tau_i$ ($\sum\tau_i=\tau$),
 
 $$K_\tau=\sum_{\rm cuts}\frac m2\int\dot\phi_{\rm cut}^2+\sum_iK_{\tau_i},\qquad
 \sum_iK_{\tau_i}=C\sum_i\tau_i^3\le C\tau\max_i\tau_i^2 .$$
 
-The remainder vanishes iff the mesh does ($\sum_i\tau_i^3\ge(\max_i\tau_i)^3$). The
+For $F\ne0$, the remainder vanishes iff the mesh does ($\sum_i\tau_i^3\ge(\max_i\tau_i)^3$). The
 positions and the order enter only through which pieces are cut, never
 through the total. $\square$
 
@@ -129,7 +80,7 @@ conditional variance shows the same nested additivity with a quadratic
 law: for diffusion constant $D$, $\int_0^L{\rm Var}(X_u\mid{\rm ends})\,du=DL^2/6$, and a cut
 at fraction $s$ removes $Ds(1-s)L^2/3$ of it.
 
-## 3. The rod and the two Mohist schedules
+## Historical cut schedules
 
 *Zhuangzi* 33 (dialecticians' list,
 [text](../docs/classics/Zhuangzi_33_Tianxia_zh_wikisource.md)):
@@ -183,7 +134,7 @@ The parallel with Zeno's dichotomy (Aristotle, *Physics* VI.9) is
 recorded as convergence; transmission would need evidence this note does
 not have.
 
-## 4. The weight of a cut
+## Gaussian bridge information
 
 Take the Euclidean path measure of a free particle with variance
 rate $\hbar/m$: unconditioned centred Brownian motion $X$ with
@@ -205,14 +156,13 @@ divergences add over cuts, and along a sequence with mesh tending to zero
 they sum to $K_\tau/\hbar$, the Cameron--Martin exponent for the shift $\delta x$. The
 Cameron--Martin density factorizes over cuts, each contributing the
 normalizing factor $e^{-3s(1-s)CL^3/\hbar}$. This is the Euclidean counterpart of
-the real-time two-path phase $K_\tau/\varepsilon$ of the two-path note (the same number
-with $\varepsilon$ in the role of $\hbar$), and of the product-over-cuts structure that
+the real-time two-path phase $K_\tau/\hbar$ of the two-path note (with the physical phase unit $\hbar$ supplied), and of the product-over-cuts structure that
 §7 of the [fifth-postulate note](principia-fifth-postulate.md) reads in the
 time-step partition of [Rivero 1998](https://arxiv.org/abs/quant-ph/9803035).
 For $\hbar\to0$ every cut, however small, is decisive; for $\hbar>0$ the cuts whose
 share falls below $\hbar$ carry little evidence (under one nat). $\square$
 
-## 5. A floor counts the cuts
+### Conditional cut counts
 
 If every cut that a record exhibits must spend at least $\kappa>0$, Theorem 2
 gives at most $K_\tau/\kappa$ such cuts, for every schedule. For halving
@@ -224,12 +174,12 @@ $3s(1-s)K_L$, while the thresholds in the other notes floor the action of a
 cell, $K_\tau$; for halving the two differ by the factor $\frac34$. The Planck
 paper's eq. (2) is $K_\tau\ge2z_{1-\epsilon}^2\hbar$: $\tau_*$ is the cell with
 $K_{\tau_*}=2z_{1-\epsilon}^2\hbar$, whose halving spends $\frac32z_{1-\epsilon}^2\hbar$. The round-3
-resolution threshold $\tau\ge(24m\varepsilon d_{n,\eta}/F^2)^{1/3}$ is $K_\tau\ge\varepsilon d_{n,\eta}$, that is
-$\kappa=\frac34\varepsilon d_{n,\eta}$ in cut-share form. Corollary 5 thus places a floor, when
+resolution threshold $\tau\ge(24m\hbar d_{n,\eta}/F^2)^{1/3}$ is $K_\tau\ge\hbar d_{n,\eta}$, that is
+$\kappa=\frac34\hbar d_{n,\eta}$ in cut-share form. Corollary 5 thus places a floor, when
 one is given, at a definite depth of the cut process; it supplies no
 floor.
 
-## 5b. The mark mesh from the path measure (Proposition 6)
+### Full-path Gaussian testing
 
 Keep the measure of §4: unconditioned centred Brownian motion with
 $E[X_t^2]=\hbar t/m$, the
@@ -286,10 +236,9 @@ Theorem E of the fifth-postulate note, $ab\ge\hbar c_*(\epsilon)$ with
 $c_*(\epsilon)\simeq\frac12\ln(1/\epsilon)$ in window half-widths; the constants refer to
 different quantities (a cell's Galileo action and a phase-space window).
 
-## 5c. Mark protocols spend exactly the cut measure (Proposition 7)
+### Finite-grid Gaussian mark information
 
-**Proposition 7 (2026-09-29, Claude, generalizing a single-cut computation
-by Fable; refereed by Fable, ACCEPT with wording fixes applied).** Take the mark model of the
+**Proposition 7.** Take the mark model of the
 [Planck paper](planck-gap-paper.md), §3: mark $j$ returns the position with
 Gaussian error $\delta_j$ and delivers a Gaussian impulse $\Delta_j$ with
 $\delta_j\Delta_j\ge\kappa$; protocols are non-adaptive and tests invariant under the
@@ -350,22 +299,378 @@ dense value reproduces Proposition 6's exponent, $\frac12\sqrt{K_\tau/\kappa}=\s
 from the mark model instead of the path measure. The [continuity note](leibniz-continuity-records.md) reads the additivity as
 Leibniz's *petites perceptions*.
 
-The schedules of §3 acquire a records meaning. Marks placed at the cuts of
+The historical schedules above acquire a records meaning. Marks placed at the cuts of
 Hui Shi's stick, however many, reach at most $\frac67K_\tau/\kappa$, and the two
 quarter-cuts a day reach $\frac{27}{28}K_\tau/\kappa$: the stick that is "not exhausted in
 ten thousand generations" leaves one seventh of the discernibility of the
 comparison permanently out of reach, because the pieces it takes away are
-never marked again. The deficit exists only on the floor branch; with $\kappa=0$
-any three marks decide.
+never marked again. If the zero-floor model supplies arbitrarily accurate balanced marks, three distinct times instead permit error tending to zero; a zero lower product bound alone does not guarantee that availability.
 
-## 6. Consequence for STATE
+## Weyl lifting and polygon phases
 
-Atlas §1b: the Newton row of "cuts at any position" is proved here
-(Theorems 1--2, Corollary 3), with the Lévy--Ciesielski identification
-and the Euclidean weight of a cut (Proposition 4). Proposition 6 is now
-refereed: its Gaussian information equals the sharp mark information
-under the respective stated hypotheses. The necessity question
-is unchanged. On the gauge side of §1b the free-field defect of a cut at
-fraction $s$ is (5) scaled by $4s(1-s)$ in its size bound
-([Corollary 2$_s$](series-parallel-gauge-refinement.md)); the $U(1)$ Theorem 5
-holds for every cut fraction (Corollary 5$_s$ there).
+Transverse coordinate $\hat y$, momentum $\hat p$, $[\hat y,\hat p]=i\hbar$,
+mass $m>0$; the horizontal motion at speed $v$ is common to every history
+considered and cancels. A force history is an impulse density or measure
+$f$ on $[0,\tau]$ with Hamiltonian $H_f(t)=\hat p^2/2m-f(t)\hat y$. In the
+interaction picture of the free evolution $U_0$, write
+$W_f(t)=U_0(t)^\dagger U_f(t)$ and use the Weyl operators of the
+probabilistic note,
+
+$$D(a,b)=\exp\!\left[\frac{i}{\hbar}(b\hat y-a\hat p)\right],\qquad
+D(z_1)D(z_2)=e^{-i\omega(z_1,z_2)/2\hbar}D(z_1+z_2),$$
+
+with $\omega(z_1,z_2)=a_1b_2-a_2b_1$. An impulse $J$ at time $t$ is
+$U_0(t)^\dagger e^{iJ\hat y/\hbar}U_0(t)=D(-Jt/m,J)$, since
+$U_0(t)^\dagger\hat yU_0(t)=\hat y+\hat pt/m$. The history's **phase-plane
+path** is
+
+$$z_f(t)=\bigl(\alpha_f(t),\beta_f(t)\bigr)
+=\Bigl(-\frac1m\int_0^ts\,f(s)\,ds,\ \int_0^tf(s)\,ds\Bigr),$$
+
+the transverse displacement relative to free motion referred back to
+$t=0$ by the free flow, and the accumulated impulse. For the constant
+force, $z_F(t)=(-Ft^2/2m,\ Ft)$, a parabola in the phase plane.
+
+**Lemma 1.** $W_f(\tau)=\exp\bigl[\frac{i}{2\hbar}\int_0^\tau\omega(z_f,dz_f)\bigr]\,D\bigl(z_f(\tau)\bigr)$.
+
+*Proof.* For finitely many impulses with increments $\delta z_1,\dots,\delta z_N$
+in time order, induction on the Weyl relation gives
+$D(\delta z_N)\cdots D(\delta z_1)=\exp[\frac{i}{2\hbar}\sum_{i<j}\omega(\delta z_i,\delta z_j)]D(\sum_j\delta z_j)$,
+and $\sum_{i<j}\omega(\delta z_i,\delta z_j)=\sum_j\omega(z_{j-1},\delta z_j)$
+with $z_{j-1}=\sum_{i<j}\delta z_i$. For a density $f$ the generator
+$\frac{i}{\hbar}f(t)(\hat y+\hat pt/m)$ has c-number commutators at
+different times, so the Magnus series stops at second order and the Riemann
+sums converge to $\int\omega(z_f,dz_f)$, as in N01 §4. $\square$
+
+**Lemma 2.** If $z_f(\tau)=z_g(\tau)$, then
+$W_fW_g^\dagger=e^{i\mathcal A(f,g)/\hbar}\,\mathbf 1$, where
+$\mathcal A(f,g)=\frac12\oint\omega(z,dz)$ is the signed area enclosed by
+$z_f$ followed by $z_g$ reversed.
+
+*Proof.* Lemma 1 for both, and Green's theorem for the closed loop. $\square$
+
+The specified linear-force histories with equal phase-plane increments induce the same endpoint canonical map on the body. Later observations of that body alone do not recover which force was used; an apparatus or memory can retain it. Lemma 2 says the quantum
+evolutions still differ, by the enclosed phase-plane area over $\hbar$,
+and that the difference is a multiple of the identity. This is the
+standard geometric phase of displaced oscillators, used in trapped-ion
+phase gates ([Sørensen and Mølmer, PRA **62**, 022311, 2000](https://doi.org/10.1103/PhysRevA.62.022311);
+[Leibfried et al., Nature **422**, 412, 2003](https://doi.org/10.1038/nature01492),
+both metadata). The $t^3$ phase of a freely falling wave packet is the
+single-history form of it
+([Greenberger and Overhauser, RMP **51**, 43, 1979](https://doi.org/10.1103/RevModPhys.51.43),
+metadata).
+
+### The inscribed polygon
+
+Partition $0=t_0<\dots<t_N=\tau$ with $\tau_j=t_j-t_{j-1}$ and midpoints
+$c_j=(t_{j-1}+t_j)/2$. **Newton's inscribed polygon** gives the impulse
+$F\tau_1/2$ at $t_0$, $F(\tau_j+\tau_{j+1})/2$ at each interior $t_j$, and
+$F\tau_N/2$ at $t_N$: each step's impulse $F\tau_j$ is split equally
+between its two ends.
+
+**Theorem P1.** (i) On $(t_{j-1},t_j)$ the polygon moves uniformly with
+momentum $Fc_j$ along the chord of the parabola, and its phase-plane path passes through $z_F(t_j)$ after each completed cell. (ii)
+$W_{\rm poly}(\tau)=e^{i\theta_N}W_F(\tau)$ with
+$\theta_N=F^2\sum_j\tau_j^3/(24m\hbar)$. (iii) With
+$S_j=vF\tau_j^3/(12m)$ the area between the $j$-th arc and its chord,
+$\theta_N=(F/2v\hbar)\sum_jS_j$.
+
+*Proof.* (i) After the second half of the impulse at $t_{j-1}$ the
+momentum is $Ft_{j-1}+F\tau_j/2=Fc_j$, and in time $\tau_j$ it carries the
+body through $Fc_j\tau_j/m=F(t_j^2-t_{j-1}^2)/2m$, the parabola's
+transverse increment. In the phase plane the two half-impulses of step $j$
+are $k_1=(-F\tau_jt_{j-1}/2m,\ F\tau_j/2)$ and
+$k_2=(-F\tau_jt_j/2m,\ F\tau_j/2)$, whose sum is the parabola's increment
+$\delta z_j=(-F\tau_jc_j/m,\ F\tau_j)$.
+
+(ii) Both evolutions are products over steps, in the same order, of
+operators with the same displacements $\delta z_j$, so their ratio is the
+product of the per-step phase ratios. By Lemma 1 the polygon's step is
+$D(k_2)D(k_1)=e^{i\omega(k_1,k_2)/2\hbar}D(\delta z_j)$ with
+$\omega(k_1,k_2)=\frac{F\tau_j}{2}\cdot\frac{F\tau_j}{2m}(t_j-t_{j-1})=\frac{F^2\tau_j^3}{4m}$.
+The curve's step, with $s=t-t_{j-1}$ and path
+$(-F(s^2+2st_{j-1})/2m,\ Fs)$ from $z_F(t_{j-1})$, has
+$\omega(z,dz)=\frac{F^2s^2}{2m}ds$, hence phase
+$\frac1{2\hbar}\int_0^{\tau_j}\frac{F^2s^2}{2m}ds=\frac{F^2\tau_j^3}{12m\hbar}$.
+Neither depends on $t_{j-1}$. The ratio is
+$\exp[\frac{i}{\hbar}(\frac18-\frac1{12})\frac{F^2\tau_j^3}{m}]=\exp[\frac{iF^2\tau_j^3}{24m\hbar}]$.
+
+(iii) Over the step, the chord exceeds the parabola by
+$\frac{F}{2m}(t-t_{j-1})(t_j-t)$, and integrating against $dx=v\,dt$ gives
+$S_j=vF\tau_j^3/12m$. Then $\frac{F}{2v}S_j=\frac{F^2\tau_j^3}{24m}$. $\square$
+
+Lemma XI's tangent area for the step is $A_j=vF\tau_j^3/6m=2S_j$, so
+$\theta_N=(F/4v\hbar)\sum_jA_j$, and Proposition 1 of the
+[paper](planck-gap-paper.md) is the statement that this sum vanishes with
+the mesh. In the phase plane the polygon's path is the circumscribed
+tangent polygon of the parabola $z_F$: each impulse at $t_j$ moves along
+the tangent direction $(-t_j/m,1)$, and the two paths touch at every
+$z_F(t_j)$, which is why the area between them splits step by step. The
+phase is also the difference of the two histories' classical actions
+between the same endpoints, whatever the endpoints, which is why a
+comparison of quadratic Hamiltonians leaves only a global phase.
+
+**Corollary P2 (insertion).** Replacing step $j$ by steps $\lambda\tau_j$ and
+$(1-\lambda)\tau_j$ lowers $\theta_N$ by
+
+$$\frac{F^2\tau_j^3}{24m\hbar}\bigl[1-\lambda^3-(1-\lambda)^3\bigr]
+=\frac{F^2\tau_j^3\,\lambda(1-\lambda)}{8m\hbar}
+=\frac{F}{2v\hbar}\,T_j(\lambda),$$
+
+with $T_j(\lambda)=S_j-S_j'-S_j''$ the triangle inscribed between the old
+chord and the new vertex. At $\lambda=\frac12$, $T_j=\frac34S_j$, which is
+Archimedes' *Quadrature of the Parabola*, Propositions 17 and 24 (the
+segment is four thirds of its inscribed triangle, by balancing and by
+exhaustion;
+[companion](../docs/classics/Archimedes_QuadratureParabola_Heath1897_OCR.md)).
+After $k$ rounds of halving every step, $\theta$ is $4^{-k}$ of its value.
+$\square$
+
+Each inserted point therefore changes the quantum evolution by a computable
+phase, fixed by the area the insertion removes, and the change is the same
+for every state of the body. A step's own phase reaches one radian at
+
+$$\tau_\hbar=\left(\frac{24m\hbar}{F^2}\right)^{1/3},$$
+
+the scale that the constant-force note found for the single chord lens.
+The insertion mesh of the mark theorem,
+$\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}$, has the same form, obtained
+there from the cost of a mark and here from the phase of a segment with no
+apparatus at all.
+
+### Archimedes' geometric series
+
+The chord/arc area is $S_j=vF\tau_j^3/(12m)$; the tangent/arc area
+is $A_j=2S_j$, and the tangent triangle is $3S_j$. Halving inserts the
+triangle $T_j=3S_j/4$. Archimedes, *Quadrature of the Parabola*,
+Propositions 17, 23 and 24, proves the segment is four thirds of its
+inscribed triangle and sums the exhaustion series
+$T_j+T_j/4+T_j/16+\cdots=4T_j/3=S_j$
+([Heath companion](../docs/classics/Archimedes_QuadratureParabola_Heath1897_OCR.md),
+passages read). Thus each halving removes one stage of the same energy
+series: $\theta_{\rm step}=(F/2v\hbar)S_j$, and the total remainder
+falls by four each complete round. A one-radian comparison is a scale for
+this specified quantum phase experiment, not a prohibition on finer geometry.
+
+The preface to *The Method* credits Democritus with asserting the cone's
+one-third volume and Eudoxus with its proof
+([source](../docs/classics/Archimedes_Method_Heath1912_OCR.md), passage).
+The Galileo area also has a one-third factor,
+$A_{\rm inertial,fall}=vF\tau^3/(6m)=v\tau s/3$ for sagitta
+$s=F\tau^2/(2m)$. This modern geometric comparison establishes neither
+transmission nor a record-disturbance floor for a static solid.
+
+### Ordering holonomy and the partition identity
+
+Keep the curve's step operators $V_j=e^{i\varphi_j}D(\delta z_j)$ and
+compose them in another order. For a permutation $\sigma$, write $U_\sigma$
+for the product with the steps applied in the order $\sigma$.
+
+**Theorem P3.** $U_{\rm chron}U_\sigma^\dagger=\exp[\frac{i}{\hbar}\sum\omega(\delta z_i,\delta z_j)]\mathbf 1$,
+the sum over the pairs $i<j$ that $\sigma$ inverts. Every term is positive,
+
+$$\omega(\delta z_i,\delta z_j)=\frac{F^2}{m}\tau_i\tau_j(c_j-c_i)>0\qquad(i<j),$$
+
+so the reversed order is extremal, with
+
+$$\Phi_N=\frac1\hbar\sum_{i<j}\omega(\delta z_i,\delta z_j)
+=\frac{F^2}{6m\hbar}\Bigl(\tau^3-\sum_j\tau_j^3\Bigr).$$
+
+*Proof.* The per-step phases $\varphi_j$ are common to every ordering. By
+the Weyl relation the phase of a product is $\frac1{2\hbar}$ times the sum
+of $\omega(\delta z_a,\delta z_b)$ over pairs with $a$ applied before $b$;
+a pair kept in order cancels between the two products, and an inverted
+pair contributes $\omega(\delta z_i,\delta z_j)-\omega(\delta z_j,\delta z_i)=2\omega(\delta z_i,\delta z_j)$.
+With $\delta z_i=(-F\tau_ic_i/m,\ F\tau_i)$,
+$\omega(\delta z_i,\delta z_j)=\frac{F^2}{m}\tau_i\tau_j(c_j-c_i)$. For the
+sum, $c_j-c_i=\frac{\tau_i}2+\sum_{i<k<j}\tau_k+\frac{\tau_j}2$, so
+$\sum_{i<j}\tau_i\tau_j(c_j-c_i)=\frac12\sum_{i\ne j}\tau_i^2\tau_j+\sum_{i<k<j}\tau_i\tau_k\tau_j$,
+and $(\sum_j\tau_j)^3=\sum_j\tau_j^3+3\sum_{i\ne j}\tau_i^2\tau_j+6\sum_{i<k<j}\tau_i\tau_k\tau_j$
+gives $\frac16(\tau^3-\sum_j\tau_j^3)$. $\square$
+
+**Corollary P4 (a partition identity).** $\Phi_N+4\theta_N=F^2\tau^3/(6m\hbar)$ for
+every partition, and $F^2\tau^3/6m=\tau\Delta E/3=(F/v)A_{\rm inertial,fall}$
+with $A_{\rm inertial,fall}=vF\tau^3/6m$ the paper's area (1). $\square$
+
+In areas, $\hbar\Phi_N=(F/v)(A-\sum_jA_j)$ and $4\hbar\theta_N=(F/v)\sum_jA_j$:
+the ordering holonomy carries the part of the Galileo area that refinement
+keeps, and the polygon defect carries the part that Proposition 1 sends to
+zero. For the uniform partition,
+$\Phi_N=\frac{\tau\Delta E}{3\hbar}(1-N^{-2})$.
+
+The chronological and reversed products realize the same displacement, so
+the holonomy is a property of the composition law. No force history
+acting on a body realizes a reordering other than the chronological one:
+an impulse applied at the wrong time must be translated back, so a
+reversed order needs displacements as well as impulses, which trapped-ion
+practice supplies. Theorem P3 is therefore a statement about the
+composition law, and Theorem P1 is the one that needs only two force
+histories acting on a real body.
+
+### Controlled readout and finite resources
+
+Put the two histories of Theorem P1 on the arms of a control qubit, as in
+N01 §4. The body ends in the same state on both arms, so the qubit
+acquires the relative phase $\theta_N$ and nothing else, and the optimal
+single-shot error in deciding polygon against curve is
+$\epsilon=\frac12(1-|\sin(\theta_N/2)|)$, with N01's formula for $n$
+copies. In one controlled pass, a single step is resolved from its chord
+at error $\epsilon$ only if
+
+$$\frac{F^2\tau_j^3}{24m\hbar}\ \ge\ 2\arcsin(1-2\epsilon),\qquad
+\tau_j\ \ge\ \left(\frac{48\,m\hbar\,\arcsin(1-2\epsilon)}{F^2}\right)^{1/3},$$
+
+for every state of the body, pure or mixed, squeezed or not. The bound
+concerns this readout and its resource, the number of controlled passes:
+$k$ passes accumulate $k\theta_N$ and lower the threshold on $\tau_j$ by
+$k^{1/3}$, while independent copies obey the separate Helstrom formula in the insertion note. The body's own
+displacement is a separate record, priced by the mark and aperture
+theorems, and squeezing acts on that record. What the phase supplies is
+the part of the signal that no preparation of the body can move.
+
+## The fits: a conditional historical action count
+
+The *Opticks* Book II Part III Proposition XVII makes the fit interval in
+two media proportional to the sine-of-incidence/refraction ratio; Proposition X
+posits the inverse ratio for corpuscle speeds in Newton's emission theory.
+At fixed corpuscle mass this gives a per-colour $\Lambda v$, hence $\Lambda p$,
+invariant under that comparison. The
+[held passages](../docs/classics/Newton_Opticks_1730_fits_and_queries.md)
+are source evidence for that historical reading. Its wavelength analogy was
+already discussed by Sakkopoulos
+[1988](https://doi.org/10.1088/0143-0807/9/2/007) (metadata), Whittaker and
+de Broglie's 1929 Nobel lecture. No novelty is claimed here.
+
+This interval is a longitudinal periodic disposition. It is not a transverse
+position uncertainty or a conjugate momentum spread. Extending its rule to a
+continuously varying speed is an additional hypothesis, stated in the next
+proposition, rather than a theorem Newton printed.
+
+**Proposition F5.** Suppose, extending Props. X and XVII from a step in
+the medium to a continuously varying speed, that a corpuscle's fits
+advance by one interval $\Lambda=\Lambda_0p_0/|p|$ per length of path.
+Then the number of fits along a path is its Maupertuis action
+$W=\int p\cdot dq$ in units of $\Lambda_0p_0$. For the inscribed polygon
+and the curve of Theorem P1 the counts differ by
+
+$$\frac{\Delta W}{\Lambda_0p_0}=\frac{F^2}{12m\Lambda_0p_0}\sum_j\tau_j^3
+=\frac{1}{2\Lambda_0p_0}\,\frac{F}{v}\sum_jA_j$$
+
+fits, with $A_j$ Lemma XI's tangent areas.
+
+*Proof.* Along the actual motion $p\parallel dq$, so $|p|\,ds=p\cdot dq$
+and the count is $\int p\cdot dq/(\Lambda_0p_0)$. The horizontal parts are
+common. On step $j$ the curve has $\int p_y\,dy=\frac{F^2}{m}\int_{t_{j-1}}^{t_j}t^2\,dt$
+and the chord has $\frac{F^2}{m}c_j^2\tau_j$; their difference is
+$\frac{F^2}{m}\tau_j\bigl[\frac13(t_{j-1}^2+t_{j-1}t_j+t_j^2)-\frac14(t_{j-1}+t_j)^2\bigr]
+=\frac{F^2\tau_j^3}{12m}$, and $F^2\tau_j^3/6m=(F/v)A_j$. $\square$
+
+The count is a classical internal-phase variable attached to a trajectory.
+Proposition XII's determinate reflection/transmission disposition and Query 29's
+overtaking vibrations do not supply Hilbert states, Born probabilities, Weyl
+relations or coherent addition of amplitudes. Proposition XV's oblique-emergence
+rule also need not be a path-length count. Even where the conditional action
+count is useful, it does not establish a quantum central extension.
+
+If one additionally sets $\Lambda=\lambda/2$ and $\lambda p=2\pi\hbar$,
+counting $2\pi$ per fit gives $4\theta_N$ for this pair of histories:
+one factor two is the half-wavelength interval, the other is
+$\Delta W=2\Delta S$. The wave phase advancing $\pi$ per interval gives
+$2\theta_N$. These are conditional comparisons using quantum calibration.
+A kick $J$ before a displacement $d$ changes $\int p\,dq$ by $Jd$ relative
+to reversing their order; a classical phase count can record this area without
+becoming a quantum composition law. Universality across colours and systems,
+a positive physical constant, and the quantum state/instrument rules remain
+separate physical assumptions.
+
+## General force histories: one Dirichlet functional
+
+Let $f$ be any integrable force history on an interval of duration
+$\tau$, and compare the motion with its **chord**, the uniform motion
+between the same two positions. The deviation $\delta y=y_{\rm chord}-y_f$
+obeys $m\,\delta y''=-f$ with $\delta y=0$ at both ends, so
+$\delta y=G_\tau f/m$ with the Dirichlet Green's function
+$G_\tau(s,u)=\min(s,u)\,(\tau-\max(s,u))/\tau$ in time measured from the
+start of the interval. Define the **kinetic action of the deviation**
+
+$$\mathcal K_\tau[f]=\int_0^\tau\tfrac12m\,\delta\dot y^{\,2}\,dt
+=\frac1{2m}\int_0^\tau\!\!\int_0^\tau G_\tau(s,u)f(s)f(u)\,ds\,du\ \ge0,$$
+
+zero only for $f=0$. For the constant force it is
+$F^2\tau^3/24m=\tau\Delta E/12=(F/2v)S$, with $S$ the segment of the chord.
+
+**Theorem G7.** (a) On each step of a partition, the two impulses
+$J_j^-=\int(1-s/\tau_j)f$ and $J_j^+=\int(s/\tau_j)f$ at its ends
+reproduce the step's impulse and displacement, so Newton's polygon built
+from them agrees with the motion at every vertex, and
+
+$$W_{\rm poly}=\exp\Bigl[\frac{i}{\hbar}\sum_j\mathcal K_{\tau_j}[f]\Bigr]W_f .$$
+
+Inserting vertices never raises the phase:
+$\sum_j\mathcal K_{\tau_j}[f]\le\mathcal K_\tau[f]$. (b) For every
+protocol of Gaussian marks with uncorrelated error and recoil and
+$\delta_j\Delta_j\ge\kappa$, with the initial position and velocity
+unknown, the deflection between the motion under $f$ and free motion
+obeys
+
+$$d^2\ \le\ \frac{\mathcal K_\tau[f]}{\kappa},$$
+
+with equality approached by dense protocols when $f$ has one sign.
+(c) Hence at $\kappa=\hbar/2$ the best deflection any such protocol can
+reach is **twice the phase between the motion and its chord when $f$ has one sign**,
+$d^2_{\max}=2\,\mathcal K_\tau/\hbar=2\theta_1$.
+
+*Proof.* (a) Measure time from the start of the step. The impulses at
+$0$ and $\tau_j$ are $k^-=(0,J^-)$ and $k^+=(-\tau_jJ^+/m,\ J^+)$ in the
+phase plane, and $J^-+J^+=\int f$, $\tau_jJ^+=\int sf$ match the step's
+increment. Lemma 1 gives the polygon's step phase
+$\frac1{2\hbar}\omega(k^-,k^+)=\tau_jJ^+J^-/2m\hbar$ and the motion's step
+phase $\frac1{2\hbar}\int\omega(z,dz)=\frac1{2m\hbar}\iint_{u<s}(s-u)f(s)f(u)$,
+because along the path $\omega(z,dz)=f(s)\,\frac1m\int_0^s(s-u)f(u)\,du\,ds$.
+Now $\tau_jJ^+J^-=\iint s(\tau_j-u)f(s)f(u)/\tau_j$; symmetrizing and
+subtracting $\frac12\iint|s-u|ff$ leaves the kernel
+$\frac1{2\tau_j}[s(\tau_j-u)+u(\tau_j-s)-\tau_j|s-u|]=G_{\tau_j}(s,u)$.
+Shifting the time origin is the shear $(a,b)\mapsto(a-t_{j-1}b/m,b)$,
+which preserves $\omega$, so the per-step phases are
+$\mathcal K_{\tau_j}/\hbar$, and they multiply as in Theorem P1. The
+Dirichlet principle $2m\mathcal K_\tau=\sup_T(2\int fT-\int T'^2)$ over $T$
+vanishing at the ends, restricted to $T$ vanishing also at the interior
+vertices, gives the monotonicity.
+
+(b) As in Theorem 2 of the paper, $u^{\mathsf T}\Sigma u\ge2\kappa E/m$ and
+$u^{\mathsf T}P=\frac1m\int_0^\tau fT$ with $T$ vanishing at both ends.
+Since $-(G_\tau f)''=f$, $\int fT=\int(G_\tau f)'T'\le\sqrt{\langle f,G_\tau f\rangle}\sqrt E$,
+so $d^2\le\langle f,G_\tau f\rangle/(2m\kappa)=\mathcal K_\tau/\kappa$. For
+$f$ of one sign take $T\propto G_\tau f$, which has one sign while $T''$
+has the other, so the interior weights and the $S_j$ have opposite signs
+throughout and the dense balanced construction of Theorem 2 applies.
+
+(c) Theorem P1 with a single step is the chord, whose phase is
+$\theta_1=\mathcal K_\tau/\hbar$. Equality of the optimized mark information uses the one-sign attainability condition in (b); for sign-changing $f$ only the upper bound is asserted. $\square$
+
+The two legs of the programme are governed by one functional of the force
+history. $\mathcal K_\tau$ is what Newton's refinement removes: it is the
+kinetic action of the motion relative to its chord, and for a constant
+force it is the chord's segment times $F/2v$. Planck's constant converts
+it into the phase by which the motion differs from its inscribed polygon,
+a c-number that no preparation of the body moves; the mark cost converts
+it into the largest statistical distance any record of the motion can
+reach within the Gaussian model of marks. At $\kappa=\hbar/2$ the optimized second quantity is exactly twice the first for the one-sign force family; the general statement is an upper bound. The two legs stand on different footing: the
+phase is exact and uses the Weyl relations alone, while the mark bound
+holds inside a linear Gaussian model with the trade-off
+$\delta\Delta\ge\kappa$, a model that squeezing and grid probes leave, as the
+[recoil note](record-distance-path-length.md#recoil-only-bound-for-arbitrary-probe-states) records. The $24$ in
+Theorem P1's $F^2\tau^3/24m$ and in the sharp bound
+$d^2\le F^2\tau^3/24m\kappa$ of the paper's Theorem 2 is one integral,
+$\iint G_\tau=\tau^3/12$, multiplied by $F^2/2m$.
+
+## Consequence for STATE
+
+Cut energy, Weyl phase and Gaussian information share an exact functional,
+while their physical premises remain distinct. A cut-share floor differs from
+a cell-action floor by $3s(1-s)$; controlled-pass resources and Gaussian-mark
+availability must accompany any resolution claim. Newton's fits supply source
+evidence for a conditional classical phase count, not a derivation of the Weyl
+relations or physical $\hbar$. The independent positive-action question remains
+open. Historical cut schedules retain their own scripts and edition links;
+their convergence is not evidence of transmission or of least magnitudes.

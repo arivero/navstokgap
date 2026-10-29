@@ -29,7 +29,7 @@ independently available.
 
 ## Result and acceptance
 
-Entry HEAD was 06b6294; worktree was clean. [C128](../../notes/hamiltonian-finite-closure.md)
+Entry HEAD was 06b6294; worktree was clean. [C128](../../notes/classical-orientation-closure.md#no-finite-observable-enlargement-repairs-this-interaction)
 proves no finite real bounded observable span containing the retained effects
 is invariant for C127 on any nonzero time interval. The orbit of u_x+i u_y
 restricts to exponentials with arbitrarily many distinct frequencies;

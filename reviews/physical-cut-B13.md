@@ -2,7 +2,7 @@
 
 ## Result
 
-The three claims in `notes/physical-cut-speed.md` survive proof audit with
+The three claims in `notes/telegraph-return-bridge.md#mechanical-cuts-and-the-sharp-speed-benchmark` survive proof audit with
 their stated hypotheses. C030 is a direct equal-mass elastic construction and
 has `k_mid=m*u^2*Delta`; C031 is a sharp bounded-speed midpoint theorem with a
 necessary, not selecting, action bound; C032 is valid only for a

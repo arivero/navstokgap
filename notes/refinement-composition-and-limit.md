@@ -76,7 +76,7 @@ that distribution.
 
 Take transverse mass $M>0$, force $F$, and a cell of duration
 $h=u+v$, split after $u>0$, with $v>0$. This is the symmetric impulsive
-construction of the [polygon note](polygon-lift-phase.md), a modern
+construction of the [polygon note](cut-measure-newton.md#weyl-lifting-and-polygon-phases), a modern
 constant-force realization of the inscribed-chord comparison. It does
 not assert that every historical force polygon used this update.
 
@@ -421,7 +421,7 @@ Mass enters only through $w$ if a spring force is written $-mw x$.
 No action normalization appears. To use this mechanical bound for a
 record, its discrepancy must still vanish after whitening by the
 complete conditional record covariance, as tested in
-[the recording note, §6.3](sed-closure-under-recording.md#63-ideas-supplied-by-the-current-lean-formalization).
+[the recording note, §6.3](sed-closure-under-recording.md#complete-record-information-and-adaptive-likelihoods).
 
 ## 3c. All refinement sequences and two microscopic kick orders
 
@@ -997,10 +997,10 @@ obstruction and an explicit truncated running law: curve consistency,
 dimensional scale and action normalization require different proofs.
 Exact retained weights explain the appearance of RG as a change of
 resolution; useful continuum and spectral estimates remain its test.
-The [physical recording construction, §§8.11--8.14](sed-closure-under-recording.md#814-the-limiting-momentum-record-and-retained-controller-recoil)
+The [physical recording construction, §§8.11--8.14](sed-closure-under-recording.md#physical-adaptive-feedback-and-a-continuous-record)
 also identifies an adaptive body--record continuum law and smeared
 recoil from finite pointers, with limiting-record closure at its supplied
-scale. [The nonlinear-copy test, §8.15](sed-closure-under-recording.md#815-a-nonlinear-copy-isolates-the-missing-curvature-contribution)
+scale. [The nonlinear-copy test, §8.15](sed-closure-under-recording.md#nonlinear-copies-defeat-the-classical-gaussian-extension)
 shows that the same Gaussian classical preparation fails beyond affine
 body copies. Its §8.16 derives the exact quantum generator correction,
 which changes conditional momentum while preserving record statistics,

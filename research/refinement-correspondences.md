@@ -30,7 +30,7 @@ convolution with v=ℏ²/(4σ²). Two simultaneous records satisfy
 multiply, so their inverse heat times add. Thus the precision algebra is
 exactly the same algebra, after naming the covariance/precision variables.
 
-Source: [Newton record move](../notes/newton-record-parallel-move.md), §1–2,
+Source: [Newton record move](../notes/mark-cost-and-statistical-floor.md#forgotten-gaussian-records-and-the-refinement-limit), §1–2,
 and the gauge Gaussian calculation in [series/parallel](../notes/series-parallel-gauge-refinement.md).
 Boundary: a trace over a quantum pointer is a completely positive channel;
 a gauge mid-plane marginal is a Euclidean integral with nonabelian generated
@@ -65,7 +65,7 @@ d(1/g²)/d log μ=2b0+… and supplies a matched scale of the form
 Sources: [stochastic route](../notes/stochastic-route-velocitas-ultima.md),
 [rotation composition](../notes/rotation-composition-universality.md),
 [parallel logarithm](../notes/four-dimensional-parallel-log.md),
-[UV/IR](../notes/uv-halving-ir-confinement.md).
+[UV/IR](../notes/halving-atlas.md#why-ultraviolet-refinement-bears-on-an-infrared-gap).
 The Newton coefficient has action units and may be zero. Λ has inverse-length
 units, and a physical positive gap needs a surviving positive coefficient
 and observable weight as well as a continuum construction. These are
@@ -116,7 +116,7 @@ and [groupoid states](../notes/groupoid-quantum-newton-states.md) separate
 geometric zoom, a bare phase regulator, physical $\hbar$, mesh, and
 conditional-density blocking. Constructing a map relating them is an
 open RG problem; a zoom alone does not integrate fluctuations or select
-a universal action. Read the [corrected groupoid trajectories](../notes/tangent-groupoid-trajectories.md)
+a universal action. Read the [corrected groupoid trajectories](../notes/groupoid-quantum-newton-states.md#geometric-zoom-and-kernel-composition)
 and [refinement §§3c–3d](../notes/refinement-composition-and-limit.md).
 A gauge double-groupoid organizing parallel moves is proposed, not proved.
 

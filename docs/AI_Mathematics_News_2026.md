@@ -42,7 +42,7 @@ established method (the critical-line proportion), explicit
 counterexamples, and formalization at scale. The first kind is the kind
 this repository produces on its modern leg, most recently the sharp
 constant $48$ of the mark theorem and the exact polygon phase of the
-[polygon-lift note](../notes/polygon-lift-phase.md).
+[polygon-lift note](../notes/cut-measure-newton.md#weyl-lifting-and-polygon-phases).
 
 The Navier–Stokes result settles a forced alternative, and the Clay
 Institute's caution and the priority dispute both show what a claim needs
@@ -64,7 +64,7 @@ constant explicit, which is this repository's answer to that concern.
 
 On Yang–Mills, the experts surveyed in September expect no near-term
 machine resolution. That agrees with the
-[position note](../notes/mass-gap-position.md), which locates the whole
+[position note](../notes/mass-gap-obligations-lattice.md#existing-estimates-and-examined-routes), which locates the whole
 difficulty in the control of about six blocking steps at order-one
 coupling, and it is why the $SU(3)$ track is paused with its map intact
 while the Planck-gap work proceeds.

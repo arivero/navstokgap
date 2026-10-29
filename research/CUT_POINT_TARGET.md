@@ -47,10 +47,10 @@ its preparation at every mesh requires a physical justification.
   memory; an imposed reset changes dynamics.
 - C068–C123: finite apparatus and reconstruction examples make preparation,
   latency, record and calibration resources explicit. Their synthesis is in
-  [the action-scale paper](../notes/action-scale-obstructions.md).
+  [the action-scale paper](../notes/action-unit-dimensional-selection.md#observables-and-the-admissible-class).
 
-[Cut consistency](../notes/cut-point-consistency.md),
-[finite-speed cuts](../notes/physical-cut-speed.md),
+[Cut consistency](../notes/quantum-blocks-construct-newton.md#projective-gaussian-preparation-and-raw-kinetic-action),
+[finite-speed cuts](../notes/telegraph-return-bridge.md#mechanical-cuts-and-the-sharp-speed-benchmark),
 [return bridges](../notes/telegraph-return-bridge.md) and
 [classical cut state](../notes/conservative-harmonic-receiver.md) retain proofs and audits.
 The older double-limit/finite-propagation drafts remain under R02 review;
@@ -71,7 +71,7 @@ peak-excursion question.
 
 ## Historical and proposed geometry
 
-The [Principia note](../notes/principia-constant-force-action.md) separates
+The [Principia note](../notes/newton-insertion-action.md#the-source-geometry-and-three-different-areas) separates
 Newton's geometric limiting arguments from modern action calculations.
 [I002](../ideas/I002-newton-polygon-threshold.md) preserves the supplied polygon
 proposal; [I003](../ideas/I003-cut-paradox-arrow-obstruction.md) preserves the

@@ -16,7 +16,7 @@ Newton's own quantities and with one of them measured.
   length the ray traverses, and Prop. XVIII gives it as the
   $1/89000$th part of an inch for the yellow--orange confine, about
   $0.285\,\mu$m. This is the corpuscle's transverse position scale
-  $\Lambda$ in premise M3 of the [mark-floor note](../../notes/newton-mark-floor.md).
+  $\Lambda$ in premise M3 of the [mark-floor note](../../notes/mark-cost-and-statistical-floor.md#determinate-probes-and-the-historical-premise).
 - **A least impulse, posited.** Query 29 makes the rays small bodies,
   which carries a transverse momentum scale $p$; Newton has no way to
   measure it.
@@ -41,7 +41,7 @@ Newton's own quantities and with one of them measured.
   same ratio. Together they make $\Lambda v$, and so $\Lambda p$, the same
   in every medium, which is the Newton-age form of a phase advancing at a
   rate proportional to momentum
-  ([polygon-lift note](../../notes/polygon-lift-phase.md), §5). Added
+  ([polygon-lift note](../../notes/cut-measure-newton.md#weyl-lifting-and-polygon-phases), §5). Added
   2026-09-22.
 - **Action at a distance on light.** Query 1 asks whether bodies bend
   the rays by acting at a distance, most strongly at the least distance,

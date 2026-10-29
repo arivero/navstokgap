@@ -40,7 +40,7 @@ requires a further premise.
 
 The tests and proofs below develop the question in
 [the fifth-postulate note, §7](principia-fifth-postulate.md), using
-[the time-graded groupoid](tangent-groupoid-trajectories.md) and
+[the time-graded groupoid](groupoid-quantum-newton-states.md#geometric-zoom-and-kernel-composition) and
 [the insertion laws, §§2--3](refinement-composition-and-limit.md).
 The constructions assemble established stationary phase, product formulas
 and semiclassical quantization.
@@ -586,7 +586,7 @@ bare full-period halved action would change the condition.
 
 ## 6. Relation to the orbit bounds and Kepler threshold
 
-The [closed-orbit force-action note](closed-orbit-force-action.md)
+The [closed-orbit force-action note](action-unit-dimensional-selection.md#a-sharp-excitation-and-force-bound-for-all-closed-regular-orbits)
 proves $J_{\rm orb}\ge m^2v_*^3/F_{\max}$ in Newtonian mechanics under a
 uniform speed floor and force ceiling. For eccentric orbits this is the
 total orbit action above; it differs from $I_\theta=\ell$.
@@ -595,14 +595,14 @@ with an integer rule would still require an upper bound on the integer
 to bound $h$ from below.
 
 On a circle $J_{\rm orb}=\ell$. The
-[bound-orbit observable note](bound-orbit-action-observable.md)
+[bound-orbit observable note](action-unit-dimensional-selection.md#a-prepared-orbit-covariance-and-transport-response)
 gives $2\sqrt{\det\Sigma}=\ell$ for its uniform-phase preparation.
 Equation (8) would turn this into $2\sqrt{\det\Sigma}=|n_\theta|h$
 if that classical estimator is used to label an admitted angular action.
 Identifying the classical ensemble with a quantum state would need an
 additional preparation argument.
 
-The [relativistic Kepler note](relativistic-kepler-threshold.md)
+The [relativistic Kepler note](action-unit-dimensional-selection.md#singular-and-softened-relativistic-coulomb-cores)
 has a different, explicit mechanism: in the external singular potential
 $-k/r$, regular bound motion requires $\ell>k/c$. Combining this
 classical admissibility condition with angular descent gives

@@ -6,61 +6,35 @@
 \usepackage[margin=25mm]{geometry}
 \usepackage{longtable,booktabs,array,calc}
 \usepackage[hidelinks]{hyperref}
-\hypersetup{pdftitle={The flowed block constraint gives a continuum action lower bound; sharpness remains open},pdfauthor={navstokgap research working notes}}
+\hypersetup{pdftitle={Large gauge fields: action cost, constrained minima and model entropy},pdfauthor={navstokgap research working notes}}
 \newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
-\section{The flowed block constraint gives a continuum action lower
-bound; sharpness remains
-open}\label{the-flowed-block-constraint-gives-a-continuum-action-lower-bound-sharpness-remains-open}
+\hypertarget{large-gauge-fields-action-cost-constrained-minima-and-model-entropy}{%
+\section{Large gauge fields: action cost, constrained minima and model
+entropy}\label{large-gauge-fields-action-cost-constrained-minima-and-model-entropy}}
 
-Later corrections:
-\href{ground-state-measure-transfer.md\#3-action-cost-at-a-block-scale-not-a-probability-theorem}{ground-state
-measure transfer, §3} separates continuum action cost from lattice and
-probability estimates; \href{flow-instability-large-field.md}{flow
-instability} corrects the growth exponent and withdraws truncation
-sharpness; \href{large-field-operator-inequality.md}{the
-operator-inequality note} distinguishes measure control from the
-Hamiltonian comparison (relevant passages read).
+\textbf{Maintained conclusions.} For a smooth finite-action continuum
+connection whose action-decreasing flow exists through \(t=\ell^2/8\)
+with no boundary flux, a flowed block constraint
+\(\int_B|G_t|^2\ge\eta_F^2\) implies \(S_E/\hbar\ge\eta_F^2/(4g^2)\) in
+the declared ordered-index norm. Equality has explicit necessary and
+sufficient conditions; no admissible positive-threshold saturating
+family is constructed.
 
-\begin{quote}
-\textbf{Correction (2026-10-02, GPT-6 Astra).} Proposition 1 survives as
-a continuum action inequality under the flow and boundary assumptions
-below. The former Proposition 2 used a non-admissible field strength
-constant on a block and zero outside, and incorrectly assigned its flow
-boundary correction the size \(O(a/\ell)\). Its saturation and
-optimality claims are \textbf{withdrawn}, replaced by equality
-conditions. The Section 3 inference that decreasing total action
-decreases the flowed block average, and hence that every descent
-direction leaves \(K_\eta\) and the constant field is a constrained
-minimizer, is \textbf{withdrawn}. The former exact mode count is only a
-constant-background phase-space model; the claimed sharp \(e^{2\eta}\)
-truncation factor is withdrawn in accordance with the later instability
-correction. Uniform lattice control, normalized rarity, polymer
-convergence and closure of the large-field corner are not proved here.
-Gauge-group independence refers only to the chosen action normalization.
-\end{quote}
+The constant-background unstable-mode count is a separate phase-space
+model. Its charge and real/complex multiplicities give explicit ratios,
+not a normalized interacting entropy bound. Finite-regulator compactness
+gives a constrained minimum without a coercive Gaussian Hessian. None of
+these statements proves local rarity, polymer convergence or a physical
+spectral gap. The former claimed convergence threshold is replaced by
+its actual unproved weight assumption below. Mathematical source/model
+checks are internal.
 
-\textbf{Abstract / result.} Let a smooth finite-action continuum
-connection admit Yang--Mills gradient flow through \(t=\ell^2/8\), with
-no boundary term in the action dissipation identity. Fix a
-four-dimensional block \(B\) of volume \(\ell^4\) and the action
-normalization
-\[s(A):=\frac{S_E[A]}{\hbar}=\frac1{4g^2}\int_\Omega|F|^2d^4x,\qquad g>0.\]
-Here \(|F|^2\) sums colour and \textbf{ordered} spacetime indices, with
-a fixed positive invariant colour inner product. If
-\[K_\eta=\left\{A:\int_B|G_t|^2d^4x\ge\eta^2\right\},\qquad\eta\ge0,\]
-then \[\inf_{A\in K_\eta}s(A)\ge\frac{\eta^2}{4g^2}.\] This is a direct
-consequence of global action monotonicity and positivity outside \(B\),
-not a constrained minimization construction. The numerical bound has no
-block-size or volume factor. Sharpness for admissible connections at
-this positive flow time remains open here. There is no lattice-spacing
-parameter in the theorem, and no normalized probability or Hamiltonian
-gap estimate follows from it alone.
-
-\subsection{1. The constraint in the action
-variable}\label{the-constraint-in-the-action-variable}
+\hypertarget{continuum-action-cost-and-equality}{%
+\subsection{Continuum action cost and
+equality}\label{continuum-action-cost-and-equality}}
 
 Take \(\Omega=\mathbb R^4\) with sufficient decay for the identities
 below, or a finite periodic four-dimensional domain, and
@@ -79,13 +53,14 @@ bound. In particular, it cannot be substituted for the curvature upper
 bound used in the Jacobian estimates of
 \href{flow-jacobian-truncation-error.md}{the Jacobian note} or the
 corrected
-\href{flow-instability-large-field.md\#1-the-curvature-term-is-symmetric}{instability
+\href{flow-jacobian-truncation-error.md\#instability-of-the-full-background-generator}{instability
 note, §1} (relevant passages read). The original phrase ``up to
 replacing a supremum by a block average'' concealed an additional
 estimate; that identification is withdrawn.
 
-\subsection{2. The bound and the conditions for
-equality}\label{the-bound-and-the-conditions-for-equality}
+\hypertarget{the-bound-and-its-equality-conditions}{%
+\subsubsection{The bound and its equality
+conditions}\label{the-bound-and-its-equality-conditions}}
 
 \textbf{Proposition 1 (continuum action cost).} Under the assumptions of
 Section 1, for every \(\ell>0\) and \(\eta\ge0\),
@@ -166,126 +141,204 @@ possible as \(a/\ell\to0\). There is no vanishing cutoff correction
 justified by that limit. These observations invalidate the old sharpness
 proof without claiming that no other sharpness proof exists.
 
-\subsection{3. Instability and the block constraint are separate
-questions}\label{instability-and-the-block-constraint-are-separate-questions}
+\hypertarget{constrained-minima-and-their-tangent-conditions}{%
+\subsection{Constrained minima and their tangent
+conditions}\label{constrained-minima-and-their-tangent-conditions}}
 
-The corrected \href{flow-instability-large-field.md}{instability note,
-§§2--3} (full note read) derives, in a stationary abelian chromomagnetic
-background with charged curvature \(b=gB>0\), the linear growth rate
-\[b-k_\parallel^2\qquad(k_\parallel^2<b).\] The full covariant Laplacian
-is included. The maximal model rate is \(b\), not \(2b\). This is a
-background spectral calculation, not an admissible block-supported
-saturation example for Proposition 1.
+\textbf{Proposition C (finite regulator only).} Let \(G\) be compact,
+let \(\mathcal E\) be a finite link set, and let
+\(K\subset G^{\mathcal E}\) be closed and nonempty. Every continuous
+action \(s\) attains its minimum on \(K\). If \(s\) is real valued, its
+integral \(\int_K e^{-s}d\nu\) is finite for every finite reference
+measure \(\nu\).
 
-\textbf{Correction to the descent argument.} Monotonicity says
-\(s(\Phi_t A)\le s(A)\) for each initial connection \(A\); it does not
-compare the flowed block functionals of two different initial
-connections. From \(s(A')<s(A)\) one cannot conclude
-\(\mathcal F_\ell(A')<\mathcal F_\ell(A)\). The action can also change
-outside the block and during the flow. Even decreasing
-\(\mathcal F_\ell\) would not force exit from \(K_\eta\) for an interior
-point with threshold slack. The claims that every descent direction
-exits \(K_\eta\) and that a constant field minimizes on it are
-withdrawn.
+\emph{Proof.} The product and its closed subset are compact. The extreme
+value theorem gives a minimum and a finite maximum; \(e^{-s}\) is
+bounded, so its integral against a finite measure is finite. \(\square\)
 
-Proposition 1 holds for every admissible field in the constraint set,
-regardless of its stability. It supplies a floor on the constrained
-action, not a minimizer or its Hessian. Neither homogeneity nor
-inhomogeneity of a constrained minimizer is established here. No
-Gaussian expansion about such a minimizer is justified by this note.
+This says nothing about regulator-uniform estimates, the size of a
+Gaussian contribution or convergence of a saddle-point expansion. For a
+\(C^2\) action, a constrained minimum requires nonnegative first
+variation along one-sided feasible curves. At a boundary minimum the
+first variation need not vanish, so the Hessian need not be nonnegative
+on the tangent cone. In a local coordinate, take
+\[K=[0,1/4],\qquad s(x)=x-x^2.\] The minimum is at \(0\), with
+\(s'(0)=1\) but \(s''(0)=-2\), even though positive directions belong to
+the tangent cone. Along a twice differentiable feasible curve \(\gamma\)
+whose first action derivative vanishes, the necessary condition is
+\[(s\circ\gamma)''(0)
+=\operatorname{Hess}s[\dot\gamma,\dot\gamma]
++ds[\ddot\gamma]\ge0\] in local coordinates. Constraint curvature can
+matter as well. At an interior minimum \(ds=0\) and the Hessian is
+nonnegative, but it can have zero modes: \(s(x)=x^4\) has no coercive
+quadratic term at its minimum. Gauge degeneracy, boundary geometry,
+higher terms and uniform determinant bounds need separate treatment.
 
-\subsection{4. What the ingredients do and do not
-estimate}\label{what-the-ingredients-do-and-do-not-estimate}
+The corrected
+\href{flow-jacobian-truncation-error.md\#instability-of-the-full-background-generator}{instability
+note, §2} (passage read) supplies a negative quadratic mode for a
+stationary constant background in its specified background-transverse
+sector. It excludes that background as a constrained minimum only if an
+admissible perturbation realizes the descent while remaining in \(K\).
+No such feasibility proof, or construction of an inhomogeneous
+minimizer, is supplied here.
+
+\hypertarget{a-constant-background-mode-count}{%
+\subsection{A constant-background mode
+count}\label{a-constant-background-mode-count}}
+
+Use the continuum background-covariant operator of
+\href{flow-jacobian-truncation-error.md\#instability-of-the-full-background-generator}{the
+instability note, §2} (passage read), in four Euclidean dimensions. For
+one charged complex field, with charge magnitude \(q>0\) relative to
+\(T^3\), its transverse polarizations have eigenvalues
+\[\omega^2=k_3^2+k_4^2+(2n+1)qb\mp2qb.\] Only \(n=0\) with aligned spin
+is negative, for \(k_3^2+k_4^2<qb\). Neutral components have no such
+branch.
+
+\emph{Landau degeneracy.} The transverse density per unit area is
+\(qb/(2\pi)\). For example, in Landau gauge with transverse length
+\(\ell\) and periodic second coordinate, momenta are spaced by
+\(2\pi/\ell\). Guiding centres are therefore spaced by
+\(2\pi/(qb\ell)\), giving that density. On a magnetic torus with
+compatible flux, \(qb\ell^2/(2\pi)\) is an integer degeneracy. For a
+block cut from the plane it is a bulk density, not an exact
+boundary-condition-independent count.
+
+\emph{Longitudinal count.} Replacing a momentum sum by its phase-space
+integral gives \[\left(\frac\ell{2\pi}\right)^2
+\operatorname{area}\{k_3^2+k_4^2<qb\}
+=\frac{qb\ell^2}{4\pi}.\] Thus the \textbf{phase-space estimate}, in
+complex dimension, is \[\mathcal N_{\mathbb C}^{\rm ps}(q)
+=\frac{q^2b^2\ell^4}{8\pi^2}
+=\frac{q^2\eta_b^2}{8\pi^2}.\] An exact periodic longitudinal count,
+when the magnetic flux and boundary conditions admit this background,
+would instead be \[\mathcal N_{\mathbb C}^{\rm box}(q)
+=m_q\,\#\{n\in\mathbb Z^2:4\pi^2|n|^2<q\eta_b\},
+\qquad m_q=\frac{q\eta_b}{2\pi}\in\mathbb N.\] The disc area is an
+approximation to this integer count, justified as \(q\eta_b\to\infty\):
+unit squares around the integer points place it between disc areas with
+radii differing by a bounded constant. It is not justified merely by
+sending \(\ell/a\to\infty\) at fixed \(\eta_b\). A lattice operator also
+has dispersion and cutoff effects; no uniform lattice replacement is
+proved here.
+
+\textbf{Real and colour multiplicities.} A charged pair of real adjoint
+components forms one complex field. Each complex mode has two real
+amplitudes, so its real negative-space dimension is twice the complex
+count. Take the usual \(SU(3)\) generator
+\[T^3=\operatorname{diag}(1/2,-1/2,0).\] The matrix units satisfy
+\([T^3,E_{ij}]=(t_i-t_j)E_{ij}\), where \(t_i\) are its diagonal
+entries. The three conjugate root pairs therefore have charge magnitudes
+\(1,1/2,1/2\). Each pair is counted once as a complex field; adding its
+conjugate again would double-count it. Consequently \[\begin{aligned}
+\mathcal N_{\mathbb C,SU(3)}^{\rm ps}
+&=(1+1/4+1/4)\frac{\eta_b^2}{8\pi^2}
+=\frac{3\eta_b^2}{16\pi^2},\\
+\mathcal N_{\mathbb R,SU(3)}^{\rm ps}
+&=\frac{3\eta_b^2}{8\pi^2}.
+\end{aligned}\] These are estimates for this background and operator
+sector, not a mode count for every large-field configuration or a
+gauge-fixed functional determinant calculation.
+
+\hypertarget{action-versus-model-count-the-norm-and-multiplicity-matter}{%
+\subsection{Action versus model count: the norm and multiplicity
+matter}\label{action-versus-model-count-the-norm-and-multiplicity-matter}}
+
+The continuum action inequality above uses the ordered-index \(L^2\)
+threshold \(\eta_F\); the spectral model instead uses
+\(\eta_b=b\ell^2\).
+
+The spectral parameter \(\eta_b=b\ell^2\) of Section 2 is not implicitly
+\(\eta_F\). To compare them in the homogeneous model, fix the colour
+norm by \(\langle T^3,T^3\rangle=1\) (equivalently
+\(2\operatorname{tr}[(T^3)^2]=1\) in the Hermitian convention), and
+absorb the coupling into the curvature. With \(F_{12}=bT^3\),
+\(F_{21}=-bT^3\) and all other components zero, \[|F|^2=2b^2,\qquad
+\eta_F^2=2\eta_b^2,\qquad
+s_B:=\frac1{4g^2}\int_B|F|^2
+=\frac{\eta_b^2}{2g^2}.\] Here \(s_B\) is the block action of the
+background, not the minimum action for an arbitrary constrained field.
+No finite-action localization or admissible boundary construction
+follows from this calculation.
+
+\textbf{Proposition M (model ratios, not entropy bounds).} For
+\(\eta_b>0\) and the preceding normalization, division by the
+phase-space counts of Section 2 gives the following identities:
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
-quantity
+count convention
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-corrected value or status
+phase-space count
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-support and limitation
+\(s_B/\mathcal N^{\rm ps}\)
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-continuum action cost & \(s(A)\ge\eta^2/(4g^2)\) & Proposition 1;
-sharpness open \\
-unstable-mode phase-space count & model \(b^2\ell^4/(8\pi^2)\) &
-Constant charged-background Landau density times longitudinal
-momentum-disc density; not an exact finite-block count or general
-entropy bound \\
-linearized-flow growth & model \(e^{(b-k_\parallel^2)t}\); majorant
-\(e^{2t\Gamma}\) & Corrected instability note;
-\(\Gamma=\tfrac12\sup_{s,x}\|M(s,x)\|_{\rm op}\), \(M u=2[G,u]\); no
-sharp truncation-tail claim \\
-normalized large-field weight & not proved & Needs a constrained/full
-partition-function comparison; a mode count alone supplies none \\
+one unit-charge complex field & \(\eta_b^2/(8\pi^2)\) &
+\(4\pi^2/g^2\) \\
+its real directions & \(\eta_b^2/(4\pi^2)\) & \(2\pi^2/g^2\) \\
+all three \(SU(3)\) charged pairs, complex & \(3\eta_b^2/(16\pi^2)\) &
+\(8\pi^2/(3g^2)\) \\
+all three \(SU(3)\) charged pairs, real & \(3\eta_b^2/(8\pi^2)\) &
+\(4\pi^2/(3g^2)\) \\
 \end{longtable}
 
-The count in \href{large-field-entropy-count.md}{the entropy note, §2}
-(passage read) multiplies the densities \(b/(2\pi)\) and \(b/(4\pi)\) by
-the transverse and longitudinal areas. It is a \textbf{phase-space
-model} for one charged branch with its stated multiplicity convention.
-Finite-domain boundary conditions, flux compatibility, discrete momenta
-and colour multiplicities matter. The parameter \(b\ell^2\) is not
-automatically the threshold \(\eta\) of our colour and ordered-index
-\(L^2\) norm. Thus neither an exact count \(\eta^2/(8\pi^2)\) nor a
-general cost/count ratio \(2\pi^2/g^2\) is proved here. A convergent
-polymer sum requires additional estimates beyond this model.
+\emph{Proof.} Substitute the counts and \(s_B=\eta_b^2/(2g^2)\), and
+cancel \(\eta_b^2\). \(\square\)
 
-Likewise \(\Gamma\) is an upper bound on a different norm, not the block
-threshold. If separately \(\Gamma\le\eta_\infty/\ell^2\), then at
-\(t=\ell^2/8\) the corrected kernel growth majorant is
-\(e^{2t\Gamma}\le e^{\eta_\infty/4}\). This is conditional on the
-heat-equation hypotheses of the corrected instability note; it is not an
-error lower bound or a Hamiltonian truncation theorem. No such upper
-bound follows from membership in \(K_\eta\).
+The original arithmetic \[\frac{\eta_b^2/(4g^2)}{\eta_b^2/(8\pi^2)}
+=\frac{2\pi^2}{g^2}\] remains a formal identity if the numerator is an
+\textbf{assumed} cost \(s_{\rm old}\). It paired the ordered-index
+\(L^2\) threshold formula with the different spectral threshold without
+their conversion. Under the normalization above, the same number occurs
+for one pair's real directions, not its complex count. None of these
+ratios is a universal entropy coefficient. Scale cancellation at fixed
+\(\eta_b\) and \(g\) does not establish cutoff uniformity or
+running-coupling control.
 
-\textbf{Missing normalization.} In a finite regulator with reference
-probability measure \(\nu\), write \(d\mathbb P=Z^{-1}e^{-s}d\nu\). If
-an action bound \(s\ge q\) holds on an event \(K\), then only
-\[\mathbb P(K)\le Z^{-1}e^{-q}\nu(K)\] follows immediately. This
-elementary inequality does not establish a uniform local tail: the
-partition-function denominator still needs control. This is the
-correction in
-\href{ground-state-measure-transfer.md\#3-action-cost-at-a-block-scale-not-a-probability-theorem}{ground-state
-measure transfer, §3} (passage read). The continuum action calculation
-itself defines no quantum probability measure.
+\textbf{The missing weight estimate.} For a finite regulator with
+reference probability measure \(\nu\) and
+\(d\mathbb P=Z^{-1}e^{-s}d\nu\), an action floor \(s\ge Q\) on an event
+\(K\) gives only \[\mathbb P(K)\le Z^{-1}e^{-Q}\nu(K).\] The denominator
+needs control relative to the constrained numerator. The negative
+eigenspace dimension at one saddle controls neither this ratio nor the
+volume of a region, its nonlinear integration, or the number of possible
+regions. Compactness at a fixed regulator provides no uniform factor per
+mode.
 
-The former net exponent
-\[-\frac{\eta^2}{4g^2}\left(1-\frac{Cg^2}{2\pi^2}\right)\] is retained
-only as \textbf{heuristic bookkeeping}, obtained by multiplying an
-assumed suppression \(e^{-\eta^2/(4g^2)}\) by an assumed entropy factor
-\(e^{C\eta^2/(8\pi^2)}\). Neither factor as a normalized interacting
-measure estimate, nor a uniform \(C\), is established here. Negativity
-of that expression would not by itself prove summability over blocks or
-polymers. The earlier statement that the first three rows were proved or
-sharp and that the large-field corner was closed is withdrawn.
+To preserve the former calculation's scope explicitly, \textbf{if one
+assumed} a weight bound
+\[W(\eta_b)\le e^{-s_{\rm old}}e^{C\mathcal N_{\mathbb C}^{\rm ps}(1)},
+\qquad s_{\rm old}=\frac{\eta_b^2}{4g^2},\qquad C>0,\] then algebra
+would give \[W(\eta_b)\le
+\exp\left[-\frac{\eta_b^2}{4g^2}
+\left(1-\frac{Cg^2}{2\pi^2}\right)\right].\] Its exponent is negative
+for \(g^2<2\pi^2/C\). Neither the assumed weight estimate nor a
+regulator-independent \(C\) is proved. The old numerical threshold
+\(g^2<2\pi^2\) additionally set \(C=1\) without justification. This
+display is \textbf{conditional bookkeeping}, not a convergence theorem.
+Even an actual tail in strength would need region-counting and
+interaction estimates to sum polymers.
 
-Finally, a measure estimate, even if subsequently proved, does not
-supply a signed Hamiltonian operator comparison. That distinction is
-explained in
-\href{large-field-operator-inequality.md\#3-the-sign-of-a-rare-perturbation}{the
-operator-inequality note, §3} (passage read); its additional
-localization estimates are not used here. This note proves no spectral
-or physical mass gap.
+\hypertarget{consequence-for-state}{%
+\subsection{Consequence for STATE}\label{consequence-for-state}}
 
-\subsection{5. Consequence for STATE}\label{consequence-for-state}
-
-Retain the continuum action floor \(\eta^2/(4g^2)\) for the flowed block
-\(L^2\) constraint, subject to the stated flow and boundary assumptions.
-Sharpness, constrained minimizers, an exact lattice analogue, normalized
-probability control and large-field polymer convergence remain unproved
-here. The constant-background mode count and the net exponent are
-model/heuristic inputs only; the sharp \(e^{2\eta}\) claim is withdrawn
-in line with the later instability correction. The large-field corner
-remains an estimate and construction problem, not an estimate closure.
-No continuum \(SU(3)\) construction or mass gap is obtained. This
-correction specifies the scope for the caller's STATE and catalog
-updates; those files are unchanged in this task.
+Retain the continuum inequality and equality test, the Bianchi
+counterexample to the former saturation construction, the
+finite-regulator tangent-cone counterexample and the explicitly
+normalized charged-background counts. A block \(L^2\) threshold supplies
+no upper curvature norm. The flow's action descent also compares times
+on one field, not block functionals of two initial fields. Normalized
+local weights, boundary-uniform integration and polymer summation remain
+open. The \href{large-field-operator-inequality.md}{operator comparison}
+needs separate sign and localization estimates even if a measure bound
+is subsequently established.
 \end{document}

@@ -308,7 +308,7 @@ It is self-adjoint. Under odd extension it is unitarily equivalent to
 $T_c(P)$ restricted to the odd subspace, since $T_c$ is even.
 
 Use the odd coherent state of
-[the didactic guide, equation (20)](newton-dimock-balaban-guide.md).
+[the didactic guide, equation (20)](groupoid-quantum-newton-states.md#regulators-and-a-normalized-blocking-test).
 Write its overlap as $\gamma_\hbar$, its initial full-line widths as
 $\sigma_q,\sigma_p$, and put
 $$a_c(t)=q_0+tT_c'(p_0),\qquad q_0>0,\quad p_0<0.\tag{30}$$

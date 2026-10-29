@@ -1,152 +1,167 @@
-# A uniform relaxation gap with nearest-neighbour interactions
+# Ising relaxation, local parent Hamiltonians and clock normalization
 
-For a periodic zero-field Ising heat-bath chain with per-site refresh rate
-$a>0$ and dimensionless ferromagnetic coupling $b\ge0$, the full relaxation
-gap is exactly $a[1-\tanh(2b)]$ for every $N\ge3$. This replaces G02's
-independence premise by a quantitative interaction contraction. Bounded $b$
-and a positive per-site clock floor give a size-independent bound; finite
-interaction range alone does not control joint size/coupling limits.
+The periodic zero-field Ising heat-bath chain has the exact full relaxation
+gap $a[1-\tanh(2b)]$ for every $N\ge3$, at per-site refresh rate $a>0$ and
+finite ferromagnetic coupling $b\ge0$. Its square-root Gibbs transform is
+an explicit positive three-site local Hermitian operator with that gap.
+Multiplication by a supplied action $K>0$ gives an energy gap $K$ times
+the rate. The invariant law fixes neither clock nor action normalization.
+A volume-uniform relaxation gap also coexists with a growing global mixing
+time. These are three different statements.
 
-The exact gap is an established result, explicitly recorded by
-[Lubetzky–Sly, preprint p. 4](https://arxiv.org/pdf/0909.4320v1).
-[B73](../references/batches/B73.md) matches their rate-one convention to the
-rate $a$ here. The following self-contained proof retains the model's role
-as an interacting benchmark; its [foundational use](ising-foundational-value.md)
-separates relaxation, global mixing and physical energy normalization.
+The exact Ising gap and detailed-balance parent construction are established
+results. The proof below is self-contained, with C124/C126 source matches in
+[B68](../references/batches/B68.md), [B71](../references/batches/B71.md) and
+[B73](../references/batches/B73.md). Historical model/coordinator checks are
+internal; no novelty is claimed.
 
-## 1. Model, law, clock and access
+## Gibbs law, refresh convention and the full generator
 
-On $\Omega_N=\{-1,1\}^N$ with cyclic indices and $N\ge3$, let
+On $\Omega_N=\{-1,1\}^N$ with cyclic indices, $N\ge3$, put
 
-$$
-\pi_{N,b}(\sigma)=Z_{N,b}^{-1}
- \exp\left(b\sum_{i=1}^N\sigma_i\sigma_{i+1}\right),
-\qquad b=\beta J\ge0.
-$$
+$$\pi_{N,b}(\sigma)=Z^{-1}\exp\left(b\sum_i\sigma_i\sigma_{i+1}\right),
+\qquad b=\beta J,\quad\theta=\tanh(2b).$$
 
-Here $J$ is an energy and $\beta$ an inverse energy; $b$ is dimensionless.
-Every site has an independent rate-$a$ Poisson refresh clock. Upon a ring,
-replace its sign by the conditional Gibbs sign, whose plus probability is
+$J$ has energy units, $\beta$ inverse energy and $b$ is dimensionless.
+Independent rate-$a$ site clocks refresh from the conditional Gibbs law:
 
-$$
-p_i(\sigma)=\frac{1+\tanh[b(\sigma_{i-1}+\sigma_{i+1})]}2
-=\frac12+\frac{\theta}{4}(\sigma_{i-1}+\sigma_{i+1}),
-\qquad \theta=\tanh(2b).
-$$
+$$p_i(\sigma)=\frac12+\frac\theta4(\sigma_{i-1}+\sigma_{i+1}),\qquad
+Q_N=a\sum_i(E_i-I).$$
 
-The generator on all functions on $\Omega_N$ is
-$Q_N=a\sum_i(E_i-I)$, where $E_i$ conditions on all sites except $i$.
-Refreshes may leave the sign unchanged. The actual flip rate is
+A refresh may leave the spin unchanged. The actual flip rate is
 $a[1-\theta\sigma_i(\sigma_{i-1}+\sigma_{i+1})/2]/2$.
-The conditional-expectation identity makes each $E_i$ an orthogonal
-projection in $L^2(\pi_{N,b})$, hence $Q_N$ is self-adjoint and reversible.
-For finite $b$, all conditional probabilities are strictly between zero and
-one, so single-spin flips connect all states and the chain is irreducible.
-Its full centered-space gap has inverse-time units. The time is an auxiliary
-stochastic evolution clock, specified independently of the invariant law.
+Conditional expectations $E_i$ are orthogonal projections in $L^2(\pi)$,
+so $Q_N$ is self-adjoint. Finite $b$ makes every flip probability positive
+and the chain irreducible. The domain is the entire finite function space;
+its centered-space gap has inverse-time units in the specified sampling clock.
 
-Fix a velocity calibration $u>0$, independent of $N,b$, and observe
-$v_i=u\sigma_i$. Spin-flip symmetry centers these observables; each has
-variance $u^2$ and two readout levels separated by $2u$. The full vector
-identifies the configuration. Its linear span need not cover all centered
-functions: the proof below controls the full spectrum through the dynamics.
+A calibrated velocity $v_i=u\sigma_i$, $u>0$, is centered and has variance
+$u^2$. The full vector identifies the configuration, but its linear span
+does not cover every centered function; the following proof controls all modes.
 
-## 2. All-size lower bound by a written coupling proof
+## Exact all-mode gap
 
-Couple two copies with the same site clocks and the same uniform random
-number at every refresh. Let $D_i$ indicate disagreement at site $i$ and
-$D=\sum_iD_i$ be Hamming distance. The refresh disagreement probability is
-$|p_i(\sigma)-p_i(\eta)|$, bounded by
-$\theta(D_{i-1}+D_{i+1})/2$. Thus the coupled generator satisfies
+Couple two chains with the same clocks and refresh uniforms. With disagreement
+indicators $D_i$ and Hamming distance $D=\sum_iD_i$, the refresh mismatch
+probability is bounded by $\theta(D_{i-1}+D_{i+1})/2$. Hence
 
-$$
-\mathcal L D\le-aD+\frac{a\theta}{2}\sum_i(D_{i-1}+D_{i+1})
-=-a(1-\theta)D.
-$$
+$$\mathcal L D\le-aD+\frac{a\theta}2\sum_i(D_{i-1}+D_{i+1})
+ =-a(1-\theta)D.$$
 
-The finite-state evolution and Gronwall's inequality give
-$\mathbb E D_t\le e^{-rt}D_0$, $r=a(1-\theta)>0$.
-For the Hamming Lipschitz seminorm of any real function $f$,
+Finite-state evolution and Gronwall give
+$\mathbb ED_t\le e^{-rt}D_0$, $r=a(1-\theta)$. Therefore every function's
+Hamming Lipschitz seminorm obeys
+$\operatorname{Lip}(P_tf)\le e^{-rt}\operatorname{Lip}(f)$.
+A nonconstant real eigenfunction with $-Q_Nf=\lambda f$ has positive finite
+seminorm, so cancellation gives $e^{-\lambda t}\le e^{-rt}$ and
+$\lambda\ge r$. Reversibility supplies a real eigenbasis; the estimate
+covers every centered eigenmode without a size prefactor.
 
-$$
-|P_tf(\sigma)-P_tf(\eta)|
-\le \operatorname{Lip}(f)e^{-rt}d(\sigma,\eta),
-\qquad \operatorname{Lip}(P_tf)\le e^{-rt}\operatorname{Lip}(f).
-$$
+For $M=\sum_i\sigma_i$,
 
-Every nonconstant real eigenfunction of $-Q_N$ with eigenvalue $\lambda$
-has positive finite seminorm, and $P_tf=e^{-\lambda t}f$.
-Cancellation yields $e^{-\lambda t}\le e^{-rt}$ for every $t>0$,
-so $\lambda\ge r$. Reversibility supplies a real eigenbasis. This proves
-the lower bound for every centered mode, including functions invisible to
-the linear span of the local observables. No dimension-dependent prefactor
-enters the spectral estimate.
+$$Q_N\sigma_i=-a\sigma_i+\frac{a\theta}2(\sigma_{i-1}+\sigma_{i+1}),
+\qquad Q_NM=-a(1-\theta)M.$$
 
-## 3. A matching eigenmode and susceptibility (C124)
+$M$ is centered and nonzero because every configuration has positive weight.
+This matching eigenfunction proves
 
-For $M=\sum_i\sigma_i$, conditional expectation gives
+$$\boxed{\operatorname{gap}(-Q_N)=a[1-\tanh(2b)].}$$
 
-$$
-Q_N\sigma_i=-a\sigma_i+\frac{a\theta}{2}(\sigma_{i-1}+\sigma_{i+1}),
-\qquad Q_N M=-a(1-\theta)M.
-$$
+For bounded mean velocity $V=uM/N$,
+$\chi(V)=\operatorname{Var}_\pi(V)/\operatorname{gap}(-Q_N)$.
+Its variance is positive at every finite $N$ without a claimed uniform lower
+bound; $\chi(V)/\operatorname{Var}(V)$ detects the slow-mode time.
+The action-valued response $2m\chi(V)$ additionally supplies a mass and
+velocity calibration, as in [susceptibility](susceptibility-gap.md).
 
-$M$ is centered and nonzero in $L^2(\pi_{N,b})$, since every configuration
-has positive probability. The upper bound from this eigenfunction matches
-§2, proving
+## The square-root Gibbs parent and its local terms
 
-$$
-\boxed{\operatorname{gap}(-Q_N)=a[1-\tanh(2b)]\quad(N\ge3).}
-$$
+Let $D=\operatorname{diag}\pi$ and
+$U:L^2(\pi)\to(\mathbb C^2)^{\otimes N}$,
+$(Uf)_\sigma=\sqrt{\pi(\sigma)}f(\sigma)$. This is unitary between the
+weighted and counting inner products. Define
 
-For the bounded mean velocity $V=uM/N$, $|V|\le u$ and
+$$A_N=-UQ_NU^{-1}=-D^{1/2}Q_ND^{-1/2}.$$
 
-$$
-\chi(V)=\frac{\operatorname{Var}_{\pi}(V)}{a[1-\tanh(2b)]},
-\qquad \frac{\chi(V)}{\operatorname{Var}_{\pi}(V)}
-=\frac1{\operatorname{gap}(-Q_N)}.
-$$
+Detailed balance gives Hermiticity, and the exact Dirichlet form is
 
-The variance is positive for every finite member but is not asserted to
-have a uniform lower bound in $N$. A fixed mass $m>0$ gives the action-valued
-plateau $H(V)=2m\chi(V)$, as in C019/C041. The normalized response has time
-units and detects the slow mode without an extensive full-frame sum.
+$$\langle\psi,A_N\psi\rangle=\frac12\sum_{\sigma,\eta}
+ \pi(\sigma)Q_{\sigma\eta}
+ \left|\frac{\psi_\eta}{\sqrt{\pi(\eta)}}-
+ \frac{\psi_\sigma}{\sqrt{\pi(\sigma)}}\right|^2\ge0.$$
 
-## 4. Premises retained and closing limits
+Irreducibility makes the kernel one-dimensional, spanned by
 
-At fixed finite $b$, the exact gap stays positive as $N\to\infty$; this
-statement concerns the sequence of finite-volume gaps. More generally,
-$a_N\ge a_0>0$ and $0\le b_N\le B<\infty$ imply
-$\operatorname{gap}(-Q_N)\ge a_0[1-\tanh(2B)]$.
-At $b=0$ the refresh chain flips with rate $a/2$, recovering C046's gap $a$.
+$$|\Omega\rangle=Z^{-1/2}\sum_\sigma
+ e^{(b/2)\sum_i\sigma_i\sigma_{i+1}}|\sigma\rangle.$$
 
-Finite range and fixed calibration persist if $b_N\to\infty$ with $a$
-fixed, but the exact gap tends to zero. For example $b_N=(\log N)/4$ gives
-$\tanh(2b_N)=(N-1)/(N+1)$ and gap $2a/(N+1)$. This varies interaction
-strength as well as size; it is not a fixed-coupling thermodynamic closure.
-Alternatively dividing $Q_N$ by $N$ fixes the total refresh rate at $a$
-and gives gap $a[1-\tanh(2b)]/N$ even at fixed $b$.
+Let $Z_i$ be the diagonal spin and $X_i$ its flip. Put
+$s_0=\operatorname{sech}(2b)$ and $c_\pm=(s_0\pm1)/2$. Then
 
-The sufficient replacement for independence in this family is a uniform
-margin in the neighbour-influence sum, together with the per-site clock
-floor. A prescribed invariant Gibbs law alone selects neither clock.
-For a supplied action constant $K>0$, the operator $K(-Q_N)$ has energy
-gap $Ka[1-\tanh(2b)]$. This does not identify the sampling operator with a
-physical quantum Hamiltonian or select $K$. An infinite-volume operator
-construction and a continuum or quantum-field transfer remain separate tasks.
+$$A_N=\sum_i h_i,\qquad
+h_i=\frac a2\left[I-\frac\theta2Z_i(Z_{i-1}+Z_{i+1})
+ -(c_+I+c_-Z_{i-1}Z_{i+1})X_i\right].$$
 
-## 5. Evidence and strategic consequence
+For fixed neighbour sum $S=0,\pm2$, the transformed off-diagonal flip
+entry is $-\sqrt{r_i(\sigma)r_i(\sigma^i)}=-a/[2\cosh(bS)]$;
+its diagonal is unchanged. The coefficient is exactly
+$c_++c_-\sigma_{i-1}\sigma_{i+1}$, proving the formula. The neighbours
+are distinct for $N=3$ as required. Alternatively
+$h_i=a(I-UE_iU^{-1})$, so $h_i\ge0$, $h_i^2=ah_i$,
+$\|h_i\|=a$ and $h_i|\Omega\rangle=0$. Thus the parent is
+frustration-free and three-site local; overlapping terms need not commute.
+For fixed neighbours the local null vector is proportional to
+$(e^{bS/2},e^{-bS/2})$. At $b=0$, $h_i=a(I-X_i)/2$ and the ground
+state is the product of plus-$X$ vectors.
 
-The proof is a finite-state written contraction argument plus an explicit
-magnetization eigenfunction. The Ising dynamics and relaxation mechanism are
-classical prior literature; no novelty is asserted. The [B68 audit](../references/batches/B68.md) records model/method matches
-and the [written proof review](../reviews/ising-gap-B68.md). Glauber formula
-images remain unverified after the publisher access failure; the exact
-full-spectrum equality is accepted on the self-contained proof, with no
-imported source theorem required.
+Unitary equivalence gives the exact gap of $A_N$, with nonzero eigenvector
+$UM$. A supplied action $K>0$ defines $H_N=KA_N$, energy gap
 
-G03's first milestone ends here: independence is unnecessary for a uniform
-finite-volume gap in this interacting family, while finite range without
-coupling and clock control is insufficient. Q01 is the selected next main
-track. Further Ising variants are parked until they discharge a named
-physical-operator or uniform-limit dependency.
+$$\Delta_N=Ka[1-\tanh(2b)],\qquad
+ e^{-tH_N/K}=Ue^{tQ_N}U^{-1}.$$
+
+This is an imaginary-time identity in the chosen clock. The mathematical
+unitary $e^{-itH_N/K}$ supplies a different real-time law, not the original
+stochastic transition law. Neither the square-root amplitudes' physical
+state interpretation nor a physical measurement rule follows from the
+weighted-space coordinate change. The classical Ising energy
+$-J\sum\sigma_i\sigma_{i+1}$ is also a different operator from this parent.
+
+## Volume, coupling, global mixing and physical limits
+
+Uniform bounds $K_N\ge K_0>0$, $a_N\ge a_0>0$ and $b_N\le B<\infty$
+give $\Delta_N\ge K_0a_0[1-\tanh(2B)]$ for the finite-volume sequence.
+Finite range alone is insufficient. At $b_N=(\log N)/4$ and fixed $a$,
+the relaxation gap is $2a/(N+1)$. A fixed total refresh budget replaces
+$Q_N$ by $Q_N/N$ and gives $a[1-\tanh(2b)]/N$ even at fixed coupling.
+Vanishing $K_N$ separately closes the energy gap. These are different
+parameter limits, not a fixed-coupling thermodynamic failure.
+
+At fixed finite $a,b$ and fixed global total-variation tolerance,
+Lubetzky–Sly's Corollary 3 gives
+
+$$t_{\rm mix}^{(N)}(\epsilon)\sim\frac{\log N}{2a[1-\tanh(2b)]}.$$
+
+The exact gap match (preprint p. 4) and mixing-time statement were read in
+[B73](../references/batches/B73.md), using
+[the primary preprint](https://arxiv.org/pdf/0909.4320v1) with the rate-$a$
+conversion stated here. A uniform slow-mode rate can coexist with logarithmic
+global equilibration time. Neither constructs an infinite-volume Hilbert
+representation or a continuum quantum field.
+
+The ground vector and locality survive $Q\mapsto\lambda Q$ while every
+rate and parent gap scales by $\lambda$. Independently changing $K$ changes
+energy normalization. Thus equilibrium weights, a physical time law and a
+positive universal action unit remain separate inputs. The
+[finite-depth cluster Hamiltonian](finite-depth-spin-gap.md) is a distinct
+unitary-conjugation construction, not a second derivation of this stochastic
+parent. The [field comparison](comparison-and-bridges.md) states the further
+physical-operator and continuum obligations.
+
+## Consequence for STATE
+
+The interacting benchmark supplies an exact all-mode finite-volume gap and
+an explicit local parent with known clock dependence. Its source evidence and
+full proofs are maintained together. No further Ising spectrum is required to
+understand the unresolved identification of a sampling generator, physical
+Hamiltonian, time unit and physical $\hbar$.

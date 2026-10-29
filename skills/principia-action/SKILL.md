@@ -50,7 +50,7 @@ formula or title remains a discovery lead until checked.
 
 ## Route to the smallest relevant argument
 
-- **Quantum necessity and compatibility:** notes/quantum-exclusion-premises.md
+- **Quantum necessity and compatibility:** notes/classical-orientation-closure.md#what-reconstruction-premises-add
   and the selected Q01/K01 card. State preparations, effects, composition and
   transformations before testing the classical alternative. Keep finite
   statistical dimension, distinguishability capacity, microscopic reversibility
@@ -74,10 +74,10 @@ formula or title remains a discovery lead until checked.
   Specify operator, domain, invariant law, observable access and clock. Track
   constants through the claimed limits; converting a rate to an energy requires
   an independently identified action factor and physical dynamics.
-- **Consolidation:** notes/action-scale-obstructions.md and claims/LEDGER.md.
+- **Consolidation:** notes/action-unit-dimensional-selection.md#observables-and-the-admissible-class and claims/LEDGER.md.
   Reuse accepted proofs and audits with a claim-to-source map and consistency
   review. A new claim being promoted needs AGENTS.md's bounded literature review.
-- **Principia or historical interpretation:** notes/principia-constant-force-action.md
+- **Principia or historical interpretation:** notes/newton-insertion-action.md#the-source-geometry-and-three-different-areas
   and the edition's source companion. Use Lemmas X–XI/projectile Scholium for
   constant-force geometry. The user's anchor is Galileo's inertial horizontal
   line versus falling parabola, with (3F/v) A = Delta t Delta E. Its area is

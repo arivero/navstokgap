@@ -567,7 +567,7 @@ interference. At fixed $\hbar$, $A_\pi\le T|\pi|\to0$, and the phase
 in (I5) also vanishes on the relevant state. This is a real
 finite-resolution ordering effect, not a different fixed-action
 continuum Hamiltonian. It complements the
-[polygon phase note](polygon-lift-phase.md), which treats different
+[polygon phase note](cut-measure-newton.md#weyl-lifting-and-polygon-phases), which treats different
 histories with matching classical endpoints and a residual scalar
 phase. The present endpoints differ at finite mesh. No literature
 priority is claimed for (I5)--(I7).

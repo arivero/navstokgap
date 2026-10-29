@@ -616,5 +616,5 @@ For STATE, positive preparation-relative risk, universal action selection,
 and identification with physical $\hbar$ remain different claims. Whole-shell,
 energy-constrained, local-curve and global-recovery hypotheses are explicit
 here. Further calibration stages are parked by
-[action-scale obstructions](action-scale-obstructions.md); the conditional
+[action-scale obstructions](action-unit-dimensional-selection.md#observables-and-the-admissible-class); the conditional
 curvature test is retained without treating it as an active proof of necessity.

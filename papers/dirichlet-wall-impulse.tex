@@ -5,25 +5,23 @@
 \usepackage{amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}
 \usepackage[hidelinks]{hyperref}
-\hypersetup{pdftitle={A wall impulse from a quantum boundary stress},pdfauthor={navstokgap research working notes}}
+\hypersetup{pdftitle={Quantum wall dynamics: boundary choice, reflected packets and impulse},pdfauthor={navstokgap research working notes}}
 \newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
-\hypertarget{a-wall-impulse-from-a-quantum-boundary-stress}{%
-\section{A wall impulse from a quantum boundary
-stress}\label{a-wall-impulse-from-a-quantum-boundary-stress}}
+\hypertarget{quantum-wall-dynamics-boundary-choice-reflected-packets-and-impulse}{%
+\section{Quantum wall dynamics: boundary choice, reflected packets and
+impulse}\label{quantum-wall-dynamics-boundary-choice-reflected-packets-and-impulse}}
 
-\textbf{Result, 2026-10-27.} For the incident Gaussian and the free
-Dirichlet half-line dynamics of the
-\href{newton-dimock-balaban-guide.md}{Newton--Dimock guide}, the
-nonnegative boundary-force measures converge weakly on the whole time
-axis: \[
+\textbf{Result, 2026-10-27.} For the specified incident Gaussian and
+free Dirichlet half-line dynamics below, the nonnegative boundary-force
+measures converge weakly on the whole time axis: \[
  \frac{\hbar^2}{2m}\,|\partial_q\psi_{\hbar,D}(0,t)|^2\,dt
  \;\Longrightarrow\;2|p_0|\,\delta_{t_*},
  \qquad t_*=-\frac{mq_0}{p_0}>0.\tag{1}
-\] This includes the impact layer omitted from the guide's off-impact
-momentum-current bound. In fact, on the \(\sqrt\hbar\) time scale the
+\] This includes the impact layer excluded from a uniform off-impact
+momentum-current estimate. In fact, on the \(\sqrt\hbar\) time scale the
 force has an explicit Gaussian profile and the momentum current tends to
 an error-function transition.
 
@@ -51,6 +49,52 @@ near-collision position and force (relevant passages read). The
 computation below gives a particular weak impulse measure and compares
 the Neumann stress; it does not claim priority for the reflected
 Gaussian or wall forces.
+
+\hypertarget{classical-impact-and-quantum-boundary-data}{%
+\subsection{Classical impact and quantum boundary
+data}\label{classical-impact-and-quantum-boundary-data}}
+
+Take the half-line \(q\ge0\) and a free particle starting at \(q_0>0\)
+with \(p_0<0\). For an ideal \textbf{elastic} wall, the prescribed
+impact law is \(p(t_*+)=-p(t_* -)\) at \(t_*=-mq_0/p_0\). The motion is
+\[q(t)=|q_0+p_0t/m|,\qquad
+ p(t)=p_0\operatorname{sgn}(q_0+p_0t/m)\quad(t\ne t_*).\] Position is
+continuous; momentum has a jump. A smooth-force equation with a finite
+smooth force does not describe that jump. Nonpenetration alone does not
+select the elastic law: a restitution coefficient or another contact
+rule would be additional data.
+
+For a smooth wall in several dimensions, the elastic specular rule
+reverses the normal component and retains the tangential component:
+\(v_+=v_--2(v_-\cdot n)n\). This requires a specified unit normal and a
+well-defined collision. Corners, grazing contacts and an accumulation of
+impacts require separate analysis; one should not infer their uniqueness
+merely from the local smooth-force theorem.
+
+A mathematically defined quantum impenetrable wall can be represented by
+the Dirichlet Laplacian
+\[H_{\hbar,D}=-\frac{\hbar^2}{2m}\frac{d^2}{dq^2},
+\qquad D(H_{\hbar,D})=H^2(0,\infty)\cap H^1_0(0,\infty).\] It is
+self-adjoint and gives a unitary group. Its Euclidean kernel is \[
+ K_D(T;x,y)=k_{\hbar,T}(x-y)-k_{\hbar,T}(x+y),
+ \quad
+ k_{\hbar,T}(r)=\sqrt{\frac m{2\pi\hbar T}}
+             e^{-mr^2/(2\hbar T)},\quad x,y>0.
+\] This is the method of images: the Euclidean reference process is
+Brownian motion killed at the boundary. The quantum real-time wall
+reflects, but killed Euclidean paths should not themselves be read as
+real-time bouncing trajectories. The reflected-packet estimate below
+proves a quantitative coherent-packet position limit through the bounce.
+
+A subtle domain issue is important: the symmetric differential operator
+\(-i\hbar\,d/dq\) on the half-line with Dirichlet boundary has unequal
+deficiency indices and no self-adjoint extension on \(L^2(0,\infty)\).
+The Dirichlet Hamiltonian is nevertheless self-adjoint. A current or a
+quadratic-form expectation involving \(-i\hbar d/dq\) can be studied,
+but it should not be presented as the expectation of a self-adjoint
+half-line momentum operator. See
+\href{https://arxiv.org/abs/2103.01715}{Al-Hashimi and Wiese,
+arXiv:2103.01715} (abstract) for the boundary momentum problem.
 
 \hypertarget{the-packet-and-its-boundary-value}{%
 \subsection{1. The packet and its boundary
@@ -94,6 +138,49 @@ the boundary-force density is exactly \[
     \exp\!\left[-\frac{m\omega a(t)^2}{\hbar A(t)}\right].\tag{5}
 \]
 
+\hypertarget{position-through-impact-and-current-away-from-impact}{%
+\subsubsection{Position through impact and current away from
+impact}\label{position-through-impact-and-current-away-from-impact}}
+
+Write \(a(t)=q_0+p_0t/m\), and let \(g_{\hbar,t}\) be the freely evolved
+Gaussian. Its position variance is
+\[\sigma_q(t)^2=\frac{\hbar}{2m\omega}(1+\omega^2t^2).\tag{P21}\]
+Because \(||x|-|a||\le|x-a|\) and reflection commutes with the free
+evolution, \[
+ \left|\langle Q\rangle_{\psi_\hbar(t)}-|a(t)|\right|
+ \le\sqrt{\frac{2}{1-\gamma_\hbar}}\,\sigma_q(t).\tag{P22}
+\] Indeed the half-line position expectation equals the full-line
+expectation of \(|X|\) in the normalized full-line odd state
+\(\phi_\hbar=(g_\hbar-Rg_\hbar)/\sqrt{2(1-\gamma_\hbar)}\); apply the
+triangle inequality to the two Gaussian terms. Thus position converges
+uniformly on every bounded time interval, \textbf{including the impact
+time}, to the elastic classical folded trajectory.
+
+Away from the impact, the corresponding probability-current momentum
+also converges to the incoming or reflected value. More precisely, if
+\(|a(t)|\ge\eta>0\), with \(\sigma_p=\sqrt{\hbar m\omega/2}\), \[
+ \left|\int_0^\infty\overline{\psi_\hbar}
+             (-i\hbar\partial_q)\psi_\hbar\,dq
+       -p_0\operatorname{sgn}a(t)\right|
+ \le\sqrt{\frac2{1-\gamma_\hbar}}
+      \left(\sigma_p+\frac{2|p_0|\sigma_q(t)}{\eta}\right).\tag{P23}
+\] For the proof, the half-line integral is the full-line expectation of
+\(\operatorname{sgn}(X)P\) in the normalized full-line odd state
+\(\phi_\hbar=(g_\hbar-Rg_\hbar)/\sqrt{2(1-\gamma_\hbar)}\). On the
+Gaussian, \(\|(\operatorname{sgn}X\,P-\operatorname{sgn}a\,p_0)g_t\|\)
+is at most \(\sigma_p+2|p_0|\mathbb P(aX<0)^{1/2}\); Chebyshev bounds
+the last probability by \(\sigma_q(t)^2/a(t)^2\). The reflected Gaussian
+obeys the same estimate. For each fixed \(T,\eta>0\) independent of
+\(\hbar\), (P23) proves uniform convergence over \(|t|\le T\) with
+\(|a(t)|\ge\eta\). It gives no uniform bound in an \(\hbar\)-dependent
+impact layer \(|a(t)|\sim\sqrt\hbar\) or momentum value at \(t_*\). The
+expression in (P23) is a real current form on this domain, not an
+expectation of a self-adjoint half-line momentum.
+
+Position converges uniformly through impact; current cannot converge
+uniformly to a discontinuous momentum jump. The next calculation
+resolves that layer in the weak measure topology.
+
 \hypertarget{the-pulse-and-the-limiting-impulse}{%
 \subsection{2. The pulse and the limiting
 impulse}\label{the-pulse-and-the-limiting-impulse}}
@@ -134,7 +221,7 @@ sufficiently regular free half-line wave, \[
 \] To see this, differentiate (8), insert
 \(\partial_t\psi=i\hbar\psi''/(2m)\), and integrate by parts. For
 Dirichlet the second term vanishes, so \(dJ_{\hbar,D}/dt=F_{\hbar,D}\).
-Using the off-impact current limit from the guide together with (7), \[
+Using the off-impact current estimate above together with (7), \[
  J_{\hbar,D}(t_*+\sqrt\hbar\,s)
  \longrightarrow |p_0|\,\operatorname{erf}(\Lambda s).\tag{10}
 \] The incoming value is \(p_0=-|p_0|\), the outgoing value is

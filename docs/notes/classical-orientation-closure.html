@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Finite operational closure does not select quantum composition</title>
+<title>Operational spin states, reversible interaction and finite closure</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,125 +79,358 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>Finite operational closure does not select quantum composition</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/classical-orientation-closure.md">Markdown source</a></p><p>A classical random orientation, observed only through affine
-directional responses, has a ball of operational states,
-distinguishability capacity two and continuous reversible connections
-between all pure states. Its natural classical composites retain these
-exact operational descriptions but fail purification and Hardy’s
-subspace requirement. Thus finite capacity and reversible local closure
-leave a substantive composition premise to select.</p>
-<p>Q01 second milestone, 2026-09-13. This is an operational countermodel
-with classical hidden variables and stipulated measurement restrictions.
-It is not a derivation of those restrictions from an apparatus
-Hamiltonian. All state and response coordinates are dimensionless; no
-action constant is introduced. The standard restricted-classical and
-minimal-composite constructions are matched in <a
-href="https://github.com/arivero/navstokgap/blob/main/references/batches/B69.md">B69</a>;
-the explicit checks below are derived applications with no novelty
-assertion.</p>
-<h2 id="one-orientation-and-its-allowed-experiments">1. One orientation
-and its allowed experiments</h2>
-<p>The hidden state is u on the unit sphere in R^3. Preparations are all
-Borel probability measures mu on that sphere. A measurement is a finite
-family</p>
-<p><span class="math display">\[e_i(u)=a_i+b_i\cdot u,\qquad a_i\ge
-|b_i|,\qquad
-\sum_i a_i=1,\quad\sum_i b_i=0. \tag{1}\]</span></p>
-<p>These nonnegative functions sum to one. Their probabilities depend
-exactly on r=integral u dmu. Every vector in the closed unit ball is
-achievable by mixing two opposite orientations. Conversely the
-directional binary tests (1+/-n dot u)/2 determine all components of r.
-Thus operational equivalence is equality of r, and the operational state
-space is exactly the ball.</p>
-<p>Its pure states are the unit sphere. If a measurement distinguishes k
-states r_i perfectly, then 1=a_i+b_i dot r_i&lt;=2a_i for each
-successful outcome. Summing a_i gives k&lt;=2. Opposite unit vectors
-attain two. The normalized ball has affine dimension three; its
-unnormalized cone has dimension four.</p>
-<p>Allowed reversible transformations are rotations u -&gt; R u, R in
-SO(3). They descend exactly to r -&gt; R r. Rotation paths connect any
-two pure states continuously and reversibly. Convex mixtures,
-compositions of rotations and measurement probabilities remain closed on
-r. This is a preparation/evolution/ terminal-measurement model;
-unrestricted invasive instruments are not silently included in the
-allowed operations.</p>
-<p>The restricted effects are a physical premise of the example. If all
-hidden orientation events became measurable, the operational state
-description would instead distinguish the underlying probability
-measures.</p>
-<h2 id="classical-composites-and-local-tomography">2. Classical
-composites and local tomography</h2>
-<p>For n components take all joint probability measures on
-(S<sup>2)</sup>n. Allowed measurements are products of local tests (1),
-their random mixtures and coarse-grainings. Transformations are local
-rotations, permutations of components and their random mixtures;
-preparations can be classically correlated. These operations preserve
-the specified class exactly.</p>
-<p>Put v(u)=(1,u). All observable probabilities depend on the tensor</p>
+<h1>Operational spin states, reversible interaction and finite
+closure</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/classical-orientation-closure.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/classical-orientation-closure.pdf">PDF</a></p><p>For classical unit orientations with all Borel preparations and
+restricted affine product tests, local rotations close on a
+finite-dimensional ball state space. The complete reversible interaction
+<span class="math inline">\(H=J u_zv_z\)</span>, however, does not
+descend to its moment tensor, and no finite enlargement by bounded
+observables repairs exact descent on any nonzero time interval. These
+are explicit classical countermodels and proofs. They identify the
+missing operational closure premise in source-backed reconstructions of
+quantum composition; they do not select a positive universal action
+parameter.</p>
+<p>The model below keeps its preparations, effects and transformations
+explicit. It incorporates C125 and C127–C129 and the associated
+source-premise map. Historical coordinator/model checks are internal.
+The reconstruction theorems are cited with their separate hypotheses and
+reading levels; their complete proofs have not been independently
+audited here.</p>
+<span id="classical-composites-and-local-tomography"></span><span id="one-orientation-and-its-allowed-experiments"></span><h2 id="a-ball-of-local-states-and-a-minimal-composite">A ball of local
+states and a minimal composite</h2>
+<p>Let the hidden state be <span class="math inline">\(u\in
+S^2\)</span>, with every Borel probability measure <span
+class="math inline">\(\mu\)</span> admitted as a preparation. A local
+measurement is a finite family</p>
+<p><span class="math display">\[e_i(u)=a_i+b_i\cdot u,\qquad
+a_i\ge|b_i|,\qquad
+\sum_i a_i=1,\quad\sum_i b_i=0.\]</span></p>
+<p>Its probabilities depend exactly on <span
+class="math inline">\(r=\int u\,d\mu\)</span>. Every point of the closed
+unit ball is achieved by mixing opposite orientations, and the tests
+<span class="math inline">\((1\pm n\cdot u)/2\)</span> determine <span
+class="math inline">\(r\)</span>. Thus operational equivalence is
+equality of <span class="math inline">\(r\)</span>, pure states are the
+unit sphere, and the unnormalized state cone has linear dimension four.
+If a measurement distinguishes <span class="math inline">\(k\)</span>
+states perfectly, then each successful outcome obeys <span
+class="math inline">\(1=a_i+b_i\cdot r_i\le2a_i\)</span>, hence <span
+class="math inline">\(k\le2\)</span>. Opposite poles attain capacity
+two. Local <span class="math inline">\(SO(3)\)</span> rotations descend
+exactly to <span class="math inline">\(r\mapsto Rr\)</span> and connect
+all pure states continuously.</p>
+<p>For <span class="math inline">\(n\)</span> components, admit all
+joint Borel measures on <span class="math inline">\((S^2)^n\)</span>,
+product local tests, mixtures and coarse-grainings, local rotations and
+permutations. Put <span class="math inline">\(v(u)=(1,u)\)</span>. All
+test probabilities depend on</p>
 <p><span class="math display">\[z=\int v(u_1)\otimes\cdots\otimes
-v(u_n)\,d\mu. \tag{2}\]</span></p>
-<p>Products of local effects span the tensor coordinates, so they
-determine z. The operational composite is the convex hull of product
-ball states, the minimal state tensor product. It has unnormalized
-linear dimension 4^n. Here tensor coordinates are merely moments of
-classical random variables.</p>
-<p>The distinguishability capacity is exactly 2^n. For each product
-outcome, its largest probability is bounded by 2^n times its value at
-the product of zero vectors, since each local factor is at most twice
-its constant term. This bound survives mixing and coarse-graining. If
-one test distinguishes k states, each successful effect has value at
-least 2^{-n} at that reference state; normalization gives
-k&lt;=2^n. Products of opposite-pole tests attain 2^n. Thus both
-capacity and linear dimension multiply under composition.</p>
-<h2 id="where-purification-fails">3. Where purification fails</h2>
-<p>Every pure state of this composite is a product of pure local states.
-Indeed the product-pure set is compact in finite-dimensional tensor
-space, and its convex hull is (2). Every point has a finite convex
-representation; an extreme point must itself be a product-pure point.
-Such points are extreme because a pure unit-vector marginal forces that
-local orientation with probability one, successively for every
-component.</p>
-<p>Every marginal of a pure composite is therefore pure. The mixed local
-state r=0, for example, has no purification by any number of these
-components. CDP’s existence clause already fails, before essential
-uniqueness is tested. This makes the missing resource the allowed pure
-composite states, rather than the continuity of local reversible
-motion.</p>
-<h2 id="an-explicit-failure-of-hardys-subspace-requirement">4. An
-explicit failure of Hardy’s subspace requirement</h2>
-<p>Consider two components and measure each along a fixed unit axis
-n. Coarse- grain to the event that the two signs agree. Its hidden
-response is</p>
+v(u_n)\,d\mu.\]</span></p>
+<p>Product tests span these coordinates. The composite is exactly the
+convex hull of product ball states, with linear dimension <span
+class="math inline">\(4^n\)</span>. Each product effect is at most <span
+class="math inline">\(2^n\)</span> times its value at the product of
+zero vectors. This survives mixing and coarse-graining; a test
+distinguishing <span class="math inline">\(k\)</span> states must spend
+at least <span class="math inline">\(2^{-n}\)</span> of its
+normalization per successful outcome, so <span
+class="math inline">\(k\le2^n\)</span>. Product pole tests attain <span
+class="math inline">\(2^n\)</span>.</p>
+<p>These are stipulated terminal measurements, not unrestricted
+hidden-state readouts or invasive instruments. If every hidden
+orientation event were measurable, the operational state would
+distinguish the full probability measures. The model is valid with its
+local transformations; additional interactions must be tested for
+descent.</p>
+<span id="an-explicit-failure-of-hardys-subspace-requirement"></span><span id="where-purification-fails"></span><h2 id="what-reconstruction-premises-add">What reconstruction premises
+add</h2>
+<p>This ball model satisfies local pure-state connectivity but not the
+whole axiom package of either reconstruction below:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source and selected reading</th>
+<th>Additional premises</th>
+<th>Classical comparison</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hardy, version 4, §§1, 4, 7; <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B67.md">B67</a>,
+passages</td>
+<td>Probability, simplicity, subspace and composition axioms, plus
+continuous reversible pure-state connectivity</td>
+<td>A finite simplex has isolated vertices and only vertex permutations;
+the orientation ball evades this particular failure</td>
+</tr>
+<tr class="even">
+<td>Chiribella–D’Ariano–Perinotti, version 3, §II and §§III.1–III.2;
+B67, passages</td>
+<td>Causality, perfect distinguishability, ideal compression, local
+distinguishability, pure conditioning and purification with essential
+uniqueness</td>
+<td>Pure states of the minimal classical composite have pure marginals,
+so a mixed local state has no purification</td>
+</tr>
+</tbody>
+</table>
+<p>The purification assertion follows directly. The product-pure set is
+compact; every extreme point of its convex hull is product-pure by a
+finite convex representation. Conversely a unit-vector marginal forces
+that orientation almost surely, successively in every factor, so
+product-pure points are extreme. Every marginal of a pure composite is
+therefore pure. The state <span class="math inline">\(r=0\)</span> has
+no pure extension by any number of these components.</p>
+<p>Hardy’s subspace condition also fails explicitly. In two components,
+coarse-grain the local pole tests along <span
+class="math inline">\(n\)</span> to equal signs:</p>
 <p><span class="math display">\[e_{\rm same}(u,v)=\tfrac12[1+(n\cdot
-u)(n\cdot v)]. \tag{3}\]</span></p>
-<p>A preparation supported on this event with probability one must have
-(n dot u)(n dot v)=1 almost surely. Since both factors lie in [-1,1],
-the only hidden configurations are (n,n) and (-n,-n). The resulting
-operational face is a line segment with two pure states and capacity
-two. The full two-component system has four perfectly distinguishable
-pole configurations; this face retains two of them and excludes the
-other two exactly.</p>
-<p>An elementary capacity-two system in section 1 is a three-dimensional
-ball, not this segment. Consequently this constrained subsystem does not
-behave like that elementary system: Hardy’s subspace axiom fails. The
-example can satisfy local continuity and multiplicative
-capacity/dimension while failing another essential member of the axiom
-package. It challenges neither complete reconstruction theorem.</p>
-<h2 id="decision-and-action-scale-boundary">5. Decision and action-scale
-boundary</h2>
-<p>Retain finite operational closure as a useful requirement, but reject
-it together with local reversible continuity as a sufficient selector of
-quantum composition. The decisive next quantum premise concerns which
-globally pure states and subspaces must be physically available. The
-example’s measurement restriction is explicit and still needs physical
-motivation; adding a classical hidden apparatus without changing the
-allowed operational composites does not supply purification.</p>
-<p>All rotations can be parametrized by a chosen classical clock without
-an action unit in (1)–(3). The model establishes no action floor. The
-remaining quantum task is to justify a composite/subspace principle
-independently of the intended answer, followed separately by the
-mechanical phase/action map. Additional single-system continuity
-examples would leave that decision unchanged and are parked.</p>
+u)(n\cdot v)].\]</span></p>
+<p>Probability one requires <span class="math inline">\((n\cdot
+u)(n\cdot v)=1\)</span> almost surely, leaving only <span
+class="math inline">\((n,n)\)</span> and <span
+class="math inline">\((-n,-n)\)</span>. The corresponding capacity-two
+face is a segment, whereas an elementary capacity-two system here is a
+three-dimensional ball. Local continuity and multiplicative
+capacity/dimension therefore do not select quantum composition.</p>
+<p>Hardy’s moving-ball comparison motivates closure throughout a
+transformation: coarse-graining intermediate positions into a bit does
+not make their reduced evolution reversible. Likewise a definite
+mechanical microstate is not by itself a CDP operational purification.
+The full reconstruction packages remain conditional inputs. Originals:
+<a href="https://arxiv.org/html/quant-ph/0101012v4">Hardy</a> and <a
+href="https://arxiv.org/html/1011.6451v3">CDP</a>. Only the indicated
+passages and hypothesis comparisons were read; no claim is made about
+all continuous classical phase spaces or the infinite-dimensional
+extensions.</p>
+<h2 id="a-complete-classical-interaction-fails-moment-descent">A
+complete classical interaction fails moment descent</h2>
+<p>Fix spin magnitudes <span class="math inline">\(S_A,S_B&gt;0\)</span>
+with action units and <span class="math inline">\(J&gt;0\)</span> with
+energy units. On <span class="math inline">\(S^2\times S^2\)</span>
+use</p>
+<p><span
+class="math display">\[\{u_i,u_j\}=S_A^{-1}\epsilon_{ijk}u_k,\qquad
+\{v_i,v_j\}=S_B^{-1}\epsilon_{ijk}v_k,\qquad \{u_i,v_j\}=0,
+\qquad H=J u_zv_z.\]</span></p>
+<p>With <span class="math inline">\(\dot f=\{f,H\}\)</span> and <span
+class="math inline">\(\Omega_A=J/S_A\)</span>, <span
+class="math inline">\(\Omega_B=J/S_B\)</span>,</p>
+<p><span class="math display">\[\dot u_x=-\Omega_Au_yv_z,\quad\dot
+u_y=\Omega_Au_xv_z,\quad\dot u_z=0,\]</span> <span
+class="math display">\[\dot v_x=-\Omega_Bv_yu_z,\quad\dot
+v_y=\Omega_Bv_xu_z,\quad\dot v_z=0.\]</span></p>
+<p>Norms and energy are conserved. Smoothness on compact phase space
+makes the flow complete and reversible, with inverse at negative time.
+Its frequencies depend on the other spin, so this is an actual hidden
+interaction.</p>
+<p>Prepare the exact pair</p>
+<p><span
+class="math display">\[\mu_A=\delta_{e_y}(du)\tfrac12(\delta_{e_z}+\delta_{-e_z})(dv),\qquad
+\mu_B=\delta_{e_y}(du)\tfrac12(\delta_{e_x}+\delta_{-e_x})(dv).\]</span></p>
+<p>Both have <span class="math inline">\(\mathbb E[u]=e_y\)</span>,
+<span class="math inline">\(\mathbb E[v]=0\)</span>, <span
+class="math inline">\(\mathbb E[uv^T]=0\)</span>, and microscopic energy
+identically zero. They agree on all original terminal tests. Since <span
+class="math inline">\(u_z=0\)</span>, <span
+class="math inline">\(v\)</span> stays constant. In the first
+preparation,</p>
+<p><span
+class="math display">\[u(t)=(-\operatorname{sign}(v_z)\sin\Omega_At,\cos\Omega_At,0),\qquad
+\mathbb E_{\mu_A}[u_x(t)v_z(t)]=-\sin\Omega_At.\]</span></p>
+<p>The second retains <span class="math inline">\(u=e_y\)</span> and has
+zero cross expectation. The allowed product effect <span
+class="math inline">\((1+u_x)(1+v_z)/4\)</span> consequently gives</p>
+<p><span class="math display">\[p_A(t)=\tfrac14(1-\sin\Omega_At),\qquad
+p_B(t)=\tfrac14.\]</span></p>
+<p>These differ at every sufficiently small positive time. No
+single-valued update, linear or nonlinear, on the initial moment tensor
+can represent this flow for all preparations. Both evolved measures
+still give valid minimal-composite states: the failure is descent to the
+quotient. Its missing moment is exposed by</p>
+<p><span class="math display">\[\frac d{dt}\mathbb
+E[u_xv_z]=-\Omega_A\mathbb E[u_yv_z^2].\]</span></p>
+<p>Source/proof context: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B72.md">B72</a>,
+written spin conventions and internal comparison. The supplied <span
+class="math inline">\(S_A,S_B\)</span> are not derived Planck
+constants.</p>
+<h2 id="no-finite-observable-enlargement-repairs-this-interaction">No
+finite observable enlargement repairs this interaction</h2>
+<p>Let <span class="math inline">\(V\)</span> be a finite-dimensional
+real space of bounded Borel functions on <span
+class="math inline">\(X=S^2\times S^2\)</span>, compared pointwise,
+containing <span class="math inline">\(1\)</span> and the original
+terminal effects. Exact closure would require <span
+class="math inline">\(U_tV\subset V\)</span>, where <span
+class="math inline">\(U_tf=f\circ\Phi_t\)</span>, for every <span
+class="math inline">\(t\)</span> in a nonzero interval. A forward
+interval is sufficient for the contradiction. The excluded case <span
+class="math inline">\(J=0\)</span> has static finite closure.</p>
+<p>In the complexification, <span class="math inline">\(w=u_x+iu_y\in
+V_{\mathbb C}\)</span> obeys exactly</p>
+<p><span class="math display">\[U_tw=w\exp(i\Omega_Atv_z).\]</span></p>
+<p>For distinct <span class="math inline">\(t_1,\ldots,t_m\)</span>, a
+relation <span class="math inline">\(\sum_j c_jU_{t_j}w=0\)</span>
+restricted to <span class="math inline">\(u=e_x\)</span> and <span
+class="math inline">\(v=(\sqrt{1-z^2},0,z)\)</span>, <span
+class="math inline">\(-1&lt;z&lt;1\)</span>, gives</p>
+<p><span
+class="math display">\[\sum_jc_j\exp(i\Omega_At_jz)=0.\]</span></p>
+<p>Derivatives at <span class="math inline">\(z=0\)</span> of orders
+<span class="math inline">\(0,\ldots,m-1\)</span> form a Vandermonde
+system with determinant <span
+class="math inline">\(\prod_{j&lt;l}(i\Omega_At_l-i\Omega_At_j)\ne0\)</span>.
+Every coefficient vanishes. Arbitrarily many time translates are
+therefore independent, contradicting finite dimension. No regularity of
+added observables is needed. The smooth infinitesimal hierarchy is
+equivalently <span
+class="math inline">\(L^nw=(i\Omega_A)^nwv_z^n\)</span>, but the exact
+time-orbit proof establishes closure failure without a truncation
+argument.</p>
+<p>Nor can a nonlinear update of finitely many expectations evade it. If
+the expectation of <span class="math inline">\(g\)</span> is determined
+by those of <span class="math inline">\(f_0=1,f_1,\ldots,f_d\)</span>
+for <strong>every</strong> probability measure, then <span
+class="math inline">\(g\)</span> lies in their real span. Otherwise
+finite evaluation linear algebra supplies points <span
+class="math inline">\(x_j\)</span> and weights <span
+class="math inline">\(a_j\)</span> with <span
+class="math inline">\(\sum_ja_jf_k(x_j)=0\)</span> for every <span
+class="math inline">\(k\)</span>, but <span
+class="math inline">\(\sum_ja_jg(x_j)\ne0\)</span>. If no such relation
+existed, <span class="math inline">\(g(x)\)</span> would define a linear
+functional on the span of the evaluation vectors and hence be a
+combination of the <span class="math inline">\(f_k\)</span>. Since <span
+class="math inline">\(\sum_ja_j=0\)</span>, positive and negative
+weights have equal nonzero mass; normalizing them gives two admitted
+atomic preparations with equal retained expectations and unequal <span
+class="math inline">\(g\)</span> expectation. Apply this to <span
+class="math inline">\(g=U_tf_k\)</span>.</p>
+<p>Thus exact finite expectation coordinates require an invariant finite
+observable span, already excluded above. Arbitrary encodings of whole
+measures without affine probabilistic mixing are outside this theorem.
+Infinite observable dimension does not by itself imply infinite
+perfect-distinguishability capacity or quantum structure. Restricted
+preparations and finite accuracy change its hypotheses. Source/proof
+context: <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B74.md">B74</a>,
+written proof and literature boundary.</p>
+<h2
+id="reversible-operational-interaction-the-source-theorem">Reversible
+operational interaction: the source theorem</h2>
+<p>A different premise demands a connected reversible
+<strong>linear</strong> group on the fixed operational tensor
+coordinates, containing local rotations and a genuine interaction. Under
+<span class="math inline">\(\rho(r)=(I+r\cdot\sigma)/2\)</span>, <span
+class="math inline">\(E=aI+b\cdot\sigma\)</span>, local probabilities
+are <span class="math inline">\(\operatorname{tr}(E\rho)=a+b\cdot
+r\)</span>. The tensor coordinates become Hermitian matrices and the
+minimal composite becomes exactly separable density matrices. No
+entangled state was inserted by this coordinate identification.</p>
+<p>Theorem 1 of de la Torre–Masanes–Short–Müller assumes valid
+probabilities for every product preparation, group element and product
+test, with the group containing local unitaries. A larger connected
+group contains, on a pair with fixed product spectators, an entangling
+unitary action or its partial-transpose conjugate. The first leaves the
+minimal composite by creating entanglement. For the second, choose a
+product input whose partially transposed input is entangled by that
+unitary: the output is the partial transpose of a pure entangled state.
+Its Schmidt eigenvalues include <span class="math inline">\(\pm
+s_1s_2\)</span>, <span class="math inline">\(s_1s_2&gt;0\)</span>, so it
+cannot be separable positive semidefinite. Either branch excludes an
+interacting extension preserving the minimal cone.</p>
+<p>Theorem 2 additionally uses interchangeable identical systems and
+three-system consistency to eliminate the partial-transpose alternative.
+Entangling-gate universality and ancilla preparation, joint evolution,
+measurement and discard closure supply the full quantum preparation,
+measurement and completely positive channel conclusion. Those
+assumptions must accompany that conclusion. The theorem concerns finite
+numbers of identical qubits, not arbitrary local state spaces.</p>
+<p>The source statements, assumptions and these consequences were read
+at passage level in <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B70.md">B70</a>.
+The technical Lie-algebra and gate-universality proofs are borrowed
+results, not independently audited proofs of this repository. The exact
+hidden Hamiltonian above does not contradict the theorem: it lacks
+reversible operational descent, which no finite moment repair supplies
+under its preparation hypotheses.</p>
+<h2 id="the-checked-first-order-generator-restriction">The checked
+first-order generator restriction</h2>
+<p>A specific source step does have a full written verification here
+(C129). Let <span class="math inline">\(X\)</span> be a real <span
+class="math inline">\(4^n\times4^n\)</span> matrix with <span
+class="math inline">\(e^{tX}\)</span> admissibly reversible for a
+two-sided neighbourhood of zero. Independently available unit Bloch
+vectors in each input and effect give</p>
+<p><span
+class="math display">\[p_{b,a}(t)=2^{-n}v(b)^Te^{tX}v(a)\in[0,1].\]</span></p>
+<p>The expansion is</p>
+<p><span class="math display">\[p(t)=p(0)+2^{-n}t\,v(b)^TXv(a)
++2^{-n}\tfrac{t^2}2v(b)^TX^2v(a)+O(t^3).\]</span></p>
+<p>An orthogonal pair <span class="math inline">\(b_1=-a_1\)</span>
+gives <span class="math inline">\(p(0)=0\)</span>, so the two-sided
+minimum requires <span
+class="math inline">\(v(-a_1,b_2,\ldots)^TXv(a)=0\)</span> and the
+corresponding <span class="math inline">\(X^2\)</span> quadratic form
+nonnegative. With <span class="math inline">\(b_k=a_k\)</span> at every
+site, <span class="math inline">\(p(0)=1\)</span> and <span
+class="math inline">\(v(a)^TX^2v(a)\le0\)</span>. These necessary
+derivative signs are not sufficient finite-time positivity conditions. A
+forward semigroup alone permits a nonzero first derivative at a
+boundary.</p>
+<p>Fix spectator input and output indices. The vectors <span
+class="math inline">\(v(e_i)\pm v(-e_i)\)</span> span <span
+class="math inline">\(\mathbb R^4\)</span>, so independent product
+spanning implies the local <span class="math inline">\(4\times4\)</span>
+slice <span class="math inline">\(M\)</span> satisfies <span
+class="math inline">\(v(-a)^TMv(a)=0\)</span> for every <span
+class="math inline">\(|a|=1\)</span>. Writing <span
+class="math inline">\(M=\bigl(\begin{smallmatrix}c&amp;r^T\\s&amp;D\end{smallmatrix}\bigr)\)</span>,
+this says <span class="math inline">\(c+(r-s)\cdot a-a^TDa=0\)</span>.
+Values at <span class="math inline">\(a,-a\)</span> give <span
+class="math inline">\(r=s\)</span>; at <span
+class="math inline">\(e_i\)</span> they give <span
+class="math inline">\(D_{ii}=c\)</span>; at <span
+class="math inline">\((e_i+e_j)/\sqrt2\)</span> they give <span
+class="math inline">\(D_{ij}+D_{ji}=0\)</span>. Thus exactly</p>
+<p><span
+class="math display">\[M=cI_4+\begin{pmatrix}0&amp;r^T\\r&amp;K\end{pmatrix},\qquad
+K^T=-K.\]</span></p>
+<p>These slices form the seven-dimensional space <span
+class="math inline">\(\mathcal L=\mathcal A\oplus\mathcal
+B\oplus\mathcal I\)</span>, with three antisymmetric spatial directions,
+three symmetric time–space directions and one scalar. At each site <span
+class="math inline">\(X\)</span> lies in the tensor space with that site
+restricted to <span class="math inline">\(\mathcal L\)</span>. Expand in
+a basis adapted to <span class="math inline">\(\mathcal L\)</span> and a
+complement; intersecting all site restrictions leaves</p>
+<p><span class="math display">\[X\in\mathcal L^{\otimes n}.\]</span></p>
+<p>This is a necessary ambient linear space, not the Lie algebra of an
+admissible group. Normalization, the second-order inequalities and later
+source steps remain. Neither local rotation averaging nor
+ancilla/discard closure was needed for this first-order restriction.
+Source: the <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/batches/B70/de-la-Torre-Masanes-Short-Mueller-2011.pdf">held
+original</a>, PDF pp. 3–4, equations (4), (6), (8)–(14); <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/reversible-generator-B77.md">B77
+internal check</a>.</p>
+<span id="decision-and-action-scale-boundary"></span><h2 id="consequence-for-state">Consequence for STATE</h2>
+<p>Finite operational capacity and smooth classical reversibility
+coexist with failure of composite descent. Exact closure for the
+specified interacting spin model requires infinite observable dimension
+or a changed preparation, effect or dynamics class. Quantum
+reconstruction needs its stated additional composition premises. All
+probability coordinates above are dimensionless; matching their
+transformations to mechanical time, energy and phase remains separate
+from determining quantum structure or a universal physical <span
+class="math inline">\(\hbar\)</span>.</p>
 
 </main>
 <footer class="site"><div class="wrap">

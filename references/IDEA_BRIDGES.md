@@ -19,27 +19,27 @@ coefficient; source matching covers the static ingredients only.
 
 ## Quantum-premise audit — Q01, with K01 support
 
-[B77 generator restriction](../notes/reversible-generator-constraints.md):
+[B77 generator restriction](../notes/classical-orientation-closure.md#the-checked-first-order-generator-restriction):
 de la Torre et al. equations (8)–(14), pp. 3–4 -> reversible probability
 extrema constrain every local matrix slice -> C129 accepts the tensor-space
 filter -> local-rotation averaging (15)–(17) remains unaudited and parked
 under the user correction against serial audits. Reversible operational descent remains the
 physical input; the source step supplies no action unit.
 
-[B74 finite closure](../notes/hamiltonian-finite-closure.md): Koopman invariant
+[B74 finite closure](../notes/classical-orientation-closure.md#no-finite-observable-enlargement-repairs-this-interaction): Koopman invariant
 observable spaces -> C128's independent time orbit rules out every finite
 repair for C127 with all preparations -> consolidate the physical source of
 finite statistical dimension and reversible composition. Infinite observable
 dimension does not alone determine distinguishability capacity. Further
 hierarchy variants need a named physical restriction before selection.
 
-[B72 Hamiltonian descent](../notes/hamiltonian-moment-descent.md): classical
+[B72 Hamiltonian descent](../notes/classical-orientation-closure.md#a-complete-classical-interaction-fails-moment-descent): classical
 spin Poisson dynamics -> exact same-moment preparations separate under
 H=J u_z v_z -> test finite invariant observable closure, not hidden-flow
 reversibility alone. The missing E[u_y v_z^2] gives a hierarchy seed.
 The source's quantization prescription supplies no necessity argument.
 
-[B70 interaction theorem](../notes/reversible-interaction-premise.md):
+[B70 interaction theorem](../notes/classical-orientation-closure.md#reversible-operational-interaction-the-source-theorem):
 de la Torre et al. Theorems 1–2 -> nonlocal connected reversible dynamics
 exclude the minimal ball composite -> test physical descent of hidden
 interactions to the operational quotient -> local tomography and reversible
@@ -54,7 +54,7 @@ Janotta–Hinrichsen §5.1 supplies the established tensor-product construction.
 B70 now supplies the selected interaction theorem; other multipartite
 references in §7 remain discovery leads.
 
-[B67 premise map](../notes/quantum-exclusion-premises.md): Hardy §7's ball
+[B67 premise map](../notes/classical-orientation-closure.md#what-reconstruction-premises-add): Hardy §7's ball
 between boxes -> intermediate states outside the bit description -> test exact
 finite-capacity operational closure, not ordinary trajectory continuity.
 CDP §§II, III.1.5–III.2 -> pure extension differs from a classical correlated
@@ -99,7 +99,7 @@ until they discharge a named physical-operator or limit dependency.
 Corollary 3 and the p. 5 clock convention add a source input: uniform gap
 with logarithmically growing global mixing time -> distinguish slow-mode
 decay, global equilibration and physical energy -> consult
-[the foundational assessment](../notes/ising-foundational-value.md) for a
+[the foundational assessment](../notes/interacting-ising-gap.md#volume-coupling-global-mixing-and-physical-limits) for a
 named generator-identification question.
 
 G04/C126 and [B71](batches/B71.md) now supply the local Hermitian parent:
@@ -110,7 +110,7 @@ remain the deciding premises. Further parent variants are parked.
 
 ## Consolidation before another subcase
 
-[The synthesis](../notes/action-scale-obstructions.md) maps the accepted
+[The synthesis](../notes/action-unit-dimensional-selection.md#observables-and-the-admissible-class) maps the accepted
 counterexamples to the premises supplying positive action. Use it to check
 whether the next variant changes a selection decision already exposed by
 those examples. No new source sweep is needed merely to recover this context.
@@ -525,7 +525,7 @@ This connects a known quantum construction to the still-open selection gate.
 
 **Source construction:** Wilson–Kogut compare cutoff models at a common
 physical correlation length. Read [the companion](../docs/WilsonKogut_1974.md)
-for §12.2 coverage, then [the two-regulator audit](../notes/newton-dimock-balaban-guide.md).
+for §12.2 coverage, then [the two-regulator audit](../notes/groupoid-quantum-newton-states.md#regulators-and-a-normalized-blocking-test).
 
 **Use next:** specify what measured quantity is held fixed as cuts are inserted,
 and compute which mechanical coefficients must run. Test whether force/energy
@@ -548,7 +548,7 @@ kinematics; STATE selects the consistency-principle test.
 **Source construction:** Newton's first and last ratios support his limiting
 geometry. Read the [Section I companion](../docs/Newton_Principia_BookI_SectionI_Motte1729_Wilkins2002.md)
 and the task's exact passage; use the
-[constant-force note](../notes/principia-constant-force-action.md) for modern
+[constant-force note](../notes/newton-insertion-action.md#the-source-geometry-and-three-different-areas) for modern
 area/action calculations. For manuscript claims use the
 [NATP00385 audit](../notes/newton-NATP00385-audit.md).
 

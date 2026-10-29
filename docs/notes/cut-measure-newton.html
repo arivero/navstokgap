@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Newton&#x27;s cell action as a measure on cuts</title>
+<title>Refinement action: cut energy, quantum phase and Gaussian information</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,116 +79,46 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>Newton’s cell action as a measure on cuts</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/cut-measure-newton.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/cut-measure-newton.pdf">PDF</a></p><p><strong>After refereeing (GPT-6 Astra, 2026-09-28).</strong> A6:
-ACCEPT Proposition 6’s Cameron–Martin norm, optimal equal-prior error
-and exact constant in the Planck mesh. REFINE the statement to two
-prescribed Gaussian bridge means with the same pinned endpoints and
-covariance, distinguish the variance rate from the diffusion
-coefficient, and identify the likelihood pairing as a Gaussian
-stochastic functional. The agreement with the mark model is structural:
-both have the sharp squared signal distance <span
-class="math inline">\(2K_\tau/\hbar\)</span> from the same Dirichlet
-energy. The bridge test attains its bound; the mark model approaches it
-by dense protocols. Both supply <span
-class="math inline">\(\hbar&gt;0\)</span>, leaving necessity
-unchanged.</p>
-<p><strong>After refereeing (Fable, 2026-09-28).</strong> Theorems 1–2,
-Corollary 3’s arithmetic and the quotations were re-derived and
-accepted. Corrections applied: Proposition 4 now names the
-Kullback–Leibler divergence, the shift <span
-class="math inline">\(\delta x\)</span>, the phase <span
-class="math inline">\(K_\tau/\varepsilon\)</span> and the Cameron–Martin
-normalizer, and its link to Rivero 1998 is stated as a counterpart;
-Corollary 5 separates a floor on a cell’s action from a floor on a cut’s
-share (a factor <span class="math inline">\(\frac34\)</span> for
-halving); §3 labels the two-quarter-cut schedule a construction and adds
-the alternating reading favoured by 𣃈必半; the Lévy–Ciesielski
-comparison names the right quantity.</p>
-<p><strong>Result, 2026-09-27 (atlas §1b, user remarks on arbitrary cuts
-and on the rod).</strong> Let a constant force <span
-class="math inline">\(F\)</span> act on a body of mass <span
-class="math inline">\(m\)</span> over a cell of duration <span
-class="math inline">\(\tau\)</span>, and let <span
-class="math inline">\(\delta x\)</span> be the chord minus the parabola
-(the chord is the inertial comparison path with the same endpoints). Its
-Galileo action</p>
-<p><span class="math display">\[K_\tau=\frac m2\int_0^\tau\dot{\delta
-x}^2\,dt=\frac{F^2\tau^3}{24m}\]</span></p>
-<p>(the <a href="galileo-two-path-interference.html">two-path note</a>
-writes the same quantity as <span
-class="math inline">\((F/4v)A=\tau\Delta E/12\)</span>) behaves as a
-measure on the process of cutting the cell.</p>
+<h1>Refinement action: cut energy, quantum phase and Gaussian
+information</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/cut-measure-newton.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/cut-measure-newton.pdf">PDF</a></p><p><strong>Maintained result.</strong> For a constant force <span
+class="math inline">\(F\ne0\)</span>, mass <span
+class="math inline">\(m&gt;0\)</span> and duration <span
+class="math inline">\(\tau&gt;0\)</span>, the chord/parabola energy is
+<span class="math inline">\(K_\tau=F^2\tau^3/(24m)\)</span>. An inserted
+cut at fraction <span class="math inline">\(s\)</span> spends <span
+class="math inline">\(3s(1-s)K_\tau\)</span>; orthogonal hat energies
+add and exhaust <span class="math inline">\(K_\tau\)</span> exactly when
+the mesh vanishes. Three uses of that same functional have different
+assumptions:</p>
 <ul>
-<li><strong>Theorem 1 (one cut).</strong> A cut at fraction <span
-class="math inline">\(s\in(0,1)\)</span> spends exactly <span
-class="math inline">\(3s(1-s)K_\tau\)</span>, and this share equals the
-Cameron–Martin energy <span class="math inline">\(\frac
-m2\int\dot\phi^2\)</span> of the Schauder hat <span
-class="math inline">\(\phi\)</span> that the cut inserts, of height the
-sagitta <span class="math inline">\(Fs(1-s)\tau^2/(2m)\)</span>.</li>
-<li><strong>Theorem 2 (any cut sequence).</strong> The hats of
-successive cuts are orthogonal in the energy <span
-class="math inline">\(\int\dot f\dot g\)</span>, so the spent shares
-add. Along any sequence of cuts, at any positions and in any order, the
-total spent equals <span
-class="math inline">\(K_\tau-\sum_iK_{\tau_i}\)</span> over the current
-pieces, and it tends to <span class="math inline">\(K_\tau\)</span> iff
-the mesh <span class="math inline">\(\max_i\tau_i\)</span> tends to
-zero; the remainder is at most <span
-class="math inline">\(K_\tau\max_i\tau_i^2/\tau^2\)</span>.</li>
-<li><strong>Corollary 3 (the rod and the Mohist schedules).</strong>
-Halving only the remaining piece each day, the schedule of the stick in
-<em>Zhuangzi</em> 33, spends <span
-class="math inline">\(\frac67K_\tau\)</span>, and so does one halving a
-day taken alternately from the front and the back. Removing a quarter
-from each end each day (two quarter-cuts a day, a construction motivated
-by the Mohist “taking from front and back”) spends <span
-class="math inline">\(\frac{27}{28}K_\tau\)</span>. All three leave a
-definite share unspent forever, because they keep cut-off pieces of
-fixed length.</li>
-<li><strong>Proposition 4 (weight of a cut).</strong> Under the
-Euclidean path measure of a free particle with variance rate <span
-class="math inline">\(\hbar/m\)</span> (Wiener measure), the force
-signal in one cut has Kullback–Leibler divergence exactly (spent
-share)<span class="math inline">\(/\hbar\)</span>. In real time the same
-share, divided by the action resolution, is the phase of the two-path
-comparison.</li>
-<li><strong>Proposition 6 (the mark mesh as a Cameron–Martin threshold;
-2026-09-28, refereed ACCEPT with the hypotheses of §5b).</strong> Under
-the same path measure, the optimal equal-prior test between force <span
-class="math inline">\(F\)</span> and no force in a cell, observing the
-whole path with pinned ends, errs with probability <span
-class="math inline">\(\Phi(-\sqrt{K_\tau/2\hbar})\)</span>. It reaches
-<span class="math inline">\(\epsilon\)</span> iff <span
-class="math inline">\(K_\tau\ge2z_{1-\epsilon}^2\hbar\)</span>, which is
-exactly the Planck paper’s mark mesh <span
-class="math inline">\(\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}\)</span>,
-obtained there from real-time Gaussian marks with Robertson’s
-bound.</li>
-<li><strong>Corollary 5 (a floor counts the cuts).</strong> If every
-exhibited cut must spend at least an action <span
-class="math inline">\(\kappa&gt;0\)</span>, at most <span
-class="math inline">\(K_\tau/\kappa\)</span> cuts can be exhibited,
-whatever the schedule. For halving refinement, level <span
-class="math inline">\(n\)</span> is exhibited iff <span
-class="math inline">\(\frac34K_\tau8^{-n}\ge\kappa\)</span>. The Planck
-paper’s mark mesh <span
-class="math inline">\(\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}\)</span>
-is the cell whose action is <span
-class="math inline">\(2z_{1-\epsilon}^2\hbar\)</span>; its own halving
-spends <span
-class="math inline">\(\frac32z_{1-\epsilon}^2\hbar\)</span>.</li>
+<li>Cut geometry is a classical energy identity and selects no positive
+action.</li>
+<li>Supplied Weyl relations convert remaining polygon energy into a
+state-independent relative phase <span
+class="math inline">\(\theta_N=F^2\sum_j\tau_j^3/(24m\hbar)\)</span>. It
+is observable through a specified coherent control; repeated passes
+change its resolution threshold.</li>
+<li>A prescribed Euclidean Gaussian bridge gives KL information <span
+class="math inline">\(K_\tau/\hbar\)</span>. Independent uncorrelated
+Gaussian position marks with a supplied product floor <span
+class="math inline">\(\kappa\)</span> have sharp finite-grid information
+<span class="math inline">\((K_\tau-\sum_jK_{\tau_j})/\kappa\)</span>,
+under the explicit availability assumptions below. These are not
+arbitrary quantum-instrument bounds.</li>
 </ul>
-<p>Theorems 1 and 2 are elementary, and their content lies in the
-reading they give: Newton’s refinement is a process that spends a fixed,
-finite action, with the nested additivity of the Lévy–Ciesielski
-construction of the Brownian bridge. Proposition 4 makes the
-correspondence exact: the action is the Cameron–Martin energy of the
-force’s shift, decomposed over the hats. Corollary 5 is a consistency
-statement. It says where a floor, if present, stops the cutting, and
-leaves the necessity question of the <a
-href="principia-fifth-postulate.html">fifth-postulate note</a> where it
-was.</p>
+<p>The zero-force case has zero energy at every mesh; the
+mesh/exhaustion equivalence then has no content. The general-force
+extension below uses the Dirichlet Green functional; its mark bound is
+attainable in the specified dense construction for forces of one sign,
+not automatically for sign-changing forces.</p>
+<p>The calculations use standard Schauder/Cameron–Martin, Weyl and
+linear Gaussian methods. Source passages and historical interpretations
+are identified where used. Internal Astra/Fable reviews checked written
+formulas and prompted scope corrections; they are not independent peer
+review or literature novelty evidence. The <a
+href="newton-insertion-action.html">insertion treatment</a> supplies the
+three-area source geometry and a distinct controlled-loop
+experiment.</p>
 <h2 id="one-cut">1. One cut</h2>
 <p>Put <span class="math inline">\(C=F^2/(24m)\)</span>, so <span
 class="math inline">\(K_\tau=C\tau^3\)</span>. On <span
@@ -232,14 +162,15 @@ class="math inline">\(\square\)</span></p>
 <p>Each later cut acts inside one current piece, and Theorem 1 applies
 to that piece with its own <span class="math inline">\(s\)</span>. The
 new hat is supported in the piece and vanishes at its ends; every
-earlier hat is linear there. The argument of §1 gives orthogonality to
+earlier hat is linear there. The one-cut argument gives orthogonality to
 all earlier hats and to the other pieces’ remainders. After any finite
 set of cuts, with pieces <span class="math inline">\(\tau_i\)</span>
 (<span class="math inline">\(\sum\tau_i=\tau\)</span>),</p>
 <p><span class="math display">\[K_\tau=\sum_{\rm cuts}\frac
 m2\int\dot\phi_{\rm cut}^2+\sum_iK_{\tau_i},\qquad
 \sum_iK_{\tau_i}=C\sum_i\tau_i^3\le C\tau\max_i\tau_i^2 .\]</span></p>
-<p>The remainder vanishes iff the mesh does (<span
+<p>For <span class="math inline">\(F\ne0\)</span>, the remainder
+vanishes iff the mesh does (<span
 class="math inline">\(\sum_i\tau_i^3\ge(\max_i\tau_i)^3\)</span>). The
 positions and the order enter only through which pieces are cut, never
 through the total. <span class="math inline">\(\square\)</span></p>
@@ -260,8 +191,7 @@ class="math inline">\(\int_0^L{\rm Var}(X_u\mid{\rm
 ends})\,du=DL^2/6\)</span>, and a cut at fraction <span
 class="math inline">\(s\)</span> removes <span
 class="math inline">\(Ds(1-s)L^2/3\)</span> of it.</p>
-<h2 id="the-rod-and-the-two-mohist-schedules">3. The rod and the two
-Mohist schedules</h2>
+<span id="the-rod-and-the-two-mohist-schedules"></span><h2 id="historical-cut-schedules">Historical cut schedules</h2>
 <p><em>Zhuangzi</em> 33 (dialecticians’ list, <a
 href="https://github.com/arivero/navstokgap/blob/main/docs/classics/Zhuangzi_33_Tianxia_zh_wikisource.md">text</a>):
 一尺之捶，日取其半，萬世不竭, “a one-foot stick, each day take half, in
@@ -330,7 +260,7 @@ cut again.</li>
 <p>The parallel with Zeno’s dichotomy (Aristotle, <em>Physics</em> VI.9)
 is recorded as convergence; transmission would need evidence this note
 does not have.</p>
-<h2 id="the-weight-of-a-cut">4. The weight of a cut</h2>
+<span id="the-weight-of-a-cut"></span><h2 id="gaussian-bridge-information">Gaussian bridge information</h2>
 <p>Take the Euclidean path measure of a free particle with variance rate
 <span class="math inline">\(\hbar/m\)</span>: unconditioned centred
 Brownian motion <span class="math inline">\(X\)</span> with <span
@@ -358,10 +288,9 @@ The Cameron–Martin density factorizes over cuts, each contributing the
 normalizing factor <span
 class="math inline">\(e^{-3s(1-s)CL^3/\hbar}\)</span>. This is the
 Euclidean counterpart of the real-time two-path phase <span
-class="math inline">\(K_\tau/\varepsilon\)</span> of the two-path note
-(the same number with <span class="math inline">\(\varepsilon\)</span>
-in the role of <span class="math inline">\(\hbar\)</span>), and of the
-product-over-cuts structure that §7 of the <a
+class="math inline">\(K_\tau/\hbar\)</span> of the two-path note (with
+the physical phase unit <span class="math inline">\(\hbar\)</span>
+supplied), and of the product-over-cuts structure that §7 of the <a
 href="principia-fifth-postulate.html">fifth-postulate note</a> reads in
 the time-step partition of <a
 href="https://arxiv.org/abs/quant-ph/9803035">Rivero 1998</a>. For <span
@@ -370,7 +299,7 @@ decisive; for <span class="math inline">\(\hbar&gt;0\)</span> the cuts
 whose share falls below <span class="math inline">\(\hbar\)</span> carry
 little evidence (under one nat). <span
 class="math inline">\(\square\)</span></p>
-<h2 id="a-floor-counts-the-cuts">5. A floor counts the cuts</h2>
+<span id="a-floor-counts-the-cuts"></span><h3 id="conditional-cut-counts">Conditional cut counts</h3>
 <p>If every cut that a record exhibits must spend at least <span
 class="math inline">\(\kappa&gt;0\)</span>, Theorem 2 gives at most
 <span class="math inline">\(K_\tau/\kappa\)</span> such cuts, for every
@@ -392,15 +321,13 @@ class="math inline">\(\tau_*\)</span> is the cell with <span
 class="math inline">\(K_{\tau_*}=2z_{1-\epsilon}^2\hbar\)</span>, whose
 halving spends <span
 class="math inline">\(\frac32z_{1-\epsilon}^2\hbar\)</span>. The round-3
-resolution threshold <span class="math inline">\(\tau\ge(24m\varepsilon
+resolution threshold <span class="math inline">\(\tau\ge(24m\hbar
 d_{n,\eta}/F^2)^{1/3}\)</span> is <span
-class="math inline">\(K_\tau\ge\varepsilon d_{n,\eta}\)</span>, that is
-<span class="math inline">\(\kappa=\frac34\varepsilon
-d_{n,\eta}\)</span> in cut-share form. Corollary 5 thus places a floor,
-when one is given, at a definite depth of the cut process; it supplies
-no floor.</p>
-<h2 id="b.-the-mark-mesh-from-the-path-measure-proposition-6">5b. The
-mark mesh from the path measure (Proposition 6)</h2>
+class="math inline">\(K_\tau\ge\hbar d_{n,\eta}\)</span>, that is <span
+class="math inline">\(\kappa=\frac34\hbar d_{n,\eta}\)</span> in
+cut-share form. Corollary 5 thus places a floor, when one is given, at a
+definite depth of the cut process; it supplies no floor.</p>
+<span id="b.-the-mark-mesh-from-the-path-measure-proposition-6"></span><h3 id="full-path-gaussian-testing">Full-path Gaussian testing</h3>
 <p>Keep the measure of §4: unconditioned centred Brownian motion with
 <span class="math inline">\(E[X_t^2]=\hbar t/m\)</span>, the Euclidean
 free-particle measure, whose diffusion coefficient <span
@@ -481,12 +408,9 @@ class="math inline">\(ab\ge\hbar c_*(\epsilon)\)</span> with <span
 class="math inline">\(c_*(\epsilon)\simeq\frac12\ln(1/\epsilon)\)</span>
 in window half-widths; the constants refer to different quantities (a
 cell’s Galileo action and a phase-space window).</p>
-<h2
-id="c.-mark-protocols-spend-exactly-the-cut-measure-proposition-7">5c.
-Mark protocols spend exactly the cut measure (Proposition 7)</h2>
-<p><strong>Proposition 7 (2026-09-29, Claude, generalizing a single-cut
-computation by Fable; refereed by Fable, ACCEPT with wording fixes
-applied).</strong> Take the mark model of the <a
+<span id="c.-mark-protocols-spend-exactly-the-cut-measure-proposition-7"></span><h3 id="finite-grid-gaussian-mark-information">Finite-grid Gaussian mark
+information</h3>
+<p><strong>Proposition 7.</strong> Take the mark model of the <a
 href="planck-gap-paper.html">Planck paper</a>, §3: mark <span
 class="math inline">\(j\)</span> returns the position with Gaussian
 error <span class="math inline">\(\delta_j\)</span> and delivers a
@@ -597,29 +521,522 @@ class="math inline">\(\frac12\sqrt{K_\tau/\kappa}=\sqrt{K_\tau/(2\hbar)}\)</span
 from the mark model instead of the path measure. The <a
 href="leibniz-continuity-records.html">continuity note</a> reads the
 additivity as Leibniz’s <em>petites perceptions</em>.</p>
-<p>The schedules of §3 acquire a records meaning. Marks placed at the
-cuts of Hui Shi’s stick, however many, reach at most <span
+<p>The historical schedules above acquire a records meaning. Marks
+placed at the cuts of Hui Shi’s stick, however many, reach at most <span
 class="math inline">\(\frac67K_\tau/\kappa\)</span>, and the two
 quarter-cuts a day reach <span
 class="math inline">\(\frac{27}{28}K_\tau/\kappa\)</span>: the stick
 that is “not exhausted in ten thousand generations” leaves one seventh
 of the discernibility of the comparison permanently out of reach,
-because the pieces it takes away are never marked again. The deficit
-exists only on the floor branch; with <span
-class="math inline">\(\kappa=0\)</span> any three marks decide.</p>
-<h2 id="consequence-for-state">6. Consequence for STATE</h2>
-<p>Atlas §1b: the Newton row of “cuts at any position” is proved here
-(Theorems 1–2, Corollary 3), with the Lévy–Ciesielski identification and
-the Euclidean weight of a cut (Proposition 4). Proposition 6 is now
-refereed: its Gaussian information equals the sharp mark information
-under the respective stated hypotheses. The necessity question is
-unchanged. On the gauge side of §1b the free-field defect of a cut at
-fraction <span class="math inline">\(s\)</span> is (5) scaled by <span
-class="math inline">\(4s(1-s)\)</span> in its size bound (<a
-href="series-parallel-gauge-refinement.html">Corollary 2<span
-class="math inline">\(_s\)</span></a>); the <span
-class="math inline">\(U(1)\)</span> Theorem 5 holds for every cut
-fraction (Corollary 5<span class="math inline">\(_s\)</span> there).</p>
+because the pieces it takes away are never marked again. If the
+zero-floor model supplies arbitrarily accurate balanced marks, three
+distinct times instead permit error tending to zero; a zero lower
+product bound alone does not guarantee that availability.</p>
+<h2 id="weyl-lifting-and-polygon-phases">Weyl lifting and polygon
+phases</h2>
+<p>Transverse coordinate <span class="math inline">\(\hat y\)</span>,
+momentum <span class="math inline">\(\hat p\)</span>, <span
+class="math inline">\([\hat y,\hat p]=i\hbar\)</span>, mass <span
+class="math inline">\(m&gt;0\)</span>; the horizontal motion at speed
+<span class="math inline">\(v\)</span> is common to every history
+considered and cancels. A force history is an impulse density or measure
+<span class="math inline">\(f\)</span> on <span
+class="math inline">\([0,\tau]\)</span> with Hamiltonian <span
+class="math inline">\(H_f(t)=\hat p^2/2m-f(t)\hat y\)</span>. In the
+interaction picture of the free evolution <span
+class="math inline">\(U_0\)</span>, write <span
+class="math inline">\(W_f(t)=U_0(t)^\dagger U_f(t)\)</span> and use the
+Weyl operators of the probabilistic note,</p>
+<p><span class="math display">\[D(a,b)=\exp\!\left[\frac{i}{\hbar}(b\hat
+y-a\hat p)\right],\qquad
+D(z_1)D(z_2)=e^{-i\omega(z_1,z_2)/2\hbar}D(z_1+z_2),\]</span></p>
+<p>with <span
+class="math inline">\(\omega(z_1,z_2)=a_1b_2-a_2b_1\)</span>. An impulse
+<span class="math inline">\(J\)</span> at time <span
+class="math inline">\(t\)</span> is <span
+class="math inline">\(U_0(t)^\dagger e^{iJ\hat
+y/\hbar}U_0(t)=D(-Jt/m,J)\)</span>, since <span
+class="math inline">\(U_0(t)^\dagger\hat yU_0(t)=\hat y+\hat
+pt/m\)</span>. The history’s <strong>phase-plane path</strong> is</p>
+<p><span
+class="math display">\[z_f(t)=\bigl(\alpha_f(t),\beta_f(t)\bigr)
+=\Bigl(-\frac1m\int_0^ts\,f(s)\,ds,\
+\int_0^tf(s)\,ds\Bigr),\]</span></p>
+<p>the transverse displacement relative to free motion referred back to
+<span class="math inline">\(t=0\)</span> by the free flow, and the
+accumulated impulse. For the constant force, <span
+class="math inline">\(z_F(t)=(-Ft^2/2m,\ Ft)\)</span>, a parabola in the
+phase plane.</p>
+<p><strong>Lemma 1.</strong> <span
+class="math inline">\(W_f(\tau)=\exp\bigl[\frac{i}{2\hbar}\int_0^\tau\omega(z_f,dz_f)\bigr]\,D\bigl(z_f(\tau)\bigr)\)</span>.</p>
+<p><em>Proof.</em> For finitely many impulses with increments <span
+class="math inline">\(\delta z_1,\dots,\delta z_N\)</span> in time
+order, induction on the Weyl relation gives <span
+class="math inline">\(D(\delta z_N)\cdots D(\delta
+z_1)=\exp[\frac{i}{2\hbar}\sum_{i&lt;j}\omega(\delta z_i,\delta
+z_j)]D(\sum_j\delta z_j)\)</span>, and <span
+class="math inline">\(\sum_{i&lt;j}\omega(\delta z_i,\delta
+z_j)=\sum_j\omega(z_{j-1},\delta z_j)\)</span> with <span
+class="math inline">\(z_{j-1}=\sum_{i&lt;j}\delta z_i\)</span>. For a
+density <span class="math inline">\(f\)</span> the generator <span
+class="math inline">\(\frac{i}{\hbar}f(t)(\hat y+\hat pt/m)\)</span> has
+c-number commutators at different times, so the Magnus series stops at
+second order and the Riemann sums converge to <span
+class="math inline">\(\int\omega(z_f,dz_f)\)</span>, as in N01 §4. <span
+class="math inline">\(\square\)</span></p>
+<p><strong>Lemma 2.</strong> If <span
+class="math inline">\(z_f(\tau)=z_g(\tau)\)</span>, then <span
+class="math inline">\(W_fW_g^\dagger=e^{i\mathcal A(f,g)/\hbar}\,\mathbf
+1\)</span>, where <span class="math inline">\(\mathcal
+A(f,g)=\frac12\oint\omega(z,dz)\)</span> is the signed area enclosed by
+<span class="math inline">\(z_f\)</span> followed by <span
+class="math inline">\(z_g\)</span> reversed.</p>
+<p><em>Proof.</em> Lemma 1 for both, and Green’s theorem for the closed
+loop. <span class="math inline">\(\square\)</span></p>
+<p>The specified linear-force histories with equal phase-plane
+increments induce the same endpoint canonical map on the body. Later
+observations of that body alone do not recover which force was used; an
+apparatus or memory can retain it. Lemma 2 says the quantum evolutions
+still differ, by the enclosed phase-plane area over <span
+class="math inline">\(\hbar\)</span>, and that the difference is a
+multiple of the identity. This is the standard geometric phase of
+displaced oscillators, used in trapped-ion phase gates (<a
+href="https://doi.org/10.1103/PhysRevA.62.022311">Sørensen and Mølmer,
+PRA <strong>62</strong>, 022311, 2000</a>; <a
+href="https://doi.org/10.1038/nature01492">Leibfried et al., Nature
+<strong>422</strong>, 412, 2003</a>, both metadata). The <span
+class="math inline">\(t^3\)</span> phase of a freely falling wave packet
+is the single-history form of it (<a
+href="https://doi.org/10.1103/RevModPhys.51.43">Greenberger and
+Overhauser, RMP <strong>51</strong>, 43, 1979</a>, metadata).</p>
+<h3 id="the-inscribed-polygon">The inscribed polygon</h3>
+<p>Partition <span
+class="math inline">\(0=t_0&lt;\dots&lt;t_N=\tau\)</span> with <span
+class="math inline">\(\tau_j=t_j-t_{j-1}\)</span> and midpoints <span
+class="math inline">\(c_j=(t_{j-1}+t_j)/2\)</span>. <strong>Newton’s
+inscribed polygon</strong> gives the impulse <span
+class="math inline">\(F\tau_1/2\)</span> at <span
+class="math inline">\(t_0\)</span>, <span
+class="math inline">\(F(\tau_j+\tau_{j+1})/2\)</span> at each interior
+<span class="math inline">\(t_j\)</span>, and <span
+class="math inline">\(F\tau_N/2\)</span> at <span
+class="math inline">\(t_N\)</span>: each step’s impulse <span
+class="math inline">\(F\tau_j\)</span> is split equally between its two
+ends.</p>
+<p><strong>Theorem P1.</strong> (i) On <span
+class="math inline">\((t_{j-1},t_j)\)</span> the polygon moves uniformly
+with momentum <span class="math inline">\(Fc_j\)</span> along the chord
+of the parabola, and its phase-plane path passes through <span
+class="math inline">\(z_F(t_j)\)</span> after each completed cell. (ii)
+<span class="math inline">\(W_{\rm
+poly}(\tau)=e^{i\theta_N}W_F(\tau)\)</span> with <span
+class="math inline">\(\theta_N=F^2\sum_j\tau_j^3/(24m\hbar)\)</span>.
+(iii) With <span class="math inline">\(S_j=vF\tau_j^3/(12m)\)</span> the
+area between the <span class="math inline">\(j\)</span>-th arc and its
+chord, <span
+class="math inline">\(\theta_N=(F/2v\hbar)\sum_jS_j\)</span>.</p>
+<p><em>Proof.</em> (i) After the second half of the impulse at <span
+class="math inline">\(t_{j-1}\)</span> the momentum is <span
+class="math inline">\(Ft_{j-1}+F\tau_j/2=Fc_j\)</span>, and in time
+<span class="math inline">\(\tau_j\)</span> it carries the body through
+<span class="math inline">\(Fc_j\tau_j/m=F(t_j^2-t_{j-1}^2)/2m\)</span>,
+the parabola’s transverse increment. In the phase plane the two
+half-impulses of step <span class="math inline">\(j\)</span> are <span
+class="math inline">\(k_1=(-F\tau_jt_{j-1}/2m,\ F\tau_j/2)\)</span> and
+<span class="math inline">\(k_2=(-F\tau_jt_j/2m,\ F\tau_j/2)\)</span>,
+whose sum is the parabola’s increment <span class="math inline">\(\delta
+z_j=(-F\tau_jc_j/m,\ F\tau_j)\)</span>.</p>
+<ol start="2" type="i">
+<li><p>Both evolutions are products over steps, in the same order, of
+operators with the same displacements <span class="math inline">\(\delta
+z_j\)</span>, so their ratio is the product of the per-step phase
+ratios. By Lemma 1 the polygon’s step is <span
+class="math inline">\(D(k_2)D(k_1)=e^{i\omega(k_1,k_2)/2\hbar}D(\delta
+z_j)\)</span> with <span
+class="math inline">\(\omega(k_1,k_2)=\frac{F\tau_j}{2}\cdot\frac{F\tau_j}{2m}(t_j-t_{j-1})=\frac{F^2\tau_j^3}{4m}\)</span>.
+The curve’s step, with <span class="math inline">\(s=t-t_{j-1}\)</span>
+and path <span class="math inline">\((-F(s^2+2st_{j-1})/2m,\
+Fs)\)</span> from <span class="math inline">\(z_F(t_{j-1})\)</span>, has
+<span class="math inline">\(\omega(z,dz)=\frac{F^2s^2}{2m}ds\)</span>,
+hence phase <span
+class="math inline">\(\frac1{2\hbar}\int_0^{\tau_j}\frac{F^2s^2}{2m}ds=\frac{F^2\tau_j^3}{12m\hbar}\)</span>.
+Neither depends on <span class="math inline">\(t_{j-1}\)</span>. The
+ratio is <span
+class="math inline">\(\exp[\frac{i}{\hbar}(\frac18-\frac1{12})\frac{F^2\tau_j^3}{m}]=\exp[\frac{iF^2\tau_j^3}{24m\hbar}]\)</span>.</p></li>
+<li><p>Over the step, the chord exceeds the parabola by <span
+class="math inline">\(\frac{F}{2m}(t-t_{j-1})(t_j-t)\)</span>, and
+integrating against <span class="math inline">\(dx=v\,dt\)</span> gives
+<span class="math inline">\(S_j=vF\tau_j^3/12m\)</span>. Then <span
+class="math inline">\(\frac{F}{2v}S_j=\frac{F^2\tau_j^3}{24m}\)</span>.
+<span class="math inline">\(\square\)</span></p></li>
+</ol>
+<p>Lemma XI’s tangent area for the step is <span
+class="math inline">\(A_j=vF\tau_j^3/6m=2S_j\)</span>, so <span
+class="math inline">\(\theta_N=(F/4v\hbar)\sum_jA_j\)</span>, and
+Proposition 1 of the <a href="planck-gap-paper.html">paper</a> is the
+statement that this sum vanishes with the mesh. In the phase plane the
+polygon’s path is the circumscribed tangent polygon of the parabola
+<span class="math inline">\(z_F\)</span>: each impulse at <span
+class="math inline">\(t_j\)</span> moves along the tangent direction
+<span class="math inline">\((-t_j/m,1)\)</span>, and the two paths touch
+at every <span class="math inline">\(z_F(t_j)\)</span>, which is why the
+area between them splits step by step. The phase is also the difference
+of the two histories’ classical actions between the same endpoints,
+whatever the endpoints, which is why a comparison of quadratic
+Hamiltonians leaves only a global phase.</p>
+<p><strong>Corollary P2 (insertion).</strong> Replacing step <span
+class="math inline">\(j\)</span> by steps <span
+class="math inline">\(\lambda\tau_j\)</span> and <span
+class="math inline">\((1-\lambda)\tau_j\)</span> lowers <span
+class="math inline">\(\theta_N\)</span> by</p>
+<p><span
+class="math display">\[\frac{F^2\tau_j^3}{24m\hbar}\bigl[1-\lambda^3-(1-\lambda)^3\bigr]
+=\frac{F^2\tau_j^3\,\lambda(1-\lambda)}{8m\hbar}
+=\frac{F}{2v\hbar}\,T_j(\lambda),\]</span></p>
+<p>with <span
+class="math inline">\(T_j(\lambda)=S_j-S_j&#39;-S_j&#39;&#39;\)</span>
+the triangle inscribed between the old chord and the new vertex. At
+<span class="math inline">\(\lambda=\frac12\)</span>, <span
+class="math inline">\(T_j=\frac34S_j\)</span>, which is Archimedes’
+<em>Quadrature of the Parabola</em>, Propositions 17 and 24 (the segment
+is four thirds of its inscribed triangle, by balancing and by
+exhaustion; <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/classics/Archimedes_QuadratureParabola_Heath1897_OCR.md">companion</a>).
+After <span class="math inline">\(k\)</span> rounds of halving every
+step, <span class="math inline">\(\theta\)</span> is <span
+class="math inline">\(4^{-k}\)</span> of its value. <span
+class="math inline">\(\square\)</span></p>
+<p>Each inserted point therefore changes the quantum evolution by a
+computable phase, fixed by the area the insertion removes, and the
+change is the same for every state of the body. A step’s own phase
+reaches one radian at</p>
+<p><span
+class="math display">\[\tau_\hbar=\left(\frac{24m\hbar}{F^2}\right)^{1/3},\]</span></p>
+<p>the scale that the constant-force note found for the single chord
+lens. The insertion mesh of the mark theorem, <span
+class="math inline">\(\tau_*=(48z_{1-\epsilon}^2m\hbar/F^2)^{1/3}\)</span>,
+has the same form, obtained there from the cost of a mark and here from
+the phase of a segment with no apparatus at all.</p>
+<h3 id="archimedes-geometric-series">Archimedes’ geometric series</h3>
+<p>The chord/arc area is <span
+class="math inline">\(S_j=vF\tau_j^3/(12m)\)</span>; the tangent/arc
+area is <span class="math inline">\(A_j=2S_j\)</span>, and the tangent
+triangle is <span class="math inline">\(3S_j\)</span>. Halving inserts
+the triangle <span class="math inline">\(T_j=3S_j/4\)</span>.
+Archimedes, <em>Quadrature of the Parabola</em>, Propositions 17, 23 and
+24, proves the segment is four thirds of its inscribed triangle and sums
+the exhaustion series <span
+class="math inline">\(T_j+T_j/4+T_j/16+\cdots=4T_j/3=S_j\)</span> (<a
+href="https://github.com/arivero/navstokgap/blob/main/docs/classics/Archimedes_QuadratureParabola_Heath1897_OCR.md">Heath
+companion</a>, passages read). Thus each halving removes one stage of
+the same energy series: <span class="math inline">\(\theta_{\rm
+step}=(F/2v\hbar)S_j\)</span>, and the total remainder falls by four
+each complete round. A one-radian comparison is a scale for this
+specified quantum phase experiment, not a prohibition on finer
+geometry.</p>
+<p>The preface to <em>The Method</em> credits Democritus with asserting
+the cone’s one-third volume and Eudoxus with its proof (<a
+href="https://github.com/arivero/navstokgap/blob/main/docs/classics/Archimedes_Method_Heath1912_OCR.md">source</a>,
+passage). The Galileo area also has a one-third factor, <span
+class="math inline">\(A_{\rm inertial,fall}=vF\tau^3/(6m)=v\tau
+s/3\)</span> for sagitta <span
+class="math inline">\(s=F\tau^2/(2m)\)</span>. This modern geometric
+comparison establishes neither transmission nor a record-disturbance
+floor for a static solid.</p>
+<h3 id="ordering-holonomy-and-the-partition-identity">Ordering holonomy
+and the partition identity</h3>
+<p>Keep the curve’s step operators <span
+class="math inline">\(V_j=e^{i\varphi_j}D(\delta z_j)\)</span> and
+compose them in another order. For a permutation <span
+class="math inline">\(\sigma\)</span>, write <span
+class="math inline">\(U_\sigma\)</span> for the product with the steps
+applied in the order <span class="math inline">\(\sigma\)</span>.</p>
+<p><strong>Theorem P3.</strong> <span class="math inline">\(U_{\rm
+chron}U_\sigma^\dagger=\exp[\frac{i}{\hbar}\sum\omega(\delta z_i,\delta
+z_j)]\mathbf 1\)</span>, the sum over the pairs <span
+class="math inline">\(i&lt;j\)</span> that <span
+class="math inline">\(\sigma\)</span> inverts. Every term is
+positive,</p>
+<p><span class="math display">\[\omega(\delta z_i,\delta
+z_j)=\frac{F^2}{m}\tau_i\tau_j(c_j-c_i)&gt;0\qquad(i&lt;j),\]</span></p>
+<p>so the reversed order is extremal, with</p>
+<p><span
+class="math display">\[\Phi_N=\frac1\hbar\sum_{i&lt;j}\omega(\delta
+z_i,\delta z_j)
+=\frac{F^2}{6m\hbar}\Bigl(\tau^3-\sum_j\tau_j^3\Bigr).\]</span></p>
+<p><em>Proof.</em> The per-step phases <span
+class="math inline">\(\varphi_j\)</span> are common to every ordering.
+By the Weyl relation the phase of a product is <span
+class="math inline">\(\frac1{2\hbar}\)</span> times the sum of <span
+class="math inline">\(\omega(\delta z_a,\delta z_b)\)</span> over pairs
+with <span class="math inline">\(a\)</span> applied before <span
+class="math inline">\(b\)</span>; a pair kept in order cancels between
+the two products, and an inverted pair contributes <span
+class="math inline">\(\omega(\delta z_i,\delta z_j)-\omega(\delta
+z_j,\delta z_i)=2\omega(\delta z_i,\delta z_j)\)</span>. With <span
+class="math inline">\(\delta z_i=(-F\tau_ic_i/m,\ F\tau_i)\)</span>,
+<span class="math inline">\(\omega(\delta z_i,\delta
+z_j)=\frac{F^2}{m}\tau_i\tau_j(c_j-c_i)\)</span>. For the sum, <span
+class="math inline">\(c_j-c_i=\frac{\tau_i}2+\sum_{i&lt;k&lt;j}\tau_k+\frac{\tau_j}2\)</span>,
+so <span
+class="math inline">\(\sum_{i&lt;j}\tau_i\tau_j(c_j-c_i)=\frac12\sum_{i\ne
+j}\tau_i^2\tau_j+\sum_{i&lt;k&lt;j}\tau_i\tau_k\tau_j\)</span>, and
+<span class="math inline">\((\sum_j\tau_j)^3=\sum_j\tau_j^3+3\sum_{i\ne
+j}\tau_i^2\tau_j+6\sum_{i&lt;k&lt;j}\tau_i\tau_k\tau_j\)</span> gives
+<span class="math inline">\(\frac16(\tau^3-\sum_j\tau_j^3)\)</span>.
+<span class="math inline">\(\square\)</span></p>
+<p><strong>Corollary P4 (a partition identity).</strong> <span
+class="math inline">\(\Phi_N+4\theta_N=F^2\tau^3/(6m\hbar)\)</span> for
+every partition, and <span class="math inline">\(F^2\tau^3/6m=\tau\Delta
+E/3=(F/v)A_{\rm inertial,fall}\)</span> with <span
+class="math inline">\(A_{\rm inertial,fall}=vF\tau^3/6m\)</span> the
+paper’s area (1). <span class="math inline">\(\square\)</span></p>
+<p>In areas, <span
+class="math inline">\(\hbar\Phi_N=(F/v)(A-\sum_jA_j)\)</span> and <span
+class="math inline">\(4\hbar\theta_N=(F/v)\sum_jA_j\)</span>: the
+ordering holonomy carries the part of the Galileo area that refinement
+keeps, and the polygon defect carries the part that Proposition 1 sends
+to zero. For the uniform partition, <span
+class="math inline">\(\Phi_N=\frac{\tau\Delta
+E}{3\hbar}(1-N^{-2})\)</span>.</p>
+<p>The chronological and reversed products realize the same
+displacement, so the holonomy is a property of the composition law. No
+force history acting on a body realizes a reordering other than the
+chronological one: an impulse applied at the wrong time must be
+translated back, so a reversed order needs displacements as well as
+impulses, which trapped-ion practice supplies. Theorem P3 is therefore a
+statement about the composition law, and Theorem P1 is the one that
+needs only two force histories acting on a real body.</p>
+<h3 id="controlled-readout-and-finite-resources">Controlled readout and
+finite resources</h3>
+<p>Put the two histories of Theorem P1 on the arms of a control qubit,
+as in N01 §4. The body ends in the same state on both arms, so the qubit
+acquires the relative phase <span
+class="math inline">\(\theta_N\)</span> and nothing else, and the
+optimal single-shot error in deciding polygon against curve is <span
+class="math inline">\(\epsilon=\frac12(1-|\sin(\theta_N/2)|)\)</span>,
+with N01’s formula for <span class="math inline">\(n\)</span> copies. In
+one controlled pass, a single step is resolved from its chord at error
+<span class="math inline">\(\epsilon\)</span> only if</p>
+<p><span class="math display">\[\frac{F^2\tau_j^3}{24m\hbar}\ \ge\
+2\arcsin(1-2\epsilon),\qquad
+\tau_j\ \ge\
+\left(\frac{48\,m\hbar\,\arcsin(1-2\epsilon)}{F^2}\right)^{1/3},\]</span></p>
+<p>for every state of the body, pure or mixed, squeezed or not. The
+bound concerns this readout and its resource, the number of controlled
+passes: <span class="math inline">\(k\)</span> passes accumulate <span
+class="math inline">\(k\theta_N\)</span> and lower the threshold on
+<span class="math inline">\(\tau_j\)</span> by <span
+class="math inline">\(k^{1/3}\)</span>, while independent copies obey
+the separate Helstrom formula in the insertion note. The body’s own
+displacement is a separate record, priced by the mark and aperture
+theorems, and squeezing acts on that record. What the phase supplies is
+the part of the signal that no preparation of the body can move.</p>
+<h2 id="the-fits-a-conditional-historical-action-count">The fits: a
+conditional historical action count</h2>
+<p>The <em>Opticks</em> Book II Part III Proposition XVII makes the fit
+interval in two media proportional to the sine-of-incidence/refraction
+ratio; Proposition X posits the inverse ratio for corpuscle speeds in
+Newton’s emission theory. At fixed corpuscle mass this gives a
+per-colour <span class="math inline">\(\Lambda v\)</span>, hence <span
+class="math inline">\(\Lambda p\)</span>, invariant under that
+comparison. The <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/classics/Newton_Opticks_1730_fits_and_queries.md">held
+passages</a> are source evidence for that historical reading. Its
+wavelength analogy was already discussed by Sakkopoulos <a
+href="https://doi.org/10.1088/0143-0807/9/2/007">1988</a> (metadata),
+Whittaker and de Broglie’s 1929 Nobel lecture. No novelty is claimed
+here.</p>
+<p>This interval is a longitudinal periodic disposition. It is not a
+transverse position uncertainty or a conjugate momentum spread.
+Extending its rule to a continuously varying speed is an additional
+hypothesis, stated in the next proposition, rather than a theorem Newton
+printed.</p>
+<p><strong>Proposition F5.</strong> Suppose, extending Props. X and XVII
+from a step in the medium to a continuously varying speed, that a
+corpuscle’s fits advance by one interval <span
+class="math inline">\(\Lambda=\Lambda_0p_0/|p|\)</span> per length of
+path. Then the number of fits along a path is its Maupertuis action
+<span class="math inline">\(W=\int p\cdot dq\)</span> in units of <span
+class="math inline">\(\Lambda_0p_0\)</span>. For the inscribed polygon
+and the curve of Theorem P1 the counts differ by</p>
+<p><span class="math display">\[\frac{\Delta
+W}{\Lambda_0p_0}=\frac{F^2}{12m\Lambda_0p_0}\sum_j\tau_j^3
+=\frac{1}{2\Lambda_0p_0}\,\frac{F}{v}\sum_jA_j\]</span></p>
+<p>fits, with <span class="math inline">\(A_j\)</span> Lemma XI’s
+tangent areas.</p>
+<p><em>Proof.</em> Along the actual motion <span
+class="math inline">\(p\parallel dq\)</span>, so <span
+class="math inline">\(|p|\,ds=p\cdot dq\)</span> and the count is <span
+class="math inline">\(\int p\cdot dq/(\Lambda_0p_0)\)</span>. The
+horizontal parts are common. On step <span
+class="math inline">\(j\)</span> the curve has <span
+class="math inline">\(\int
+p_y\,dy=\frac{F^2}{m}\int_{t_{j-1}}^{t_j}t^2\,dt\)</span> and the chord
+has <span class="math inline">\(\frac{F^2}{m}c_j^2\tau_j\)</span>; their
+difference is <span
+class="math inline">\(\frac{F^2}{m}\tau_j\bigl[\frac13(t_{j-1}^2+t_{j-1}t_j+t_j^2)-\frac14(t_{j-1}+t_j)^2\bigr]
+=\frac{F^2\tau_j^3}{12m}\)</span>, and <span
+class="math inline">\(F^2\tau_j^3/6m=(F/v)A_j\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The count is a classical internal-phase variable attached to a
+trajectory. Proposition XII’s determinate reflection/transmission
+disposition and Query 29’s overtaking vibrations do not supply Hilbert
+states, Born probabilities, Weyl relations or coherent addition of
+amplitudes. Proposition XV’s oblique-emergence rule also need not be a
+path-length count. Even where the conditional action count is useful, it
+does not establish a quantum central extension.</p>
+<p>If one additionally sets <span
+class="math inline">\(\Lambda=\lambda/2\)</span> and <span
+class="math inline">\(\lambda p=2\pi\hbar\)</span>, counting <span
+class="math inline">\(2\pi\)</span> per fit gives <span
+class="math inline">\(4\theta_N\)</span> for this pair of histories: one
+factor two is the half-wavelength interval, the other is <span
+class="math inline">\(\Delta W=2\Delta S\)</span>. The wave phase
+advancing <span class="math inline">\(\pi\)</span> per interval gives
+<span class="math inline">\(2\theta_N\)</span>. These are conditional
+comparisons using quantum calibration. A kick <span
+class="math inline">\(J\)</span> before a displacement <span
+class="math inline">\(d\)</span> changes <span
+class="math inline">\(\int p\,dq\)</span> by <span
+class="math inline">\(Jd\)</span> relative to reversing their order; a
+classical phase count can record this area without becoming a quantum
+composition law. Universality across colours and systems, a positive
+physical constant, and the quantum state/instrument rules remain
+separate physical assumptions.</p>
+<h2 id="general-force-histories-one-dirichlet-functional">General force
+histories: one Dirichlet functional</h2>
+<p>Let <span class="math inline">\(f\)</span> be any integrable force
+history on an interval of duration <span
+class="math inline">\(\tau\)</span>, and compare the motion with its
+<strong>chord</strong>, the uniform motion between the same two
+positions. The deviation <span class="math inline">\(\delta y=y_{\rm
+chord}-y_f\)</span> obeys <span class="math inline">\(m\,\delta
+y&#39;&#39;=-f\)</span> with <span class="math inline">\(\delta
+y=0\)</span> at both ends, so <span class="math inline">\(\delta
+y=G_\tau f/m\)</span> with the Dirichlet Green’s function <span
+class="math inline">\(G_\tau(s,u)=\min(s,u)\,(\tau-\max(s,u))/\tau\)</span>
+in time measured from the start of the interval. Define the
+<strong>kinetic action of the deviation</strong></p>
+<p><span class="math display">\[\mathcal
+K_\tau[f]=\int_0^\tau\tfrac12m\,\delta\dot y^{\,2}\,dt
+=\frac1{2m}\int_0^\tau\!\!\int_0^\tau G_\tau(s,u)f(s)f(u)\,ds\,du\
+\ge0,\]</span></p>
+<p>zero only for <span class="math inline">\(f=0\)</span>. For the
+constant force it is <span
+class="math inline">\(F^2\tau^3/24m=\tau\Delta E/12=(F/2v)S\)</span>,
+with <span class="math inline">\(S\)</span> the segment of the
+chord.</p>
+<p><strong>Theorem G7.</strong> (a) On each step of a partition, the two
+impulses <span class="math inline">\(J_j^-=\int(1-s/\tau_j)f\)</span>
+and <span class="math inline">\(J_j^+=\int(s/\tau_j)f\)</span> at its
+ends reproduce the step’s impulse and displacement, so Newton’s polygon
+built from them agrees with the motion at every vertex, and</p>
+<p><span class="math display">\[W_{\rm
+poly}=\exp\Bigl[\frac{i}{\hbar}\sum_j\mathcal K_{\tau_j}[f]\Bigr]W_f
+.\]</span></p>
+<p>Inserting vertices never raises the phase: <span
+class="math inline">\(\sum_j\mathcal K_{\tau_j}[f]\le\mathcal
+K_\tau[f]\)</span>. (b) For every protocol of Gaussian marks with
+uncorrelated error and recoil and <span
+class="math inline">\(\delta_j\Delta_j\ge\kappa\)</span>, with the
+initial position and velocity unknown, the deflection between the motion
+under <span class="math inline">\(f\)</span> and free motion obeys</p>
+<p><span class="math display">\[d^2\ \le\ \frac{\mathcal
+K_\tau[f]}{\kappa},\]</span></p>
+<p>with equality approached by dense protocols when <span
+class="math inline">\(f\)</span> has one sign. (c) Hence at <span
+class="math inline">\(\kappa=\hbar/2\)</span> the best deflection any
+such protocol can reach is <strong>twice the phase between the motion
+and its chord when <span class="math inline">\(f\)</span> has one
+sign</strong>, <span class="math inline">\(d^2_{\max}=2\,\mathcal
+K_\tau/\hbar=2\theta_1\)</span>.</p>
+<p><em>Proof.</em> (a) Measure time from the start of the step. The
+impulses at <span class="math inline">\(0\)</span> and <span
+class="math inline">\(\tau_j\)</span> are <span
+class="math inline">\(k^-=(0,J^-)\)</span> and <span
+class="math inline">\(k^+=(-\tau_jJ^+/m,\ J^+)\)</span> in the phase
+plane, and <span class="math inline">\(J^-+J^+=\int f\)</span>, <span
+class="math inline">\(\tau_jJ^+=\int sf\)</span> match the step’s
+increment. Lemma 1 gives the polygon’s step phase <span
+class="math inline">\(\frac1{2\hbar}\omega(k^-,k^+)=\tau_jJ^+J^-/2m\hbar\)</span>
+and the motion’s step phase <span
+class="math inline">\(\frac1{2\hbar}\int\omega(z,dz)=\frac1{2m\hbar}\iint_{u&lt;s}(s-u)f(s)f(u)\)</span>,
+because along the path <span
+class="math inline">\(\omega(z,dz)=f(s)\,\frac1m\int_0^s(s-u)f(u)\,du\,ds\)</span>.
+Now <span class="math inline">\(\tau_jJ^+J^-=\iint
+s(\tau_j-u)f(s)f(u)/\tau_j\)</span>; symmetrizing and subtracting <span
+class="math inline">\(\frac12\iint|s-u|ff\)</span> leaves the kernel
+<span
+class="math inline">\(\frac1{2\tau_j}[s(\tau_j-u)+u(\tau_j-s)-\tau_j|s-u|]=G_{\tau_j}(s,u)\)</span>.
+Shifting the time origin is the shear <span
+class="math inline">\((a,b)\mapsto(a-t_{j-1}b/m,b)\)</span>, which
+preserves <span class="math inline">\(\omega\)</span>, so the per-step
+phases are <span class="math inline">\(\mathcal
+K_{\tau_j}/\hbar\)</span>, and they multiply as in Theorem P1. The
+Dirichlet principle <span class="math inline">\(2m\mathcal
+K_\tau=\sup_T(2\int fT-\int T&#39;^2)\)</span> over <span
+class="math inline">\(T\)</span> vanishing at the ends, restricted to
+<span class="math inline">\(T\)</span> vanishing also at the interior
+vertices, gives the monotonicity.</p>
+<ol start="2" type="a">
+<li><p>As in Theorem 2 of the paper, <span
+class="math inline">\(u^{\mathsf T}\Sigma u\ge2\kappa E/m\)</span> and
+<span class="math inline">\(u^{\mathsf T}P=\frac1m\int_0^\tau
+fT\)</span> with <span class="math inline">\(T\)</span> vanishing at
+both ends. Since <span class="math inline">\(-(G_\tau
+f)&#39;&#39;=f\)</span>, <span class="math inline">\(\int fT=\int(G_\tau
+f)&#39;T&#39;\le\sqrt{\langle f,G_\tau f\rangle}\sqrt E\)</span>, so
+<span class="math inline">\(d^2\le\langle f,G_\tau
+f\rangle/(2m\kappa)=\mathcal K_\tau/\kappa\)</span>. For <span
+class="math inline">\(f\)</span> of one sign take <span
+class="math inline">\(T\propto G_\tau f\)</span>, which has one sign
+while <span class="math inline">\(T&#39;&#39;\)</span> has the other, so
+the interior weights and the <span class="math inline">\(S_j\)</span>
+have opposite signs throughout and the dense balanced construction of
+Theorem 2 applies.</p></li>
+<li><p>Theorem P1 with a single step is the chord, whose phase is <span
+class="math inline">\(\theta_1=\mathcal K_\tau/\hbar\)</span>. Equality
+of the optimized mark information uses the one-sign attainability
+condition in (b); for sign-changing <span
+class="math inline">\(f\)</span> only the upper bound is asserted. <span
+class="math inline">\(\square\)</span></p></li>
+</ol>
+<p>The two legs of the programme are governed by one functional of the
+force history. <span class="math inline">\(\mathcal K_\tau\)</span> is
+what Newton’s refinement removes: it is the kinetic action of the motion
+relative to its chord, and for a constant force it is the chord’s
+segment times <span class="math inline">\(F/2v\)</span>. Planck’s
+constant converts it into the phase by which the motion differs from its
+inscribed polygon, a c-number that no preparation of the body moves; the
+mark cost converts it into the largest statistical distance any record
+of the motion can reach within the Gaussian model of marks. At <span
+class="math inline">\(\kappa=\hbar/2\)</span> the optimized second
+quantity is exactly twice the first for the one-sign force family; the
+general statement is an upper bound. The two legs stand on different
+footing: the phase is exact and uses the Weyl relations alone, while the
+mark bound holds inside a linear Gaussian model with the trade-off <span
+class="math inline">\(\delta\Delta\ge\kappa\)</span>, a model that
+squeezing and grid probes leave, as the <a
+href="record-distance-path-length.html#recoil-only-bound-for-arbitrary-probe-states">recoil
+note</a> records. The <span class="math inline">\(24\)</span> in Theorem
+P1’s <span class="math inline">\(F^2\tau^3/24m\)</span> and in the sharp
+bound <span class="math inline">\(d^2\le F^2\tau^3/24m\kappa\)</span> of
+the paper’s Theorem 2 is one integral, <span class="math inline">\(\iint
+G_\tau=\tau^3/12\)</span>, multiplied by <span
+class="math inline">\(F^2/2m\)</span>.</p>
+<h2 id="consequence-for-state">Consequence for STATE</h2>
+<p>Cut energy, Weyl phase and Gaussian information share an exact
+functional, while their physical premises remain distinct. A cut-share
+floor differs from a cell-action floor by <span
+class="math inline">\(3s(1-s)\)</span>; controlled-pass resources and
+Gaussian-mark availability must accompany any resolution claim. Newton’s
+fits supply source evidence for a conditional classical phase count, not
+a derivation of the Weyl relations or physical <span
+class="math inline">\(\hbar\)</span>. The independent positive-action
+question remains open. Historical cut schedules retain their own scripts
+and edition links; their convergence is not evidence of transmission or
+of least magnitudes.</p>
 
 </main>
 <footer class="site"><div class="wrap">

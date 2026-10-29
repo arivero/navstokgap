@@ -2,13 +2,16 @@
 $if(unicode-cjk)$
 \usepackage{fontspec}
 \setmainfont{Noto Serif CJK SC}[ItalicFeatures={FakeSlant=0.2}]
+$if(cjk-upper)$
 \newfontfamily\cjkupperfont{HanaMinB}
 \usepackage{newunicodechar}
 \newunicodechar{𣃈}{{\cjkupperfont\symbol{"230C8}}}
+$endif$
 $else$
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
+\DeclareUnicodeCharacter{1E93}{\d{z}}
 $endif$
 \usepackage{amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}

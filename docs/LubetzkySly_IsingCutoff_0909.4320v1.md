@@ -24,7 +24,7 @@
 The source's reduced coupling $\beta$ is our $b$. Restoring the rate in
 $Q_a=aQ_1$ gives C124's $a[1-\tanh(2b)]$. The source's external field $h=0$
 is unrelated to an action constant. See [B73](../references/batches/B73.md)
-and [the foundational assessment](../notes/ising-foundational-value.md).
+and [the foundational assessment](../notes/interacting-ising-gap.md#volume-coupling-global-mixing-and-physical-limits).
 
 ## Coverage and archive
 

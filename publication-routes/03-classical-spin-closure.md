@@ -16,7 +16,7 @@ C125, C127 and C128 fit together into a coherent argument:
 4. No finite enlargement of the retained observables repairs exact evolution
    for all admitted preparations on any nonzero time interval.
 
-The [explicit two-spin example](../notes/hamiltonian-moment-descent.md) makes
+The [explicit two-spin example](../notes/classical-orientation-closure.md#a-complete-classical-interaction-fails-moment-descent) makes
 the distinction tangible: reversibility of the underlying mechanics and
 well-defined evolution of the reduced state are separate requirements.
 The initial construction is in
@@ -43,7 +43,7 @@ reconstruction theorem. The repository's audits are
 [B69](../references/batches/B69.md), [B70](../references/batches/B70.md) and
 [B72](../references/batches/B72.md).
 
-The [finite-enlargement proof](../notes/hamiltonian-finite-closure.md) is now
+The [finite-enlargement proof](../notes/classical-orientation-closure.md#no-finite-observable-enlargement-repairs-this-interaction) is now
 complete (C128/B74), including nonlinear updates of finite expectation vectors.
 The standalone synthesis joins C125–C128 with a claim-to-source map.
 Its contribution must be assessed against

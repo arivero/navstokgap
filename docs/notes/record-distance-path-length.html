@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The record&#x27;s distance is a path length</title>
+<title>Quantum record bounds: aperture, disturbance and retained resources</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,406 +79,411 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>The record’s distance is a path length</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/record-distance-path-length.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/record-distance-path-length.pdf">PDF</a></p><p>Three results that close STATE’s next items 1 and 2 of
-2026-09-23.</p>
-<p><strong>The single-shot constant for every protocol.</strong> Every
-protocol theorem of the programme — the aperture bound of the <a
-href="planck-gap-probabilistic.html">probabilistic note</a>, the recoil
-bound of the <a href="record-costs-recoil.html">recoil note</a>, the
-disturbance bound of the <a
-href="record-costs-disturbance.html">disturbance note</a> — holds with
-<span class="math inline">\(\arcsin(1-2\epsilon)\)</span> in place of
-<span class="math inline">\(1-2\epsilon\)</span> (Theorem P). Since
-<span
-class="math inline">\(\arcsin(1-2\epsilon)=\arccos(2\sqrt{\epsilon(1-\epsilon)})\)</span>,
-this is the sharp single-shot constant of Theorem 1 of the probabilistic
-note, so the gap between the single-shot and protocol forms is closed,
-and at certain decision the recoil bound reads</p>
-<p><span class="math display">\[s\sum_j\Delta_j\ \ge\ 4\pi\hbar=2h
-.\]</span></p>
-<p><strong>The aperture bound in its kick form.</strong> For every
-protocol of any instruments, with the same preparation under both
-hypotheses,</p>
-<p><span class="math display">\[\hbar\arcsin(1-2\epsilon)\ \le\
-\int_0^\tau|f(t)|\,L(t)\,dt ,\]</span></p>
-<p>with <span class="math inline">\(L(t)\)</span> the body’s position
-spread at time <span class="math inline">\(t\)</span> (Theorem K). A
-force is a succession of impulses, and an impulse is registered only
-through the position spread it acts on. The <span
-class="math inline">\((L,P)\)</span> form of the probabilistic note
-follows because free motion spreads position at the rate <span
-class="math inline">\(P/m\)</span>, and the two-packet preparation
-saturates the kick form exactly as <span
-class="math inline">\(\epsilon\to0\)</span>.</p>
-<p><strong>One accounting.</strong> The aperture bound pays for the
-force at the body, the disturbance bound pays for it at the marks. Any
-split of the force between the two gives a valid bound (Theorem M), and
-for von Neumann marks and a force of one sign the best split is
-pointwise:</p>
-<p><span class="math display">\[\hbar\arcsin(1-2\epsilon)\ \le\
-\int_0^\tau|f(u)|\,\min\bigl(L(u),R(u)\bigr)\,du,\qquad
-R(u)=\frac1m\sum_j\Delta_j\,G_\tau(t_j,u),\]</span></p>
-<p>with <span class="math inline">\(G_\tau\)</span> the Dirichlet
-Green’s function of the interval. <span
-class="math inline">\(R(u)\)</span> is the <strong>recoil
-length</strong>: the marks’ recoil spreads weighted by the displacement
-each one would produce at time <span class="math inline">\(u\)</span>
-relative to the chord pinned at the ends, summed, which is a length (an
-upper bound on the spread those recoils produce, since independent
-recoils add in quadrature). So the force is paid in length, at every
-moment the smaller of the body’s spread and the marks’ recoil length
-(Corollary M1).</p>
-<p><em>Prior art.</em> Lemma 1 is the mixed-state Mandelstam–Tamm bound
-in the Bures angle (Uhlmann, <a
-href="https://doi.org/10.1016/0375-9601(92)90555-Z">Phys. Lett. A
-<strong>161</strong>, 329, 1992</a>; Anandan and Aharonov, <a
-href="https://doi.org/10.1103/PhysRevLett.65.1697">PRL
-<strong>65</strong>, 1697, 1990</a>); statistical distance as a path
-length is Wootters’s (<a
-href="https://doi.org/10.1103/PhysRevD.23.357">PRD <strong>23</strong>,
-357, 1981</a>) and Braunstein and Caves’s (<a
-href="https://doi.org/10.1103/PhysRevLett.72.3439">PRL
-<strong>72</strong>, 3439, 1994</a>); the hybrid chain is the hybrid
-argument of Bennett, Bernstein, Brassard and Vazirani (<a
-href="https://doi.org/10.1137/S0097539796300933">SIAM J. Comput.
-<strong>26</strong>, 1510, 1997</a>); Bures-angle speed limits for
-general processes are those of Taddei and coauthors (<a
-href="https://doi.org/10.1103/PhysRevLett.110.050402">PRL
-<strong>110</strong>, 050402, 2013</a>); and the position-spread form of
-force sensitivity is the waveform estimation limit of Tsang, Wiseman and
-Caves (<a href="https://doi.org/10.1103/PhysRevLett.106.090401">PRL
-<strong>106</strong>, 090401, 2011</a>); all metadata. New here are the
-split accounting of Theorem M and the recoil length of Corollary M1.
-Exploratory; no ledger promotion.</p>
-<h2 id="the-bures-angle">1. The Bures angle</h2>
-<p>For density operators <span
-class="math inline">\(\rho,\sigma\)</span> let <span
-class="math inline">\(F(\rho,\sigma)=\operatorname{Tr}|\sqrt\rho\sqrt\sigma|\)</span>
-be the root fidelity and <span
-class="math inline">\(A(\rho,\sigma)=\arccos
-F(\rho,\sigma)\in[0,\pi/2]\)</span> the Bures angle. Four standard facts
-are used.</p>
-<ol type="1">
-<li><span class="math inline">\(A\)</span> is a metric on states: it
-obeys the triangle inequality.</li>
-<li><span class="math inline">\(A\)</span> does not increase under any
-channel, measurements and classical post-processing included
-(monotonicity of the fidelity).</li>
-<li><span
-class="math inline">\(F(\rho,\sigma)=\max|\langle\psi|\phi\rangle|\)</span>
-over purifications (Uhlmann, <a
-href="https://doi.org/10.1016/0034-4877(76)90060-4">Rep. Math. Phys.
-<strong>9</strong>, 273, 1976</a>, metadata), so <span
-class="math inline">\(A(\rho,\sigma)\)</span> is at most the
-Fubini–Study angle between any two purifications.</li>
-<li><span class="math inline">\(\tfrac12\|\rho-\sigma\|_1\le\sin
-A(\rho,\sigma)\)</span> (Fuchs and van de Graaf, <a
-href="https://doi.org/10.1109/18.761271">IEEE Trans. Inf. Theory
-<strong>45</strong>, 1216, 1999</a>, metadata); for probability
-distributions this is the classical statement.</li>
-</ol>
-<p><strong>Lemma 1 (one unitary step).</strong> Let <span
-class="math inline">\(\rho\)</span> be a state of body, apparatus and a
-classical record register <span class="math inline">\(x\)</span>, <span
-class="math inline">\(\rho=\sum_xp_x|x\rangle\langle
-x|\otimes\rho_x\)</span>, and let <span
-class="math inline">\(V=\sum_x|x\rangle\langle x|\otimes V_x\)</span>
-with <span class="math inline">\(V_x=\mathcal
-T\exp(i\int_0^1K_x(u)\,du)\)</span>. Then <span
-class="math inline">\(A(\rho,V\rho V^\dagger)\le\sup_x\int_0^1\Delta
-K_x(u)\,du\)</span>, each spread taken in the state <span
-class="math inline">\(V_x(u)\rho_xV_x(u)^\dagger\)</span> along the
-path.</p>
-<p><em>Proof.</em> Square roots of block-diagonal operators are block
-diagonal, so <span class="math inline">\(F(\rho,V\rho
-V^\dagger)=\sum_xp_xF(\rho_x,V_x\rho_xV_x^\dagger)\)</span>, and <span
-class="math inline">\(\sum_xp_x\cos A_x\ge\cos\sup_xA_x\)</span>. For
-each block, purify <span class="math inline">\(\rho_x\)</span> to <span
-class="math inline">\(\psi_x\)</span>; by fact 3 the angle is at most
-the Fubini–Study length of the curve <span
-class="math inline">\(V_x(u)\psi_x\)</span>, whose speed is the spread
-of <span class="math inline">\(K_x(u)\)</span> in the current state, and
-that spread equals the spread in the mixed state it purifies. <span
-class="math inline">\(\square\)</span></p>
-<p>For a time-independent generator <span
-class="math inline">\(G\)</span> acting on the body, the bound is <span
-class="math inline">\(\sup_x\Delta_{\rho_x}G\)</span>, the spread in the
-body’s marginal.</p>
-<h2 id="theorem-p-the-single-shot-constant-for-every-protocol">2.
-Theorem P: the single-shot constant for every protocol</h2>
-<p><strong>Theorem P.</strong> In Theorem 2 of the probabilistic note,
-Theorem R and Corollary R1 of the recoil note, Theorem U and Corollary
-U1 of the disturbance note, and Theorems K and M below, the conclusion
-holds with <span class="math inline">\(\arcsin(1-2\epsilon)\)</span> in
-place of <span class="math inline">\(1-2\epsilon\)</span>.</p>
-<p><em>Proof.</em> Each proof builds a chain of hybrid processes <span
-class="math inline">\(H_0,\dots,H_n\)</span> joining the two hypotheses,
-in which consecutive hybrids apply the same channel before and after one
-step where they differ by a unitary. Replace the triangle inequality for
-total variation by fact 1, data processing by fact 2, and the per-step
-trace-distance bound by Lemma 1. This gives <span
-class="math inline">\(A(P_{\mathrm I},P_{\mathrm F})\le\Sigma\)</span>,
-the same sum <span class="math inline">\(\Sigma\)</span> of spreads over
-<span class="math inline">\(\hbar\)</span> that each proof obtains. A
-test with equal-prior error at most <span
-class="math inline">\(\epsilon\)</span> has <span
-class="math inline">\(\tfrac12\|P_{\mathrm I}-P_{\mathrm
-F}\|_1\ge1-2\epsilon\)</span>, so by fact 4 <span
-class="math inline">\(\sin A\ge1-2\epsilon\)</span>, hence <span
-class="math inline">\(\Sigma\ge A\ge\arcsin(1-2\epsilon)\)</span>. In
-the recoil theorem the two probe families are products, and the chain
-replaces one factor at a time. <span
-class="math inline">\(\square\)</span></p>
-<p>The constant is sharp in the single-shot and aperture forms. For a
-single shot it is Theorem 1 of the probabilistic note, the aperture
-bound’s protocol form is now the same inequality with the same constant,
-and the two-packet preparation attains the kick form as <span
-class="math inline">\(\epsilon\to0\)</span> (§3). The recoil and
-disturbance bounds are not shown attained: the best known recoil
-protocol sits a factor of about <span
-class="math inline">\(1.47\)</span> above the bound at five per cent
-error. At <span class="math inline">\(\epsilon\to0\)</span> the constant
-is <span class="math inline">\(\pi/2\)</span> where it was <span
-class="math inline">\(1\)</span>.</p>
-<h2 id="theorem-k-the-aperture-bound-in-its-kick-form">3. Theorem K: the
-aperture bound in its kick form</h2>
-<p>Write <span class="math inline">\(f(t)\)</span> for the force
-history, <span class="math inline">\(F\)</span>-hypothesis against free
-motion, with the same preparation <span
-class="math inline">\(\sigma\)</span> under both. Let <span
-class="math inline">\(L(t)\)</span> be the supremum of the body’s
-position spread <span class="math inline">\(\Delta\hat y\)</span> at
-time <span class="math inline">\(t\)</span>, in the laboratory frame,
-over the conditional states that can occur at time <span
-class="math inline">\(t\)</span> when the force acts on any initial part
-of the interval.</p>
-<p><strong>Theorem K.</strong> Every protocol of instruments, of any
-kind, adaptive or not, deciding at error <span
-class="math inline">\(\epsilon\)</span> satisfies <span
-class="math inline">\(\hbar\arcsin(1-2\epsilon)\le\int_0^\tau|f(t)|L(t)\,dt\)</span>.</p>
-<p><em>Proof.</em> Let hybrid <span
-class="math inline">\(H_{t^*}\)</span> apply the force on <span
-class="math inline">\([0,t^*]\)</span> and none afterwards, the marks
-unchanged; <span class="math inline">\(H_\tau\)</span> is <span
-class="math inline">\(\mathrm F\)</span> and <span
-class="math inline">\(H_0\)</span> is <span
-class="math inline">\(\mathrm I\)</span>. Take a partition containing
-the mark times. On a cell <span
-class="math inline">\([t,t+\delta]\)</span> free of marks, <span
-class="math inline">\(H_{t+\delta}\)</span> and <span
-class="math inline">\(H_t\)</span> agree up to <span
-class="math inline">\(t\)</span> and after <span
-class="math inline">\(t+\delta\)</span>, and differ by the forced
-evolution over the cell, which for linear dynamics is the free evolution
-followed by the translation by the displacement the force produces from
-rest, <span
-class="math inline">\((\int_t^{t+\delta}(t+\delta-s)f\,ds/m,\
-\int_t^{t+\delta}f\,ds)\)</span>. Its generator has spread at most <span
-class="math inline">\(|\int_t^{t+\delta}f|\,\Delta\hat
-y+O(\delta^2)\Delta\hat p\)</span> in the state it acts on. Lemma 1 and
-Theorem P’s chain give <span class="math inline">\(\hbar A\le\sum_{\rm
-cells}|\int f|\,L+O(\delta)\sup\Delta\hat p\)</span>, and refining the
-partition gives the integral when the momentum spread of the chain’s
-states is bounded. If it is infinite for some conditional state on some
-cell, free evolution makes that state’s position spread infinite at
-every later time of the cell, so <span
-class="math inline">\(L=\infty\)</span> on a set of positive measure and
-the theorem holds vacuously. <span
-class="math inline">\(\square\)</span></p>
-<p><strong>Corollary K1 (the aperture form).</strong> If the conditional
-states after each mark, and at <span class="math inline">\(t=0\)</span>,
-have position spread at most <span class="math inline">\(L\)</span> and
-momentum spread at most <span class="math inline">\(P\)</span>, then
-between marks the spread grows at most linearly, <span
-class="math inline">\(L(t)\le L+P(t-t_j)/m\)</span>, because a c-number
-force translates and free motion shears. For the constant force,</p>
-<p><span class="math display">\[F\tau L+\frac{F\tau^2}{2m}P\ \ge\
-\hbar\arcsin(1-2\epsilon),\]</span></p>
-<p>and with marks every <span class="math inline">\(\delta t\)</span>
-the second term shrinks to at most <span
-class="math inline">\(F\tau\,\delta t\,P/2m\)</span>. <span
-class="math inline">\(\square\)</span></p>
-<p>This is Theorem 2 of the probabilistic note with the sharp constant,
-and it holds under either reading of that note’s aperture. With spreads
-bounded in the interaction picture, <span
-class="math inline">\(\Delta(\hat y-\hat pt/m)\le L\)</span>, the
-laboratory spread is at most <span
-class="math inline">\(L+Pt/m\)</span>, and the same integral
-results.</p>
-<p><strong>Saturation.</strong> The two-packet preparation of the
-probabilistic note, separation <span
-class="math inline">\(\pi\hbar/(F\tau)\)</span>, has position spread
-<span class="math inline">\(\pi\hbar/(2F\tau)\)</span> up to a relative
-correction of order <span class="math inline">\(\sqrt{\tau\Delta
-E/\hbar}\)</span> from spreading. So <span
-class="math inline">\(\int_0^\tau F\,L\,dt\to\pi\hbar/2\)</span> as
-<span class="math inline">\(\tau\Delta E\to0\)</span>, while its error
-probability tends to zero and <span
-class="math inline">\(\arcsin(1-2\epsilon)\to\pi/2\)</span>. The kick
-form is attained exactly in that limit.</p>
-<h2 id="theorem-m-one-accounting">4. Theorem M: one accounting</h2>
-<p><strong>Theorem M.</strong> Split the force as <span
-class="math inline">\(f=g+h\)</span>, and let <span
-class="math inline">\(c\)</span> be any function on <span
-class="math inline">\([0,\tau]\)</span> with <span
-class="math inline">\(c&#39;&#39;=g/m\)</span>. For every protocol of
-instruments deciding at error <span
-class="math inline">\(\epsilon\)</span> whatever the body’s initial
-state under each hypothesis (the composite requirement of Theorem U;
-with the same initial state assumed under both, the chain’s mixed pair
-would only give <span
-class="math inline">\(\arcsin(1-4\epsilon)\)</span>),</p>
-<p><span class="math display">\[\hbar\arcsin(1-2\epsilon)\ \le\
-\int_0^\tau|h(t)|\,L(t)\,dt
-+\sum_j\sup\Delta\bigl(c(t_j)\hat D_j-mc&#39;(t_j)\hat
-X_j\bigr),\]</span></p>
-<p>with <span class="math inline">\(\hat D_j,\hat X_j\)</span> the
-disturbances of mark <span class="math inline">\(j\)</span> as in the
-disturbance note, and <span class="math inline">\(L(t)\)</span> taken
-over the states of the chain below.</p>
-<p><em>Proof.</em> Take the pair of initial states <span
-class="math inline">\(\sigma\)</span> under <span
-class="math inline">\(\mathrm I\)</span> and <span
-class="math inline">\(T_c(0)\sigma\)</span> under <span
-class="math inline">\(\mathrm F\)</span>, <span
-class="math inline">\(T_c(t)\)</span> the translation by <span
-class="math inline">\((c(t),mc&#39;(t))\)</span>. The chain has two
-legs. First, starting from the process with force <span
-class="math inline">\(f\)</span> from <span
-class="math inline">\(T_c(0)\sigma\)</span>, switch off <span
-class="math inline">\(h\)</span> cell by cell as in Theorem K, paying
-<span class="math inline">\(\int|h|L/\hbar\)</span>; this ends at the
-process with force <span class="math inline">\(g\)</span> from <span
-class="math inline">\(T_c(0)\sigma\)</span>. Since <span
-class="math inline">\(c&#39;&#39;=g/m\)</span>, the process with force
-<span class="math inline">\(g\)</span> from <span
-class="math inline">\(T_c(0)\sigma\)</span> is the free process from
-<span class="math inline">\(\sigma\)</span> translated by <span
-class="math inline">\(T_c(t)\)</span> between marks, which is the
-setting of Theorem U; its chain reaches the free process from <span
-class="math inline">\(\sigma\)</span> and pays the second sum. Lemma 1
-bounds every step and fact 1 adds the legs. <span
-class="math inline">\(\square\)</span></p>
-<p>With <span class="math inline">\(h=f\)</span> and <span
-class="math inline">\(c=0\)</span> it is Theorem K; with <span
-class="math inline">\(h=0\)</span> and <span
-class="math inline">\(c=P-a-bt\)</span> it is Theorem U. The theorem
-reads as a transport of the offset between the hypotheses. A free line
-of offset is absorbed in the initial state at no cost, curvature carried
-through a mark costs that mark’s disturbance weighted by the offset it
-meets, and force removed at the body costs impulse times position
-spread. The record’s Bures distance is at most the length of any such
-transport, and a protocol escapes the floor only if at every moment the
-body is spread, or the marks disturb, enough to cover the force acting
-then.</p>
-<p><strong>Corollary M1 (the force is paid in length).</strong> For von
-Neumann marks with recoil spreads <span
-class="math inline">\(\Delta_j\)</span> and a force of one sign, take
-<span class="math inline">\(g=\chi f\)</span> with <span
-class="math inline">\(0\le\chi\le1\)</span> and <span
-class="math inline">\(c\)</span> the solution vanishing at <span
-class="math inline">\(0\)</span> and <span
-class="math inline">\(\tau\)</span>, <span
-class="math inline">\(c(t)=-\frac1m\int_0^\tau
-G_\tau(t,u)g(u)\,du\)</span>, <span
-class="math inline">\(G_\tau(t,u)=\min(t,u)(\tau-\max(t,u))/\tau\)</span>.
-Then <span
-class="math inline">\(\sum_j\Delta_j|c(t_j)|=\int\chi|f|R\)</span>, and
-minimizing over <span class="math inline">\(\chi\)</span> pointwise,
-which is legitimate because for von Neumann marks the chain’s
-conditional spreads do not depend on <span
-class="math inline">\(\chi\)</span>,</p>
-<p><span class="math display">\[\hbar\arcsin(1-2\epsilon)\ \le\
-\int_0^\tau|f(u)|\min\bigl(L(u),R(u)\bigr)\,du,
-\qquad R(u)=\frac1m\sum_j\Delta_jG_\tau(t_j,u).
-\qquad\square\]</span></p>
-<p>A mark at <span class="math inline">\(0\)</span> or at <span
-class="math inline">\(\tau\)</span> contributes nothing to <span
-class="math inline">\(R\)</span>, whatever its recoil, since <span
-class="math inline">\(G_\tau\)</span> vanishes there; its reading still
-fixes the chord. For the three marks of Proposition D of the <a
-href="mark-cost-and-statistical-floor.html">mark-cost note</a>, outer
-marks sharp, <span
-class="math inline">\(R(u)=\Delta_2\min(u,\tau-u)/2m\)</span>, a tent of
-height <span class="math inline">\(\Delta_2\tau/4m\)</span>. The pure
-recoil bound is <span class="math inline">\(F\int
-R=\Delta_2s/4\)</span>; the pure aperture bound is <span
-class="math inline">\(F\int L\)</span>. The recoil length vanishes at
-the ends and peaks in the middle, so the mixed bound pays at the marks
-near the ends and at the body wherever the body is more compact than
-<span class="math inline">\(R\)</span>. Whenever <span
-class="math inline">\(L\)</span> and <span
-class="math inline">\(R\)</span> cross, <span class="math inline">\(\int
-F\min(L,R)\)</span> is strictly below both pure costs, and the necessary
-condition it states is strictly stronger than either.</p>
-<h2 id="the-numbers">5. The numbers</h2>
-<table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Bound</th>
-<th>Old constant</th>
-<th>Sharp constant</th>
-<th>At <span class="math inline">\(\epsilon=0.05\)</span></th>
-<th>Certain decision</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Recoil, <span
-class="math inline">\(s\sum_j\Delta_j/\hbar\ge\)</span></td>
-<td><span class="math inline">\(8(1-2\epsilon)\)</span></td>
-<td><span class="math inline">\(8\arcsin(1-2\epsilon)\)</span></td>
-<td><span class="math inline">\(8.96\)</span></td>
-<td><span class="math inline">\(4\pi\)</span>, i.e. <span
-class="math inline">\(s\sum\Delta_j\ge2h\)</span></td>
-</tr>
-<tr class="even">
-<td>Disturbance, <span class="math inline">\(\bigl(\frac
-s8\sum\Delta(\hat D_j)+\frac J2\sum\Delta(\hat
-X_j)\bigr)/\hbar\ge\)</span></td>
-<td><span class="math inline">\(1-2\epsilon\)</span></td>
-<td><span class="math inline">\(\arcsin(1-2\epsilon)\)</span></td>
-<td><span class="math inline">\(1.12\)</span></td>
-<td><span class="math inline">\(\pi/2\)</span></td>
-</tr>
-<tr class="odd">
-<td>Aperture, <span class="math inline">\(\bigl(F\tau
-L+\frac{F\tau^2}{2m}P\bigr)/\hbar\ge\)</span></td>
-<td><span class="math inline">\(1-2\epsilon\)</span></td>
-<td><span class="math inline">\(\arcsin(1-2\epsilon)\)</span></td>
-<td><span class="math inline">\(1.12\)</span></td>
-<td><span class="math inline">\(\pi/2\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>The balanced aperture of minimal area now gives <span
-class="math inline">\(\tau\Delta
-E\ge\frac12\hbar\arcsin^2(1-2\epsilon)\)</span>, which is <span
-class="math inline">\(\pi^2\hbar/8\)</span> at certain decision. The
-three-mark protocol with the best Gaussian probe sits within <span
-class="math inline">\(z_{1-\epsilon}/\arcsin(1-2\epsilon)\)</span> of
-the recoil bound, about <span class="math inline">\(1.47\)</span> at
-five per cent error, at every recoil (recoil note, §4).</p>
-<h2 id="consequence-for-state">6. Consequence for STATE</h2>
-<p>Items 1 and 2 of STATE’s queue are settled, apart from the worst-case
-interval <span class="math inline">\([9,36]\)</span> of the derivation
-note, which concerns a framework without quantum instances. Every
-protocol theorem carries the sharp single-shot constant; the aperture
-bound is the kick form <span
-class="math inline">\(\int|f|L\ge\hbar\arcsin(1-2\epsilon)\)</span>; and
-one accounting, Theorem M, contains the aperture and disturbance bounds
-and interpolates between them, with the pointwise form <span
-class="math inline">\(\int|f|\min(L,R)\)</span> for von Neumann marks.
-The remaining modern item is whether the minimum over splits and lines
-in Theorem M is attained by some protocol, which would make it the exact
-floor.</p>
+<h1>Quantum record bounds: aperture, disturbance and retained
+resources</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/record-distance-path-length.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/record-distance-path-length.pdf">PDF</a></p><p>With supplied canonical quantum kinematics at physical <span
+class="math inline">\(\hbar&gt;0\)</span>, a record that distinguishes
+constant force from free motion with equal-prior error <span
+class="math inline">\(\epsilon&lt;1/2\)</span> must pay in explicitly
+bounded resources. For the same initial preparation, the aperture bound
+is</p>
+<p><span class="math display">\[JL+sP\ge\hbar\theta_\epsilon,\qquad
+J=F\tau,\quad s=F\tau^2/(2m),\quad
+\theta_\epsilon=\arcsin(1-2\epsilon).\]</span></p>
+<p>For a test required to work for every pair of initial states, a
+different bound charges the marks:</p>
+<p><span class="math display">\[\frac s8\sum_j\sup\Delta\hat D_j+
+\frac J2\sum_j\sup\Delta\hat X_j\ge\hbar\theta_\epsilon.\]</span></p>
+<p>The suprema must cover the <strong>conditional and interpolating
+states of the proof</strong>, including its hybrid protocols. Bounds on
+the two physical endpoint experiments alone are insufficient. The two
+preparation requirements also differ. A separated-packet counterexample
+defeats any preparation-independent Galileo action floor; non-Gaussian
+grid probes defeat the Gaussian error law while paying increasing
+recoil. These countermodels are part of the result.</p>
+<p>This treatment integrates the probabilistic, recoil,
+general-disturbance and Bures-path arguments. The Gaussian and
+hard-width theorems with their separate assumptions are in <a
+href="mark-cost-and-statistical-floor.html">marking models</a>.
+Historical model/coordinator checks are internal, not independent peer
+review; no literature novelty is asserted for this assembly.</p>
+<span id="the-bures-angle"></span><span id="theorem-p-the-single-shot-constant-for-every-protocol"></span><h2 id="one-distance-lemma-and-the-exact-single-shot-constant">One
+distance lemma and the exact single-shot constant</h2>
+<p>For density matrices let <span
+class="math inline">\(F_0(\rho,\sigma)=\operatorname{Tr}|\sqrt\rho\sqrt\sigma|\)</span>
+be root fidelity and <span class="math inline">\(A(\rho,\sigma)=\arccos
+F_0\in[0,\pi/2]\)</span> the Bures angle. We use its triangle
+inequality, contraction under channels, Uhlmann purification, and <span
+class="math inline">\(\tfrac12\|\rho-\sigma\|_1\le\sin A\)</span>.
+Consequently a record test with error at most <span
+class="math inline">\(\epsilon\)</span> requires <span
+class="math inline">\(A\ge\theta_\epsilon\)</span>, where</p>
+<p><span
+class="math display">\[\theta_\epsilon=\arccos(2\sqrt{\epsilon(1-\epsilon)})
+=\arcsin(1-2\epsilon),\qquad\theta_0=\pi/2.\]</span></p>
+<p>If a unitary path has generator <span
+class="math inline">\(K(u)\)</span> and differentiable purification, its
+Fubini–Study speed is <span class="math inline">\(\Delta K(u)\)</span>,
+hence</p>
+<p><span class="math display">\[A(\rho,V\rho
+V^\dagger)\le\int_0^1\Delta_{V(u)\rho V(u)^\dagger}K(u)du.\]</span></p>
+<p>For an adaptive classical register <span
+class="math inline">\(x\)</span>, the states and controlled unitary are
+block diagonal. Fidelity is <span
+class="math inline">\(\sum_xp_xF_{0,x}\)</span>, which is at least <span
+class="math inline">\(\cos(\sup_xA_x)\)</span>; the same bound with a
+supremum over conditional blocks therefore holds. Integrals replace sums
+for continuous records. A hybrid chain differing in one unitary step at
+a time is bounded by the sum of these lengths, since its common
+prefix/remainder channels contract <span
+class="math inline">\(A\)</span>. Purifying a body–apparatus state
+leaves generator moments equal to those in the body’s marginal when the
+generator acts on the body alone.</p>
+<p>All unbounded-generator uses below assume the indicated paths
+preserve the required domains and have differentiable purifications with
+integrable variance bounds. Smooth finite-moment states on a common
+invariant core suffice for the written argument; extensions require the
+corresponding controlled limits. Infinite resource suprema give vacuous
+bounds. Merely calling an arbitrary unitary an instrument does not
+discharge domain or hybrid-state hypotheses.</p>
+<p>Sources (metadata unless indicated): Uhlmann <a
+href="https://doi.org/10.1016/0034-4877(76)90060-4">1976</a> and <a
+href="https://doi.org/10.1016/0375-9601(92)90555-Z">1992</a>,
+Anandan–Aharonov <a
+href="https://doi.org/10.1103/PhysRevLett.65.1697">1990</a>, Fuchs–van
+de Graaf <a href="https://doi.org/10.1109/18.761271">1999</a>, Wootters
+<a href="https://doi.org/10.1103/PhysRevD.23.357">1981</a>,
+Braunstein–Caves <a
+href="https://doi.org/10.1103/PhysRevLett.72.3439">1994</a>, and the
+hybrid-method comparison of Bennett et al. <a
+href="https://doi.org/10.1137/S0097539796300933">1997</a>.</p>
+<span id="theorem-k-the-aperture-bound-in-its-kick-form"></span><h2 id="single-shot-displacement-and-the-aperture-theorem">Single-shot
+displacement and the aperture theorem</h2>
+<p>The body has <span class="math inline">\([\hat y,\hat
+p]=i\hbar\)</span>, mass <span class="math inline">\(m&gt;0\)</span>,
+and hypotheses <span class="math inline">\(H_I=\hat p^2/(2m)\)</span>,
+<span class="math inline">\(H_F=H_I-F\hat y\)</span>, <span
+class="math inline">\(F&gt;0\)</span>. With</p>
+<p><span class="math display">\[D(a,b)=e^{i(b\hat y-a\hat
+p)/\hbar},\qquad
+D^\dagger\hat yD=\hat y+a,\quad D^\dagger\hat pD=\hat p+b,\]</span></p>
+<p>linear dynamics gives</p>
+<p><span class="math display">\[U_I(t)^\dagger
+U_F(t)=e^{i\varphi(t)}D(\alpha(t),\beta(t)),\qquad
+\alpha(t)=-Ft^2/(2m),\quad\beta(t)=Ft.\]</span></p>
+<p>Indeed forced evolution is <span
+class="math inline">\(D(Ft^2/(2m),Ft)U_I\)</span> up to scalar phase,
+and free conjugation maps <span class="math inline">\((a,b)\)</span> to
+<span class="math inline">\((a-bt/m,b)\)</span>. Thus one undisturbed
+shot from the same preparation distinguishes it from its displacement.
+The single unitary generator has spread at most <span
+class="math inline">\((|\beta|\Delta y+|\alpha|\Delta p)/\hbar\)</span>.
+The distance lemma proves <span
+class="math inline">\(JL+sP\ge\hbar\theta_\epsilon\)</span> for
+position/momentum bounds <span class="math inline">\((L,P)\)</span> in
+that input state. For pure states this is equivalently Helstrom’s
+overlap criterion and Mandelstam–Tamm; purification gives the
+mixed-state bound.</p>
+<p>For a finite adaptive instrument protocol, use the free interaction
+picture. The force increments are displacements <span
+class="math inline">\(D(\Delta\alpha_r,\Delta\beta_r)\)</span> up to
+scalar phases. Replace them one at a time, keeping the outcome-dependent
+instruments and all memory registers. If the body marginals of
+<strong>all hybrid conditional states</strong> satisfy <span
+class="math inline">\(\Delta y\le L\)</span>, <span
+class="math inline">\(\Delta p\le P\)</span> in this picture, the
+distance lemma gives</p>
+<p><span class="math display">\[\hbar
+A(P_I,P_F)\le\sum_r(|\Delta\beta_r|L+|\Delta\alpha_r|P)
+=F\tau L+\frac{F\tau^2}{2m}P.\]</span></p>
+<p>Both displacement components are monotone, so the sums telescope
+independently of the instrument number, times and Kraus rank. This
+proves the stated aperture theorem for arbitrary memory and adaptive
+choices under its uniform resource and domain assumptions.</p>
+<p>For a general integrable force history <span
+class="math inline">\(f(t)\)</span> there is a laboratory-frame kick
+form. Let <span class="math inline">\(L(t)\)</span> bound the body’s
+position spread over all conditional states in the chain that turns the
+force off after any intermediate time. Assume the
+finite-moment/partition limits used by the chain are controlled.
+Then</p>
+<p><span
+class="math display">\[\boxed{\hbar\theta_\epsilon\le\int_0^\tau|f(t)|L(t)dt.}\]</span></p>
+<p>On a mark-free cell, forced versus free evolution differs by a
+translation with momentum component <span class="math inline">\(\int
+f\)</span> and position component <span
+class="math inline">\(m^{-1}\int(t+\delta-u)f(u)du\)</span>. Its angle
+cost is bounded by <span class="math inline">\(|\int f|\Delta
+y/\hbar+O(\delta^2)\Delta p/\hbar\)</span> for bounded forces. Summing
+and refining gives the integral; approximation extends to controlled
+integrable histories. The supplied uniform envelopes are those of this
+chain. If the laboratory marginals after each mark and in its hybrids
+obey <span class="math inline">\((L,P)\)</span>, then between marks
+<span class="math inline">\(L(t)\le L+P(t-t_j)/m\)</span>. For constant
+force this again yields <span class="math inline">\(F\tau
+L+F\tau^2P/(2m)\ge\hbar\theta_\epsilon\)</span>; a maximum mark
+separation <span class="math inline">\(\delta t\)</span> improves the
+second term to <span class="math inline">\(F\tau\delta t
+P/(2m)\)</span>. Laboratory and interaction-picture aperture conditions
+are two sufficient hypotheses and must not be conflated.</p>
+<p>At <span class="math inline">\(A_0=LP\)</span> and <span
+class="math inline">\(r=L/\sqrt{\tau A_0/(2m)}\)</span>, the aperture
+inequality is</p>
+<p><span class="math display">\[\tau\Delta
+E\ge\frac{2m\theta_\epsilon^2\hbar^2\tau}{(2mL+\tau P)^2}
+=\frac{\theta_\epsilon^2\hbar^2}{A_0(r+r^{-1})^2}.\]</span></p>
+<p>At fixed <span class="math inline">\(A_0\)</span> this lower bound is
+<strong>largest</strong> at the balanced shape <span
+class="math inline">\(r=1\)</span>, and tends to zero under unbounded
+squeezing. The minimum-uncertainty balanced aperture <span
+class="math inline">\(A_0=\hbar/2\)</span> gives <span
+class="math inline">\(\tau\Delta E\ge\hbar\theta_\epsilon^2/2\)</span>,
+which is <span class="math inline">\(\pi^2\hbar/8\)</span> at zero
+error. Area alone does not fix a floor.</p>
+<h2 id="a-preparation-counterexample-with-growing-aperture">A
+preparation counterexample with growing aperture</h2>
+<p>Let <span class="math inline">\(a=F\tau^2/(2m)&gt;0\)</span>, <span
+class="math inline">\(b=F\tau&gt;0\)</span> and <span
+class="math inline">\(\eta=ab/\hbar=\tau\Delta E/\hbar&lt;1\)</span>.
+Choose a fixed real normalized <span class="math inline">\(\chi\)</span>
+supported on <span class="math inline">\([-1/2,1/2]\)</span> with <span
+class="math inline">\(\|\chi&#39;\|_2&lt;\infty\)</span>, and
+prepare</p>
+<p><span class="math display">\[\psi=\frac{\chi_++\chi_-}{\sqrt2},\qquad
+\chi_\pm(y)=w^{-1/2}\chi((y\mp d/2)/w),\qquad
+d=\pi\hbar/b,\quad w=\sqrt{a\hbar/b}.\]</span></p>
+<p>Here <span class="math inline">\(w/d=\sqrt\eta/\pi\)</span> and <span
+class="math inline">\(a/w=\sqrt\eta\)</span>. The packets and their
+cross-displacement overlaps are disjoint in the stated regime. Under
+<span class="math inline">\(D(a,b)\)</span> each same-packet
+contribution has phase <span class="math inline">\(e^{\pm
+ibd/(2\hbar)}\)</span>, whose leading terms cancel. Translation
+continuity and <span class="math inline">\(|e^{ix}-1|\le|x|\)</span>
+give the sufficient estimate</p>
+<p><span class="math display">\[|\langle\psi,D(a,b)\psi\rangle|
+\le(a/w)\|\chi&#39;\|_2+bw/\hbar
+=\sqrt\eta(\|\chi&#39;\|_2+1).\]</span></p>
+<p>For overlap modulus <span class="math inline">\(x\le1\)</span>, the
+exact Helstrom error is <span
+class="math inline">\(x^2/[2(1+\sqrt{1-x^2})]\le x^2/2\)</span>. Thus
+<span class="math inline">\(p_{\rm err}\le C\eta\)</span> with <span
+class="math inline">\(C=(\|\chi&#39;\|_2+1)^2/2\)</span>; this corrects
+the old erroneous upper constant <span
+class="math inline">\(x^2/4\)</span>. The position spread is of order
+<span class="math inline">\(d/2=\pi\hbar/(2F\tau)\)</span>, diverging as
+<span class="math inline">\(F\downarrow0\)</span> at fixed <span
+class="math inline">\(m,\tau\)</span>. Momentum spread is of order <span
+class="math inline">\(\hbar/w=\sqrt{2m\hbar/\tau}\)</span> and remains
+bounded in that family. The kick cost approaches <span
+class="math inline">\(\pi\hbar/2\)</span> as the action and error tend
+to zero. The example locates the missing uniform aperture; it neither
+excludes nor selects an action scale.</p>
+<h2 id="general-disturbance-theorem-with-an-unknown-preparation">General
+disturbance theorem with an unknown preparation</h2>
+<p>Now require the test’s equal-prior error to be at most <span
+class="math inline">\(\epsilon\)</span> for <strong>every pair</strong>
+of initial body states under the two hypotheses. Define</p>
+<p><span class="math display">\[\hat D_j=U_j^\dagger\hat pU_j-\hat
+p,\qquad
+\hat X_j=U_j^\dagger\hat yU_j-\hat y.\]</span></p>
+<p>The unitaries may involve body-dependent noise, quantum memory and
+adaptive control. For any line <span
+class="math inline">\(a+bt\)</span>, set <span
+class="math inline">\(c(t)=P(t)-a-bt\)</span> and <span
+class="math inline">\(w(t)=(c(t),mc&#39;(t))\)</span>, where <span
+class="math inline">\(mP&#39;&#39;=f\)</span> and <span
+class="math inline">\(P(0)=P&#39;(0)=0\)</span>. Translating the forced
+initial state by <span class="math inline">\(w(0)\)</span> makes its
+mark-free dynamics the free state’s translate by <span
+class="math inline">\(w(t)\)</span>.</p>
+<p><strong>Disturbance theorem.</strong> Under the distance lemma’s
+domain hypotheses,</p>
+<p><span class="math display">\[\hbar\theta_\epsilon\le
+\sum_j\sup\Delta\bigl(c(t_j)\hat D_j-mc&#39;(t_j)\hat
+X_j\bigr).\]</span></p>
+<p>The supremum covers the entering conditional states of the
+offset-removal hybrids and their translations by <span
+class="math inline">\(u w(t_j)\)</span>, <span
+class="math inline">\(0\le u\le1\)</span>.</p>
+<p><em>Proof.</em> A hybrid carries the force offset through the first
+<span class="math inline">\(j\)</span> marks, removes it immediately
+afterwards, then follows the free protocol. Consecutive hybrids differ
+at mark <span class="math inline">\(j\)</span> by <span
+class="math inline">\(E=T(w)^\dagger U_jT(w)U_j^\dagger\)</span>. Put
+<span class="math inline">\(G=(c\hat p-mc&#39;\hat y)/\hbar\)</span> and
+<span class="math inline">\(E(u)=e^{iuG}U_je^{-iuG}U_j^\dagger\)</span>.
+Its generator is <span
+class="math inline">\(K(u)=e^{iuG}(G-U_jGU_j^\dagger)e^{-iuG}\)</span>.
+Conjugating its current-state spread back to the entering translated
+state gives precisely the spread of</p>
+<p><span class="math display">\[U_j^\dagger GU_j-G=(c\hat
+D_j-mc&#39;\hat X_j)/\hbar.\]</span></p>
+<p>The Bures triangle inequality and common remainder channels add these
+costs; the chosen pair of initial states must meet the composite testing
+criterion. <span class="math inline">\(\square\)</span></p>
+<p>For constant force the best uniform affine approximation to <span
+class="math inline">\(P(t)=Ft^2/(2m)\)</span> is <span
+class="math inline">\(F(\tau t-\tau^2/8)/(2m)\)</span>. It gives <span
+class="math inline">\(|c|\le s/8\)</span> and <span
+class="math inline">\(m|c&#39;|\le J/2\)</span>. The variance seminorm
+proves the leading bound. This line optimizes the momentum term alone;
+joint optimization with position disturbance may use another line. A
+momentum-reading pulse <span class="math inline">\(U=e^{-i\mu\hat p\hat
+Q_A/\hbar}\)</span> has <span class="math inline">\(\hat D=0\)</span>,
+<span class="math inline">\(\hat X=\mu\hat Q_A\)</span> and pays in
+position disturbance. The product sagitta–momentum and impulse–position
+pairing is fixed by the displacement generator.</p>
+<p>These variances charge operators on particular states. They are not a
+claim that all complete records leave a classical random impulse
+unrecoverable. Physical finite-duration couplings require a controlled
+slicing limit; a formal subdivision alone does not establish that limit
+or a finite budget.</p>
+<h2 id="recoil-only-bound-for-arbitrary-probe-states">Recoil-only bound
+for arbitrary probe states</h2>
+<p>For momentum-transfer marks <span
+class="math inline">\(U_j=e^{-i\lambda_j\hat y\hat P_j/\hbar}\)</span>,
+write <span class="math inline">\(\hat N_j=\hat Q_j/\lambda_j\)</span>,
+<span class="math inline">\(\hat D_j=-\lambda_j\hat P_j\)</span> and
+<span class="math inline">\(\Delta_j=\Delta\hat D_j\)</span>. Their
+commuting Heisenberg readings are</p>
+<p><span class="math display">\[\hat R_j=\hat y+\hat p t_j/m+\theta
+P(t_j)
++\sum_{i&lt;j}(t_j-t_i)\hat D_i/m+\hat N_j.\]</span></p>
+<p>Translate the forced initial body by <span
+class="math inline">\((-a,-mb)\)</span>. Its record distribution is the
+free protocol’s record with each initial pointer translated by <span
+class="math inline">\(\lambda_jc_j\)</span>, <span
+class="math inline">\(c_j=P(t_j)-a-bt_j\)</span>: the pointer coordinate
+appears only in its own reading, and its translation fixes every recoil.
+Data processing and the distance lemma therefore prove</p>
+<p><span
+class="math display">\[\hbar\theta_\epsilon\le\inf_{a,b}\sum_j\Delta_j|P(t_j)-a-bt_j|.\]</span></p>
+<p>For product probes this is a factor-by-factor hybrid chain.
+Correlated probes use one unitary generated by <span
+class="math inline">\(\sum_j\lambda_jc_j\hat P_j\)</span> and <span
+class="math inline">\(\Delta(\sum A_j)\le\sum\Delta A_j\)</span>.
+Adaptive choices require uniform branch envelopes. The <a
+href="mark-cost-and-statistical-floor.html#quantum-probe-cost-and-body-independent-noise">body-independent-noise
+classification</a> extends the same argument even when position jumps
+occur: the recoil-generated translation changes <span
+class="math inline">\(\hat N_j\)</span> and commutes with both <span
+class="math inline">\(\hat D_j,\hat X_j\)</span>. For constant
+force,</p>
+<p><span
+class="math display">\[\boxed{s\sum_j\Delta_j\ge8\hbar\theta_\epsilon,}\]</span></p>
+<p>and for a general displacement the sagitta factor becomes <span
+class="math inline">\(E_1(P)=\inf_{a,b}\max|P-a-bt|\)</span>. This
+recoil-only statement is stronger than simply adding a
+position-disturbance charge for this special noise class.</p>
+<p>A three-mark Gaussian protocol with sharp outer marks has unbounded
+outer recoils, so its weighted bound uses the endpoint chord, not the
+displayed unweighted sum. With middle noise <span
+class="math inline">\(\hat S=\alpha\hat Q+\beta\hat P\)</span>, <span
+class="math inline">\(\alpha=2/\lambda\)</span>, <span
+class="math inline">\(\beta=\tau\lambda/(2m)\)</span>, Robertson at
+fixed recoil gives <span class="math inline">\(\Delta
+S\ge\hbar/\Delta_2\)</span>, attained by a suitable pure Gaussian. The
+test succeeds when <span
+class="math inline">\(s\Delta_2\ge4z_{1-\epsilon}\hbar\)</span>, hence
+the weighted cost is <span
+class="math inline">\(\Delta_2|c_2|=z_{1-\epsilon}\hbar\)</span>. Its
+ratio to the necessary bound is <span
+class="math inline">\(z_{1-\epsilon}/\theta_\epsilon\)</span> (about
+<span class="math inline">\(1.47\)</span> at five per cent error),
+diverging at zero error. General attainment is not proved.</p>
+<h2 id="a-non-gaussian-grid-defeats-the-gaussian-error-law">A
+non-Gaussian grid defeats the Gaussian error law</h2>
+<p>In that three-mark statistic, put <span class="math inline">\(\hat
+S=\alpha\hat Q+\beta\hat P\)</span>, <span
+class="math inline">\(\alpha\beta=\tau/m\)</span>. Real approximate grid
+wavefunctions with teeth of width <span class="math inline">\(w\)</span>
+under an envelope of width of order <span
+class="math inline">\(1/w\)</span> can have <span
+class="math inline">\(\operatorname{Cov}_{\rm sym}(Q,P)=0\)</span>, yet
+both stabilizer expectations approach one for</p>
+<p><span class="math display">\[S_1=e^{i\ell_Q\hat P/\hbar},\quad
+S_2=e^{i\ell_P\hat Q/\hbar},
+\quad\ell_Q\ell_P=2\pi\hbar,\quad\ell_P/\ell_Q=\alpha/\beta.\]</span></p>
+<p>The stabilizers commute. BCH gives <span
+class="math inline">\(S_1S_2=-e^{ic\hat S}\)</span>, <span
+class="math inline">\(c=\ell_P/(\hbar\alpha)\)</span>. Since <span
+class="math inline">\(\|(S_k-1)\psi\|^2=2(1-\operatorname{Re}\langle
+S_k\rangle)\to0\)</span>, <span class="math inline">\(e^{ic\hat
+S}\)</span> concentrates at <span class="math inline">\(-1\)</span>. The
+law of <span class="math inline">\(c\hat S\)</span> modulo <span
+class="math inline">\(2\pi\)</span> therefore concentrates at <span
+class="math inline">\(\pi\)</span>. Under the force the statistic shifts
+by <span class="math inline">\(d=F\tau^2/(4m)\)</span>, giving a
+distinct limiting modular point whenever</p>
+<p><span class="math display">\[d\notin\sigma\mathbb Z,\qquad
+\sigma=2\pi/c=\sqrt{2\pi\hbar\tau/m}.\]</span></p>
+<p>A modular test then has error tending to zero. For this real family
+the error–recoil correlation remains zero, while <span
+class="math inline">\(\Delta_2=\lambda\Delta P\to\infty\)</span> with
+momentum-envelope width of order <span
+class="math inline">\(\hbar/w\)</span>. At finite teeth the signal must
+remain separated from the modular lattice by more than the width. Thus
+zero correlation does not extend a Gaussian threshold to arbitrary
+states; the exact recoil bound is respected. GKP <a
+href="https://doi.org/10.1103/PhysRevA.64.012310">2001</a> and grid
+sensing <a href="https://doi.org/10.1103/PhysRevA.95.012305">2017</a>
+are metadata-level comparisons, not a priority claim for this
+application.</p>
+<span id="theorem-m-one-accounting"></span><h2 id="splitting-the-force-one-conditional-accounting">Splitting the
+force: one conditional accounting</h2>
+<p>Under the composite preparation requirement, split <span
+class="math inline">\(f=g+h\)</span> and choose <span
+class="math inline">\(c&#39;&#39;=g/m\)</span>. Switching off <span
+class="math inline">\(h\)</span> at the body and then transporting the
+<span class="math inline">\(g\)</span> offset through marks gives</p>
+<p><span
+class="math display">\[\hbar\theta_\epsilon\le\int_0^\tau|h(t)|L(t)dt
++\sum_j\sup\Delta(c(t_j)\hat D_j-mc&#39;(t_j)\hat X_j).\]</span></p>
+<p>The first leg is the kick chain and the second the disturbance chain;
+both use their actual common conditional-state envelopes. A
+same-preparation-only test does not automatically meet this composite
+criterion. A test uniform over same-preparation pairs bounds each
+individual hypothesis error by <span
+class="math inline">\(2\epsilon\)</span>, giving only <span
+class="math inline">\(\arcsin(\max\{0,1-4\epsilon\})\)</span> for an
+arbitrary mixed pair through that argument.</p>
+<p>For a force of one sign and recoil-only marks, take <span
+class="math inline">\(g=\chi f\)</span>, <span
+class="math inline">\(0\le\chi\le1\)</span>, and <span
+class="math inline">\(c\)</span> pinned at both endpoints. With the
+Dirichlet Green function,</p>
+<p><span
+class="math display">\[G_\tau(t,u)=\frac{\min(t,u)(\tau-\max(t,u))}{\tau},\qquad
+c(t)=-\frac1m\int G_\tau(t,u)g(u)du,\]</span> <span
+class="math display">\[R(u)=\frac1m\sum_j\Delta_jG_\tau(t_j,u).\]</span></p>
+<p>If <span class="math inline">\(L(u)\)</span> and <span
+class="math inline">\(\Delta_j\)</span> are <strong>common bounds
+uniform over the entire chosen split family and its hybrids</strong>,
+the two costs are <span class="math inline">\(\int|f|[(1-\chi)L+\chi
+R]\)</span>, and pointwise minimization proves</p>
+<p><span
+class="math display">\[\hbar\theta_\epsilon\le\int_0^\tau|f(u)|\min\{L(u),R(u)\}du.\]</span></p>
+<p>The former claim that conditional spreads are automatically
+independent of <span class="math inline">\(\chi\)</span> for every von
+Neumann protocol was too broad, particularly with outcome-dependent
+control. Uniform envelopes, or a separately proved covariance property,
+are required before this minimization. End marks give no <span
+class="math inline">\(R\)</span> contribution. A middle mark at <span
+class="math inline">\(\tau/2\)</span> gives <span
+class="math inline">\(R(u)=\Delta_2\min(u,\tau-u)/(2m)\)</span>, of
+height <span class="math inline">\(\Delta_2\tau/(4m)\)</span>; its pure
+recoil cost is <span class="math inline">\(\Delta_2s/4\)</span>. No
+optimal split or physical attainment theorem follows solely from this
+upper cost.</p>
+<span id="the-numbers"></span><h2 id="consequence-for-state">Consequence for STATE</h2>
+<p>The necessary quantum resource bounds retain their sharp single-shot
+angle constant and explicit assumptions on initial states, domains and
+hybrids. They permit classical limits and arbitrarily small Galileo
+actions when preparation aperture or probe recoil is allowed to grow.
+Gaussianity, correlation control and the composite nuisance criterion
+are additional premises. These supplied-<span
+class="math inline">\(\hbar\)</span> statements do not prove action
+necessity, universal scale identification or uniqueness of a quantum
+completion.</p>
 
 </main>
 <footer class="site"><div class="wrap">

@@ -3,7 +3,7 @@
 ## Decision and stop
 
 Target: determine whether the reversible microscopic spin interaction in
-`notes/hamiltonian-moment-descent.md` is a legitimate classical Hamiltonian
+`notes/classical-orientation-closure.md#a-complete-classical-interaction-fails-moment-descent` is a legitimate classical Hamiltonian
 mechanism and whether it descends to C125's retained first/cross moments.
 Stop: one primary source, one discovery query, selected material capped at
 four pages; method match and written proof review only.

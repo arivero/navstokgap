@@ -143,7 +143,7 @@ structure is what the small-volume spectrum organizes itself by.
 
 The structural results are group-independent and stand as written:
 
-- the seven closed routes of [the position note](mass-gap-position.md) §3,
+- the seven closed routes of [the position note](mass-gap-obligations-lattice.md#existing-estimates-and-examined-routes) §3,
   each closed by an argument that uses no property of the group beyond
   compactness and non-abelianness;
 - the moment hierarchy and the reduction of $m<\infty$ to one flowed
@@ -161,6 +161,6 @@ The structural results are group-independent and stand as written:
 Specializing to $SU(3)$ fixes every constant and shortens the step count
 to about twenty-one doublings from $g_{\rm UV}^2=1/2$. It changes no
 structural conclusion, and the open obligations are those of
-[the position note](mass-gap-position.md) §5. The next work should be
+[the position note](mass-gap-obligations-lattice.md#existing-estimates-and-examined-routes) §5. The next work should be
 carried out with these numbers in place, and any new bound should be
 reported in them.

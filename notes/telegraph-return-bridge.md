@@ -5,6 +5,98 @@ every cut resolution. Its midpoint has a discrete probability mass, while the
 action error of sampled polygons vanishes at a controlled rate. The construction
 isolates velocity memory from the introduction of fresh noise at each cut.
 
+## Mechanical cuts and the sharp speed benchmark
+
+### One elastic collision with a receiver
+
+Fix $m>0$, $0<u<c$ and duration $\Delta>0$. Choose a common random sign
+$\sigma=\pm1$ with equal probabilities. At time zero, a labelled tracer
+is at $0$ with velocity $\sigma u$, and a second particle of the same mass
+is at $\sigma u\Delta$ with velocity $-\sigma u$. Both move freely on
+the line until their instantaneous elastic collision at time $\Delta/2$.
+The equal-mass collision exchanges their velocities. Thus the tracer follows
+
+$$X(t)=\begin{cases}\sigma ut,&0\le t\le\Delta/2,\\
+\sigma u(\Delta-t),&\Delta/2\le t\le\Delta.\end{cases}$$
+
+Its midpoint $Y=\sigma u\Delta/2$ is random, while $X(0)=X(\Delta)=0$.
+The other particle returns to its own initial position. Throughout the
+motion, total momentum is zero and total kinetic energy is $mu^2$.
+Each labelled velocity changes sign at the collision, with opposite impulses
+of magnitude $2mu$. Both particles stay below $c$ in the chosen frame.
+
+The tracer's free kinetic action relative to the stationary path with the
+same position endpoints is
+
+$$D=\frac m2\int_0^\Delta\dot X^2dt=\frac{mu^2\Delta}{2}.
+\qquad \operatorname{Var}Y=\frac{u^2\Delta^2}{4}.$$
+
+Define the midpoint action parameter in the bridge normalization below by
+$\kappa_{\rm mid}=4m\operatorname{Var}Y/\Delta$. This gives
+$\kappa_{\rm mid}=mu^2\Delta$ and $\mathbb E D=\kappa_{\rm mid}/2$.
+At fixed energy and speed, both tend to zero as $\Delta\downarrow0$.
+Keeping a supplied $\kappa_{\rm mid}>0$ instead requires
+$u^2=\kappa_{\rm mid}/(m\Delta)$ and pair energy
+$\kappa_{\rm mid}/\Delta$.
+
+This is an exactly specified hard-collision model with random initial data.
+The timing follows from the prepared initial separation $u\Delta$, rather
+than a new stochastic clock. Changing $\Delta$ changes that separation.
+The stationary comparison shares positions and times, not initial velocities
+or apparatus state. Consequently the construction preserves the coarse
+position endpoints, but does not implement an invisible intervention on a
+fixed full phase-space preparation. Smooth collision potentials and a
+Lorentz-covariant dynamics are separate models.
+
+### Sharp midpoint support and variance
+
+Let any absolutely continuous path on $[0,\Delta]$ have endpoints $x,z$ and
+$|\dot X|\le u<c$ almost everywhere. Write
+$v=(z-x)/\Delta$, with $|v|\le u$, and
+$\zeta=X(\Delta/2)-(x+z)/2$. Each half-interval gives
+
+$$X(\Delta/2)\in[x-u\Delta/2,x+u\Delta/2]
+\cap[z-u\Delta/2,z+u\Delta/2].$$
+
+This intersection is centered at $(x+z)/2$ with half-width
+$r=\Delta(u-|v|)/2$. Therefore any probability law on these admissible
+paths satisfies
+
+$$\operatorname{Var}Y\le r^2,
+\qquad 0\le\kappa_{\rm mid}:=\frac{4m}{\Delta}\operatorname{Var}Y
+\le m\Delta(u-|v|)^2.$$
+
+Proof of the variance bound: $\operatorname{Var}Y\le
+\mathbb E(Y-(x+z)/2)^2\le r^2$. Equal probabilities at the two extremal
+midpoints saturate it; the corresponding two-segment paths obey the speed
+bound. For $x=z$ the elastic example realizes this sharp case.
+
+The two-segment interpolant through $Y$ has excess kinetic action
+$D_{\rm poly}=2m\zeta^2/\Delta$. When the midpoint law is centered on
+$(x+z)/2$, $\mathbb E D_{\rm poly}=\kappa_{\rm mid}/2$.
+For a biased midpoint there is the additional term
+$2m(\mathbb E\zeta)^2/\Delta$. This distinction avoids identifying a
+variance with all action costs.
+
+A Gaussian midpoint with variance $\kappa\Delta/(4m)$ has unbounded
+support for every $\kappa>0$ and so fails the exact speed constraint at
+every duration. Even a bounded replacement matching only that variance
+requires $\kappa\le m\Delta(u-|v|)^2$. The latter inequality gives a
+necessary resolution restriction, not a derivation of $\kappa$.
+
+At $|v|=u$ the allowable midpoint is unique. Indeed a path achieving the
+maximum displacement $u\Delta$ must have velocity $u$ almost everywhere.
+Thus after choosing an extremal midpoint in the return-path example, each
+half is already a saturated straight segment: finer admissible sampling
+inside that half is deterministic. Reapplying a nonzero midpoint fluctuation
+rule independently at every cut would change the coarse law or violate speed.
+
+The independent-increment version is rigid: a scalar convolution semigroup
+supported in $[-ut,ut]$ is a deterministic drift. The
+[cut-paradox treatment](cut-paradox-two-faces.md#the-euclidean-face) gives the
+variance proof and its distinct scalar unitary counterpart. The bridge below
+retains velocity memory instead of resetting position increments.
+
 ## 1. Model and endpoint convention
 
 Fix mass $m>0$, speed $0<u<c$, reversal rate $\lambda>0$ and duration $T>0$.
@@ -15,7 +107,7 @@ $$V_t=u(-1)^{N_t},\qquad X_t=\int_0^t V_s\,ds,$$
 where $N$ is a homogeneous Poisson process of rate $\lambda$. Velocity is
 right-continuous. The rate is a supplied classical stochastic clock. This reduced
 model describes impulsive reversals; momentum receivers require the extra
-interaction bookkeeping of the physical-cut model (C030).
+interaction bookkeeping of the elastic receiver above (C030).
 
 We construct the bridge to $(X_T,V_T)=(0,-u)$ by disintegrating switch-time
 densities at the interior position $X_T=0$. The explicit simplex construction
@@ -146,7 +238,7 @@ The surviving action relative to the zero-position chord is the kinetic cost
 of the fixed returning path. The polygon approximation error tends to zero.
 Its value $mu^2T/2$ tends to zero with duration or speed. These are separate
 limits from A01's long-observation stationary coefficient $H_*=mu^2/\lambda$.
-For the bridge midpoint observable, C031 gives
+For the bridge midpoint observable, the sharp support bound above gives
 $0\le\kappa_{\rm mid}=4m\operatorname{Var}(Y)/T\le mu^2T$.
 Its mean is generally biased, so midpoint action uses
 $2m\mathbb E[Y^2]/T$, rather than variance alone.
@@ -295,6 +387,10 @@ preparation. Their combination supplies a concrete classical family for testing
 a proposed action-selection principle. The plateau value remains set by speed,
 mass and the supplied reversal rate.
 
+C030–C032 retain the B13 mechanical/support/source record; its elastic map
+is from Barkai [2003](https://arxiv.org/abs/cond-mat/0303255v1), pp.3–4,
+(2)–(3), with the equal-mass case defined directly. See the
+[source companion](../docs/batches/B13/B13-source-companion.md) for passage coverage.
 C033–C034 retain the B14 path-law/cut audit. C037–C038 retain B17's midpoint
 and window audit; all proofs are preserved here. Cinque supplies the occupation
 law backbone, and the midpoint/action consequences are derived with the stated
@@ -302,6 +398,6 @@ conditioning convention. Bounded-acceleration turns are developed in the
 [mechanical return note](bounded-acceleration-return.md); coherent composition
 has the separate premises of the [checkerboard note](checkerboard-dynamics.md).
 
-This consolidated manuscript joins A06 and A09a. Historical check outputs remain
-in the repository; current verification uses written proofs and source review
-under the hard no-Python-numerical-verification rule.
+The elastic experiment and stochastic bridge have different prepared clocks
+and apparatus states; neither supplies a positive microscopic action. Source
+audits and model reviews are internal records, not independent peer review.

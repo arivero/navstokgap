@@ -24,23 +24,16 @@ the eventual paper. **The two main proof goals remain the pure $SU(3)$
 mass gap and the necessity of a positive action scale in Newton's
 comparison.** QCD with massless and with nonzero quark masses is an
 orientation and a source of mechanisms, rather than a third full
-construction programme. This note supplies the definitions, two elementary
-limit criteria, and the plan. It proves neither main goal.
+construction programme. This note supplies the definitions, axial Ward identity and two elementary
+spectral-limit criteria. It proves neither main goal.
 
 The [Planck paper](planck-gap-paper.md) remains the developed Newton
-component; the [Yang--Mills position](mass-gap-position.md) and
+component; the [Yang--Mills position](mass-gap-obligations-lattice.md#existing-estimates-and-examined-routes) and
 [conditional theorem](mass-gap-conditional-theorem.md) remain the
 technical map for pure gauge theory. Their results retain their stated
 hypotheses. The October 2 localization, moment and selection additions
 are written derivations and read source results, without independent
 verification. This synthesis makes no literature novelty claim.
-
-**Dated correction, 2026-10-02.** The October 1 description of the
-complete-record contrast omitted its coherence premise, despite the
-incoherent countercase in the maintained reachability proof. Section 4a
-now states that premise and its scope. Sections 2 and 4b integrate the
-lattice corrections and the Kepler/selection results. Earlier routing
-and review dates remain historical records; STATE governs the live queue.
 
 ## 1. Compare physical quantities, with the regulators separate
 
@@ -254,7 +247,7 @@ $$K_\pi=\frac{F^2}{24M}\sum_j(\Delta t_j)^3,
 This follows by $(\Delta t_j)^3\le\varepsilon^2\Delta t_j$ and
 $\sum_j\Delta t_j=T$. In the supplied quantum lift the phase difference
 is $K_\pi/\hbar$, which also tends to zero at fixed $\hbar>0$.
-The [polygon note](polygon-lift-phase.md) separately gives an ordering
+The [polygon note](cut-measure-newton.md#weyl-lifting-and-polygon-phases) separately gives an ordering
 phase $\Phi_\pi$ with
 
 $$\hbar\Phi_\pi+4K_\pi=\frac{{\cal A}(T)}3.$$
@@ -276,7 +269,7 @@ the uncertainty must be specified, with feasible informative records of
 finite cost retained in the limit. A restricted theorem might establish
 $\inf_{0<\varepsilon<\varepsilon_0}\kappa_\varepsilon\ge\kappa_*>0$.
 The general-instrument formulation instead bounds the disturbance
-functional defined in the [disturbance note](record-costs-disturbance.md).
+functional defined in the [disturbance note](record-distance-path-length.md#general-disturbance-theorem-with-an-unknown-preparation).
 These are distinct formulations of record cost; a single-mark product
 does not by itself establish a universal protocol bound.
 
@@ -286,8 +279,7 @@ goal is to supply independently justified physical premises that force
 a positive scale and its universality, without placing that scale in
 the premise. Identification with $h=2\pi\hbar$ is a further calibration
 obligation. Newton's optical fits provide a candidate product $\Lambda p$;
-the [paper's §8](planck-gap-paper.md) keeps its extra indeterminacy and
-cross-colour universality premises visible.
+the [historical argument](planck-gap-paper.md) distinguishes a conditional longitudinal phase count from transverse uncertainty, quantum kinematics and cross-colour universality.
 
 Two refinement operations must stay separate: making more marks within
 fixed $T$, and asking each shrinking cell to decide the force on its
@@ -329,67 +321,17 @@ the volume, cutoff and coupling limits in §2. A physical law that
 selects and preserves the required coherence, and calibration of a
 universal positive action scale, remain obligations.
 
-### 4b. Kepler completion and selection-dependent thresholds
+### Singular completion is a separate comparison
 
-The [self-sufficiency proof](self-sufficiency-contrast.md) compares
-classical point-force incompleteness with a global non-relativistic
-Coulomb evolution at every $\hbar>0$. The proof writes the reduced
-phase constant as $h$; here it is $\hbar$, with the full Planck constant
-$h=2\pi\hbar$ as above. Classical collision does not exclude classical
-regularizations or establish that this quantum completion is necessary.
-
-For a fixed collision-free Kepler orbit on $[0,T]$ with minimum radius
-$\rho_{\min}>0$, fixed $0<\delta<\rho_{\min}$, and a real
-$V_\delta\in C_b^\infty(\mathbb R^3)$ equal to $-k/r$ outside
-$r<\delta$, its normalized Gaussian preparations have width
-$\ell_\hbar=\sqrt{\hbar L_*/P_*}$ for fixed $L_*,P_*>0$.
-The written localization proof gives
-$$\sup_{0\le t\le T}\|(V-V_\delta)U_\hbar^{(\delta)}(t)
-\varphi_\hbar\|_2=O(\hbar^{3/2})=o(\hbar).$$
-This estimate uses centered weighted Sobolev control and Hardy's
-inequality, rather than transferring a singular multiplier through
-an $L^2$ approximation. Separate moment estimates give position and
-momentum centroid errors $O(\sqrt\hbar)$. Constants depend on the
-preparation, $T$, derivative norms of $V_\delta$, and
-$(\rho_{\min}-\delta)/2$; no collision, growing-time or shrinking-core
-limit is established. Hepp supplies the smooth-potential comparison
-[@Hepp1974; passage, §2]; the additional estimates are in §5a of the
-maintained proof and are unrefereed.
-
-At finite $c$, the same proof's Proposition 2 gives the following
-point-source selections, for fixed $k,m,c>0$.
-The Dirac minimal operator starts on
-$C_c^\infty(\mathbb R^3\setminus\{0\},\mathbb C^4)$; the
-Klein--Gordon principal radial operator acts in $L^2((0,\infty),dr)$.
-
-| Model and premise | Admissible reduced phase constant |
-| --- | --- |
-| Dirac minimal operator: essential self-adjointness | $\hbar\in[2k/(\sqrt3c),\infty)$ |
-| Dirac: finite separate Coulomb potential energy on every domain vector | $\hbar\in(k/c,\infty)$ |
-| Dirac: distinguished extension with critical Schur-form/cutoff selection included | $\hbar\in[k/c,\infty)$ |
-| Dirac: additional self-adjoint boundary data permitted | Every $\hbar>0$ |
-| Klein--Gordon: strict usual energy coercivity and the cited charge-space evolution | $\hbar\in(2k/c,\infty)$ |
-| Klein--Gordon: principal radial Friedrichs selection | $\hbar\in[2k/c,\infty)$ for that operator; full critical evolution remains open |
-
-The read primary domain and evolution statements are identified in
-Proposition 2 [@EstebanLoss2007; passage, Definition 3 and Theorem 4;
-@EstebanLewinSere2019; passage, Theorems 1.1 and 1.11;
-@LangerNajmanTretter2008; passage, Example 8.3 and Theorems 8.5--8.6;
-@DerezinskiRichard2017; passage, §§2.2--2.3]. The critical Dirac
-domain uses the original closed Schur form; the maintained proof
-documents why the literal compact rewrite in arXiv v7, (1.32), is
-not used. Separate potential energy, form closure, a point-source
-limit and a boundary condition are different selection premises.
-Probability conservation motivates self-adjointness within Dirac's
-model but does not select one extension. At critical Klein--Gordon
-coupling the combined form still does not bound the multiplier needed
-for $V\partial_t\psi$ or $VQ_{1/2}^{-1/2}$.
-
-These intervals concern families of selected point-source theories.
-They are not the energy spectrum of one Hamiltonian, and their
-endpoints supply no universal measured value of $\hbar$. A necessity
-argument must justify its selection premises independently and exclude
-the alternative completions that those premises actually rule out.
+The [Coulomb comparison](self-sufficiency-contrast.md) proves fixed-interval,
+collision-free semiclassical recovery with a fixed smooth core and separately
+controlled position/momentum moments. Its relativistic Dirac and
+Klein–Gordon thresholds depend on operator domain, finite-energy and extension
+selection. Alternative self-adjoint boundary data can admit every supplied
+$\hbar>0$. These are families of chosen point-source theories, not a measured
+universal action spectrum; critical Klein–Gordon evolution retains an unresolved
+singular multiplier. The full estimates and primary domain statements belong
+in that canonical proof rather than a second table here.
 
 ## 5. Two elementary criteria for carrying spectral information to a limit
 
@@ -493,99 +435,13 @@ unit to both QCD theories. Their different spectra depend on dynamics
 and symmetry. A successful Newton necessity argument must explain the
 action structure at the preceding level.
 
-## 7. Work toward the final paper
+## 7. Consequence for STATE
 
-The intended paper can be called *What survives refinement: action,
-symmetry and the continuum*. Its architecture is: Galileo's comparison
-and the three regulators; the pion benchmark with and without explicit
-breaking; physical spectral limits and reconstruction; the established
-Newton record bounds; the valley-lifting bridge; and the two remaining
-proof obligations. Historical claims stay tied to the held source
-companions and the sibling `newtonlean` work. The present Planck paper
-becomes a component of this synthesis. Since 2026-10-01 the Newton
-component is organized around the gap thesis of §4: the Kepler swarm as
-the carrier, the Gaussian parabola as the immune case in which the
-Planck paper's record bounds live, and the two premises, complete
-records and an $\hbar$-independent coherence length between the launch
-points of crossing streams, stated beside coercivity and the soft
-channel. This working architecture does not designate either open goal
-as solved. The October 2 revision also integrates fixed-interval Kepler
-localization, separate first-moment control and selection-dependent
-relativistic domains. The opening states which positive-action and
-coherence premises are supplied, and distinguishes them from a
-necessary universal scale.
-
-The following bounded research order records the September 26 plan.
-Later status paragraphs qualify it; STATE supplies the current next unit.
-
-1. **Next constructive step: the $SU(3)$ small-volume bridge.** Develop
-   the H3 estimate for the zero-mode Hamiltonian plus the even torus
-   valley potential in the [Feshbach note](weak-coupling-feshbach-reduction.md).
-   Seek an explicit lower bound
-   $$E_{\rm small}(L)\ge
-   (d_3-Cg(L)^{2/3})g(L)^{2/3}\frac{\hbar c}{L},\qquad d_3>0,$$
-   with an explicit admissible coupling interval. State the operator,
-   gauge sector and cutoff dependence. A confining potential or a
-   positive ground energy alone does not establish the excitation gap;
-   the first excited energy and the ground energy need comparison.
-   Stop at one proved estimate, or the precise uncontrolled term in
-   that estimate. Fixed-cutoff H3 would be a result, with its boundary
-   retained; it would not close H1/H2 or T4 of the full mass-gap map.
-2. **Newton necessity: construct the missing physical premise.** Use
-   one explicit model of records and their composition, with calibrated
-   lengths, impulses and time. Seek a refinement-independent positive
-   cost from dynamical or optical premises that have their own
-   justification. The deliverable is one implication with its full
-   admissible class, or an explicit identification of the additional
-   premise needed. A result starting from the canonical commutator or
-   M3 belongs to the existing conditional branch. For the optical
-   route, observable relative phase and a common action unit across
-   probes must be established separately. Attainment of the existing
-   disturbance bounds remains useful, but secondary to this task.
-3. **Use the pion as a bounded test of a proposed mechanism.** Carry a
-   non-singlet Ward identity and its nonzero residue through the chosen
-   regulator, or state these as explicit inputs. Recover the zero-mass
-   case and its small-mass lifting. This is one comparison section;
-   a full fermionic-QCD construction is outside the active queue.
-4. **Return the successful bridge to the field theory.** Determine
-   whether the small-volume estimate survives eliminating nonzero
-   modes with constants uniform in $a$, and then whether it supplies
-   the order-one-coupling blocking estimate missing from H1. Preserve
-   the chosen vacuum, physical scale and observable normalization.
-   Reconstruction and nontriviality stay separate obligations; their
-   order may interact with the estimates rather than follow a single
-   irreversible chain.
-5. **Integrate proved results into the final synthesis.** Replace the
-   corresponding conditional statements only when their hypotheses
-   are discharged. Complete the historical reading obligations in
-   the Planck paper before submission. Keep the pion's role
-   explanatory unless it actually changes one of the two proofs.
-
-**Status on 2026-09-29 (pointers only).** The active gauge route since
-2026-09-27 is the ultraviolet halving construction organized by the
-[halving atlas](halving-atlas.md), rather than item 1's small-volume
-bridge, which did not move this week. Its cell 2 now has one normalized
-small-field step for $SU(2)$ in $1+2$, uniform in plane size
-([small-field note](su2-midplane-small-field.md), §§13--14), the
-covariant link-kernel estimate conditional on two local jet bounds (§20.3),
-a reduction of the third response and an all-order polymer criterion
-(§21), and a transcription to $SU(3)$ (§16; order-$t$ coefficients in the
-[order-$t$ note](su2-midplane-order-t.md), §7b). For item 2, the missing
-premise has an equivalent Newton-age form, Leibniz's law of continuity read
-on records ([continuity note](leibniz-continuity-records.md)), and the cut
-measure coincides with the record measure at every finite stage
-([cut measure](cut-measure-newton.md), Proposition 7); the premise itself
-remains open.
-
-## 8. Consequence for STATE
-
-The joint synthesis now incorporates the October 2 Kepler and selection
-results, the coherence countercase, and the corrected Wilson/KS scope.
-Both main goals remain open. Use STATE for the next proof unit rather
-than the dated H3-first plan: the live obligations are independent
-physical selection/coherence premises and the nonlinear gauge refinement
-and continuum estimates. Full critical Klein--Gordon evolution remains
-open at the singular-multiplier term identified in §4b. Earlier referee
-acceptances do not cover these new synthesis additions; this revision
-is source-based integration and self-review, without a new independent
-verification or a novelty claim.
+The retained QCD Ward identity and two spectral-measure criteria explain what
+must survive a physical limit. A disappearing eigenvalue with vanishing observable
+weight is insufficient; a supplied action unit does not imply a gapped spectrum.
+Newton's record problem supplies no spectral measure until one is constructed,
+so the correspondence is a proof discipline rather than an equivalence theorem.
+The [gauge atlas](halving-atlas.md) owns the dimensional/refinement map, and
+[STATE](../research/STATE.md) owns the live priorities. Both main goals remain
+open; this comparison introduces no additional research queue.

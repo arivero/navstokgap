@@ -27,7 +27,7 @@ Neither source addresses A16’s admissibility class or action lower bound.
 Proof status in the repository: the Hamilton equations, flow conjugacy,
 `F_a^*omega=a omega`, degree-one action scaling, covariance pushforward and
 conditional zero-infimum proposition are written derivations in
-`notes/action-scale-dilation.md`. They require the stated smooth domain,
+`notes/action-unit-dimensional-selection.md#admitted-similarities-and-mechanical-dilation`. They require the stated smooth domain,
 finite moments, invariant pushforward preparation, and closure along arbitrarily small
 positive `a`. No model at `a=0` is used.
 

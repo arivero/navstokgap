@@ -2,7 +2,7 @@
 
 ## Finding
 
-The singular-core calculation in `notes/relativistic-kepler-threshold.md` is
+The singular-core calculation in `notes/action-unit-dimensional-selection.md#singular-and-softened-relativistic-coulomb-cores` is
 mathematically adequate for the stated one-body Hamiltonian. The threshold
 $g_\theta=k/c$ follows from the effective radial function and Boyer's
 classification; it is an established benchmark. The softened-core conclusion

@@ -191,7 +191,7 @@ $\kappa=ma\ge0$; $a=0$ is the deterministic Dirac member. Requiring a
 positive density rules out zero by premise. Passing from positive kernels
 to oscillatory unitary propagation is another chosen step, and neither step
 identifies $\kappa$ with physical $\hbar$. The
-[Newton synthesis](newton-dimock-balaban-guide.md#groupoid-scale-and-renormalization)
+[Newton synthesis](groupoid-quantum-newton-states.md#regulators-and-a-normalized-blocking-test)
 distinguishes this free fixed-line result from the two-regulator RG question.
 
 ## 7. Consequence for STATE

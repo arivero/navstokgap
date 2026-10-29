@@ -10,15 +10,17 @@
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
+\hypertarget{ground-state-measure-transfer-the-slice-identity-is-exact-the-large-field-estimate-remains-open}{%
 \section{Ground-state measure transfer: the slice identity is exact, the
 large-field estimate remains
-open}\label{ground-state-measure-transfer-the-slice-identity-is-exact-the-large-field-estimate-remains-open}
+open}\label{ground-state-measure-transfer-the-slice-identity-is-exact-the-large-field-estimate-remains-open}}
 
 Later corrections: \href{large-field-operator-inequality.md}{the
 operator-inequality note} separates measure from operator control;
 \href{flow-jacobian-truncation-error.md}{the corrected Jacobian note}
-and \href{flow-instability-large-field.md}{instability note} withdraw
-the Hamiltonian truncation and sharp-crossover claims;
+and
+\href{flow-jacobian-truncation-error.md\#instability-of-the-full-background-generator}{instability
+note} withdraw the Hamiltonian truncation and sharp-crossover claims;
 \href{flow-conjugation-truncation.md}{the lattice note} treats a
 different, single-step regime (relevant passages read).
 
@@ -59,8 +61,9 @@ ratio. The proposed suppression \(C\exp[-c\eta^2/g(\ell)^2]\) remains a
 large-field closure, Hamiltonian decimation bound, or continuum mass gap
 is proved.
 
+\hypertarget{the-transfer-matrix-and-the-two-limits}{%
 \subsection{1. The transfer matrix and the two
-limits}\label{the-transfer-matrix-and-the-two-limits}
+limits}\label{the-transfer-matrix-and-the-two-limits}}
 
 Fix \(G=SU(N)\), \(g>0\), spatial spacing \(a>0\), and a finite periodic
 spatial box. Let \(d\mu\) be normalized product Haar measure on its
@@ -143,8 +146,9 @@ Projector convergence is not proved here. No interchange with the
 reverse order, no joint limit, and no estimate uniform in spatial volume
 or spacing is asserted.
 
+\hypertarget{what-transfers-and-what-does-not}{%
 \subsection{2. What transfers, and what does
-not}\label{what-transfers-and-what-does-not}
+not}\label{what-transfers-and-what-does-not}}
 
 At fixed \(a_t\), a probability bound for a property of a single slice
 under the infinite-time \textbf{anisotropic} Wilson measure is exactly a
@@ -173,8 +177,9 @@ identity provides another representation; it \textbf{does not close}
 that missing local estimate or prove that Hamiltonian methods cannot
 obtain one.
 
+\hypertarget{action-cost-at-a-block-scale-not-a-probability-theorem}{%
 \subsection{3. Action cost at a block scale, not a probability
-theorem}\label{action-cost-at-a-block-scale-not-a-probability-theorem}
+theorem}\label{action-cost-at-a-block-scale-not-a-probability-theorem}}
 
 \textbf{Proved continuum action bound.} For a smooth field with finite
 Euclidean action in the stated normalization, let \(B\) be a
@@ -217,8 +222,9 @@ covariance, smearing and threshold. For a scalar Gaussian \(X\) of
 variance \(\sigma^2\), \(\mathbb P(|X|\ge u)\le2e^{-u^2/(2\sigma^2)}\)
 by the exponential-moment bound. For the three-component, single-colour
 abelian magnetic field with Gaussian heat smearing used in
-\href{finiteness-half-flowed-susceptibility.md}{the free-field note}, §§1--3 (passages
-read), \[\widetilde G_{ij}(k)=\frac{g^2|k|}{2}e^{-2t|k|^2}
+\href{finiteness-half-flowed-susceptibility.md}{the free-field
+calculation}, §§5a--5c (passages read),
+\[\widetilde G_{ij}(k)=\frac{g^2|k|}{2}e^{-2t|k|^2}
 (\delta_{ij}-\hat k_i\hat k_j).\] Taking its trace and radial integral
 gives \[\langle|b_t|^2\rangle
 =\frac{g^2}{2\pi^2}\int_0^\infty k^3e^{-2tk^2}dk
@@ -230,7 +236,8 @@ regime \[\log\mathbb P\left(|b_t|>\frac{\eta_t}{t}\right)
 =-\frac{24\pi^2\eta_t^2}{g^2}
 +O\big(\log(\eta_t/g)\big),\qquad \eta_t/g\to\infty.\] The polynomial
 radial prefactor is not a constant uniform in threshold. The former
-\(8\pi^2\) comparison from \href{typical-field-strength-window.md}{the
+\(8\pi^2\) comparison from
+\href{flow-jacobian-truncation-error.md\#free-field-size-is-a-benchmark-not-a-supremum-bound}{the
 typical-field note}, §3 (passage read), treated the trace variance as a
 scalar variance for the vector norm and cannot fix a constant here.
 Moreover, with \(\ell^2=8t\), a threshold \(\eta_\ell/\ell^2\) means
@@ -244,8 +251,9 @@ At the cutoff scale compact Wilson plaquettes have bounded action. That
 fact gives no useful normalized block-coherence estimate, and
 \(\ell\gg a\) alone does not prove one either.
 
+\hypertarget{where-this-leaves-the-route}{%
 \subsection{4. Where this leaves the
-route}\label{where-this-leaves-the-route}
+route}\label{where-this-leaves-the-route}}
 
 \textbf{Correction to the former competition.} Neither Proposition 1 nor
 Section 3 controls the decimation error outside a proved rare set. The
@@ -270,14 +278,14 @@ upper bound. Even a proved probability bound for \(\mathcal F_B\)
 therefore would not supply this kernel budget without an additional
 comparison.
 
-Under the further hypothetical bound \(\mathbb P(A_\eta)\le
-C e^{-c\eta^2/g^2}\) and a controlled corresponding growth factor
-\(e^{\eta/4}\), the product has schematic exponent
-\(-c\eta^2/g^2+\eta/4\), whose algebraic zero is \(g^2/(4c)\). This is
-bookkeeping of additional assumptions, \textbf{not a sharp crossover or
-a probability-weighted Hamiltonian error theorem}. A tail bound for
-\(\mathcal F_B\) alone does not justify that product, particularly when
-curvature is unbounded on the event.
+Under the further hypothetical bound
+\(\mathbb P(A_\eta)\le C e^{-c\eta^2/g^2}\) and a controlled
+corresponding growth factor \(e^{\eta/4}\), the product has schematic
+exponent \(-c\eta^2/g^2+\eta/4\), whose algebraic zero is \(g^2/(4c)\).
+This is bookkeeping of additional assumptions, \textbf{not a sharp
+crossover or a probability-weighted Hamiltonian error theorem}. A tail
+bound for \(\mathcal F_B\) alone does not justify that product,
+particularly when curvature is unbounded on the event.
 
 For finite \(A_t\), increasing the range \(\kappa\) controls the
 displayed kernel majorant. This is the surviving range observation
@@ -287,14 +295,16 @@ It does not prove a relative form bound for a conjugated Hamiltonian.
 Measure rarity also does not alone control a perturbation of
 unrestricted sign: that note's min-max and localized trial-state
 arguments, §3 (full-read), distinguish positive errors from negative
-wells. The later \href{flow-instability-large-field.md}{instability
+wells. The later
+\href{flow-jacobian-truncation-error.md\#instability-of-the-full-background-generator}{instability
 correction}, §§2 and 4 (passages read), supplies no sharp lower bound on
 truncation tails. The separate single-lattice-step discussion in
-\href{flow-conjugation-truncation.md}{the lattice note}, §§1--2 (passages
-read), must not be read as a fixed-physical-scale continuum estimate or
-as a repair of these missing operator comparisons.
+\href{flow-conjugation-truncation.md}{the lattice note}, §§1--2
+(passages read), must not be read as a fixed-physical-scale continuum
+estimate or as a repair of these missing operator comparisons.
 
-\subsection{5. Consequence for STATE}\label{consequence-for-state}
+\hypertarget{consequence-for-state}{%
+\subsection{5. Consequence for STATE}\label{consequence-for-state}}
 
 The usable result is the fixed-temporal-spacing spectral slice identity
 and its exact Hamiltonian-semigroup counterpart. Passing from the

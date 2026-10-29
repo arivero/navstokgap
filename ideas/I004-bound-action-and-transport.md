@@ -22,7 +22,7 @@ allowed angular momenta above it remain continuous. This is Boyer's known
 classification, with source passages and a written effective-potential
 derivation in the [B27 companion](../docs/batches/B27/relativistic-kepler-source-companion.md).
 
-M07 completed this integration in the [Kepler note](../notes/relativistic-kepler-threshold.md)
+M07 completed this integration in the [Kepler note](../notes/action-unit-dimensional-selection.md#singular-and-softened-relativistic-coulomb-cores)
 and gap laboratory (C052–C053), naming
 the domain of globally regular bound trajectories, the critical/plunging
 endpoint and the limits $c\to\infty$ and $k\to0$. Any fixed softened core $-k/\sqrt{r^2+a^2}$ admits bound circles for every
@@ -47,7 +47,7 @@ an actual scale-separation estimate. The task should establish which estimator
 can track a physical-time field $h(t)$ and which limit represents relaxation.
 Its source audit must cover the selected estimator as well as the model.
 
-**Completed A15/B29:** [the circular-orbit note](../notes/bound-orbit-action-observable.md)
+**Completed A15/B29:** [the circular-orbit note](../notes/action-unit-dimensional-selection.md#a-prepared-orbit-covariance-and-transport-response)
 gives vanishing transport response at both window extremes and a finite bound
 on window ratios above a fixed action fraction. Twice the canonical covariance
 area equals orbital action under uniform phase. Each phase law preserves its

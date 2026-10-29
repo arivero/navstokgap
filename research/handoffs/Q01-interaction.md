@@ -22,7 +22,7 @@ and one primary paper, statement/setup and necessary qualifications only.
 
 ## Result and review
 
-B70 completes the selected decision. [Dependency map](../../notes/reversible-interaction-premise.md):
+B70 completes the selected decision. [Dependency map](../../notes/classical-orientation-closure.md#reversible-operational-interaction-the-source-theorem):
 C125 already meets the qubit-ball, tensor-coordinate and local-rotation setup.
 Theorem 1 excludes an admissible continuous reversible nonlocal extension
 preserving its minimal state space. Theorem 2's full quantum operational

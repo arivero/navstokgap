@@ -129,7 +129,7 @@ group is preparing its own write-up and has deferred releasing the
 AI-produced materials. The announcement does not claim a mass-gap proof.
 
 For our programme, the announced existence construction is relevant to
-the [T4 continuum obligation](../../notes/mass-gap-position.md). Whether its
+the [T4 continuum obligation](../../notes/mass-gap-obligations-lattice.md#existing-estimates-and-examined-routes). Whether its
 precise theory, axioms, limits and observables supply a compatible input
 to our gap argument requires the actual construction. None of our open
 estimates is marked proved on the strength of this announcement.

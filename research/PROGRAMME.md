@@ -3,7 +3,7 @@
 > **Historical (2026-09-16).** Superseded by AGENTS.md, which removed the per-step bookkeeping this file prescribes. Kept as context; not instructions.
 
 Version 72, 2026-09-16. The programme consolidates the accepted results into
-[Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-scale-obstructions.md).
+[Classical action scales: obstructions, conditional bounds and quantum premises](../notes/action-unit-dimensional-selection.md#observables-and-the-admissible-class).
 The user's clarified 2026-09-14 priority is a mathematical necessity argument
 for the Newton/Galileo area--action obstruction; gap work is supporting. [STATE](STATE.md) owns the current ordered tasks;
 [STRATEGY](STRATEGY.md) governs bounded choices and stopping decisions.
@@ -35,7 +35,7 @@ retains proof and literature status, including the limits of each source audit.
 
 Q01's first milestone compares Hardy and Chiribella–D'Ariano–Perinotti through
 the exact premise that rules out a classical operational model. The bounded
-[premise map](../notes/quantum-exclusion-premises.md) and B67 audit are complete:
+[premise map](../notes/classical-orientation-closure.md#what-reconstruction-premises-add) and B67 audit are complete:
 Hardy requires continuous reversible pure-state connectivity; CDP requires
 pure extensions with essential uniqueness. Standard finite classical models
 fail these premises. Hardy's moving-ball example points to the extra question
@@ -132,10 +132,10 @@ promoting a ledger claim. It supplies relative calibration, while absolute
 normalization and the quantum phase role remain separate obligations.
 
 
-C127's [Hamiltonian test](../notes/hamiltonian-moment-descent.md) now separates
+C127's [Hamiltonian test](../notes/classical-orientation-closure.md#a-complete-classical-interaction-fails-moment-descent) now separates
 microscopic reversibility from operational descent. Two zero-energy spin
 preparations share all retained first/cross moments but an allowed product
-test distinguishes them after the interaction. The [finite-repair proof](../notes/hamiltonian-finite-closure.md) C128/B74
+test distinguishes them after the interaction. The [finite-repair proof](../notes/classical-orientation-closure.md#no-finite-observable-enlargement-repairs-this-interaction) C128/B74
 now rules out every finite observable enlargement on a nonzero time interval
 for all Borel preparations, including nonlinear updates of finite expectation
 vectors. Exact closure requires infinite observable dimension or a changed
@@ -182,14 +182,14 @@ of its dimensional scale; numerical calibration is a further empirical task.
 Q01's [orientation countermodel](../notes/classical-orientation-closure.md)
 (C125/B69) makes the quantum-track boundary explicit: finite capacity and
 reversible local closure coexist with classical separable composition, failed
-purification and failed subspace equivalence. The [B70 interaction audit](../notes/reversible-interaction-premise.md)
+purification and failed subspace equivalence. The [B70 interaction audit](../notes/classical-orientation-closure.md#reversible-operational-interaction-the-source-theorem)
 now excludes a continuous reversible nonlocal extension preserving that minimal
 composite, using de la Torre et al.'s Theorem 1. The local ball and Hermitian
 coordinates already meet the local-qubit premise. Identical-copy consistency
 and operational ancilla/measurement/discard closure underlie the stronger
 quantum reconstruction. The full theorem proof remains unaudited here;
 physical reversible descent and action normalization remain open.
-G04's [Hermitian transfer](../notes/ising-hermitian-transfer.md) (C126/B71)
+G04's [Hermitian transfer](../notes/interacting-ising-gap.md#the-square-root-gibbs-parent-and-its-local-terms) (C126/B71)
 gives a positive three-site local parent with square-root Gibbs ground state
 and energy-unit gap $Ka[1-\tanh(2b)]$. Both action constant K and the physical
 clock identification are supplied. This resolves the finite-volume operator
@@ -281,7 +281,7 @@ only its own operator statement.
 | Coherent paths | C039–C040 give continuum and measured-cut comparisons | Necessity of amplitudes, measurement rule and action parameter |
 | Observable response and interaction | C041–C046 give gap criteria; C124 gives an interacting uniform finite-volume gap | Origin of coupling/clock control, physical operator identification and further limits |
 
-The [consolidated paper](../out/papers/action-scale-obstructions.pdf) supplies
+The [consolidated paper](../out/papers/action-unit-dimensional-selection.pdf) supplies
 short arguments and links to the full proofs. The receiver/calibration
 compilation retains technical details, including R33's open curvature test.
 R33 is parked: its next coefficient currently changes no selected quantum or

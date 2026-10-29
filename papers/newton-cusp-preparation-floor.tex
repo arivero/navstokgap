@@ -5,63 +5,50 @@
 \usepackage{amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}
 \usepackage[hidelinks]{hyperref}
-\hypersetup{pdftitle={A bounded Newton force, reversible preparations and a conditional action floor},pdfauthor={navstokgap research working notes}}
+\hypersetup{pdftitle={The Newton cusp: classical histories, conditional floors and records},pdfauthor={navstokgap research working notes}}
 \newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
-\hypertarget{a-bounded-newton-force-reversible-preparations-and-a-conditional-action-floor}{%
-\section{A bounded Newton force, reversible preparations and a
-conditional action
-floor}\label{a-bounded-newton-force-reversible-preparations-and-a-conditional-action-floor}}
+\hypertarget{the-newton-cusp-classical-histories-conditional-floors-and-records}{%
+\section{The Newton cusp: classical histories, conditional floors and
+records}\label{the-newton-cusp-classical-histories-conditional-floors-and-records}}
 
-\textbf{Result, 2026-10-27; written derivation, unrefereed.} A
-continuous bounded Newton force can send two different exact
-position--momentum states to the same state in finite time. Consequently
-it admits no reversible evolution on the original point-state space. If
-an admissible class of probability preparations is invariant under
-affine canonical maps, closed under weak limits, and has a reversible
-evolution agreeing with these incoming Newton trajectories, then its
-finite-covariance preparations have a strictly positive covariance
-action floor. No numerical floor is assumed in this implication.
+\textbf{Maintained conclusions.} A bounded continuous conservative force
+merges two full point states in finite time. Two different conditional
+preparation theorems then force a positive covariance action: one
+assumes reversible evolution on instantaneous phase laws, canonical
+covariance and weak closure; the other assumes actual Gaussian cusp
+transport, \(W_2\) closure, copying and continuity at one positive time.
+Neither theorem identifies that floor with physical \(\hbar/2\). Their
+classical density and entropy witnesses carry supplied scales.
 
-\textbf{Scope clarification, 2026-10-27.} The evolution premise in §2
-requires agreement with the displayed Newton trajectories only for point
-preparations \emph{if they are admitted}; it does not require Liouville
-transport of nonpoint preparations. In particular, a positive-floor
-Gaussian class admits no point states, and identity evolution on that
-class satisfies the stated point-compatibility clause vacuously. That is
-not physical cusp transport. The density-ceiling example in §4 does
-implement the almost-everywhere Newton flow, but the later composition
-test shows it fails an independent-copy mixer. The result remains a
-conditional statement about the literal premises, not a derivation that
-nonpoint states must follow this force.
+There is also an exact zero-floor classical completion on complete
+trajectories. It preserves past and future branch information beyond the
+instantaneous phase point. Arbitrarily fine nondisturbing joint records
+force a zero covariance infimum. These countermodels delimit the
+preparation theorems; they do not contradict their explicitly different
+state and instrument assumptions.
 
-The closure and state-covariance premises are substantive physical
-assumptions. An explicit classical density-ceiling model satisfies them
-and has a sharp floor. Thus the result selects a positive preparation
-scale conditionally; it does not derive quantum mechanics, a universal
-Planck constant, or a floor on every classical action difference.
+The reversible theorem constrains point transport \textbf{only if points
+are admitted}. A positive-floor Gaussian class with identity evolution
+satisfies that clause vacuously and is not physical cusp transport. The
+continuity theorem below instead constrains actual nonpoint transport.
+Quantum existence at every supplied \(\hbar>0\), quantum instruments,
+and universality of a measured action constant remain separate
+questions.
 
-\textbf{Targeted check (GPT-6.1 Terra, 2026-10-27).} Terra checked
-sections 1--4, including singular covariances and the classical witness,
-without finding a mathematical error. Its distinction between the
-\(C^1\) potential and the merely continuous force is retained. The check
-does not validate the physical preparation premises or a quantum
-identification.
-
-Retrieval: the \href{balaban-ode-lesson.md}{ODE lesson} constructs the
-Lipschitz causal limit; the
-\href{self-sufficiency-contrast.md}{self-sufficiency contrast} separates
-Kepler incompleteness from exclusion of classical completions; the
-\href{principia-fifth-postulate.md}{fifth-postulate note}, Theorem
-B\('\) (proof read), classifies covariant Gaussian restrictions but
-leaves their zero threshold available. The
-\href{necessity-unit-and-indeterminacy.md}{necessity note}, Theorem I
-(proof read), prevents treating an unread density ceiling as an
-automatic restriction on recorded posteriors. The present argument adds
-a different conditional selector: weak closure together with an actual
-point-state merger. No literature priority is claimed.
+The solution-space construction has prior context in
+\href{https://doi.org/10.1016/0022-0396(73)90075-2}{Sell 1973}
+(publisher abstract). Vanishing classical uncertainty and branch
+probabilities belong to spontaneous stochasticity; see
+\href{https://arxiv.org/abs/1509.04941}{Eyink--Drivas 2015} and
+\href{https://doi.org/10.1063/5.0063388}{Vanpoucke--Wenmackers 2021}
+(author abstracts). The proofs below are written arguments using their
+stated analytic inputs; internal model checks are not independent peer
+review. No priority is claimed. The
+\href{balaban-ode-lesson.md}{classical construction} distinguishes
+actual mergers from an unbounded force slope or an endpoint caustic.
 
 \hypertarget{existence-without-uniqueness-with-no-unbounded-force}{%
 \subsection{1. Existence without uniqueness, with no unbounded
@@ -144,9 +131,236 @@ their arrival. A later choice of departure cannot undo the earlier
 merger. An extra arrival or branch label can retain the information, but
 is an enlargement of this state space.
 
-\hypertarget{a-precise-preparation-theorem}{%
-\subsection{2. A precise preparation
-theorem}\label{a-precise-preparation-theorem}}
+For the path limits below write \(k=1+\alpha\),
+\(\lambda=\gamma/(1+\alpha)\), and
+\(\Gamma_\pm(t)=(\pm Bt^\beta,\pm m\beta Bt^{\beta-1})\) for
+\(BT^\beta<R\). Fix calibration units \(L_0,P_0>0\), \(S_0=L_0P_0\), and
+\(z=(q/L_0,p/P_0)\). These units do not impose a physical bound.
+
+\hypertarget{the-trajectory-state-completion}{%
+\subsection{2. The trajectory-state
+completion}\label{the-trajectory-state-completion}}
+
+Let \(\Omega\) be the set of all globally defined solutions of the
+bounded cusp equation, viewed as functions
+\(\gamma:\mathbb R\to\mathbb R^2\) with the topology of uniform
+convergence on compact intervals. Write \(e_t(\gamma)=\gamma(t)\) and
+
+\[
+ (T_s\gamma)(t)=\gamma(t+s),\qquad
+ (\Theta\gamma)(t)=\bigl(q(-t),-p(-t)\bigr). \tag{H4}
+\]
+
+\textbf{Theorem 1.} \(\Omega\) is a nonempty Polish space. The maps
+\(T_s\) form a jointly continuous group of homeomorphisms and \(\Theta\)
+is a continuous involution satisfying \(\Theta T_s\Theta=T_{-s}\). Every
+\(e_0\)-fiber is nonempty and compact. The state class
+\(\mathcal P(\Omega)\) of all Borel probabilities has weakly continuous
+reversible evolution \(\mu\mapsto(T_s)_*\mu\), contains point states,
+and supports ordinary classical conditioning on any Borel trajectory
+record of positive probability. Its instantaneous phase laws comprise
+all Borel probabilities on \(\mathbb R^2\); in particular their
+covariance-action infimum is zero.
+
+\emph{Proof.} The integral form of the bounded cusp equation is
+preserved by local-uniform limits: on each compact time interval the
+convergent paths have a common compact range, and the continuous vector
+field is uniformly continuous there. Thus \(\Omega\) is closed in the
+Polish compact-open space \(C(\mathbb R,\mathbb R^2)\). Time
+translations and time reversal preserve the autonomous equation and have
+the asserted algebra and continuity.
+
+Given a compact set of initial points, the bounded-force estimates above
+give locally uniform bounds on \(q,p\) and their derivatives.
+Arzelà--Ascoli, a diagonal subsequence and closedness give compactness
+of \(e_0^{-1}(K)\). Global existence makes every fiber nonempty.
+Pushforward by the continuous time shifts gives the group on
+\(\mathcal P(\Omega)\); for each bounded continuous test function,
+dominated convergence proves weak continuity in time. Ordinary
+restriction and normalization give the stated conditioning rule.
+
+For the marginal claim, the proper continuous surjection \(e_0\) has a
+Borel section \(s:\mathbb R^2\to\Omega\). One justification is the
+Kuratowski--Ryll-Nardzewski measurable-selection theorem
+(\href{https://www.cambridge.org/core/services/aop-cambridge-core/content/view/30345D24D3DFFAAF9CE805C30EE959C6/S0008414X00041699a.pdf/some_selection_theorems_for_measurable_functions.pdf}{statement},
+theorem statement read): the compact-valued fiber map is
+Borel-measurable, since the image under a proper map of a closed set is
+closed and an open set in a metric space is a countable union of closed
+sets. Hence \(s_*\nu\) is a history preparation with instantaneous
+marginal \(\nu\) for any \(\nu\in\mathcal P(\mathbb R^2)\). A Dirac
+history has a Dirac instantaneous marginal, with \(\kappa=0\).
+\(\square\)
+
+The theorem constructs reversible \emph{history} evolution, not a
+reversible map on laws of \((q,p)\) alone. Take two histories that
+arrive at the cusp from opposite sides. At their common arrival time
+their instantaneous marginals are both \(\delta_{(0,0)}\), while the
+full states and their pasts remain distinct. The resting history and a
+departing history have the same instantaneous marginal at time zero but
+different future marginals, so no single map on phase laws can represent
+the shift for all history states. Moreover, the resting solution and the
+two solutions which leave after any prescribed delay \(a\ge0\) have the
+same entire \((q,p)\) past up to time zero but different futures. Thus a
+deterministic completion representing all these possibilities must carry
+information beyond that past. In (H4) the chosen future is part of the
+state. The construction does not show that this information has a
+finite-dimensional, local Hamiltonian realization or is accessible to a
+physical observer.
+
+Because the phase marginal class is all of \(\mathcal P(\mathbb R^2)\),
+it is weakly closed, affine-canonically invariant, and closed under
+classical product preparations, canonical mixing and marginalization
+\textbf{as a class of single-time laws}. The Borel section is a
+state-preparation selection; it is not a proof of a reversible canonical
+mixer acting on the enlarged history states. Nor does the instantaneous
+marginal determine its later law. The preparation-floor theorem
+explicitly assumes that a reversible evolution acts on those marginals
+themselves; Theorem 1 does not satisfy that premise, so the two results
+are consistent.
+
+\hypertarget{a-continuous-classical-family-with-nonuniform-zero-width-limit}{%
+\subsection{3. A continuous classical family with nonuniform zero-width
+limit}\label{a-continuous-classical-family-with-nonuniform-zero-width-limit}}
+
+Let \(X,Y\) be independent standard normal variables. For fixed
+\(u\in\mathbb R\) and \(\epsilon>0\), prepare
+
+\[
+ q_0=\epsilon L_0(u+X),\qquad p_0=\epsilon P_0Y. \tag{H5}
+\]
+
+The energy-zero set is Lebesgue-null, so (H5) selects unique global
+trajectories almost surely. Equivalently, lift the law by the section
+\(s\): different choices of \(s\) agree almost surely here. Let \(\Phi\)
+denote the standard normal distribution function.
+
+\textbf{Theorem 2.} Let \(0<T<(R/B)^{1/\beta}\). As \(\epsilon\to0\),
+the initial law of (H5) converges weakly to \(\delta_{(0,0)}\) for every
+fixed \(u\), and
+
+\[
+ \kappa_\epsilon=S_0\epsilon^2,\qquad
+ \operatorname{Law}\bigl((q(t),p(t))_{0\le t\le T}\bigr)
+ \Longrightarrow
+ \Phi(u)\,\delta_{\Gamma_+}+\Phi(-u)\,\delta_{\Gamma_-}
+ \quad\text{in }C([0,T],\mathbb R^2). \tag{H6}
+\]
+
+Every mixture weight strictly between zero and one is obtained by a
+fixed \(u\). For either pure branch one may instead take
+\(u=u_\epsilon\to\pm\infty\) with \(\epsilon|u_\epsilon|\to0\). The
+distributions are classical ensembles of Newton trajectories, with no
+supplied \(\hbar\).
+
+\emph{Proof.} The first limit and covariance are immediate. Fix a
+realization with \(u+X\ne0\) and finite \(Y\). Its initial energy is,
+for small \(\epsilon\),
+
+\[
+ E_\epsilon=\frac{\epsilon^2P_0^2Y^2}{2m}
+            -\lambda\,|\epsilon L_0(u+X)|^k<0. \tag{H7}
+\]
+
+Indeed \(k<2\). Thus it cannot reach \(q=0\), so its sign remains that
+of \(u+X\). Its turning distance
+\(a_\epsilon=(-E_\epsilon/\lambda)^{1/k}\) satisfies
+\(0<a_\epsilon\le|q_0|\), and tends to zero. Inside \(|q|<R\),
+separation of the energy equation gives the time from the turning point
+to \(r\ge a\):
+
+\[
+ I_a(r)=\sqrt{\frac{m}{2\lambda}}\int_a^r
+              \frac{dv}{\sqrt{v^k-a^k}}. \tag{H8}
+\]
+
+For fixed \(0<r<R\), \(I_a(r)\to I_0(r)\) as \(a\downarrow0\), where
+
+\[
+ I_0(r)=\sqrt{\frac{m}{2\lambda}}\frac{2}{1-\alpha}
+                    r^{(1-\alpha)/2},\qquad I_0^{-1}(t)=Bt^\beta.
+ \tag{H9}
+\]
+
+For the convergence, the part from \(a\) to \(2a\) is
+\(O(a^{(1-\alpha)/2})\); on \(v\ge2a\) the integrand is dominated by a
+constant times \(v^{-k/2}\), which is integrable at zero. Moreover,
+
+\[
+ I_a(r)\le \sqrt{\frac{m}{2\lambda}}\frac{2}{1-\alpha}
+                 (r-a)^{(1-\alpha)/2}, \tag{H10}
+\]
+
+since \(v^k-a^k\ge(v-a)^k\) for \(k>1\). Hence the time from the initial
+point to its turning point is \(I_{a_\epsilon}(|q_0|)\to0\). The outward
+time to any fixed \(r\) is \(I_{a_\epsilon}(r)\) plus or minus this
+vanishing initial term. Bracketing fixed times by the hitting times of
+two nearby radii proves \(q(t)\to\operatorname{sgn}(u+X)Bt^\beta\) for
+each \(t>0\). The energy equation gives the corresponding momentum
+limit, with outward sign. For \(T\) as stated the limiting path remains
+inside \(|q|<R\); the same hitting-time argument keeps the approximating
+paths there for all sufficiently small \(\epsilon\).
+
+The bounded-force estimates give equicontinuity of both coordinates on
+\([0,T]\), so the pointwise convergence is uniform there. It holds for
+almost every \((X,Y)\), and bounded convergence of continuous path
+functionals gives (H6). If \(u_\epsilon\to\pm\infty\) with
+\(\epsilon|u_\epsilon|\to0\), the same argument has eventual fixed sign
+for each \((X,Y)\) and gives the corresponding pure branch. \(\square\)
+
+\textbf{Fixed-width continuity.} Let
+\(\mu_{z,\epsilon}=s_*\mathcal N(z,\epsilon^2I)\) on \(\Omega\), with
+\(z\) dimensionless. For all centers \(z,w\) and every \(t\),
+
+\[
+ \bigl\|(T_t)_*\mu_{z,\epsilon}-(T_t)_*\mu_{w,\epsilon}\bigr\|_{\rm TV}
+ \le \frac{|z-w|}{\sqrt{2\pi}\,\epsilon}. \tag{H11}
+\]
+
+Here total variation is the supremum over measurable events. Pushforward
+cannot increase it. For the Gaussian bound, interpolate its center along
+the line from \(z\) to \(w\) and integrate the absolute directional
+derivative: half its integral is \(1/(\sqrt{2\pi}\epsilon)\) per unit
+center distance. Equation (H11) applies to any subsequent fixed
+measurable record, including a complete history record. Its constant
+diverges as \(\epsilon\downarrow0\).
+
+The divergence cannot be removed uniformly. Fix \(0<t<T\) and a bounded
+continuous \(f\) with \(f(Bt^\beta)=1\) and \(f(-Bt^\beta)=0\); a
+clipped linear function suffices. For the two centers
+\(z_\pm=(\pm\epsilon,0)\), Theorem 2 gives
+
+\[
+ \lim_{\epsilon\downarrow0}
+ \left[\mathbb E_{z_+,\epsilon}f(q(t))-
+       \mathbb E_{z_-,\epsilon}f(q(t))\right]
+ =2\Phi(1)-1>0. \tag{H12}
+\]
+
+The two initial centers are only \(2\epsilon\) apart. Thus no common
+modulus of continuity tending to zero can hold for these responses as
+\(\epsilon\) varies. A uniform response modulus would exclude the
+zero-width sequence; it is an extra physical premise, not a consequence
+of continuity at each fixed width. More concretely, if the absolute
+response difference is bounded by \(L|z-w|\) for some \(L>0\), uniformly
+over all allowed widths, and both translated preparations at each such
+width are admitted, (H12) implies an \(\epsilon_0>0\) such that widths
+below \(\min\{\epsilon_0,[2\Phi(1)-1]/(4L)\}\) are excluded for this
+family. This conditional bound does not identify \(S_0\epsilon^2\) with
+\(\hbar\) and does not establish the response premise for physical
+records.
+
+\textbf{Corollary.} No evolution on phase-space probability laws which
+agrees with the actual Newton transport of all the Gaussian laws (H5)
+can be weakly continuous at \(\delta_{(0,0)}\) at any fixed
+\(t\in(0,T)\). Indeed all the inputs have that same weak limit while
+(H6) gives distinct output limits for different \(u\). This obstruction
+does not require injectivity or a rule for the exact point at the
+origin. It does require the indicated Gaussian preparations and their
+actual cusp transport.
+
+\hypertarget{reversible-instantaneous-preparations}{%
+\subsection{4. Reversible instantaneous
+preparations}\label{reversible-instantaneous-preparations}}
 
 Let \(\mathcal S\) be a nonempty subset of probability measures on the
 canonical plane, containing at least one measure with finite covariance.
@@ -183,7 +397,7 @@ For a finite-covariance preparation write
 This has action units. The theorem concerns covariance, including its
 cross term, rather than the coordinate product alone.
 
-\textbf{Theorem.} Under properties 1--3,
+\textbf{Theorem R.} Under properties 1--3,
 
 \[
  0<\kappa_*:=\inf_{\substack{\mu\in\mathcal S\\
@@ -259,7 +473,7 @@ proves no identification. The full Planck constant would be
 \(h=2\pi\hbar\), not \(\hbar\).
 
 \hypertarget{which-assumptions-do-the-work}{%
-\subsection{3. Which assumptions do the
+\subsubsection{Which assumptions do the
 work?}\label{which-assumptions-do-the-work}}
 
 Without weak closure, excluding exact points leaves preparations with
@@ -285,9 +499,93 @@ the full canonical preparation class, and the exact cusp force is open.
 Restricting all forces to smooth Lipschitz laws removes this particular
 selector.
 
-\hypertarget{a-classical-model-satisfies-all-three-premises}{%
-\subsection{4. A classical model satisfies all three
-premises}\label{a-classical-model-satisfies-all-three-premises}}
+\hypertarget{a-continuity-selector-without-reversibility}{%
+\subsection{5. A continuity selector without
+reversibility}\label{a-continuity-selector-without-reversibility}}
+
+The Gaussian branch-limit corollary yields a different conditional
+action theorem. It uses actual Newton transport of nonpoint
+preparations, rather than compatibility only for point preparations if
+any exist.
+
+\textbf{Theorem 3.} Use the \(W_2\) metric in the calibrated
+coordinates, and let \(\mathcal S\subset\mathcal P_2(\mathbb R^2)\)
+satisfy:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\mathcal S\) contains a state with positive-definite covariance and
+  is invariant under affine canonical transformations.
+\item
+  \(\mathcal S\) is closed under \(W_2\) convergence. Independent finite
+  products of members, followed by copy-index orthogonal canonical
+  mixing and retention of one output pair, produce members of
+  \(\mathcal S\), as specified in §1 of the
+  \href{central-limit-canonical-gaussian-sector.md}{central-limit note}.
+\item
+  At one fixed \(t\in(0,(R/B)^{1/\beta})\), there is a map
+  \(\mathcal E_t:\mathcal S\to\mathcal P(\mathbb R^2)\) which is
+  continuous from \(W_2\) convergence of inputs to weak convergence of
+  outputs. For every nondegenerate Gaussian member of \(\mathcal S\),
+  its output is the actual almost-everywhere Newton transport under the
+  bounded cusp equation.
+\end{enumerate}
+
+Then the infimum of \(\kappa\) on \(\mathcal S\) is strictly positive.
+The map \(\mathcal E_t\) need not be invertible, form a semigroup, or
+map back into \(\mathcal S\) for this conclusion.
+
+\emph{Proof.} Work in calibrated coordinates. Suppose the infimum is
+zero and choose states with covariance matrices \(C_n\) and
+\(\det C_n\to0\). Translate their means to zero. Choose \(\eta_n>0\)
+such that \(D_n=C_n+\eta_n I\) has \(\det D_n\to0\), and put
+\(A_n=(\det D_n)^{1/4}D_n^{-1/2}\). In one pair \(\det A_n=1\), and
+
+\[
+ A_nC_nA_n^{\mathsf T}\le\sqrt{\det D_n}\,I. \tag{H12a}
+\]
+
+The transformed admissible states have second moment tending to zero, so
+they converge to \(\delta_0\) in \(W_2\); closure admits \(\delta_0\).
+
+By the central-limit result, a positive-definite covariance member
+yields an admissible Gaussian with the same covariance. Translation and
+a determinant-one transformation give an admissible
+\(G=\mathcal N(0,\zeta I)\) for some \(\zeta>0\). For each \(n\), take
+one independent copy of \(G\) and \(n-1\) copies of \(\delta_0\), then
+use an orthogonal copy-index mixer whose first row is
+\((1,\ldots,1)/\sqrt n\). The retained pair has law
+\(\mathcal N(0,(\zeta/n)I)\). Translations therefore admit both Gaussian
+inputs (H5) with \(\epsilon_n=\sqrt{\zeta/n}\) and \(u=\pm1\).
+
+Both input sequences converge to \(\delta_0\) in \(W_2\). The continuity
+assumption forces their output sequences to have the same weak limit
+\(\mathcal E_t\delta_0\). Actual Newton transport and Theorem 2 give two
+different branch mixtures instead. This is a contradiction. \(\square\)
+
+The assumptions are consistent in a classical model. The entropy-floor
+class \(\mathcal E_\zeta\) of §6 of the central-limit note has a
+\textbf{supplied} \(\zeta>0\), is \(W_2\)-closed, has the required
+canonical copy-index mixers, and is transported by the actual cusp flow.
+Its members are absolutely continuous. The classical flow is continuous
+at every initial state off the energy-zero set: bounded-force
+compactness and uniqueness there give continuous dependence. The
+exceptional set has Lebesgue measure zero, so the extended
+continuous-mapping theorem gives weak continuity of the transport on
+\(\mathcal E_\zeta\) under \(W_2\)-convergent inputs. This provides a
+nonvacuous classical witness for the full continuity premise; its
+positive action is inherited from its imposed entropy bound.
+
+The theorem therefore identifies a possible independently motivated
+stability requirement and makes its consequence explicit. It does not
+establish that all physical preparations obey the copy, closure and
+continuity rules, or that the selected floor is universal or quantum.
+
+\hypertarget{classical-witnesses-and-their-limits}{%
+\subsection{6. Classical witnesses and their
+limits}\label{classical-witnesses-and-their-limits}}
 
 Fix a finite density ceiling \(M>0\), of reciprocal-action units, and
 let
@@ -330,16 +628,16 @@ The floor can be computed sharply:
 \]
 
 To check it, center and canonically isotropize a positive covariance as
-in section 2, now without regularization. In the calibrated plane the
-density cap is \(M S_0\). Among probabilities with this cap the minimum
-of \(\mathbb E(Q^2+P^2)\) is attained by filling the disk about zero at
-maximum density: moving mass from a larger radius into any unfilled
-smaller radius reduces the expectation. The disk has radius
-\(a_0^2=1/(\pi M S_0)\) and mean square radius \(a_0^2/2\). Isotropy
-gives \(2\kappa/S_0\ge1/(2\pi M S_0)\), proving the bound. A uniform
-canonical ellipse, the image of this disk, attains equality. A singular
-covariance would concentrate a density on a line and is impossible in
-(12).
+in the reversible preparation proof, now without regularization. In the
+calibrated plane the density cap is \(M S_0\). Among probabilities with
+this cap the minimum of \(\mathbb E(Q^2+P^2)\) is attained by filling
+the disk about zero at maximum density: moving mass from a larger radius
+into any unfilled smaller radius reduces the expectation. The disk has
+radius \(a_0^2=1/(\pi M S_0)\) and mean square radius \(a_0^2/2\).
+Isotropy gives \(2\kappa/S_0\ge1/(2\pi M S_0)\), proving the bound. A
+uniform canonical ellipse, the image of this disk, attains equality. A
+singular covariance would concentrate a density on a line and is
+impossible in (12).
 
 Thus the conditional theorem is consistent and genuinely weaker than
 quantum kinematics. Its classical witness already carries a supplied
@@ -352,20 +650,69 @@ and records preserving its allowed states.
 
 \textbf{Composition test, 2026-10-27.} The witness \(\mathcal S_M\) is
 not closed under the independent-copy canonical mixer and
-marginalization used in the subsequent
+marginalization used in the
 \href{central-limit-canonical-gaussian-sector.md}{central-limit
 calculation}. Indeed, for \(f=M1_E\) with \(E=-E\) and area \(1/M\), the
 law of \((Z_1+Z_2)/\sqrt2\) from independent copies has density
 \(f_+(0)=2\int f(z)f(-z)\,dz=2M\), and is continuous near zero. The
 covariance and its action are unchanged for identical copies, but the
-pointwise density ceiling is violated. The theorem above and this
-classical single-system witness remain valid at their stated scope; they
-do not establish the added multi-copy closure.
+pointwise density ceiling is violated. Theorem R and this classical
+single-system witness remain valid at their stated scope; they do not
+establish the added multi-copy closure.
 
-\hypertarget{a-supplied-positive-hbar-gives-a-complete-quantum-comparison}{%
-\subsection{\texorpdfstring{5. A supplied positive \(\hbar\) gives a
-complete quantum
-comparison}{5. A supplied positive \textbackslash hbar gives a complete quantum comparison}}\label{a-supplied-positive-hbar-gives-a-complete-quantum-comparison}}
+\hypertarget{fine-records-and-the-action-floor}{%
+\subsection{7. Fine records and the action
+floor}\label{fine-records-and-the-action-floor}}
+
+\textbf{Theorem 4.} Let \(\mathcal S\) be a nonempty class of Borel
+probabilities on the classical phase plane. Suppose that, for every
+\(\nu\in\mathcal S\) and every bounded open ball \(D\) in the calibrated
+\((q/L_0,p/P_0)\) plane with \(\nu(D)>0\), the ordinary conditional law
+\(\nu(\cdot\mid D)\) is again in \(\mathcal S\). Then
+
+\[
+ \inf_{\nu\in\mathcal S,\ \operatorname{Cov}\nu<\infty}
+ \sqrt{\det\operatorname{Cov}_\nu(q,p)}=0. \tag{H13}
+\]
+
+If \(\mathcal S\) is also weakly closed, it contains a Dirac measure.
+
+\emph{Proof.} Every probability has a point \(z_*\) in its support. The
+balls \(D_r\) of radius \(r>0\) centered there have positive
+probability. For the calibrated conditional covariance \(C_r\), bounded
+support and centering at the conditional mean give
+\(\operatorname{tr} C_r\le r^2\). Therefore
+
+\[
+ \kappa\bigl(\nu(\cdot\mid D_r)\bigr)
+ =S_0\sqrt{\det C_r}\le\tfrac12 S_0\operatorname{tr}C_r
+ \le\tfrac12S_0r^2. \tag{H14}
+\]
+
+These conditional laws have finite covariance and converge weakly to
+\(\delta_{z_*}\) as \(r\downarrow0\). This proves both statements.
+\(\square\)
+
+The premise is an ideal, nondisturbing, arbitrarily fine \emph{joint}
+record of classical position and momentum, with each
+positive-probability outcome admitted as a new preparation. It is not a
+theorem that every physical instrument has this property. Theorem I of
+the \href{necessity-unit-and-indeterminacy.md}{necessity note}
+constructs a more specific two-pointer Hamiltonian protocol even with a
+prior density ceiling, but has its own explicit access and storage
+assumptions. In particular a prior cap alone does not supply the
+postulate needed to preserve a floor after records.
+
+Combining (H13) with Theorem R shows that its nonempty,
+finite-covariance preparation class cannot also satisfy the fine-record
+postulate. Equivalently, with weak closure and affine translations, the
+records would admit the two point preparations that merge, contradicting
+its reversible phase-state evolution. This is an incompatibility among
+assumptions, not a proof that any one of them is physically mandatory.
+
+\hypertarget{quantum-dynamics-and-instruments-at-supplied-action}{%
+\subsection{8. Quantum dynamics and instruments at supplied
+action}\label{quantum-dynamics-and-instruments-at-supplied-action}}
 
 For every \(\hbar>0\), the same bounded real potential has
 
@@ -387,22 +734,101 @@ edition{]}, with the free domain in Theorem 7.8, pp.167--168. See the
 
 This comparison needs neither an unbounded collision force nor a choice
 of singular boundary condition. It still supplies \(\hbar>0\); the
-classical model of section 4 prevents inferring that this is the only
+classical density witness prevents inferring that this is the only
 completion. The quantum state space also is not a class of positive
 joint canonical probabilities with unrestricted classical conditioning.
-No such identification was used in section 2. No relativistic premise
+No such identification was used in Theorem R. No relativistic premise
 enters, so no \(c\) is needed.
 
-\hypertarget{consequence-for-state}{%
-\subsection{6. Consequence for STATE}\label{consequence-for-state}}
+\hypertarget{what-the-covariance-resemblance-does-not-imply}{%
+\subsubsection{What the covariance resemblance does not
+imply}\label{what-the-covariance-resemblance-does-not-imply}}
 
-The link from Lipschitz control to Newton's polygons now has a
-complement: continuous bounded forces suffice for polygon existence but
-can merge full point states, obstructing reversibility there. Weak
-preparation closure and canonical covariance convert that obstruction
-into a conditional positive covariance action scale. The density-ceiling
-control leaves quantum identification and physical record closure open.
-Next test whether a record/composition principle can independently
-justify or replace these closure premises, rather than assuming a
-numerical floor or discarding classical enlarged-state completions.
+For every supplied physical \(\hbar>0\), the self-adjoint Hamiltonian
+above gives a global quantum unitary group. For a quantum state with
+finite position and momentum covariances, the Robertson--Schrödinger
+inequality gives
+
+\[
+ \sqrt{\det\operatorname{Cov}(Q,P)}\ge\hbar/2. \tag{Q15}
+\]
+
+This remains true after any selective instrument whose conditional
+output is a quantum state with finite covariance. There is nevertheless
+an exact initial-state comparison: set
+
+\[
+ \epsilon_\hbar=\sqrt{\frac{\hbar}{2S_0}},\qquad
+ \sigma_q=L_0\epsilon_\hbar,\quad
+ \sigma_p=P_0\epsilon_\hbar. \tag{Q15a}
+\]
+
+The Gaussian in the Gaussian preparation family then has
+\(\kappa=\hbar/2\) and is exactly the Wigner function of the normalized
+quantum wavefunction
+
+\[
+ \psi_{\hbar,u}(q)=(2\pi\sigma_q^2)^{-1/4}
+ \exp\!\left[-\frac{(q-u\sigma_q)^2}{4\sigma_q^2}\right]. \tag{Q15b}
+\]
+
+Thus covariance saturation and even equality of these \emph{initial}
+positive phase-space functions do not by themselves select the
+subsequent quantum propagation or an interference law. The classical
+limit in Theorem 2 then corresponds to a formal \(\hbar\to0\) family at
+fixed \(S_0\); no equality of the quantum and classical evolved states
+is asserted. At fixed physical \(\hbar\), a small ratio \(\hbar/S_0\)
+describes a large-characteristic-action regime only when \(L_0,P_0\)
+specify actual scales of a family of preparations, not merely a change
+of units.
+
+Equation (Q15) does not arise by conditioning a positive joint
+sharp-position--sharp-momentum law: the canonical Weyl operators obey
+
+\[
+ e^{-iaP/\hbar}e^{ibQ/\hbar}
+   =e^{-iab/\hbar}e^{ibQ/\hbar}e^{-iaP/\hbar}, \tag{Q16}
+\]
+
+and are noncommuting for general \(a,b\). An approximate joint
+measurement can still have two classical outcomes; those outcomes are
+not the nondisturbing sharp joint record assumed in Theorem 4. The
+positive quantum constant in (Q15)--(Q16) is an input. Conversely, the
+classical history model has no noncommuting observables or demonstrated
+interference law, and its apparent probabilistic branch splitting in
+(H6) is not a coherent superposition.
+
+There is an independently motivated empirical separator, with additional
+composite-system hypotheses. Under setting independence and conditional
+locality, an arbitrary classical hidden state including trajectory
+memory satisfies \(|S_{\rm CHSH}|\le2\); the short proof and its precise
+assumptions are in the \href{shared-readiness-chsh.md}{shared-readiness
+note}. A Bell test with spacelike-separated electron-spin measurements
+reported \(S_{\rm CHSH}=2.42\pm0.20\) in 245 trials
+(\href{https://doi.org/10.1038/nature15759}{Hensen et al.~2015}, primary
+abstract read). Its setting-independence and locality interpretation is
+an additional physical premise, motivated by the relativistic causal
+setup; the recorded statistical uncertainty matters. The normalized
+inequality is dimensionless, so this observation does not determine an
+action scale or select quantum theory uniquely. Nonlocal or
+setting-dependent classical completions are not excluded by this bound.
+
+\hypertarget{consequence-for-state}{%
+\subsection{9. Consequence for STATE}\label{consequence-for-state}}
+
+Reversible complete histories, reversible phase laws, continuous
+nonpoint cusp transport and selective-record closure are different
+premises. The explicit classical countermodels must accompany either
+conditional floor theorem. The
+\href{central-limit-canonical-gaussian-sector.md}{canonical central
+limit} proves Gaussian-sector closure under copying; the
+\href{gaussian-meter-entropy-floor.md}{Gaussian meter} separately
+defeats selective closure of the entropy witness and shows why a
+Gaussian-mixture repair fails nonlinear classical transport. The
+\href{cusp-quantum-preparation-selection.md}{quantum preparation
+selection} constructs semiclassical outgoing branches under supplied
+quantum dynamics. Those arguments have different hypotheses and remain
+separate. An independently justified physical continuity or instrument
+law, and its identification with a universal physical \(\hbar\), are
+still missing.
 \end{document}

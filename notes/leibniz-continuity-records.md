@@ -1,7 +1,7 @@
 # Leibniz's law of continuity, read on records, selects a positive action floor for motions
 
 **Result, 2026-09-29 (Claude; written derivation and passage readings;
-refereed by Fable with REFINE, corrections applied).** In the mark model of
+internally reviewed by Fable with REFINE, corrections applied).** In the mark model of
 the [Planck paper](planck-gap-paper.md) (§3), the infimum of the error with
 which a non-adaptive protocol, read by tests invariant under the unknown
 initial position and velocity, decides Newton's comparison, inertia against
@@ -51,7 +51,7 @@ over indivisibles, Galileo, Cavalieri and Guldin between 1621 and 1647,
 concerned static figures, where the theorem imposes no floor and Newton's
 limit doctrine is the right answer (§4).
 
-**After refereeing (Claude Fable, 2026-09-29).** REFINE, applied. The
+**Internal model review (Claude Fable, 2026-09-29).** REFINE, applied. The
 mathematics of Proposition L checked, including the $\kappa=0$ case and the
 static case; its equivalence at $F=0$ needs only Theorem 2's inequality.
 Fable supplied the exact single-cut share $3s(1-s)K_\tau/\kappa$, now in §1 and §3.
@@ -70,6 +70,8 @@ confidence bound, the transfer of Rule III from parts of bodies to records
 marked as ours, and Quaestio 23 of the 1706 *Optice* named.
 
 ## 1. The proposition
+
+**Availability premise.** For $\kappa>0$, product-saturating marks at every positive resolution and the unbounded end-mark/dense-protocol limiting family are admitted. At $\kappa=0$, arbitrarily accurate zero-recoil marks (or an equivalent balanced zero-noise family) are admitted. A lower product bound alone implies none of this availability. Aperture bounds below apply to every hybrid/translated conditional state used by the argument.
 
 **Setting.** The statistical model of the Planck paper, §3: mark $j$ at time
 $t_j$ returns the position with Gaussian error of standard deviation
@@ -122,7 +124,7 @@ spread along the way.
 
 **Both observers, at bounded aperture.** For the observer who knows the
 preparation, Theorem 2 of the
-[probabilistic note](planck-gap-probabilistic.md) covers every finite
+[probabilistic note](record-distance-path-length.md#single-shot-displacement-and-the-aperture-theorem) covers every finite
 adaptive protocol of instruments, with any Kraus operators and apparatus
 memory, whose conditional states keep the body within an aperture $(L,P)$:
 deciding at error $\epsilon$ requires $F\tau L/\hbar+F\tau^2P/(2m\hbar)\ge1-2\epsilon$. Hence, with $P_*$ now
@@ -132,7 +134,7 @@ so the best verdict is continuous at $F=0$ whenever $\hbar>0$ and the aperture
 is bounded, while a classical apparatus with sharp preparations decides at
 every $F\ne0$. Yuen's protocol escapes only by letting $L$ or $P$ grow as $F$
 shrinks, an idealization of the same kind as the perfect instrument. For the preparation-ignorant observer, Theorem R of the
-[recoil note](record-costs-recoil.md), proved for non-adaptive protocols
+[recoil note](record-distance-path-length.md#recoil-only-bound-for-arbitrary-probe-states), proved for non-adaptive protocols
 with any product probe states (constant $1-2\epsilon$, sharpened to $\arcsin(1-2\epsilon)$
 by the path-length note) and extended there to adaptive choices by the
 hybrid argument with each $\Delta_j$ taken as its supremum at step $j$, gives
@@ -226,7 +228,7 @@ the parametrized family of recorded states in statistical distance
 in which classical pure states are pairwise perfectly distinguishable. It is
 weaker than Hardy's continuity axiom, which asks for a continuous reversible
 transformation between pure states (see the
-[Hardy audit](quantum-exclusion-premises.md)); continuity axioms separate
+[Hardy audit](classical-orientation-closure.md#what-reconstruction-premises-add)); continuity axioms separate
 classical from quantum theory also in
 [Masanes and Müller 2011](https://doi.org/10.1088/1367-2630/13/6/063001) and
 [Chiribella, D'Ariano and Perinotti 2011](https://doi.org/10.1103/PhysRevA.84.012311).
@@ -280,7 +282,7 @@ passage, OCR normalized by hand).
   is sound against a leap of fixed size: Newton's mechanics has the
   two-parameter similarity $x\to\lambda x$, $t\to\mu t$ (the dilations of the
   [fifth-postulate note](principia-fifth-postulate.md), the zoom of the
-  [tangent-groupoid note](tangent-groupoid-trajectories.md)), and a length breaks it. A floor on action fixes no length of its own; a
+  [tangent-groupoid note](groupoid-quantum-newton-states.md#geometric-zoom-and-kernel-composition)), and a length breaks it. A floor on action fixes no length of its own; a
   length appears only with a force and a mass, as the mesh $\tau_*$ and its
   sagitta do. Under $x\to\lambda x$, $t\to\lambda^2t$ at
   fixed mass, $F\to F/\lambda^3$ and $K_\tau=F^2\tau^3/(24m)$ is invariant, as is $mv^2\tau$, so
@@ -500,7 +502,7 @@ renumbered 31 in the English edition of 1717 (recalled, not read here).
   a scale. In the mechanics of the *Principia* a body bound by an
   inverse-square force has no preferred size (if $r(t)$ is an orbit, so is $\lambda r(\lambda^{-3/2}t)$, Kepler's third law), so identical sizes for bound systems of one kind need a
   constant beyond Newton's. He supplies hardness by fiat. The
-  [relativistic Kepler note](relativistic-kepler-threshold.md) shows that
+  [relativistic Kepler note](action-unit-dimensional-selection.md#singular-and-softened-relativistic-coulomb-cores) shows that
   finite propagation speed, which Newton accepts (*Opticks* II.iii Prop.
   XI), turns singular inverse-square binding into an action threshold $|L|>k/c$;
   the threshold fixes no size, since circular radii still range over

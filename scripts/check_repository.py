@@ -154,6 +154,8 @@ def main():
                   ("index.html", "research.html", "archive.html", "tutorial.html", "papers.html", "ledger.html")]
     navigation += [ROOT / name for name in sorted(generated)
                    if name.startswith("docs/maps/") and name.endswith(".html")]
+    navigation += [ROOT / name for name in sorted(generated)
+                   if name.startswith("docs/notes/") and name.endswith(".html")]
     pages = {}
     for path in navigation:
         if not path.exists():

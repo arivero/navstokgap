@@ -15,7 +15,7 @@ The ratio of orbital action to a proposed fixed action scale is a useful
 dimensionless parameter. The receding-centre comparison can make the relation
 between projectile geometry and central swept area precise.
 
-The [area audit](../notes/receding-centre-area-audit.md) checks the finite-centre
+The [area audit](../notes/newton-insertion-action.md#a-genuine-receding-centre-subtract-before-taking-the-limit) checks the finite-centre
 limit and keeps matched-endpoint action differences separate from comparisons
 ending at different positions. A03 returns these calculations to the continuum
 limit of the cut points.
@@ -54,7 +54,7 @@ deriving positive action from independently classical premises.
 ## Historical routing
 
 Newton records an objection concerning ultimate ratios and answers it in the
-closing Scholium. Use the [Principia source note](../notes/principia-constant-force-action.md)
+closing Scholium. Use the [Principia source note](../notes/newton-insertion-action.md#the-source-geometry-and-three-different-areas)
 for the actual wording. Attributing an unresolved action-scale suspicion to
 Newton requires additional dated evidence; H02/H03 retain that task.
 

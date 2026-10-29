@@ -1,4 +1,4 @@
-# The mass gap as a finite list of theorems: the Hamiltonian lattice route
+# Gauge spectral limits: finite lattices, coupling sets and the continuum target
 
 
 The Hamiltonian route has distinct steps. T1 gives a unique physical
@@ -20,9 +20,9 @@ volume and cutoff limits are separate.
 Let $G$ be a compact connected simple Lie group with Lie algebra basis
 $T^a$ normalized by $\operatorname{tr}T^aT^b=\tfrac12\delta^{ab}$ in a
 fixed faithful representation (for $SU(N)$ the fundamental). Let
-$\Lambda=(a\mathbb Z/Na\mathbb Z)^3$ be the periodic spatial lattice with
-spacing $a$, side $L=Na$, link set $\mathcal E$ and plaquette set
-$\mathcal P$; $|\mathcal E|=3N^3$, $|\mathcal P|=3N^3$. The Hilbert space
+$\Lambda=(a\mathbb Z/N_sa\mathbb Z)^3$ be the periodic spatial lattice with
+spacing $a$, side $L=N_sa$, link set $\mathcal E$ and plaquette set
+$\mathcal P$; $|\mathcal E|=3N_s^3$, $|\mathcal P|=3N_s^3$. The Hilbert space
 is $\mathcal H=L^2(G^{\mathcal E},\mathrm{Haar}^{\otimes\mathcal E})$. On
 the copy of $G$ attached to a link $\ell$, the electric field components
 $E^a_\ell$ are $-i$ times the left-invariant vector fields, and
@@ -34,11 +34,12 @@ convention used here is
 $$H=\frac{\hbar c}{a}\Big[\frac{g^2}{2}\sum_{\ell\in\mathcal E}(-\Delta_\ell)
 +\frac{2}{g^2}\sum_{p\in\mathcal P}\big(N-\operatorname{Re}\operatorname{tr}U_p\big)\Big]
 =\frac{\hbar c}{a}\,\big[g^2K+g^{-2}V\big],$$
-with $g$ dimensionless, $U_p$ the ordered product of the four link
+Here the plaquette trace constant $N$ is the faithful representation dimension (the colour $N$ for $SU(N)$), distinct from the number $N_s$ of sites per side. The scaled operators are $K=\tfrac12\sum_\ell(-\Delta_\ell)$ and $V=2\sum_p(N-\operatorname{Re}\operatorname{tr}U_p)$.
+With $g$ dimensionless, $U_p$ the ordered product of the four link
 variables around $p$, and $K$, $V$ the dimensionless electric and magnetic
 operators. Other conventions rescale $g^2$ by a fixed number. The
-dimensionless spectrum of $aH/(\hbar c)$ depends on $g$, $N$ and $G$ only:
-$$\Delta_{a,L}=\frac{\hbar c}{a}\,\delta(g;N,G).$$
+dimensionless spectrum of $aH/(\hbar c)$ depends on $g$, $N_s$ and $G$ only:
+$$\Delta_{a,L}=\frac{\hbar c}{a}\,\delta(g;N_s,G).$$
 
 Gauge transformations $\gamma:\Lambda\to G$ act by
 $(\mathcal V_\gamma\psi)(U)=\psi(\gamma_xU_\ell\gamma_y^{-1})$ for
@@ -49,7 +50,7 @@ is the joint fixed space (Gauss's law).
 
 ## 2. T1: every finite lattice has a gap above a unique physical ground state
 
-**Theorem 1.** For every $a>0$, $N\ge2$, $g>0$ and $G$ as above:
+**Theorem 1.** For every $a>0$, $N_s\ge2$, $g>0$ and $G$ as above:
 
 1. $H$ is self-adjoint, bounded below, and has compact resolvent; its
    spectrum is a sequence $E_0<E_1<\cdots\to\infty$ of eigenvalues of
@@ -63,11 +64,11 @@ is the joint fixed space (Gauss's law).
 $C^\infty(G)$, nonnegative, with compact resolvent, since $G$ is a compact
 manifold and Peter--Weyl gives the eigenvalues $C_2(R)$ with finite
 multiplicities and $C_2(R)\to\infty$ along any enumeration of irreducible
-representations. $K=\sum_\ell(-\Delta_\ell)$ acts on the finite tensor
-product with eigenvalues $\sum_\ell C_2(R_\ell)$; for each bound $E$ only
+representations. $K=\tfrac12\sum_\ell(-\Delta_\ell)$ acts on the finite tensor
+product with eigenvalues $\tfrac12\sum_\ell C_2(R_\ell)$; for each bound $E$ only
 finitely many assignments $\ell\mapsto R_\ell$ have $\sum_\ell C_2(R_\ell)\le E$,
 so $K$ has compact resolvent. $V$ is multiplication by a continuous
-function with $0\le V\le2N|\mathcal P|$, hence bounded, and a bounded
+function with $0\le V\le4N|\mathcal P|$, hence bounded, and a bounded
 perturbation of an operator with compact resolvent has compact resolvent
 by the resolvent identity
 $(H-z)^{-1}=(H_0-z)^{-1}[1+(g^{-2}V)(H_0-z)^{-1}]^{-1}$ for $z$ far in the
@@ -79,10 +80,10 @@ is strictly positive for $t>0$ (standard, from the strong maximum
 principle or the Peter--Weyl expansion; metadata level), so the kernel of
 $e^{-tK}$ on $G^{\mathcal E}$, a product of strictly positive kernels, is
 strictly positive. With Brownian motion $X_t$ on $G^{\mathcal E}$ generated
-by $K$ (time rescaled by $g^2\hbar c/a$), the Feynman--Kac formula gives
+by $-K$ (time rescaled by $g^2\hbar c/a$), the Feynman--Kac formula gives
 $$(e^{-tH}\psi)(U)=\mathbb E^U\Big[\exp\Big(-\frac{\hbar c}{ag^2}\int_0^tV(X_s)\,ds\Big)\psi(X_t)\Big],$$
 valid because $V$ is bounded and continuous. For $\psi\ge0$, $\psi\ne0$,
-the weight is at least $e^{-t\hbar c\cdot2N|\mathcal P|/(ag^2)}>0$ and the law
+the weight is at least $e^{-t\hbar c\cdot4N|\mathcal P|/(ag^2)}>0$ and the law
 of $X_t$ has a strictly positive density, so $(e^{-tH}\psi)(U)>0$ for
 every $U$: $e^{-tH}$ is positivity improving. Reed--Simon IV, Theorem
 XIII.44 (metadata; number corroborated as in B78) then gives that $E_0$ is
@@ -99,7 +100,7 @@ state $\psi_0$, and next eigenvalue at least $E_1$. $\square$
 
 Theorem 1 defines the object whose limits the conjecture is about. It
 proves nothing about those limits: $\Delta_{a,L}$ is $\hbar c/a$ times a
-number that may tend to zero as $N\to\infty$ or as $g\to0$.
+number that may tend to zero as $N_s\to\infty$ or as $g\to0$.
 
 ## 3. T2: strong coupling, and why volume uniformity is the whole difficulty
 
@@ -116,12 +117,11 @@ uniform in the side length under this restriction. At shorter periodic
 sides winding cycles can be shorter; nonabelian networks can also branch.
 
 **The naive bound fails.** The magnetic term satisfies
-$0\le g^{-2}V\le2N|\mathcal P|g^{-2}$ in operator norm, so Kato's
-perturbation bound gives $\Delta^{\rm phys}\ge\gamma_{\rm phys}-2\|g^{-2}V\|\hbar c/a
+$0\le g^{-2}V\le4N|\mathcal P|g^{-2}$ in operator norm, so positivity and min–max give $\Delta^{\rm phys}\ge\gamma_{\rm phys}-\|g^{-2}V\|\hbar c/a
 =(2C_2g^2-4N|\mathcal P|g^{-2})\hbar c/a$, positive only when
 $g^4>2N|\mathcal P|/C_2$. The bound is extensive in the volume and useless
-as $N\to\infty$. Volume uniformity therefore requires using that $V$ is a
-sum of $|\mathcal P|$ terms each of norm at most $2N g^{-2}$ and each
+as $N_s\to\infty$. Volume uniformity therefore requires using that $V$ is a
+sum of $|\mathcal P|$ terms each of norm at most $4N g^{-2}$ and each
 acting on four links: locality, not smallness of the norm.
 
 **What is established.** Osterwalder and Seiler (Ann. Phys. 110 (1978)
@@ -180,14 +180,14 @@ on $(0,\infty)$, and locally piecewise real-analytic. The same holds
 for the physical gap.
 
 *Proof.* Write
-$$h(g):=\frac{aH(g)}{\hbar c}=\frac{g^2}{2}K+\frac{2}{g^2}V,$$
-with $K=\sum_\ell(-\Delta_\ell)\ge0$ having compact resolvent and
-$V=\sum_p(N-\operatorname{Re}\operatorname{tr}U_p)$ bounded, with
-$0\le V\le2N|\mathcal P|$ for $SU(N)$ in the fundamental
+$$h(g):=\frac{aH(g)}{\hbar c}=\frac{g^2}{2}K_0+\frac{2}{g^2}V_0,$$
+with $K_0=\sum_\ell(-\Delta_\ell)\ge0$ having compact resolvent and
+$V_0=\sum_p(N-\operatorname{Re}\operatorname{tr}U_p)$ bounded, with
+$0\le V_0\le2N|\mathcal P|$ for $SU(N)$ in the fundamental
 representation. For a general compact connected group, use the fixed
 faithful representation and replace $N$ by its dimension. In a complex
 neighbourhood of any $g>0$, this is a holomorphic family of type (A)
-on the common domain $D(K)$. For real $g$ it is self-adjoint with compact
+on the common domain $D(K_0)$. For real $g$ it is self-adjoint with compact
 resolvent. The local analytic eigenvalue-branch theorem for a
 self-adjoint analytic family (Kato/Rellich analytic perturbation theory,
 standard theorem used here) supplies finitely many real-analytic
@@ -197,7 +197,7 @@ the minimum of the finitely many branches in its cluster, hence
 continuous. Distinct analytic branches have isolated crossings locally;
 identically coincident branches do not affect this conclusion. Thus
 the gap is locally piecewise analytic and continuous. T1 supplies its
-strict positivity. The gauge projection reduces both $K$ and $V$, so
+strict positivity. The gauge projection reduces both $K_0$ and $V_0$, so
 the same argument applies on the fixed physical subspace. $\square$
 
 **Correction (2026-10-02).** The original min--max explanation did not
@@ -479,16 +479,73 @@ give a gap uniform in the volume.
 
 | Statement | Content | Status |
 | --- | --- | --- |
-| T1 | finite lattice: unique physical ground state, gap $\Delta_{a,L}=(\hbar c/a)\delta(g;N,G)>0$ | proved (Theorem 1) |
-| T2 | $\delta(g;N,G)\ge c(N)g^2$ for $g\ge g_0(N)$, uniformly in $N$ | established: Euclidean form (Osterwalder--Seiler); Hamiltonian form as a corollary of Yarotsky's theorem in [the strong-coupling note](strong-coupling-uniform-gap.md) |
+| T1 | finite lattice: unique physical ground state, gap $\Delta_{a,L}=(\hbar c/a)\delta(g;N_s,G)>0$ | proved (Theorem 1) |
+| T2 | $\delta(g;N_s,G)\ge c(N)g^2$ for $g\ge g_0(N)$, uniformly in $N$ | established: Euclidean form (Osterwalder--Seiler); Hamiltonian form as a corollary of Yarotsky's theorem in [the strong-coupling note](strong-coupling-uniform-gap.md) |
 | T2$'$ | $\delta_\infty(g)>0$ for all $g>0$ | open; the cited Euclidean U(1) phase does not by itself identify the KS gapped set |
 | T3 | $\delta_\infty(g)/(a\Lambda_{\rm lat}(g))\to m/(\hbar c\Lambda_{\rm lat})\in(0,\infty)$ | open; spectral transfer to the reconstructed theory is also required |
-| T4 | continuum infinite-volume theory with the axioms | finite-volume UV stability known; rest open |
+| T4 | continuum infinite-volume theory with the axioms | selected ultraviolet-stability inputs; construction and axioms open |
 | S | small-volume corner $z(L)=\delta_1g(L)^{2/3}[1+O(g^{2/3})]$ | C133 plus Lüscher's expansion |
 
 T2$'$ is a stronger all-coupling route, not a necessary independent
 condition for the continuum goal. T3 and T4 still require physical
 spectral transfer, nontriviality and the stated limit order.
+
+## Existing estimates and examined routes
+
+For the $SU(3)$ Wilson transfer matrix, the separate sufficient bounds are
+$g^2>24/\log(19/18)$ (integer $g^2>444$ sufficient) from
+[Dobrushin](dobrushin-uniqueness-wilson.md), and
+$g^2\ge6/\log(1+21/(500e^2))$ (integer $1059$ sufficient) from the
+[all-representation polymer proof](wilson-strong-coupling-explicit.md).
+Their physical lower rates in units $\hbar c/a$ are respectively
+$$
+ \log\frac1{18(e^{24/g^2}-1)},\qquad
+ 4\log\frac1{176(e^{6/g^2}-1)}.
+$$
+The latter rate additionally needs $g^2>6/\log(177/176)$ to be positive.
+The leading-activity figure $176$, linearization $1056$ and sufficient integer
+$1059$ are different statements. Neither criterion is a phase boundary.
+For KS, the explicit volume-uniform $388$ threshold is withdrawn; the
+[finite-volume correction](kogut-susskind-strong-coupling-explicit.md) is
+$\delta^{\rm phys}\ge(8/3)g^2-12|\mathcal P|/g^2$ under its stated lattice
+restrictions. The [Yarotsky application](strong-coupling-uniform-gap.md)
+retains existential volume uniformity. These are distinct operators and bounds.
+
+The following are failures of the specified routes, not an exhaustion theorem:
+
+| route | why it closes |
+| --- | --- |
+| variational upper bounds, for $m>0$ | a spectral measure with all negative moments finite can have $m=0$ |
+| expansion around the free theory | the bound reaches $m$ only at the confinement scale, where its coefficient is nonperturbative |
+| blocking by projection | a surface-to-gap estimate worsens by $3M^2/8$ in the stated strong-coupling asymptotic; all-coupling monotonicity is not proved |
+| conjugation by the flow | the spectrum is invariant; a changed local decomposition requires control of generated terms |
+| flow before decimation | sup norms are bijection-invariant and spectra conjugation-invariant |
+| Agmon estimate on the ground state | $\|\nabla V\|_\infty$ is extensive, so it bounds the global excess only |
+| pointwise Gibbs domination | the comparison function bites only above the extensive threshold $V_*\simeq N|\mathcal P|$ |
+
+
+The exact [magnetic-energy sum rule](magnetic-energy-identities.md) and
+[ground-state transfer](ground-state-measure-transfer.md) remain useful
+identities. A normalized isotropic Wilson estimate does not transfer verbatim
+to the anisotropic KS ground state; projector convergence and matching of the
+measure/observable are needed. A [flowed variational upper bound](finiteness-half-flowed-susceptibility.md)
+requires a finite derivative expectation and nonzero physical susceptibility;
+it is not by itself a positive lower gap.
+
+The nonabelian matrix-model commutator valley, Gauss-law exclusion of a
+c-number linear electric probe and the formal torus-holonomy potential have
+different proof scopes ([matrix gap](low-dimensional-mass-gap.md),
+[electric observables](lattice-gap-upper-bounds.md), [valley](torus-valley-potential.md)).
+None fixes the shape of the KS gapped set or a four-dimensional continuum gap.
+
+The [gauge atlas](halving-atlas.md) owns the refinement-depth map. A local
+[action cost and background count](large-field-action-lower-bound.md) prove
+no normalized rarity theorem. A [kernel tail](flow-jacobian-truncation-error.md)
+proves no Hamiltonian relative comparison. The
+[signed operator test](large-field-operator-inequality.md) diagnoses one
+localization/surface-loss construction, not every possible Hamiltonian method.
+The [crossover comparison](reasons-to-stop-as-research.md) retains what the
+examined correlation and finite-certification tools would actually require.
 
 ## 8. Consequence for STATE
 

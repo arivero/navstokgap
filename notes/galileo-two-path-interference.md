@@ -17,19 +17,19 @@ K_\tau:=\Delta S=\frac{F^2\tau^3}{24m}
 =\frac{F}{4v}A_{\rm inertial,fall}=\frac{\tau\Delta E}{12}.
 $$
 
-At supplied action resolution $\varepsilon>0$, its optimal equal-prior
+At supplied reduced phase parameter $\hbar>0$, its optimal equal-prior
 error against the zero-phase reference, using $n$ independent controlled
 passes and an arbitrary joint measurement, is exactly
 
 $$
 p_{\rm err}^{(n)}=\frac12\left(1-
-\sqrt{1-\cos^{2n}\!\left(\frac{K_\tau}{2\varepsilon}\right)}\right).
+\sqrt{1-\cos^{2n}\!\left(\frac{K_\tau}{2\hbar}\right)}\right).
 $$
 
-For fixed $n,\varepsilon$, refinement sends this error to $1/2$.
+For fixed $n,\hbar$, refinement sends this error to $1/2$.
 At fixed $\tau>0$, the coherent error oscillates as
-$\varepsilon\downarrow0$ and has no limit. A specified averaging of the
-inverse resolution gives a genuine noncommutation theorem for coherence;
+$\hbar\downarrow0$ and has no limit. A specified averaging of the
+inverse phase parameter gives a genuine noncommutation theorem for coherence;
 a specified tunable comparison gives one for distinguishability
 (Theorem 3). These prescriptions make precise the extra operation needed
 in the proposed classical-first limit.
@@ -41,6 +41,8 @@ of the fifth-postulate note constrain different records with the same
 supplied quantum action constant. Positivity of that constant remains an
 independent physical obligation. All results below are proved under
 their displayed hypotheses; the scale-selection step remains open.
+
+The symbol $\hbar$ is the supplied reduced quantum phase constant, with physical Planck action $h_P=2\pi\hbar$. The time mesh and instrument resolution remain separate. Varying or averaging inverse values in the limiting theorems below is a formal family-of-models prescription, not an experiment that varies nature's constant or an automatic record-resolution law.
 
 ## 1. The Galileo area and the two histories
 
@@ -73,19 +75,19 @@ control phases. The conversion coefficient for $K_\tau$ is $F/(4v)$;
 the area conversion $(F/v)A_{\rm inertial,fall}$ equals $4K_\tau$.
 
 Here is the exact matching used throughout. Supply canonical quantum
-kinematics $[y,p]=i\varepsilon$ in the Schrödinger representation, and set
+kinematics $[y,p]=i\hbar$ in the Schrödinger representation, and set
 
 $$
-U_\tau=\exp\left[-\frac{i\tau}{\varepsilon}
+U_\tau=\exp\left[-\frac{i\tau}{\hbar}
 \left(\frac{p^2}{2m}-Fy\right)\right],\qquad
-Q_\tau=e^{iF\tau y/(2\varepsilon)}
-e^{-i\tau p^2/(2m\varepsilon)}e^{iF\tau y/(2\varepsilon)}.
+Q_\tau=e^{iF\tau y/(2\hbar)}
+e^{-i\tau p^2/(2m\hbar)}e^{iF\tau y/(2\hbar)}.
 $$
 
 **Lemma 1 (matched comparison).** With these scalar-potential
 conventions,
 
-$$Q_\tau=e^{iK_\tau/\varepsilon}U_\tau.\tag{3}$$
+$$Q_\tau=e^{iK_\tau/\hbar}U_\tau.\tag{3}$$
 
 *Proof.* The kernel of $Q_\tau$ has the free normalization and phase
 $L_\tau(x,y)=m(y-x)^2/(2\tau)+F\tau(x+y)/2$. The classical solution
@@ -102,7 +104,7 @@ The impulses in $Q_\tau$ reproduce the chord and match the parabola's
 final momentum after the last half-kick. Equation (3) holds for every
 initial body state. A branch-dependent scalar potential would add its
 own phase, so its absence or calibration is part of the experiment.
-The [polygon-lift note, Theorem 1](polygon-lift-phase.md) (full-read)
+The [polygon-lift note, Theorem 1](cut-measure-newton.md#weyl-lifting-and-polygon-phases) (full-read)
 proves the corresponding identity for every partition.
 
 For a literal tangent arm, the explicit reunion in
@@ -124,37 +126,37 @@ problem.
 
 ## 2. What the halved functional measures
 
-Use $\varepsilon$ for action resolution and $\eta\in[0,1/2)$ for a target
+Use $\hbar$ for reduced phase parameter and $\eta\in[0,1/2)$ for a target
 decision error. Identification with quantum mechanics means
-$\varepsilon=|\hbar|$, with ordinary Planck constant $h_P=2\pi|\hbar|$.
+$\hbar=|\hbar|$, with ordinary Planck constant $h_P=2\pi|\hbar|$.
 
 **Proposition 2 (two contributions and their remainder).** Suppose a
 halved functional, with its normalization and observable fixed, has
 two retained contributions
 
 $$
-\mathcal A_\varepsilon
-=a_0e^{iS_0/\varepsilon+i\mu_0}
-+a_1e^{iS_1/\varepsilon+i\mu_1}+R_\varepsilon,
-\quad a_j\ge0,\quad |R_\varepsilon|\le r.
+\mathcal A_\hbar
+=a_0e^{iS_0/\hbar+i\mu_0}
++a_1e^{iS_1/\hbar+i\mu_1}+R_\hbar,
+\quad a_j\ge0,\quad |R_\hbar|\le r.
 $$
 
-Put $\phi=(S_1-S_0)/\varepsilon$ and $\beta=\mu_1-\mu_0$. Then
+Put $\phi=(S_1-S_0)/\hbar$ and $\beta=\mu_1-\mu_0$. Then
 
 $$
-|\mathcal A_\varepsilon|^2
+|\mathcal A_\hbar|^2
 =a_0^2+a_1^2+2a_0a_1\cos(\phi+\beta)+E,
 \qquad |E|\le2(a_0+a_1)r+r^2.\tag{4}
 $$
 
 *Proof.* Expand the square, bound the leading amplitude by $a_0+a_1$,
-and bound its cross term with $R_\varepsilon$ by $2(a_0+a_1)r$.
+and bound its cross term with $R_\hbar$ by $2(a_0+a_1)r$.
 $\square$
 
 For two nondegenerate stationary points at a fixed partition,
 $a_j=|O(z_j)|/\sqrt{|\det S''(z_j)|}$ and $\mu_j$ contains the
 observable phase and Hessian signature. Stationary phase supplies
-$r\le C_\pi\varepsilon$ for sufficiently small $\varepsilon$, with
+$r\le C_\pi\hbar$ for sufficiently small $\hbar$, with
 cutoffs and smoothness as in
 [round 1, §1](rivero-1998-conjecture-central-forces.md) (full-read).
 Equation (4) retains that partition-dependent constant; uniform control
@@ -162,7 +164,7 @@ as the partition changes needs a separate estimate. For the exactly
 matched quadratic propagators in (3), the relative phase has zero
 remainder and zero relative Gaussian signature.
 
-At a fixed phase, a large $|S_1-S_0|/\varepsilon$ still leaves the cross
+At a fixed phase, a large $|S_1-S_0|/\hbar$ still leaves the cross
 term in (4) at full amplitude. Averaging, selecting a branch, or
 retaining an orthogonal branch record supplies the missing
 diagonalization. Equal-action contributions survive phase averaging,
@@ -206,7 +208,7 @@ hypotheses and the control states
 $$
 |+\rangle=\frac{|0\rangle+|1\rangle}{\sqrt2},\qquad
 |+_\phi\rangle=\frac{|0\rangle+e^{i\phi}|1\rangle}{\sqrt2},
-\qquad \phi=K_\tau/\varepsilon.\tag{6}
+\qquad \phi=K_\tau/\hbar.\tag{6}
 $$
 
 A recombiner of phase $\alpha$ has exact port probabilities
@@ -255,17 +257,17 @@ d_{n,\eta}=2\arccos\left([4\eta(1-\eta)]^{1/(2n)}\right).
 \tag{8}
 $$
 
-On the first lobe $0\le K_\tau/\varepsilon\le\pi$, this is equivalent to
+On the first lobe $0\le K_\tau/\hbar\le\pi$, this is equivalent to
 
 $$
-K_\tau\ge\varepsilon d_{n,\eta},\qquad
-\tau\ge\left(\frac{24m\varepsilon d_{n,\eta}}{F^2}\right)^{1/3},
-\qquad A_{\rm inertial,fall}\ge\frac{4v\varepsilon}{F}d_{n,\eta}.
+K_\tau\ge\hbar d_{n,\eta},\qquad
+\tau\ge\left(\frac{24m\hbar d_{n,\eta}}{F^2}\right)^{1/3},
+\qquad A_{\rm inertial,fall}\ge\frac{4v\hbar}{F}d_{n,\eta}.
 \tag{9}
 $$
 
 For $n=1$, $d_{1,\eta}=2\arcsin(1-2\eta)$, exactly the
-[polygon-lift record bound, §4](polygon-lift-phase.md) (passage).
+[polygon-lift record bound, §4](cut-measure-newton.md#weyl-lifting-and-polygon-phases) (passage).
 For $0<\eta<1/2$, $d_{n,\eta}\to0$ as $n\to\infty$; for $\eta=0$
 it equals $\pi$ at every finite $n$. With $k$ coherent passes replace
 $\phi$ by $k\phi$. These resource choices change the threshold.
@@ -278,7 +280,7 @@ A common phase calibration error $u$ on each of $n$ independent signal
 copies gives distance at most
 $\sqrt{1-\cos^{2n}(u/2)}\le\sqrt n\,|u|/2$, and hence changes the
 optimal error by at most $\sqrt n\,|u|/4$ when the reference is exact.
-An action uncertainty $|\delta S|$ contributes $|u|=|\delta S|/\varepsilon$.
+An action uncertainty $|\delta S|$ contributes $|u|=|\delta S|/\hbar$.
 These bounds state how accurately the control must be known to use (9).
 
 ## 4. The two orders of limits
@@ -290,52 +292,52 @@ Put $C=F^2/(24m)>0$, so $K_\tau=C\tau^3$.
 (a) For the fixed coherent protocol (6), with fixed finite $n$,
 
 $$
-D_n\le\min\left(1,\frac{\sqrt n\,C\tau^3}{2\varepsilon}\right),
+D_n\le\min\left(1,\frac{\sqrt n\,C\tau^3}{2\hbar}\right),
 \qquad \lim_{\tau\downarrow0}p_{\rm err}^{(n)}=\frac12
-\quad(\varepsilon>0).\tag{10}
+\quad(\hbar>0).\tag{10}
 $$
 
-At every fixed $\tau>0$, $\lim_{\varepsilon\downarrow0}D_n$ fails to
+At every fixed $\tau>0$, $\lim_{\hbar\downarrow0}D_n$ fails to
 exist: its liminf is zero and limsup is one. Consequently the coherent
 classical-first iterated limit is undefined.
 
-(b) Fix $b\in(0,1)$ and average the inverse resolution by replacing
+(b) Fix $b\in(0,1)$ and average the inverse phase parameter by replacing
 $\phi$ with $u\phi$, uniformly over $u\in[1-b,1+b]$, forgetting $u$.
 For this explicitly averaged two-arm state, its normalized coherence is
 
 $$
-\Gamma_b(\tau,\varepsilon)
-=\frac1{2b}\int_{1-b}^{1+b}e^{iuK_\tau/\varepsilon}\,du
+\Gamma_b(\tau,\hbar)
+=\frac1{2b}\int_{1-b}^{1+b}e^{iuK_\tau/\hbar}\,du
 =e^{i\phi}\operatorname{sinc}(b\phi),\qquad
-|\Gamma_b|\le\min\left(1,\frac{\varepsilon}{bK_\tau}\right).
+|\Gamma_b|\le\min\left(1,\frac{\hbar}{bK_\tau}\right).
 \tag{11}
 $$
 
 With $\operatorname{sinc}(0)=1$, the iterated limits are
 
 $$
-\lim_{\varepsilon\downarrow0}\lim_{\tau\downarrow0}\Gamma_b=1,
+\lim_{\hbar\downarrow0}\lim_{\tau\downarrow0}\Gamma_b=1,
 \qquad
-\lim_{\tau\downarrow0}\lim_{\varepsilon\downarrow0}\Gamma_b=0.
+\lim_{\tau\downarrow0}\lim_{\hbar\downarrow0}\Gamma_b=0.
 \tag{12}
 $$
 
 (Refinement after a Fable review, 2026-09-27.) The non-commuting limits
 (12) depend on averaging over a *relative* window of the inverse
-resolution. With an absolute window of half-width $w_0$ in $1/\varepsilon$ the
-average is $e^{i\phi}\operatorname{sinc}(K_\tau w_0)$, independent of $\varepsilon$, and both
+resolution. With an absolute window of half-width $w_0$ in $1/\hbar$ the
+average is $e^{i\phi}\operatorname{sinc}(K_\tau w_0)$, independent of $\hbar$, and both
 iterated limits equal one. Theorem 3(b) therefore states a property of
 the relative-averaging prescription, which is the prescription (12)
 uses.
 
 For fixed weights and signature difference in (4), this prescription
 leaves a diagonal-intensity error bounded by
-$2a_0a_1\min(1,\varepsilon/(b|\Delta S|))$ in addition to the averaged
+$2a_0a_1\min(1,\hbar/(b|\Delta S|))$ in addition to the averaged
 remainder bound of (4), with bound $2a_0a_1$ when $\Delta S=0$.
 If the stationary-phase remainder obeys
-$r\le C_\pi\varepsilon$ uniformly for small resolution, averaging uses
-resolutions $\varepsilon/u$ and one may take
-$r\le C_\pi\varepsilon/(1-b)$.
+$r\le C_\pi\hbar$ uniformly for small resolution, averaging uses
+resolutions $\hbar/u$ and one may take
+$r\le C_\pi\hbar/(1-b)$.
 
 (c) Alternatively, assume a calibrated comparison can be attenuated to
 any action $rK_\tau$, $0\le r\le1$, under both hypotheses, with no
@@ -344,14 +346,14 @@ $r^{1/3}\tau$ in (6), keeping $F,m$ fixed. Let $D_{\rm tun}$ be the
 best single-copy distance over these choices. Then
 
 $$
-D_{\rm tun}(\tau,\varepsilon)
-=\sin\left(\min\left\{\frac{K_\tau}{2\varepsilon},\frac\pi2\right\}\right),
+D_{\rm tun}(\tau,\hbar)
+=\sin\left(\min\left\{\frac{K_\tau}{2\hbar},\frac\pi2\right\}\right),
 \tag{13}
 $$
 $$
-\lim_{\varepsilon\downarrow0}\lim_{\tau\downarrow0}D_{\rm tun}=0,
+\lim_{\hbar\downarrow0}\lim_{\tau\downarrow0}D_{\rm tun}=0,
 \qquad
-\lim_{\tau\downarrow0}\lim_{\varepsilon\downarrow0}D_{\rm tun}=1.
+\lim_{\tau\downarrow0}\lim_{\hbar\downarrow0}D_{\rm tun}=1.
 \tag{14}
 $$
 
@@ -359,8 +361,8 @@ $$
 $1-(1-x)^n\le nx$ for $x\in[0,1]$, with
 $x=\sin^2(\phi/2)$, proves (10).
 For fixed $K_\tau>0$, the sequences
-$\varepsilon_j=K_\tau/(2\pi j)$ and
-$\varepsilon'_j=K_\tau/((2j+1)\pi)$ give respectively $D_n=0$ and
+$\hbar_j=K_\tau/(2\pi j)$ and
+$\hbar'_j=K_\tau/((2j+1)\pi)$ give respectively $D_n=0$ and
 $D_n=1$. Integration gives (11); dominated continuity at $\phi=0$
 and the displayed reciprocal bound at $\phi\to\infty$ prove (12).
 In (c), maximize $|\sin(r\phi/2)|$ over $[0,1]$. The first maximum
@@ -381,11 +383,11 @@ paths converge together as that length vanishes. A limiting Dirac
 measure alone expresses no retained record of the shrinking difference.
 
 These conclusions sharpen the proposed classical-first statement.
-For any fixed $b$ the condition $b|\Delta S|/\varepsilon\gg1$
+For any fixed $b$ the condition $b|\Delta S|/\hbar\gg1$
 controls the averaged cross term, with the explicit error in (11).
 For coherent discrimination the exact condition is (8), with its
 phase aliases. The two conditions express different measurements.
-Along a joint limit the dimensionless ratio $C\tau^3/\varepsilon$
+Along a joint limit the dimensionless ratio $C\tau^3/\hbar$
 governs both: tending to zero erases the phase signal; a finite ratio
 gives the corresponding signal, including the aliases in (8); a
 diverging ratio requires the prescription
@@ -393,20 +395,20 @@ in (b) or (c) for a definite limit.
 
 For a partition of fixed total duration $T$, the matched polygon action
 is $K_\pi=C\sum_j\tau_j^3\le CT|\pi|^2$. Its coherent distance from
-the exact curve is at most $\sqrt n\,CT|\pi|^2/(2\varepsilon)$.
+the exact curve is at most $\sqrt n\,CT|\pi|^2/(2\hbar)$.
 After $k$ uniform halvings a cell's action falls by $8^{-k}$ and the
 whole polygon defect by $4^{-k}$. Hence the whole fixed-duration
 comparison converges as well. Resolving ever smaller cells can require
 increasing resources: for a fixed small-error target the small-phase
-independent-copy scaling is $n$ of order $(\varepsilon/K_\tau)^2$,
-whereas coherent repetition uses $k$ of order $\varepsilon/K_\tau$.
+independent-copy scaling is $n$ of order $(\hbar/K_\tau)^2$,
+whereas coherent repetition uses $k$ of order $\hbar/K_\tau$.
 Such budgets were held fixed in (10).
 
 ## 5. Relation to the disturbance and concentration floors
 
 The [fifth-postulate note, Theorems C, E and §7](principia-fifth-postulate.md)
 (passage) separates observable algebra, states and records. With
-$\varepsilon=|\hbar|$, the three bounds here have the following scopes.
+$\hbar=|\hbar|$, the three bounds here have the following scopes.
 
 | Bound | Quantity constrained | Extra hypotheses beyond Newtonian geometry |
 | --- | --- | --- |
@@ -443,7 +445,7 @@ canonical phase constant; the equality of the scale alone establishes
 no equivalence of the three experimental tasks.
 
 There is a stronger exact bridge within the restricted Gaussian mark
-model. The [polygon-lift note, Theorem 7](polygon-lift-phase.md)
+model. The [polygon-lift note, Theorem 7](cut-measure-newton.md#weyl-lifting-and-polygon-phases)
 (passage) uses the same functional
 $\mathcal K_\tau[f]=(2m)^{-1}\iint G_\tau(s,u)f(s)f(u)\,ds\,du$
 for the polygon phase and the optimal mark deflection. For constant
@@ -459,7 +461,7 @@ phase bound in the halved-functional representation, plus its explicit
 limit prescriptions. It adds no independent exclusion of the common
 zero branch allowed by
 [round 2, §4](rotation-composition-universality.md) (passage).
-Every $\varepsilon>0$ supports (3)--(14); their thresholds scale with
+Every $\hbar>0$ supports (3)--(14); their thresholds scale with
 that freely supplied value. At zero, the exponential representation
 is singular, while classical mechanics still supplies ordinary
 trajectories and, with state completeness, sharp pointer records as in

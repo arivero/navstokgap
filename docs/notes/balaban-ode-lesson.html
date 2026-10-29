@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Balaban through Newton&#x27;s polygons: a 0+1 lesson</title>
+<title>Constructing Newton motion: refinement, continuation and regularity</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,51 +79,39 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>Balaban through Newton’s polygons: a 0+1 lesson</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/balaban-ode-lesson.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/balaban-ode-lesson.pdf">PDF</a></p><p><strong>Lesson and written construction, 2026-10-27.</strong> A
-useful way to approach Balaban’s method is to start with a familiar
-existence problem: construct motion from finitely many force impulses,
-prove estimates that survive arbitrary insertion of intermediate times,
-and take a limit. Then ask what additional description must survive when
-an intermediate position is integrated rather than solved for. The
-answer includes its fluctuation law, normalization and generated
-interactions.</p>
-<p>We work with one mechanical coordinate and time, keeping <span
-class="math inline">\(\hbar\)</span> explicit. The finite construction
-is a modern use of Newton’s polygon idea; it is not a proof about every
-historical edition or force polygon. The Galileo inertial-line /
-falling-parabola comparison supplies our action observable. No
-relativistic assumption or <span class="math inline">\(c\)</span> is
-needed.</p>
-<p>The ODE proof below is standard in method and claims no novelty. Its
-purpose is to make the comparison concrete, including arbitrary unequal
-time steps and either force-kick convention. The two retained-weight
-calculations are in the <a
-href="balaban-newton-time-blocking.html">time-blocking note</a> and the
-<a href="newton-nonlinear-time-cell.html">nonlinear cell</a>. They
-specify their proof status and source reading. Balaban’s <a
-href="https://github.com/arivero/navstokgap/blob/main/docs/balaban/Balaban_UltravioletStability_ICM1986_1987.md">ICM
-overview</a>, printed pages 1260–1262 (text read), and <a
-href="https://github.com/arivero/navstokgap/blob/main/docs/balaban/Dimock_BalabanI_1108.1335v2.md">Dimock
-I</a>, sections 2.1, 2.4, 4.5 and Theorem 14 (selected passages read),
-motivate the comparison.</p>
-<p><strong>Targeted check (GPT-6.1 Terra, 2026-10-27).</strong> Terra
-read the lesson and checked the causal stability, residual, Cauchy and
-limit arguments in sections 1–3 without finding a mathematical error
-under their global Lipschitz hypothesis. The lesson’s distinction
-between a trajectory and a weighted law was also checked. This was a
-targeted written review; the physical origin of the weighting is still
-open.</p>
+<h1>Constructing Newton motion: refinement, continuation and
+regularity</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/balaban-ode-lesson.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/balaban-ode-lesson.pdf">PDF</a></p><p><strong>Maintained result.</strong> For a globally Lipschitz
+acceleration, arbitrary positive partitions and independently mixed
+kick–drift orders construct the same unique initial-value motion, with
+an explicit error proportional to the mesh. A conservative logarithmic
+force family shows the exact limit of that sufficient hypothesis: an
+unbounded slope still permits unique motion when <span
+class="math inline">\(0&lt;\beta\le2\)</span>; finite-time arrival and
+waiting branches occur for <span
+class="math inline">\(\beta&gt;2\)</span>. Local action tends to zero in
+both regimes. These are classical existence and uniqueness statements,
+with no positive action premise.</p>
+<p>The polygon proof uses standard stability, consistency and Gronwall
+arguments. The arrival test is a direct energy calculation, not the
+general first-order Osgood criterion. Teschl [<span class="citation"
+data-cites="TeschlODE2012">@TeschlODE2012</span>, §2.7, pp.54–56 and
+Problem 2.25, p.58; passages read] supplies the Euler compactness
+background; López Pouso [<span class="citation"
+data-cites="LopezPouso2005">@LopezPouso2005</span>; metadata and
+abstract read] treats a broader second-order problem whose full theorem
+is not used here. See the <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Teschl_ODE_2012.md">source
+companion</a>. Internal Terra/Sol checks of the written arguments were
+model reviews, not independent peer review or novelty evidence.</p>
 <h2 id="start-with-a-finite-newton-polygon">1. Start with a finite
 Newton polygon</h2>
 <p>Let <span class="math inline">\(m&gt;0\)</span> be the mass and <span
 class="math inline">\(f(q)=F(q)/m\)</span> the acceleration. The desired
-motion would satisfy</p>
-<p><span class="math display">\[\dot q=v,\qquad\dot
+motion would satisfy <span class="math display">\[\dot q=v,\qquad\dot
 v=f(q),\qquad(q(0),v(0))=(q_0,v_0).\tag{1}\]</span></p>
 <p>For now we do not assume that a solution exists. Given a positive
 time step <span class="math inline">\(\tau\)</span>, define a drift and
-a force kick by</p>
-<p><span class="math display">\[
+a force kick by <span class="math display">\[
 D_\tau(q,v)=(q+\tau v,v),\qquad
 K_\tau(q,v)=(q,v+\tau f(q)).
 \tag{2}
@@ -145,24 +133,21 @@ bounds how differences grow. Consistency bounds the error in the finite
 force balance. The two together will construct the ODE solution.</p>
 <h2 id="lipschitz-control-supplies-stability">2. Lipschitz control
 supplies stability</h2>
-<p>Assume for this construction that</p>
-<p><span
+<p>Assume for this construction that <span
 class="math display">\[|f(q)-f(Q)|\le\Lambda|q-Q|\quad(q,Q\in\mathbb
 R),\qquad\Lambda\ge0.
 \tag{3}\]</span></p>
 <p>The quantity <span class="math inline">\(\Lambda\)</span> has units
 of inverse time squared. Choose a reference frequency <span
 class="math inline">\(\rho&gt;0\)</span> and use the length-valued
-phase-space norm</p>
-<p><span class="math display">\[
+phase-space norm <span class="math display">\[
 \|(q,v)\|_\rho=|q|+\frac{|v|}{\rho},\qquad
 \alpha=\max(\rho,\Lambda/\rho),\quad
 \beta=\rho+\Lambda/\rho,\quad b=|f(0)|/\rho.
 \tag{4}
 \]</span></p>
-<p>There is no action constant in these definitions. Directly from
-(2),</p>
-<p><span class="math display">\[
+<p>There is no action constant in these definitions. Directly from (2),
+<span class="math display">\[
 \operatorname{Lip}(D_\tau)\le1+\rho\tau,\qquad
 \operatorname{Lip}(K_\tau)\le1+\Lambda\tau/\rho.
 \tag{5}
@@ -175,8 +160,7 @@ class="math inline">\(e^{\beta T}\)</span>, independently of the number
 and placement of vertices.</p>
 <p>We also need a bound on the states themselves, because consistency
 involves the force along the polygon. For either cell map <span
-class="math inline">\(M_\tau\)</span>,</p>
-<p><span class="math display">\[
+class="math inline">\(M_\tau\)</span>, <span class="math display">\[
 \|M_\tau z\|_\rho\le e^{\beta\tau}\|z\|_\rho
                          +\tau e^{\beta\tau}b.
 \tag{6}
@@ -184,8 +168,8 @@ class="math inline">\(M_\tau\)</span>,</p>
 <p>For a kick-first cell, the inhomogeneous term is actually at most
 <span class="math inline">\(\tau(1+\rho\tau)b\)</span>; for a
 drift-first cell it is <span class="math inline">\(\tau b\)</span>.
-Iterating (6) gives the common vertex bound</p>
-<p><span class="math display">\[R=e^{\beta
+Iterating (6) gives the common vertex bound <span
+class="math display">\[R=e^{\beta
 T}(\|z_0\|_\rho+Tb).\tag{7}\]</span></p>
 <p>In particular <span class="math inline">\(|q_j|\le R\)</span>, <span
 class="math inline">\(|v_j|\le\rho R\)</span>, and <span
@@ -201,8 +185,8 @@ velocity along each straight polygon segment by at most that cell’s
 kick. This distinction disappears with the mesh.</p>
 <p>Let <span class="math inline">\(\delta=|\pi|\)</span> be the maximum
 cell duration. In a kick-first cell, with elapsed time <span
-class="math inline">\(s\in[0,\tau]\)</span>,</p>
-<p><span class="math display">\[
+class="math inline">\(s\in[0,\tau]\)</span>, <span
+class="math display">\[
 \dot q_\pi-v_\pi=(\tau-s)f(q_j),\qquad
 \dot v_\pi-f(q_\pi)=f(q_j)-f(q_\pi).
 \tag{8}
@@ -210,8 +194,7 @@ class="math inline">\(s\in[0,\tau]\)</span>,</p>
 <p>In a drift-first cell the analogous expressions are <span
 class="math inline">\(-sf(q_{j+1})\)</span> and <span
 class="math inline">\(f(q_{j+1})-f(q_\pi)\)</span>. The bounds in (7)
-give, for almost every time,</p>
-<p><span class="math display">\[
+give, for almost every time, <span class="math display">\[
 \|\dot z_\pi-\mathcal F(z_\pi)\|_\rho\le C\delta,
 \quad\mathcal F(q,v)=(v,f(q)),\quad C=|f(0)|+2\Lambda R.
 \tag{9}
@@ -219,8 +202,7 @@ give, for almost every time,</p>
 <p>The vector field <span class="math inline">\(\mathcal F\)</span> is
 Lipschitz with constant <span class="math inline">\(\alpha\)</span> in
 the norm (4). Two polygons with the same initial state consequently
-satisfy</p>
-<p><span class="math display">\[
+satisfy <span class="math display">\[
 \sup_{t\le T}\|z_\pi(t)-z_\sigma(t)\|_\rho
 \le C\frac{e^{\alpha T}-1}{\alpha}
                         (|\pi|+|\sigma|).
@@ -235,8 +217,8 @@ t}\)</span>.</p>
 <span class="math inline">\(z(t)\)</span>. The residual integral tends
 to zero; the Lipschitz bound passes <span class="math inline">\(\mathcal
 F(z_\pi)\)</span> to <span class="math inline">\(\mathcal F(z)\)</span>
-under the time integral. Hence</p>
-<p><span class="math display">\[z(t)=z_0+\int_0^t\mathcal
+under the time integral. Hence <span
+class="math display">\[z(t)=z_0+\int_0^t\mathcal
 F(z(s))\,ds.\tag{11}\]</span></p>
 <p>The limit is differentiable and solves (1). Applying the same
 difference estimate with zero residual proves uniqueness. Letting one
@@ -250,49 +232,78 @@ finite description before appealing to a limiting object. The limit
 follows from estimates uniform in the refinement. Nothing in this
 argument requires choosing <span
 class="math inline">\(\hbar&gt;0\)</span>.</p>
-<h2
-id="local-existence-continuation-and-endpoint-caustics-are-different">4.
-Local existence, continuation and endpoint caustics are different</h2>
-<p>For a locally Lipschitz force one first works inside a bounded
-region. A Lipschitz extension permits the construction above; a
-short-time bound ensuring that the trajectory remains in the region
-makes the extension irrelevant. Continuation requires additional control
-against escape from all bounded phase-space regions.</p>
-<p>For example, <span class="math inline">\(V(q)=\lambda q^4/4\)</span>,
-<span class="math inline">\(\lambda&gt;0\)</span>, has unbounded force
-derivative globally. A fixed energy bounds both <span
-class="math inline">\(q\)</span> and <span
-class="math inline">\(p=mv\)</span>, so its initial-value solution
-continues. The inverted quartic has a smooth, locally Lipschitz force
-too, yet admits finite-time escape. The explicit bounds and escape
-solution appear in the time-blocking note, section 6. Continuity alone
-can give local existence; the Lipschitz assumption above also supplies
-the uniqueness and quantitative stability used in (10).</p>
-<p>A bounded slope is sufficient, not necessary. The <a
-href="newton-continuity-time-scales.html">continuity calculation</a>
-gives bounded forces locally behaving as <span
-class="math inline">\(q[\log(\ell/|q|)]^\beta\)</span>, with unbounded
-slope but unique global motion for <span
-class="math inline">\(0&lt;\beta\le2\)</span>. For <span
-class="math inline">\(\beta&gt;2\)</span>, zero-energy trajectories
-reach the origin in finite time and admit waiting and branch choices.
-The exact criterion is a conservative arrival-time integral. It also
-explains how controlled crossings of individual spatial annuli can
-accumulate at a missing state rule. The <a
-href="newton-cusp-preparation-floor.html">bounded-cusp test</a>
-separately converts a full point-state merger into a positive covariance
-action floor under weak preparation closure and canonical covariance,
-with an explicit classical density-ceiling completion as a control.</p>
+<span id="local-existence-continuation-and-endpoint-caustics-are-different"></span><h2 id="local-continuation-and-velocity-dependent-forces">4. Local
+continuation and velocity-dependent forces</h2>
+<p>For locally Lipschitz acceleration, extend it from a bounded region
+and apply the construction until the trajectory leaves that region.
+Continuation then requires bounds preventing escape from every compact
+phase-space region.</p>
+<p>For <span class="math inline">\(V\in C^1\)</span> with locally
+Lipschitz <span class="math inline">\(\nabla V\)</span>, (1) has a
+unique local solution, by the usual Cauchy–Lipschitz theorem. Along it,
+<span class="math display">\[E(q,v)=\tfrac12m|v|^2+V(q),\qquad \frac
+d{dt}E=0.\]</span> If <span class="math inline">\(V\)</span> is bounded
+below, (2) bounds <span class="math inline">\(|v|\)</span>. On any
+finite interval <span class="math inline">\(|q(t)|\le
+|q_0|+|t|\sup|v|\)</span>, so <span class="math inline">\((q,v)\)</span>
+remains in a compact set. The local continuation theorem then gives a
+unique solution for all positive and negative times. Coercivity of <span
+class="math inline">\(V\)</span> is a stronger condition than is needed
+for this finite-time argument.</p>
+<p>Smoothness alone does not guarantee global existence. For <span
+class="math inline">\(m=1\)</span>, <span
+class="math inline">\(V(q)=-q^4/4\)</span>, <span
+class="math inline">\(q_0&gt;0\)</span> and <span
+class="math inline">\(v_0=q_0^2/\sqrt2\)</span>, the zero-energy
+solution <span
+class="math display">\[q(t)=\frac{q_0}{1-q_0t/\sqrt2}\]</span> escapes
+to infinity at <span class="math inline">\(t=\sqrt2/q_0\)</span>. A
+force singularity can also stop a classical solution: for example, a
+radial attractive Kepler trajectory can reach <span
+class="math inline">\(r=0\)</span> in finite time. A rule for continuing
+through the singular point is further data.</p>
+<p>In three dimensions the Lorentz force, with a static scalar potential
+and a static magnetic field, gives <span class="math display">\[
+\dot q=v,\qquad m\dot v=-\nabla V(q)+e\,v\times B(q).
+\]</span> It is not a force depending on position alone. If <span
+class="math inline">\(\nabla V\)</span> and <span
+class="math inline">\(B\)</span> are defined and locally Lipschitz on
+all of <span class="math inline">\(\mathbb R^3\)</span>, the full
+phase-space vector field is locally Lipschitz, so local existence and
+uniqueness still hold. Moreover <span
+class="math inline">\(v\cdot(v\times B)=0\)</span>, hence the
+conservative energy is conserved. If <span
+class="math inline">\(V\)</span> is bounded below, the same speed and
+position bounds as above prove global existence and uniqueness, even if
+<span class="math inline">\(B\)</span> is not globally bounded.</p>
+<p>For instance, if <span class="math inline">\(V\)</span> is constant
+and <span class="math inline">\(B=B_0\hat z\)</span>, the field rotates
+the transverse velocity with cyclotron frequency <span
+class="math inline">\(eB_0/m\)</span> and leaves the longitudinal
+velocity constant. A velocity-dependent force is thus not an exception
+to the ODE theory; its dependence must be included in the phase-space
+vector field being estimated.</p>
+<p>If <span class="math inline">\(B=\nabla\times A\)</span> on <span
+class="math inline">\(\mathbb R^3\)</span>, the quantum Hamiltonian is
+<span
+class="math display">\[H_{\hbar,A}=\frac1{2m}(-i\hbar\nabla-eA(q))^2+V(q).\]</span>
+The kinetic momenta generally do not commute: <span
+class="math inline">\([\pi_i,\pi_j]=i\hbar
+e(\partial_iA_j-\partial_jA_i)\)</span>. A positive scalar
+Brownian-bridge density does not directly cover this magnetic problem: a
+magnetic Euclidean representation contains a phase. The <a
+href="quantum-blocks-construct-newton.html">coherent-packet theorem</a>
+treats the scalar Hamiltonian; it does not prove this magnetic
+extension.</p>
 <p>An endpoint problem fixes <span class="math inline">\(q(0)\)</span>
 and <span class="math inline">\(q(T)\)</span> rather than initial
 velocity. It has a separate possible singularity. For the harmonic
-oscillator the full phase-space derivative is</p>
-<p><span class="math display">\[
+oscillator the full phase-space derivative is <span
+class="math display">\[
 \begin{pmatrix}
 \cos\omega T&amp;\sin(\omega T)/\omega\\
 -\omega\sin(\omega T)&amp;\cos\omega T
 \end{pmatrix},\qquad \det=1.
-\tag{12}
 \]</span></p>
 <p>The position response to initial velocity is <span
 class="math inline">\(\sin(\omega T)/\omega\)</span>. It vanishes at a
@@ -305,154 +316,264 @@ refinement.</p>
 by itself, a failure of Newton’s dynamics. A physical completion
 argument has to establish which extra information the complete theory
 needs and why it cannot be retained classically.</p>
-<h2 id="retain-an-intermediate-time-as-a-fluctuating-variable">5. Retain
-an intermediate time as a fluctuating variable</h2>
-<p>The ODE polygon solves for its intermediate states. A different
-construction assigns weights and integrates an unobserved intermediate
-position. For the positive free kernel,</p>
-<p><span class="math display">\[
-k_{T,\hbar}(y,x)=\sqrt{\frac{m}{2\pi\hbar T}}
-       \exp\left[-\frac{m(y-x)^2}{2\hbar T}\right],\qquad\hbar&gt;0,
-\tag{13}
+<h2 id="the-conservative-arrival-criterion">5. The conservative arrival
+criterion</h2>
+<p>Near zero let <span class="math inline">\(a\)</span> be continuous,
+odd, positive on <span class="math inline">\((0,r_0)\)</span>, zero at
+zero and smooth away from zero. Consider <span class="math display">\[
+\ddot q=a(q),\qquad W(q)=\int_0^q a(s)\,ds\quad(q\ge0),
+\qquad V(q)=-mW(|q|),\quad m&gt;0.
+\tag{L1}
 \]</span></p>
-<p>splitting <span class="math inline">\(T=u+v\)</span> gives a
-conditional inserted position with</p>
-<p><span class="math display">\[
-\mu=\frac{vx+uy}{T},\qquad
-\operatorname{Var}(Z\mid x,y)=\frac{\hbar uv}{mT}.
-\tag{14}
+<p>Assume a bounded continuous global extension of the force, smooth
+away from zero, by cutting off the potential outside a neighborhood of
+zero. The <a href="newton-cusp-preparation-floor.html">bounded-cusp
+argument</a>, section 1, then gives global existence and bounds
+preventing escape. The issue remaining here is uniqueness, not
+existence.</p>
+<p>Conservation of <span class="math inline">\(E=m\dot
+q^2/2+V(q)\)</span> follows by the chain rule since <span
+class="math inline">\(V\in C^1\)</span>. Any solution starting at rest
+at zero has <span class="math inline">\(E=0\)</span>. On a positive
+departing segment its velocity must be <span class="math display">\[
+\dot q=\sqrt{2W(q)},\qquad
+\mathcal T(q)=\int_0^q\frac{ds}{\sqrt{2W(s)}}.
+\tag{L2}
 \]</span></p>
-<p>A constant-force Newton parabola shifts this vertex from its chord by
-<span class="math inline">\(-Fuv/(2m)\)</span>. The associated hat
-deformation has action <span class="math inline">\(F^2uvT/(8m)\)</span>.
-For equal-noise Gaussian bridge laws the relative entropy between the
-shifted and unshifted vertex laws is that action divided by <span
-class="math inline">\(\hbar\)</span>. The precise normalization and
-physical premises are recorded in the time-blocking note, equations
-(15a)–(15b).</p>
-<p>The positive Gaussian kernel is a Euclidean construction. The
-real-time weight uses <span
-class="math inline">\(e^{iS^R/\hbar}\)</span> and Fresnel integration;
-its quadratic second moment is not a probability covariance. Changing
-between them requires more than replacing a symbol in a fluctuation
-estimate.</p>
-<p>Here the role of the action constant is visible: it sets the
-fluctuation width and the strength of action differences in the weight.
-Ordinary ODE convergence controls the mean path construction; it does
-not fix that extra law.</p>
-<h2 id="what-a-nonlinear-time-block-actually-produces">6. What a
-nonlinear time block actually produces</h2>
-<p>For a symmetric two-cell Euclidean action, put <span
-class="math inline">\(a=mT/(uv)\)</span> and <span
-class="math inline">\(w=T/2\)</span>. Retain</p>
-<p><span class="math display">\[
-A_\hbar(\mu)=-\hbar\log\left[
-\sqrt{\frac{a}{2\pi\hbar}}\int
-e^{-[a(z-\mu)^2/2+wV(z)]/\hbar}dz\right].
-\tag{15}
+<p><strong>Arrival criterion.</strong> If <span
+class="math inline">\(\mathcal T(q)=\infty\)</span> for one, hence every
+small <span class="math inline">\(q&gt;0\)</span>, rest is the unique
+local solution from <span class="math inline">\((0,0)\)</span>. If <span
+class="math inline">\(\mathcal T(q)&lt;\infty\)</span>, the inverse
+<span class="math inline">\(Q=\mathcal T^{-1}\)</span> constructs
+departures <span class="math inline">\(q(t)=\pm Q(t-t_0)\)</span> after
+every waiting time <span class="math inline">\(t_0\)</span>.</p>
+<p>For the first implication, a nonconstant solution has an excursion of
+one sign starting from zero. Its velocity cannot vanish inside that
+excursion because <span class="math inline">\(W&gt;0\)</span>, and
+separation of variables would give a finite value for the divergent
+integral (L2). For the converse, <span
+class="math inline">\(Q&#39;=\sqrt{2W(Q)}\)</span> and <span
+class="math inline">\(Q&#39;&#39;=a(Q)\)</span>. Both tend to zero at
+departure, so adjoining rest gives a <span
+class="math inline">\(C^2\)</span> Newton trajectory. Reversing the two
+departures supplies two different incoming full states that merge at
+zero in finite time, exactly as in the cusp note.</p>
+<p>For <span class="math inline">\(a(q)=c q^\alpha\)</span> this test
+reproduces the familiar <span class="math inline">\(\alpha&lt;1\)</span>
+nonuniqueness threshold: its integrand is proportional to <span
+class="math inline">\(q^{-(1+\alpha)/2}\)</span>. The logarithmic family
+below tests the more delicate border where no power-law Lipschitz
+constant exists.</p>
+<h3 id="exact-logarithmic-threshold">Exact logarithmic threshold</h3>
+<p>Fix <span class="math inline">\(\Omega,\ell&gt;0\)</span>, <span
+class="math inline">\(\beta&gt;0\)</span> and put <span
+class="math inline">\(r=\beta/2\)</span>. For sufficiently small <span
+class="math inline">\(q&gt;0\)</span>, with <span
+class="math inline">\(L=\log(\ell/q)&gt;\max\{1,r\}\)</span>, set <span
+class="math display">\[
+W(q)=\frac{\Omega^2}{2}q^2 L^\beta,\qquad
+a(q)=\Omega^2q\bigl(L^\beta-rL^{\beta-1}\bigr).
+\tag{L3}
 \]</span></p>
-<p>This whole function accompanies the coarse kinetic term and the
-endpoint potential terms. Its derivatives have a useful
-interpretation:</p>
-<p><span class="math display">\[
-A_\hbar&#39;=a(\mu-\mathbb EZ),\qquad
-A_\hbar&#39;&#39;=a-\frac{a^2}{\hbar}\operatorname{Var}(Z).
-\tag{16}
+<p>Extend <span class="math inline">\(a\)</span> oddly near zero and the
+potential with a smooth cutoff farther out. This gives a bounded <span
+class="math inline">\(C^1\)</span> potential and continuous bounded
+force; <span class="math inline">\(a(0)=0\)</span> since <span
+class="math inline">\(q L^\beta\to0\)</span>. Its derivative on the
+positive side is <span class="math display">\[
+a&#39;(q)=\Omega^2\left[L^\beta-\frac{3\beta}{2}L^{\beta-1}
+              +\frac{\beta(\beta-1)}2L^{\beta-2}\right],
+\tag{L4}
 \]</span></p>
-<p>Thus an eliminated fluctuation changes the retained response. For
-convex <span class="math inline">\(V\)</span>, the nonlinear-cell note
-proves <span class="math inline">\(0\le A_\hbar&#39;&#39;\le a\)</span>
-and an explicit normalized tail bound about the conditional minimizing
-position. It also proves a simultaneous bound for large fluctuations at
-nonadjacent sites in one halving. No bad region is dropped from the
-integral.</p>
-<p>Classical minimization gives the envelope <span
-class="math inline">\(A_0(\mu)=\min_z[a(z-\mu)^2/2+wV(z)]\)</span>. It
-too has curvature between zero and <span
-class="math inline">\(a\)</span>. Coarse regularity alone therefore does
-not distinguish the two operations.</p>
-<p>The quartic centre does distinguish them quantitatively. For <span
-class="math inline">\(V(z)=\lambda z^4/4\)</span>, <span
-class="math inline">\(\lambda&gt;0\)</span>, <span
-class="math inline">\(A_0&#39;&#39;(0)=0\)</span> while</p>
-<p><span class="math display">\[
-A_\hbar&#39;&#39;(0)&gt;0\quad(\hbar&gt;0),\qquad
-A_\hbar&#39;&#39;(0)\sim\frac{3w\lambda\hbar}{a}
-        \quad\left(\frac{w\lambda\hbar}{a^2}\downarrow0\right).
-\tag{17}
+<p>which diverges for every <span
+class="math inline">\(\beta&gt;0\)</span>. Thus none of these forces is
+locally Lipschitz at zero.</p>
+<p>Nevertheless the energy-zero speed and arrival integral are exact:
+<span class="math display">\[
+\dot q=\Omega qL^r,\qquad
+\mathcal T(q)=\frac1\Omega\int_L^\infty u^{-r}\,du.
+\tag{L5}
 \]</span></p>
-<p>The nonlinear-cell note gives finite inequalities, not just the
-asymptotic formula, and inverts them to a model-conditional action
-interval. This is an example of a generated interaction: a purely
-quartic bare potential acquires quadratic curvature after fluctuation
-integration. The action multiplier remains supplied in (15).</p>
-<h2 id="the-part-of-balabans-method-visible-here">7. The part of
-Balaban’s method visible here</h2>
-<p>The correspondence can now be stated concretely.</p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Mechanical construction</th>
-<th>Controlled quantity</th>
-<th>What is retained</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Force polygon on a time partition</td>
-<td>Lipschitz amplification and force-balance residual</td>
-<td>Initial state, force rule, and a uniform error estimate</td>
-</tr>
-<tr class="even">
-<td>Endpoint stationary elimination</td>
-<td>Inverse action Hessian on a specified branch</td>
-<td>Effective action and its source response</td>
-</tr>
-<tr class="odd">
-<td>Gaussian integration</td>
-<td>Covariance and determinant</td>
-<td>Schur-complement action together with normalization and explicit
-<span class="math inline">\(\hbar\)</span></td>
-</tr>
-<tr class="even">
-<td>Nonlinear integration</td>
-<td>Full conditional law and large-field probabilities</td>
-<td>Generated interactions, normalization and the regions outside the
-local approximation</td>
-</tr>
-</tbody>
-</table>
-<p>Balaban organizes successive effective densities so that such
-information can be estimated at the next scale. The analogous task for
-ODE existence is to preserve enough stability and consistency
-information to pass from all finite polygons to one motion. The objects
-of the two existence problems differ: an ODE solution is a trajectory; a
-weighted continuum construction includes a law or propagator over
-trajectories.</p>
-<p>The one-dimensional chain makes an elementary first step possible:
-conditioned on retained times, distinct missing intervals are
-independent. Their interactions can nevertheless change functional form
-at each elimination. Closure of a finite list of polynomial coefficients
-is an additional assertion that must be checked.</p>
-<h2 id="consequence-for-state">8. Consequence for STATE</h2>
-<p>The requested <span class="math inline">\(0+1\)</span>/ODE lesson is
-developed together with a causal construction of nonlinear initial-value
-motion on arbitrary unequal partitions, allowing mixed kick orders. It
-complements the endpoint Green-function calculation and explains the
-normalized nonlinear cell. The research question is now sharper: which
-independent physical law selects the weight and its action multiplier,
-beyond the regularity already available from classical motion? The <a
-href="newton-branch-response-action.html">branch-response test</a>, cusp
-test and continuity calculation develop that question further. Their
-physical selectors remain explicit premises. These are written
-derivations and a pedagogical comparison, not an independent proof of
-action necessity.</p>
-
+<p>Consequently rest is unique for <span
+class="math inline">\(\beta\le2\)</span>. For <span
+class="math inline">\(\beta&gt;2\)</span>, <span class="math display">\[
+\mathcal T(q)=\frac{L^{1-r}}{\Omega(r-1)},\qquad
+Q(t)=\ell\exp\left(-[\Omega(r-1)t]^{-1/(r-1)}\right).
+\tag{L6}
+\]</span></p>
+<p>The formula for <span class="math inline">\(Q\)</span> is valid until
+the departure leaves the region where (L3) is used. It is flat to every
+order at <span class="math inline">\(t=0\)</span>, so an exactly resting
+body and one that leaves after a delay satisfy the same Newton equation
+and initial data.</p>
+<p>For <span class="math inline">\(\beta\le2\)</span> the <em>whole</em>
+extended IVP is unique. Away from zero this is ordinary local Lipschitz
+uniqueness. At zero with nonzero initial velocity, the conserved-energy
+first-order equation has a nonzero square root and a <span
+class="math inline">\(C^1\)</span> right-hand side near the crossing, so
+it gives unique passage. At zero velocity the arrival criterion applies.
+Bounded force then gives a global reversible point flow. Its dependence
+on initial state is continuous: common finite-time bounds give
+compactness for any converging initial sequence; every subsequential
+limit solves the same unique IVP. Thus all subsequences have the same
+limit. A divergent local slope has not destroyed reversible
+mechanics.</p>
+<p>At the borderline <span class="math inline">\(\beta=2\)</span>, the
+outgoing energy-zero solution from <span
+class="math inline">\(q_0&gt;0\)</span> is particularly informative:
+<span class="math display">\[
+q(t)=\ell\left(\frac{q_0}{\ell}\right)^{e^{-\Omega t}},
+\qquad \dot q(0)=\Omega q_0\log(\ell/q_0).
+\tag{L7}
+\]</span></p>
+<p>While it remains in the logarithmic region, it stays continuous as
+<span class="math inline">\(q_0\downarrow0\)</span> at every fixed
+finite time, although its position sensitivity diverges. This is a
+genuine example of unique stable motion without a Lipschitz dependence
+bound at rest.</p>
+<p>The general first-order Osgood sufficient test applied directly to a
+modulus of size <span class="math inline">\(s[\log(1/s)]^\beta\)</span>
+reaches only <span class="math inline">\(\beta\le1\)</span>. The
+stronger range <span class="math inline">\(1&lt;\beta\le2\)</span> above
+uses the conservative Newton structure and energy; failure of that
+first-order sufficient test is not a proof of nonuniqueness.</p>
+<h3 id="crossing-times-and-arbitrary-mesh-polygons">Crossing times and
+arbitrary-mesh polygons</h3>
+<p>Let <span class="math inline">\(q_n=\ell e^{-n}\)</span> with <span
+class="math inline">\(n\)</span> sufficiently large. Along the
+zero-energy trajectory, the time for the annulus <span
+class="math inline">\(q_{n+1}&lt;q&lt;q_n\)</span> is <span
+class="math display">\[
+\tau_n=\frac1\Omega\int_n^{n+1}u^{-r}\,du,
+\qquad \tau_n\sim\frac1{\Omega n^r}.
+\tag{L8}
+\]</span></p>
+<p>On this annulus the local acceleration slope bound is of order <span
+class="math inline">\(\Lambda_n=\Omega^2n^\beta\)</span>. The short-cell
+scale <span class="math inline">\(\Lambda_n^{-1/2}\)</span> is therefore
+of the same order as <span class="math inline">\(\tau_n\)</span>. One
+can subdivide an annulus crossing into a fixed number of shorter steps
+to obtain a small local Lipschitz amplification parameter. There is no
+uniform slope bound across all annuli.</p>
+<p>The issue is whether infinitely many controlled annulus crossings can
+fit into finite physical time: <span class="math display">\[
+\sum_{n\ge N}\tau_n
+\begin{cases}
+=\infty,&amp;\beta\le2,\\
+&lt;\infty,&amp;\beta&gt;2.
+\end{cases}
+\tag{L9}
+\]</span></p>
+<p>For <span class="math inline">\(\beta\le2\)</span>, a zero-energy
+trajectory cannot reach the infinite-depth boundary at zero in finite
+time. For <span class="math inline">\(\beta&gt;2\)</span>, perfectly
+regular motion on each finite collection of annuli reaches that boundary
+in finite time, and the branch datum is missing there. Local estimates
+at every finite scale do not by themselves control their infinite
+composition. This is the useful multiscale connection with the Balaban
+lesson; it is not a transfer of his field-theory proof.</p>
+<p>For the unique regime, arbitrary-mesh Euler polygons, and the
+lesson’s mixed kick–drift polygons, converge uniformly on every fixed
+finite time interval. Bounded force gives common position and momentum
+bounds; uniform continuity gives a vanishing integral residual;
+compactness supplies solution subsequences; uniqueness makes the whole
+family converge. No <span class="math inline">\(O(\text{mesh})\)</span>
+rate is asserted here.</p>
+<p>In the nonunique regime, exact zero initial data make these
+deterministic polygons remain at rest on every partition. However,
+preparations <span class="math inline">\(q_0\downarrow0\)</span>, <span
+class="math inline">\(\dot q_0=\Omega q_0L_0^r\downarrow0\)</span> have
+<span class="math display">\[
+L(t)=\left[L_0^{1-r}+\Omega(r-1)t\right]^{-1/(r-1)}
+       \longrightarrow [\Omega(r-1)t]^{-1/(r-1)}.
+\tag{L10}
+\]</span></p>
+<p>Thus they converge to the nonzero departure (L6) at fixed small <span
+class="math inline">\(t&gt;0\)</span>. For each positive <span
+class="math inline">\(q_0\)</span>, choose a fine enough polygon to
+approximate that regular trajectory; a diagonal sequence then has
+vanishing mesh and vanishing initial error but a departing limit.
+Refinement is not jointly stable with preparation refinement at zero.
+This is a stronger failure than an unbounded numerical error estimate,
+while keeping the exact-zero polygon’s resting limit explicit.</p>
+<h3 id="vanishing-local-action-and-a-quantum-residual">Vanishing local
+action and a quantum residual</h3>
+<p>The positive outgoing momentum is <span
+class="math inline">\(p(q)=m\Omega qL^r\)</span>. Its canonical action
+from zero to <span class="math inline">\(q\)</span> is <span
+class="math display">\[
+\mathcal J(q)=\int_0^q p(s)\,ds
+       =m\Omega\ell^2\int_L^\infty e^{-2u}u^r\,du.
+\tag{L11}
+\]</span></p>
+<p>For <span class="math inline">\(L&gt;r/2\)</span>, elementary bounds
+give <span class="math display">\[
+\frac{m\Omega}2q^2L^r
+\le\mathcal J(q)
+\le\frac{m\Omega q^2L^r}{2-r/L}.
+\tag{L12}
+\]</span></p>
+<p>The lower bound uses <span class="math inline">\(u^r\ge L^r\)</span>;
+the upper bound uses <span class="math inline">\((L+v)^r\le L^r
+e^{rv/L}\)</span> after writing <span
+class="math inline">\(u=L+v\)</span>. Therefore <span
+class="math inline">\(\mathcal J(q)\sim(m\Omega/2)q^2L^r\to0\)</span>
+for every <span class="math inline">\(\beta&gt;0\)</span>. The temporal
+threshold (L9) creates no positive action threshold.</p>
+<p>There is still a concrete quantum comparison. In the local region
+<span class="math inline">\(V=-p(q)^2/(2m)\)</span>, take the stationary
+energy-zero test functions <span class="math display">\[
+\psi_\pm(q)=p(q)^{-1/2}
+          \exp\left(\pm\frac{i}{\hbar}\mathcal J(q)\right),
+\qquad H_\hbar=-\frac{\hbar^2}{2m}\frac{d^2}{dq^2}+V(q).
+\tag{L13}
+\]</span></p>
+<p>Their eikonal and first-derivative transport terms cancel exactly.
+Writing <span class="math inline">\(b(q)=p(q)^{-1/2}\)</span> gives
+<span class="math inline">\(H_\hbar\psi_\pm
+=-(\hbar^2/2m)b&#39;&#39;e^{\pm i\mathcal J/\hbar}\)</span> and the
+exact local ratio <span class="math display">\[
+\frac{|H_\hbar\psi_\pm|}{|V\psi_\pm|}
+=\left[\frac{\hbar}{m\Omega q^2L^r}\right]^2
+       \left|\frac34-\frac rL+\frac{r(r+2)}{4L^2}\right|
+\sim\frac{3\hbar^2}{16\mathcal J(q)^2}.
+\tag{L14}
+\]</span></p>
+<p>For example, the differentiation behind this identity is <span
+class="math inline">\(p&#39;/p=(1-r/L)/q\)</span> and <span
+class="math inline">\(p&#39;&#39;/p=-r[1-(r-1)/L]/(q^2L)\)</span>; then
+<span
+class="math inline">\(b&#39;&#39;/b=3(p&#39;/p)^2/4-p&#39;&#39;/(2p)\)</span>.
+Equation (L14) is a local residual identity, not an error bound for a
+normalized state or the full propagator.</p>
+<p>At fixed <span class="math inline">\(\hbar&gt;0\)</span>, action
+comparable with <span class="math inline">\(\hbar\)</span> makes the
+local residual of this trajectory ansatz order one even in the
+classically unique regime. Every sufficiently small positive <span
+class="math inline">\(\hbar\)</span> defines a radius <span
+class="math inline">\(q_\hbar\)</span> by <span
+class="math inline">\(\mathcal J(q_\hbar)=\hbar\)</span>, and that
+radius tends to zero as <span class="math inline">\(\hbar\to0\)</span>.
+The bounded-potential Hamiltonian has global unitary dynamics at each
+positive <span class="math inline">\(\hbar\)</span> by the cusp note’s
+held Kato–Rellich input. These facts neither require <span
+class="math inline">\(\hbar=0\)</span> to be a member of the same state
+theory nor select a positive numerical lower bound across the family. No
+relativistic ingredient or <span class="math inline">\(c\)</span> is
+used.</p>
+<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<p>Initial-value construction, continuation, endpoint caustics and
+finite-time mergers have different hypotheses. Unbounded force slope
+alone establishes no merger and no action floor. The <a
+href="newton-cusp-preparation-floor.html">cusp preparation theorem</a>
+uses an actual full-state merger and additional preparation laws. The
+separate <a href="balaban-newton-time-blocking.html">endpoint blocking
+argument</a> retains inverse Hessians, normalization and source
+response; the <a href="newton-nonlinear-time-cell.html">nonlinear
+cell</a> controls a supplied positive weight. Neither operation follows
+solely from constructing a classical orbit.</p>
+<span id="retain-an-intermediate-time-as-a-fluctuating-variable"></span><p class="meta">Moved section: <a href="balaban-newton-time-blocking.html#arbitrary-intermediate-times">balaban-newton-time-blocking</a>.</p><span id="the-part-of-balabans-method-visible-here"></span><p class="meta">Moved section: <a href="newton-nonlinear-time-cell.html#source-comparison-full-densities-and-locality">newton-nonlinear-time-cell</a>.</p><span id="what-a-nonlinear-time-block-actually-produces"></span><p class="meta">Moved section: <a href="newton-nonlinear-time-cell.html#the-complete-one-vertex-weight">newton-nonlinear-time-cell</a>.</p><script>const formerFragments={"retain-an-intermediate-time-as-a-fluctuating-variable": "balaban-newton-time-blocking.html#arbitrary-intermediate-times", "the-part-of-balabans-method-visible-here": "newton-nonlinear-time-cell.html#source-comparison-full-densities-and-locality", "what-a-nonlinear-time-block-actually-produces": "newton-nonlinear-time-cell.html#the-complete-one-vertex-weight"};const formerHash=decodeURIComponent(location.hash.slice(1));if(formerFragments[formerHash])location.replace(formerFragments[formerHash]);</script>
 </main>
 <footer class="site"><div class="wrap">
 <p><strong>Comments, corrections and questions are welcome as repository

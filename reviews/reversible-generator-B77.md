@@ -3,7 +3,7 @@
 The inference from product-probability positivity to
 \(\mathfrak h\subseteq(\mathcal A\oplus\mathcal B\oplus\mathcal I)^{\otimes n}\)
 is correct. The expanded argument in
-`notes/reversible-generator-constraints.md` supplies the two details compressed
+`notes/classical-orientation-closure.md#the-checked-first-order-generator-restriction` supplies the two details compressed
 in de la Torre et al., equations (8)–(14): it retains the Taylor remainder and
 proves the tensor-space intersection by an explicit slice and complement
 argument. The result is an established step from the cited proof, with project

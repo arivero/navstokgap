@@ -14,6 +14,15 @@ and failed routes; [note-index.json](../../research/note-index.json) gives
 thematic metadata and typed links. Reuse unchanged material already read;
 search for later corrections instead of rereading whole maps each time.
 
+Resolve a former filename through the canonical entry's `keys` in
+[note-index.json](../../research/note-index.json) or the existing
+`NOTE_REDIRECTS` in `scripts/build_site.py`; read the destination argument
+rather than treating a deleted filename as lost mathematics. Include the old
+slug, a scientific synonym and a structural dependency in retrieval. Typed
+`uses`, `corrects`, `obstructs` and `continues` relations support recall across
+models without retaining duplicate prose. Check a correcting relation before
+reusing an older source or manuscript.
+
 Form a small direct query from the mechanism, model, result IDs and likely
 failure modes. Search both catalog and **full corpus**, including source
 companions and manuscripts:

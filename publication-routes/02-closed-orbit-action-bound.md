@@ -25,7 +25,7 @@ supplies the action cost. The relativistic extension fits naturally.
 
 I would consider *Total curvature and the minimum action of a closed orbit*
 as an AJP Note candidate.
-[The proof](../notes/closed-orbit-force-action.md) is compact and essentially
+[The proof](../notes/action-unit-dimensional-selection.md#a-sharp-excitation-and-force-bound-for-all-closed-regular-orbits) is compact and essentially
 self-contained. Its publication case depends on whether this consequence of
 Fenchel's theorem—and its sharp mechanical realization—provides an original
 teaching insight. [B32](../references/batches/B32.md) checked the geometric

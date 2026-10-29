@@ -378,6 +378,6 @@ intermediate region, from $g^2\sim10^{-2}$ to the rigorous strong edge
 ($444$ by Dobrushin, $1059$ here), is where the gap forms. Those integer
 figures are sufficient bounds: the exact KP condition and the stricter
 condition for positivity of the rounded $176$ rate are distinguished
-in §3. LLM.md and [the position note](mass-gap-position.md) already
+in §3. LLM.md and [the position note](mass-gap-obligations-lattice.md#existing-estimates-and-examined-routes) already
 carry the October 2 headline correction; their leading estimates
 must retain their approximation signs.

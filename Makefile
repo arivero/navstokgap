@@ -8,6 +8,9 @@ ifneq ($(NOTE),)
 ifneq ($(shell LC_ALL=C.UTF-8 grep -qP '[\x{3000}-\x{9FFF}\x{20000}-\x{2FFFF}]' notes/$(NOTE).md 2>/dev/null && echo cjk),)
 PAPER_ENGINE ?= xelatex
 PAPER_UNICODE ?= true
+ifneq ($(shell LC_ALL=C.UTF-8 grep -q "𣃈" notes/$(NOTE).md 2>/dev/null && echo upper),)
+PAPER_CJK_UPPER ?= true
+endif
 endif
 endif
 PAPER_ENGINE ?= pdflatex
@@ -26,7 +29,7 @@ paper:
 	@set -e; title=$$(sed -n '1s/^# //p' notes/$(NOTE).md | cut -c1-90); \
 	pandoc notes/$(NOTE).md --standalone --to=latex --top-level-division=section \
 	  --template=papers/research-note-template.tex -V "note-title=$$title" \
-	  -V "unicode-cjk=$(PAPER_UNICODE)" -o papers/$(NOTE).tex; \
+	  -V "unicode-cjk=$(PAPER_UNICODE)" -V "cjk-upper=$(PAPER_CJK_UPPER)" -o papers/$(NOTE).tex; \
 	mkdir -p .build/$(NOTE) out/papers; \
 	for i in 1 2; do $(PAPER_ENGINE) -no-shell-escape -halt-on-error -interaction=nonstopmode \
 	  -output-directory=.build/$(NOTE) papers/$(NOTE).tex >/dev/null || \

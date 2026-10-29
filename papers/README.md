@@ -1,106 +1,16 @@
 # Papers
 
-Use the [current dependency paths](../research/dependencies.md) and
-[classified PDF audit](../research/pdf-audit.md) to choose a manuscript.
-The [public Papers page](../docs/papers.html) separates syntheses, technical
-notes, working drafts and historical snapshots. The detailed manuscripts
-below retain their proofs; their local follow-ups do not select the next task.
+Use the [classified manuscript catalog](../research/pdf-audit.md) and
+[public Papers page](../docs/papers.html) to choose an artifact. Maintained
+scientific statements and corrections belong to the [canonical notes](../notes/index.md).
+Independent manuscripts retain their own proof or source value; older and
+historical artifacts are labelled in the catalog.
 
-- [action-scale-obstructions.tex](action-scale-obstructions.tex): generated
-  from the synthesis; premise map, key arguments, receiver/calibration
-  classification and quantum/gap obligations. Reuses accepted source audits.
+Build only an affected note with `make paper NOTE=<slug>`, then run `make site`
+and `make check`. Routine full paper rebuilds and numerical/symbolic mathematical
+verification scripts remain prohibited. PDF text/log screening is document
+verification; it is not a mathematical proof or independent peer review.
 
-- [newton-insertion-action.tex](newton-insertion-action.tex): Galileo's
-  inertial--parabola area, exact action factors and a closed controlled-force
-  quantum comparison; exploratory N01, [PDF](../out/papers/newton-insertion-action.pdf).
-
-- [low-dimensional-mass-gap.tex](low-dimensional-mass-gap.tex): generated
-  from [the G07 note](../notes/low-dimensional-mass-gap.md); the floor/unit
-  theorem for mass gaps and action floors, the Yang--Mills quantum-mechanical
-  gap with explicit constants and its abelian and classical limits, free-field
-  and two-dimensional cases, quantum-mechanical transmutation and the
-  dictionary to the positive-action question;
-  [PDF](../out/papers/low-dimensional-mass-gap.pdf). Sources in B78.
-
-- [mass-gap-position.tex](mass-gap-position.tex): generated from
-  [the position note](../notes/mass-gap-position.md); the synthesis of
-  the mass-gap route, with the six named statements, the proved results
-  and their constants, the closed-off routes and the remaining
-  obligations; [PDF](../out/papers/mass-gap-position.pdf).
-
-- [action-floor-yang-mills-gap.tex](action-floor-yang-mills-gap.tex):
-  generated from [the G08 note](../notes/action-floor-yang-mills-gap.md);
-  a transverse phase-space area floor confines the Yang--Mills
-  quantum-mechanical valley motion and yields the gap, the commutative model
-  is inert under the floor, and a gap returns an action unit except in the
-  action-critical dimension; [PDF](../out/papers/action-floor-yang-mills-gap.pdf).
-  Sources in B79.
-
-- `action-gap-foundations.tex`: area–action identity, variation propositions,
-  Jacobi operator, free kernel and quantum finite-copy threshold.
-- [time-refinement.tex](time-refinement.tex): exact Gaussian blocking, surviving
-  action parameter, conditioned classical-path limit and oscillatory counterpart;
-  [PDF](../out/papers/time-refinement.pdf). Literature/assumption audit B06.
-- [regulator-limits.tex](regulator-limits.tex): arbitrary-partition normalization,
-  finite action defect in a classical-path limit, speed control, stationary phase
-  and a two-regulator scaling map; [PDF](../out/papers/regulator-limits.pdf).
-  Per-result source/proof audit B08 and 24 exact finite checks.
-- [classical-action-field.tex](classical-action-field.tex): positive action
-  plateau from finite reversible velocity memory, exact telegraph example and
-  limit-order test; [PDF](../out/papers/classical-action-field.pdf).
-  B09 source audit, coordinator proof review and 16 exact checks.
-- [collision-action-relaxation.tex](collision-action-relaxation.tex): physical-time
-  action relaxation in a refreshed bath, the Poisson spatial collision clock
-  and ordered-stream cancellation at fixed scales (A02/A12/A13);
-  [PDF](../out/papers/collision-action-relaxation.pdf). B10/B25/B26 audits.
-- [cut-point-consistency.tex](cut-point-consistency.tex): generated from
-  [the maintained note](../notes/cut-point-consistency.md); arbitrary cuts,
-  fixed-parameter bridge consistency and one-node action cost.
-  [PDF](../out/papers/cut-point-consistency.pdf), B12 audit and nine checks.
-- [physical-cut-speed.tex](physical-cut-speed.tex): generated from
-  [the maintained note](../notes/physical-cut-speed.md); elastic midpoint cuts,
-  sharp finite-speed variance bound and ballistic convolution theorem.
-  [PDF](../out/papers/physical-cut-speed.pdf), B13 audit and twelve checks.
-- [telegraph-return-bridge.tex](telegraph-return-bridge.tex): generated from
-  [the maintained note](../notes/telegraph-return-bridge.md); conditional
-  count/simplex construction, midpoint atom, consistent polygon-action limit,
-  exact beta law and midpoint crossover. A06 and A09a are consolidated here
-  with shared preparation and count weights.
-  [PDF](../out/papers/telegraph-return-bridge.pdf), B14 and B17 audits.
-- [composition-universality.tex](composition-universality.tex): generated
-  from [the composition note](../notes/composition-universality.md); conditional
-  mass universality, positive reference and preparation tests.
-  [PDF](../out/papers/composition-universality.pdf), B16 and five algebra checks.
-- [conservative-harmonic-receiver.tex](conservative-harmonic-receiver.tex):
-  Technical compilation from A10/A11's modal response through R03–R33's
-  receiver/record calculations. The synthesis summarizes its action-selection
-  consequences; the R33 continuation is parked. [PDF](../out/papers/conservative-harmonic-receiver.pdf).
-- `research-programme.tex`: generated from `research/PROGRAMME.md` using
-  `programme-template.tex`. Edit the Markdown and run `make programme`.
-- [checkerboard-dynamics.tex](checkerboard-dynamics.tex): coherent wavepacket
-  and repeated-measurement limits; [PDF](../out/papers/checkerboard-dynamics.pdf).
-- [susceptibility-gap.tex](susceptibility-gap.tex): observable frames, hidden
-  modes and independent products; [PDF](../out/papers/susceptibility-gap.pdf).
-- [bounded-acceleration-return.tex](bounded-acceleration-return.tex): sharp
-  turn cost and polygon error; [PDF](../out/papers/bounded-acceleration-return.pdf).
-
-Build only a changed scientific note with `make paper NOTE=<slug>`.
-The full `make papers` target is disabled as a routine gate; historical
-programme PDFs are retained snapshots. Bibliographic metadata lives in
-`references/library.bib`; build intermediates live in `.build/`.
-The tracked TeX/PDF pairs provide readable outputs and editable source.
-
-The [consolidation review](../reviews/paper-consolidation-2026-09-09.md)
-maps further opportunities across A01–A09. Historical numerical check outputs
-are retained, but the hard rule prohibits running Python numerical/symbolic
-verification scripts. Current verification uses proofs, source review and
-document integrity checks.
-
-`spectral-gap-laboratory.tex` is the preserved M03 working draft. Its B04
-literature audit is complete; written proof review and build integration
-are pending. It is outside the accepted-paper build.
-
-The current technical draft has written proofs and internal review R01.
-Publication preparation includes specialist review, citation checking,
-authorship/AI-assistance disclosure and source redistribution checks.
-Public submission requires user direction.
+Shared citations live in [library.bib](../references/library.bib). Git history
+preserves superseded versions; former published note pages redirect to canonical
+sections without retaining duplicate source-note files.

@@ -116,7 +116,7 @@ density. The pointer's momentum $\pi$ has variance $h^2/(4\sigma_j^2)$
 and is independent of its coordinate for a minimal Gaussian pointer,
 so the shear transfers to the body a kick of that variance whether or
 not the coordinate is read; this is Proposition 1 of the
-[parallel-move note](newton-record-parallel-move.md) for the forgotten
+[parallel-move note](mark-cost-and-statistical-floor.md#forgotten-gaussian-records-and-the-refinement-limit) for the forgotten
 case, and the read case adds the classical Gaussian conditioning on
 $r=q+z$. Composition in time is the classical flow between marks. The
 variance $h^2/(4\sigma_j^2)$ is continuous in $h$ and zero at $h=0$.
@@ -129,7 +129,7 @@ in Galileo's parabola with statistical preparations. (The theorem is a
 finite calculation; infinite refinement is the separate result that
 follows.) The same holds for refinement with records
 at every inserted time: the fixed-$h$ limit exists iff
-$\sum_j\sigma_j^{-2}<\infty$ ([parallel-move note](newton-record-parallel-move.md)),
+$\sum_j\sigma_j^{-2}<\infty$ ([parallel-move note](mark-cost-and-statistical-floor.md#forgotten-gaussian-records-and-the-refinement-limit)),
 the $h=0$ limit always exists, and the $h\to0$ limit at any fixed
 partition is continuous. In this limit the zero theory is the regular
 side and $h>0$ the singular one.
@@ -847,7 +847,7 @@ Two quantities already in the corpus show the other non-commuting
 pair of limits, $h\to0$ against $t\to\infty$. For the free Gaussian,
 the expected number of sign reversals of the two-sheet realization
 over all time is $\pi\varphi(1)$ for every $h>0$ and zero at $h=0$
-([recording note, (150)](sed-closure-under-recording.md#823-a-stationary-switching-process-repairs-the-gaussian-marginal));
+([recording note, (150)](score-constrained-ensemble.md#the-gaussian-switching-specialization));
 the total phase $\arctan u$ of (143) there reaches $\pi/2$ for every
 $h>0$ and is zero at $h=0$. Both are limits taken at infinite time
 first; at fixed finite time both vanish continuously as $h\to0$. The

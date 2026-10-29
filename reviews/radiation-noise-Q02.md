@@ -1,7 +1,7 @@
 # Q02 review: the response calculation is sound, with two scope repairs
 
 **Result.** Equations (1)--(4) of
-[`radiation-noise-action-selection.md`](../notes/radiation-noise-action-selection.md)
+[`necessity-unit-and-indeterminacy.md#stable-regulated-radiation-balance-shape-and-free-amplitude`](../notes/necessity-unit-and-indeterminacy.md#stable-regulated-radiation-balance-shape-and-free-amplitude)
 are correct for the stated stable, cutoff, locally viscous oscillator. The weak
 damping limit selects the cubic spectral *shape* needed for equal oscillator
 actions, and it cancels the probe charge and mass. It does not select the

@@ -84,31 +84,33 @@ motion</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/m
 continuous field of observable algebras whose positive-parameter fibers
 are quantum and whose zero fiber is classical. After fixing an action
 unit <span class="math inline">\(S_*\)</span> and setting <span
-class="math inline">\(h=\epsilon S_*\)</span>, the finite quantum
+class="math inline">\(\hbar=\epsilon S_*\)</span>, the finite quantum
 products and classical initial-value construction of <a
-href="quantum-blocks-construct-newton.html">the first document</a>
-define compatible states on these fibers. On every compact time
-interval, their values on smooth Weyl observables converge to the
+href="quantum-blocks-construct-newton.html">the quantum product
+theorem</a> define compatible states on these fibers. On every compact
+time interval, their values on smooth Weyl observables converge to the
 classical point state with an explicit <span
-class="math inline">\(O(h+|\pi|)\)</span> bound, for <strong>every joint
-schedule</strong> with <span
-class="math inline">\(h,|\pi|\to0\)</span>.</p>
+class="math inline">\(O(\hbar+|\pi|)\)</span> bound, for <strong>every
+joint schedule</strong> with <span
+class="math inline">\(\hbar,|\pi|\to0\)</span>.</p>
 <p>The result is a state-level limit for the specified coherent
 preparations and smooth potentials with bounded derivatives of order at
 least two, including the third derivative used for the rate. The quartic
-extension in the first document uses cutoff Hamiltonians; it does not
-establish this estimate for uncut quartic quantum evolution. The result
-neither makes the finite-product propagator uniformly close to the exact
-quantum propagator as <span class="math inline">\(h\to0\)</span>, nor
-makes a quantum superposition a single classical trajectory. The
-groupoid parameter is a geometric deformation parameter until the
-identification <span class="math inline">\(h=\epsilon S_*\)</span> is
-chosen. The time mesh is an additional scale.</p>
-<p>The <a href="newton-dimock-balaban-guide.html">didactic guide</a>
-introduces the Dimock–Balaban comparison and the point-particle
-examples. Its Dirichlet hard-wall calculation is a separate
-construction; the whole-line groupoid and state theorem below do not
-automatically cover that boundary problem.</p>
+extension in the quantum product theorem uses cutoff Hamiltonians; it
+does not establish this estimate for uncut quartic quantum evolution.
+The result neither makes the finite-product propagator uniformly close
+to the exact quantum propagator as <span
+class="math inline">\(\hbar\to0\)</span>, nor makes a quantum
+superposition a single classical trajectory. The groupoid parameter is a
+geometric deformation parameter until the identification <span
+class="math inline">\(h=\epsilon S_*\)</span> is chosen. The time mesh
+is an additional scale.</p>
+<p>The <a href="dirichlet-wall-impulse.html">wall construction</a>
+treats boundary domains and impact separately; the whole-line theorem
+here does not cover that problem. The <a
+href="balaban-ode-lesson.html">classical construction</a> and <a
+href="quantum-blocks-construct-newton.html">quantum product theorem</a>
+supply the dynamics used below.</p>
 <p>The groupoid and strict quantization are established: in particular,
 Cariñena, Clemente-Gallardo, Follana, Gracia-Bondía, Rivero and Várilly,
 <a href="https://arxiv.org/abs/math/9802102">Connes’ Tangent Groupoid
@@ -116,9 +118,9 @@ and Strict Quantization</a> (abstract and the prior repository
 companion), already includes the user’s work. Landsman–Ramazan’s <a
 href="https://arxiv.org/abs/math-ph/0001005">continuous-field
 construction</a> (abstract) supplies the general Lie-groupoid setting.
-The following state estimate applies the first document’s finite-slice
-bounds to that established structure; no literature priority claim is
-made.</p>
+The following state estimate applies the quantum product theorem’s
+finite-slice bounds to that established structure; no literature
+priority claim is made.</p>
 <h2 id="what-the-parameter-joins">1. What the parameter joins</h2>
 <p>For <span class="math inline">\(M=\mathbb R\)</span>, the tangent
 groupoid is <span class="math display">\[
@@ -148,9 +150,9 @@ class="math inline">\((q,p)\)</span>. The positive fibers are abstractly
 isomorphic, but the continuous field specifies how families of their
 elements approach a classical observable.</p>
 <p>Choose an action unit <span class="math inline">\(S_*&gt;0\)</span>
-and set <span class="math display">\[h=\epsilon S_*.\tag{4}\]</span> For
-<span class="math inline">\(a\in C_c^\infty(T^*\mathbb R)\)</span>, Weyl
-quantization has kernel <span class="math display">\[
+and set <span class="math display">\[\hbar=\epsilon S_*.\tag{4}\]</span>
+For <span class="math inline">\(a\in C_c^\infty(T^*\mathbb R)\)</span>,
+Weyl quantization has kernel <span class="math display">\[
 K_\epsilon^a(x,y)=\frac1{2\pi\epsilon S_*}
 \int_{\mathbb R}e^{i(x-y)p/(\epsilon S_*)}
        a\!\left(\frac{x+y}{2},p\right)dp.\tag{5}
@@ -168,29 +170,29 @@ normalization in this flat case; it is not a new proof of the general
 continuous-field theorem.</p>
 <h2 id="the-dynamics-and-the-unbounded-objects">2. The dynamics and the
 unbounded objects</h2>
-<p>For the potential and hypotheses of the first document define <span
-class="math display">\[
-H_h=P^2/(2m)+V(Q),\qquad U_h(t)=e^{-itH_h/h}.\tag{7}
-\]</span> The <span class="math inline">\(H_h\)</span> are unbounded
-operators and the <span class="math inline">\(U_h(t)\)</span> are
+<p>For the potential and hypotheses of the quantum product theorem
+define <span class="math display">\[
+H_\hbar=P^2/(2m)+V(Q),\qquad U_\hbar(t)=e^{-itH_\hbar/\hbar}.\tag{7}
+\]</span> The <span class="math inline">\(H_\hbar\)</span> are unbounded
+operators and the <span class="math inline">\(U_\hbar(t)\)</span> are
 generally multipliers, not elements of the compact-operator fibers. At
-<span class="math inline">\(h&gt;0\)</span> their adjoint action defines
-automorphisms of the compact operators: <span
-class="math display">\[\alpha_h^t(A)=U_h(t)^*AU_h(t).\tag{8}\]</span>
-The first document constructs the unique classical phase-space flow
-<span class="math inline">\(\Phi_t(q,p)\)</span> before it is used here.
-On the zero fiber put <span
+<span class="math inline">\(\hbar&gt;0\)</span> their adjoint action
+defines automorphisms of the compact operators: <span
+class="math display">\[\alpha_\hbar^t(A)=U_\hbar(t)^*AU_\hbar(t).\tag{8}\]</span>
+The quantum product theorem constructs the unique classical phase-space
+flow <span class="math inline">\(\Phi_t(q,p)\)</span> before it is used
+here. On the zero fiber put <span
 class="math display">\[\alpha_0^t(a)=a\circ\Phi_t.\tag{9}\]</span> This
 is classical Hamiltonian evolution with <span
 class="math inline">\(H_{\rm cl}=p^2/(2m)+V(q)\)</span>.</p>
 <p>For <span class="math inline">\(a\in C_c^\infty(T^*\mathbb
 R)\)</span>, Weyl–Egorov compatibility for the smooth subquadratic
-potentials of the first document gives, for fixed <span
+potentials of the quantum product theorem gives, for fixed <span
 class="math inline">\(T\)</span>, <span class="math display">\[
 \sup_{|t|\le T}
-\|\alpha_h^t(\operatorname{Op}_h^W(a))
-      -\operatorname{Op}_h^W(a\circ\Phi_t)\|
-\le C_{a,T}h^2.\tag{10}
+\|\alpha_\hbar^t(\operatorname{Op}_\hbar^W(a))
+      -\operatorname{Op}_\hbar^W(a\circ\Phi_t)\|
+\le C_{a,T}\hbar^2.\tag{10}
 \]</span> Here is the relevant estimate. The finite-time flow has
 bounded derivatives on compact sets under the stated hypotheses, so
 <span class="math inline">\(a_s=a\circ\Phi_s\)</span> is smooth,
@@ -198,26 +200,27 @@ compactly supported, and has uniform symbol bounds for <span
 class="math inline">\(|s|\le T\)</span>. The kinetic commutator is
 exact. The potential-commutator remainder after removing its classical
 first-order term has kernel <span class="math display">\[
-\frac{i}{h}\left[V(x)-V(y)-(x-y)V&#39;\!\left(\frac{x+y}{2}\right)\right]
-K_h^{a_s}(x,y).\tag{10a}
+\frac{i}{\hbar}\left[V(x)-V(y)-(x-y)V&#39;\!\left(\frac{x+y}{2}\right)\right]
+K_\hbar^{a_s}(x,y).\tag{10a}
 \]</span> The bracket is bounded by <span
 class="math inline">\(\|V&#39;&#39;&#39;\|_\infty|x-y|^3/24\)</span>.
 Rapid decay of the Fourier transform of <span
 class="math inline">\(a_s\)</span> in its momentum variable, the change
 <span class="math inline">\(x-y=hz\)</span>, and Schur’s test bound the
-operator norm by <span class="math inline">\(C_{a,T}h^2\)</span>.
+operator norm by <span class="math inline">\(C_{a,T}\hbar^2\)</span>.
 Integrating this commutator remainder by Duhamel’s formula gives (10).
 This uses the standard Weyl calculus and the flow already constructed in
-the first document; it is not being used to prove that flow exists.</p>
+the quantum product theorem; it is not being used to prove that flow
+exists.</p>
 <h2 id="a-quantitative-state-on-every-fiber">3. A quantitative state on
 every fiber</h2>
 <p>Use the coherent packet <span
-class="math inline">\(\psi_h^{q_0,p_0}\)</span> of equation (16) in the
-first document. For a partition <span
+class="math inline">\(\psi_\hbar^{q_0,p_0}\)</span> of equation (16) in
+the quantum product theorem. For a partition <span
 class="math inline">\(\pi\)</span>, let <span
-class="math inline">\(\psi_{h,\pi,j}\)</span> be the state after its
+class="math inline">\(\psi_{\hbar,\pi,j}\)</span> be the state after its
 first <span class="math inline">\(j\)</span> kick–drift cells, and let
-<span class="math inline">\(z_{h,\pi}(t_j)=(q_j,p_j)\)</span> be its
+<span class="math inline">\(z_{\hbar,\pi}(t_j)=(q_j,p_j)\)</span> be its
 means. Denote the constructed classical state by <span
 class="math inline">\(z(t)=\Phi_t(q_0,p_0)\)</span>. Define <span
 class="math display">\[
@@ -232,7 +235,7 @@ J_a=\frac1{2(2\pi)^2}\int_{\mathbb R^2}
 |\widehat a(\xi,\eta)|\big(|\xi|+m\omega|\eta|\big)^2
 \,d\xi\,d\eta&lt;\infty.\tag{11a}
 \]</span> Using the exact Fourier representation of Weyl quantization,
-<span class="math display">\[\operatorname{Op}_h^W(a)
+<span class="math display">\[\operatorname{Op}_\hbar^W(a)
 =(2\pi)^{-2}\int\widehat a(\xi,\eta)
              e^{i(\xi Q+\eta P)}d\xi\,d\eta,\tag{12}\]</span> set <span
 class="math inline">\(A=\xi(Q-q_j)+\eta(P-p_j)\)</span>. The scalar
@@ -241,34 +244,36 @@ factors out, <span class="math inline">\(\langle A\rangle_j=0\)</span>,
 and spectral calculus gives <span class="math inline">\(|\langle
 e^{iA}\rangle_j-1|  \le\tfrac12\langle A^2\rangle_j\)</span>.
 Consequently, <span class="math display">\[
-|\langle\operatorname{Op}_h^W(a)\rangle_j-a(q_j,p_j)|
+|\langle\operatorname{Op}_\hbar^W(a)\rangle_j-a(q_j,p_j)|
 \le J_a\!\left[
 \operatorname{sd}(Q)_j+\frac{\operatorname{sd}(P)_j}{m\omega}
 \right]^2.\tag{13}
 \]</span> Indeed <span class="math inline">\(\langle
-A^2\rangle_j=\|A\psi_{h,\pi,j}\|^2\)</span> and the triangle inequality
-bounds <span class="math inline">\(\|A\psi_{h,\pi,j}\|\)</span> by the
-weighted sum of the two standard deviations. No Gaussian-shape
-assumption is needed after the first step. Fourier inversion also gives
-<span class="math inline">\(|a(z)-a(z&#39;)|\le
+A^2\rangle_j=\|A\psi_{\hbar,\pi,j}\|^2\)</span> and the triangle
+inequality bounds <span
+class="math inline">\(\|A\psi_{\hbar,\pi,j}\|\)</span> by the weighted
+sum of the two standard deviations. No Gaussian-shape assumption is
+needed after the first step. Fourier inversion also gives <span
+class="math inline">\(|a(z)-a(z&#39;)|\le
 I_a\|z-z&#39;\|_\omega\)</span>.</p>
-<p>The first document’s estimates (19) and (26) therefore give, at every
-partition vertex <span class="math inline">\(t_j\in[0,T]\)</span>, <span
+<p>The quantum product theorem’s estimates (19) and (26) therefore give,
+at every partition vertex <span
+class="math inline">\(t_j\in[0,T]\)</span>, <span
 class="math display">\[
-\left|\langle\psi_{h,\pi,j},\operatorname{Op}_h^W(a)
-                         \psi_{h,\pi,j}\rangle-a(z(t_j))\right|
-\le J_a C^2 e^{2\beta T}h+
+\left|\langle\psi_{\hbar,\pi,j},\operatorname{Op}_\hbar^W(a)
+                         \psi_{\hbar,\pi,j}\rangle-a(z(t_j))\right|
+\le J_a C^2 e^{2\beta T}\hbar+
 I_aG_T(C_\delta|\pi|+C_hh).\tag{14}
 \]</span> The constants <span
-class="math inline">\(C,\beta,G_T,C_\delta,C_h\)</span> are explicitly
-defined in that document and depend on the common <span
-class="math inline">\(h_0,T,V,m,\omega\)</span> and initial data, not on
-<span class="math inline">\(h\)</span> or the number of cells. No
-differentiability of an unbounded quantum expectation is used in this
-step.</p>
-<p>With <span class="math inline">\(h=\epsilon S_*\)</span>, choose any
-<span class="math inline">\(\alpha&gt;0\)</span> and a time unit <span
-class="math inline">\(T_*&gt;0\)</span> so that <span
+class="math inline">\(C,\beta,G_T,C_\delta,C_\hbar\)</span> are
+explicitly defined in that document and depend on the common <span
+class="math inline">\(\hbar_0,T,V,m,\omega\)</span> and initial data,
+not on <span class="math inline">\(\hbar\)</span> or the number of
+cells. No differentiability of an unbounded quantum expectation is used
+in this step.</p>
+<p>With <span class="math inline">\(\hbar=\epsilon S_*\)</span>, choose
+any <span class="math inline">\(\alpha&gt;0\)</span> and a time unit
+<span class="math inline">\(T_*&gt;0\)</span> so that <span
 class="math inline">\(|\pi_\epsilon|\le T_*\epsilon^\alpha\)</span>.
 Equation (14) yields <span class="math display">\[
 \langle\operatorname{Op}_{\epsilon S_*}^W(a)\rangle_{\pi_\epsilon}
@@ -278,7 +283,7 @@ Equation (14) yields <span class="math display">\[
 class="math inline">\(O(\epsilon+\epsilon^\alpha)\)</span> at vertices
 equal to <span class="math inline">\(t\)</span>. Such a vertex can be
 inserted in each partition. There is no constraint here on <span
-class="math inline">\(|\pi_\epsilon|/h\)</span>.</p>
+class="math inline">\(|\pi_\epsilon|/\hbar\)</span>.</p>
 <p>This means that the vector states on the positive fibers approach the
 point-evaluation state on the zero fiber, for the specified family of
 preparations. For an arbitrary continuous section <span
@@ -287,11 +292,11 @@ class="math inline">\(A(0)\in C_0(T^*\mathbb R)\)</span> uniformly by
 compactly supported smooth symbols. Continuity of the field and the
 norm-one bound on states extend (15) from these symbols to <span
 class="math inline">\(A\)</span>. At fixed <span
-class="math inline">\(h\)</span>, taking the mesh limit recovers the
-exact unitary state as in the first document. Both routes thus reach the
-same zero-fiber state; equality or closeness of the two quantum vectors
-along an arbitrary joint schedule has <strong>not</strong> been
-established.</p>
+class="math inline">\(\hbar\)</span>, taking the mesh limit recovers the
+exact unitary state as in the quantum product theorem. Both routes thus
+reach the same zero-fiber state; equality or closeness of the two
+quantum vectors along an arbitrary joint schedule has
+<strong>not</strong> been established.</p>
 <h2 id="a-precise-two-scale-test-on-euclidean-increments">4. A precise
 two-scale test on Euclidean increments</h2>
 <p>The preceding theorem concerns real-time operator states. It does not
@@ -299,9 +304,9 @@ claim that Euclidean sample paths are real-time trajectories. The
 following free Gaussian calculation shows why the groupoid coordinate,
 the action parameter and the duration must not be conflated.</p>
 <p>Consider a drifted free reference increment <span
-class="math display">\[Y-X=u\delta+\sqrt{\frac{h\delta}{m}}\,Z,
+class="math display">\[Y-X=u\delta+\sqrt{\frac{\hbar\delta}{m}}\,Z,
 \qquad Z\sim N(0,1).\tag{16}\]</span> Set <span
-class="math inline">\(h=\epsilon S_*\)</span> and <span
+class="math inline">\(\hbar=\epsilon S_*\)</span> and <span
 class="math inline">\(\delta=T_*\epsilon^\alpha\)</span> with <span
 class="math inline">\(\alpha&gt;0\)</span>. The physical-time difference
 quotient is <span class="math display">\[\frac{Y-X}{\delta}
@@ -332,8 +337,8 @@ operator construction, whereas (18) examines a single sampled Euclidean
 increment.</p>
 <h2 id="where-blocking-sits-in-the-groupoid-picture">5. Where blocking
 sits in the groupoid picture</h2>
-<p>For each <span class="math inline">\(\epsilon&gt;0\)</span> the first
-document supplies a complete tower <span
+<p>For each <span class="math inline">\(\epsilon&gt;0\)</span> the
+quantum product theorem supplies a complete tower <span
 class="math inline">\(\rho_{\epsilon,n}\)</span> of normalized
 conditional densities on dyadic time samples. The relation <span
 class="math display">\[\rho_{\epsilon,n}
@@ -359,15 +364,235 @@ the physical action constant runs. Likewise, the real-time Hamilton
 principal action composes by stationary elimination on a specified
 noncaustic branch; infimal convolution is appropriate for a genuine
 minimizing Euclidean problem or a separately proved special case. The
-older <a href="tangent-groupoid-trajectories.html">groupoid note</a> is
-to be read with these qualifications.</p>
-<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+kernel calculation below makes this distinction explicit.</p>
+<h2 id="regulators-and-a-normalized-blocking-test">6. Regulators and a
+normalized blocking test</h2>
+<p>The connection is already part of Rivero’s work. The appendix to his
+<a href="https://arxiv.org/pdf/dg-ga/9710026">1997 tangent-groupoid
+note</a> (pp. 7–8, passages read) constructs a <strong>toy RG
+triangle</strong>: a dilation rescales a bare sequence approaching the
+tangent boundary to a chosen nonzero reference slice, with limits at
+different slices related by rescalings. His <a
+href="https://arxiv.org/pdf/quant-ph/9803035">1998 Feynman-formula
+proposal</a> (pp. 2–3, equations (5)–(10), passages read) similarly
+distinguishes two regulators and calls its controlled objects bare,
+renormalized and dressed series. Its control transformation is left
+unspecified; its control constant is arbitrary. The <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/CarinenaEtAl_TangentGroupoid_1999.md">1999
+strict-quantization paper</a> with Rivero and coauthors supplies the
+groupoid quantization framework. These are the provenance of the present
+question, not a claim that the recent calculation invented the
+groupoid/RG connection.</p>
+<p>The different appearances of epsilon need an explicit dictionary. Let
+<span class="math inline">\(\epsilon_G\)</span> be a dimensionless
+groupoid deformation parameter; in the specified <a
+href="groupoid-quantum-newton-states.html">state formulation</a>,
+choosing <span class="math inline">\(\epsilon_G=\hbar/S_0\)</span>
+assigns the dimensionful phase constant to that parameter. Let <span
+class="math inline">\(\eta=|\pi|/T_0\)</span> be a dimensionless mesh
+scale, and let <span class="math inline">\(\alpha_\pi\)</span> be an
+action-dimensional bare phase regulator. A possible control map, already
+recorded in the <a
+href="rivero-1998-conjecture-central-forces.html">1998 test</a>, is
+<span class="math display">\[
+S_\pi^{\rm bare}=Z_S(\eta)S_\pi,\qquad
+\hbar_{\rm eff}=\frac{\alpha_\pi}{Z_S(\eta)}.
+\]</span> For example, the <em>specified</em> choices <span
+class="math inline">\(Z_S(\eta)=\eta\)</span> and <span
+class="math inline">\(\alpha_\pi=\eta\hbar\)</span> give <span
+class="math inline">\(e^{iS_\pi^{\rm
+bare}/\alpha_\pi}=e^{iS_\pi/\hbar}\)</span> at every mesh. This algebra
+illustrates how a vanishing bare regulator can coexist with a fixed
+positive effective action; substituting the same regulator into an
+unscaled action would give a different phase.</p>
+<p><strong>An exact Gaussian blocking test.</strong> Let <span
+class="math inline">\(m&gt;0\)</span>, <span
+class="math inline">\(u\in\mathbb R\)</span> and let <span
+class="math inline">\(a\ge0\)</span> be an action-dimensional parameter.
+Define a normalized transition kernel by <span
+class="math display">\[K^u_{a,t}(x,dy)=\mathcal N(x+ut,at/m)(dy),\qquad
+t&gt;0,\]</span> with zero variance interpreted as a Dirac measure. For
+<span class="math inline">\(a=\hbar&gt;0\)</span> and <span
+class="math inline">\(u=0\)</span> this is the free Euclidean quantum
+kernel; arbitrary <span class="math inline">\(u\)</span> gives the
+drifted Gaussian reference, not a real-time path measure. Integrating
+out an intermediate position preserves <span
+class="math inline">\(a\)</span> exactly: <span
+class="math display">\[K^u_{a,t}K^u_{a,v}=K^u_{a,t+v}.\]</span> If time
+and position are then rescaled by <span class="math inline">\(t_{\rm
+old}=r t_{\rm new}\)</span>, <span class="math inline">\(x_{\rm old}=s
+x_{\rm new}\)</span> with <span class="math inline">\(r,s&gt;0\)</span>,
+the normalized kernel obeys <span class="math display">\[
+K^u_{a,rt}(sx,sB)=K^{ru/s}_{ra/s^2,t}(x,B)
+\quad\text{for every Borel set }B.
+\]</span> These identities follow from adding independent Gaussian
+increments and rescaling their means and variances; they include <span
+class="math inline">\(a=0\)</span>. Under the diffusive choice <span
+class="math inline">\(r=b\)</span>, <span class="math inline">\(s=\sqrt
+b\)</span>, the action coefficient stays fixed. When <span
+class="math inline">\(u=0\)</span>, every <span
+class="math inline">\(a\ge0\)</span> is a fixed point of this particular
+normalized block-and-rescale map. At <span
+class="math inline">\(a=0\)</span>, retaining <span
+class="math inline">\(u\)</span> gives the deterministic free Newton
+motion <span class="math inline">\(x(t)=x(0)+ut\)</span>. Thus this
+exact free RG control neither selects a positive action nor excludes the
+classical branch. It is an illustrative Gaussian comparison, not a
+result about all interacting blocking maps or complete record
+instruments; compare the <a
+href="groupoid-quantum-newton-states.html">free increment</a> and the <a
+href="refinement-composition-and-limit.html">action-normalization
+identity</a>.</p>
+<p><strong>The two-regulator bridge and a residual action.</strong> For
+the free Gaussian endpoint bridge on a partition with <span
+class="math inline">\(d=N-1\)</span> interior points, whitening the
+quadratic action gives <span class="math inline">\(2\Delta
+S/a\sim\chi_d^2\)</span> and hence <span class="math display">\[\mathbb
+E\Delta S=\frac{da}{2},\qquad
+  \operatorname{Var}(\Delta S)=\frac{da^2}{2}.\]</span> If the maximum
+cell length and <span class="math inline">\(a_N\)</span> tend to zero
+while <span class="math inline">\(d a_N\to\ell\)</span>, the bridges can
+be coupled to converge uniformly almost surely to the classical chord,
+while <span class="math inline">\(\Delta S\to\ell/2\)</span> in <span
+class="math inline">\(L^2\)</span>. This uses one Brownian bridge and
+its polygonal interpolations. For equal cells <span
+class="math inline">\(\tau=T/N\)</span> and <span
+class="math inline">\(a_N=b\tau\)</span>, the supplied <span
+class="math inline">\(b\)</span> has energy units and <span
+class="math inline">\(\ell=bT\)</span>. The positive residual is
+selected by the scaling; at every finite mesh the action distribution
+has values arbitrarily near zero.</p>
+<p>The separately controlled reference family fixes <span
+class="math inline">\(m_R,\kappa_R&gt;0\)</span> and chooses <span
+class="math inline">\(m_B=\alpha_\pi m_R/\kappa_R\)</span>, so its
+normalized free kernels are preserved as <span
+class="math inline">\(\alpha_\pi\to0\)</span>; the bare mass then tends
+to zero. This is different from the preceding fixed-mass limit and does
+not derive the reference action. The <a
+href="https://github.com/arivero/navstokgap/blob/main/papers/regulator-limits.tex">regulator
+manuscript</a>, Proposition 2 and its running-coefficient section,
+contains the full arbitrary-partition proof and source reading; the <a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/regulator-limits.pdf">PDF</a>,
+<a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B08.md">B08</a>
+and its <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/regulator-limits-B08.md">review</a>
+retain the detailed record. The manuscript also gives a bounded-speed
+shrinking sine example with a fixed action defect and growing
+acceleration, and a separate scalar stationary-phase/delta-weight
+calculation. Those examples motivate testing which independent force or
+derivative bounds suppress such a defect; they do not make the defect
+universal or identify it with <span
+class="math inline">\(\hbar\)</span>.</p>
+<p>The open RG problem is to construct a compatible control or blocking
+map for the actual normalized kernels, states and generated
+interactions, including the increments and all required limits, and then
+determine whether its effective action has a universal physical
+identification. Geometric zoom, coarse-graining and running parameters
+can participate in one construction, but a geometric dilation alone does
+not establish that construction or force <span
+class="math inline">\(\hbar\)</span> to run. The <a
+href="groupoid-quantum-newton-states.html#geometric-zoom-and-kernel-composition">corrected
+groupoid comparison</a> and <a
+href="https://github.com/arivero/navstokgap/blob/main/research/refinement-correspondences.md">scale
+correspondence</a> keep these claims and their corrections distinct.</p>
+<h3 id="geometric-zoom-and-kernel-composition">Geometric zoom and kernel
+composition</h3>
+<p>The adiabatic zoom acts by <span
+class="math inline">\((x,y,\epsilon)\mapsto(x,y,\lambda^{-1}\epsilon)\)</span>
+and <span class="math inline">\((x,v,0)\mapsto(x,\lambda v,0)\)</span>.
+Debord–Skandalis <a
+href="https://doi.org/10.1016/j.aim.2014.02.012">2014</a> and van
+Erp–Yuncken <a href="https://doi.org/10.1515/crelle-2017-0035">2019</a>
+(metadata read) relate this geometry to pseudodifferential kernels
+homogeneous modulo smoothing terms; the zero-fiber restriction gives
+their principal symbols. This source result identifies geometric
+structure, not a Wilsonian integration or a law for physical <span
+class="math inline">\(\hbar\)</span>. Earlier identifications of all
+three were too broad.</p>
+<p>The user’s 2003 note (<a
+href="https://arxiv.org/abs/math/0302285">Rivero, “Flashes of
+noncommutativity”, arXiv:math/0302285</a>, full read) introduces the
+groupoid over configuration space with arrows <span
+class="math inline">\((x,y,u)\)</span>, <span
+class="math inline">\(u\)</span> an elapsed time, and law <span
+class="math inline">\((x,y,u)\circ(y,z,v)=(x,z,u+v)\)</span>. Its
+convolution algebra has product <span
+class="math inline">\((AB)(x,z,t)=\int\!\!\int
+A(x,y,r)\,B(y,z,t-r)\,dy\,dr\)</span>; Fourier transformation in <span
+class="math inline">\(t\)</span> gives, with <span
+class="math inline">\(\varepsilon\sim1/\hat t\)</span>, the product of
+the <span class="math inline">\(\varepsilon&gt;0\)</span> part of the
+tangent groupoid, so the latter’s algebra sits inside the former’s (the
+2003 note’s second flash). Refining a trajectory is factoring an arrow
+<span class="math inline">\((x,z,u)\)</span> through intermediate points
+and times, which is Newton’s insertion of <span
+class="math inline">\(t_{2.6}\)</span>.</p>
+<p>For endpoint functions define min-plus convolution by <span
+class="math display">\[
+(A\otimes B)(x,z):=\inf_y\{A(x,y)+B(y,z)\}.
+\]</span> It eliminates the intermediate endpoint; it does not add the
+action on each individual composable pair of arrows.</p>
+<p><strong>Proposition 1.</strong> For <span
+class="math inline">\(M&gt;0\)</span>, constant force <span
+class="math inline">\(F\)</span>, and <span
+class="math inline">\(u&gt;0\)</span>, set <span
+class="math display">\[S_u(x,y)=\frac{M(y-x)^2}{2u}+\frac{Fu}2(x+y)-\frac{F^2u^3}{24M}.\]</span>
+Then <span class="math inline">\((S_u)_{u&gt;0}\)</span> is a semigroup
+of kernels under min-plus convolution: <span
+class="math inline">\(S_r\otimes S_v=S_{r+v}\)</span> for <span
+class="math inline">\(r,v&gt;0\)</span>. This is the corrected action
+<span class="math inline">\(\ell_u\)</span> of <a
+href="refinement-composition-and-limit.html">the refinement note</a>,
+equation (2). The corresponding constant-force unitary propagators
+satisfy <span class="math inline">\(U_{r+v}=U_rU_v\)</span>; their
+kernels compose by integration over the intermediate position, in the
+oscillatory/distributional sense where the real-time integrals are not
+absolutely convergent.</p>
+<p><em>Proof.</em> The sum <span
+class="math inline">\(S_r(x,y)+S_v(y,z)\)</span> is a strictly convex
+quadratic in <span class="math inline">\(y\)</span> with unique
+minimizer <span
+class="math display">\[y_*=\frac{vx+rz}{r+v}-\frac{Frv}{2M}.\]</span>
+Substitution gives <span class="math inline">\(S_{r+v}(x,z)\)</span>.
+Equivalently, <span class="math inline">\(y_*\)</span> is the value at
+time <span class="math inline">\(r\)</span> of the action-minimizing
+constant-force path joining <span class="math inline">\(x\)</span> to
+<span class="math inline">\(z\)</span>. The unitary law follows from the
+self-adjoint Hamiltonian; its kernel statement is operator composition.
+<span class="math inline">\(\square\)</span></p>
+<p>The min-plus law is not an ordinary groupoid morphism. For free
+motion with <span class="math inline">\(M=1\)</span>, <span
+class="math inline">\(S_1(0,1)+S_1(1,0)=1\)</span>, whereas <span
+class="math inline">\(S_2(0,0)=0\)</span>. The equality holds only after
+minimizing over the intermediate point (<span
+class="math inline">\(y=0\)</span> in this example).</p>
+<p>The displayed <span class="math inline">\(S\)</span> is the exact
+discrete Lagrangian of discrete mechanics (<a
+href="https://doi.org/10.1017/S096249290100006X">Marsden and West
+2001</a>, metadata), and discrete Lagrangian mechanics on groupoids is
+<a href="https://doi.org/10.1090/fic/007/10">Weinstein’s (1996)</a>
+(metadata). The kick–drift–kick cell <span
+class="math inline">\(S_\hbar=K_{Fh/2}D_hK_{Fh/2}\)</span> of the
+refinement note is the variational (Störmer–Verlet) integrator of the
+trapezoidal discrete Lagrangian <span
+class="math inline">\(L_\hbar\)</span>, and the cubic counterterm turns
+<span class="math inline">\(L_\hbar\)</span> into the exact one. The
+laws of Proposition 1 can be related through a Euclidean Laplace limit:
+under coercivity and regularity conditions, <span
+class="math inline">\(-\hbar\log\int e^{-S/\hbar}dy\to\inf_y S\)</span>
+as <span class="math inline">\(\hbar\to0\)</span> (<a
+href="https://doi.org/10.1090/conm/377/06982">Litvinov 2005</a>,
+metadata). This does not turn an oscillatory real-time integral into a
+probability integral, nor make every stationary real-time branch a
+global minimum.</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
 <p>The constructed <span class="math inline">\(0+1\)</span> quantum
 family, the semiclassical Newton flow and the user’s tangent-groupoid
 framework now meet in a concrete state theorem with a joint mesh/action
 error bound. The strong operator product limit remains a fixed-<span
-class="math inline">\(h\)</span> theorem; the Euclidean density tower
-and the real-time coherent states have distinct roles. No positive
+class="math inline">\(\hbar\)</span> theorem; the Euclidean density
+tower and the real-time coherent states have distinct roles. No positive
 universal action scale or four-dimensional Yang–Mills result
 follows.</p>
 <p><strong>Targeted advisor check (GPT-6.1 Sol, 2026-10-27).</strong> An
@@ -375,9 +600,9 @@ internal mathematical review checked the chart and Fourier
 normalizations, the state and Gaussian-scale bounds, the extension to
 continuous sections, and the estimate (10). It is not independent peer
 review of the underlying continuous-field theorem or of the literature.
-The centered <span class="math inline">\(O(h)\)</span> state improvement
-in §3 is a subsequent written derivation and was not part of that
-earlier check.</p>
+The centered <span class="math inline">\(O(\hbar)\)</span> state
+improvement in §3 is a subsequent written derivation and was not part of
+that earlier check.</p>
 
 </main>
 <footer class="site"><div class="wrap">

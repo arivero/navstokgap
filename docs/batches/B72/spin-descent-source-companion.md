@@ -3,7 +3,7 @@
 ## Result and bounded question
 
 The bounded audit finds a direct method match for the model in
-`notes/hamiltonian-moment-descent.md`: classical spins on fixed-norm spheres
+`notes/classical-orientation-closure.md#a-complete-classical-interaction-fails-moment-descent`: classical spins on fixed-norm spheres
 carry a Lie–Poisson bracket, and Hamilton evolution is obtained by taking the
 Poisson bracket with the Hamiltonian. This supports the note's use of a
 reversible Hamiltonian flow as hidden-measure dynamics, but not evolution on

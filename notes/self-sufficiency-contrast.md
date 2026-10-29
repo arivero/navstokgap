@@ -675,7 +675,7 @@ data and is outside these point-source thresholds.
 
 The unit $k/c$ agrees with the
 [necessity-unit note](necessity-unit-and-indeterminacy.md) and the
-[relativistic Kepler threshold](relativistic-kepler-threshold.md).
+[relativistic Kepler threshold](action-unit-dimensional-selection.md#singular-and-softened-relativistic-coulomb-cores).
 That dimensional agreement supplies neither a selection principle
 nor the measured value of $h$. In particular there is no single
 unqualified set $[h_{\min},\infty)$ shared by these models.
