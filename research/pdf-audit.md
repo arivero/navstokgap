@@ -13,16 +13,16 @@ Historical/internal model scores are dated source evidence, not current verdicts
 
 ## Current artifact coverage
 
-The catalog covers **115 PDFs**.
+The catalog covers **111 PDFs**.
 
 | Classification | Count |
 | --- | --- |
 | current synthesis | 3 |
-| current technical manuscript | 70 |
+| current technical manuscript | 71 |
 | historical research snapshot | 4 |
 | older version | 2 |
 | orphan manuscript | 6 |
-| working manuscript | 30 |
+| working manuscript | 25 |
 
 ## Independent manuscripts
 

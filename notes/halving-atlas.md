@@ -181,9 +181,8 @@ need not imply a mass gap: massless QCD under spontaneous chiral symmetry
 breaking has pions, and an infrared fixed point has gapless infrared
 behavior. The two-dimensional delta potential has a transmuted binding
 energy and a continuum above zero; its bound-state energy is not a
-field-theory mass-gap proof. [Low-dimensional models](low-dimensional-mass-gap.md)
-and the [action/gap comparison](action-floor-yang-mills-gap.md) retain
-these distinct mechanisms. Confinement and a physical spectral gap each
+field-theory mass-gap proof. The [low-dimensional treatment](low-dimensional-mass-gap.md) keeps
+these mechanisms distinct, including the classical-area/spectral-gap boundary. Confinement and a physical spectral gap each
 require their own argument.
 
 ## 5. Remaining proof obligations

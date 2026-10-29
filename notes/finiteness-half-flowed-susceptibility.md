@@ -65,7 +65,7 @@ so $[O,[H,O]]=\frac{g^2c}{2\hbar}\cdot2\hbar^2\int d^3x|\delta O/\delta A|^2
 Only the electric term contributes: the bound measures how much the
 trial observable is disturbed by the conjugate field, which is the same
 quantity that Section 2 of
-[the action-floor note](action-floor-yang-mills-gap.md) identifies as
+[the action-floor note](low-dimensional-mass-gap.md#conditional-orbit-area-bounds-and-state-counting) identifies as
 the carrier of $\hbar$.
 
 ## 2. Zero momentum makes the bound intensive

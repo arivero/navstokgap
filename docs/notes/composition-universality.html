@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>A shared action coefficient from classical composition</title>
+<title>Classical fluctuation laws and conditional action universality</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,199 +79,392 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>A shared action coefficient from classical composition</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/composition-universality.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/composition-universality.pdf">PDF</a></p><p>A nonnegative mass-dependent fluctuation coefficient becomes mass
-independent when independent composition preserves its value as a
-whole-body observable. A single finite-rate, nonzero-speed reference
-constituent then makes the shared coefficient strictly positive. This
-conditional result separates the composition premise from the physical
-clock that sets the value.</p>
-<h2 id="observable-and-independent-composition">1. Observable and
+<h1>Classical fluctuation laws and conditional action universality</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/composition-universality.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/composition-universality.pdf">PDF</a></p><p>Independent centre-of-mass composition makes a <strong>nonnegative,
+mass-only</strong> fluctuation coefficient the same <span
+class="math inline">\(K\ge0\)</span> for every positive mass, provided a
+composite and a whole-body preparation of the same mass have the same
+assigned coefficient. This premise does not select positivity. A
+supplied finite-rate, nonzero-speed reference gives <span
+class="math inline">\(K&gt;0\)</span> within its preparation class;
+matched mechanical parameters without matched correlations can instead
+give zero.</p>
+<p>Continuous free paths with stationary independent increments and
+isotropic centred noise form a Brownian subclass, with variance rate
+<span class="math inline">\(D(m)=K/m\)</span>. For positive <span
+class="math inline">\(K\)</span>, additional additive force-independent
+position noise gives a sharp pinned-path record floor. Neither this
+stochastic law nor composition alone gives quantum dynamics, universal
+preparation equivalence, or the identification <span
+class="math inline">\(K=\hbar\)</span>. Physical <span
+class="math inline">\(\hbar\)</span> is a separate calibrated input. All
+proofs and source-reading qualifications below are internal written
+work, not independent peer review or evidence of literature novelty.</p>
+<h2 id="observable-and-independent-composition">Observable and
 independent composition</h2>
-<p>All masses are positive, positions are on the line, and coefficients
-have action units. For centered independent displacement variables over
-a common window <span class="math inline">\(\Delta&gt;0\)</span>, define
-<span class="math inline">\(\operatorname{Var}(\Delta
-X_i)=\kappa_i\Delta/m_i\)</span>. Let <span
+<p>All masses are positive. Work on the line for the covariance
+formulas, or coordinatewise for isotropic noise. For centred independent
+displacements over a common window <span
+class="math inline">\(\Delta&gt;0\)</span>, define <span
+class="math inline">\(\operatorname{Var}(\Delta
+X_i)=\kappa_i\Delta/m_i\)</span>, where <span
+class="math inline">\(\kappa_i\)</span> has action units. Put <span
 class="math inline">\(M=m_1+m_2\)</span>, <span
 class="math inline">\(\mu=m_1m_2/M\)</span>, <span
 class="math inline">\(R=(m_1X_1+m_2X_2)/M\)</span> and <span
 class="math inline">\(r=X_1-X_2\)</span>. Variance addition gives</p>
-<p><span class="math display">\[\kappa_{\rm cm}:=\frac
+<p><span class="math display">\[\kappa_{\rm cm}=\frac
 M\Delta\operatorname{Var}(\Delta R)
 =\frac{m_1\kappa_1+m_2\kappa_2}{M},\qquad
-\kappa_{\rm rel}:=\frac\mu\Delta\operatorname{Var}(\Delta r)
+\kappa_{\rm rel}=\frac\mu\Delta\operatorname{Var}(\Delta r)
 =\frac{m_2\kappa_1+m_1\kappa_2}{M}.\]</span></p>
-<p>Thus <span class="math inline">\(\kappa_{\rm cm}+\kappa_{\rm
+<p>Consequently <span class="math inline">\(\kappa_{\rm cm}+\kappa_{\rm
 rel}=\kappa_1+\kappa_2\)</span> and <span
 class="math inline">\(\operatorname{Cov}(\Delta R,\Delta
 r)=\Delta(\kappa_1-\kappa_2)/M\)</span>. For independent Gaussian
-bridges replace <span class="math inline">\(\Delta\)</span> by their
-common covariance kernel; the same coefficient transformation holds. In
-that Gaussian setting, centre/relative process independence is
-equivalent to <span class="math inline">\(\kappa_1=\kappa_2\)</span>.
-More generally, for independent coordinates and <span
-class="math inline">\(y=\sum_i c_iX_i\)</span>, choose the kinetic mass
-<span class="math inline">\(\mu_y=(\sum_i c_i^2/m_i)^{-1}\)</span>. Then
-the corresponding coefficient is <span class="math display">\[\kappa_y=
-\frac{\sum_i(c_i^2/m_i)\kappa_i}{\sum_i c_i^2/m_i}.\]</span> It is a
-weighted average, not a mechanism selecting a positive value.</p>
-<p>For independent stationary finite irreducible reversible chains <span
-class="math inline">\(J^i\)</span>, take centered velocities <span
-class="math inline">\(v_i(J^i)\)</span> and <span
+bridges, replace <span class="math inline">\(\Delta\)</span> by their
+common covariance kernel. Centre and relative processes are independent
+exactly when <span class="math inline">\(\kappa_1=\kappa_2\)</span> in
+that Gaussian setting. More generally, for <span
+class="math inline">\(y=\sum_i c_iX_i\)</span>, use the kinetic mass
+<span class="math inline">\(\mu_y=(\sum_i c_i^2/m_i)^{-1}\)</span>; its
+coefficient is the weighted average</p>
+<p><span class="math display">\[\kappa_y=
+\frac{\sum_i(c_i^2/m_i)\kappa_i}{\sum_i c_i^2/m_i}.\]</span></p>
+<p>This transformation is not a mechanism selecting a positive
+value.</p>
+<p>A distinct observable comes from stationary finite irreducible
+reversible chains <span class="math inline">\(J^i\)</span> with centred
+velocities <span class="math inline">\(v_i(J^i)\)</span> and <span
 class="math inline">\(X_i(t)=\int_0^t v_i(J^i_s)ds\)</span>. C019
-defines <span class="math inline">\(H_i=2m_i\int_0^\infty
-C_i(s)ds\)</span>. Independence gives <span class="math inline">\(C_{\rm
-cm}=(m_1^2C_1+m_2^2C_2)/M^2\)</span>, so the same formulas hold with
-<span class="math inline">\(H\)</span> in place of <span
-class="math inline">\(\kappa\)</span> in the long-window limit. The
-product state has generator <span class="math inline">\(Q_1\otimes
-I+I\otimes Q_2\)</span> and invariant law <span
-class="math inline">\(\pi_1\otimes\pi_2\)</span>; detailed balance and
-irreducibility hold factorwise. Retain this state even if distinct state
-pairs share one velocity value: the projected velocity alone need not be
-Markov. If each constituent speed is at most <span
-class="math inline">\(u&lt;c\)</span>, the centre speed has the same
-bound. Relative velocity may reach <span
-class="math inline">\(2u\)</span>; it is a coordinate difference, not a
-separate particle speed premise.</p>
-<h2 id="mass-universality-theorem">2. Mass-universality theorem</h2>
-<p><strong>Assumptions.</strong> Fix a preparation class. Every mass
-<span class="math inline">\(m\in(0,\infty)\)</span> has a finite
+defines the Green–Kubo plateau <span
+class="math inline">\(H_i=2m_i\int_0^\infty C_i(s)ds\)</span>.
+Independence gives <span class="math inline">\(C_{\rm
+cm}=(m_1^2C_1+m_2^2C_2)/M^2\)</span>, hence the same coefficient
+formulas for <span class="math inline">\(H\)</span>. The product
+generator is <span class="math inline">\(Q_1\otimes I+I\otimes
+Q_2\)</span>, with invariant law <span
+class="math inline">\(\pi_1\otimes\pi_2\)</span>; irreducibility and
+detailed balance hold factorwise. Keep the full product state when
+distinct state pairs share a velocity: its velocity projection need not
+be Markov. If each speed is at most <span
+class="math inline">\(u&lt;c\)</span>, the centre speed is too. Relative
+speed can reach <span class="math inline">\(2u\)</span>, since it is a
+coordinate difference, not an additional particle subject to the same
+speed premise.</p>
+<h2 id="mass-universality-theorem">Mass-universality theorem</h2>
+<p><strong>Assumptions.</strong> Within one preparation class, every
+real mass <span class="math inline">\(m&gt;0\)</span> has a finite
 coefficient <span class="math inline">\(\kappa(m)\ge0\)</span> depending
-only on its mass within this class. Independent constituents can be
-composed, and the coefficient assigned to their whole, of mass <span
-class="math inline">\(M\)</span>, equals the centre coefficient
-calculated above. Choose either the common-window coefficient, a
-Gaussian coefficient, or the Green–Kubo plateau throughout; the theorem
-does not exchange these observables.</p>
-<p><strong>Conclusion.</strong> There is a constant <span
-class="math inline">\(K\ge0\)</span> such that <span
-class="math inline">\(\kappa(m)=K\)</span> for every <span
+only on mass. Independent constituents may be composed, and their
+assigned whole-body coefficient equals the centre coefficient above. Use
+the same observable throughout: a common-window variance, a Gaussian
+covariance coefficient, or a Green–Kubo plateau. The argument does not
+exchange these windows or limits.</p>
+<p><strong>Conclusion (S2).</strong> There is one constant <span
+class="math inline">\(K\ge0\)</span> with <span
+class="math inline">\(\kappa(m)=K\)</span> for all <span
 class="math inline">\(m&gt;0\)</span>.</p>
-<p><strong>Proof.</strong> Set <span
+<p><strong>Proof.</strong> Let <span
 class="math inline">\(f(m)=m\kappa(m)\)</span>. Composition says <span
-class="math inline">\(f(a+b)=f(a)+f(b)\)</span> on positive reals. For
-<span class="math inline">\(b&gt;a\)</span>, nonnegativity gives <span
-class="math inline">\(f(b)-f(a)=f(b-a)\ge0\)</span>. Fix a mass unit
-<span class="math inline">\(m_0&gt;0\)</span>. Additivity yields <span
-class="math inline">\(f(qm_0)=qf(m_0)\)</span> for every positive
-rational <span class="math inline">\(q\)</span>. For any <span
-class="math inline">\(m&gt;0\)</span>, choose rationals <span
-class="math inline">\(q_n\uparrow m/m_0\)</span> and <span
-class="math inline">\(r_n\downarrow m/m_0\)</span>. Monotonicity
-sandwiches <span class="math inline">\(f(m)\)</span> between <span
-class="math inline">\(q_nf(m_0)\)</span> and <span
-class="math inline">\(r_nf(m_0)\)</span>. Hence <span
-class="math inline">\(f(m)=mf(m_0)/m_0\)</span>, and <span
-class="math inline">\(K=f(m_0)/m_0\)</span>. This also covers <span
-class="math inline">\(K=0\)</span>.</p>
-<p>The premise equating independently composed and whole-body
-preparations does the physical work. All-positive-mass admissibility
-makes the rational argument available; a restricted species list needs a
-separately stated domain theorem.</p>
-<h2 id="positive-reference-theorem">3. Positive reference theorem</h2>
-<p>Apply the preceding theorem to Green–Kubo plateaus. Suppose the class
-contains one reference constituent of mass <span
-class="math inline">\(m_0\)</span>, stationary symmetric velocities
-<span class="math inline">\(\pm u_0\)</span>, with <span
+class="math inline">\(f(a+b)=f(a)+f(b)\)</span> on the positive reals.
+Since <span class="math inline">\(f\ge0\)</span>, <span
+class="math inline">\(f(b)-f(a)=f(b-a)\ge0\)</span> for <span
+class="math inline">\(b&gt;a\)</span>. Fix a mass unit <span
+class="math inline">\(m_0&gt;0\)</span>. Additivity gives <span
+class="math inline">\(f(qm_0)=qf(m_0)\)</span> for positive rational
+<span class="math inline">\(q\)</span>. Rational sequences approaching
+<span class="math inline">\(m/m_0\)</span> from below and above sandwich
+<span class="math inline">\(f(m)\)</span> by monotonicity, giving <span
+class="math inline">\(f(m)=mf(m_0)/m_0\)</span>. Thus <span
+class="math inline">\(K=f(m_0)/m_0\)</span>, including <span
+class="math inline">\(K=0\)</span>. No additional measurability or
+empirical mass-continuity premise is needed on this domain. <span
+class="math inline">\(\square\)</span></p>
+<p>The all-positive-mass domain and equivalence of independent composite
+and whole-body preparations do the physical work. A restricted species
+list needs its own domain theorem. An environmental label <span
+class="math inline">\(\theta\)</span> permits a different <span
+class="math inline">\(K(\theta)\)</span> at each fixed label. Correlated
+displacements add <span
+class="math inline">\(2m_1m_2\operatorname{Cov}(\Delta X_1,\Delta
+X_2)/(M\Delta)\)</span> to the centre coefficient; bound bodies and
+common reservoirs require that actual correlation calculation. The <a
+href="rotation-composition-universality.html">interaction/rotation
+theorem</a> concerns canonical commutators and a common Newton
+derivation, rather than this probabilistic preparation premise; it
+independently retains a zero branch.</p>
+<h2 id="continuous-free-paths-and-ultimate-velocity">Continuous free
+paths and ultimate velocity</h2>
+<p><strong>Assumptions (S1).</strong> A body’s free motion starts at a
+deterministic position, has almost surely continuous paths and
+stationary independent increments, and has a rotation-invariant centred
+fluctuation law in <span class="math inline">\(\mathbb R^3\)</span>. A
+constant drift is allowed; isotropy of the full law in a fixed frame
+would instead force that drift to vanish. Universality of free fall
+alone gives none of these noise premises.</p>
+<p>Continuity supplies stochastic continuity. The continuous Lévy
+classification removes the jump part, leaving</p>
+<p><span class="math display">\[X_t=x_0+vt+\sqrt{D(m)}W_t,\qquad
+D(m)\ge0.\]</span></p>
+<p>Isotropy makes the covariance matrix <span
+class="math inline">\(D(m)I\)</span>. If the mass-only and independent
+composition premises also hold, the coefficient in the preceding theorem
+is <span class="math inline">\(\kappa(m)=mD(m)\)</span>, so <span
+class="math inline">\(D(m)=K/m\)</span>. Equivalently, <span
+class="math inline">\(g(m)=m^2D(m)\)</span> is nonnegative additive;
+this is the same proof, not another selection principle.</p>
+<p>For <span class="math inline">\(D=0\)</span> the paths are inertial.
+For <span class="math inline">\(D&gt;0\)</span> Brownian paths are
+almost surely nowhere differentiable, while <span
+class="math inline">\(\lim_{h\downarrow0}\mathbb
+E[X_{t+h}-X_t\mid\mathcal F_t]/h=v\)</span>. Their spatial range over a
+nontrivial interval in three dimensions has Hausdorff dimension two. A
+sharp position at an instant and no pathwise instantaneous velocity are
+therefore compatible in this model; this is not the quantum state
+uncertainty theorem.</p>
+<p>Newton’s scholium to Book I, Section I calls the ultimate velocity
+“certus &amp; definitus”; the <a
+href="principia-fifth-postulate.html">primary-text discussion</a> gives
+the 1687 passage and its reading. Positive Brownian noise changes that
+pathwise premise while retaining a mean forward velocity. This is a
+stated modern comparison, not evidence that Newton anticipated Brownian
+or quantum kinematics. The proposed continuity comparison with Aristotle
+(<em>Physics</em> VI, book-level citation) is likewise historical
+interpretation; jump processes below are a mathematical alternative, not
+a claim of transmission from ancient “leap” accounts.</p>
+<h2 id="positive-reference-theorem">Positive reference theorem</h2>
+<p>For Green–Kubo plateaus, suppose the class includes one stationary
+symmetric two-state reference with mass <span
+class="math inline">\(m_0\)</span>, velocities <span
+class="math inline">\(\pm u_0\)</span>, <span
 class="math inline">\(0&lt;u_0&lt;c\)</span> and reversal rate <span
 class="math inline">\(0&lt;\lambda_0&lt;\infty\)</span>. C020 gives</p>
 <p><span
 class="math display">\[\boxed{K=H(m_0)=\frac{m_0u_0^2}{\lambda_0}&gt;0,
 \qquad H(m)=K\quad(m&gt;0).}\]</span></p>
-<p>This excludes an attained zero in that preparation class using
-classical probability, nonzero motion, a finite positive clock and the
-composition premise. The value comes from the reference constituent.
-Other two-state members consequently obey <span
-class="math inline">\(\lambda_m=mu_m^2/K\)</span>.</p>
-<p>For any chosen <span class="math inline">\(K&gt;0\)</span> and common
-<span class="math inline">\(0&lt;u&lt;c\)</span>, take independent
-two-state members with <span
-class="math inline">\(\lambda_m=mu^2/K\)</span> and include all their
-finite products. Every product has the same plateau when normalized by
-its total mass. This realizes coefficient closure even though its centre
-velocity generally has more than two values. It is a consistency example
-for the assumptions, not a derivation of the assigned rate law. Across
-such examples <span class="math inline">\(K\)</span> can approach zero
-while each individual rate remains finite. A class-wide numerical lower
-bound needs uniform controls, for example <span
-class="math inline">\(u_0\ge u_{\min}&gt;0\)</span> and <span
+<p>The value and positivity come from the reference’s nonzero speed and
+finite clock, together with the composition premise. Other two-state
+members obey <span class="math inline">\(\lambda_m=mu_m^2/K\)</span>.
+For any chosen <span class="math inline">\(K&gt;0\)</span> and common
+<span class="math inline">\(0&lt;u&lt;c\)</span>, independent members
+with <span class="math inline">\(\lambda_m=mu^2/K\)</span> and all
+finite products realize the same mass-normalized plateau. Their centre
+velocities need not have two values. This is a consistency example, not
+a derivation of the assigned clock law. Across such classes <span
+class="math inline">\(K\)</span> approaches zero while every individual
+rate remains finite. A numerical lower bound needs uniform reference
+controls, for example <span class="math inline">\(u_0\ge
+u_{\min}&gt;0\)</span> and <span
 class="math inline">\(\lambda_0\le\Lambda&lt;\infty\)</span> at fixed
 <span class="math inline">\(m_0\)</span>.</p>
-<h2 id="preparation-and-correlation-tests">4. Preparation and
-correlation tests</h2>
-<p>An environmental label <span class="math inline">\(\theta\)</span>
-allows <span class="math inline">\(\kappa(m,\theta)=K(\theta)\)</span>
-under the same composition proof at each fixed <span
-class="math inline">\(\theta\)</span>. Universality across such classes
-requires a preparation-equivalence premise. If cross covariance is <span
-class="math inline">\(C_{12}=\operatorname{Cov}(\Delta X_1,\Delta
-X_2)\)</span>, the centre coefficient has an additional <span
-class="math inline">\(2m_1m_2 C_{12}/(M\Delta)\)</span>; independence
-fixes it to zero. Bound bodies and common reservoirs must be tested with
-their actual correlations.</p>
-<p>In A02, separately prepared tracers in otherwise identical refreshed
-baths have plateau <span
+<p>Bounded-speed microscopic paths have vanishing short-window variance
+coefficient (C018), even when their long-window plateau is positive. The
+<a href="telegraph-return-bridge.html">return bridge</a> connects
+windows within one path law; a Brownian limit exchanges a microscopic
+clock and observation scale. <a
+href="checkerboard-dynamics.html">Checkerboard dynamics</a> adds a
+distinct coherent propagator premise. No such continuation follows from
+covariance alone. The finite-chain spectral and limit proofs remain in
+<a
+href="https://github.com/arivero/navstokgap/blob/main/papers/classical-action-field.tex">classical-action-field</a>,
+<a
+href="https://github.com/arivero/navstokgap/blob/main/out/papers/classical-action-field.pdf">PDF</a>.</p>
+<h2 id="preparation-and-correlation-tests">Preparation and correlation
+tests</h2>
+<p>In A02, independently prepared tracers in otherwise identical
+refreshed baths have <span
 class="math inline">\(H(m)=(m+M_b)s^2/\nu\)</span>. Treating their total
-mass as one tracer changes the coefficient by</p>
+mass as a single tracer gives</p>
 <p><span
 class="math display">\[H(m_a+m_b)-\frac{m_aH(m_a)+m_bH(m_b)}{m_a+m_b}
 =\frac{2m_am_bs^2}{\nu(m_a+m_b)}.\]</span></p>
-<p>The positive discrepancy for <span
-class="math inline">\(s&gt;0\)</span> identifies failure of the
-preparation equivalence premise, while preserving the earlier bath
-calculation. The comparison is between these specified experiments;
-dynamics of an actual bound composite require their own mechanical
-model.</p>
-<p><strong>Same mechanical scales, different preparations
-(C050–C051).</strong> In the reviewed equal-mass hard-point gas, fix
-<span class="math inline">\(m,\rho,u&gt;0\)</span>. Independently marked
-Poisson streams yield reversal rate <span class="math inline">\(\rho
-u\)</span> and long-window coefficient <span
-class="math inline">\(H_*=mu/\rho\)</span>. With two ordered
-counterpropagating streams of the same mass, speed, density, mean
-collision frequency and energy density, the Palm-tagged velocity is a
-uniformly phased square wave of period <span
+<p>For <span class="math inline">\(s&gt;0\)</span> this positive
+discrepancy refutes preparation equivalence for those experiments, while
+preserving the bath calculation. An actual bound composite needs its own
+mechanical model.</p>
+<p>C050–C051 give a stronger matched-scale test. In the equal-mass
+hard-point gas, fix <span class="math inline">\(m,\rho,u&gt;0\)</span>.
+Independently marked Poisson streams yield reversal rate <span
+class="math inline">\(\rho u\)</span> and plateau <span
+class="math inline">\(H_*=mu/\rho\)</span>. Two ordered
+counterpropagating streams with the same mass, speed, density, mean
+collision frequency and energy density instead give a Palm-tagged
+uniformly phased square-wave velocity, with period <span
 class="math inline">\(2d\)</span>, <span class="math inline">\(d=1/(\rho
-u)\)</span>. Its displacement cancels over each period and <span
-class="math display">\[0\le\frac
+u)\)</span>. Displacement cancels each period and</p>
+<p><span class="math display">\[0\le\frac
 m\Delta\operatorname{Var}[X(t+\Delta)-X(t)]
-  \le\frac{m}{3\rho^2\Delta}\longrightarrow0.\]</span> The preparations
-differ in their joint position–velocity correlations, including mark
-independence; the ordered process is not mixing. The <a
+\le\frac{m}{3\rho^2\Delta}\longrightarrow0.\]</span></p>
+<p>The preparations differ in joint position–velocity correlations and
+mark independence; the ordered process is not mixing. The <a
 href="https://github.com/arivero/navstokgap/blob/main/papers/collision-action-relaxation.tex">collision
-manuscript</a>, §§5–6, contains both proofs and the Palm residual-time
-calculation; see also its <a
+manuscript</a>, §§5–6, <a
 href="https://github.com/arivero/navstokgap/blob/main/out/papers/collision-action-relaxation.pdf">PDF</a>,
-<a
+contains both proofs and the Palm residual-time calculation; <a
 href="https://github.com/arivero/navstokgap/blob/main/references/batches/B26.md">B26</a>
-and the <a
-href="https://github.com/arivero/navstokgap/blob/main/reviews/ordered-preparation-B26.md">review</a>.
-This is a preparation-dependence countertest, not a universal
-action-floor theorem.</p>
-<h2 id="scope-source-chain-and-next-test">5. Scope, source chain and
-next test</h2>
-<p>The theorem establishes a conditional universal positive
-<strong>long-window coefficient</strong>, with action units and a
-specified preparation class. Its role as a quantum phase constant and
-its physical-time attraction are subsequent obligations. At bounded
-speed the microscopic variance coefficient still tends to zero by C018.
-The <a href="telegraph-return-bridge.html">exact A09 return bridge</a>
-connects these windows within one prepared path law, while <a
-href="checkerboard-dynamics.html">checkerboard continuation</a> makes
-the distinct coherent-propagator premise explicit.</p>
-<p>This note develops the user’s composition suggestion and the
-independent P02 product-chain calculation (its original working note is
-retained in Git history). C019–C020 supply the reviewed correlation
-input; <a href="https://arxiv.org/abs/1002.4103v1">Pavliotis (2010)</a>
-gives its Poisson-equation source, and <a
-href="https://arxiv.org/abs/1802.09679v1">Pitman–Yor (2018)</a> the
-Gaussian covariance background. Per-result prior-art status belongs to
-B16. The five dedicated algebra checks cover the two coefficients, their
-sum, their cross covariance and the bath discrepancy. Existing P02
-checks also test a nine-state product generator. The written proofs
-supply the general additive-function and positive-reference
-conclusions.</p>
+and its <a
+href="https://github.com/arivero/navstokgap/blob/main/reviews/ordered-preparation-B26.md">internal
+review</a> record the comparison. Matching these mechanical scales
+establishes no universal floor.</p>
+<h2 id="a-conditional-brownian-record-floor">A conditional Brownian
+record floor</h2>
+<p>For S3 add an explicit force law: under constant force <span
+class="math inline">\(F\)</span>, the path is the Newtonian parabola
+plus the <strong>same additive force-independent position noise</strong>
+<span class="math inline">\(\sqrt{K/m}W_t\)</span>. This extra premise
+is not part of the free classification. Let <span
+class="math inline">\(m,\tau,K&gt;0\)</span>, take equal priors, and
+condition both forced and inertial laws on the same cell endpoints.
+Their mean difference is <span class="math inline">\(\delta
+x(u)=Fu(\tau-u)/(2m)\)</span> and their bridge covariance is <span
+class="math inline">\((K/m)(\min(u,v)-uv/\tau)\)</span>. With <span
+class="math inline">\(\mathcal K_\tau=F^2\tau^3/(24m)\)</span>, the
+Cameron–Martin norm and optimal error are</p>
+<p><span class="math display">\[\|\delta x\|_{\rm CM}^2
+=\frac mK\int_0^\tau\dot{\delta x}^{\,2}du
+=\frac{2\mathcal K_\tau}{K},\qquad
+P_{\rm err}^{\rm opt}=\Phi\!\left(-\sqrt{\frac{\mathcal
+K_\tau}{2K}}\right).\]</span></p>
+<p>The <a href="cut-measure-newton.html">cut-measure proof</a> gives the
+Gaussian likelihood calculation and cut evidence decomposition: a cut at
+fraction <span class="math inline">\(s\)</span> of a cell of length
+<span class="math inline">\(L\)</span> carries Kullback–Leibler share
+<span class="math inline">\(3s(1-s)\mathcal K_L/K\)</span>. Any common
+observation channel applied to the path can only increase Bayes error.
+For <span class="math inline">\(0&lt;\varepsilon&lt;1/2\)</span>,
+confidence <span class="math inline">\(1-\varepsilon\)</span> requires
+<span class="math inline">\(\mathcal
+K_\tau\ge2z_{1-\varepsilon}^2K\)</span>. At <span
+class="math inline">\(F=0\)</span> the error is <span
+class="math inline">\(1/2\)</span>. For <span
+class="math inline">\(F\ne0\)</span>, <strong>if</strong> <span
+class="math inline">\(K=\hbar\)</span> is supplied, this becomes</p>
+<p><span
+class="math display">\[\tau\ge\left(\frac{48z_{1-\varepsilon}^2m\hbar}{F^2}\right)^{1/3},\]</span></p>
+<p>the <a href="planck-gap-paper.html">Planck working manuscript</a>’s
+pinned-path mesh. Here <span class="math inline">\(\hbar\)</span> is the
+coefficient in <span class="math inline">\(e^{-S/\hbar}\)</span>, not a
+mesh parameter. This classical stochastic model with an assigned noise
+coefficient does not explain why that coefficient should equal physical
+<span class="math inline">\(\hbar\)</span>.</p>
+<h2 id="jumps-allowed-the-composition-law-beyond-brownian-motion">Jumps
+allowed: the composition law beyond Brownian motion</h2>
+<p>Replace path continuity by stochastic continuity with a càdlàg
+version, retain stationary independent increments and deterministic
+initial point, and drop the finite-variance requirement. Assume
+symmetric isotropic centred Lévy laws, with real nonnegative
+exponent</p>
+<p><span class="math display">\[\mathbb E
+e^{ik\cdot(X_t-X_0)}=e^{-t\phi(m,|k|)}.\]</span></p>
+<p>Composition requires <span
+class="math inline">\(\phi(M,|k|)=\sum_i\phi(m_i,m_i|k|/M)\)</span>. For
+fixed <span class="math inline">\(p=|k|/M\)</span>, put <span
+class="math inline">\(G(m,p)=\phi(m,mp)\)</span>. It is nonnegative
+additive in <span class="math inline">\(m\)</span>, so the same rational
+sandwich argument yields, with one universal Lévy exponent <span
+class="math inline">\(\Gamma\)</span>,</p>
+<p><span class="math display">\[\phi(m,|k|)=m\Gamma(|k|/m),\qquad
+\nu_m(A)=m\nu(mA).\]</span></p>
+<p>Here a reference mass unit is understood in writing <span
+class="math inline">\(\Gamma(p)=G(1,p)\)</span>; <span
+class="math inline">\(\nu\)</span> is its Lévy measure. Jumps shrink by
+<span class="math inline">\(1/m\)</span> while rates multiply by <span
+class="math inline">\(m\)</span>. Brownian motion has <span
+class="math inline">\(\Gamma(p)=Kp^2/2\)</span>. Symmetric <span
+class="math inline">\(\alpha\)</span>-stable examples have <span
+class="math inline">\(\Gamma(p)=K_\alpha p^\alpha\)</span> and
+coefficient <span class="math inline">\(K_\alpha m^{1-\alpha}\)</span>.
+This is S4’s composition classification, not a positive-noise
+theorem.</p>
+<p>A separate dimensional statement assumes there are <strong>no other
+dimensional inputs or hidden scales</strong>, and assumes dimensional
+covariance of the law. Since <span class="math inline">\(p\)</span> has
+units <span
+class="math inline">\((\mathrm{mass}\,\mathrm{length})^{-1}\)</span> and
+<span class="math inline">\(\Gamma\)</span> has units <span
+class="math inline">\((\mathrm{mass}\,\mathrm{time})^{-1}\)</span>, a
+sole action constant <span class="math inline">\(K\)</span> permits only
+<span class="math inline">\(\Gamma(p)=CKp^2\)</span> with dimensionless
+<span class="math inline">\(C\ge0\)</span>. Under those additional
+premises the law is Brownian. Composition alone does not impose the
+single-scale assumption.</p>
+<p>An additional speed <span class="math inline">\(c\)</span> allows
+<span class="math inline">\(\Gamma(p)=Kp^2f(Kp/c)\)</span>. For <span
+class="math inline">\(K&gt;0\)</span>, choose</p>
+<p><span
+class="math display">\[\Gamma(p)=\frac{\sqrt{c^4+c^2K^2p^2}-c^2}{K},\qquad
+\phi(m,|k|)=\frac{\sqrt{m^2c^4+c^2K^2k^2}-mc^2}{K}.\]</span></p>
+<p>This exponent is a Bernstein function of <span
+class="math inline">\(k^2\)</span> and generates jumps; its small-<span
+class="math inline">\(K|k|/(mc)\)</span> limit is <span
+class="math inline">\(Kk^2/(2m)\)</span>. It is the relativistic kinetic
+energy divided by <span class="math inline">\(K\)</span> in a
+<strong>Euclidean generator</strong>. Instantaneous sample-path jumps
+remain allowed, so <span class="math inline">\(c\)</span> supplies no
+causal speed bound on these paths.</p>
+<h2
+id="mean-dynamics-historical-interpretation-and-source-evidence">Mean
+dynamics, historical interpretation and source evidence</h2>
+<p>Nelson’s coefficient convention is <span
+class="math inline">\(\nu=K/(2m)\)</span>. His stochastic mechanics
+imposes a Newton law on a symmetric mean acceleration, using
+forward/backward mean derivatives and state-dependent drift. The free
+assumptions here give neither that dynamics nor a wave function.
+Phase/circulation conditions are additional obligations. In the
+additive-force model one has <span class="math inline">\(m\,d^2\mathbb E
+X_t/dt^2=F\)</span> before endpoint conditioning; that elementary
+identity differs from Nelson’s symmetric mean law. Literal pathwise
+Newtonian momentum requires reformulation for Brownian paths.
+Unqualified equivalence to the Newtonian Laws, or derivation of
+Schrödinger dynamics from the free and composition premises alone, is
+withdrawn.</p>
+<ul>
+<li><a
+href="https://galton.uchicago.edu/~lalley/Courses/383/BrownianMotion.pdf">Lalley,
+<em>Introduction to Brownian Motion</em>, §1</a> was read at passage
+level for the continuous-Lévy classification. <a
+href="https://doi.org/10.1007/BF01474606">Paley–Wiener–Zygmund
+(1933)</a> and <a href="https://doi.org/10.1119/1.12657">Abbott–Wise
+(1981)</a> are metadata-level leads for nondifferentiability and the
+path-dimension comparison respectively.</li>
+<li><a href="https://doi.org/10.1103/PhysRev.150.1079">Nelson
+(1966)</a>, abstract, supplies <span
+class="math inline">\(\nu=\hbar/(2m)\)</span> and reports a limited
+stochastic-mechanics equivalence; <a
+href="https://doi.org/10.1007/BF01338578">Fényes (1952)</a> is a
+precursor identified by metadata. <a
+href="https://doi.org/10.1103/PhysRevA.49.1613">Wallstrom (1994)</a>,
+abstract, records the phase/global-equivalence issue. These reading
+levels support no full-proof audit of stochastic mechanics.</li>
+<li><a href="https://doi.org/10.1063/1.4985370">Demme–Caticha
+(2017)</a>, <a href="https://arxiv.org/pdf/1612.01905">§3, equations
+(18)–(28)</a>, computes the centre covariance from supplied inverse-mass
+constituent covariances in its equation (9). That passage is close prior
+art for composition, rather than proof that the converse or a positive
+universal constant is new. The bounded original search located no
+explicit converse in the passages checked and establishes no priority
+claim.</li>
+<li><a href="https://arxiv.org/abs/1002.4103v1">Pavliotis (2010)</a>
+supplies the Poisson-equation input behind C019–C020; <a
+href="https://arxiv.org/abs/1802.09679v1">Pitman–Yor (2018)</a> supplies
+Gaussian covariance background. Per-result prior-art qualifications
+remain in <a
+href="https://github.com/arivero/navstokgap/blob/main/references/batches/B16.md">B16</a>
+and the independent manuscripts.</li>
+<li><a
+href="https://doi.org/10.1016/0022-1236(90)90049-Q">Carmona–Masters–Simon
+(1990)</a> is a metadata-level lead for the relativistic-generator
+comparison.</li>
+</ul>
+<span id="scope-source-chain-and-next-test"></span><h2 id="consequence-for-state">Consequence for STATE</h2>
+<p>The common-coefficient theorem, continuous Brownian subclass,
+finite-clock reference and jump classification now share one composition
+argument. Positivity, whole-body preparation equivalence, the actual
+force/noise law, quantum reconstruction and calibration to physical
+<span class="math inline">\(\hbar\)</span> remain different obligations.
+The ordered-stream and finite-window countermodels must accompany any
+use of a positive plateau. New research remains suspended during
+consolidation.</p>
 
 </main>
 <footer class="site"><div class="wrap">

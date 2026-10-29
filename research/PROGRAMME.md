@@ -224,7 +224,7 @@ generated gap needs two scale-free non-commuting structures; the analogy
 covers the structure-to-scale stage of the necessity question and points
 N02 to a consistency-forced scale. Exploratory; sources in B78; no promotion.
 
-[G08](../notes/action-floor-yang-mills-gap.md) turns the analogy into an
+[G08](../notes/low-dimensional-mass-gap.md#conditional-orbit-area-bounds-and-state-counting) turns the analogy into an
 implication inside that model. Classical mechanics plus the postulate that
 no transverse oscillation has phase-space area below $h/2$ confines the
 valley motion to $|x|\le2\sqrt m\,E/(\hbar g)$, gives the finite

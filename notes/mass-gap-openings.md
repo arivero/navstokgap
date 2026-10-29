@@ -317,7 +317,7 @@ major result by itself.
 ### Opening 4: the Planck-gap link
 
 The small-volume mechanism of [G07](low-dimensional-mass-gap.md) and
-[G08](action-floor-yang-mills-gap.md) is Simon's: along the flat valleys
+[G08](low-dimensional-mass-gap.md#conditional-orbit-area-bounds-and-state-counting) is Simon's: along the flat valleys
 of the commutator potential the transverse modes are oscillators whose
 frequency grows with the distance along the valley, and their zero-point
 energy lifts the valley (Simon,

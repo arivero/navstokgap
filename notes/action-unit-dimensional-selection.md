@@ -86,6 +86,10 @@ second case divide $g$ by the displayed action product; the quotient is
 invariant under unit changes and hence depends only on the dimensionless
 products. This is the Buckingham reduction. $\square$
 
+Replacing $d_A$ by any observable dimension $d_X$ gives the general
+floor/unit theorem C131 with the same universal-infimum hypotheses and proof.
+The similarity argument below likewise applies to that observable.
+
 For the specified constant set $k_e=e^2/(4\pi\epsilon_0)$, $c$ and $G$, the
 dimension vectors are $(1,3,-2)$, $(0,1,-1)$ and $(-1,3,-2)$. Solving
 

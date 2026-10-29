@@ -580,7 +580,7 @@ equation and $\int\rho U\,dq$ to $\mathcal H$. The two sheet velocities
 $v\pm d$ are the forward and backward mean velocities of Nelson's
 stochastic mechanics with diffusion coefficient $\kappa/m$
 [@Nelson1966; reading: abstract, as in the
-[stochastic route](stochastic-route-velocitas-ultima.md)]. The
+[stochastic route](composition-universality.md#continuous-free-paths-and-ultimate-velocity)]. The
 realization below replaces his Brownian motion by one sign that switches
 at a finite rate, as the Gaussian switching specialization below does.
 The written derivations include the internal corrections to the original

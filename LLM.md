@@ -30,10 +30,16 @@ Hilbert kinematics. A covariance inequality or a classical branch probability
 alone supplies neither quantum states nor quantum instruments.
 4. **Universality and calibration.** [Dimensional units](notes/action-unit-dimensional-selection.md),
 [relative mechanical calibration](notes/reciprocal-coupling-normalization.md),
-[composition/rotations](notes/rotation-composition-universality.md) and
+[classical noise composition](notes/composition-universality.md),
+[interaction/rotations](notes/rotation-composition-universality.md) and
 [global spin patching](notes/spin-action-patching.md) answer distinct questions.
 A common coefficient can still be zero or have arbitrary supplied magnitude.
 No universal measured physical $\hbar$ has been derived from Newtonian completion.
+
+[Classical detector events](notes/local-detector-coincidences.md) preserve the
+passive-barrier and shared-release countermodels beside the independent-monotone
+coincidence bound. [CHSH](notes/shared-readiness-chsh.md) uses different setting
+and locality premises; neither dimensionless witness calibrates physical $\hbar$.
 
 ## Reuse the correct construction
 
@@ -51,6 +57,15 @@ No universal measured physical $\hbar$ has been derived from Newtonian completio
 | Physical spectral limit | [Gauge spectral obligations](notes/mass-gap-obligations-lattice.md), [pion/weight criteria](notes/three-continuum-limits.md): states, sectors, renormalization, observable weight and limiting order |
 
 ## Corrections that change a theorem
+
+- [Low-dimensional models](notes/low-dimensional-mass-gap.md) distinguish a
+classical area-restricted sublevel set from a quantum spectral gap. The invariant
+sector can have a different first gap; a supercritical inverse-square extension
+has a two-sided negative tower and no ground state.
+- [Three-dimensional scaling](notes/three-dimensional-gap-one-function.md)
+requires nonzero-mode control before assigning the constant-mode asymptotic to
+the full physical theory. Dimensional covariance and local stochastic time
+evolution supply no such spectral transport.
 
 - [Independent boxes and Gaussian marks](notes/mark-cost-and-statistical-floor.md)
 use different noise assumptions. Marginal hard widths do not establish an

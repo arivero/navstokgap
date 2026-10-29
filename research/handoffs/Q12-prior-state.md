@@ -17,7 +17,7 @@
    while attenuation preserves normalized fringes and sends action to zero.
    Canonical wave action and spacetime Lagrangian action are distinct.
    Q08 remains exploratory; linear interference variants are parked.
-   [Q09](../../notes/passive-threshold-events.md) supplies event regions and a
+   [Q09](../../notes/local-detector-coincidences.md#passive-thresholds-and-stored-readiness) supplies event regions and a
    mechanical barrier: thresholds trade missed gates for double events;
    preloading reduces signal cost by storing readiness energy. Reset must
    account for it. This remains exploratory; threshold tuning is parked.
@@ -26,7 +26,7 @@
    barrier coupling give a temperature/timing/error-dependent barrier-change
    floor; input work needs a separate transduction premise. Kinetic gating
    defeats a probability-only inference. Thermal variants are parked.
-   [Q11](../../notes/shared-resource-events.md) gives exclusive fringe-weighted
+   [Q11](../../notes/local-detector-coincidences.md#exclusive-shared-release-and-causal-timing) gives exclusive fringe-weighted
    events from a shared release and linear hazards. Finite observation time
    exposes the receiver scale; delayed local inhibition permits coincidences.
    It remains exploratory, with discrete readiness and stochastic rates supplied.

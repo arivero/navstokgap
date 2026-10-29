@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>In three dimensions the mass gap is the positivity of one function at infinity</title>
+<title>Three-dimensional Yang–Mills: conditional scaling and the physical gap limit</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,341 +79,189 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>In three dimensions the mass gap is the positivity of one function at
-infinity</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/three-dimensional-gap-one-function.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/three-dimensional-gap-one-function.pdf">PDF</a></p><p><strong>Qualification, 2026-09-26.</strong> The continuum spectral
-formulas below are conditional on constructing the physical theory. The
-cited stochastic-quantization result constructs local auxiliary-time
-dynamics, not an invariant measure or OS reconstruction. Small physical
-volume, strong lattice coupling and the infinite-volume continuum limit
-are separate regimes. The <a
-href="refinement-composition-and-limit.html">refinement note</a> gives
-the corrected source boundary and the corresponding construction
-target.</p>
-<p>For pure Yang–Mills in <span class="math inline">\(d=3\)</span> (two
-space dimensions) the coupling <span class="math inline">\(g^2\)</span>
-is itself a mass, so the finite-volume gap of the continuum theory on a
-periodic square torus of side <span class="math inline">\(L\)</span>,
-when that theory exists, has the form <span
-class="math display">\[\Delta(L)=g^2\hbar^2c\,f(x),\qquad x=g^2\hbar L\
-\text{(dimensionless)},\]</span> by dimensional analysis alone, and the
-Jaffe–Witten conjecture for <span class="math inline">\(d=3\)</span> is
-the single statement <span
-class="math display">\[\lim_{x\to\infty}f(x)=C\in(0,\infty),\qquad
-m=C\,g^2\hbar^2/c .\]</span> The small-<span
-class="math inline">\(x\)</span> end of <span
-class="math inline">\(f\)</span> is known from the constant-mode sector:
-with two spatial components the zero-mode Hamiltonian is C133 with <span
-class="math inline">\(D=2\)</span>, <span class="math inline">\(m_{\rm
-eff}=L^2/(g^2c)\)</span> and <span
-class="math inline">\(g_B^2=L^2c/g^2\)</span>, giving <span
-class="math inline">\(\Delta_0(L)=\delta_1^{(2)}\,g^2\hbar^2c\,x^{-2/3}\)</span>,
-that is <span
-class="math inline">\(f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]\)</span> as
-<span class="math inline">\(x\to0\)</span>. On the lattice, the
-strong-coupling theorem of <a
-href="strong-coupling-uniform-gap.html">the previous note</a> with <span
-class="math inline">\(\nu=2\)</span> gives a gap <span
-class="math inline">\(\ge\gamma_2(g_{\rm lat}^2/2)C_2\hbar c/a\)</span>
-uniform in the lattice size, and the continuum limit is the statement
-that <span class="math inline">\(\delta_\infty(g_{\rm lat})/g_{\rm
-lat}^2\)</span> stays bounded below as <span
-class="math inline">\(g_{\rm lat}^2=g^2\hbar a\to0\)</span>, together
-with construction and a finite positive limiting ratio. The
-strong-coupling lower bound supplies only one end of this lattice
-question. The small-volume result concerns a different order of limits.
-Contrast <span class="math inline">\(d=4\)</span>, where the ratio must
-pass from a power law <span class="math inline">\(\propto g^2\)</span>
-at strong coupling to the essential singularity <span
-class="math inline">\(e^{-1/(2b_0g^2)}\)</span> at weak coupling. The
-three-dimensional problem is therefore a natural target: it has a
-dimensionful coupling and a single scaling variable. Karabali–Nair’s
-<span class="math inline">\(N/(2\pi)\)</span> is a current-variable
-kinetic scale, not an established value of the full physical gap (<a
-href="https://arxiv.org/pdf/hep-th/9602155">1996 paper, eqs.
-(28)–(29)</a>, passage). The constant <span
-class="math inline">\(C\)</span> remains to be determined. Nothing here
-is promoted.</p>
-<h2 id="units-and-the-one-variable-form">1. Units and the one-variable
-form</h2>
-<p>With <span class="math inline">\(S=\frac1{4g^2}\int
-F^a_{\mu\nu}F^{a\mu\nu}\,d^3x\)</span> and the quantization <span
-class="math inline">\(e^{iS/\hbar}\)</span>, the dimensional census of
-<a href="low-dimensional-mass-gap.html">G07</a> §4 gives <span
-class="math inline">\([1/g^2]=\)</span> action<span
-class="math inline">\(\cdot\)</span>length in <span
-class="math inline">\(d=3\)</span>, so <span
-class="math inline">\(g^2\hbar=1/\ell_g\)</span> is an inverse length,
-<span class="math inline">\(\mu:=g^2\hbar^2/c=\hbar/(c\ell_g)\)</span>
-is a mass, and <span class="math inline">\(\varepsilon_3:=\mu
-c^2=g^2\hbar^2c\)</span> is the unique energy formed from <span
-class="math inline">\((\hbar,c,g)\)</span>. The continuum theory on the
-periodic torus <span class="math inline">\(T^2_L\times\mathbb R\)</span>
-has the fixed constants <span class="math inline">\(\hbar\)</span>,
-<span class="math inline">\(c\)</span>, <span
-class="math inline">\(g\)</span> and the box size <span
-class="math inline">\(L\)</span>, and a gap <span
-class="math inline">\(\Delta(L)\)</span>, when the finite-volume theory
-exists, depends on them only. By the floor/unit theorem C131 applied to
-the observable “energy”, <span class="math inline">\(\Delta(L)\)</span>
-is <span class="math inline">\(\varepsilon_3\)</span> times a function
-of the single dimensionless combination <span
-class="math inline">\(x=L/\ell_g=g^2\hbar L\)</span>, because <span
-class="math inline">\((\hbar,c,g)\)</span> span exactly one energy and
-<span class="math inline">\(L\)</span> adds exactly one dimensionless
-ratio. Setting <span
-class="math inline">\(f(x)=\Delta(L)/\varepsilon_3\)</span>: <span
-class="math display">\[\Delta(L)=\varepsilon_3\,f(x),\qquad\varepsilon_3=g^2\hbar^2c,\qquad
-x=g^2\hbar L .\]</span> The infinite-volume gap, if it exists, is <span
-class="math inline">\(m c^2=\varepsilon_3\lim_{x\to\infty}f(x)\)</span>,
-and Jaffe–Witten’s <span class="math inline">\(0&lt;m&lt;\infty\)</span>
-is <span class="math inline">\(0&lt;\lim f&lt;\infty\)</span>.
-Vacuum-energy renormalization, the only ultraviolet divergence of the
-superrenormalizable theory relevant here, shifts <span
-class="math inline">\(E_0\)</span> and <span
-class="math inline">\(E_1\)</span> equally and leaves <span
-class="math inline">\(f\)</span> untouched.</p>
-<h2 id="the-small-x-end-from-the-constant-modes">2. The small-<span
-class="math inline">\(x\)</span> end from the constant modes</h2>
-<p>Temporal gauge on <span class="math inline">\(T^2_L\)</span> leaves
-two constant spatial components <span
-class="math inline">\(a_1,a_2\)</span> in the Lie algebra. With <span
-class="math inline">\(S=\frac1{4g^2}\int
-F^a_{\mu\nu}F^{a\mu\nu}d^2x\,c\,dt\)</span>, <span
+<h1>Three-dimensional Yang–Mills: conditional scaling and the physical
+gap limit</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/three-dimensional-gap-one-function.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/three-dimensional-gap-one-function.pdf">PDF</a></p><p>For a <strong>constructed physical</strong> pure Yang–Mills theory in
+three spacetime (two space) dimensions, with no additional parameters
+and a fixed square-torus shape, dimensional covariance gives</p>
+<p><span class="math display">\[\Delta(L)=E_3 f(x),\qquad E_3=\hbar^2c
+g_{\rm cl}^2,
+\qquad x=\hbar g_{\rm cl}^2L.\]</span></p>
+<p>The positive finite infinite-volume gap would require <span
+class="math inline">\(\lim_{x\to\infty}f(x)=C\in(0,\infty)\)</span>,
+together with physical spectral convergence and reconstruction.
+Dimensional analysis alone proves none of these existence or positivity
+statements. The constant-mode matrix model and a volume-uniform
+strong-coupling lattice estimate control different regimes; neither
+transports itself to that limit. The current-variable kinetic scale
+<span class="math inline">\(N/(2\pi)\)</span> of Karabali–Nair is not an
+established full physical gap constant. New research remains suspended;
+this note maintains the separate continuum obligation and the exact
+normalization tests.</p>
+<span id="units-and-the-one-variable-form"></span><h2 id="physical-units-and-the-one-variable-form">Physical units and the
+one-variable form</h2>
+<p>Use a connection-valued field with <span
+class="math inline">\(S=(4g_{\rm cl}^2)^{-1}\int
+F^a_{\mu\nu}F^a_{\mu\nu}\,d^3x\)</span> and weight <span
+class="math inline">\(e^{-S_E/\hbar}\)</span>. Then <span
+class="math inline">\([1/g_{\rm
+cl}^2]=\mathrm{action}\,\mathrm{length}\)</span>. Put <span
+class="math inline">\(\lambda_3=\hbar g_{\rm cl}^2=1/\ell_g\)</span>,
+which is an inverse length, and <span class="math inline">\(E_3=\hbar
+c\lambda_3\)</span>. The classical coupling by itself is not a mass when
+physical <span class="math inline">\(\hbar,c\)</span> remain explicit.
+The mass unit is <span class="math inline">\(\mu=E_3/c^2=\hbar^2g_{\rm
+cl}^2/c\)</span>.</p>
+<p>On <span class="math inline">\(T_L^2\times\mathbb R\)</span>, if the
+gap depends only on those constants and <span
+class="math inline">\(L\)</span>, the <a
+href="action-unit-dimensional-selection.html">dimensional theorem</a>
+makes it <span class="math inline">\(E_3\)</span> times a function of
+<span class="math inline">\(x=L/\ell_g\)</span>. Vacuum-energy shifts
+leave a defined excitation gap unchanged; that observation does not
+establish ultraviolet construction or spectral convergence. The <a
+href="low-dimensional-mass-gap.html">low-dimensional treatment</a> owns
+the field normalization and solved matrix/circle comparisons.</p>
+<span id="the-small-x-end-from-the-constant-modes"></span><h2
+id="constant-modes-an-exact-truncation-and-a-conditional-small-volume-use">Constant
+modes: an exact truncation and a conditional small-volume use</h2>
+<p>For <span class="math inline">\(SU(2)\)</span> in temporal gauge,
+take constant spatial components <span class="math inline">\(\vec
+a_1,\vec a_2\)</span>. With <span
 class="math inline">\(F_{0i}=c^{-1}\dot a_i\)</span> and <span
-class="math inline">\(F_{12}=\vec a_1\times\vec a_2\)</span>, the
-constant-mode Lagrangian is <span
-class="math inline">\(\frac{L^2}{2g^2c}|\dot{\vec
-a}|^2-\frac{L^2c}{2g^2}|\vec a_1\times\vec a_2|^2\)</span> and <span
-class="math display">\[H_0=\frac{g^2c}{2L^2}\sum_{i=1}^2|\vec
-p_i|^2+\frac{L^2c}{2g^2}\,|\vec a_1\times\vec a_2|^2,
-\qquad[a_i^a,p_j^b]=i\hbar\delta_{ij}\delta^{ab},\]</span> which is C133
-with <span class="math inline">\(D=2\)</span>, <span
-class="math inline">\(m_{\rm eff}=L^2/(g^2c)\)</span> and <span
-class="math inline">\(g_B^2=L^2c/g^2\)</span>; <span
-class="math inline">\(\hbar\)</span> enters only through <span
-class="math inline">\(g^2\)</span> and the commutator. Its energy unit
-is <span class="math display">\[\varepsilon=\hbar^{4/3}g_B^{2/3}m_{\rm
-eff}^{-2/3}
-=\hbar^{4/3}\Big(\frac{L^2c}{g^2}\Big)^{1/3}\Big(\frac{L^2}{g^2c}\Big)^{-2/3}
-=\hbar^{4/3}c\,g^{2/3}L^{-2/3}
-=\frac{\hbar c}{L}\Big(\frac{L}{\ell_g}\Big)^{1/3}
-=\varepsilon_3\,x^{-2/3},\]</span> using <span
-class="math inline">\(g^{2/3}\hbar^{1/3}=\ell_g^{-1/3}\)</span> and
-<span class="math inline">\(\hbar c/L=\varepsilon_3/x\)</span>. So the
-constant-mode gap is <span
-class="math inline">\(\Delta_0(L)=\delta_1^{(2)}\varepsilon_3x^{-2/3}\)</span>
-with <span class="math inline">\(\delta_1^{(2)}&gt;0\)</span> the pure
-number of C133 for <span class="math inline">\(D=2\)</span>, and <span
-class="math display">\[f(x)=\delta_1^{(2)}\,x^{-2/3}\,[1+o(1)],\qquad
-x\to0,\]</span> where <span class="math inline">\(o(1)\)</span> stands
-for the coupling to the nonzero momentum modes, controlled
-perturbatively by the small-volume expansion in the same way as in <span
-class="math inline">\(d=4\)</span> (Lüscher’s method; the <span
-class="math inline">\(d=3\)</span> expansion parameter is <span
-class="math inline">\(x^{1/3}\)</span> rather than <span
-class="math inline">\(g^{2/3}\)</span>, since <span
-class="math inline">\(x\)</span> is the only parameter). The claim <span
-class="math inline">\(f\to\infty\)</span> as <span
-class="math inline">\(x\to0\)</span> is the statement that the small box
-is gapped with a gap growing like <span
-class="math inline">\(L^{-2/3}\)</span>, slower than the <span
-class="math inline">\(1/L\)</span> of a free particle in a box: the
-zero-point mechanism of <a
-href="action-floor-yang-mills-gap.html">G08</a> gives a softer
-confinement than a hard wall.</p>
-<h2 id="the-lattice-route-in-d3-and-the-strong-coupling-end">3. The
-lattice route in <span class="math inline">\(d=3\)</span> and the
-strong-coupling end</h2>
-<p>On the periodic square lattice <span class="math inline">\((a\mathbb
-Z/N_sa\mathbb Z)^2\)</span> the Kogut–Susskind Hamiltonian is <span
-class="math display">\[H=\frac{\hbar c}{a}\Big[\frac{g_{\rm
-lat}^2}{2}\sum_\ell(-\Delta_\ell)
-+\frac{2}{g_{\rm
-lat}^2}\sum_p(N-\operatorname{Re}\operatorname{tr}U_p)\Big],
-\qquad g_{\rm lat}^2=g^2\hbar a=\frac a{\ell_g},\]</span> with <span
-class="math inline">\(g_{\rm lat}\)</span> dimensionless. Theorem 1 of
-<a href="mass-gap-obligations-lattice.html">the obligations map</a>
-holds verbatim in two dimensions: <span
-class="math inline">\(\Delta_{a,L}=(\hbar c/a)\,\delta(g_{\rm
-lat};N_s,G)&gt;0\)</span> with a unique physical ground state. The
-strong-coupling theorem holds with <span
-class="math inline">\(\nu=2\)</span>, <span
+class="math inline">\(F_{12}=\vec a_1\times\vec a_2\)</span>, their
+Lagrangian and Hamiltonian are</p>
+<p><span class="math display">\[L_0=\frac{L^2}{2g_{\rm cl}^2c}|\dot{\vec
+a}|^2
+-\frac{L^2c}{2g_{\rm cl}^2}|\vec a_1\times\vec a_2|^2,\]</span></p>
+<p><span class="math display">\[H_0=\frac{g_{\rm
+cl}^2c}{2L^2}\sum_{i=1}^2|\vec p_i|^2
++\frac{L^2c}{2g_{\rm cl}^2}|\vec a_1\times\vec a_2|^2,
+\qquad[a_i^a,p_j^b]=i\hbar\delta_{ij}\delta^{ab}.\]</span></p>
+<p>This is C133 with <span class="math inline">\(D=2\)</span>, <span
+class="math inline">\(m_{\rm eff}=L^2/(g_{\rm cl}^2c)\)</span> and <span
+class="math inline">\(g_B^2=L^2c/g_{\rm cl}^2\)</span>. Dilation gives
+the energy unit</p>
+<p><span class="math display">\[\hbar^{4/3}g_B^{2/3}m_{\rm eff}^{-2/3}
+=\hbar^{4/3}c(g_{\rm cl}^2)^{1/3}L^{-2/3}
+=\frac{\hbar c}{L}x^{1/3}=E_3x^{-2/3}.\]</span></p>
+<p>The <strong>truncated</strong> Gauss-invariant gap is therefore <span
+class="math inline">\(\Delta_{0,\rm inv}(L)=\delta_{\rm
+inv}^{(2)}E_3x^{-2/3}\)</span>, with <span
+class="math inline">\(\delta_{\rm
+inv}^{(2)}\ge\delta_1^{(2)}&gt;0\)</span> from the invariant-sector
+theorem. The unrestricted scalar or matrix first gap cannot silently
+replace this physical-sector coefficient. This cross-product proof is
+<span class="math inline">\(SU(2)\)</span>; general <span
+class="math inline">\(SU(N)\)</span> constant-mode conclusions need
+their corresponding matrix theorem.</p>
+<p>Transport to a full physical finite-volume theory would give <span
+class="math inline">\(f(x)=\delta_{\rm
+inv}^{(2)}x^{-2/3}[1+o(1)]\)</span> <strong>if</strong> the nonzero-mode
+coupling, renormalization and sector/domain controls make the relative
+error vanish. The earlier wording treated that error as already
+controlled merely by analogy with Lüscher’s four-dimensional
+small-volume method. It is not proved here. The natural scaling
+parameter <span class="math inline">\(x^{1/3}\)</span> is dimensional
+bookkeeping, not a remainder estimate. The <a
+href="weak-coupling-feshbach-reduction.html">Feshbach argument</a>
+states the distinct complement, Schur and effective-Hamiltonian
+obligations; a finite-matrix gap alone does not satisfy them.</p>
+<span id="the-lattice-route-in-d3-and-the-strong-coupling-end"></span><h2 id="the-lattice-route-and-its-strong-coupling-end">The lattice route
+and its strong-coupling end</h2>
+<p>On the periodic square lattice with <span
+class="math inline">\(N_s\)</span> sites per side, use</p>
+<p><span class="math display">\[H_{a,L}=\frac{\hbar c}{a}\left[
+\frac{g_{\rm lat}^2}{2}\sum_\ell(-\Delta_\ell)
++\frac{2}{g_{\rm lat}^2}\sum_p
+(N-\operatorname{Re}\operatorname{tr}U_p)\right],
+\qquad g_{\rm lat}^2=\lambda_3a.\]</span></p>
+<p>Here <span class="math inline">\(N\)</span> is colour rank, <span
+class="math inline">\(N_s=L/a\)</span> is lattice size and <span
+class="math inline">\(g_{\rm lat}\)</span> is dimensionless. The <a
+href="mass-gap-obligations-lattice.html">finite-lattice theorem</a>
+gives a unique physical ground state and <span
+class="math inline">\(\Delta_{a,L}=(\hbar c/a)\delta(g_{\rm
+lat};N_s,G)&gt;0\)</span>. The <a
+href="strong-coupling-uniform-gap.html">strong-coupling theorem</a> with
+spatial <span class="math inline">\(\nu=2\)</span>, <span
 class="math inline">\(\Lambda_0=\{0,1\}^2\)</span>, two links and one
-plaquette per site: <span class="math display">\[\beta=\frac{4}{g_{\rm
-lat}^4C_2}\cdot2N=\frac{16N^2}{g_{\rm lat}^4(N^2-1)},\qquad
-\Delta_{a,L}\ge\gamma_2\,\frac{g_{\rm lat}^2}{2}\,C_2\,\frac{\hbar
-c}{a},\]</span> for <span class="math inline">\(g_{\rm lat}\ge
-g_0^{(2)}(N)=\big(16N^2/[(N^2-1)\beta_*(2,\{0,1\}^2)]\big)^{1/4}\)</span>,
-uniformly in <span class="math inline">\(N_s\)</span>, by the same
-hypothesis check.</p>
-<p>The continuum limit is <span class="math inline">\(a\to0\)</span> at
-fixed <span class="math inline">\(g^2\)</span>, <span
-class="math inline">\(L\)</span>, that is <span
-class="math inline">\(g_{\rm lat}^2\to0\)</span> with <span
-class="math inline">\(N_s=L/a\)</span> and <span
-class="math inline">\(x=g^2\hbar L=g_{\rm lat}^2N_s\)</span> fixed. The
-lattice gap in units of <span
-class="math inline">\(\varepsilon_3\)</span> is <span
-class="math display">\[\frac{\Delta_{a,L}}{\varepsilon_3}=\frac{\hbar
-c}{a\,g^2\hbar^2c}\,\delta
-=\frac{\delta(g_{\rm lat};N_s,G)}{g_{\rm lat}^2},\]</span> so,
-conditional on the physical continuum construction and convergence of
-its spectral threshold, its finite-volume scaling requires <span
-class="math inline">\(\delta(g_{\rm lat};x/g_{\rm lat}^2,G)/g_{\rm
-lat}^2\to f(x)\)</span> as <span class="math inline">\(g_{\rm
-lat}\to0\)</span>, and the infinite-volume mass is <span
-class="math display">\[\frac{mc^2}{\varepsilon_3}=\lim_{g_{\rm
-lat}\to0}\ \frac{\delta_\infty(g_{\rm lat})}{g_{\rm lat}^2},
-\qquad\delta_\infty(g_{\rm lat})=\liminf_{N_s\to\infty}\delta(g_{\rm
-lat};N_s,G).\]</span> At strong coupling the same ratio is bounded below
-by <span class="math inline">\(\gamma_2C_2/2\)</span>. The <span
-class="math inline">\(d=3\)</span> conjecture on the lattice route is
-therefore:</p>
-<blockquote>
-<p><strong>T3<span class="math inline">\(_{(3)}\)</span>.</strong> The
-function <span class="math inline">\(c(g_{\rm lat})=\delta_\infty(g_{\rm
-lat})/g_{\rm lat}^2\)</span>, which satisfies <span
-class="math inline">\(c\ge\gamma_2C_2/2\)</span> for <span
-class="math inline">\(g_{\rm lat}\ge g_0^{(2)}\)</span>, stays bounded
-below by a positive constant for all <span class="math inline">\(g_{\rm
-lat}&gt;0\)</span> and has a finite limit <span
-class="math inline">\(C\)</span> as <span class="math inline">\(g_{\rm
-lat}\to0\)</span>.</p>
-</blockquote>
-<p>This is a sufficient all-coupling version; the continuum target needs
-the positive finite limit near <span class="math inline">\(g_{\rm
-lat}=0\)</span>, with construction, rather than positivity at every
-intermediate lattice coupling.</p>
-<p><strong>The abelian contrast in <span
-class="math inline">\(d=3\)</span>.</strong> For compact <span
-class="math inline">\(U(1)\)</span> in three dimensions Göpfert and Mack
-(abstract, B78) prove a gap at every coupling, so T2<span
-class="math inline">\(&#39;\)</span> holds for the abelian group here,
-and their Debye mass <span
-class="math inline">\(m_D^2=(2\beta/a^3)e^{-\beta v(0)/2}\)</span>,
-<span class="math inline">\(\beta=4\pi^2/e^2_{\rm lat}\)</span>, makes
-<span class="math inline">\(c(g_{\rm lat})=\delta_\infty/g_{\rm
-lat}^2\)</span> vanish with an essential singularity as <span
-class="math inline">\(g_{\rm lat}\to0\)</span>: the continuum photon is
-massless. In <span class="math inline">\(d=3\)</span> the
-abelian/non-abelian distinction is therefore the limit of the ratio,
-zero against a positive <span class="math inline">\(C\)</span>, with
-positivity at each coupling shared by both. Everything in this note up
-to here is a collection of known facts in one normalization; the only
-statement of this programme’s own is the reduction to <span
-class="math inline">\(f\)</span> and its two ends.</p>
-<p>No exponential enters. In <span class="math inline">\(d=4\)</span>
-the corresponding ratio <span
-class="math inline">\(\delta_\infty(g)/g^2\)</span> is bounded below at
-strong coupling by the same theorem and must vanish like <span
-class="math inline">\(g^{-2}e^{-1/(2b_0g^2)}\)</span> at weak coupling;
-the two ends of the <span class="math inline">\(d=4\)</span> problem
-have different functional forms and the lattice gap must interpolate
-between them, which is what makes T3 in <span
-class="math inline">\(d=4\)</span> a transmutation statement. In <span
-class="math inline">\(d=3\)</span> both ends are linear in <span
-class="math inline">\(g_{\rm lat}^2\)</span>.</p>
-<h2 id="what-is-in-hand-and-what-is-not">4. What is in hand and what is
-not</h2>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th><span class="math inline">\(d=3\)</span></th>
-<th><span class="math inline">\(d=4\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>scale of the gap</td>
-<td><span class="math inline">\(\varepsilon_3=g^2\hbar^2c\)</span>,
-classical constant</td>
-<td><span class="math inline">\(\hbar c\Lambda\)</span>, generated by
-transmutation</td>
-</tr>
-<tr class="even">
-<td>finite-volume gap</td>
-<td><span class="math inline">\(\varepsilon_3f(x)\)</span>, <span
-class="math inline">\(x=g^2\hbar L\)</span></td>
-<td><span class="math inline">\((\hbar c/L)\,z(L)\)</span> with <span
-class="math inline">\(g(L)\)</span> running</td>
-</tr>
-<tr class="odd">
-<td>small-volume end</td>
-<td><span
-class="math inline">\(f(x)=\delta_1^{(2)}x^{-2/3}[1+o(1)]\)</span></td>
-<td><span
-class="math inline">\(z=\delta_1^{(3)}g(L)^{2/3}[1+O(g^{2/3})]\)</span></td>
-</tr>
-<tr class="even">
-<td>strong-coupling lattice end</td>
-<td><span class="math inline">\(\delta_\infty/g_{\rm
-lat}^2\ge\gamma_2C_2/2\)</span></td>
-<td><span
-class="math inline">\(\delta_\infty/g^2\ge\gamma_3C_2/2\)</span></td>
-</tr>
-<tr class="odd">
-<td>conjecture</td>
-<td><span class="math inline">\(\inf_{g_{\rm lat}}c(g_{\rm
-lat})&gt;0\)</span>, <span class="math inline">\(c\to C\)</span></td>
-<td><span class="math inline">\(\delta_\infty(g)/(a\Lambda_{\rm
-lat}(g))\to m/(\hbar c\Lambda_{\rm lat})\)</span></td>
-</tr>
-<tr class="even">
-<td>physical gap constant</td>
-<td><span class="math inline">\(C\)</span> open; Karabali–Nair’s <span
-class="math inline">\(N/(2\pi)\)</span> is a kinetic scale</td>
-<td>none in closed form</td>
-</tr>
-<tr class="odd">
-<td>construction input</td>
-<td>local renormalized stochastic flow; invariant measure and OS theory
-not supplied by that result</td>
-<td>finite-volume UV stability only</td>
-</tr>
-</tbody>
-</table>
-<p>Chandra, Chevyrev, Hairer and Shen explicitly leave global stochastic
-survival and an invariant measure open (<a
-href="https://arxiv.org/pdf/2201.03487">2024 paper, introduction</a>,
-passage). The earlier table entry claiming finite-volume existence by
-stochastic quantization was too strong.</p>
-<p>Open in <span class="math inline">\(d=3\)</span>: (i) the required
-finite- and infinite-volume physical construction; (ii) a lower bound on
-<span class="math inline">\(f\)</span> beyond the small-volume regime;
-(iii) the identification of <span class="math inline">\(f\)</span>’s
-small-<span class="math inline">\(x\)</span> correction with the
-stochastic construction’s estimates. Item (ii) is the conjecture itself,
-and the one-variable form means that a single inequality <span
-class="math inline">\(f(x)\ge f_-&gt;0\)</span> for <span
-class="math inline">\(x\ge x_0\)</span>, proved for the continuum
-finite-volume theory, together with the existence of <span
-class="math inline">\(\lim f\)</span>, would settle the <span
-class="math inline">\(d=3\)</span> mass gap.</p>
-<h2 id="consequence-for-state">5. Consequence for STATE</h2>
-<p>The <span class="math inline">\(d=3\)</span> spectral target,
-conditional on construction, concerns one function of one variable:
-<span class="math inline">\(f(x)\sim\delta_1^{(2)}x^{-2/3}\)</span> in
-the small-volume approximation at <span
-class="math inline">\(x\to0\)</span> and <span
-class="math inline">\(f\to C\)</span> conjectured at <span
-class="math inline">\(x\to\infty\)</span>, with the lattice ratio <span
-class="math inline">\(\delta_\infty/g_{\rm lat}^2\)</span> bounded below
-at strong coupling. It replaces the <span
-class="math inline">\(d=3\)</span> line of STATE. The next theorem-sized
-step in <span class="math inline">\(d=3\)</span> is a lower bound <span
-class="math inline">\(f(x)\ge f_-&gt;0\)</span> on an interval <span
-class="math inline">\(x\in[x_0,x_1]\)</span> beyond the small-volume
-expansion, for which the candidate tool is a variational or
-operator-inequality argument on the torus Hamiltonian that keeps the
-zero-point mechanism of the constant modes while controlling the nonzero
-modes by their Gaussian part, which is what the weak-coupling lattice
-bound of STATE step 3 is meant to prepare.</p>
+plaquette per site gives</p>
+<p><span class="math display">\[\beta=\frac{8N}{g_{\rm lat}^4C_2}
+=\frac{16N^2}{g_{\rm lat}^4(N^2-1)},\qquad
+g_0^{(2)}(N)=\left[
+\frac{16N^2}{(N^2-1)\beta_*(2,\{0,1\}^2)}\right]^{1/4},\]</span></p>
+<p><span class="math display">\[\Delta_{a,L}\ge\gamma_2\frac{g_{\rm
+lat}^2}{2}C_2\frac{\hbar c}{a},
+\qquad g_{\rm lat}\ge g_0^{(2)}(N),\]</span></p>
+<p>uniformly in <span class="math inline">\(N_s\)</span>. The
+unspecified theorem constants <span
+class="math inline">\(\beta_*,\gamma_2\)</span> retain their source
+hypotheses; they are not numerical continuum estimates.</p>
+<p>At fixed <span class="math inline">\(\lambda_3,L\)</span>, taking
+<span class="math inline">\(a\to0\)</span> sends <span
+class="math inline">\(g_{\rm lat}\to0\)</span> with <span
+class="math inline">\(x=g_{\rm lat}^2N_s\)</span> fixed and <span
+class="math inline">\(\Delta_{a,L}/E_3=\delta(g_{\rm lat};N_s,G)/g_{\rm
+lat}^2\)</span>. A finite-volume continuum spectral theorem would
+need</p>
+<p><span class="math display">\[\frac{\delta(g_{\rm lat};x/g_{\rm
+lat}^2,G)}{g_{\rm lat}^2}\longrightarrow f(x).\]</span></p>
+<p>For the volume-first lattice route define <span
+class="math inline">\(\delta_\infty(g_{\rm
+lat})=\liminf_{N_s\to\infty}\delta(g_{\rm lat};N_s,G)\)</span> and <span
+class="math inline">\(c_3(g_{\rm lat})=\delta_\infty(g_{\rm lat})/g_{\rm
+lat}^2\)</span>. At strong coupling <span
+class="math inline">\(c_3\ge\gamma_2C_2/2\)</span>. A finite positive
+limit <span class="math inline">\(c_3\to C\)</span> near zero, plus
+construction, matching of limit orders and surviving physical spectral
+weight, is the continuum target. Positivity and a common lower bound at
+<strong>every</strong> intermediate bare coupling form a sufficient
+optional strengthening, not a necessary all-coupling theorem for the
+continuum problem. The strong-coupling lower bound does not control the
+required weak-coupling end.</p>
+<p>For compact <span class="math inline">\(U(1)\)</span> the
+all-coupling Villain gap can coexist with a massless fixed-<span
+class="math inline">\(\lambda_3\)</span> continuum limit. The <a
+href="villain-monopole-refinement.html">Villain proof</a> retains
+normalized measure bounds, its essential monopole suppression and the
+distinct massive Gaussian scaling trajectory. The former Debye prefactor
+with dimensionless <span class="math inline">\(\beta/a^3\)</span> is not
+a mass-squared formula in the present physical units and is withdrawn
+here. These Euclidean source results are not automatically a theorem for
+the Kogut–Susskind Hamiltonian just defined.</p>
+<p>In four dimensions the usual scaling target instead has a
+transmutation factor: up to its specified higher-order running factors,
+<span class="math inline">\(\delta_\infty(g)/g^2\)</span> must vanish
+like <span class="math inline">\(g^{-2}e^{-1/(2b_0g^2)}\)</span>. This
+is the required trajectory shape if a physical gap survives, not an
+estimate proved from the strong-coupling end. The three-dimensional
+energy unit is simpler, but a nonzero spectral coefficient is still an
+independent dynamical question.</p>
+<span id="consequence-for-state"></span><span id="what-is-in-hand-and-what-is-not"></span><h2 id="construction-boundary-and-consequence-for-state">Construction
+boundary and consequence for STATE</h2>
+<p>Chandra–Chevyrev–Hairer–Shen construct a renormalized local evolution
+in <strong>auxiliary stochastic time</strong>, with possible blow-up;
+the cited result supplies neither global survival, an invariant measure
+nor OS reconstruction (<a href="https://arxiv.org/pdf/2201.03487">2024
+introduction</a>, passage reading recorded in <a
+href="refinement-composition-and-limit.html">refinement</a>).
+Karabali–Nair’s <span class="math inline">\(N/(2\pi)\)</span> is a
+current-variable kinetic scale (<a
+href="https://arxiv.org/pdf/hep-th/9602155">1996 equations
+(28)–(29)</a>, passage), not a proved full gap. The cited 2026 outline
+likewise leaves that proof open; its source boundary is kept in the
+refinement treatment.</p>
+<p>Conditional on the physical construction and limit, the question is
+whether <span class="math inline">\(f(x)\)</span> has a positive finite
+limit. A lower bound <span class="math inline">\(f(x)\ge
+f_-&gt;0\)</span> for <span class="math inline">\(x\ge x_0\)</span>
+would supply the positive side only after that construction; one still
+needs finiteness and an appropriate spectral limit. The matrix proof,
+conditional small-volume transport, strong lattice estimate and
+continuum limit remain separate. This note stays distinct from the
+solved low-dimensional models because it owns the explicit <span
+class="math inline">\(\nu=2\)</span> lattice thresholds, normalization
+and unresolved field-theoretic limit, not another matrix-gap proof.</p>
 
 </main>
 <footer class="site"><div class="wrap">

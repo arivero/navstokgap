@@ -402,7 +402,7 @@ needs. A mechanism generating a physical gap must also control access
 to arbitrarily small nonvacuum energies. In the solved matrix model,
 transverse zero-point confinement provides such a dynamical mechanism;
 the group classification alone provides none. See the
-[action-floor/gap note](action-floor-yang-mills-gap.md) (passage-read:
+[action-floor/gap note](low-dimensional-mass-gap.md#conditional-orbit-area-bounds-and-state-counting) (passage-read:
 §§3--5 and the 2026-10-02 correction): in four-dimensional Yang--Mills
 an action unit is already available from the classical coupling, while
 a generated energy scale remains a separate requirement.

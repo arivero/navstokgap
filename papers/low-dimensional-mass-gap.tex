@@ -2,157 +2,95 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
+\DeclareUnicodeCharacter{1E93}{\d{z}}
 \usepackage{amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}
 \usepackage{longtable,booktabs,array,calc}
 \usepackage[hidelinks]{hyperref}
-\hypersetup{pdftitle={Solved low-dimensional mass gaps and the positive-action question},pdfauthor={navstokgap research working notes}}
+\hypersetup{pdftitle={Low-dimensional gauge gaps: matrix confinement, conditional floors and scales},pdfauthor={navstokgap research working notes}}
 \newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setlength{\emergencystretch}{3em}
 \setcounter{secnumdepth}{0}
 \begin{document}
-\hypertarget{a-gap-is-a-scale-the-classical-theory-lacks-solved-low-dimensional-mass-gaps-and-the-positive-action-question}{%
-\section{A gap is a scale the classical theory lacks: solved
-low-dimensional mass gaps and the positive-action
-question}\label{a-gap-is-a-scale-the-classical-theory-lacks-solved-low-dimensional-mass-gaps-and-the-positive-action-question}}
+\hypertarget{low-dimensional-gauge-gaps-matrix-confinement-conditional-floors-and-scales}{%
+\section{Low-dimensional gauge gaps: matrix confinement, conditional
+floors and
+scales}\label{low-dimensional-gauge-gaps-matrix-confinement-conditional-floors-and-scales}}
 
-The Yang--Mills mass gap and this programme's positive action floor are
-the same kind of statement: the infimum of an observable over nontrivial
-states is a positive finite multiple of a unit formed from the theory's
-fixed constants, and it is zero or infinite whenever those constants
-admit no such unit. Classical Yang--Mills in four dimensions carries no
-constant at all in its field equations, and classical mechanics with a
-mass and a force carries no action unit, so both classical floors are
-zero; the classical scale covariance that realizes zero is the same
-similarity in both cases. Every low-dimensional mass gap that can be
-solved in writing then falls into two classes. A \emph{supplied} gap is
-proportional to a constant written into the definition: the box gap
-\(2\pi\hbar c/L\) of a free field, the strong-coupling lattice gap in
-units of \(1/a\), a mass term, the string tension \(g^2L\) of
-two-dimensional Yang--Mills on a circle, and the repository's own Ising
-and cluster gaps \(Ka[1-\tanh 2b]\) and \(J\). A \emph{generated} gap
-arises from the interplay of two structures that are each scale-free: in
-Yang--Mills quantum mechanics the commutator potential and the canonical
-commutator produce \(\Delta=\delta_1\,\hbar^{4/3}g^{2/3}m^{-2/3}\),
-which vanishes if either \(\hbar\) or \(g\) is removed, and this is the
-exact form of ``commutative fields have no gap'' in zero space
-dimensions; in scale-invariant quantum mechanics a scale is forced by
-the consistency requirement of defining the dynamics at all. The
-dictionary in Section 7 records what this decides for the necessity
-theorem sought in STATE item 1: the mass-gap problem takes the
-non-commutative structure as given and asks for the scale, so the
-analogy governs the second stage of the positive-action question and
-identifies the consistency-forced scale as the only mechanism in the
-mass-gap story that does not assume the structure it explains. This is
-G07, an exploratory consolidation with written proofs; it promotes no
-ledger claim.
+With supplied physical \(\hbar>0\), \(m>0\) and \(g>0\), the scalar
+\(H=-\hbar^2\Delta/(2m)+g^2x^2y^2/2\) and the bosonic \(SU(2)\) model
+with at least two matrices have compact resolvent and a simple positive
+ground state. Their excitation gap is a positive finite number times
+\({E_*} =\hbar^{4/3}g^{2/3}m^{-2/3}\). The proof uses transverse
+oscillator bounds, compactness and positivity improvement. The
+gauge-invariant sector inherits a positive gap; its first excitation
+need not equal the unrestricted one. These are quantum-mechanical
+spectral theorems, not construction of a continuum Yang--Mills theory.
 
-\hypertarget{two-floors-and-one-dimensional-theorem}{%
-\subsection{1. Two floors and one dimensional
-theorem}\label{two-floors-and-one-dimensional-theorem}}
+A supplied \textbf{classical} transverse orbit-area floor gives a
+different result: it bounds energy sublevel sets and makes their
+phase-space volume finite. It does not define a quantum Hamiltonian,
+discretize levels, or by itself give a positive energy gap. The precise
+volume asymptotics, semiclassical estimates and dimensional comparisons
+below retain their conditional status. In four spacetime dimensions
+\(1/g_{\rm cl}^2\) is already an action unit; its cancellation from the
+classical field equations does not mean that the action has no
+normalization. An action unit supplies neither an energy scale nor a gap
+there.
 
-\textbf{The mass gap.} Jaffe and Witten require a self-adjoint \(H\ge0\)
-with \(H\Omega=0\), \(\operatorname{spec}(H)\cap(0,\Delta)=\varnothing\)
-for some \(\Delta>0\), and a finite supremum \(m\) of such \(\Delta\)
-(\href{millennium-problem-definitions.md}{definitions}). For a purely
-discrete spectrum \(E_0<E_1<\cdots\) the supremum is attained and equals
-\(E_1-E_0\).
+This treatment incorporates C131--C133 and the former G07/G08
+comparison. Borrowed spectral theorems, elementary proofs, conditional
+classical restrictions, semiclassical estimates and open questions are
+labelled separately. Repository reviews are internal written checks; no
+independent peer review or literature novelty is claimed.
 
-\textbf{The action floor.}
-\href{action-unit-dimensional-selection.md}{Q14} defines, for a model
-with fixed constants \(c\), the attained set \(\mathcal A(c)\) of an
-action observable over admitted masses, preparations and solutions, and
-the floor \(g(c)=\inf\{A\in\mathcal A(c):A>0\}\). The programme's target
-is \(g(c)>0\) for the Galileo comparison, whose observable is
-\(\tau\Delta E=(3F/v)A_{\rm inertial,fall}=F^2\tau^3/(2m)\)
-(\href{newton-insertion-action.md}{N01} §1).
+\hypertarget{observables-units-and-conventions}{%
+\subsection{1. Observables, units and
+conventions}\label{observables-units-and-conventions}}
 
-\textbf{Theorem 1 (floors are unit multiples).} Let a theory be
-specified by fixed constants \(c_1,\dots,c_r\) with dimension vectors
-\(d_i\in\mathbb R^3\) over mass, length and time, and let \(X\) be an
-observable with dimension vector \(d_X\) whose attained set
-\(\mathcal X(c)\subset[0,\infty]\) is defined by dimensionally
-homogeneous relations and whose floor
-\(\gamma(c)=\inf(\mathcal X(c)\cap(0,\infty))\) depends on the fixed
-constants only. Then \(\gamma(c)\in\{0,\infty\}\) for every \(c\) when
-\(d_X\) lies outside the span of \(d_1,\dots,d_r\), and
-\(\gamma(c)=\Pi(c)F(\pi_1,\dots,\pi_s)\) with \(\Pi\) a monomial of
-dimension \(d_X\) and \(\pi_j\) the independent dimensionless
-combinations otherwise.
+A gap is an energy difference of a specified self-adjoint operator. For
+an isolated simple ground state it is \(E_1-E_0\); a field-theoretic
+mass gap also requires the physical state space, vacuum, continuum
+construction and limiting order. A classical action floor instead takes
+an infimum of a specified action observable over an admitted class.
+Neither is a statement about all possible classical completions or
+instruments.
 
-\emph{Proof.} This is Q14's Theorem A with \(d_A\) replaced by \(d_X\),
-and the proof is the same three lines. A change of units
-\(\lambda\in(0,\infty)^3\) carries the model at \(c\) to the model at
-\(\lambda^{d_i}c_i\) and multiplies every attained value by
-\(\lambda^{d_X}\), so
-\(\gamma(\lambda^{d_1}c_1,\dots)=\lambda^{d_X}\gamma(c)\). If \(d_X\) is
-outside the span, choose \(\lambda\) with \(\lambda^{d_i}=1\) for all
-\(i\) and \(\lambda^{d_X}\neq1\): then
-\(\gamma(c)=\lambda^{d_X}\gamma(c)\), which forces
-\(\gamma(c)\in\{0,\infty\}\). If \(d_X=\sum a_id_i\), then
-\(\gamma/\Pi\) is invariant under all unit changes and is therefore a
-function of the dimensionless combinations. \(\square\)
+The \href{action-unit-dimensional-selection.md}{dimensional and
+similarity proofs} apply to any observable dimension \(d_X\) (C131): if
+the floor depends only on the fixed constants and \(d_X\) is outside
+their dimension span, a finite positive universal floor is impossible.
+Otherwise it is a dimensional monomial times a function of dimensionless
+ratios. An admitted similarity scaling one positive value arbitrarily
+close to zero gives zero infimum. These are necessary unit and class
+tests, not sufficient positivity arguments.
 
-\textbf{Corollary 2 (similarity forces zero).} If the admitted class at
-fixed constants is preserved by a one-parameter family of
-transformations that multiplies \(X\) by every \(s>0\), then
-\(\gamma=0\) whenever some positive value is attained. This is Q14's
-Theorem B for the observable \(X\).
-
-The two instances that motivate this note:
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Mass gap of pure Yang--Mills
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Action floor of the Galileo comparison
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Classical fixed constants & none in \(D_A^*F_A=0\); \(c\) alone & \(m\),
-\(F\) (or \(m\), \(g\)) \\
-\(d_X\) in their span? & no: \(c\) gives no mass & no:
-\((1,2,-1)\notin\operatorname{span}\{(1,0,0),(1,1,-2)\}\) \\
-Classical similarity realizing zero & \(A_s(x)=sA(sx)\): static energy
-\(\mapsto sE\) in three space dimensions & \(x\mapsto sx\),
-\(t\mapsto s^{1/2}t\): \(\tau\Delta E\mapsto s^{3/2}\tau\Delta E\) \\
-Classical floor & \(0\) & \(0\) (C002, C027, C056--C058) \\
-Quantum fixed constants & \(\hbar\), \(c\), dimensionless \(g^2\hbar\):
-still no mass unit in \(d=4\) & \(\hbar\): action unit present \\
-Where the scale must come from & the regularization scale, by
-transmutation (Section 4) & the constant \(\hbar\) itself, whose
-necessity is the open question \\
-\end{longtable}
-
-The classical Yang--Mills row is checked in Section 4; the Galileo row
-is checked in Section 7. The table already states the analogy at the
-level of Theorem 1: both classical theories have an empty span, both
-quantum theories must obtain the missing unit from somewhere, and the
-two ``somewheres'' differ.
+In the mechanical model \(g\) denotes its quartic coupling. For
+connection-valued fields use \(g_{\rm cl}\) with
+\([1/g_{\rm cl}^2]=\mathrm{action}\,\mathrm{length}^{4-d}\); the
+dimensionless four-dimensional coupling is \(g_4^2=\hbar g_{\rm cl}^2\).
+The torus formula in §3.4 retains \(g\) for \(g_4\) as explicitly stated
+there. Energy units are denoted \({E_*}\); they are unrelated to the
+dimensionless regulator \(\epsilon=\hbar/S_0\), time mesh or record
+resolution. Write \(h_P=2\pi\hbar\) for Planck's constant.
 
 \hypertarget{the-exact-hbar-scaling-of-spectra-for-homogeneous-potentials}{%
 \subsection{\texorpdfstring{2. The exact \(\hbar\)-scaling of spectra
 for homogeneous
 potentials}{2. The exact \textbackslash hbar-scaling of spectra for homogeneous potentials}}\label{the-exact-hbar-scaling-of-spectra-for-homogeneous-potentials}}
 
-\textbf{Theorem 3.} Let \(V\ge0\) be continuous on \(\mathbb R^n\) and
-positively homogeneous of degree \(k>-2\), \(V(sx)=s^kV(x)\), and let
+\textbf{Theorem 3.} Take \(m,\lambda,\hbar>0\). Let \(V\ge0\) be
+continuous on \(\mathbb R^n\) and positively homogeneous of degree
+\(k>-2\), \(V(sx)=s^kV(x)\), and let
 \(H=-\frac{\hbar^2}{2m}\Delta+\lambda V\) be the Friedrichs operator of
 its form on \(C_0^\infty\). With the unitary dilation
 \((U_\ell\psi)(x)=\ell^{-n/2}\psi(x/\ell)\) and
 \[\ell^{k+2}=\frac{\hbar^2}{m\lambda},\qquad
-\varepsilon=\frac{\hbar^2}{m\ell^2}
+{E_*}=\frac{\hbar^2}{m\ell^2}
 =\hbar^{\frac{2k}{k+2}}\,\lambda^{\frac{2}{k+2}}\,m^{-\frac{k}{k+2}},\]
-one has \(U_\ell^{-1}HU_\ell=\varepsilon\,(-\tfrac12\Delta+V)\). Every
-spectral datum of \(H\), in particular any gap, is \(\varepsilon\) times
-the corresponding pure number of \(-\tfrac12\Delta+V\).
+one has \(U_\ell^{-1}HU_\ell={E_*}\,(-\tfrac12\Delta+V)\). Every
+spectral datum of \(H\), in particular any gap, is \({E_*}\) times the
+corresponding pure number of \(-\tfrac12\Delta+V\).
 
 \emph{Proof.} \(\Delta(U_\ell\psi)=\ell^{-2}U_\ell(\Delta\psi)\) and
 \(V\,U_\ell\psi=\ell^{k}U_\ell(V\psi)\) on \(C_0^\infty\), which
@@ -172,53 +110,27 @@ along a trajectory by \(s^{1+k/2}\) (Landau--Lifshitz, \emph{Mechanics}
 \(s/s^{2-k}=s^{k-1}\) and \(\lambda\nabla V\) as \(s^{k-1}\)). Hence for
 \(k>0\) the range of the classical Hamiltonian is \([0,\infty)\): the
 classical energy floor is zero, and the classical action floor is zero
-by Corollary 2.
+by the similarity theorem cited in §1.
 
-Three readings of Theorem 3 organize the rest of the note.
+For \(k>0\), any \emph{proved} gap scales to zero as \(\hbar\to0\) or
+\(\lambda\to0\); the dilation alone does not prove that a gap exists.
+The oscillator (\(k=2\)), quartic model (\(k=4\)) and a box of supplied
+length give units \(\hbar\sqrt{\lambda/m}\),
+\(\hbar^{4/3}\lambda^{1/3}m^{-2/3}\) and \(\hbar^2/(m\ell^2)\)
+respectively. The action-critical degree \(k=-2\) is excluded from the
+theorem and treated in §6. Its classical action is scale invariant,
+while \(m\lambda\) has action-squared units.
 
-\begin{itemize}
-\tightlist
-\item
-  For \(k>0\) the exponent \(2k/(k+2)\) is positive: the gap of \(H\) is
-  \(\varepsilon\,\delta\) with \(\delta\) a pure number and vanishes as
-  \(\hbar\to0\) and as \(\lambda\to0\). A gap of a growing potential is
-  a quantum effect and an interaction effect at once; at \(\lambda=0\)
-  the operator is \(-\hbar^2\Delta/2m\) with spectrum \([0,\infty)\).
-\item
-  The degree \(k=-2\) is action-critical: the classical action is
-  scale-invariant, \(m\lambda\) has the dimension of action squared, the
-  exponent of \(\varepsilon\) has a pole, and the quantum problem
-  depends on the single dimensionless number \(2m\lambda/\hbar^2\) with
-  no energy unit at all. This is the mechanical counterpart of the
-  Yang--Mills scaling \(S(A_s)=s^{4-d}S(A)\), which is critical at
-  \(d=4\) (\href{comparison-and-bridges.md}{comparison} §3). Section 6
-  treats it.
-\item
-  Special cases of \(\varepsilon\): \(k=2\) gives
-  \(\hbar\sqrt{\lambda/m}\), the oscillator quantum up to a pure number;
-  \(k=4\) gives \(\hbar^{4/3}\lambda^{1/3}m^{-2/3}\); \(k\to\infty\)
-  gives \(\hbar^2/(m\ell^2)\) with \(\ell\) the box length, the
-  particle-in-a-box unit; \(k=-1\) gives \(m\lambda^2/\hbar^2\), the
-  Rydberg unit, whose \emph{inverse} dependence on \(\hbar\) means that
-  the hydrogen level spacing diverges as \(\hbar\to0\) while the levels
-  themselves crowd to zero from below. In each case the gap is the
-  unique energy monomial in \((\hbar,m,\lambda)\), as Theorem 1
-  requires.
-\end{itemize}
+For the separately defined attractive Coulomb problem, the familiar
+energy unit is \(m\lambda^2/\hbar^2\); this singular negative potential
+does not satisfy the theorem's \(V\ge0\) continuity assumptions.
+Fixed-index hydrogenic energies diverge negatively as \(\hbar\to0\).
+Their accumulation at zero is the \emph{large principal-index} limit at
+fixed \(\hbar\), not the same limit.
 
-\hypertarget{yangmills-quantum-mechanics-a-solved-gap-that-needs-two-commutators}{%
-\subsection{3. Yang--Mills quantum mechanics: a solved gap that needs
-two
-commutators}\label{yangmills-quantum-mechanics-a-solved-gap-that-needs-two-commutators}}
-
-The zero-momentum sector of Yang--Mills theory on a torus is a
-finite-dimensional quantum-mechanical system whose potential is the
-squared commutator of the constant gauge potentials. Its spectrum is
-purely discrete for every positive \(\hbar\) and coupling, although the
-classical energy range is \([0,\infty)\) (Simon 1983; Lüscher 1983). The
-proof below is Simon's first argument with every constant explicit,
-extended to the SU(2) model with \(D\) matrices and to its
-gauge-invariant sector.
+\hypertarget{quantum-confinement-of-bosonic-matrix-valleys}{%
+\subsection{3. Quantum confinement of bosonic matrix
+valleys}\label{quantum-confinement-of-bosonic-matrix-valleys}}
 
 \hypertarget{the-scalar-model}{%
 \subsubsection{3.1 The scalar model}\label{the-scalar-model}}
@@ -240,12 +152,12 @@ gauge-invariant sector.
   to infinity.
 \item
   \(E_0\) is simple with a strictly positive eigenfunction, so
-  \(\Delta=E_1-E_0>0\), and \(H-E_0\) satisfies the Jaffe--Witten
-  conditions with \(0<m=\Delta<\infty\).
+  \(\Delta=E_1-E_0>0\), and \(H-E_0\) satisfies the spectral-gap part of
+  the Jaffe--Witten conditions with \(0<m=\Delta<\infty\).
 \item
-  \(E_n(\hbar,m,g)=\varepsilon\,e_n\) with \(e_n\) the eigenvalues of
+  \(E_n(\hbar,m,g)={E_*}\,e_n\) with \(e_n\) the eigenvalues of
   \(\tfrac12(-\Delta+x^2y^2)\) and
-  \[\varepsilon=\hbar^{4/3}g^{2/3}m^{-2/3},\qquad
+  \[{E_*}=\hbar^{4/3}g^{2/3}m^{-2/3},\qquad
   \Delta=\delta_1\,\hbar^{4/3}g^{2/3}m^{-2/3},\quad\delta_1=e_1-e_0>0.\]
   Hence \(\Delta\to0\) as \(\hbar\to0\) and as \(g\to0\). At \(g=0\) the
   spectrum is \([0,\infty)\) with no eigenvalue. The classical
@@ -297,10 +209,10 @@ with \(V\) continuous and finite along paths shows that
 Reed--Simon IV Theorem XIII.44 then gives a simple ground state with
 strictly positive eigenfunction.
 
-\textbf{Scaling.} Theorem 3 with \(n=2\), \(k=4\), \(\lambda=g^2/2\):
-\(\varepsilon=\hbar^{4/3}(g^2/2)^{1/3}m^{-2/3}\), and absorbing the pure
-number \(2^{-1/3}\) into \(e_n\) gives the displayed unit. At \(g=0\)
-the Fourier transform diagonalizes \(-\hbar^2\Delta/2m\) as
+\textbf{Scaling.} The unitary dilation with \(\ell^6=\hbar^2/(mg^2)\)
+gives \(U_\ell^{-1}HU_\ell={E_*}\tfrac12(-\Delta+x^2y^2)\) directly,
+fixing the stated dimensionless operator and all factors of two. At
+\(g=0\) the Fourier transform diagonalizes \(-\hbar^2\Delta/2m\) as
 multiplication by \(\hbar^2|p|^2/2m\). The classical statements are
 direct: on the invariant set \(\{y=p_y=0\}\) Hamilton's equations reduce
 to free motion in \(x\). \(\square\)
@@ -396,19 +308,166 @@ configurations the matrices commute and the potential is flat; writing
 the transverse curvature of the potential grows quadratically in
 \(|\lambda|\), which is what (1) exploits. An abelian gauge group has
 \emph{only} commuting configurations: its matrix model has \(V\equiv0\)
-and the free spectrum \([0,\infty)\). This is the exact zero-dimensional
-form of the statement that commutative fields have no gap, and Section 4
-gives the free-field form. The temporal-gauge constant modes of a gauge
-theory in \(d\) spacetime dimensions are \(D=d-1\) spatial components,
-so the zero-point mechanism needs \(d\ge3\); for \(d=2\) the single
-matrix has no partner, in agreement with Section 5, where
+and the free spectrum \([0,\infty)\). This is the gapless \emph{free
+abelian matrix model}, not a theorem about every commutative algebra or
+every abelian gauge theory. The free-field comparison and compact
+abelian exceptions are treated in §5. The temporal-gauge constant modes
+of a gauge theory in \(d\) spacetime dimensions are \(D=d-1\) spatial
+components, so the zero-point mechanism needs \(d\ge3\); for \(d=2\) the
+single matrix has no partner, in agreement with §5, where
 two-dimensional Yang--Mills has no local excitations at all and its
 discrete flux spectrum comes from the compact holonomy, a different
 mechanism.
 
-\hypertarget{the-finite-volume-origin-and-the-uniformity-problem}{%
-\subsubsection{3.3 The finite-volume origin and the uniformity
-problem}\label{the-finite-volume-origin-and-the-uniformity-problem}}
+\hypertarget{conditional-orbit-area-bounds-and-state-counting}{%
+\subsubsection{3.3 Conditional orbit-area bounds and state
+counting}\label{conditional-orbit-area-bounds-and-state-counting}}
+
+For the same classical scalar Hamiltonian, freeze \(x\ne0\) and let
+\(E_y=p_y^2/(2m)+m\omega_x^2y^2/2\), \(\omega_x=g|x|/\sqrt m\). The
+transverse oscillator ellipse has area
+
+\[J_y=\oint p_y\,dy=\frac{2\pi E_y}{\omega_x}
+ =\frac{2\pi\sqrt m E_y}{g|x|}.\]
+
+Indeed its semiaxes are \(\sqrt{2mE_y}\) and
+\(\sqrt{2E_y/(m\omega_x^2)}\). The frozen-oscillator identity is exact;
+adiabatic conservation along a valley is only a leading-order reading
+when \(|\dot x/x|\ll\omega_x\), or
+\(|x|\gg x_{\rm ad}(E)=(2E)^{1/4}g^{-1/2}\). The original
+Landau--Lifshitz §49 comparison was metadata only; the bound below
+requires no adiabatic approximation.
+
+\textbf{Conditional sublevel bound (former G08 Theorem 2).} Supply an
+arbitrary action coefficient \(a_0>0\) and name the restriction
+\(\mathsf F(a_0)\) on instantaneous admitted states by \(J_y\ge\pi a_0\)
+when \(x\ne0\) and \(J_x\ge\pi a_0\) when \(y\ne0\). Then
+
+\[E_y\ge\frac{a_0g|x|}{2\sqrt m},\qquad
+ |x|,|y|\le\frac{2\sqrt m E}{a_0g}.\]
+
+This follows directly from the ellipse formula and \(E_y\le E\);
+interchange \(x,y\) for the other bound. Momenta also satisfy
+\(|p|\le\sqrt{2mE}\), so the restricted sublevel set is bounded. Without
+the restriction, \(y=p_y=0\), \(x(t)=x_0+p_xt/m\) escapes at any
+positive kinetic energy. At \(a_0=\hbar\), the numerical lower bound is
+the oscillator inequality in Theorem 5. Its quantum proof, however, uses
+a Hilbert space, derivatives, normalization and the canonical momentum
+operator, all additional structure.
+
+The classical restriction alone has no discrete spectrum and need not be
+invariant under the full coupled dynamics. It does not even force a
+positive infimum of the instantaneous admitted energies: at \(x=y=r>0\)
+choose \(p_x^2=p_y^2=a_0g\sqrt m\,r\). Both area bounds hold while
+\(H=a_0gr/\sqrt m+g^2r^4/2\to0\) as \(r\downarrow0\). Thus the former
+claim that a classical area floor itself proves a spectral gap is
+withdrawn. A dynamical, invariant trajectory class would require a
+separate argument.
+
+For the following count set \(a_0=\hbar\) solely to compare with Theorem
+5, and define \({E_*} =\hbar^{4/3}g^{2/3}m^{-2/3}\) and
+\(X(E)=2\sqrt mE/(\hbar g)\). This comparison does not derive physical
+\(\hbar\).
+
+\textbf{Floor-admitted phase-space volume.} Without the floor the
+phase-space volume \(|\{H_{\rm cl}\le E\}|\) is infinite for every
+\(E>0\) (Simon, Ann. Phys. 146 (1983) 209--220, p.~210, passage read).
+With the floor it is finite, and it can be computed with both valleys
+included. Write \(R=\sqrt{2E}/g\), so that the potential is below \(E\)
+exactly where \(|xy|\le R\); the momenta at \((x,y)\) fill a disc of
+area \(2\pi m(E-\tfrac{g^2}{2}x^2y^2)\). By the conditional sublevel
+bound every admitted state lies in the box \(|x|,|y|\le X(E)\). For
+\(X(E)^2\ge R\), that is \(E\ge{E_*}/2\), the box carries the volume
+\[P(E)=\iint_{|x|,|y|\le X}2\pi m\Big(E-\frac{g^2}{2}x^2y^2\Big)_+dx\,dy
+=8\pi m\,ER\Big[\frac89+\frac23\ln\frac{X^2}{R}\Big]:\] in each quadrant
+the strip \(0\le x\le R/X\), where the \(y\)-integral of
+\(E-\tfrac{g^2}2x^2y^2\) runs to \(X\), contributes \(\tfrac89ER\), and
+the region \(R/X\le x\le X\), where it runs to \(R/x\) and equals
+\(\tfrac23ER/x\), contributes \(\tfrac23ER\ln(X^2/R)\). Inside the box
+the floor removes, at each \((x,p_x)\) with \(x\ne0\), the ellipse
+\(E_y<\hbar\omega_x/2\) of area \(\pi\hbar\) in the \((y,p_y)\) plane
+(the area identity above), and at each \((y,p_y)\) with \(y\ne0\) the
+ellipse \(E_x<\hbar\omega_y/2\) of the same area. The admitted volume
+\(V(E)=|\{H_{\rm cl}\le E\}\cap\mathsf F(\hbar)|\) therefore obeys
+\(0\le P-V\le2\cdot\pi\hbar\cdot2X\cdot2\sqrt{2mE}=16\sqrt2\,\pi mE^{3/2}/g\).
+With \(ER=\sqrt2E^{3/2}/g\) and \(X^2/R=2\sqrt2\,(E/{E_*})^{3/2}\),
+\[V(E)=\frac{8\sqrt2\,\pi m}{g}\,E^{3/2}\Big[\ln\frac E{E_*}+\theta(E)\Big],
+\qquad\ln2-\frac{10}9\le\theta(E)\le\ln2+\frac89 .\] Since
+\(\sqrt R=x_{\rm ad}(E)\), the hyperbola \(|xy|=R\) crosses the diagonal
+at the adiabatic scale defined above. To leading order \(V\) is twice
+the one-valley integral of \((8\pi/3)\sqrt2\,mE^{3/2}/(g|x|)\), the
+transverse ellipse area \(2\pi(E-p_x^2/2m)/\omega_x\) integrated over
+\(|p_x|\le\sqrt{2mE}\), over \(x_{\rm ad}(E)\le|x|\le X(E)\). A floor
+\(\kappa h_P\) with any \(\kappa>0\) in place of \(h_P/2\) replaces
+\(X\) by \(X/(2\kappa)\), leaves the bound on \(P-V\) unchanged (the
+excluded ellipses grow by \(2\kappa\) as the box shrinks by
+\(1/(2\kappa)\)) and shifts both bounds on \(\theta\) by
+\(-\tfrac43\ln(2\kappa)\), so the coefficient of \(E^{3/2}\ln E\) is
+independent of the floor value.
+
+\emph{Comparison with the exact count.} For the operator
+\(-\Delta+|xy|^\alpha\), Simon proves the limit
+\(E^{-1-1/\alpha}(\ln E)^{-1}N(E)\to\pi^{-1}\) (J. Funct. Anal. 53
+(1983) 84--98, Theorem 1.4 and the display after Theorem 1.5,
+pp.~85--86, passage read). At \(\alpha=2\) this is
+\(N(E)\simeq\pi^{-1}E^{3/2}\ln E\), the growth also stated in Ann. Phys.
+146, p.~212, end of Section 2. The dilation \(x\mapsto\ell x\) with
+\(\ell^6=\hbar^2/(mg^2)\) carries
+\(H=-\frac{\hbar^2}{2m}\Delta+\frac{g^2}{2}x^2y^2\) to
+\(\frac{E_*}2(-\Delta+x^2y^2)\), because both coefficients become
+\(\hbar^2/(2m\ell^2)=g^2\ell^4/2={E_*}/2\). Hence
+\(N_H(E)\simeq(2\sqrt2/\pi)(E/{E_*})^{3/2}\ln(E/{E_*})\), while the
+floor count gives
+\(V(E)/h_P^2=(2\sqrt2/\pi)(E/{E_*})^{3/2}[\ln(E/{E_*})+\theta(E)]\). The
+leading terms agree, constant included. The identification
+\(N\approx V/h_P^2\) is the Weyl heuristic, and the agreement is a
+comparison of two computed leading terms; Simon's proof runs through a
+Feynman--Kac lower bound and sliced-bread upper bounds. The leading
+coefficient is independent of the chosen positive floor multiple.
+Agreement therefore cannot select its value or establish a classical
+area restriction as the physical origin of the quantum count. Simon
+(p.~86) calls a general geometric interpretation of the constant
+\(\pi^{-1}\) an open question; no search was run for later literature
+that supplies one, and no novelty is claimed.
+
+\textbf{Semiclassical channel levels.} With \(J_y=(n+\tfrac12)h_P\)
+conserved, the valley motion has effective Hamiltonian
+\(p_x^2/2m+\kappa_n|x|\), \(\kappa_n=(n+\tfrac12)\hbar g/\sqrt m\), and
+Bohr--Sommerfeld quantization \(\oint p_x\,dx=(N+\tfrac12)h_P\) with
+\(\oint p_x\,dx=\tfrac{8\sqrt{2m}}{3}E^{3/2}/\kappa_n\) gives
+\[E^{\rm BS}_{n,N}={E_*}\Big[\frac{3\pi(2n+1)(2N+1)}{16\sqrt2}\Big]^{2/3},
+\qquad{E_*}=\hbar^{4/3}g^{2/3}m^{-2/3}.\] The unit \({E_*}\) is the
+exact one of Theorem 5(4); the pure numbers are semiclassical estimates
+of \(e_n\) and are labelled as such. The estimate describes one channel,
+the \(x\)-axis with its two half-valleys. The \(y\)-axis gives the same
+levels, so counting both channels doubles every level, and the coupling
+of the channels and of different \(n\) near the origin, where the
+adiabatic reading fails, is ignored. The quantization rules add a
+discrete set of positive approximate channel levels. They are extra
+assumptions; they are not a spectral consequence of the classical area
+restriction. The splitting of the doublets and the simplicity of the
+ground state, which the Jaffe--Witten conditions need, come from Theorem
+5(3). As a consistency check, each channel and each \(n\) contribute
+\(\frac{4\sqrt2}{3\pi}(E/{E_*})^{3/2}/(n+\tfrac12)\) levels below \(E\);
+summed over both channels and over \(n\) up to the adiabatic limit
+\(n_*\simeq2^{-1/4}(E/{E_*})^{3/4}\), where the turning point
+\(E/\kappa_n\) reaches \(x_{\rm ad}(E)\), they give
+\((2\sqrt2/\pi)(E/{E_*})^{3/2}\ln(E/{E_*})\) to leading order, the same
+leading term as the volume count.
+
+For \(SU(2)\), each of the two frozen transverse oscillator directions
+can instead be assigned area at least \(\pi a_0\). Their sum gives
+\(E_\perp\ge a_0g|\vec x_i|/\sqrt m\) and the corresponding classical
+sublevel bound \(|\vec x_i|\le\sqrt m E/(a_0g)\). The quantum
+counterpart is Theorem 6(1); imposing a classical restriction does not
+reproduce its operator domain or state space. For an abelian matrix
+model, or \(D=1\), there is no transverse restoring oscillator: this
+restriction supplies no valley confinement, and the quantum model is
+free.
+
+\hypertarget{torus-truncation-and-the-uniformity-problem}{%
+\subsubsection{3.4 Torus truncation and the uniformity
+problem}\label{torus-truncation-and-the-uniformity-problem}}
 
 \textbf{Proposition 7.} For SU(2) Yang--Mills on a spatial torus of side
 \(L\) with action
@@ -420,9 +479,12 @@ constant-mode ansatz \(A^a_i(x,t)=a^a_i(t)\), the Hamiltonian is
 [a^a_i,p^b_j]=i\hbar\delta_{ij}\delta^{ab},\] which is Theorem 6 with
 \(D=3\), \(m=\hbar L^3/(g^2c)\) and \(g_B^2=\hbar cL^3/g^2\). Its energy
 unit is
-\[\varepsilon=\hbar^{4/3}g_B^{2/3}m^{-2/3}=\frac{g^{2/3}\,\hbar c}{L},\]
-so the zero-mode gap \(\Delta_0(L)=\delta_1^{(3)}g^{2/3}\hbar c/L\) is
-positive for every \(L\) and decays as \(1/L\) at fixed coupling.
+\[{E_*}=\hbar^{4/3}g_B^{2/3}m^{-2/3}=\frac{g^{2/3}\,\hbar c}{L},\] so
+the unrestricted zero-mode gap is \(\delta_1^{(3)}g^{2/3}\hbar c/L\). On
+the Gauss-invariant sector write instead
+\(\Delta_{0,\rm inv}(L)=\delta_{\rm inv}^{(3)}g^{2/3}\hbar c/L\), where
+\(\delta_{\rm inv}^{(3)}\ge\delta_1^{(3)}>0\); equality is not asserted.
+Both truncation gaps decay as \(1/L\) at fixed coupling.
 
 \emph{Proof.} With \(F^a_{0i}=c^{-1}\dot a^a_i\) and
 \(F^a_{ij}=(\vec a_i\times\vec a_j)^a\) the Lagrangian is
@@ -433,21 +495,23 @@ give \(H_0\), and the exponent bookkeeping is
 
 Lüscher's small-volume expansion (Nucl. Phys. B219 (1983) 233; abstract)
 states that the torus spectrum is discrete and expands in powers of
-\(g^{2/3}\) with \(g\) the renormalized coupling; Proposition 7 is its
-leading term, and Lüscher--Münster (Nucl. Phys. B232 (1984) 445;
-abstract) carry it to one loop for SU(2) and locate the crossover to
-large-volume behaviour near \(z=M(0^+)L\simeq2\). Jaffe and Witten write
-(p.~7 of the local PDF) that ``no present ideas point the direction to
-establish the existence of a mass gap that is uniform in the volume''.
-Proposition 7 shows the difficulty in the solved sector:
-\(\Delta_0(L)>0\) for every \(L\) with \(\inf_L\Delta_0(L)=0\).
-Uniformity would need \(g(L)^{2/3}/L\) bounded below, outside the
-weak-coupling regime where the truncation is justified; the compensation
-must come from the crossover regime, where the expansion no longer
-applies. In the language of Theorem 1, \(L\) is a fixed apparatus length
-that enters the monomial and makes the finite-volume floor
-non-universal, and the uniformity requirement is exactly the demand that
-the floor be independent of it.
+\(g^{2/3}\) with \(g\) the renormalized coupling; Proposition 7 is the
+leading constant-mode model used in that approximation, not a uniform
+error theorem for the full field Hamiltonian, and Lüscher--Münster
+(Nucl. Phys. B232 (1984) 445; abstract) carry it to one loop for SU(2)
+and locate the crossover to large-volume behaviour near
+\(z=M(0^+)L\simeq2\). Jaffe and Witten write (p.~7 of the local PDF)
+that ``no present ideas point the direction to establish the existence
+of a mass gap that is uniform in the volume''. Proposition 7 shows the
+difficulty in the solved sector: \(\Delta_0(L)>0\) for every \(L\) with
+\(\inf_L\Delta_0(L)=0\). Uniformity would need \(g(L)^{2/3}/L\) bounded
+below, outside the weak-coupling regime where the truncation is
+justified; the compensation must come from the crossover regime, where
+the expansion no longer applies. In the language of the dimensional
+theorem cited in §1, \(L\) is a fixed apparatus length that enters the
+monomial and makes the finite-volume floor non-universal, and the
+uniformity requirement is exactly the demand that the floor be
+independent of it.
 
 The supersymmetric contrast identifies the mechanism once more: de Wit,
 Lüscher and Nicolai (Nucl. Phys. B320 (1989) 135; abstract) prove that
@@ -455,15 +519,172 @@ the supersymmetric matrix-model Hamiltonians have continuous spectrum
 starting at zero, through low-energy states along the same abelian
 valleys. The fermionic zero-point energy cancels the bosonic
 \(\hbar\omega/2\) per transverse mode, so the confining term of Theorem
-5 vanishes. The gap of Theorems 5--6 is exactly the uncancelled
-transverse zero-point energy.
+5 vanishes. The uncancelled bosonic transverse energy is the confinement
+mechanism in Theorems 5--6. Its cancellation removes this argument in
+the cited supersymmetric models.
 
-\hypertarget{free-and-abelian-fields-have-no-gap-compact-abelian-gaps-are-supplied-scales}{%
-\subsection{4. Free and abelian fields have no gap; compact abelian gaps
-are supplied
-scales}\label{free-and-abelian-fields-have-no-gap-compact-abelian-gaps-are-supplied-scales}}
+The \href{weak-coupling-feshbach-reduction.md}{Feshbach treatment}
+states the separate complement, Schur and effective-gap estimates needed
+to transport this truncation into a renormalized field theorem. The
+\href{three-dimensional-gap-one-function.md}{three-dimensional scaling
+problem} uses \(D=2\), with its own physical construction and order of
+limits.
 
-\textbf{Proposition 8 (free fields inherit the classical dispersion).}
+\hypertarget{gap-to-action-units-and-the-field-dimension}{%
+\subsection{4. Gap-to-action units and the field
+dimension}\label{gap-to-action-units-and-the-field-dimension}}
+
+\textbf{Gap-to-action unit (C132a; former G08 Proposition 4).} Let the
+classical model with fixed constants \(m\), \(g\) (dimension vectors
+\(d_m=(1,0,0)\), \(d_g=(\tfrac12,-1,-1)\)) be enlarged by any fixed
+constants, and suppose the enlarged theory has a positive finite gap
+\(\Delta\) depending on the fixed constants only. Then the theory has
+the action unit \[A=\Delta^{3/4}\,m^{1/2}\,g^{-1/2},\] and conversely an
+action unit \(A\) gives the energy unit \(A^{4/3}g^{2/3}m^{-2/3}\).
+
+\emph{Proof.} Energy has dimension vector \((1,2,-2)\) and action
+\((1,2,-1)\). The system \(a\,d_m+b\,d_g+c\,(1,2,-2)=(1,2,-1)\) has the
+unique solution \(a=\tfrac12\), \(b=-\tfrac12\), \(c=\tfrac34\): the
+length and time components give \(-b+2c=2\), \(-b-2c=-1\), hence
+\(c=\tfrac34\), \(b=-\tfrac12\), and the mass component gives
+\(a=\tfrac12\). So \(m^{1/2}g^{-1/2}\Delta^{3/4}\) has action dimension
+whatever the extra constants are. The converse energy monomial follows
+from Theorem 3 with \(k=4\), but dimensional permission does not
+establish any spectrum or positive gap. \(\square\)
+
+A supplied positive finite gap gives this action unit, and a supplied
+action unit gives an energy unit. These are equivalent \emph{unit
+constructions}. Theorem 5 supplies the additional spectral content
+\(\Delta=\delta_1{E_*}\), \(0<\delta_1<\infty\), for the quantized
+model.
+
+\textbf{Field dimension (C132b; Proposition 10 and former G08
+Proposition 5).} Write the Euclidean Yang--Mills action with the gauge
+field as a connection, \(D=\partial+A\), \([A]={\rm length}^{-1}\),
+\(x_0=ct\):
+\[S_E=\frac1{4g_{\rm cl}^2}\int F^a_{\mu\nu}F^a_{\mu\nu}\,d^dx,\qquad
+[1/g_{\rm cl}^2]={\rm action}\cdot{\rm length}^{4-d}.\] The weight
+\(e^{-S_E/\hbar}\) depends on the coupling through
+\(\lambda_d=\hbar g_{\rm cl}^2\), of dimension length\(^{d-4}\); in
+\(d=4\) the repository writes \(g^2=\hbar g_{\rm cl}^2\), a pure number
+(the trace-normalized action has the same dimension). With the speed
+\(c\) and a gap \(\Delta\):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  In \(d=2\) and \(d=3\) the pair \((1/g_{\rm cl}^2,c)\) contains
+  neither an action unit nor an energy unit. Adjoining \(\Delta\) gives
+  exactly one action unit, adjoining \(\hbar\) gives exactly one energy
+  unit, and the same gap/action unit construction holds, without a
+  positivity theorem.
+\item
+  In \(d=4\), \(1/g_{\rm cl}^2\) is itself an action unit. The constants
+  \((1/g_{\rm cl}^2,c,\Delta)\) are dimensionally independent and their
+  only action monomial is \(1/g_{\rm cl}^2\), with \(\Delta\) at
+  exponent zero. The constants \((1/g_{\rm cl}^2,c,\hbar)\) contain no
+  energy, length or time unit. So ``gap \(\Rightarrow\) action unit''
+  holds trivially and ``action unit \(\Rightarrow\) gap'' fails.
+\end{enumerate}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\(d\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+classical constants (with \(c\) for Yang--Mills)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+action unit with \(\Delta\) adjoined
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+energy unit with \(\hbar\) adjoined
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+2 & \(1/g_{\rm cl}^2\sim(1,4,-1)\) &
+\((1/g_{\rm cl}^2)^{1/3}c^{-2/3}\Delta^{2/3}\) &
+\(\hbar^{3/2}g_{\rm cl}\,c=\hbar c\,\lambda_2^{1/2}\) \\
+3 & \(1/g_{\rm cl}^2\sim(1,3,-1)\) &
+\((1/g_{\rm cl}^2)^{1/2}c^{-1/2}\Delta^{1/2}\) &
+\(\hbar^2g_{\rm cl}^2\,c=\hbar c\,\lambda_3\) \\
+4 & \(1/g_{\rm cl}^2\sim(1,2,-1)\), an action & \(1/g_{\rm cl}^2\)
+itself; \(\Delta\) enters with exponent \(0\) & none:
+\(\hbar g_{\rm cl}^2=g^2\) is a pure number \\
+mechanics, \(k=-2\) & \(m\), \(\lambda\sim(1,4,-2)\) &
+\(\sqrt{m\lambda}\) already classical; \(\Delta\) adds nothing & none:
+\(2m\lambda/\hbar^2\) is a pure number \\
+\end{longtable}
+
+\emph{Proof.} Dimension vectors are over (mass, length, time); action is
+\((1,2,-1)\), energy \((1,2,-2)\), \(c\sim(0,1,-1)\). Solve
+\(a\,d_{1/g_{\rm cl}^2}+b\,d_c+c'\,(1,2,-2)=(1,2,-1)\). For \(d=3\),
+adding the length and time equations gives \(2a=1\), then
+\(c'=\tfrac12\), \(b=-\tfrac12\); for \(d=2\) the sum gives \(3a=1\),
+then \(c'=\tfrac23\), \(b=-\tfrac23\); for \(d=4\) it gives \(a=1\),
+then the mass equation gives \(c'=0\) and the length equation \(b=0\).
+The determinants of the three dimension vectors are \(-3\), \(-2\),
+\(-1\) for \(d=2,3,4\), so each solution is unique. With
+\(\hbar\sim(1,2,-1)\) in place of \(\Delta\) the determinants are \(-2\)
+and \(-1\) for \(d=2,3\), and the displayed energy monomials have vector
+\((1,2,-2)\) by direct addition. In \(d=2,3\) the pair
+\((1/g_{\rm cl}^2,c)\) alone fails: the mass and length equations fix
+\(a=1\) and \(b=-2\) (respectively \(b=-1\)), and the time component is
+then \(1\) (respectively \(0\)), never \(-1\) or \(-2\). In \(d=4\),
+\(1/g_{\rm cl}^2\) and \(\hbar\) have the same vector, so the span is
+that of \((1,2,-1)\) and \((0,1,-1)\); \(a(1,2,-1)+b(0,1,-1)=(1,2,-2)\)
+forces \(a=1\) (mass), \(b=0\) (length) and then \(-1=-2\) (time), and
+the targets \((0,1,0)\) and \((0,0,1)\) fail at the time component in
+the same way. The \(k=-2\) row is §6 below. \(\square\)
+
+In \(d=2,3\) the quantum theory in infinite volume has the constants
+\((\hbar,c,\lambda_d)\), which are independent, so a gap that depends on
+them alone is \(\Delta=\kappa\,\hbar c\,\lambda_d^{1/(4-d)}\) with a
+pure number \(\kappa\) (the dimensional theorem cited in §1). The action
+unit of the table is then \(\kappa^{2/3}\hbar\) in \(d=2\) and
+\(\kappa^{1/2}\hbar\) in \(d=3\): the gap returns \(\hbar\) up to a pure
+number.
+
+Two facts fix the reading of the table. First, the overall factor
+\(1/g_{\rm cl}^2\) drops out of the classical field equations
+\(D_\mu F_{\mu\nu}=0\) in every dimension (the field normalization
+above), and the dilation \(A\mapsto sA(sx)\) maps solutions to solutions
+in every \(d\) while multiplying the action by \(s^{4-d}\). The
+classical field equations are therefore dilation covariant in every
+dimension; they supply no chosen solution length. The normalization
+\(1/g_{\rm cl}^2\) still converts solution geometry into action and
+energy. The difference between the rows becomes physical through the
+quantum weight \(e^{-S_E/\hbar}\), whose coefficient
+\(1/\lambda_d=1/(\hbar g_{\rm cl}^2)\) has dimension length\(^{4-d}\).
+In \(d=2,3\) the weight carries a length and, with \(c\), an energy, and
+a gap is a pure number times that energy. In \(d=4\) the weight carries
+the pure number \(1/g^2\) and no length. Second, \(d=4\) is
+action-critical in the sense of §6, and shares its row type with the
+inverse-square potential: the classical constants own an action unit and
+no energy unit. This is the dimensional reason the four-dimensional
+problem is one-directional. A gap needs a length that the constants of
+the weight do not contain; dimensional transmutation generates it from
+the regulator (the field normalization above), and the unique action
+monomial formed using the classical coupling, \(c\) and that gap still
+equals the \(1/g_{\rm cl}^2=\hbar/g^2\) already present. Along the
+continuum trajectory of asymptotic freedom \(g^2(a)\to0\), so this bare
+action unit grows without bound in units of \(\hbar\); the continuum
+theory keeps \(\hbar\), \(c\) and the transmuted scale, the
+dimensionless coupling having been traded for that scale. The same
+normalization distinction applies to C132a: the trajectories of
+\(H_{\rm cl}\) depend on \(g^2/m\) alone and \(m\) normalizes the
+action, while an actual spectral gap additionally depends on the
+specified quantization; the unit conversion itself does not.
+
+\hypertarget{free-fields-compact-groups-and-the-exact-circle-theory}{%
+\subsection{5. Free fields, compact groups and the exact circle
+theory}\label{free-fields-compact-groups-and-the-exact-circle-theory}}
+
 Let \(H\) be the second quantization on Fock space of a one-particle
 operator \(\hbar\Omega\) with \(\Omega\ge0\) the classical frequency
 operator. Then \(\operatorname{spec}(H)\setminus\{0\}\) has infimum
@@ -489,102 +710,41 @@ infimum zero in infinite volume; a mass term gives
 \([0,\infty)\) already at finite \(L\)) in the non-compact theory; in
 compact \(U(1)\) they live on a torus and contribute energies
 proportional to \(\hbar c/L\) as well. Free quantization therefore
-generates no scale: every abelian finite-volume gap is \(\hbar c/L\)
+generates no scale: this free compact finite-volume gap is \(\hbar c/L\)
 times a number.
 
-\textbf{Proposition 10 (dimensional census of pure Yang--Mills).} With
-\(D=\partial+A\), \([A]=L^{-1}\), \([F]=L^{-2}\) and
-\(S=\frac1{g^2}\int\operatorname{tr}F^2\,d^dx\) of action dimension,
-\([g^2]=(\text{action})^{-1}L^{d-4}\), so \(g^2\hbar\) has dimension
-\(L^{d-4}\). The classical field equations \(D_A^*F_A=0\) contain no
-constant, and the static energy of \(A_s(x)=sA(sx)\) in three space
-dimensions is \(sE(A)\), so the classical energy floor is zero. The
-quantum fixed constants are \(\hbar\), \(c\) and \(g\):
+\textbf{Compact abelian theories.} Compactness admits topological
+sectors absent from noncompact free Maxwell theory.
+Osterwalder--Seiler's compact-group strong-coupling construction,
+Polyakov's three-dimensional monopole mechanism, Göpfert--Mack's
+all-coupling Villain gap, and the four-dimensional weak-coupling Coulomb
+phase have different operators and limiting assumptions. Read levels and
+precise references remain in \href{../references/batches/B78.md}{B78}.
+The \href{villain-monopole-refinement.md}{Villain treatment} retains the
+normalized measure bounds and distinguishes the fixed-physical-coupling
+massless limit from Göpfert--Mack's massive Gaussian scaling. A gapped
+lattice theory can therefore have a massless continuum limit. The former
+Debye formula with a dimensionless \(\beta\) times \(a^{-3}\) was not
+dimensionally a mass-squared formula and is withdrawn in this
+normalization; use the canonical trajectory and correlation bounds
+instead of that unchecked prefactor.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\(d\)
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\(g^2\hbar\)
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Mass unit from \((\hbar,c,g)\)
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Solved or expected gap
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-2 & \(L^{-2}\) & \(\hbar\sqrt{g^2\hbar}/c\); \(g^2\hbar^2c\) is a string
-tension & \(E_R=\tfrac12g^2\hbar^2cLC_2(R)\) on a circle, diverging with
-\(L\) (Section 5) \\
-3 & \(L^{-1}\) & \(g^2\hbar^2/c\) & expected \(m\propto g^2\hbar^2/c\)
-(Karabali--Nair, physics argument; lattice) \\
-4 & dimensionless & none & \(m=a^{-1}F(g^2\hbar)\) with \(F\to0\) along
-\(g(a)\): transmutation \\
-\end{longtable}
-
-By Theorem 1, a \(d=4\) gap positive and finite must be a multiple of a
-mass unit, and none exists among \((\hbar,c,g)\): the definition of the
-quantum theory has to introduce a scale (cutoff \(a\) or renormalization
-point), and the continuum limit at fixed \(m\) requires
-\(F(g^2(a)\hbar)\to0\) along a curve, which is dimensional transmutation
-stated as a dimensional necessity; the one-loop form
-\(m\propto a^{-1}\exp[-1/(2b_0g^2)]\) is the standard asymptotic-freedom
-expression (Gross--Wilczek, Politzer 1973). In \(d=3\) the coupling
-itself carries the unit. In \(d=2\) its square root also permits a mass
-unit, while the circle spectrum below consists of electric flux.
-\textbf{Correction, 2026-09-26:} the earlier claim that no mass unit
-exists in \(d=2\) was dimensionally incorrect; absence of propagating
-local particles is a dynamical statement. The
-\href{refinement-composition-and-limit.md}{refinement note} uses the
-exact two-dimensional heat-kernel construction with this distinction
-explicit.
-
-\textbf{Compact abelian theories.} Compactness of the gauge group
-supplies topological excitations and, with them, gaps that are again
-supplied scales. Osterwalder and Seiler (Ann. Phys. 110 (1978) 440)
-prove reflection positivity, the strong-coupling infinite-volume limit
-and Wilson's confinement bound for every compact group on the lattice;
-the strong-coupling mass gap follows from their cluster expansion, in
-units of \(1/a\). Polyakov (Nucl. Phys. B120 (1977) 429) derives the
-photon mass of three-dimensional compact \(U(1)\) from monopoles, and
-Göpfert and Mack (Commun. Math. Phys. 82 (1982) 545) prove the mass gap
-and confinement of the three-dimensional Villain model for all
-couplings, with Debye mass \(m_D^2=(2\beta/a^3)e^{-\beta v(0)/2}\),
-\(\beta=4\pi^2/e^2\) in lattice units: a function of \(e^2a\) with an
-essential singularity that vanishes as \(a\to0\) at fixed \(e^2\). Guth
-(Phys. Rev.~D 21 (1980) 2291) and Fröhlich and Spencer (Commun. Math.
-Phys. 83 (1982) 411) prove that four-dimensional compact \(U(1)\) has a
-massless Coulomb phase at weak coupling. The reading levels of these
-citations are recorded in \href{../references/batches/B78.md}{B78}. The
-dimensional reading is uniform: each gapped abelian case has its gap set
-by an explicit scale in its definition, and the gap disappears when that
-scale is removed at fixed coupling; the non-abelian cases in \(d=3,4\)
-differ because the coupling carries the unit or generates it by
-transmutation.
-
-\hypertarget{two-dimensions-an-exactly-solvable-gap-that-is-too-large}{%
-\subsection{5. Two dimensions: an exactly solvable gap that is too
-large}\label{two-dimensions-an-exactly-solvable-gap-that-is-too-large}}
+\hypertarget{the-exact-two-dimensional-holonomy-spectrum}{%
+\subsubsection{The exact two-dimensional holonomy
+spectrum}\label{the-exact-two-dimensional-holonomy-spectrum}}
 
 \textbf{Proposition 11.} Pure Yang--Mills on a spatial circle of
 circumference \(L\), in temporal gauge with Gauss's law imposed, has as
 its only gauge-invariant degree of freedom the holonomy \(U\in G\) up to
 conjugation. The physical Hilbert space is \(L^2(G)^G\), the class
-functions, and with \(S=\frac1{2g^2}\int\operatorname{tr}F^2\) the
-Hamiltonian is \(H=\frac{g^2\hbar^2cL}{2}\,C\), where \(C\) is the
-quadratic Casimir acting on class functions. By Peter--Weyl the
+functions, and with \(S=\frac1{2g_{\rm cl}^2}\int\operatorname{tr}F^2\)
+the Hamiltonian is \(H=\frac{g_{\rm cl}^2\hbar^2cL}{2}\,C\), where \(C\)
+is the quadratic Casimir acting on class functions. By Peter--Weyl the
 eigenfunctions are the characters \(\chi_R\) and
-\[E_R=\frac{g^2\hbar^2cL}{2}\,C_2(R),\qquad
+\[E_R=\frac{g_{\rm cl}^2\hbar^2cL}{2}\,C_2(R),\qquad
 E_{\rm trivial}=0,\qquad
-\text{gap}=\frac{g^2\hbar^2cL}{2}\,C_2(R_{\min})>0 ;\] for \(SU(N)\)
-with \(\operatorname{tr}T^aT^b=\tfrac12\delta^{ab}\),
+\text{gap}=\frac{g_{\rm cl}^2\hbar^2cL}{2}\,C_2(R_{\min})>0 ;\] for
+\(SU(N)\) with \(\operatorname{tr}T^aT^b=\tfrac12\delta^{ab}\),
 \(C_2(\text{fund})=(N^2-1)/(2N)\), and for \(U(1)\),
 \(E_n=\frac{e^2\hbar^2cL}{2}n^2\) with \(n\in\mathbb Z\) from
 compactness.
@@ -593,10 +753,10 @@ compactness.
 covariantly constant along the circle, so on class functions of the
 holonomy \(E\) acts as the left-invariant derivative and
 \(\int_0^L\operatorname{tr}E^2\,dx\) as \(L\) times the Laplacian on the
-group; \(H=\frac{g^2}{2}\int\operatorname{tr}E^2\) follows from
-\(E=\dot A/g^2\), and restoring \(\hbar,c\) uses \([g^2\hbar]=L^{-2}\)
-from Proposition 10. Characters diagonalize the Laplacian on class
-functions with eigenvalue the Casimir. \(\square\)
+group; \(H=\frac{g_{\rm cl}^2}{2}\int\operatorname{tr}E^2\) follows from
+\(E=\dot A/g_{\rm cl}^2\), and restoring \(\hbar,c\) uses
+\([g_{\rm cl}^2\hbar]=L^{-2}\) from §4. Characters diagonalize the
+Laplacian on class functions with eigenvalue the Casimir. \(\square\)
 
 The states are electric flux lines wrapping the circle, \(E_R/L\) is a
 string tension, and there are no propagating excitations: the theory has
@@ -611,9 +771,9 @@ Witten's (Commun. Math. Phys. 141 (1991) 153); rigorous constructions of
 the two-dimensional Yang--Mills measure are Driver's,
 Gross--King--Sengupta's and Lévy's (B78).
 
-\hypertarget{transmutation-without-a-gap-the-action-critical-case-in-mechanics}{%
-\subsection{6. Transmutation without a gap: the action-critical case in
-mechanics}\label{transmutation-without-a-gap-the-action-critical-case-in-mechanics}}
+\hypertarget{singular-quantum-mechanics-a-scale-is-not-a-completion-theorem}{%
+\subsection{6. Singular quantum mechanics: a scale is not a completion
+theorem}\label{singular-quantum-mechanics-a-scale-is-not-a-completion-theorem}}
 
 \textbf{Proposition 12 (two-dimensional delta potential).} For
 \(H=-\frac{\hbar^2}{2m}\Delta-\lambda\delta^2(\vec r)\) on
@@ -633,200 +793,99 @@ fixed defines the theory by the scale \(E_B\) alone. The spectrum is
 \(1=\frac{\lambda}{(2\pi\hbar)^2}\cdot2\pi\int_0^{\hbar\Lambda} \frac{p\,dp}{p^2/2m+|E_B|}=\frac{m\lambda}{2\pi\hbar^2}\ln(1+\hbar^2\Lambda^2/2m|E_B|)\).
 \(\square\)
 
-The scale generated by quantization sits below the continuum threshold:
-the excitation spectrum above the ground state is \([|E_B|,\infty)\), so
-the one-particle problem does have an isolated ground state with
-spectral gap \(|E_B|\), but the ``continuum'' is the free particle
-escaping an unbounded configuration space and every excitation energy
-above \(|E_B|\) occurs. A field-theoretic mass gap requires in addition
-that the vacuum be the ground state and that all excitations be massive;
-transmutation supplies the scale and confinement supplies the gap.
+This chosen nontrivial point interaction has an isolated bound state and
+excitation threshold \(|E_B|\) after shifting the ground energy to zero.
+Its continuum is the escaping one-particle continuum, not a
+reconstructed field spectrum. Specifying a nontrivial renormalized
+interaction supplies \(E_B\); well-defined quantum dynamics also permits
+the scale-free free operator. Thus this example shows transmutation
+\emph{within a selected interaction class}, not that every consistent
+completion must introduce a scale.
 
-\textbf{Proposition 13 (inverse-square potential).} For \(\ell=0\) the
-radial equation of \(-\frac{\hbar^2}{2m}\Delta-\lambda/r^2\) on
-\(\mathbb R^3\) is \(-\frac{\hbar^2}{2m}u''-\frac{\lambda}{r^2}u=Eu\).
-For \(2m\lambda/\hbar^2<1/4\) Hardy's inequality gives \(H\ge0\),
-spectrum \([0,\infty)\) and no bound state. For
-\(2m\lambda/\hbar^2>1/4\) the operator is not essentially self-adjoint
-on \(C_0^\infty(\mathbb R^3\setminus0)\); each self-adjoint extension
-introduces a length \(r_0\) and the bound states form the geometric
-tower \(E_n=E_0e^{-2\pi n/\nu}\), \(\nu=\sqrt{2m\lambda/\hbar^2-1/4}\),
-accumulating at zero. Classically the fall to the centre occurs for
-angular momentum below \(\sqrt{2m\lambda}\), an action unit:
-\(m\lambda\) has the dimension of action squared.
+\textbf{Proposition 13 (inverse-square domain and stability
+distinction).} In the \(s\) wave of \(-\hbar^2\Delta/(2m)-\lambda/r^2\),
+put \(\gamma=2m\lambda/\hbar^2>0\). The reduced expression is
+\(-(\hbar^2/(2m))(u''+\gamma u/r^2)\) on \(L^2(0,\infty)\). For
+\(0<\gamma\le1/4\), Hardy's inequality gives a nonnegative Friedrichs
+extension with spectrum \([0,\infty)\) and no bound state. This names
+the extension: non-essential self-adjointness does not by itself force a
+new scale or the same spectrum for every boundary condition.
 
-This is the \(k=-2\) case of Theorem 3. The classical theory owns an
-action unit but no energy unit; the quantum theory depends on
-\(2m\lambda/\hbar^2\) alone, and the definition of its dynamics forces a
-scale. C052's relativistic Kepler plunge at \(|L|<k/c\) is a competition
-of the same \(1/r^2\) type, so the classical action unit \(k/c\) of Q14
-is the mechanical action-critical case, and C130 records its quantum
-version in the Dirac thresholds. The lesson for necessity arguments is
-the hypothesis under which ``a scale is forced'' is a theorem: the
-operator is symmetric, fails to be essentially self-adjoint, and every
-self-adjoint extension carries a scale. A consistency requirement,
-well-defined dynamics, forces the scale. Sources for Section 6: Thorn,
-Camblong et al., Case, Essin and Griffiths (B78).
+For \(\gamma>1/4\), write \(\nu=\sqrt{\gamma-1/4}\). The local indices
+are \(1/2\pm i\nu\), so a self-adjoint origin condition fixes their
+relative phase, equivalently a length modulo discrete rescaling. The
+negative eigenvalues form a two-sided geometric tower
 
-\hypertarget{the-dictionary-and-what-it-decides-for-the-positive-action-question}{%
-\subsection{7. The dictionary and what it decides for the
-positive-action
-question}\label{the-dictionary-and-what-it-decides-for-the-positive-action-question}}
+\[E_n=-{E_*}^{\rm ext}\exp(-2\pi n/\nu),\qquad n\in\mathbb Z,
+\qquad {E_*}^{\rm ext}>0.\]
 
-\hypertarget{correspondences-and-non-correspondences}{%
-\subsubsection{7.1 Correspondences and
-non-correspondences}\label{correspondences-and-non-correspondences}}
+They accumulate at zero as \(n\to+\infty\) and are unbounded below as
+\(n\to-\infty\). There is no ground state or stable positive excitation
+gap in this unregularized supercritical model. Keeping only the tower
+toward zero would silently discard half the extension's spectrum. A
+short-distance regularization that stabilizes it is an additional model.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Mass gap
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Positive action floor
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Object & physical Hamiltonian \(H\ge0\) & action-defect observable on
-alternatives \\
-Trivial state & vacuum \(\Omega\), \(H\Omega=0\) & inertial motion, zero
-defect \\
-Statement & \(\operatorname{spec}H\cap(0,m)=\varnothing\),
-\(0<m<\infty\) & \(\mathcal A(c)\cap(0,h)=\varnothing\),
-\(0<h<\infty\) \\
-Theorem 1 form & \(m=\) (number) \(\times\) mass unit of the fixed
-constants & \(h=\) (number) \(\times\) action unit of the fixed
-constants \\
-Classical span & empty in \(d=4\) & empty for \((m,F)\), \((m,g)\),
-\((G,c)\) \\
-Classical similarity & \(A_s(x)=sA(sx)\) & mechanical similarity of
-Proposition 4 \\
-Classical countermodel & continuous classical energy range & C002, C027,
-C056--C058 \\
-Free/commutative version & Proposition 8: no scale generated & ordinary
-calculus refinement: no scale generated \\
-Generated gap & Theorems 5--6: two commutators, \(\hbar^{4/3}g^{2/3}\) &
-none yet; C035--C036 need a supplied reference \\
-Supplied gap & box, lattice, mass term, \(d=2\) tension & C124/C126
-(\(K\)), G05 (\(J\)), C060--C061 (speed floor) \\
-Consistency-forced scale & regularization; Proposition 13 & the target
-of N02 \\
-Assumed structure & gauge group, \(\hbar\), quantum axioms & to be
-derived \\
-\end{longtable}
+The indices follow from \(u=r^s\), \(s(s-1)+\gamma=0\). The domain and
+full tower statements are checked in
+\href{https://arxiv.org/pdf/1604.03340}{Dereziński--Richard}, §§2.2--2.3
+and Theorem 5.5 (passages re-read during consolidation), already used
+for the \href{self-sufficiency-contrast.md}{singular-domain comparison}.
+In the subcritical range scale-preserving self-adjoint choices exist; at
+supercritical coupling self-adjointness does not restore
+semiboundedness. The earlier inference ``well-defined dynamics forces a
+stable scale'' is therefore withdrawn.
 
-The last row is the non-correspondence that governs the rest. The
-mass-gap problem states its non-commutative structure in the hypotheses
-and asks for the scale. The necessity problem of STATE item 1 asks for
-the structure from consistency premises, with quantum nature as the
-phenomenon to be explained. The analogy is therefore exact for the
-second stage, from structure to scale, where it says three things with
-proofs behind them: a positive floor is a unit multiple and needs a unit
-(Theorem 1); the free or commutative theory generates none (Propositions
-8, Theorem 6(5)); and a generated scale needs two scale-free ingredients
-that fail to commute, with the gap vanishing when either is removed
-(Theorem 5). For the first stage, from consistency to structure, the
-mass-gap story contains one mechanism that does not presuppose the
-structure it explains: the scale forced by the requirement that the
-dynamics be defined at all, which is the self-adjoint-extension scale of
-Proposition 13 in quantum mechanics and the regularization scale of
-Proposition 10 in field theory.
+Classically \(m\lambda\) has action-squared units and fall to the centre
+occurs below angular momentum \(\sqrt{2m\lambda}\). This action-critical
+dimensional comparison with relativistic Coulomb thresholds survives;
+its domains, quantum dynamics and admissibility premises are different.
+The remaining Thorn, Camblong, Case and Essin--Griffiths leads retain
+B78's metadata-level qualification and are not substituted for the
+domain theorem just read.
 
-\hypertarget{the-commutative-no-floor-theorem-for-the-galileo-comparison}{%
-\subsubsection{7.2 The commutative no-floor theorem for the Galileo
-comparison}\label{the-commutative-no-floor-theorem-for-the-galileo-comparison}}
+\hypertarget{consequence-for-state}{%
+\subsection{7. Consequence for STATE}\label{consequence-for-state}}
 
-\textbf{Proposition 14.} Let the admitted class be the constant-force
-motions \(q(t)=(vt,Ft^2/2m)\) with fixed constants \(m,F\), all \(v>0\),
-\(\tau>0\) admitted, and let \(X=\tau\Delta E=F^2\tau^3/(2m)\) or the
-area \(A=vF\tau^3/(6m)\). The similarity \(x\mapsto sx\),
-\(t\mapsto s^{1/2}t\), \(v\mapsto s^{1/2}v\) preserves the class and
-multiplies \(X\) by \(s^{3/2}\) and \(A\) by \(s^2\); hence both floors
-are zero. The dimension vectors \(d_m=(1,0,0)\), \(d_F=(1,1,-2)\) do not
-span \((1,2,-1)\), so Theorem 1 gives the same conclusion without
-exhibiting the similarity.
+The matrix gap is proved \textbf{after} quantum state/operator structure
+and physical \(\hbar\) are supplied. The classical orbit-area
+restriction gives a bounded sublevel region and the displayed leading
+volume count; its Weyl comparison and Bohr--Sommerfeld rules do not turn
+it into a classical derivation of quantum spectral discreteness. The
+continuum problem adds control of the nonzero modes, volume/cutoff
+limits and physical spectral weight. The exact circle spectrum has
+global electric flux and no propagating local excitations. These
+different mechanisms cannot be combined into a universal implication
+``positive action implies mass gap''.
 
-\emph{Proof.} \(V=Fy\) is homogeneous of degree one, so Proposition 4
-with \(k=1\) gives \(t\mapsto s^{1/2}t\) and action scaling \(s^{3/2}\);
-the area is a length squared. The span statement:
-\(a(1,0,0)+b(1,1,-2)=(1,2,-1)\) forces \(b=2\) from the length component
-and then \(-4\neq-1\) in time. \(\square\)
+For comparison, constant-force motions at fixed \(m,F\) admit
+\(x\mapsto sx\), \(t\mapsto s^{1/2}t\), \(v\mapsto s^{1/2}v\). Their
+Galileo comparison \(F^2\tau^3/(2m)\) scales by \(s^{3/2}\) and area
+\(vF\tau^3/(6m)\) by \(s^2\), giving zero infima when all such
+alternatives are admitted. A supplied length gives
+\(\sqrt{mF\ell_0^3}\); a supplied speed gives \(m^2c^3/F\); fixed charge
+and speed give \(k_e/c\). Units do not by themselves bound these
+observables. The
+\href{action-unit-dimensional-selection.md}{action-selection treatment}
+and \href{newton-insertion-action.md}{Newton insertion proof} own those
+classical arguments.
 
-Which additions break the similarity? A fixed constant with action
-dimension, that is \(\hbar\), which is circular for the necessity
-argument. A fixed constant whose dimension vector, with \(d_m\) and
-\(d_F\), spans action: a fixed length \(\ell_0\) gives
-\(\sqrt{mF\ell_0^3}\); a fixed speed \(c\) gives \(m^2c^3/F\); a fixed
-charge gives \(k_e/c\) (Q14). Each of these is a supplied unit, and the
-first two are mass-dependent, so they fail universality (obligation 4 of
-the \href{../research/ACTION_FIELD_TARGET.md}{action target}) unless a
-further premise ties them to \(m\). Or a structure that is itself
-scale-free but breaks the similarity when combined with the class: this
-is what the two commutators do in Theorem 5 and what the definition
-problem does in Proposition 13.
+The former ``similarity anomaly'' route remains a question: can an
+independently specified physical composition law exclude every
+zero-action completion? Associativity, positivity and definability alone
+have supplied no such theorem; scale-free formulation does not by itself
+establish similarity covariance. Classical chords and zero/nonzero
+Gaussian families already compose. The singular examples in §6
+illustrate boundary choices and possible instability, not a derivation
+of physical \(\hbar\) from consistency.
 
-\hypertarget{what-the-analogy-transports-to-n02-labelled}{%
-\subsubsection{7.3 What the analogy transports to N02,
-labelled}\label{what-the-analogy-transports-to-n02-labelled}}
-
-The following is a conjecture shaped by Sections 3 and 6; it is stated
-so that N02 can test it, and nothing below is claimed as proved.
-
-\textbf{Conjecture (similarity anomaly).} Let alternatives compose under
-concatenation with an action-defect observable that is additive and let
-the composition rule be required to be consistent in a sense to be
-specified (associative, positive, and defined for all admitted pairs).
-If the composition rule is defined without a scale, then it is
-similarity-covariant and the floor is zero (Corollary 2). A positive
-finite floor therefore requires that the consistent definition of the
-composition itself carry a scale, that is, an anomaly of the classical
-similarity: the similarity acts on the alternatives but fails to act on
-the composed theory. Proposition 13 is the quantum-mechanical instance,
-where the composition is the self-adjoint dynamics; Proposition 10 is
-the field-theoretic instance, where it is the renormalized product of
-local operators.
-
-What N02 would have to show is that the joint time/position refinement
-of the Galileo comparison poses a definition problem of this type: a
-composition of cut alternatives that is consistent only after a scale is
-chosen. The existing countertests are the check: C027 composes
-constant-force chords consistently at every mesh with no scale, and
-C028--C029 compose Gaussian bridges consistently with a fixed but
-supplied \(\kappa\). A proposed principle that does not make one of
-these compositions ill-defined at zero scale changes nothing, exactly as
-a classical Yang--Mills argument that leaves \(D_A^*F_A=0\)
-scale-covariant proves no gap.
-
-What the analogy cannot deliver is the first stage itself. No theorem in
-Sections 2--6 derives a commutator from a consistency premise; each
-takes \([x,p]=i\hbar\) or the gauge group as given. The claim ``h
-\textgreater{} 0 is analogous to the mass gap'' is exact and useful for
-the second stage and is a research heuristic, recorded here as such, for
-the first.
-
-\hypertarget{strategic-consequence}{%
-\subsection{8. Strategic consequence}\label{strategic-consequence}}
-
-Gap-track work now has a written gate: name whether a proposed gap is
-supplied or generated, and for a generated gap name the two scale-free
-structures whose product produces the unit. C124/C126 and G05 are
-supplied gaps; G06's perturbed cluster chain would be as well, since
-\(J\) remains an input. The Yang--Mills quantum-mechanical gap is the
-first entry in the programme whose scale is generated, and its exponents
-\(4/3\) and \(2/3\) are forced by Theorem 1 once positivity is proved;
-its finite-volume version exhibits the uniformity problem exactly. For
-STATE item 1 the consequence is a sharpened target for N02: a
-consistency principle that makes the zero-scale composition of cut
-alternatives ill-defined, tested against C027 and C028--C029. The
-dimensional table of Section 7.2 lists the units that a
-supplied-constant route would have to justify, of which only \(k_e/c\)
-is mass-independent. No ledger claim is promoted; Theorems 5--6 and
-Propositions 7, 11--13 are written proofs of established results with
-explicit constants, and their sources are recorded with reading levels
-in B78.
+Sources for the matrix theorem are Simon (Ann. Phys. \textbf{146} (1983)
+209--220, pp.~210--212, passage) and his counting theorem (J. Funct.
+Anal. \textbf{53} (1983) 84--98, pp.~85--86, passage). The finite-volume
+Lüscher/Lüscher--Münster and supersymmetric de Wit--Lüscher--Nicolai
+comparisons were abstract-level reads; Reed--Simon theorem numbers were
+corroborated through citing passages rather than a full book audit.
+\href{../references/batches/B78.md}{B78} and
+\href{../references/batches/B79.md}{B79} preserve those source
+boundaries. No new research, independent review or priority claim
+follows from this consolidation.
 \end{document}

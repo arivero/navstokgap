@@ -62,7 +62,7 @@ argument forces κ>0. Four-dimensional perturbative running instead has
 d(1/g²)/d log μ=2b0+… and supplies a matched scale of the form
 Λ≈a^−1 exp[−1/(2b0g²)], with further matching corrections.
 
-Sources: [stochastic route](../notes/stochastic-route-velocitas-ultima.md),
+Sources: [stochastic route](../notes/composition-universality.md#continuous-free-paths-and-ultimate-velocity),
 [rotation composition](../notes/rotation-composition-universality.md),
 [parallel logarithm](../notes/four-dimensional-parallel-log.md),
 [UV/IR](../notes/halving-atlas.md#why-ultraviolet-refinement-bears-on-an-infrared-gap).
@@ -90,7 +90,7 @@ In the x²y² matrix-mechanical model a supplied transverse phase-space-area
 floor bounds excursions along the valley at fixed energy. The operator
 uncertainty argument supplies quantum confinement in the corresponding
 Schrödinger model. Sources: [low-dimensional gap](../notes/low-dimensional-mass-gap.md),
-[action-floor model](../notes/action-floor-yang-mills-gap.md).
+[action-floor model](../notes/low-dimensional-mass-gap.md#conditional-orbit-area-bounds-and-state-counting).
 This is a useful model-level conditional connection. Semiclassical phase-space
 counting does not prove a four-dimensional gauge gap. In D=4 a mass/energy
 gap and c alone do not reconstruct an action unit.

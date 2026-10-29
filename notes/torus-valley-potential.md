@@ -9,7 +9,7 @@ drops out. Near the origin $\Phi(b)=\pi^2|b|+\tfrac16C_M|b|^2+O(|b|^3)$
 with $C_M=\lim_{b\to0}[\sum'_me^{im\cdot b}|m|^{-2}-2\pi^2/|b|]$, so $U(a)=2\hbar c|a|+\tfrac{C_M}{3\pi^2}\hbar cL|a|^2+\cdots$. The linear term $2\hbar c|a|$ is exactly the $k=0$ contribution, four oscillators of angular frequency $c|a|$ with zero-point energy $\tfrac12\hbar c|a|$ each, which are the transverse
 oscillators of C133 along its abelian valley: the field-theory
 computation reproduces the mechanism of [G07](low-dimensional-mass-gap.md)
-and [G08](action-floor-yang-mills-gap.md) term by term. The nonzero
+and [G08](low-dimensional-mass-gap.md#conditional-orbit-area-bounds-and-state-counting) term by term. The nonzero
 modes contribute the correction $U_\perp=U-2\hbar c|a|=O(\hbar cL|a|^2)$, of order $g^{4/3}\hbar c/L$ in the rescaled variables of
 [the Feshbach note](weak-coupling-feshbach-reduction.md), which is the
 input (H3) needs, with the sign of $C_M$ (negative for the cubic

@@ -25,6 +25,7 @@ from time mesh, lattice spacing, record resolution and a bare regulator.
 | What do cusp completion and copying imply? | [Cusp floors and histories](../notes/newton-cusp-preparation-floor.md), [Gaussian sector](../notes/central-limit-canonical-gaussian-sector.md), [meter/shear countertest](../notes/gaussian-meter-entropy-floor.md) |
 | What survives a cut or a quantum record? | [Cut energy/phase/information](../notes/cut-measure-newton.md), [mark model](../notes/mark-cost-and-statistical-floor.md), [general quantum resources](../notes/record-distance-path-length.md) |
 | What do full classical apparatus records determine? | [Receiver memory](../notes/conservative-harmonic-receiver.md), [readout](../notes/autonomous-finite-readout.md), [calibration fibres](../notes/calibration-tolerance-recovery.md), [force/minimax](../notes/causal-force-information.md) |
+| What do classical fluctuation composition and detector events imply? | [Composition and noise laws](../notes/composition-universality.md), [clicks and coincidence bounds](../notes/local-detector-coincidences.md) |
 | Which gauge estimates survive the continuum limit? | [Spectral obligations](../notes/mass-gap-obligations-lattice.md), [refinement atlas](../notes/halving-atlas.md) |
 
 ## Questions retained after consolidation

@@ -1,5 +1,7 @@
 # Proof review and promotion decision for G07/G08
 
+Historical **internal** review. The [maintained treatment](../notes/low-dimensional-mass-gap.md) incorporates later corrections: a classical area bound is not a spectral-gap theorem, the physical invariant-sector first gap can differ, and supercritical inverse-square extensions are unbounded below. Reuse the canonical statements; this dated review is not independent peer review.
+
 2026-09-16. Coordinator (Claude Fable 5.1) written review at the user's
 direction to decide promotion on merits. Sequential, no subagents, no
 numerical verification. Literature status uses [B78](../references/batches/B78.md)

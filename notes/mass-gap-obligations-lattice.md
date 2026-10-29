@@ -460,7 +460,7 @@ crossover near $z\simeq2$. The conjecture, in this variable, is that
 $z(L)$ is a function that starts at zero and grows without bound, with
 $m$ the slope of its linear asymptote. The corner is the only place where
 the gap of the continuum theory is presently computable, and it is
-controlled by the mechanism of [G08](action-floor-yang-mills-gap.md).
+controlled by the mechanism of [G08](low-dimensional-mass-gap.md#conditional-orbit-area-bounds-and-state-counting).
 
 ## 6. T4: existence
 

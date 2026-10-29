@@ -545,39 +545,6 @@
       "content_coverage": "Full consolidated arguments and later corrections read; mechanical link-only changes preserve the established proof scope. Internal model checks are not independent peer review."
     },
     {
-      "path": "notes/action-floor-yang-mills-gap.md",
-      "title": "An action floor on transverse phase-space area produces the Yang--Mills quantum-mechanical gap, and a gap forces an action unit",
-      "summary": "A supplied transverse orbit-area floor confines the x²y² classical valley and reproduces the quantum-mechanical gap's energy unit; a finite gap reconstructs an action unit in the mechanical model and dimensionful lower-dimensional cases.",
-      "thematic_area": "Newton/action",
-      "strongest_result": "A supplied transverse orbit-area floor confines the x²y² classical valley and reproduces the quantum-mechanical gap's energy unit; a finite gap reconstructs an action unit in the mechanical model and dimensionful lower-dimensional cases. Scope: Semiclassical counting/levels are estimates; dimensional equivalence fails in 4D. Positivity of the floor is assumed; see low-dimensional-mass-gap.",
-      "status": "conditional",
-      "proof_status": "mixed",
-      "retrieval_priority": 2,
-      "current_relevance": "Durable supporting result or route constraint: A supplied transverse orbit-area floor confines the x²y² classical valley and reproduces the quantum-mechanical gap's energy unit; a finite gap reconstructs an action unit in the mechanical model and dimensionful lower-dimensional cases.",
-      "relations": [
-        {
-          "type": "uses",
-          "target": "notes/low-dimensional-mass-gap.md",
-          "reason": "Semiclassical counting/levels are estimates; dimensional equivalence fails in 4D. Positivity of the floor is assumed; see low-dimensional-mass-gap.",
-          "scope": "retrieval and claim-scope relation; see source for proof dependencies"
-        }
-      ],
-      "surprising": true,
-      "route_closure": false,
-      "keys": [
-        "G08",
-        "C133",
-        "transverse ellipse",
-        "matrix model valley",
-        "action unit",
-        "dimension four"
-      ],
-      "role": "result,synthesis",
-      "value": "surprising-result,synthesis",
-      "limitations": "Semiclassical counting/levels are estimates; dimensional equivalence fails in 4D. Positivity of the floor is assumed; see low-dimensional-mass-gap.",
-      "content_coverage": "full read including later corrections and appendices"
-    },
-    {
       "path": "notes/action-unit-dimensional-selection.md",
       "title": "Classical action selection: units, symmetries and orbital thresholds",
       "summary": "Dimensional theorem and conformally symplectic dilation distinguish action units from floors. Fixed smooth force-ceiling countermodel has arbitrarily small stable circular actions; a closed regular orbit with minimum speed has sharp J>=m^2 v_*^3/Fmax. Singular relativistic Coulomb bound-domain threshold differs from a softened core. Fixed charge product and a supplied gravitational least length provide units without deriving universal hbar.",
@@ -671,12 +638,15 @@
         "finite-copy distinguishability",
         "first lobe",
         "action-gap-foundations",
-        "jacobi-kernels-distinguishability"
+        "jacobi-kernels-distinguishability",
+        "C131",
+        "generic observable dimension",
+        "Buckingham floor unit theorem"
       ],
       "role": "result,obstruction",
       "value": "known-boundary,decisive-obstruction",
       "limitations": "Each theorem states its observable, preparation and admitted class. A dimensional unit supplies no positivity; fixing a Coulomb coupling requires no charge quantization. Classical thresholds do not determine quantum operator domains or identify a universal floor with physical hbar.",
-      "content_coverage": "Full consolidated arguments and later corrections read; mechanical link-only changes preserve the established proof scope. Internal model checks are not independent peer review."
+      "content_coverage": "Full canonical treatment read; generic observable-dimension form C131 explicitly included with the same proof."
     },
     {
       "path": "notes/agmon-ground-state-suppression.md",
@@ -1311,7 +1281,7 @@
       "thematic_area": "refinement/comparison",
       "strongest_result": "An exactly unitary normalized checkerboard walk converges strongly on fixed L² wavepackets to Dirac evolution with supplied K; the corresponding real transition rule gives telegraph dynamics. Measuring direction every step yields a ballistic fixed-frequency limit. Scope: Complex amplitudes/Born probabilities are assumptions; action dimensionality alone selects neither composition rule nor positivity, and branch separation is not a field-theory vacuum gap.",
       "status": "result",
-      "proof_status": "proved-refereed",
+      "proof_status": "proved; repository-internal written review",
       "retrieval_priority": 2,
       "current_relevance": "Durable supporting result or route constraint: An exactly unitary normalized checkerboard walk converges strongly on fixed L² wavepackets to Dirac evolution with supplied K; the corresponding real transition rule gives telegraph dynamics. Measuring direction every step yields a ballistic fixed-frequency limit.",
       "relations": [],
@@ -1450,15 +1420,31 @@
     },
     {
       "path": "notes/composition-universality.md",
-      "title": "A shared action coefficient from classical composition",
-      "summary": "Nonnegative mass-only fluctuation coefficients preserved by independent composition are constant K≥0; a supplied positive reference gives K>0. Matching mechanical scales do not make Poisson and ordered preparations equivalent. A general independent linear coordinate has the mass-weighted average coefficient.",
+      "title": "Classical fluctuation laws and conditional action universality",
+      "summary": "One nonnegative additive-function theorem controls mass-only independent fluctuation composition, including continuous Brownian free paths and Green-Kubo plateaus. A finite-rate reference supplies positivity; matched-scale ordered streams retain a zero plateau. Additive force-independent Brownian noise gives the sharp pinned-path record floor; symmetric Levy laws obey phi(m,k)=m Gamma(k/m).",
       "thematic_area": "Newton/action",
-      "strongest_result": "Under the composition premises K is constant, with positivity supplied by a reference. At equal mass, speed, density, mean collision rate and energy density, Poisson and ordered two-stream preparations instead have positive and zero long-window coefficients respectively.",
+      "strongest_result": "Independent whole-body preparation equivalence over every positive mass implies a common K>=0. Continuous isotropic stationary independent increments give D(m)=K/m; positive K plus an additive force-noise law gives optimal error Phi(-sqrt(Kcell/(2K))). Symmetric Levy composition has exponent m Gamma(k/m), without forcing continuity, positivity, quantum dynamics or K=hbar.",
       "status": "conditional",
-      "proof_status": "mixed",
-      "retrieval_priority": 2,
-      "current_relevance": "Conditional composition result with a concrete matched-parameter preparation countertest.",
-      "relations": [],
+      "proof_status": "written classification, covariance and additivity proofs; borrowed probability inputs with stated reading levels; internal review only",
+      "retrieval_priority": 3,
+      "current_relevance": "Canonical classical fluctuation and composition treatment, including the former stochastic route. Distinct finite-chain spectral, collision/Palm and compact free-kernel manuscripts retain detailed proofs; interaction commutator normalization remains separate because its algebraic premises and conclusion differ.",
+      "relations": [
+        {
+          "type": "continues",
+          "target": "notes/principia-fifth-postulate.md",
+          "reason": "Provides the stochastic route alongside its deformation and restricted-state routes."
+        },
+        {
+          "type": "uses",
+          "target": "notes/cut-measure-newton.md",
+          "reason": "Uses the pinned Brownian-bridge Cameron–Martin discrimination and cut evidence decomposition."
+        },
+        {
+          "type": "uses",
+          "target": "notes/rotation-composition-universality.md",
+          "reason": "Compares the nonnegative mass-additivity argument with interacting rotation universality."
+        }
+      ],
       "surprising": false,
       "route_closure": false,
       "keys": [
@@ -1475,12 +1461,22 @@
         "ordered-beam-preparation",
         "Palm residual",
         "composition-crossover-gap-checks",
-        "mass-orthogonal coordinate"
+        "mass-orthogonal coordinate",
+        "stochastic-route-velocitas-ultima",
+        "stochastic route velocitas ultima",
+        "S1",
+        "S2",
+        "S3",
+        "Brownian free motion",
+        "universal mD",
+        "Cameron–Martin",
+        "ultimate velocity",
+        "zero branch"
       ],
       "role": "result",
       "value": "known-boundary",
-      "limitations": "Whole-body versus independently composed preparation equivalence and independence are essential; the ordered process is not mixing. Neither physical action selection nor universality across preparations follows.",
-      "content_coverage": "full read including later corrections and appendices"
+      "limitations": "Mass-only all-positive-mass admissibility, independent composition and whole-body preparation equivalence are premises. Positive reference clocks do not give a uniform floor across classes. The record bound needs additive force-independent position noise; Nelson reconstruction and phase laws are additional, and a Euclidean relativistic jump generator gives no causal path-speed bound.",
+      "content_coverage": "Full composition and stochastic arguments with later qualifications read; one shared additivity proof with separate Brownian, finite-clock, jump and record hypotheses."
     },
     {
       "path": "notes/confinement-scale-bands.md",
@@ -1996,7 +1992,7 @@
         },
         {
           "type": "uses",
-          "target": "notes/action-floor-yang-mills-gap.md",
+          "target": "notes/low-dimensional-mass-gap.md",
           "reason": "The corrected four-dimensional distinction retains a classical action unit while leaving a generated energy scale to a dynamical mechanism.",
           "scope": "Uses the 2026-10-02 correction and sections 3--5, not the withdrawn claim that four dimensions lack an action unit."
         }
@@ -2030,7 +2026,7 @@
       "thematic_area": "Newton/action",
       "strongest_result": "Endpoint-matched constant-force and impulsive propagators differ by the scalar phase Kτ/ε, yielding an exact independent-copy discrimination law.",
       "status": "result",
-      "proof_status": "proved-refereed",
+      "proof_status": "proved; repository-internal written review",
       "retrieval_priority": 2,
       "current_relevance": "Retained for exact independent-copy discrimination and specified noncommuting relative-resolution/attenuation limits. The cut-energy note owns the polygon/Weyl functional rather than repeating these limiting protocols.",
       "relations": [
@@ -2064,7 +2060,7 @@
       "thematic_area": "Yang–Mills/gauge",
       "strongest_result": "Exact Gaussian product blocking multiplies the small-momentum heat-time coefficient by 2^(4−D), preserving it in four dimensions at every finite depth. Centred nearest-plaquette input retains an O(K²) error. Scope: covariance must remain bounded near nonzero aliases; remainder constants need not be depth-uniform. Sharp-surface ultraviolet shape growth and interacting matching remain in composition.",
       "status": "result",
-      "proof_status": "proved-refereed",
+      "proof_status": "proved; repository-internal written review",
       "retrieval_priority": 3,
       "current_relevance": "Current spine/map: Exact Gaussian product blocking multiplies the small-momentum heat-time coefficient by 2^(4−D), preserving it in four dimensions at every finite depth. Centred nearest-plaquette input retains an O(K²) error.",
       "relations": [
@@ -2400,7 +2396,7 @@
       "thematic_area": "Newton/action",
       "strongest_result": "In the non-adaptive Gaussian mark model with preparation-invariant tests, optimal force discrimination is continuous at zero force iff κ>0; finite schedules realize spent cut action/κ.",
       "status": "conditional",
-      "proof_status": "proved-refereed",
+      "proof_status": "proved; repository-internal written review",
       "retrieval_priority": 3,
       "current_relevance": "Canonical maintained argument; read its assumptions and correcting countermodels.",
       "relations": [],
@@ -2451,20 +2447,24 @@
     },
     {
       "path": "notes/local-detector-coincidences.md",
-      "title": "Independent monotone receivers cannot suppress coincidences",
-      "summary": "Independent monotone detectors fed fixed fractions of one scalar pulse energy obey p₁₂≥p₁p₂, with sharp efficiency/balance trade-offs. Saturation and dark counts preserve the premise package.",
+      "title": "Classical detector clicks: thresholds, shared release and coincidence bounds",
+      "summary": "Fixed-split, conditionally independent monotone receivers obey p12>=p1p2 with sharp efficiency/balance bounds. Passive quartic barriers give apparatus-dependent crossings; a shared-release countermodel gives exclusive fringe weights with explicit finite-window and delayed-inhibition costs.",
       "thematic_area": "Newton/action",
-      "strongest_result": "Independent monotone detectors fed fixed fractions of one scalar pulse energy obey p₁₂≥p₁p₂, with sharp efficiency/balance trade-offs. Saturation and dark counts preserve the premise package. Scope: fluctuating routing, anticorrelated readiness and outcome-selected gates explicitly evade it. This dimensionless exclusion witness selects no action unit; shared readiness CHSH tests the broader local model.",
+      "strongest_result": "The covariance identity proves p12>=p1p2 on the full gate ensemble, including the sharp balanced bound d>=(1-sqrt(1-q))^2. All threshold regions, conservative readiness/reset accounting, linear/nonlinear competing hazards and the exact delayed-inhibition probability are retained with their different premises.",
       "status": "result",
-      "proof_status": "proved-unrefereed",
+      "proof_status": "written proofs and explicit effective classical constructions; internal consistency checks only",
       "retrieval_priority": 0,
-      "current_relevance": "Normally suppress unless the query names this mechanism: Independent monotone detectors fed fixed fractions of one scalar pulse energy obey p₁₂≥p₁p₂, with sharp efficiency/balance trade-offs. Saturation and dark counts preserve the premise package.",
+      "current_relevance": "Canonical detector treatment, merging threshold, shared-resource and fixed-split arguments. The CHSH note remains separate because arbitrary shared readiness and independent settings replace scalar monotonicity and independent preparation.",
       "relations": [
         {
           "type": "uses",
+          "target": "notes/mechanical-interference-action.md",
+          "reason": "Supplies the finite-pulse complementary work split and qualified wave-action convention."
+        },
+        {
+          "type": "continues",
           "target": "notes/shared-readiness-chsh.md",
-          "reason": "fluctuating routing, anticorrelated readiness and outcome-selected gates explicitly evade it. This dimensionless exclusion witness selects no action unit; shared readiness CHSH tests the broader local model.",
-          "scope": "retrieval and claim-scope relation; see source for proof dependencies"
+          "reason": "Independent-setting local correlations test arbitrary shared readiness under different premises; not an input to the monotone receiver proof."
         }
       ],
       "surprising": false,
@@ -2477,24 +2477,63 @@
         "p12 ge p1 p2",
         "full gate ensemble",
         "shared readiness",
-        "dimensionless witness"
+        "dimensionless witness",
+        "passive-threshold-events",
+        "passive threshold events",
+        "Q09",
+        "passive threshold",
+        "quartic barrier",
+        "no-click tradeoff",
+        "double clicks",
+        "preloaded detector",
+        "detector action scale",
+        "shared-resource-events",
+        "shared resource events",
+        "Q11",
+        "shared release",
+        "absorbing Markov receiver",
+        "linear hazards",
+        "fringe probabilities",
+        "inhibition delay",
+        "finite-window efficiency"
       ],
       "role": "result,calibration",
       "value": "known-boundary,used-calibration",
-      "limitations": "fluctuating routing, anticorrelated readiness and outcome-selected gates explicitly evade it. This dimensionless exclusion witness selects no action unit; shared readiness CHSH tests the broader local model.",
-      "content_coverage": "full read including later corrections and appendices"
+      "limitations": "Fixed fractions, monotonicity, conditional factorization and an unselected gate ensemble are essential. Effective release states and linear hazards are supplied, conservative crossing gives no latch, and all energy/time/action scales remain apparatus-dependent. No quantum reconstruction or physical hbar selection.",
+      "content_coverage": "Full original arguments, Q12 correction and downstream CHSH comparison read; merged by scientific premise."
     },
     {
       "path": "notes/low-dimensional-mass-gap.md",
-      "title": "A gap is a scale the classical theory lacks: solved low-dimensional mass gaps and the positive-action question",
-      "summary": "Dimensional and spectral scaling organize supplied versus generated gaps; written scalar/SU(2) matrix-model proofs explain transverse zero-point confinement and its ℏ^(4/3)g^(2/3) scale. Includes finite-volume, two-dimensional flux and scale-anomaly examples.",
+      "title": "Low-dimensional gauge gaps: matrix confinement, conditional floors and scales",
+      "summary": "Scalar and SU(2) bosonic matrix oscillator bounds prove compact resolvent, a simple ground state and a supplied-hbar gap with exact hbar^(4/3)g^(2/3) scaling. Classical area restrictions instead bound sublevels and their volume; the Weyl leading count and semiclassical channel levels remain distinct. Includes field-unit conversion, torus/invariant-sector limits, free/compact/2D flux and corrected singular-domain examples.",
       "thematic_area": "Yang–Mills/gauge",
-      "strongest_result": "Dimensional and spectral scaling organize supplied versus generated gaps; written scalar/SU(2) matrix-model proofs explain transverse zero-point confinement and its ℏ^(4/3)g^(2/3) scale. Includes finite-volume, two-dimensional flux and scale-anomaly examples. Scope: zero-mode gaps decay with box size; two-dimensional absence of local particles is dynamical, not absence of a mass unit. No result derives positive action structure from consistency alone.",
+      "strongest_result": "C133 gives scalar H>=1/2[-hbar²Delta/(2m)+hbar g(|x|+|y|)/(2sqrt(m))] and the SU2 D>=2 analogue, hence a positive finite matrix gap; the invariant sector has gap at least the unrestricted one. The exact classical floor-admitted volume has leading (8sqrt(2)pi m/g)E^(3/2)log(E/E*), without implying spectral discreteness or a positive admitted-energy infimum. C132 is a unit conversion, not a positivity theorem.",
       "status": "result",
-      "proof_status": "mixed",
+      "proof_status": "written established matrix spectral proofs, explicit conditional classical bounds, labelled semiclassical estimates and corrected extension/domain statements; internal review only",
       "retrieval_priority": 3,
-      "current_relevance": "Current spine/map: Dimensional and spectral scaling organize supplied versus generated gaps; written scalar/SU(2) matrix-model proofs explain transverse zero-point confinement and its ℏ^(4/3)g^(2/3) scale. Includes finite-volume, two-dimensional flux and scale-anomaly examples.",
-      "relations": [],
+      "current_relevance": "Canonical solved low-dimensional and action/gap comparison, including the former area-floor note. The 3D one-function note is retained for its explicit two-spatial-dimensional lattice threshold and unresolved continuum spectral transport; Feshbach retains its independent complement/Schur hypotheses.",
+      "relations": [
+        {
+          "type": "uses",
+          "target": "notes/action-unit-dimensional-selection.md",
+          "reason": "Owns the generic dimensional and similarity theorem C131."
+        },
+        {
+          "type": "continues",
+          "target": "notes/weak-coupling-feshbach-reduction.md",
+          "reason": "A finite matrix theorem needs complement and Schur estimates before full field transport."
+        },
+        {
+          "type": "continues",
+          "target": "notes/three-dimensional-gap-one-function.md",
+          "reason": "The field spectral limit has explicit nu=2 lattice constants and separate construction obligations."
+        },
+        {
+          "type": "uses",
+          "target": "notes/self-sufficiency-contrast.md",
+          "reason": "Shares the primary inverse-square domain theorem, with different physical completion questions."
+        }
+      ],
       "surprising": false,
       "route_closure": false,
       "keys": [
@@ -2505,12 +2544,27 @@
         "SU2 matrix model",
         "transverse zero-point energy",
         "two-dimensional flux",
-        "similarity anomaly"
+        "similarity anomaly",
+        "action-floor-yang-mills-gap",
+        "action floor yang mills gap",
+        "G08",
+        "C133",
+        "transverse ellipse",
+        "matrix model valley",
+        "action unit",
+        "dimension four",
+        "C131",
+        "C132",
+        "classical area floor not spectral gap",
+        "invariant sector gap",
+        "inverse-square two-sided tower",
+        "Friedrichs scale preserving",
+        "positive sublevel not positive energy floor"
       ],
       "role": "synthesis,result",
       "value": "synthesis,infrastructure",
-      "limitations": "zero-mode gaps decay with box size; two-dimensional absence of local particles is dynamical, not absence of a mass unit. No result derives positive action structure from consistency alone.",
-      "content_coverage": "full read including later corrections and appendices"
+      "limitations": "Quantum Hilbert/CCR structure and physical hbar are supplied. A classical area floor gives no quantum spectrum and is not shown dynamically invariant; its pointwise admitted energies still approach zero. Gauge-invariant and unrestricted first gaps can differ. Supercritical inverse-square extensions are unbounded below; subcritical scale-preserving extensions and the free delta limit defeat a general consistency-forces-stable-scale claim. No continuum construction or physical YM gap follows.",
+      "content_coverage": "Full G07/G08 arguments, October corrections, internal review and downstream construction qualifications read; inverse-square domain and full two-sided tower checked against the already-cited primary theorem."
     },
     {
       "path": "notes/magnetic-energy-identities.md",
@@ -2768,7 +2822,7 @@
       "relations": [
         {
           "type": "uses",
-          "target": "notes/passive-threshold-events.md",
+          "target": "notes/local-detector-coincidences.md",
           "reason": "ideal junctions and sinks are supplied; deterministic work fractions are not exclusive click probabilities. Interference alone selects no action unit; threshold events tests detector additions.",
           "scope": "retrieval and claim-scope relation; see source for proof dependencies"
         }
@@ -3233,33 +3287,6 @@
       "content_coverage": "Full consolidated arguments and later corrections read; mechanical link-only changes preserve the established proof scope. Internal model checks are not independent peer review."
     },
     {
-      "path": "notes/passive-threshold-events.md",
-      "title": "A passive threshold creates events, but its scale belongs to the receiver",
-      "summary": "Independent equal-threshold detectors cannot maintain both exclusive clicks and unit efficiency over an open energy range; an explicit conservative quartic barrier realizes the crossing threshold.",
-      "thematic_area": "Newton/action",
-      "strongest_result": "Independent equal-threshold detectors cannot maintain both exclusive clicks and unit efficiency over an open energy range; an explicit conservative quartic barrier realizes the crossing threshold. Scope: Near-saddle preparation makes additional signal energy arbitrarily small, and Δ/ω is detector-dependent. Conclusions concern the stated accumulator/impulse model; conservative crossing alone supplies no permanent latch.",
-      "status": "result",
-      "proof_status": "proved-unrefereed",
-      "retrieval_priority": 0,
-      "current_relevance": "Normally suppress unless the query names this mechanism: Independent equal-threshold detectors cannot maintain both exclusive clicks and unit efficiency over an open energy range; an explicit conservative quartic barrier realizes the crossing threshold.",
-      "relations": [],
-      "surprising": false,
-      "route_closure": false,
-      "keys": [
-        "Q09",
-        "passive threshold",
-        "quartic barrier",
-        "no-click tradeoff",
-        "double clicks",
-        "preloaded detector",
-        "detector action scale"
-      ],
-      "role": "result,calibration",
-      "value": "known-boundary,used-calibration",
-      "limitations": "Near-saddle preparation makes additional signal energy arbitrarily small, and Δ/ω is detector-dependent. Conclusions concern the stated accumulator/impulse model; conservative crossing alone supplies no permanent latch.",
-      "content_coverage": "full read including later corrections and appendices"
-    },
-    {
       "path": "notes/planck-gap-paper.md",
       "title": "The cost of a mark: Newton's vanishing sagitta and a floor of order $\\hbar$",
       "summary": "Integrated mathematical and historical manuscript: conditional Gaussian and quantum disturbance bounds, exact polygon phases and the source-based Newton comparison. Historical M3 is an interpretation; operator spreads, hard widths and posterior inference are distinguished.",
@@ -3587,7 +3614,7 @@
       "thematic_area": "Newton/action",
       "strongest_result": "Constructive quartic and angular-phase tests retain zero-action sequences despite valid refinement and cycle consistency..",
       "status": "result",
-      "proof_status": "proved-refereed",
+      "proof_status": "proved; repository-internal written review",
       "retrieval_priority": 3,
       "current_relevance": "Canonical maintained argument; read its assumptions and correcting countermodels.",
       "relations": [
@@ -3635,7 +3662,7 @@
       "thematic_area": "Newton/action",
       "strongest_result": "For constituent canonical polynomial algebras with persistent h_i and a shared Newton derivation, a nonzero mixed force derivative implies h_i=h_j by differentiating the zero cross-momentum commutator; connected interacting components therefore share a constant, with zero allowed.",
       "status": "result",
-      "proof_status": "proved-refereed",
+      "proof_status": "proved; repository-internal written review",
       "retrieval_priority": 3,
       "current_relevance": "Retained for algebraic/interaction normalization with faithful constituent observables. Reciprocal spring calibration and spin phase-bundle integrality are different premises and conclusions.",
       "relations": [
@@ -3940,8 +3967,14 @@
       "status": "result",
       "proof_status": "known",
       "retrieval_priority": 1,
-      "current_relevance": "Parked operational calibration separates dimensionless classical exclusion from the live positive-action necessity goal.",
-      "relations": [],
+      "current_relevance": "Retained separately from the consolidated detector note: CHSH permits arbitrary shared readiness and abandons scalar monotonicity, replacing them with setting independence and conditional locality. Its supplied singlet comparison does not calibrate an action scale.",
+      "relations": [
+        {
+          "type": "continues",
+          "target": "notes/local-detector-coincidences.md",
+          "reason": "Tests the shared-readiness escape under independent settings, with a distinct all-gate local-factorization premise."
+        }
+      ],
       "surprising": false,
       "route_closure": false,
       "keys": [
@@ -3956,33 +3989,6 @@
       "role": "result,calibration",
       "value": "known-boundary,used-calibration",
       "limitations": "Setting-dependent censoring changes the tested ensemble. The witness is dimensionless and leaves every common action normalization admissible.",
-      "content_coverage": "full read including later corrections and appendices"
-    },
-    {
-      "path": "notes/shared-resource-events.md",
-      "title": "A shared release produces exclusive fringe-weighted events",
-      "summary": "A prescribed classical shared-release receiver reproduces exclusive fringe probabilities with explicit finite-window and delay costs.",
-      "thematic_area": "apparatus/reconstruction",
-      "strongest_result": "An absorbing single-permission Markov process with supplied linear fringe-weighted hazards has exactly exclusive events and conditional probabilities e±/E; delayed spatial inhibition permits calculable double clicks.",
-      "status": "exploratory",
-      "proof_status": "proved-unrefereed",
-      "retrieval_priority": 0,
-      "current_relevance": "Parked receiver counterexample shows that exclusivity needs architecture premises and does not by itself force an action floor.",
-      "relations": [],
-      "surprising": true,
-      "route_closure": false,
-      "keys": [
-        "Q11",
-        "shared release",
-        "absorbing Markov receiver",
-        "linear hazards",
-        "fringe probabilities",
-        "inhibition delay",
-        "finite-window efficiency"
-      ],
-      "role": "result,calibration",
-      "value": "used-calibration",
-      "limitations": "Shared control, linear hazards and readiness are supplied architecture. At vanishing energy, finite-window detection probability vanishes; this supplies neither local independent detection nor a universal action floor.",
       "content_coverage": "full read including later corrections and appendices"
     },
     {
@@ -4116,50 +4122,6 @@
       "role": "historical,synthesis",
       "value": "source-guardrail",
       "limitations": "Vasubandhu and Ibn Sina are differentiated from modern interface-state arguments; Chinese restorations and the Liu Hui witness need edition/facsimile qualification. Resemblance proves neither transmission, quantum structure nor an action unit; compare classical cut state.",
-      "content_coverage": "full read including later corrections and appendices"
-    },
-    {
-      "path": "notes/stochastic-route-velocitas-ultima.md",
-      "title": "Brownian free motion: the velocitas ultima denied, one action constant, and the floor",
-      "summary": "Specified Brownian free-motion and composition laws force one nonnegative action constant and conditionally yield a sharp Galileo record floor.",
-      "thematic_area": "Newton/action",
-      "strongest_result": "Under continuous isotropic stationary independent increments and independent center-of-mass composition for every positive mass, D(m)=κ/m with κ≥0; additive force-independent noise gives pinned-path error Φ(−√(Kτ/(2κ))) for κ>0.",
-      "status": "conditional",
-      "proof_status": "proved-refereed",
-      "retrieval_priority": 3,
-      "current_relevance": "Durable live Newton route separates universal composition from positive-noise selection and reformulates the ultimate-velocity premise explicitly.",
-      "relations": [
-        {
-          "type": "continues",
-          "target": "notes/principia-fifth-postulate.md",
-          "reason": "Provides the stochastic route alongside its deformation and restricted-state routes."
-        },
-        {
-          "type": "uses",
-          "target": "notes/cut-measure-newton.md",
-          "reason": "Uses the pinned Brownian-bridge Cameron–Martin discrimination and cut evidence decomposition."
-        },
-        {
-          "type": "uses",
-          "target": "notes/rotation-composition-universality.md",
-          "reason": "Compares the nonnegative mass-additivity argument with interacting rotation universality."
-        }
-      ],
-      "surprising": true,
-      "route_closure": false,
-      "keys": [
-        "S1",
-        "S2",
-        "S3",
-        "Brownian free motion",
-        "universal mD",
-        "Cameron–Martin",
-        "ultimate velocity",
-        "zero branch"
-      ],
-      "role": "result,live",
-      "value": "surprising-result,open-mechanism",
-      "limitations": "κ>0 remains assumed; Nelson dynamics needs additional state/phase laws. Uses cut measure within the fifth-postulate programme.",
       "content_coverage": "full read including later corrections and appendices"
     },
     {
@@ -4625,7 +4587,7 @@
         },
         {
           "type": "uses",
-          "target": "notes/action-floor-yang-mills-gap.md",
+          "target": "notes/low-dimensional-mass-gap.md",
           "reason": "Uses the supplied transverse action-floor valley-lifting mechanism as a conditional comparison, not an independent necessity proof."
         },
         {
@@ -4682,10 +4644,10 @@
       "content_coverage": "Full consolidated arguments and later corrections read; mechanical link-only changes preserve the established proof scope. Internal model checks are not independent peer review."
     },
     {
-      "title": "In three dimensions the mass gap is the positivity of one function at infinity",
+      "title": "Three-dimensional Yang--Mills: conditional scaling and the physical gap limit",
       "thematic_area": "Yang–Mills/gauge",
       "status": "conditional",
-      "current_relevance": "Lower-dimensional scaling map clarifies the live continuum proof boundary: physical construction and a positive finite infinite-volume ratio are still required.",
+      "current_relevance": "Retained separately from the solved matrix/circle treatment for its explicit nu=2 lattice constants, dimensionful field-coupling normalization and unproved physical continuum limit. Auxiliary-time stochastic existence and current-variable kinetic scales do not settle it.",
       "relations": [
         {
           "type": "uses",
@@ -4704,9 +4666,9 @@
         }
       ],
       "path": "notes/three-dimensional-gap-one-function.md",
-      "summary": "Conditional on physical construction, 3D Yang–Mills gaps have the one-variable form g²ℏ²c f(g²ℏL); a positive finite infinite-volume limit is the remaining spectral target. Constant modes identify the small-box scale.",
-      "strongest_result": "Conditional on physical construction, 3D Yang–Mills gaps have the one-variable form g²ℏ²c f(g²ℏL); a positive finite infinite-volume limit is the remaining spectral target. Constant modes identify the small-box scale. Limit/reuse: Strong lattice coupling and small-volume expansions are separate regimes; local stochastic dynamics supplies neither invariant measure nor OS theory. All-coupling positivity is sufficient, not necessary for the continuum target.",
-      "proof_status": "conditional",
+      "summary": "Conditional physical 3D theory has gap E3 f(lambda3 L), with E3=hbar c lambda3 and lambda3=hbar g_cl². Exact SU2 constant-mode scaling and explicit nu=2 strong-coupling lattice constants control different regimes; nonzero-mode transport, construction and a positive finite spectral limit remain unproved.",
+      "strongest_result": "The SU2 Gauss-invariant truncation gap is delta_inv^(2) E3 x^(-2/3), delta_inv>=delta_full>0. The full-theory small-x asymptotic requires a separate vanishing relative-error theorem. The lattice threshold g0=[16N²/((N²-1)beta*)]^(1/4) gives c3>=gamma2 C2/2 only at strong coupling; a physical weak-coupling and volume limit is still required.",
+      "proof_status": "written dimensional and truncation identities; source-dependent strong-coupling theorem; continuum and small-volume transfer conditional",
       "retrieval_priority": 2,
       "surprising": true,
       "route_closure": false,
@@ -4721,8 +4683,8 @@
       ],
       "role": "synthesis,result",
       "value": "synthesis,open-mechanism",
-      "limitations": "Strong lattice coupling and small-volume expansions are separate regimes; local stochastic dynamics supplies neither invariant measure nor OS theory. All-coupling positivity is sufficient, not necessary for the continuum target.",
-      "content_coverage": "full read including later corrections and appendices"
+      "limitations": "Physical construction, nonzero-mode relative errors, sector matching, spectral visibility and compatibility of volume/cutoff limits are required. The SU2 cross-product proof is not a general SU(N) proof. All-coupling positivity is an optional sufficient strengthening; the Euclidean compact U1 source is not automatically a KS theorem. The former dimensionally inconsistent Debye prefactor is withdrawn.",
+      "content_coverage": "Full original and later construction correction read; rewritten with explicit conditional small-volume transfer and gauge-invariant coefficient."
     },
     {
       "title": "Topology, size stabilization and action normalization",
@@ -4771,11 +4733,6 @@
           "reason": "The linear zero-mode term matches its C133 transverse oscillator mechanism."
         },
         {
-          "type": "uses",
-          "target": "notes/action-floor-yang-mills-gap.md",
-          "reason": "Compares quantum zero-point confinement to the explicitly supplied transverse action floor."
-        },
-        {
           "type": "continues",
           "target": "notes/weak-coupling-feshbach-reduction.md",
           "reason": "Computes the valley potential and leading nonzero-mode quadratic correction required by H3."
@@ -4809,7 +4766,7 @@
       "thematic_area": "Yang–Mills/gauge",
       "strongest_result": "Exact Villain monopole/flux decomposition gives a D=3 full-measure TV bound 2(L/a)³e^(−π²/(6λ₃a))/(1−e^(−π²/(2λ₃a))) and removes compact defects at fixed coupling and volume. Scope: The same D=4 TV upper bound is useless at fixed coupling; an extensive lower bound proving TV separation is only expected. Blocked Gaussian fields still need smooth-observable comparison, not TV closure.",
       "status": "result",
-      "proof_status": "proved-refereed",
+      "proof_status": "proved; repository-internal written review",
       "retrieval_priority": 3,
       "current_relevance": "Current spine/map: Exact Villain monopole/flux decomposition gives a D=3 full-measure TV bound 2(L/a)³e^(−π²/(6λ₃a))/(1−e^(−π²/(2λ₃a))) and removes compact defects at fixed coupling and volume.",
       "relations": [
@@ -4924,7 +4881,7 @@
       "thematic_area": "Newton/action",
       "strongest_result": "States the gap thesis as a claim about limits and locates it.",
       "status": "result",
-      "proof_status": "proved-refereed",
+      "proof_status": "proved; repository-internal written review",
       "retrieval_priority": 3,
       "current_relevance": "Canonical maintained argument; read its assumptions and correcting countermodels.",
       "relations": [

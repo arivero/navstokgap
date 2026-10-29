@@ -107,7 +107,7 @@ allowed.
 inspect PDF pages as images, and never restore rebuilt PDFs by comparison.
 `make check` (link and checksum integrity) is cheap and may be run.
 
-No parallel subagents. Under the current user direction, work alone; only a necessary menial task may be delegated to 6.1 Terra. Preserve unrelated uncommitted work. Attribute completed batches with “6 Astra High” as requested.
+No parallel subagents. Under the current user direction, work alone; only a necessary menial task may be delegated to 6.1 Terra. Preserve unrelated uncommitted work. Attribute completed batches with “6.1 Sol Max” under the latest user direction.
 
 Keep STATE short. Do not restate a result in more than one place.
 

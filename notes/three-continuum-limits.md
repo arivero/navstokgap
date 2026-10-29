@@ -407,7 +407,7 @@ requires a constructed mathematical map.
 
 ## 6. The mechanism worth developing across the two main goals
 
-The [action-floor note G08](action-floor-yang-mills-gap.md) supplies one
+The [action-floor note G08](low-dimensional-mass-gap.md#conditional-orbit-area-bounds-and-state-counting) supplies one
 concrete bridge. A transverse oscillator of frequency $\Omega(x)$ obeys
 
 $$\frac{p_y^2}{2M}+\frac12M\Omega(x)^2y^2

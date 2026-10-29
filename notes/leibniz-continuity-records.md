@@ -292,7 +292,7 @@ passage, OCR normalized by hand).
   atoms and no leaps omits this option. What sufficient reason then asks
   for is a reason for an action scale. The composition results give one
   constant for all bodies ([rotation composition](rotation-composition-universality.md);
-  $\kappa=mD$ in the [stochastic route](stochastic-route-velocitas-ultima.md)),
+  $\kappa=mD$ in the [stochastic route](composition-universality.md#continuous-free-paths-and-ultimate-velocity)),
   so that scale converts units of mass, length and time, and its value is a
   convention of units so long as no second dimensionful constant forms a
   pure number with it: Newton's $G$ and $c$ do not, and the charge $e$ of §4c
@@ -340,7 +340,7 @@ passage, OCR normalized by hand).
   records of motion have no insensible parts. The zero branch can still
   place insensibility in the perceiver, as Leibniz's confusion of created
   substances does, graded from one substance to another; the
-  [stochastic route](stochastic-route-velocitas-ultima.md) shows how
+  [stochastic route](composition-universality.md#continuous-free-paths-and-ultimate-velocity) shows how
   composition turns graded constants into one ($\kappa=mD$ for every body), and
   the step from confused perceivers to one universal floor is recorded here
   as a reading. The maxim on motion from rest is Galileo's passage through all
