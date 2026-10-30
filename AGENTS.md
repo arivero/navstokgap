@@ -19,11 +19,12 @@ later results and corrections. The catalog is repository infrastructure;
 
 # The scientific task
 
-The user has suspended new research for substantive consolidation. Organize
-maintained notes by question and dependency; integrate corrections, retain
-independent proofs/countermodels/constants and delete superseded source notes.
-Keep published URLs through the website redirect mechanism. Catalogs and commit
-history supply provenance; create no new refactoring report or handoff.
+The identified overlap families have been consolidated. The user authorized
+standard research after the index/reference/site consistency pass on 2026-10-30.
+STATE owns the current bounded question. Maintain arguments by scientific
+question and dependency; integrate corrections and preserve distinct proofs,
+countermodels and source evidence. Former URLs use website redirects; catalogs
+and git history provide provenance. Create no new refactoring report or handoff.
 
 The long-term open goals are Newton action necessity and continuum pure $SU(3)$
 Yang–Mills existence with a finite positive physical gap. The pion is a symmetry

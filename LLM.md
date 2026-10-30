@@ -1,7 +1,8 @@
 # What this repository establishes
 
 Read [AGENTS](AGENTS.md) for work rules and [STATE](research/STATE.md) for the
-live direction. New research is suspended during the scientific consolidation.
+live bounded question. The identified consolidation and site-consistency passes
+are complete; the user has authorized standard research to resume.
 The [catalog](notes/index.md) and [typed JSON links](research/note-index.json)
 locate maintained arguments, former names and corrections. Read the proof and
 its assumptions before reusing a catalog statement. A model's ACCEPT/REFINE or

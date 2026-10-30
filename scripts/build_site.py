@@ -1714,6 +1714,7 @@ search.addEventListener('input', () => {
         _txt = llm_src.read_text(encoding="utf-8")
         _txt = _re.sub(r"\]\((?!https?://|#)([^)]+)\)", lambda m: "](" + _gh + m.group(1) + ")", _txt)
         (DOCS / "llms.txt").write_text(_txt, encoding="utf-8")
+        generated.append("docs/llms.txt")
     generated = set(generated)
     write_search_files(generated)
     (DOCS / ".site-manifest").write_text(

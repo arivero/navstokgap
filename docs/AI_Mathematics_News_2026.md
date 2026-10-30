@@ -59,5 +59,5 @@ forced alternatives and its bounded reading. The [exact problem comparison](../n
 keeps fluid evolution, auxiliary relaxation and physical spectral energy
 separate. Multiscale control is a shared methodological question, not an
 operator identification or a proof that the remaining obligations reduce to
-a fixed number of blocking steps. Source announcements do not lift the
-current suspension of new research during consolidation.
+a fixed number of blocking steps. Source announcements provide context; they are not adopted proof evidence
+for this repository. STATE records the current research direction.

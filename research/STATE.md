@@ -1,14 +1,17 @@
 # State
 
-Updated 2026-10-30. **Identified overlap families consolidated; new research has not resumed.** The
-[88-argument catalog](../notes/index.md) owns coverage and records completed
-work in short phrases. Historical handoffs, status snapshots and internal
-reviews have been retired; their useful proofs, corrections and source
-coverage belong in the maintained arguments and source companions. Git
-preserves the former records. The five remaining overlap families are now
-integrated: roadmap/certification/bands, vacuum bounds/transfer, classical-cut
-sources, problem definitions and originating ideas. Distinct scalar-propagation
-proofs, field-theory operators and classical apparatus countermodels remain.
+Updated 2026-10-30. **Standard research resumed by user direction after
+consolidation and index/reference/site consistency checks.** The
+[88-argument catalog](../notes/index.md) owns coverage and short completed-work
+phrases; git preserves retired notes and process records.
+
+Current bounded question: does the small-volume H3 gap comparison concern one
+centre sector or the full finite-volume spectrum? Test the retained periodic
+holonomy benchmark, then state exactly what sector identification and projection
+control would be needed to transfer its conclusion to the field theory.
+[Valley input](../notes/torus-valley-potential.md#4-saturation-and-central-holonomies)
+and [Feshbach assumptions](../notes/weak-coupling-feshbach-reduction.md) own the
+argument. No full Yang–Mills spectral result is assumed.
 
 ## Goals and current proof boundaries
 

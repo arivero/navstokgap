@@ -207,6 +207,9 @@ def main():
     if manifest.exists():
         generated = {line.strip() for line in manifest.read_text().splitlines()
                      if line.strip() and not line.startswith("#")}
+    if not {"docs/llms.txt", "docs/sitemap.xml", "docs/assets/opening.css",
+            "docs/assets/opening.js"}.issubset(generated):
+        errors.append("Site manifest: missing generated index or opening asset")
     # Source companions are public pages too; their imported links need checking.
     required = {f"docs/{name}" for name in
                 ("index.html", "research.html", "archive.html", "tutorial.html",

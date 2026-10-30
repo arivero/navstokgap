@@ -27,8 +27,9 @@ and retrieval priorities confer neither independent peer review nor novelty.
 Completed work is recorded briefly in the existing catalog; retired handoffs,
 status snapshots and internal score/review files remain in git history.
 
-Read [AGENTS](AGENTS.md) and [LLM](LLM.md) before working. New research is
-suspended during consolidation. Preserve unrelated changes and use written
+Read [AGENTS](AGENTS.md) and [LLM](LLM.md) before working. Consolidation is
+complete; STATE selects the current bounded research question. Preserve unrelated
+changes and use written
 mathematical derivations. Build a changed scientific note with
 `make paper NOTE=<slug>`, then `make site` and `make check` for document,
 catalog, link and source-checksum integrity. Routine full paper builds and
