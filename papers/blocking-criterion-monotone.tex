@@ -2,6 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
+\DeclareUnicodeCharacter{1E93}{\d{z}}
 \usepackage{amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}
 \usepackage[hidelinks]{hyperref}
@@ -91,6 +92,13 @@ estimates compare unfavourably at \(M=2\) in that asymptotic regime;
 they are bounds, not exact optimal thresholds. Boundary conditions and
 the sector of the block operator matter.
 
+For \(SU(3)\), \(C_2=4/3\) gives
+\[\beta_{\rm block}=\frac{72M^2}{g^2\delta(g;M)},\qquad
+\beta_{\rm direct}=\frac{72}{g^4}.\] The same asymptotic ratio is
+\(3M^2/8\), formally \(3/2\) at \(M=2\). These constants retain the
+stated half-attribution and block-geometry conditions; they do not
+establish an all-coupling comparison.
+
 For a periodic small-volume zero-mode model, the conditional asymptotic
 \(\Delta_M\sim\delta_1g^{2/3}\hbar c/(Ma)\) would give
 \[\beta_{\rm block}\sim\frac{24M^3N}{\delta_1g^{8/3}}.\] It must not be
@@ -101,8 +109,9 @@ Algebraically the criterion is no better than its \(M=1\) analogue if
 \(\delta(g;M)\le M^2\delta(g;1)\), assuming both are defined with
 compatible boundary conventions. This condition has not been established
 for all couplings. A one-sided upper bound such as the
-\href{polyakov-average-gap-bound.md}{Polyakov variational bound} cannot
-supply the missing lower comparison with \(\delta(g;1)\).
+\href{lattice-gap-upper-bounds.md\#spatial-polyakov-loop-trials}{Polyakov
+variational bound} cannot supply the missing lower comparison with
+\(\delta(g;1)\).
 
 \hypertarget{running-coupling-and-generated-interactions}{%
 \subsection{3. Running coupling and generated

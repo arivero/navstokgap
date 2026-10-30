@@ -1,11 +1,14 @@
 # State
 
-Updated 2026-10-29. **Consolidation; new research suspended.** The
-[95-argument catalog](../notes/index.md) owns coverage and records completed
+Updated 2026-10-30. **Identified overlap families consolidated; new research has not resumed.** The
+[88-argument catalog](../notes/index.md) owns coverage and records completed
 work in short phrases. Historical handoffs, status snapshots and internal
 reviews have been retired; their useful proofs, corrections and source
 coverage belong in the maintained arguments and source companions. Git
-preserves the former records.
+preserves the former records. The five remaining overlap families are now
+integrated: roadmap/certification/bands, vacuum bounds/transfer, classical-cut
+sources, problem definitions and originating ideas. Distinct scalar-propagation
+proofs, field-theory operators and classical apparatus countermodels remain.
 
 ## Goals and current proof boundaries
 
@@ -36,7 +39,10 @@ comparison and iteration open
 [Generated-action matching](../notes/four-dimensional-composition.md), the
 [small-volume bridge](../notes/weak-coupling-feshbach-reduction.md),
 continuum reconstruction and surviving physical spectral weight retain
-separate obligations.
+separate obligations. The [valley correction](../notes/torus-valley-potential.md#saturation-and-central-holonomies)
+removes the unsupported global perturbation inference. The external
+[Gross-led shepherding process](../docs/AI_Mathematics_News_2026.md#yangmills-shepherding-gross-chairs-the-committee)
+concerns a claimed existence construction and leaves the mass gap open.
 
 Use [dependencies](dependencies.md) for reading order and
 [obstructions](obstructions.md) before reviving a failed route.

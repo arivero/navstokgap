@@ -41,7 +41,7 @@ curvature criterion that would give $g^2>32$ if its normalization
 conversion, unchecked there, stands. The Kogut--Susskind explicit
 threshold contrasted in §4 was withdrawn on 2026-10-02
 ([KS note](strong-coupling-uniform-gap.md#continuous-time-histories-and-the-corrected-overlap-criterion)).
-[The bands note](confinement-scale-bands.md) §1 separates the
+[The bands note](mass-gap-conditional-theorem.md#numerical-orientation-and-its-limits) §1 separates the
 all-representation activity from the fundamental normalization, as the
 correction above now does.
 

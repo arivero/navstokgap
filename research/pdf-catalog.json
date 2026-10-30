@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-29",
-  "method": "Initial123PDFs extracted;115note-corresponding TeX bodies compared with current-note conversions modulo documented presentation changes;8namedPDF/TeXorphans fully read. Subsequent changed-note recompilations and the new score-constrained manuscript are recorded in individual entries. Classifications use mathematical role and corrections, not recency alone.",
+  "updated": "2026-10-30",
+  "method": "Retained manuscripts classified by mathematical role, source coverage and corrections. Superseded note artifacts are deleted; only affected maintained notes are rebuilt. Compilation and extracted-text checks are document integrity checks, not independent proof review.",
   "manuscripts": [
     {
       "slug": "gaussian-meter-entropy-floor",
@@ -163,20 +163,6 @@
       "pdf_verification": "Targeted build: no overfull boxes or missing glyphs; PDF text extracted and screened."
     },
     {
-      "slug": "agmon-ground-state-suppression",
-      "tex": "papers/agmon-ground-state-suppression.tex",
-      "pdf": "out/papers/agmon-ground-state-suppression.pdf",
-      "note": "notes/agmon-ground-state-suppression.md",
-      "extracted_words": 1511,
-      "title": "An Agmon bound for the Kogut--Susskind ground state: finite-volume global magnetic-energy tails",
-      "current_replacement": null,
-      "classification": "current technical manuscript",
-      "assessment": "Explicit finite-volume global Agmon tail; no local rarity or continuum gap follows.",
-      "reading_coverage": "Current source note read in full; PDF text extracted and prefix/TeX headings screened; generated TeX body compared to the note.",
-      "tex_note_comparison": "matches current note modulo Pandoc anchor wrappers, line wrapping and table-width macros",
-      "pdf_verification": "Document content/version screening; no independent mathematical proof audit or recompilation."
-    },
-    {
       "slug": "alpoge-balaban-newton-peek",
       "tex": "papers/alpoge-balaban-newton-peek.tex",
       "pdf": "out/papers/alpoge-balaban-newton-peek.pdf",
@@ -237,14 +223,14 @@
       "tex": "papers/blocking-criterion-monotone.tex",
       "pdf": "out/papers/blocking-criterion-monotone.pdf",
       "note": "notes/blocking-criterion-monotone.md",
-      "extracted_words": 1443,
+      "extracted_words": 983,
       "title": "Blocking and Schur bounds: the surface-to-gap obstruction",
       "current_replacement": null,
       "classification": "current technical manuscript",
-      "assessment": "Surface-to-gap obstruction with conditional boundary count and regime comparisons; all-coupling monotonicity and the Schur variation estimate are unproved.",
-      "reading_coverage": "Current source note read in full; PDF text extracted and prefix/TeX headings screened; generated TeX body compared to the note.",
-      "tex_note_comparison": "matches current note modulo Pandoc anchor wrappers, line wrapping and table-width macros",
-      "pdf_verification": "Document content/version screening; no independent mathematical proof audit or recompilation."
+      "assessment": "Surface-to-gap criteria scale unfavourably in specified regimes. All-coupling monotonicity requires a comparison of block gaps. Connected polymers alone do not prove the proposed Schur-variation inequality; boundary counting and sectors require checking.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "bounded-acceleration-return",
@@ -346,32 +332,18 @@
       "pdf_verification": "Targeted build: no overfull boxes or missing glyphs; PDF text extracted and screened."
     },
     {
-      "slug": "confinement-scale-bands",
-      "tex": "papers/confinement-scale-bands.tex",
-      "pdf": "out/papers/confinement-scale-bands.pdf",
-      "note": "notes/confinement-scale-bands.md",
-      "extracted_words": 2173,
-      "title": "The confinement scale in three bands, with published numbers, and the verification restated gauge-invariantly",
-      "current_replacement": "mass-gap-openings",
-      "classification": "older version",
-      "assessment": "Retains an earlier route and its qualifications; use reasons-to-stop-as-research for the current correction. Gauge symmetry makes single-link block marginals Haar; useful finite-block certification must control gauge-invariant sub-block mixing. Published lattice scales orient the gap between rigorous strong coupling and physical crossover. Scope: Continuum-scaled glueball estimates near β≈5.7 need the explicit lattice-softening caveat; proposed small-box certification is superseded strategically by reasons-to-stop-as-research, which prioritizes weak-side RG.",
-      "reading_coverage": "Current source note read in full; PDF text extracted and prefix/TeX headings screened; generated TeX body compared to the note.",
-      "tex_note_comparison": "Built individually from the maintained note after retiring process records.",
-      "pdf_verification": "Targeted build: no overfull boxes or missing glyphs; PDF text extracted and screened."
-    },
-    {
       "slug": "conservative-harmonic-receiver",
       "tex": "papers/conservative-harmonic-receiver.tex",
       "pdf": "out/papers/conservative-harmonic-receiver.pdf",
       "note": "notes/conservative-harmonic-receiver.md",
-      "extracted_words": 4536,
+      "extracted_words": 4537,
       "title": "A conservative receiver and the origin of a correlation scale",
       "current_replacement": null,
       "classification": "current technical manuscript",
       "assessment": "Finite conservative harmonic receivers have zero long-window response; the prepared increasing-chain plateau depends on limit order and closes under its hard speed-support condition. Exact two-body cut/reset and three-body elimination/observability proofs retain the missing classical memory. Receiver energy and modal preparation supply all action scales. Resets alter the experiment, exact two-time recovery becomes ill-conditioned, and the apparatus/calibration/minimax proofs now reside in their separate canonical treatments.",
-      "reading_coverage": "All merged source proofs and later corrections read. Historical coordinator/model checks are internal checks, not external peer review; no mathematical verification scripts used.",
-      "tex_note_comparison": "Built individually from the maintained note after retiring process records.",
-      "pdf_verification": "Targeted build: no overfull boxes or missing glyphs; PDF text extracted and screened."
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "newton-branch-response-action",
@@ -476,14 +448,14 @@
       "tex": "papers/dobrushin-uniqueness-wilson.tex",
       "pdf": "out/papers/dobrushin-uniqueness-wilson.pdf",
       "note": "notes/dobrushin-uniqueness-wilson.md",
-      "extracted_words": 1690,
+      "extracted_words": 1337,
       "title": "Dobrushin's Wilson criterion: an explicit strong-coupling gap at $g^2>444$ and an open block test",
       "current_replacement": null,
       "classification": "current technical manuscript",
-      "assessment": "The single-link upper coefficient alpha≤18(e^(4 beta_W)−1) gives a volume-uniform SU(3) Wilson-transfer gap with exact lower rate log[1/(18(e^(24/g²)−1))] in units ℏc/a. The exact sufficient condition is g²>24/log(19/18); g²>444 suffices. The comparison table now distinguishes exact rates from leading logarithms. Scope: The leading estimates log(g²/432) and 4 log(g²/1056) are not rigorous lower rates. The polymer integer bound is 1059; its rate dominates only at sufficiently large coupling. Section 4’s single-link block criterion is vacuous in the interior by Elitzur; use confinement-scale-bands for invariant sub-block mixing and reasons-to-stop-as-research for feasibility. References remain metadata-level.",
-      "reading_coverage": "October 2 changed note and surrounding argument read; generated PDF text extracted and revised claims screened.",
-      "tex_note_comparison": "Generated directly from the maintained note with make paper NOTE=dobrushin-uniqueness-wilson.",
-      "pdf_verification": "Changed-note build passed; text extraction and content screening only. No PDF image inspection or independent proof verification."
+      "assessment": "Derives the explicit one-link Wilson sufficient criterion g²>444 for SU3 and its transfer-gap rate. The proposed single-link block-marginal test is empty in the gauge interior; a joint invariant certificate and weak-trajectory control remain additional obligations. A block marginal criterion based only on interior single-link distributions sees Haar marginals and certifies no required joint mixing. No box size or monotone gapped interval is established; operators and continuum limits remain distinct.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "finite-depth-spin-gap",
@@ -504,28 +476,28 @@
       "tex": "papers/finiteness-half-flowed-susceptibility.tex",
       "pdf": "out/papers/finiteness-half-flowed-susceptibility.pdf",
       "note": "notes/finiteness-half-flowed-susceptibility.md",
-      "extracted_words": 2950,
+      "extracted_words": 2977,
       "title": "Spectral upper bounds: smeared susceptibilities and moment hierarchies",
       "current_replacement": null,
       "classification": "current technical manuscript",
-      "assessment": "One variational and positive-spectral-measure treatment gives intensive susceptibility bounds, conditional moment ratios and exact spatially flowed Maxwell constants. Temporal-flow admissibility and infrared moments remain assumptions. All finite inverse moments can coexist with a zero edge; complete moment data may determine the observed channel, which need not be the global gap. Scope: Four-dimensional flow UV finiteness supplies neither a Hamiltonian insertion nor infrared integrability. A single observed edge can miss lower sectors; finiteness of every inverse moment gives no positive lower edge. The conditional continuum construction and weighted derivative/susceptibility limits remain open.",
-      "reading_coverage": "Full merged arguments and later corrections read; written checks and source reading labels are not independent peer review.",
-      "tex_note_comparison": "Targeted rebuild from the consolidated maintained source.",
-      "pdf_verification": "Targeted build: zero overfull boxes, no missing characters or unresolved references; PDF text extracted and screened. Document integrity only, not mathematical proof verification."
+      "assessment": "One variational and positive-spectral-measure treatment gives intensive susceptibility bounds, conditional moment ratios and exact spatially flowed Maxwell constants. Temporal-flow admissibility and infrared moments remain assumptions. All finite inverse moments can coexist with a zero edge; complete moment data may determine the observed channel, which need not be the global gap. Four-dimensional flow UV finiteness supplies neither a Hamiltonian insertion nor infrared integrability. A single observed edge can miss lower sectors; finiteness of every inverse moment gives no positive lower edge. The conditional continuum construction and weighted derivative/susceptibility limits remain open.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "flow-conjugation-truncation",
       "tex": "papers/flow-conjugation-truncation.tex",
       "pdf": "out/papers/flow-conjugation-truncation.pdf",
       "note": "notes/flow-conjugation-truncation.md",
-      "extracted_words": 4156,
+      "extracted_words": 4283,
       "title": "Gauge flow: exact conjugation, Jacobian locality and spectral truncation",
       "current_replacement": null,
       "classification": "current technical manuscript",
-      "assessment": "Finite-lattice flow preserves spectra and multiplication norms and has a local first-derivative path bound. Exact continuum variation distinguishes the true Jacobian from an auxiliary Gaussian propagator with an absolute tail budget. Landau growth is gB-k_parallel^2; inverse metrics and relative Hamiltonian truncation remain open. Scope: Auxiliary bounded-coefficient heat evolution is not identified with every gauge-flow Jacobian. Absolute kernel errors and free variances do not establish interacting suprema, inverse-metric control, relative spectral truncation or iteration.",
-      "reading_coverage": "Full merged arguments and later corrections read; written checks and source reading labels are not independent peer review.",
-      "tex_note_comparison": "Targeted rebuild from the consolidated maintained source.",
-      "pdf_verification": "Targeted build: zero overfull boxes, no missing characters or unresolved references; PDF text extracted and screened. Document integrity only, not mathematical proof verification."
+      "assessment": "Finite-lattice flow preserves spectra and multiplication norms and has a local first-derivative path bound. Exact continuum variation distinguishes the true Jacobian from an auxiliary Gaussian propagator with an absolute tail budget. Landau growth is gB-k_parallel^2; inverse metrics and relative Hamiltonian truncation remain open. Auxiliary bounded-coefficient heat evolution is not identified with every gauge-flow Jacobian. Absolute kernel errors and free variances do not establish interacting suprema, inverse-metric control, relative spectral truncation or iteration.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "four-dimensional-composition",
@@ -602,14 +574,14 @@
       "tex": "papers/ground-state-measure-transfer.tex",
       "pdf": "out/papers/ground-state-measure-transfer.pdf",
       "note": "notes/ground-state-measure-transfer.md",
-      "extracted_words": 1473,
-      "title": "Ground-state measure transfer: the slice identity is exact, the large-field estimate remains open",
+      "extracted_words": 3905,
+      "title": "Gauge vacuum estimates: global tails and conditional slice transfer",
       "current_replacement": null,
       "classification": "working manuscript",
-      "assessment": "Exact finite-lattice ground-state/slice-marginal identification transfers probability estimates actually established for that marginal. The action-cost calculation alone gives no normalized local rarity estimate.",
-      "reading_coverage": "Current source note read in full; PDF text extracted and prefix/TeX headings screened; generated TeX body compared to the note.",
-      "tex_note_comparison": "matches current note modulo Pandoc anchor wrappers, line wrapping and table-width macros",
-      "pdf_verification": "Document content/version screening; no independent mathematical proof audit or recompilation."
+      "assessment": "Exact magnetic Laplacian/gradient identities and variance sum rule feed finite-volume global Agmon tails with explicit all-path constants. Perron slab and anisotropic temporal limits conditionally identify ground-state slice probabilities; normalized local rarity and operator comparison remain separate. Global thresholds and prefactors depend on volume; local large fields need not force a global excess. Temporal limits are iterated at fixed spatial cutoff; no uniform local probability, signed operator inequality, continuum construction or physical gap follows.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "holography-lowest-dimensions",
@@ -620,10 +592,10 @@
       "title": "Holography in the lowest dimensions: at $d=0$ it is the wave-function identity, at $d=1$ it is the Schwarzian",
       "current_replacement": null,
       "classification": "historical research snapshot",
-      "assessment": "Exploratory dictionary compares Euclidean ground-state marginals and segment factorization with low-dimensional holography, then distinguishes gapless Schwarzian/SYK scales from a confining infrared cap. Scope: Low-dimensional boundary/semigroup identities and source-based interpretations are not a four-dimensional duality theorem. The entropy expansion assumes a simple vacuum, isolated finite-degeneracy first excitation and a finite heat trace; kernel duration T gives physical inverse temperature 2T/hbar.",
-      "reading_coverage": "Written arguments and retained source coverage; corrections from retired internal records integrated. No independent peer review claimed.",
-      "tex_note_comparison": "Built individually from the maintained note after retiring process records.",
-      "pdf_verification": "Targeted build: no overfull boxes or missing glyphs; PDF text extracted and screened."
+      "assessment": "Exploratory dictionary compares Euclidean ground-state marginals and segment factorization with low-dimensional holography, then distinguishes gapless Schwarzian/SYK scales from a confining infrared cap. Low-dimensional boundary/semigroup identities and source-based interpretations are not a four-dimensional duality theorem. The entropy expansion assumes a simple vacuum, isolated finite-degeneracy first excitation and a finite heat trace; kernel duration T gives physical inverse temperature 2T/hbar.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "interacting-ising-gap",
@@ -638,20 +610,6 @@
       "reading_coverage": "Full source arguments and their corrections read during consolidation; internal written checks, no independent peer-review or priority claim.",
       "tex_note_comparison": "Rebuilt only this changed canonical note after consolidation.",
       "pdf_verification": "Document content/version screening; no independent mathematical proof audit or recompilation."
-    },
-    {
-      "slug": "intermediate-region-finite-verification",
-      "tex": "papers/intermediate-region-finite-verification.tex",
-      "pdf": "out/papers/intermediate-region-finite-verification.pdf",
-      "note": "notes/intermediate-region-finite-verification.md",
-      "extracted_words": 2340,
-      "title": "The intermediate region as a finite verification: complete analyticity, the transfer matrix, and the two numbers whose meeting closes the proof",
-      "current_replacement": "mass-gap-openings",
-      "classification": "older version",
-      "assessment": "Conditional finite-block mixing certification would furnish a volume-uniform Wilson-transfer gap and an open target for an RG trajectory in full interaction space. No certificate or reach estimate is supplied. The October 2 correction separates a required Wilson mixing margin from the existential Hamiltonian target-box tolerance. Scope: No numerical openness radius transfers between Wilson and KS operators. All-coupling coverage and two scalar thresholds are unnecessary; oscillation bounds worsen with blocking. Physical-coupling certification is subsequently rejected as infeasible in reasons-to-stop-as-research.",
-      "reading_coverage": "October 2 changed note and surrounding argument read; generated PDF text extracted and revised claims screened.",
-      "tex_note_comparison": "Generated directly from the maintained note with make paper NOTE=intermediate-region-finite-verification.",
-      "pdf_verification": "Changed-note build passed; text extraction and content screening only. No PDF image inspection or independent proof verification."
     },
     {
       "slug": "large-field-action-lower-bound",
@@ -686,14 +644,14 @@
       "tex": "papers/lattice-gap-upper-bounds.tex",
       "pdf": "out/papers/lattice-gap-upper-bounds.pdf",
       "note": "notes/lattice-gap-upper-bounds.md",
-      "extracted_words": 2628,
+      "extracted_words": 2705,
       "title": "Variational lattice-gap bounds: plaquettes, electric trials and holonomies",
       "current_replacement": null,
       "classification": "current technical manuscript",
-      "assessment": "The KS Feynman-Bijl identity gives plaquette strong-coupling order, an abelian structure-factor gaplessness test and an exact averaged-Polyakov susceptibility bound. Constant-colour electric trials vanish for semisimple gauge algebras; a universal string cost for all field-dependent dressed trials is unproved. Scope: Nonzero variances and stated domains are required. The Gauss-law exclusion is semisimple, not every nonabelian group; a nonvanishing upper bound proves no converse gap criterion. Small-volume expectation transport and any universal dressing cost remain unproved.",
-      "reading_coverage": "Full merged arguments and later corrections read; written checks and source reading labels are not independent peer review.",
-      "tex_note_comparison": "Targeted rebuild from the consolidated maintained source.",
-      "pdf_verification": "Targeted build: zero overfull boxes, no missing characters or unresolved references; PDF text extracted and screened. Document integrity only, not mathematical proof verification."
+      "assessment": "The KS Feynman-Bijl identity gives plaquette strong-coupling order, an abelian structure-factor gaplessness test and an exact averaged-Polyakov susceptibility bound. Constant-colour electric trials vanish for semisimple gauge algebras; a universal string cost for all field-dependent dressed trials is unproved. Nonzero variances and stated domains are required. The Gauss-law exclusion is semisimple, not every nonabelian group; a nonvanishing upper bound proves no converse gap criterion. Small-volume expectation transport and any universal dressing cost remain unproved.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "leibniz-continuity-records",
@@ -714,14 +672,14 @@
       "tex": "papers/lieb-robinson-kogut-susskind.tex",
       "pdf": "out/papers/lieb-robinson-kogut-susskind.pdf",
       "note": "notes/lieb-robinson-kogut-susskind.md",
-      "extracted_words": 1148,
+      "extracted_words": 1180,
       "title": "A Lieb--Robinson bound for the Kogut--Susskind Hamiltonian, with velocity $\\propto Nc/g^2$",
       "current_replacement": null,
       "classification": "current technical manuscript",
-      "assessment": "The support-preserving interaction picture reduces commuting unbounded single-link electric terms to bounded plaquette locality, with volume-uniform coefficient of order Nc/g². Numerical prefactors, clustering lengths, physical propagation and stability need their separate hypotheses. Scope: The old 32e coefficient is not certified from the cited theorem conventions. The dynamical quotient hbar v/Delta alone is not a general clustering length; a diverging upper estimate proves no actual superluminal speed or gap stability.",
-      "reading_coverage": "Written arguments and retained source coverage; corrections from retired internal records integrated. No independent peer review claimed.",
-      "tex_note_comparison": "Built individually from the maintained note after retiring process records.",
-      "pdf_verification": "Targeted build: no overfull boxes or missing glyphs; PDF text extracted and screened."
+      "assessment": "The support-preserving interaction picture reduces commuting unbounded single-link electric terms to bounded plaquette locality, with volume-uniform coefficient of order Nc/g². Numerical prefactors, clustering lengths, physical propagation and stability need their separate hypotheses. The old 32e coefficient is not certified from the cited theorem conventions. The dynamical quotient hbar v/Delta alone is not a general clustering length; a diverging upper estimate proves no actual superluminal speed or gap stability.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "local-detector-coincidences",
@@ -752,20 +710,6 @@
       "pdf_verification": "Document content/version screening; no independent mathematical proof audit or recompilation."
     },
     {
-      "slug": "magnetic-energy-identities",
-      "tex": "papers/magnetic-energy-identities.tex",
-      "pdf": "out/papers/magnetic-energy-identities.pdf",
-      "note": "notes/magnetic-energy-identities.md",
-      "extracted_words": 1534,
-      "title": "Two exact identities for the magnetic energy, a ground-state sum rule, and why pointwise Gibbs domination fails as Agmon does",
-      "current_replacement": null,
-      "classification": "current technical manuscript",
-      "assessment": "Exact magnetic Laplacian/gradient identities and a ground-state variance sum rule give a specified exponential comparison with global energy data. They supply no uniform local probability bound and no universal impossibility theorem. Scope: The gradient constant uses the stated plaquette incidence. The displayed threshold has a Haar-mean upper bound, not a proved Haar-mean asymptotic. Failure of this comparison neither excludes all Hamiltonian arguments nor supplies a normalized anisotropic slice estimate.",
-      "reading_coverage": "Written arguments and retained source coverage; corrections from retired internal records integrated. No independent peer review claimed.",
-      "tex_note_comparison": "Built individually from the maintained note after retiring process records.",
-      "pdf_verification": "Targeted build: no overfull boxes or missing glyphs; PDF text extracted and screened."
-    },
-    {
       "slug": "mark-cost-and-statistical-floor",
       "tex": "papers/mark-cost-and-statistical-floor.tex",
       "pdf": "out/papers/mark-cost-and-statistical-floor.pdf",
@@ -784,42 +728,42 @@
       "tex": "papers/mass-gap-conditional-theorem.tex",
       "pdf": "out/papers/mass-gap-conditional-theorem.pdf",
       "note": "notes/mass-gap-conditional-theorem.md",
-      "extracted_words": 4681,
-      "title": "The map as one conditional theorem: H1 and H2 give a volume-uniform lattice gap bound, and continuum existence stays a separate obligation",
+      "extracted_words": 4145,
+      "title": "Conditional gauge-gap transfer: multiscale control, mixing and certification",
       "current_replacement": null,
       "classification": "working manuscript",
-      "assessment": "Packages an RG fluctuation-decay hypothesis and robust finite-box mixing certificate into a proposed lattice decay/gap transfer, with physical lower scale ℏc min(γ*,γ′)/a*. Scope: both hypotheses remain unproved; continuum existence, nontriviality and observable/limit control are separate obligations despite the note’s endpoint rhetoric. Physical-coupling H2 certification is later rejected in reasons to stop; current progress follows the refinement spine.",
-      "reading_coverage": "Current source note read in full; PDF text extracted and prefix/TeX headings screened; generated TeX body compared to the note.",
-      "tex_note_comparison": "Built individually from the maintained note after retiring process records.",
-      "pdf_verification": "Targeted build: no overfull boxes or missing glyphs; PDF text extracted and screened."
+      "assessment": "H1 multiscale fluctuation/quasi-local Gibbs control and H2 neighborhood mixing imply a volume-uniform Wilson-transfer gap, with continuum transfer conditional on existence and dense observables. Finite certificates, gauge marginal reduction, interaction robustness and numerical bands retain their distinct burdens. No physical trajectory, applicable finite-size certificate or continuum theory is constructed. Compactness, a scalar coupling, gauge-invariant expectation or numerical meeting scale does not prove the full interaction/mixing hypotheses; KS and Wilson thresholds differ.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "mass-gap-obligations-lattice",
       "tex": "papers/mass-gap-obligations-lattice.tex",
       "pdf": "out/papers/mass-gap-obligations-lattice.pdf",
       "note": "notes/mass-gap-obligations-lattice.md",
-      "extracted_words": 2585,
+      "extracted_words": 5012,
       "title": "Gauge spectral limits: finite lattices, coupling sets and the continuum target",
       "current_replacement": null,
       "classification": "current synthesis",
-      "assessment": "One canonical lattice-to-continuum spectral treatment contains T1 finite compact-resolvent positivity, strong-coupling and Wilson/KS distinctions, finite-volume analytic coupling dependence, conditional limiting spectral thresholds and lost-weight counterexample. Integrates former position map and exact Wilson sufficient constants. All-coupling positivity/phase equivalences, large-field rarity, relative flow truncation and exhaustive route closures remain unproved; continuum construction and physical spectral transfer stay separate.",
-      "reading_coverage": "Full source arguments and their corrections read during consolidation; internal written checks, no independent peer-review or priority claim.",
-      "tex_note_comparison": "Rebuilt only this changed canonical note after consolidation.",
-      "pdf_verification": "Document content/version screening; no independent mathematical proof audit or recompilation."
+      "assessment": "One canonical lattice-to-continuum spectral treatment contains T1 finite compact-resolvent positivity, strong-coupling and Wilson/KS distinctions, finite-volume analytic coupling dependence, conditional limiting spectral thresholds and lost-weight counterexample. Integrates former position map and exact Wilson sufficient constants. All-coupling positivity/phase equivalences, large-field rarity, relative flow truncation and exhaustive route closures remain unproved; continuum construction and physical spectral transfer stay separate. Finite-lattice existence, strong-coupling positivity, all-coupling stability, continuum scaling and reconstruction are separate. The small-volume field asymptotic and positive SU3 matrix gap are conditional; Lambda_lat is inverse length and m is an energy. No monotone crossover is proved.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "mass-gap-openings",
       "tex": "papers/mass-gap-openings.tex",
       "pdf": "out/papers/mass-gap-openings.pdf",
       "note": "notes/mass-gap-openings.md",
-      "extracted_words": 3537,
+      "extracted_words": 3530,
       "title": "Gauge crossover mechanisms: spectral scope, comparison tools and source evidence",
       "current_replacement": null,
       "classification": "current technical manuscript",
-      "assessment": "One gauge-mechanism comparison keeps curvature, centre deformation, three-dimensional scaling and valley lifting beside correlation inequalities and finite certification. A weak scaling trajectory needs less than all-coupling positivity; temporal operators, rank and physical-hbar limits remain distinct. Scope: Curvature normalization and physical spectral transfer are unchecked; deformed and lower-dimensional theories need their own continuation. Loop monotonicity is not vacuum-gap monotonicity. Large-N factorization is not the physical hbar-to-zero limit at fixed rank, and no exhaustive route closure is established.",
-      "reading_coverage": "Full merged arguments and later corrections read; written checks and source reading labels are not independent peer review.",
-      "tex_note_comparison": "Targeted rebuild from the consolidated maintained source.",
-      "pdf_verification": "Targeted build: zero overfull boxes, no missing characters or unresolved references; PDF text extracted and screened. Document integrity only, not mathematical proof verification."
+      "assessment": "One gauge-mechanism comparison keeps curvature, centre deformation, three-dimensional scaling and valley lifting beside correlation inequalities and finite certification. A weak scaling trajectory needs less than all-coupling positivity; temporal operators, rank and physical-hbar limits remain distinct. Curvature normalization and physical spectral transfer are unchecked; deformed and lower-dimensional theories need their own continuation. Loop monotonicity is not vacuum-gap monotonicity. Large-N factorization is not the physical hbar-to-zero limit at fixed rank, and no exhaustive route closure is established.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "mechanical-interference-action",
@@ -854,28 +798,28 @@
       "tex": "papers/newton-indeterminacy-routes.tex",
       "pdf": "out/papers/newton-indeterminacy-routes.pdf",
       "note": "notes/newton-indeterminacy-routes.md",
-      "extracted_words": 2827,
+      "extracted_words": 3002,
       "title": "Newton indeterminacy routes: the physical premise a record floor needs",
       "current_replacement": null,
       "classification": "working manuscript",
-      "assessment": "A conditional classical statistical-speed theorem reproduces the exact sagitta/impulse disturbance bound; Gaussian ensembles with affine generators satisfy its premise with h*=2ζ. Background and Newton inflexion candidates leave record closure and scale matching open. Scope: covariance alone fails for fine nonlinear generators, and indirect records can sharpen stationary priors. SED recording tests physical instruments and later nonlinear counterexamples.",
-      "reading_coverage": "Current source note read in full; PDF text extracted and prefix/TeX headings screened; generated TeX body compared to the note.",
-      "tex_note_comparison": "matches current note modulo Pandoc anchor wrappers, line wrapping and table-width macros",
-      "pdf_verification": "Document content/version screening; no independent mathematical proof audit or recompilation."
+      "assessment": "A conditional classical statistical-speed theorem reproduces the exact sagitta/impulse disturbance bound; Gaussian ensembles with affine generators satisfy its premise with h*=2ζ. Background and Newton inflexion candidates leave record closure and scale matching open. covariance alone fails for fine nonlinear generators, and indirect records can sharpen stationary priors. SED recording tests physical instruments and later nonlinear counterexamples.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "newton-insertion-action",
       "tex": "papers/newton-insertion-action.tex",
       "pdf": "out/papers/newton-insertion-action.pdf",
       "note": "notes/newton-insertion-action.md",
-      "extracted_words": 1915,
+      "extracted_words": 2006,
       "title": "Newton's comparison: areas, action defects and controlled reunion",
       "current_replacement": null,
       "classification": "current technical manuscript",
-      "assessment": "Canonical Galileo/Newton geometry, source paragraph map, matched-endpoint action and arbitrary-partition defect, receding-centre correction and exact controlled F,−F,F reunion. Conditional copy thresholds are kept separate from action quantization.",
-      "reading_coverage": "Full source arguments and their corrections read during consolidation; internal written checks, no independent peer-review or priority claim.",
-      "tex_note_comparison": "Built individually from the maintained note after retiring process records.",
-      "pdf_verification": "Targeted build: no overfull boxes or missing glyphs; PDF text extracted and screened."
+      "assessment": "Canonical Galileo/Newton geometry, source paragraph map, matched-endpoint action and arbitrary-partition defect, receding-centre correction and exact controlled F,−F,F reunion. Conditional copy thresholds are kept separate from action quantization. Spatial areas are frame-dependent, endpoint choices change coefficients, and deterministic work differs from energy uncertainty. Quantum phase, coherent arm control, copy count and measurement rules are supplied; no universal action floor or established fluxional-time interpretation follows.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "planck-gap-paper",
@@ -1125,20 +1069,6 @@
       "pdf_verification": "Targeted build: zero overfull boxes, no missing characters or unresolved references; PDF text extracted and screened. Document integrity only, not mathematical proof verification."
     },
     {
-      "slug": "su3-constants",
-      "tex": "papers/su3-constants.tex",
-      "pdf": "out/papers/su3-constants.pdf",
-      "note": "notes/su3-constants.md",
-      "extracted_words": 1054,
-      "title": "SU(3) constants and conditional spectral comparisons",
-      "current_replacement": null,
-      "classification": "current technical manuscript",
-      "assessment": "Evaluates SU(3) group factors and conditional bounds, including direct blocking coefficient 72/g⁴. Running counts remain extrapolations; locality constants, channel edges, SU(3) matrix inputs and physical spectral limits retain separate assumptions. Scope: No SU(3) matrix gap is inferred from the SU(2) proof. Formal running reaches, locality upper estimates and observed channels do not establish physical continuum propagation or the global gap; no exhaustive no-go or phase-transition equivalence is proved.",
-      "reading_coverage": "Written arguments and retained source coverage; corrections from retired internal records integrated. No independent peer review claimed.",
-      "tex_note_comparison": "Built individually from the maintained note after retiring process records.",
-      "pdf_verification": "Targeted build: no overfull boxes or missing glyphs; PDF text extracted and screened."
-    },
-    {
       "slug": "sun-midpoint-centre",
       "tex": "papers/sun-midpoint-centre.tex",
       "pdf": "out/papers/sun-midpoint-centre.pdf",
@@ -1185,14 +1115,14 @@
       "tex": "papers/telegraph-return-bridge.tex",
       "pdf": "out/papers/telegraph-return-bridge.pdf",
       "note": "notes/telegraph-return-bridge.md",
-      "extracted_words": 2475,
+      "extracted_words": 3196,
       "title": "A finite-speed return bridge: cuts and midpoint crossover",
       "current_replacement": null,
       "classification": "current technical manuscript",
-      "assessment": "Exact elastic equal-mass receiver and sharp kappa_mid<=mT(u-|v|)^2 support benchmark precede the velocity-resolved telegraph return bridge. Count/simplex law includes midpoint atom, Beta law, arbitrary-cut action error, exact Bessel crossover and small-mass/window nonuniformity. Scalar convolution rigidity is kept in cut-paradox-two-faces. Speeds, reversal rate, apparatus and limits are supplied.",
-      "reading_coverage": "Full source arguments and their corrections read during consolidation; internal written checks, no independent peer-review or priority claim.",
-      "tex_note_comparison": "Rebuilt only this changed canonical note after consolidation.",
-      "pdf_verification": "Document content/version screening; no independent mathematical proof audit or recompilation."
+      "assessment": "Exact elastic equal-mass receiver and sharp kappa_mid<=mT(u-|v|)^2 support benchmark precede the velocity-resolved telegraph return bridge. Count/simplex law includes midpoint atom, Beta law, arbitrary-cut action error, exact Bessel crossover and small-mass/window nonuniformity. Scalar convolution rigidity is kept in cut-paradox-two-faces. Speeds, reversal rate, apparatus and limits are supplied. The right-continuous bridge differs from shrinking endpoint-window velocity conditioning; unscaled midpoint bias survives. Positive mass-universal plateaux need nonuniform small-mass windows, and the reversal rate still sets their value.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "three-continuum-limits",
@@ -1260,14 +1190,14 @@
       "tex": "papers/torus-valley-potential.tex",
       "pdf": "out/papers/torus-valley-potential.pdf",
       "note": "notes/torus-valley-potential.md",
-      "extracted_words": 2119,
-      "title": "The one-loop potential along the abelian valley of the torus is periodic, reproduces C133's linear term at the origin, and saturates at order 1/L",
+      "extracted_words": 1978,
+      "title": "One-loop torus valleys: local confinement, periodicity and spectral limits",
       "current_replacement": null,
       "classification": "working manuscript",
-      "assessment": "The regularized SU(2) one-loop torus valley potential is an explicit positive periodic Fourier series, with linear zero-mode term 2ℏc|a| and quadratic nonzero-mode correction; symmetry fixes that quadratic coefficient for general constant backgrounds. Scope: This is a one-loop effective potential, not an interacting excitation-gap proof or UV-uniform Schur estimate. Supports Feshbach H3; the cubic-lattice correction sign is borrowed.",
-      "reading_coverage": "Current source note read in full; PDF text extracted and prefix/TeX headings screened; generated TeX body compared to the note.",
-      "tex_note_comparison": "matches current note modulo Pandoc anchor wrappers, line wrapping and table-width macros",
-      "pdf_verification": "Document content/version screening; no independent mathematical proof audit or recompilation."
+      "assessment": "Derives the SU2 one-loop periodic valley potential under an explicit Fourier subtraction, with local linear/quadratic terms, conditional general-background symmetry and central holonomy labels. Full U is bounded; U minus its linear zero-mode term is unbounded and nonperiodic on the cover. A matched smooth gauge-fixed determinant is assumed for general backgrounds. No small global relative perturbation, matrix-to-field gap, tunnelling splitting, crossover or cutoff-uniform continuum estimate is proved. Cubic-lattice coefficient sign is borrowed.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "villain-monopole-refinement",
@@ -1288,14 +1218,14 @@
       "tex": "papers/weak-coupling-feshbach-reduction.tex",
       "pdf": "out/papers/weak-coupling-feshbach-reduction.pdf",
       "note": "notes/weak-coupling-feshbach-reduction.md",
-      "extracted_words": 3961,
+      "extracted_words": 3799,
       "title": "The weak-coupling gap in a small box reduces to three inequalities through the Schur complement",
       "current_replacement": null,
       "classification": "working manuscript",
-      "assessment": "Conditional Feshbach reduction, relative transfer lemmas, and formal cutoff-dependent Berry and cubic errors. H1–H3 and a fixed-lattice theorem remain open; cubic slope power counting is corrected.",
-      "reading_coverage": "Current source note read in full; PDF text extracted and prefix/TeX headings screened; generated TeX body compared to the note.",
-      "tex_note_comparison": "Built individually from the maintained note after retiring process records.",
-      "pdf_verification": "Targeted build: no overfull boxes or missing glyphs; PDF text extracted and screened."
+      "assessment": "A proved relative Schur-transfer lemma reduces the small-volume gap lower bound to nonzero-mode separation, a relative coupling error and an effective zero-mode gap. Includes the scalar-shift transfer lemma and formal ultraviolet Berry and cubic estimates. H1–H3, projection domains and uniform constants remain open. Bare sharp-cutoff control fails; linear valley confinement does not automatically control quadratic multiplication globally. Formal SU2 cubic slope and Berry terms are not certified SU3 or continuum bounds.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "wilson-strong-coupling-explicit",
@@ -1306,10 +1236,10 @@
       "title": "An explicit strong-coupling gap for the Wilson transfer matrix: $SU(3)$ is gapped for $g^2\\ge1059$, with $\\Delta\\ge(\\hbar c/a)\\,4\\log[1/(176(e^{6/g^2}-1))]$",
       "current_replacement": null,
       "classification": "current technical manuscript",
-      "assessment": "The all-representation activity rho=e^(6/g²)−1 yields a volume-uniform Wilson-transfer gap at the sufficient integer bound g²≥1059, with rate 4 log[1/(176 rho)] in units ℏc/a. Exact sufficient KP convergence uses rho≤21/(500e²); the unrounded rate is positive only at a strict margin. Scope: Spatial tori have sides at least four. The exact sufficient KP condition is g²≥6/log(1+21/(500e²)); its unrounded lower rate is zero at equality. The weaker 176 rate is positive for g²>6/log(177/176), with 1059 sufficient. The number 1056 is linearized and 176 is an unproved leading-activity threshold for general polymers. Wilson and KS are distinct operators; no continuum limit.",
-      "reading_coverage": "October 2 changed note and surrounding argument read; generated PDF text extracted and revised claims screened.",
-      "tex_note_comparison": "Built individually from the maintained note after retiring process records.",
-      "pdf_verification": "Targeted build: no overfull boxes or missing glyphs; PDF text extracted and screened."
+      "assessment": "The all-representation activity rho=e^(6/g²)−1 yields a volume-uniform Wilson-transfer gap at the sufficient integer bound g²≥1059, with rate 4 log[1/(176 rho)] in units ℏc/a. Exact sufficient KP convergence uses rho≤21/(500e²); the unrounded rate is positive only at a strict margin. Spatial tori have sides at least four. The exact sufficient KP condition is g²≥6/log(1+21/(500e²)); its unrounded lower rate is zero at equality. The weaker 176 rate is positive for g²>6/log(177/176), with 1059 sufficient. The number 1056 is linearized and 176 is an unproved leading-activity threshold for general polymers. Wilson and KS are distinct operators; no continuum limit.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "zero-spacing-any-action",
@@ -1330,14 +1260,14 @@
       "tex": "papers/halving-atlas.tex",
       "pdf": "out/papers/halving-atlas.pdf",
       "note": "notes/halving-atlas.md",
-      "extracted_words": 4046,
+      "extracted_words": 2014,
       "title": "Gauge refinement: exact steps, scale dependence and the infrared obligations",
       "current_replacement": null,
       "classification": "current synthesis",
-      "assessment": "Exact series/parallel operations, arbitrary cuts and group image sectors organized by dimension and scientific dependency. Retains exact circle/rotor identity and one-loop scaling, separates depth/volume uniformities, fine-measure construction and spectral visibility. Corrects unsupported renormalon identification and stable-quartic non-Borel claim. No scale-to-gap or confinement implication is assumed.",
-      "reading_coverage": "Full source arguments and their corrections read during consolidation; internal written checks, no independent peer-review or priority claim.",
-      "tex_note_comparison": "Rebuilt only this changed canonical note after consolidation.",
-      "pdf_verification": "Initial document/version screening followed by changed-note recompilation and extracted-text inspection on 2026-10-01; §8.21 remains unrefereed and §§8.22–8.23 are written, internally checked."
+      "assessment": "Exact series/parallel operations, arbitrary cuts and group image sectors organized by dimension and scientific dependency. Retains exact circle/rotor identity and one-loop scaling, separates depth/volume uniformities, fine-measure construction and spectral visibility. Corrects unsupported renormalon identification and stable-quartic non-Borel claim. No scale-to-gap or confinement implication is assumed. it adds no theorem; read linked derivations for hypotheses. Sharp Gaussian fixed-point assertions require the later composition correction.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened."
     },
     {
       "slug": "autonomous-finite-readout",
@@ -1397,29 +1327,31 @@
     },
     {
       "slug": "ancient-cuts-provenance",
-      "title": "Ancient cuts and modern readjustment: provenance",
+      "title": "Classical cuts: source evidence and information at an interface",
       "tex": "papers/ancient-cuts-provenance.tex",
       "pdf": "out/papers/ancient-cuts-provenance.pdf",
       "note": "notes/ancient-cuts-provenance.md",
       "classification": "working manuscript",
       "current_replacement": null,
-      "assessment": "Canonical proof treatment with explicit hypotheses and incorporated corrections.",
-      "reading_coverage": "All consolidated source arguments and later corrections read; internal written checks only, no independent peer review or novelty claim.",
-      "tex_note_comparison": "Built directly from this changed canonical note.",
-      "pdf_verification": "Targeted build and extracted-text/log checks."
+      "assessment": "Unifies Aristotle and Plutarch cut evidence with Indian contact, Avicennian, Chinese dissection/statics and cohesion witnesses, preserving editions and reading limits. Separates sampling, re-solving, marginalization and measurement, and retains fixed-time compatibility premises without an action-selection claim. No historical transmission, ancient path-integral theorem or Newton quantum anticipation is established. Unproofread and incomplete witnesses retain their access limits; contextuality is a source lead, not an applied theorem, and compatibility patterns select no dimensional scale.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened.",
+      "extracted_words": 1636
     },
     {
       "slug": "cut-paradox-two-faces",
-      "title": "The cut paradox in two signatures: sections of a solid and instants of a motion",
+      "title": "Finite propagation: scalar rigidity, internal states and record limits",
       "tex": "papers/cut-paradox-two-faces.tex",
       "pdf": "out/papers/cut-paradox-two-faces.pdf",
       "note": "notes/cut-paradox-two-faces.md",
       "classification": "current technical manuscript",
       "current_replacement": null,
-      "assessment": "Canonical proof treatment with explicit hypotheses and incorporated corrections.",
-      "reading_coverage": "All consolidated source arguments and later corrections read; internal written checks only, no independent peer review or novelty claim.",
-      "tex_note_comparison": "Built directly from this changed canonical note.",
-      "pdf_verification": "Targeted build and extracted-text/log checks."
+      "assessment": "Scalar ballistic-support probability convolution laws are deterministic drift, and scalar translation-invariant unitary groups with light-cone kernels are translations up to phase. Internal-state identities, the matrix conjecture, hidden slow mode and exact additive-readout double limit retain separate scope. Written scalar proof imports Paley–Wiener–Schwartz and harmonic estimates; no independent peer-review or novelty claim. Matrix classification is unproved, positivity permits killing, and readout bias is not intrinsic action or physical hbar.",
+      "reading_coverage": "Full changed argument and relevant later corrections read; internal written checks only. Source reading levels remain in the maintained treatment.",
+      "tex_note_comparison": "Generated from this affected maintained note with its explicitly selected targeted build.",
+      "pdf_verification": "Targeted compilation passed without overfull boxes or missing characters; PDF text extracted and screened.",
+      "extracted_words": 1410
     }
   ]
 }

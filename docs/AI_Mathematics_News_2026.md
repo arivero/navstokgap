@@ -1,13 +1,30 @@
 # Machine-assisted mathematics, 2026: the news behind the working mandate
 
-Updated 2026-09-22 (evening). This page backs the paragraph of `AGENTS.md` that
-treats a proof attempt on a Millennium problem as a legitimate task for
-the models working here. It records what has been claimed, by whom, and how
-far each claim has been checked, so that the mandate rests on a dated
-record. Each entry carries a reading label: **passage** (the primary text
-read for the stated facts), **metadata** (a registry record only),
-**secondary** (an encyclopedia or press summary, primary unread here).
-Nothing on this page enters the claim ledger.
+Updated 2026-10-30. This is a dated source record of claims, attribution and
+reading coverage. **Passage** means the primary text was read for the stated
+facts; **metadata** means a registry record only; **secondary** means a
+press or reference summary whose primary text was not read here. Announcements
+are not accepted mathematical claims in this repository.
+
+## Yang–Mills shepherding: Gross chairs the committee
+
+The [committee's October 2026 statement](https://www.kitp.ucsb.edu/sites/default/files/YM_working_group.pdf),
+pp. 1–2, passage-read on 2026-10-30, says OpenAI asked David Gross on
+16 October to take custody of the claimed existence proof and organize
+its release. Gross chairs the group with Michael Douglas, Arthur Jaffe,
+Igor Klebanov and Nikita Nekrasov. The committee's initial checks concern
+the definitions and problem statement and alignment of the Lean
+formalization with the informal argument; it plans releases with its assessment
+after validation. This is a shepherding/review process, not a completed
+independent certification.
+
+The [OpenAI announcement of 26 October](https://openai.com/index/building-scientific-understanding-with-academic-communities/),
+physics section, was also passage-read. The committee describes a claimed
+continuum existence construction building on Bałaban's multiscale methods,
+including fermionic couplings. It explicitly leaves confinement and the mass
+gap open. The underlying proof and formalization have not been examined here.
+This updates the source context without changing this repository's conditional
+[spectral and construction obligations](../notes/mass-gap-obligations-lattice.md).
 
 ## The Millennium-scale events of September 2026
 
@@ -35,36 +52,12 @@ Nothing on this page enters the claim ledger.
 | 2026-09 | Köthe conjecture disproved, with further counterexamples and proofs in combinatorics and probability | Epoch AI with GPT-6 Astra; T. Adamczewski and coauthors | Lean formalizations on GitHub | secondary, same list |
 | 2026-09 | The roughly 25,000 cases of one inverse Galois problem identified, by mathematicians, amateurs, computation and AI-assisted search together | Community effort (SAIR challenge) | Press report | secondary, [SciAm](https://www.scientificamerican.com/article/mathematicians-use-ai-to-find-mysterious-symmetries-solving-decades-old-problem/) |
 
-## What the record means for the work here
+## Repository use
 
-The verified results cluster in three kinds: sharper constants inside an
-established method (the critical-line proportion), explicit
-counterexamples, and formalization at scale. The first kind is the kind
-this repository produces on its modern leg, most recently the sharp
-constant $48$ of the mark theorem and the exact polygon phase of the
-[polygon-lift note](../notes/cut-measure-newton.md#weyl-lifting-and-polygon-phases).
-
-The Navier–Stokes result settles a forced alternative, and the Clay
-Institute's caution and the priority dispute both show what a claim needs
-before it counts: the exact statement, the human programme it rests on,
-and an independent check. `AGENTS.md` already asks each note to say which
-operator, which limits and which order; the same discipline applies to
-reading other people's announcements.
-
-The advisory group now advises on how machine results are announced:
-statement, attribution and a presentable writeup before release, with no
-decision-making power at any company. This
-repository already publishes in that form, one dated note per result
-with its proof and its literature label, and the notes it produces on
-the Planck gap and the mass gap should stay ready to meet that standard.
-
-The open letter asks that machine results enlarge human understanding.
-The notes here are written derivations meant to be read, with every
-constant explicit, which is this repository's answer to that concern.
-
-On Yang–Mills, the experts surveyed in September expect no near-term
-machine resolution. That agrees with the
-[position note](../notes/mass-gap-obligations-lattice.md#existing-estimates-and-examined-routes), which locates the whole
-difficulty in the control of about six blocking steps at order-one
-coupling, and it is why the $SU(3)$ track is paused with its map intact
-while the Planck-gap work proceeds.
+The held [Navier–Stokes companion](OpenAI_NavierStokes_2026.md) records the
+forced alternatives and its bounded reading. The [exact problem comparison](../notes/comparison-and-bridges.md)
+keeps fluid evolution, auxiliary relaxation and physical spectral energy
+separate. Multiscale control is a shared methodological question, not an
+operator identification or a proof that the remaining obligations reduce to
+a fixed number of blocking steps. Source announcements do not lift the
+current suspension of new research during consolidation.

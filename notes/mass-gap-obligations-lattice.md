@@ -48,6 +48,23 @@ bi-invariant and $\operatorname{tr}U_p$ is conjugation invariant) and
 preserve positivity of functions. The physical space $\mathcal H_{\rm phys}$
 is the joint fixed space (Gauss's law).
 
+### SU(3) group factors
+
+In this normalization $N=3$, $\dim SU(3)=8$,
+$C_2(R_{\rm f})=4/3$, $C_2(\mathrm{adj})=3$ and
+$Z(SU(3))=\mathbb Z_3$. The fundamental trace has
+$\operatorname{tr}1=3$, so each magnetic plaquette term satisfies
+$\|w_p\|\le12\hbar c/(ag^2)$. The
+[strong-coupling proof](strong-coupling-uniform-gap.md),
+[variational upper bounds](lattice-gap-upper-bounds.md),
+[locality estimate](lieb-robinson-kogut-susskind.md) and
+[vacuum identities](ground-state-measure-transfer.md) give their
+specializations beside the corresponding hypotheses and proofs.
+The [blocking comparison](blocking-criterion-monotone.md),
+[central holonomies](torus-valley-potential.md#saturation-and-central-holonomies)
+and [free colour-species cancellation](finiteness-half-flowed-susceptibility.md#the-bound-and-coupling-cancellation)
+retain different geometries, sectors and approximation assumptions.
+
 ## 2. T1: every finite lattice has a gap above a unique physical ground state
 
 **Theorem 1.** For every $a>0$, $N_s\ge2$, $g>0$ and $G$ as above:
@@ -430,6 +447,14 @@ is defined by
 $$a\Lambda_{\rm lat}(g)=(b_0g^2)^{-b_1/(2b_0^2)}\,e^{-1/(2b_0g^2)}\,[1+O(g^2)],$$
 a dimensionless function that vanishes faster than any power of $g$.
 
+For $SU(3)$, $b_0=11/(16\pi^2)\simeq0.06966$,
+$b_1/(2b_0^2)=51/121\simeq0.4215$ and
+$1/(2b_0)=8\pi^2/11\simeq7.180$. Thus
+$$a\Lambda_{\rm lat}(g)=(b_0g^2)^{-51/121}
+e^{-8\pi^2/(11g^2)}[1+O(g^2)].$$
+Here $\Lambda_{\rm lat}$ has units of inverse length; the corresponding
+energy scale is $\hbar c\Lambda_{\rm lat}$.
+
 > **T3.** The limit $\displaystyle\frac{m}{\hbar c\,\Lambda_{\rm lat}}
 > =\lim_{g\to0}\frac{\delta_\infty(g)}{a\Lambda_{\rm lat}(g)}$ exists and lies
 > in $(0,\infty)$.
@@ -447,20 +472,29 @@ $a=\Lambda_{\rm lat}^{-1}\,a\Lambda_{\rm lat}(g)$; Jaffe and Witten note
 (p. 6, passage) that a gap uniform in the volume would also serve to
 construct the infinite-volume limit, which is the reverse order.
 
-**The small-volume corner.** For $L\ll\hbar c/\Lambda$ the constant-mode
-sector of the continuum torus theory has gap $\delta_1g(L)^{2/3}\hbar c/L$
-(C133, G07 Proposition 7), and Lüscher's expansion (Nucl. Phys. B219
-(1983) 233, abstract) supplies the corrections in powers of $g^{2/3}$ with
-$g$ the renormalized coupling at scale $L$. In the variable
-$z(L)=\Delta(L)L/(\hbar c)$ the two ends read
-$$z(L)=\delta_1\,g(L)^{2/3}\,[1+O(g^{2/3})]\ \ (L\to0),\qquad
-z(L)\sim\frac{mL}{\hbar c}\ \ (L\to\infty),$$
-and Lüscher--Münster (Nucl. Phys. B232 (1984) 445, abstract) place the
-crossover near $z\simeq2$. The conjecture, in this variable, is that
-$z(L)$ is a function that starts at zero and grows without bound, with
-$m$ the slope of its linear asymptote. The corner is the only place where
-the gap of the continuum theory is presently computable, and it is
-controlled by the mechanism of [G08](low-dimensional-mass-gap.md#conditional-orbit-area-bounds-and-state-counting).
+**The conditional small-volume corner.** The weak-volume regime is
+$L\Lambda_{\rm lat}\ll1$. Homogeneity of the constant-mode matrix
+Hamiltonian gives the candidate scale $g(L)^{2/3}\hbar c/L$. The
+[positive matrix gap](low-dimensional-mass-gap.md) is proved here for
+$SU(2)$; an $SU(3)$ substitution supplies group constants, not the
+missing matrix theorem. Even with that input, the
+[Feshbach hypotheses](weak-coupling-feshbach-reduction.md) on nonzero
+modes, gauge-compatible projection and uniform errors must be proved
+before transferring the scale to the field theory. Lüscher's expansion
+(*Nucl. Phys. B* **219** (1983) 233, abstract-level reading) is source
+orientation, not a verification of those hypotheses here.
+
+If small-volume comparison and continuum reconstruction both hold,
+one expects $z(L)=\Delta(L)L/(\hbar c)$ to satisfy
+$$z(L)=\delta_1g(L)^{2/3}[1+O(g(L)^{2/3})]\quad(L\to0).$$
+Separately, if the infinite-volume physical gap is a finite positive
+energy $m$ and the finite-volume gaps converge to it, then
+$z(L)\sim mL/(\hbar c)$ as $L\to\infty$. Neither endpoint proves a
+monotone interpolation, excludes intervening behavior or constructs
+the continuum theory. Lüscher--Münster's crossover near $z\simeq2$
+(*Nucl. Phys. B* **232** (1984) 445, abstract) remains a historical
+orientation; the [one-loop valley calculation](torus-valley-potential.md)
+does not establish that crossover as a spectral theorem.
 
 ## 6. T4: existence
 
@@ -524,7 +558,7 @@ The following are failures of the specified routes, not an exhaustion theorem:
 | pointwise Gibbs domination | the comparison function bites only above the extensive threshold $V_*\simeq N|\mathcal P|$ |
 
 
-The exact [magnetic-energy sum rule](magnetic-energy-identities.md) and
+The exact [magnetic-energy sum rule](ground-state-measure-transfer.md#common-setting-and-magnetic-identities) and
 [ground-state transfer](ground-state-measure-transfer.md) remain useful
 identities. A normalized isotropic Wilson estimate does not transfer verbatim
 to the anisotropic KS ground state; projector convergence and matching of the

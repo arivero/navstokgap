@@ -70,6 +70,25 @@ bi-invariant and \(\operatorname{tr}U_p\) is conjugation invariant) and
 preserve positivity of functions. The physical space
 \(\mathcal H_{\rm phys}\) is the joint fixed space (Gauss's law).
 
+\hypertarget{su3-group-factors}{%
+\subsubsection{SU(3) group factors}\label{su3-group-factors}}
+
+In this normalization \(N=3\), \(\dim SU(3)=8\), \(C_2(R_{\rm f})=4/3\),
+\(C_2(\mathrm{adj})=3\) and \(Z(SU(3))=\mathbb Z_3\). The fundamental
+trace has \(\operatorname{tr}1=3\), so each magnetic plaquette term
+satisfies \(\|w_p\|\le12\hbar c/(ag^2)\). The
+\href{strong-coupling-uniform-gap.md}{strong-coupling proof},
+\href{lattice-gap-upper-bounds.md}{variational upper bounds},
+\href{lieb-robinson-kogut-susskind.md}{locality estimate} and
+\href{ground-state-measure-transfer.md}{vacuum identities} give their
+specializations beside the corresponding hypotheses and proofs. The
+\href{blocking-criterion-monotone.md}{blocking comparison},
+\href{torus-valley-potential.md\#saturation-and-central-holonomies}{central
+holonomies} and
+\href{finiteness-half-flowed-susceptibility.md\#the-bound-and-coupling-cancellation}{free
+colour-species cancellation} retain different geometries, sectors and
+approximation assumptions.
+
 \hypertarget{t1-every-finite-lattice-has-a-gap-above-a-unique-physical-ground-state}{%
 \subsection{2. T1: every finite lattice has a gap above a unique
 physical ground
@@ -521,6 +540,14 @@ B78), the lattice \(\Lambda\) parameter is defined by
 \[a\Lambda_{\rm lat}(g)=(b_0g^2)^{-b_1/(2b_0^2)}\,e^{-1/(2b_0g^2)}\,[1+O(g^2)],\]
 a dimensionless function that vanishes faster than any power of \(g\).
 
+For \(SU(3)\), \(b_0=11/(16\pi^2)\simeq0.06966\),
+\(b_1/(2b_0^2)=51/121\simeq0.4215\) and
+\(1/(2b_0)=8\pi^2/11\simeq7.180\). Thus
+\[a\Lambda_{\rm lat}(g)=(b_0g^2)^{-51/121}
+e^{-8\pi^2/(11g^2)}[1+O(g^2)].\] Here \(\Lambda_{\rm lat}\) has units of
+inverse length; the corresponding energy scale is
+\(\hbar c\Lambda_{\rm lat}\).
+
 \begin{quote}
 \textbf{T3.} The limit
 \(\displaystyle\frac{m}{\hbar c\,\Lambda_{\rm lat}} =\lim_{g\to0}\frac{\delta_\infty(g)}{a\Lambda_{\rm lat}(g)}\)
@@ -543,22 +570,30 @@ first, then \(g\to0\) with
 note (p.~6, passage) that a gap uniform in the volume would also serve
 to construct the infinite-volume limit, which is the reverse order.
 
-\textbf{The small-volume corner.} For \(L\ll\hbar c/\Lambda\) the
-constant-mode sector of the continuum torus theory has gap
-\(\delta_1g(L)^{2/3}\hbar c/L\) (C133, G07 Proposition 7), and Lüscher's
-expansion (Nucl. Phys. B219 (1983) 233, abstract) supplies the
-corrections in powers of \(g^{2/3}\) with \(g\) the renormalized
-coupling at scale \(L\). In the variable \(z(L)=\Delta(L)L/(\hbar c)\)
-the two ends read
-\[z(L)=\delta_1\,g(L)^{2/3}\,[1+O(g^{2/3})]\ \ (L\to0),\qquad
-z(L)\sim\frac{mL}{\hbar c}\ \ (L\to\infty),\] and Lüscher--Münster
-(Nucl. Phys. B232 (1984) 445, abstract) place the crossover near
-\(z\simeq2\). The conjecture, in this variable, is that \(z(L)\) is a
-function that starts at zero and grows without bound, with \(m\) the
-slope of its linear asymptote. The corner is the only place where the
-gap of the continuum theory is presently computable, and it is
-controlled by the mechanism of
-\href{low-dimensional-mass-gap.md\#conditional-orbit-area-bounds-and-state-counting}{G08}.
+\textbf{The conditional small-volume corner.} The weak-volume regime is
+\(L\Lambda_{\rm lat}\ll1\). Homogeneity of the constant-mode matrix
+Hamiltonian gives the candidate scale \(g(L)^{2/3}\hbar c/L\). The
+\href{low-dimensional-mass-gap.md}{positive matrix gap} is proved here
+for \(SU(2)\); an \(SU(3)\) substitution supplies group constants, not
+the missing matrix theorem. Even with that input, the
+\href{weak-coupling-feshbach-reduction.md}{Feshbach hypotheses} on
+nonzero modes, gauge-compatible projection and uniform errors must be
+proved before transferring the scale to the field theory. Lüscher's
+expansion (\emph{Nucl. Phys. B} \textbf{219} (1983) 233, abstract-level
+reading) is source orientation, not a verification of those hypotheses
+here.
+
+If small-volume comparison and continuum reconstruction both hold, one
+expects \(z(L)=\Delta(L)L/(\hbar c)\) to satisfy
+\[z(L)=\delta_1g(L)^{2/3}[1+O(g(L)^{2/3})]\quad(L\to0).\] Separately, if
+the infinite-volume physical gap is a finite positive energy \(m\) and
+the finite-volume gaps converge to it, then \(z(L)\sim mL/(\hbar c)\) as
+\(L\to\infty\). Neither endpoint proves a monotone interpolation,
+excludes intervening behavior or constructs the continuum theory.
+Lüscher--Münster's crossover near \(z\simeq2\) (\emph{Nucl. Phys. B}
+\textbf{232} (1984) 445, abstract) remains a historical orientation; the
+\href{torus-valley-potential.md}{one-loop valley calculation} does not
+establish that crossover as a spectral theorem.
 
 \hypertarget{t4-existence}{%
 \subsection{6. T4: existence}\label{t4-existence}}
@@ -633,7 +668,7 @@ positive. The leading-activity figure \(176\), linearization \(1056\)
 and sufficient integer \(1059\) are different statements. Neither
 criterion is a phase boundary. For KS, the explicit volume-uniform
 \(388\) threshold is withdrawn; the
-\href{kogut-susskind-strong-coupling-explicit.md}{finite-volume
+\href{strong-coupling-uniform-gap.md\#continuous-time-histories-and-the-corrected-overlap-criterion}{finite-volume
 correction} is \(\delta^{\rm phys}\ge(8/3)g^2-12|\mathcal P|/g^2\) under
 its stated lattice restrictions. The
 \href{strong-coupling-uniform-gap.md}{Yarotsky application} retains
@@ -672,14 +707,15 @@ pointwise Gibbs domination & the comparison function bites only above
 the extensive threshold \(V_*\simeq N|\mathcal P|\) \\
 \end{longtable}
 
-The exact \href{magnetic-energy-identities.md}{magnetic-energy sum rule}
-and \href{ground-state-measure-transfer.md}{ground-state transfer}
-remain useful identities. A normalized isotropic Wilson estimate does
-not transfer verbatim to the anisotropic KS ground state; projector
-convergence and matching of the measure/observable are needed. A
-\href{finiteness-half-flowed-susceptibility.md}{flowed variational upper
-bound} requires a finite derivative expectation and nonzero physical
-susceptibility; it is not by itself a positive lower gap.
+The exact
+\href{ground-state-measure-transfer.md\#common-setting-and-magnetic-identities}{magnetic-energy
+sum rule} and \href{ground-state-measure-transfer.md}{ground-state
+transfer} remain useful identities. A normalized isotropic Wilson
+estimate does not transfer verbatim to the anisotropic KS ground state;
+projector convergence and matching of the measure/observable are needed.
+A \href{finiteness-half-flowed-susceptibility.md}{flowed variational
+upper bound} requires a finite derivative expectation and nonzero
+physical susceptibility; it is not by itself a positive lower gap.
 
 The nonabelian matrix-model commutator valley, Gauss-law exclusion of a
 c-number linear electric probe and the formal torus-holonomy potential
@@ -691,11 +727,12 @@ KS gapped set or a four-dimensional continuum gap.
 The \href{halving-atlas.md}{gauge atlas} owns the refinement-depth map.
 A local \href{large-field-action-lower-bound.md}{action cost and
 background count} prove no normalized rarity theorem. A
-\href{flow-jacobian-truncation-error.md}{kernel tail} proves no
-Hamiltonian relative comparison. The
+\href{flow-conjugation-truncation.md\#exact-continuum-variation-and-its-gauge-convention}{kernel
+tail} proves no Hamiltonian relative comparison. The
 \href{large-field-operator-inequality.md}{signed operator test}
 diagnoses one localization/surface-loss construction, not every possible
-Hamiltonian method. The \href{reasons-to-stop-as-research.md}{crossover
+Hamiltonian method. The
+\href{mass-gap-openings.md\#correlation-inequalities-and-the-transfer-they-require}{crossover
 comparison} retains what the examined correlation and
 finite-certification tools would actually require.
 

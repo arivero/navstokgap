@@ -113,7 +113,7 @@ prove no normalized entropy or rarity bound. Block $L^2$ thresholds, supremum
 curvature, spectral field strength and real/complex multiplicities differ.
 The [signed operator comparison](notes/large-field-operator-inequality.md)
 retains conditional localization assumptions and diagnoses one construction.
-- [Agmon](notes/agmon-ground-state-suppression.md) controls the global excess;
+- [Agmon](notes/ground-state-measure-transfer.md#weighted-estimates-and-global-magnetic-tails) controls the global excess;
 [ground-state transfer](notes/ground-state-measure-transfer.md) requires matching
 the anisotropic measure and projector limits. [Spectral upper bounds](notes/finiteness-half-flowed-susceptibility.md)
 require admissible Hamiltonian insertions and infrared moments; four-dimensional

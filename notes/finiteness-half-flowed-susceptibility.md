@@ -311,6 +311,11 @@ $$m\ \le\ \frac{g^2\hbar c}{2}\cdot\frac{16}{3g^2\sqrt{\pi t}}
 =\frac{8}{3\sqrt\pi}\,\frac{\hbar c}{\sqrt t}
 =\frac{16\sqrt2}{3\sqrt\pi}\,\frac{\hbar c}{\sqrt{8t}}\approx4.26\,\frac{\hbar c}{\sqrt{8t}} .$$
 
+Eight independent colour species in the free $SU(3)$ benchmark multiply
+both numerator and susceptibility by eight, leaving this ratio unchanged.
+This species cancellation supplies no interacting bound without the
+admissible insertion, infrared moments and limit assumptions above.
+
 **Correction.** The earlier version inferred
 $m\le Cg^2\hbar c/\sqrt{8t}$ from dimensional analysis, assigning the
 pure numbers $k_1,k_2$ no coupling dependence. The computation shows

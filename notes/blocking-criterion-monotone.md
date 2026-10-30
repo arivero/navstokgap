@@ -77,6 +77,13 @@ Thus the displayed sufficient estimates compare unfavourably at $M=2$
 in that asymptotic regime; they are bounds, not exact optimal thresholds.
 Boundary conditions and the sector of the block operator matter.
 
+For $SU(3)$, $C_2=4/3$ gives
+$$\beta_{\rm block}=\frac{72M^2}{g^2\delta(g;M)},\qquad
+\beta_{\rm direct}=\frac{72}{g^4}.$$
+The same asymptotic ratio is $3M^2/8$, formally $3/2$ at $M=2$.
+These constants retain the stated half-attribution and block-geometry
+conditions; they do not establish an all-coupling comparison.
+
 For a periodic small-volume zero-mode model, the conditional asymptotic
 $\Delta_M\sim\delta_1g^{2/3}\hbar c/(Ma)$ would give
 $$\beta_{\rm block}\sim\frac{24M^3N}{\delta_1g^{8/3}}.$$

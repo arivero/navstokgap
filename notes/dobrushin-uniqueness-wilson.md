@@ -1,7 +1,7 @@
 # Dobrushin's Wilson criterion: an explicit strong-coupling gap at $g^2>444$ and an open block test
 
 The finite-volume criteria of
-[the finite-verification note](intermediate-region-finite-verification.md)
+[the finite-certificate treatment](mass-gap-conditional-theorem.md#what-a-finite-certificate-would-have-to-prove)
 have a single-site ancestor, Dobrushin's uniqueness condition (Theory
 Probab. Appl. 13 (1968) 197), and for the Wilson action it can be
 checked by hand. The comparison below uses four-dimensional lattices
@@ -117,64 +117,33 @@ computation gives $g^2>148$ with $N=1$.
 
 ## 4. The block criterion, as a specification
 
-> **Corrected.** The single-link form below is emptied by Elitzur's
-> theorem: the marginal of any link with an interior endpoint is Haar
-> for every boundary condition, so $\rho_V(x,y)=0$ there and the sum
-> sees only the boundary layer. The form to verify is the mixing
-> condition on sub-blocks, organized around the conditional
-> distribution of small Wilson loops, and the boxes needed are of side
-> $3$ to $5$ at $\beta_W\simeq5.7$; see
-> [the bands note](confinement-scale-bands.md).
+A tempting block analogue uses the single-link marginal influence
+$$\rho_V(x,y)=\sup_{\omega,\omega'\ \mathrm{differ\ only\ at}\ y}
+\|\mu_V(\cdot\mid\omega)|_x-
+\mu_V(\cdot\mid\omega')|_x\|_{\rm TV}$$
+and tests $\sum_{x\in V,y\notin V}\rho_V(x,y)<|V|$.
+For a link with an interior endpoint, gauge invariance makes its
+marginal Haar for every exterior boundary, so this influence is zero.
+A condition that only sees these marginals cannot certify the joint
+mixing needed by the Wilson-transfer argument. This does not empty the
+single-site criterion proved above: there all other links are conditioned
+on and that interior gauge transformation is unavailable.
 
-The Dobrushin--Shlosman constructive criterion replaces the single link
-by a finite box $V$ of links. Writing $\mu_V(\cdot|\omega)$ for the Gibbs
-measure in $V$ with boundary condition $\omega$ and, for $x\in V$ and
-$y\notin V$,
-$$\rho_V(x,y)=\sup_{\omega,\omega'\ \text{differ only at }y}\big\|\mu_V(\cdot|\omega)|_x-\mu_V(\cdot|\omega')|_x\big\|_{\rm TV},$$
-the criterion is that for some finite $V$
-$$\sum_{x\in V}\sum_{y\notin V}\rho_V(x,y)\ <\ |V| ,$$
-up to the normalization convention of the original, and it implies the
-same conclusions as the single-site condition, which is the case
-$V=\{\ell\}$. Its content is that the total influence of the boundary
-on the box, summed over the box, is less than the size of the box; in a
-mixing phase this holds once the side of $V$ exceeds a few correlation
-lengths, which is why it can hold at couplings where the single-site
-condition fails. Dobrushin and Shlosman's complete analyticity
-(*Statistical Physics and Dynamical Systems*, Birkhäuser 1985, 371;
-J. Stat. Phys. 46 (1987) 983) is the statement that some such $V$
-exists, together with its equivalent forms.
-
-**What a verification computes.** For a box $V$ of side $R$ (about
-$3R^4$ links) and a coupling $\beta_W$: for each boundary link $y$ and
-each interior link $x$, a rigorous upper bound on $\rho_V(x,y)$, which is
-a total-variation distance between two marginals of Gibbs measures on
-$SU(3)^{|V|}$; then the double sum against $|V|$. Lemma 1 bounds each
-$\rho_V(x,y)$ by $e^{\operatorname{osc}}-1$ of the log-density difference
-of the two marginals, but for $|V|>1$ that oscillation involves the
-integral over the other links of $V$ and is what has to be bounded
-rigorously. The openness radius in the interaction norm
-$\sup_\ell\sum_{p\ni\ell}\|\Phi_p\|_\infty$ follows from the margin
-$|V|-\sum\rho_V$ by the same lemma.
-
-**Where it would have to hold.** The numerical evidence places the
-$SU(3)$ crossover at $\beta_W\simeq5$--$6.5$ with $\xi/a$ of order $1$
-to $10$; a verification at those couplings would need $R$ of order
-$10$--$30$, that is $10^4$--$10^6$ links, and rigorous bounds on the
-corresponding integrals. That is far beyond present practice, and this
-repository performs no numerics. The specification is nonetheless
-complete: the quantity, the boxes, the inequality, and the two lemmas
-that convert its margin into a gap and into an openness radius.
+A usable block certificate must control the whole relevant invariant
+joint marginal, including boundary-attached paths, not just selected
+small Wilson loops. Applicability of a finite-size theorem, quantitative
+slack, robustness in the generated-interaction norm and all-volume
+uniformity are stated in the [canonical certificate treatment](mass-gap-conditional-theorem.md#what-a-finite-certificate-would-have-to-prove).
+The often suggested sides $3$–$5$ or $10$–$30$ are trial estimates,
+not certified necessary or sufficient sizes. Dobrushin–Shlosman's
+finite-size results are source leads at metadata level here, not a
+checked theorem for this proposed gauge-block test.
 
 ## 5. Consequence for STATE
 
-The strong-coupling side now has a third, elementary proof with the
-best rigorous threshold for the Wilson transfer matrix, $g^2>444$ for
-$SU(3)$, and the finite verification of the intermediate region has a
-precise statement: the Dobrushin--Shlosman block criterion for the
-Wilson interaction, whose single-link case is proved here. The two
-numbers of the finite-verification note are unchanged, and the second
-of them, $g_{\rm DS}^2$, is exactly the smallest coupling at which the
-block criterion has been verified for some $V$.
-The October 2 comparison uses the exact rates in §3; their leading
-logarithms remain estimates. All of these are fixed-cutoff Wilson
-transfer statements, distinct from Kogut--Susskind and a continuum gap.
+The proved one-link criterion gives the displayed sufficient fixed-cutoff
+Wilson region and rate; its comparison with the polymer bound uses the
+exact rates in §3. A joint block certificate and weak-side multiscale
+control remain open. No smallest certified crossover coupling, monotone
+coupling interval or reduction to two scalar numbers has been established.
+Kogut–Susskind stability and the physical continuum gap are separate.

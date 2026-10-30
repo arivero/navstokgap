@@ -82,14 +82,14 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <h1>Dobrushin’s Wilson criterion: an explicit strong-coupling gap at
 <span class="math inline">\(g^2&gt;444\)</span> and an open block
 test</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/dobrushin-uniqueness-wilson.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/dobrushin-uniqueness-wilson.pdf">PDF</a></p><p>The finite-volume criteria of <a
-href="intermediate-region-finite-verification.html">the
-finite-verification note</a> have a single-site ancestor, Dobrushin’s
-uniqueness condition (Theory Probab. Appl. 13 (1968) 197), and for the
-Wilson action it can be checked by hand. The comparison below uses
-four-dimensional lattices and spatial tori with sides at least four, as
-in the polymer note. The conditional distribution of one link given all
-the others is <span class="math display">\[d\mu_\ell(U\,|\,\omega)\
-\propto\
+href="mass-gap-conditional-theorem.html#what-a-finite-certificate-would-have-to-prove">the
+finite-certificate treatment</a> have a single-site ancestor,
+Dobrushin’s uniqueness condition (Theory Probab. Appl. 13 (1968) 197),
+and for the Wilson action it can be checked by hand. The comparison
+below uses four-dimensional lattices and spatial tori with sides at
+least four, as in the polymer note. The conditional distribution of one
+link given all the others is <span
+class="math display">\[d\mu_\ell(U\,|\,\omega)\ \propto\
 \exp\Big[\frac{\beta_W}{N}\operatorname{Re}\operatorname{tr}\big(U\,M_\ell(\omega)\big)\Big]d\mu(U),
 \qquad M_\ell=\sum_{p\ni\ell}S_p ,\]</span> the sum of the six staples
 of <span class="math inline">\(\ell\)</span> in four dimensions.
@@ -267,96 +267,40 @@ class="math inline">\(g^2&gt;148\)</span> with <span
 class="math inline">\(N=1\)</span>.</p>
 <h2 id="the-block-criterion-as-a-specification">4. The block criterion,
 as a specification</h2>
-<blockquote>
-<p><strong>Corrected.</strong> The single-link form below is emptied by
-Elitzur’s theorem: the marginal of any link with an interior endpoint is
-Haar for every boundary condition, so <span
-class="math inline">\(\rho_V(x,y)=0\)</span> there and the sum sees only
-the boundary layer. The form to verify is the mixing condition on
-sub-blocks, organized around the conditional distribution of small
-Wilson loops, and the boxes needed are of side <span
-class="math inline">\(3\)</span> to <span
-class="math inline">\(5\)</span> at <span
-class="math inline">\(\beta_W\simeq5.7\)</span>; see <a
-href="confinement-scale-bands.html">the bands note</a>.</p>
-</blockquote>
-<p>The Dobrushin–Shlosman constructive criterion replaces the single
-link by a finite box <span class="math inline">\(V\)</span> of links.
-Writing <span class="math inline">\(\mu_V(\cdot|\omega)\)</span> for the
-Gibbs measure in <span class="math inline">\(V\)</span> with boundary
-condition <span class="math inline">\(\omega\)</span> and, for <span
-class="math inline">\(x\in V\)</span> and <span
-class="math inline">\(y\notin V\)</span>, <span
-class="math display">\[\rho_V(x,y)=\sup_{\omega,\omega&#39;\
-\text{differ only at
-}y}\big\|\mu_V(\cdot|\omega)|_x-\mu_V(\cdot|\omega&#39;)|_x\big\|_{\rm
-TV},\]</span> the criterion is that for some finite <span
-class="math inline">\(V\)</span> <span class="math display">\[\sum_{x\in
-V}\sum_{y\notin V}\rho_V(x,y)\ &lt;\ |V| ,\]</span> up to the
-normalization convention of the original, and it implies the same
-conclusions as the single-site condition, which is the case <span
-class="math inline">\(V=\{\ell\}\)</span>. Its content is that the total
-influence of the boundary on the box, summed over the box, is less than
-the size of the box; in a mixing phase this holds once the side of <span
-class="math inline">\(V\)</span> exceeds a few correlation lengths,
-which is why it can hold at couplings where the single-site condition
-fails. Dobrushin and Shlosman’s complete analyticity (<em>Statistical
-Physics and Dynamical Systems</em>, Birkhäuser 1985, 371; J. Stat. Phys.
-46 (1987) 983) is the statement that some such <span
-class="math inline">\(V\)</span> exists, together with its equivalent
-forms.</p>
-<p><strong>What a verification computes.</strong> For a box <span
-class="math inline">\(V\)</span> of side <span
-class="math inline">\(R\)</span> (about <span
-class="math inline">\(3R^4\)</span> links) and a coupling <span
-class="math inline">\(\beta_W\)</span>: for each boundary link <span
-class="math inline">\(y\)</span> and each interior link <span
-class="math inline">\(x\)</span>, a rigorous upper bound on <span
-class="math inline">\(\rho_V(x,y)\)</span>, which is a total-variation
-distance between two marginals of Gibbs measures on <span
-class="math inline">\(SU(3)^{|V|}\)</span>; then the double sum against
-<span class="math inline">\(|V|\)</span>. Lemma 1 bounds each <span
-class="math inline">\(\rho_V(x,y)\)</span> by <span
-class="math inline">\(e^{\operatorname{osc}}-1\)</span> of the
-log-density difference of the two marginals, but for <span
-class="math inline">\(|V|&gt;1\)</span> that oscillation involves the
-integral over the other links of <span class="math inline">\(V\)</span>
-and is what has to be bounded rigorously. The openness radius in the
-interaction norm <span
-class="math inline">\(\sup_\ell\sum_{p\ni\ell}\|\Phi_p\|_\infty\)</span>
-follows from the margin <span
-class="math inline">\(|V|-\sum\rho_V\)</span> by the same lemma.</p>
-<p><strong>Where it would have to hold.</strong> The numerical evidence
-places the <span class="math inline">\(SU(3)\)</span> crossover at <span
-class="math inline">\(\beta_W\simeq5\)</span>–<span
-class="math inline">\(6.5\)</span> with <span
-class="math inline">\(\xi/a\)</span> of order <span
-class="math inline">\(1\)</span> to <span
-class="math inline">\(10\)</span>; a verification at those couplings
-would need <span class="math inline">\(R\)</span> of order <span
-class="math inline">\(10\)</span>–<span
-class="math inline">\(30\)</span>, that is <span
-class="math inline">\(10^4\)</span>–<span
-class="math inline">\(10^6\)</span> links, and rigorous bounds on the
-corresponding integrals. That is far beyond present practice, and this
-repository performs no numerics. The specification is nonetheless
-complete: the quantity, the boxes, the inequality, and the two lemmas
-that convert its margin into a gap and into an openness radius.</p>
+<p>A tempting block analogue uses the single-link marginal influence
+<span class="math display">\[\rho_V(x,y)=\sup_{\omega,\omega&#39;\
+\mathrm{differ\ only\ at}\ y}
+\|\mu_V(\cdot\mid\omega)|_x-
+\mu_V(\cdot\mid\omega&#39;)|_x\|_{\rm TV}\]</span> and tests <span
+class="math inline">\(\sum_{x\in V,y\notin
+V}\rho_V(x,y)&lt;|V|\)</span>. For a link with an interior endpoint,
+gauge invariance makes its marginal Haar for every exterior boundary, so
+this influence is zero. A condition that only sees these marginals
+cannot certify the joint mixing needed by the Wilson-transfer argument.
+This does not empty the single-site criterion proved above: there all
+other links are conditioned on and that interior gauge transformation is
+unavailable.</p>
+<p>A usable block certificate must control the whole relevant invariant
+joint marginal, including boundary-attached paths, not just selected
+small Wilson loops. Applicability of a finite-size theorem, quantitative
+slack, robustness in the generated-interaction norm and all-volume
+uniformity are stated in the <a
+href="mass-gap-conditional-theorem.html#what-a-finite-certificate-would-have-to-prove">canonical
+certificate treatment</a>. The often suggested sides <span
+class="math inline">\(3\)</span>–<span class="math inline">\(5\)</span>
+or <span class="math inline">\(10\)</span>–<span
+class="math inline">\(30\)</span> are trial estimates, not certified
+necessary or sufficient sizes. Dobrushin–Shlosman’s finite-size results
+are source leads at metadata level here, not a checked theorem for this
+proposed gauge-block test.</p>
 <h2 id="consequence-for-state">5. Consequence for STATE</h2>
-<p>The strong-coupling side now has a third, elementary proof with the
-best rigorous threshold for the Wilson transfer matrix, <span
-class="math inline">\(g^2&gt;444\)</span> for <span
-class="math inline">\(SU(3)\)</span>, and the finite verification of the
-intermediate region has a precise statement: the Dobrushin–Shlosman
-block criterion for the Wilson interaction, whose single-link case is
-proved here. The two numbers of the finite-verification note are
-unchanged, and the second of them, <span class="math inline">\(g_{\rm
-DS}^2\)</span>, is exactly the smallest coupling at which the block
-criterion has been verified for some <span
-class="math inline">\(V\)</span>. The October 2 comparison uses the
-exact rates in §3; their leading logarithms remain estimates. All of
-these are fixed-cutoff Wilson transfer statements, distinct from
-Kogut–Susskind and a continuum gap.</p>
+<p>The proved one-link criterion gives the displayed sufficient
+fixed-cutoff Wilson region and rate; its comparison with the polymer
+bound uses the exact rates in §3. A joint block certificate and
+weak-side multiscale control remain open. No smallest certified
+crossover coupling, monotone coupling interval or reduction to two
+scalar numbers has been established. Kogut–Susskind stability and the
+physical continuum gap are separate.</p>
 
 </main>
 <footer class="site"><div class="wrap">

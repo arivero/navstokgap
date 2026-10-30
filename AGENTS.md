@@ -54,7 +54,7 @@ bounded proof unit, perform keyword retrieval across the whole repository
 corpus, following the repository-local
 [`poormanrag` skill](skills/poormanrag/SKILL.md) (read it on first use).
 Use STATE, `LLM.md` and `notes/index.md`, then search full texts across
-notes, ideas, references, research, claims, source companions and
+notes, references, research, claims, source companions and
 manuscripts. Read relevant proofs and correcting/superseding notes;
 carry their hypotheses and failed routes into the calculation. Repeat
 when changing mechanism or track. Every worker advancing a proof
@@ -116,7 +116,7 @@ Keep STATE short. Do not restate a result in more than one place.
 - `docs/`, `references/`: sources, companions, bibliography.
 - `papers/`, `out/papers/`: LaTeX and PDFs generated from notes.
 - `scripts/`, `skills/`: tooling and repository retrieval.
-- `ideas/`: originating questions and model proposals; STATE owns priorities.
+- Former idea/task names are retrieval aliases in the maintained catalog.
 
 Commits and pushes to the existing GitHub repository are authorized after
 each result or status change; end commit messages with the model's

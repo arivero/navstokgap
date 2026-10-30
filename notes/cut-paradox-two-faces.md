@@ -1,62 +1,23 @@
-# The cut paradox in two signatures: sections of a solid and instants of a motion
+# Finite propagation: scalar rigidity, internal states and record limits
 
-Test 1 of [I003](../ideas/I003-cut-paradox-arrow-obstruction.md), drafted
-2026-09-08 by the independent Claude Fable 5.1 session. Earlier scripts are
-historical artifacts; current verification uses written proof and source review.
-The proposition below is a working derivation awaiting review and a prior-art
-audit; no claim ID is assigned. The 2026-09-09 review preserves the scalar
-rigidity candidate; the matrix extension and readout-noise test below retain
-the corrected I003 boundaries. The cone/arrow
-connection below is a modern heuristic; analytic continuation relates the
-specified evolution equations, rather than establishing a historical identity.
+Two scalar rigidity statements hold with exact ballistic support. A
+probability convolution semigroup on the line supported in $[-ut,ut]$
+is deterministic drift. A strongly continuous translation-invariant
+unitary group on $L^2(\mathbb R)$ with kernels supported in
+$[-u|t|,u|t|]$ is translation at some $|a|\le u$, up to a constant
+phase. The proofs below use variance additivity and the imported
+Paley–Wiener–Schwartz theorem, respectively. These are internal written
+derivations, not independent peer review or a claim of literature novelty.
 
-**Result.** The Euclidean statement C032, that a position-only law with
-ballistic support and independent stationary increments is a deterministic
-drift, has a Lorentzian counterpart: a scalar, translation-invariant, strongly
-continuous unitary evolution on the line whose kernels are supported in the
-light cone $[-ut,ut]$ is a uniform translation at some speed $|a|\le u$, up to
-a constant phase. In both signatures a bounded-speed law with nontrivial
-fluctuation or dispersion needs a second state variable, the velocity sign of
-the telegraph process or the second component of the Dirac evolution, and the
-continuation $\lambda\to i\omega_0$ of A09 carries the one situation into the
-other. The obstruction sits at the Compton wave number: the scalar reduction of
-the massive evolution has dispersion $\omega(k)=\sqrt{u^2k^2+\omega_0^2}$ with
-branch points at $k=\pm i\omega_0/u$, which at $u=c$, $\omega_0=mc^2/\hbar$ is
-$k=\pm imc/\hbar$. This is the reading of the user's remark 2 in I003 that the
-present calculation supports; remark 3, an $h$ that controls convergence, is
-the crossover $g(z)$ of the [coordinator's exact bridge note](telegraph-return-bridge.md).
+Nontrivial bounded-speed dispersion can be carried by internal states.
+The two-state identities, hidden slow-mode counterexample and specified
+readout-noise limit below do not classify all matrix semigroups or force
+an action scale. The historical cone/arrow comparison is maintained in
+[source evidence and interfaces](ancient-cuts-provenance.md).
 
-## 1. The two paradoxes as slicing laws
+## Scalar probability kernels
 
-**Cone.** A solid is a family of sections $A(z)$, $0\le z\le h$. The cone
-$A(z)=\pi r^2(1-z/h)^2$ has $A'(z)=-2\pi r^2(1-z/h)/h\ne0$ below the apex; the
-cylinder has $A'=0$. Democritus asks whether adjacent sections are equal or
-unequal, Chrysippus answers neither, and the continuum answer is that
-$A(z+\delta)-A(z)=A'(z)\delta+O(\delta^2)$: adjacent sections differ by a
-quantity that vanishes with the cut spacing while their ratio of differences
-to spacing does not. The Mohist Canon stops the halving at an endpoint; Liu
-Hui and Archimedes cut “until it cannot be cut” and keep the limit. Cutting
-the solid at more places preserves the old sections; this is the restriction
-consistency of a fixed solid, the analogue of C034 for a fixed bridge.
-
-**Arrow.** A motion is a family $X(t)$. Zeno asks whether at each instant the
-arrow is where it is, and Aristotle answers that the argument takes time to be
-composed of nows (Physics VI.9). In the project's models the state at a cut is
-$(X,V)$: the finite-speed bridge of C033 retains the velocity sign at every
-cut, and its midpoint atom is exactly the arrow at its turning instant, where
-the position is $uT/2$ with probability $1/I_0(\lambda T)$ and the velocity
-is fixed only by the right-continuous convention. Al-Naẓẓām's leap is the
-discrete crossing of the same instant.
-
-Under the exchange of the slicing variable $z$ with $t$ and of the slope
-$A'$ with the velocity, the two dilemmas are one question: what an
-infinitesimally adjacent slice carries. The continuation of A09 makes the
-exchange precise for the telegraph and checkerboard dynamics, and the rest of
-this note states what survives on each side.
-
-## 2. The Euclidean face
-
-**C032.** If $\mu_0=\delta_0$, $\mu_{s+t}=\mu_s*\mu_t$ and
+**C032.** For probability measures, if $\mu_0=\delta_0$, $\mu_{s+t}=\mu_s*\mu_t$ and
 $\operatorname{supp}\mu_t\subset[-ut,ut]$, then
 $\operatorname{Var}\mu_T=n\operatorname{Var}\mu_{T/n}\le u^2T^2/n\to0$ and
 $\mu_t=\delta_{bt}$ with $|b|\le u$. Adjacent sections of such a law are
@@ -66,7 +27,7 @@ $e^{-\lambda t}[\cosh(st)+(\lambda/s)\sinh(st)]$ with
 $s=\sqrt{\lambda^2-u^2k^2}$ is an even function of $s$, hence entire in $k$,
 but it is not a convolution semigroup in $t$.
 
-## 3. The Lorentzian face
+## Scalar unitary kernels
 
 **Proposition.** Let $(U_t)_{t\in\mathbb R}$ be a strongly continuous
 one-parameter unitary group on $L^2(\mathbb R)$ that commutes with
@@ -83,7 +44,9 @@ The identity $m_tm_{-t}=1$ holds on the real axis, hence on $\mathbb C$, so
 $m_t$ has no zeros and $G_t=\log m_t$ is entire. For fixed $t$, the bounds
 for $m_t$ and $m_{-t}$ give
 $|\operatorname{Re}G_t(z)|\le u|t||\operatorname{Im}z|+N_t\log(1+|z|)+C_t$.
-Harmonic derivative estimates make this function affine; its value on the
+For its harmonic real part, second-derivative estimates on a disk of
+radius $R$ are $O((R+\log R)/R^2)$ and vanish as $R\to\infty$.
+Thus the real part, and hence $G_t$, are affine; its value on the
 real axis is zero. Thus $m_t(k)=e^{-i(a_tk+b_t)}$, with real $a_t,b_t$ and
 $|a_t|\le u|t|$. The group law makes $a_t$ additive; the bound implies
 $a_t=at$. Strong continuity makes the remaining phase a continuous character,
@@ -99,25 +62,26 @@ its scalar reduction has $\omega(k)=\sqrt{u^2k^2+\omega_0^2}$, which is real on
 the axis but has branch points at $k=\pm i\omega_0/u$ and so cannot be the
 dispersion of a scalar kernel of compact support. At $u=c$ and
 $\omega_0=mc^2/\hbar$ the branch points sit at the inverse reduced Compton
-length. The analytic obstruction and the physical crossover $\Delta_*$ of the
-P02 note are the same scale seen from the two sides of the continuation.
+length. Matching a telegraph rate to $\omega_0$ makes their reciprocal scales
+coincide algebraically. This is a chosen model identification; analytic
+continuation alone identifies neither probabilities nor physical dynamics.
 
-## 4. The double limit
+## Bounded-speed fluctuations and the double limit
 
-Refining cuts in time and resolving positions together is the double limit
-of I003's remark 2. At finite speed and fixed $\lambda$, the window
-observable obeys $\mathsf h(\Delta)\le H_*\Delta/\Delta_*$ (P02), and the
+Refining time cuts and position resolution are distinct limits. For the
+symmetric telegraph model with mass $m$, speed $u$ and switching rate
+$\lambda>0$, put $H_*=mu^2/\lambda$ and $\Delta_*=1/\lambda$. The window
+observable obeys $\mathsf h(\Delta)\le H_*\Delta/\Delta_*$ ([finite-speed response](susceptibility-gap.md)), and the
 conditioned midpoint obeys the exact law
-$\kappa_{\rm mid}/H_*=g(\lambda T)=zR(z)[1-R(z)]$ of the bridge-crossover
-note, with cubic onset. The fixed-preparation short-window intrinsic coefficient
+$\kappa_{\rm mid}/H_*=g(\lambda T)=zR(z)[1-R(z)]$ of [the return-bridge calculation](telegraph-return-bridge.md), with cubic onset. The fixed-preparation short-window intrinsic coefficient
 vanishes under a speed ceiling; the specified crossover window
-$\Delta_*=K/(mu^2)$ concerns a long-window plateau, and $g$ describes its
+$\Delta_*=H_*/(mu^2)=1/\lambda$ concerns a long-window plateau, and $g$ describes its
 approach. This does not assert a limit for noisy records whose error scale
 changes with the cut. Which premise makes the plateau positive and common to
 all bodies is [A08's question](composition-universality.md), not a consequence
 of scalar finite propagation.
 
-## 5. The matrix boundary and a specified noisy double limit
+## Internal states, a matrix conjecture and readout noise
 
 The scalar proposition is **not** a classification of matrix-valued finite-speed
 semigroups. A candidate, still unproved, says that a translation-invariant,
@@ -153,7 +117,7 @@ errors, independent of the motion, each of variance $\varepsilon^2/12$.
 The observed increment then satisfies
 
 $$\mathsf h_\varepsilon(\Delta)
-=\mathsf h(\Delta)+\frac{m\varepsilon^2}{6\Delta}. \tag{I003}$$
+=\mathsf h(\Delta)+\frac{m\varepsilon^2}{6\Delta}.$$
 
 For fixed $\varepsilon>0$, the $\Delta\downarrow0$ limit is infinite;
 for fixed $\Delta>0$, removing the readout error first and then refining
@@ -168,21 +132,13 @@ correlated neighboring increment errors accounted for in the expectation.
 This scaling selects a **readout bias**, not a lower bound on intrinsic
 action and not physical $\hbar$.
 
-## 6. Cone source trail and the free-kernel comparison
+## Exact free-kernel composition
 
-The historical [H04 witness](../docs/batches/H04/H04.md) locates the cone
-dilemma in Xylander's 1570 *Moralia*, pp. 823–824. Its reception search did
-not verify a specific early-modern mathematician using that passage in work
-on indivisibles; Auffret's separate rolling-cone/Leibniz example does not
-prove that transmission. Rivero's [1999 cone essay](../docs/Rivero_Cone_1999.md)
-motivates keeping the finite separation and rescaled difference apart.
-Rivero's [1998 path-integral proposal](../docs/Rivero_FeynmanFormula_1998.md)
-motivates eliminating intermediate coordinates; Brouder's rooted-tree
-algebra and Cariñena et al.'s tangent-groupoid proposal are separate
-nonlinear and quantum-completion leads. The retained
-[time-refinement manuscript](../papers/time-refinement.tex) and
-[PDF](../out/papers/time-refinement.pdf) give their source reading and the
-full normalized free-kernel proof.
+The independently useful [time-refinement manuscript](../papers/time-refinement.tex)
+and [PDF](../out/papers/time-refinement.pdf) retain the normalized free-kernel
+proof, Rivero's 1998 intermediate-coordinate proposal and the separate
+Brouder/Cariñena source leads. Their hypotheses are not those of the
+ballistic-support theorems above.
 
 In that proof a positive Gaussian kernel of variance $\kappa t/m$ composes
 exactly under integration over an inserted position for every $\kappa>0$.
@@ -194,13 +150,12 @@ identifies $\kappa$ with physical $\hbar$. The
 [Newton synthesis](groupoid-quantum-newton-states.md#regulators-and-a-normalized-blocking-test)
 distinguishes this free fixed-line result from the two-regulator RG question.
 
-## 7. Consequence for STATE
+## Consequence for STATE
 
-Finite-speed scalar rigidity, a corrected matrix conjecture and the specified
-readout double limit are distinct statements. Intrinsic fluctuations vanish
-under fine bounded-speed cuts; independent errors can create an arbitrary
-resolution-dependent coefficient. Neither phenomenon supplies a universal
-positive physical action. The scalar proof remains a working unrefereed
-derivation pending its stated Paley–Wiener and harmonic-growth audit; the
-matrix claim remains open. The ancient parallel is a modern heuristic, not
-a transmission claim or a quantum reconstruction.
+Scalar finite-speed rigidity, the open matrix classification and the specified
+readout double limit remain separate. At fixed preparation, bounded speed
+makes the intrinsic short-window coefficient vanish; independent readout
+errors can create any prescribed resolution-dependent coefficient.
+Exact Gaussian composition also permits a deterministic zero member.
+None of these statements supplies a universal positive physical action,
+quantum reconstruction or historical transmission claim.

@@ -7,7 +7,7 @@
 
 ## Source digest
 
-Aristotle lists Zeno's four arguments against motion and diagnoses the third, the flying arrow at rest, as resting on the assumption that time is composed of nows. The dichotomy and the Achilles are said to have the same solution. For this project, this is the temporal form of the cut question: whether adjacent instants carry equal or unequal states, the counterpart of Democritus's adjacent sections, and the passage the [idea entry I003](../../ideas/I003-cut-paradox-arrow-obstruction.md) connects to the finite-speed bridge.
+Aristotle lists Zeno's four arguments against motion and diagnoses the third, the flying arrow at rest, as resting on the assumption that time is composed of nows. The dichotomy and the Achilles are said to have the same solution. For this project, this is the temporal form of the cut question: whether adjacent instants carry equal or unequal states, the counterpart of Democritus's adjacent sections, and the passage the [idea entry I003](../../notes/cut-paradox-two-faces.md#bounded-speed-fluctuations-and-the-double-limit) connects to the finite-speed bridge.
 
 ## Passage anchors
 

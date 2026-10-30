@@ -107,7 +107,7 @@ $e^{-S_E/\hbar}$ factorizes over time steps and separates configurations
 locally, while the boundary eigenvalue equation
 $-\frac{\hbar^2}{2m}\Omega''+(W-E_0)\Omega=0$ compares the potential
 with the total energy. The Agmon estimate of
-[the Agmon note](agmon-ground-state-suppression.md) is the boundary-side
+[the Agmon note](ground-state-measure-transfer.md#weighted-estimates-and-global-magnetic-tails) is the boundary-side
 statement; the Feynman--Kac marginal is the bulk-side one.
 
 **Cutting the segment.** Inserting a time point $\tau\in(0,T)$ and

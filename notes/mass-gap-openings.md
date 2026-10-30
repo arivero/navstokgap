@@ -91,7 +91,7 @@ For $SU(3)$ the endpoint matters twice.
   not a constructed second continuum limit or a proof of uniqueness on
   families avoiding that point.
 - **It sits beside the point where the map places H2.** The
-  [bands note](confinement-scale-bands.md) scaled the continuum ratio
+  [scale orientation](mass-gap-conditional-theorem.md#numerical-orientation-and-its-limits) scaled the continuum ratio
   $r_0m_{0^{++}}=4.21$ to $\beta_W=5.7$ and found $\xi/a=0.70$. Near there
   the Wilson axis passes beside the endpoint, where the scalar glueball
   softens, so the lattice $\xi/a$ at $\beta_W\simeq5.7$ is likely larger,
@@ -227,8 +227,9 @@ was withdrawn on October 2
 an existential volume-uniform strong-coupling theorem and an explicit
 finite-volume bound, not a certified numerical uniform threshold.
 If the curvature conversion and physical transfer stand, the comparison
-narrows band B of the [bands note](confinement-scale-bands.md) from
-$\beta_W\in(0.0135,5.7)$ to $\beta_W\in(0.19,5.7)$.
+would enlarge the particular sufficient region from roughly
+$\beta_W<0.0135$ to $\beta_W<0.19$. These are method-dependent
+thresholds, not phase bands or certification near $\beta_W=5.7$.
 
 The weak side is where the multiscale form enters. Bauerschmidt and
 Bodineau derive "a multiscale generalisation of the Bakry--Émery
@@ -357,7 +358,7 @@ scope comparisons, not independently verified universal impossibility claims.
 | Fröhlich–Israel–Lieb–Simon, CMP 62 (1978) 1 | Reflection-positive chessboard bounds for specified events | Good-region mixing and a normalized block free-energy estimate |
 | Fröhlich–Simon–Spencer, CMP 50 (1976) 79 | Gaussian-domination/infrared techniques for their stated spin interactions | The needed domination for the nonquadratic plaquette product; nonabelian target curvature alone is not the failure reason |
 | Knabe, JSP 52 (1988) 627 | A finite-size gap criterion under frustration-free hypotheses | Those hypotheses are not verified for interacting KS at general coupling; this does not exhaust all finite-size criteria |
-| [Finite mixing proposal](intermediate-region-finite-verification.md), [Dobrushin proof](dobrushin-uniqueness-wilson.md) | A certified supremum over boundary conditions could imply a Wilson-transfer gap | No certificate at the physical crossover or for the generated interaction is supplied |
+| [Finite mixing proposal](mass-gap-conditional-theorem.md#what-a-finite-certificate-would-have-to-prove), [Dobrushin proof](dobrushin-uniqueness-wilson.md) | A certified supremum over boundary conditions could imply a Wilson-transfer gap | No certificate at the physical crossover or for the generated interaction is supplied |
 | [Exact flow conjugation](flow-conjugation-truncation.md) | Spectrum-preserving change of variables | New effective decomposition, relative error and iterative control |
 | [Small-volume bridge](weak-coupling-feshbach-reduction.md) | Compressed zero-mode estimates with a named complement/Schur target | Renormalized cutoff-uniform transfer and passage to large physical volume |
 
@@ -379,7 +380,7 @@ clock is not a physical energy gap.
 
 The earlier illustrative boxes at $\beta_W\simeq6$ had roughly $216$–$2000$
 links, hence thousands of integration variables. These are scale estimates
-from the [bands note](confinement-scale-bands.md), not a complexity theorem
+from the [scale orientation](mass-gap-conditional-theorem.md#numerical-orientation-and-its-limits), not a complexity theorem
 excluding every certification method. Monte Carlo by itself is not a certified
 supremum over boundary conditions. A rigorous polymer enumeration needs an
 analytic tail and its own convergence region. The explicit Wilson criteria

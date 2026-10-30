@@ -13,7 +13,7 @@ history in which Newton carries interference from optics into mechanics.
 
 - [Spin publication source comparison](batches/B76/spin-positioning-source-companion.md):
   classical extensions and transformation-relative preparation equivalence.
-- [Before the arrow: static composition](../notes/static-composition-classics.md):
+- [Before the arrow: static composition](../notes/ancient-cuts-provenance.md#contacts-and-spatial-composition-across-traditions):
   H10's Indian, Chinese and Persianate source visit, with
   [verified passages and access levels](../references/batches/H10.md).
 
@@ -34,6 +34,7 @@ history in which Newton carries interference from optics into mechanics.
   passage-level reading notes, useful RG mechanisms and thirteen older
   journal originals still awaiting full text. Distinguishes ultraviolet
   stability, continuum existence and the physical mass gap.
+- [Yang–Mills shepherding committee](AI_Mathematics_News_2026.md#yangmills-shepherding-gross-chairs-the-committee): Gross's role and the committee's stated validation/release process; primary statements read, underlying proof unexamined.
 - [Alpoge--Sussman experiment](AlpogeSussman_YangMills_2026.md): October
   27 pinned source peek at RP1, positive probes and the nonlinear step;
   selected statements and passages, with external proofs unreviewed.
@@ -124,7 +125,7 @@ history in which Newton carries interference from optics into mechanics.
   [Cinque](batches/B09/Cinque_Telegraph_2022.md),
   [Nelson's abstract](batches/B09/Nelson_APS_1966.md) and
   [Hall–Reginatto](batches/B09/Hall_Reginatto_2002.md).
-- [Cone and time-refinement source-to-model map](../notes/cut-paradox-two-faces.md#cone-source-trail-and-the-free-kernel-comparison):
+- [Cone and time-refinement source-to-model map](../notes/cut-paradox-two-faces.md#exact-free-kernel-composition):
   [Rivero 1998](Rivero_FeynmanFormula_1998.md), [Rivero 1999](Rivero_Cone_1999.md),
   [Brouder](Brouder_RungeKutta_1999.md), and
   [Cariñena et al.](CarinenaEtAl_TangentGroupoid_1999.md).

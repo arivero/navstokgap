@@ -235,17 +235,27 @@ The loop remains defined below the threshold; only its distinguishability
 at those resources decreases. The [matched two-path experiment](galileo-two-path-interference.md)
 uses a different control history and retains its own noncommuting-limit tests.
 
-Similarly, $J\Delta\phi\ge h$ for $N$ equal angular cells gives
+Similarly, with $h_P=2\pi\hbar$, $J\Delta\phi\ge h_P$ for $N$ equal angular cells gives
 $J\ge N\hbar$, not exact quantization: $J=(N+1/2)\hbar$ satisfies all
 cell bounds. Exact tiling is additional. In the conditional Kepler model
 $E_N=-A/N^2$, if $\omega_N=\hbar^{-1}dE_N/dN$ and
 $T_N=2\pi/\omega_N$, then
 
-$$\frac{(E_{N+1}-E_N)T_N}{h}
+$$\frac{(E_{N+1}-E_N)T_N}{h_P}
  =\frac{N(2N+1)}{2(N+1)^2}\longrightarrow1.$$
 
 The derivative rule is exact while finite differences approach it. No step
 transfers a comparison-path threshold to orbital cells without a physical map.
+
+Uniform mean anomaly and a single whole-orbit action are Kepler
+specializations. Generic bound central motion has radial and angular
+actions, need not close and can have incommensurate frequencies. Reduced
+actions $(2\pi)^{-1}\oint p\,dq$ must be distinguished from the unreduced
+integrals. EBK offsets and quantum angular-momentum spectra require their
+own quantum or semiclassical premises; none follows from a cell inequality.
+Large $J/\hbar$ describes a changing large-action family or a specified
+formal limit. Holding $J$, physical $\hbar$ and $J=N\hbar$ fixed while
+taking $N\to\infty$ is inconsistent.
 
 ## Consequence for STATE
 

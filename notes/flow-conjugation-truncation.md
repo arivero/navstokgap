@@ -45,9 +45,9 @@ $\langle\psi,(V\circ\Phi_t)\psi\rangle\le\langle\psi,V\psi\rangle$
 for a fixed state $\psi$; if both state and observable are transformed
 consistently, their expectation is unchanged. In particular this is no
 proof that the physical ground-state measure has uniform local
-large-field tails. The corrected [Agmon analysis](agmon-ground-state-suppression.md)
+large-field tails. The corrected [Agmon analysis](ground-state-measure-transfer.md#weighted-estimates-and-global-magnetic-tails)
 controls integrated global excess only; the
-[magnetic identities](magnetic-energy-identities.md) show that its simple
+[magnetic identities](ground-state-measure-transfer.md#common-setting-and-magnetic-identities) show that its simple
 Gibbs-comparison repair does not supply the missing local estimate.
 
 ## Kinetic metric, free cancellation and lattice derivatives
@@ -459,13 +459,30 @@ $g(\ell)$ is the leading perturbative statement.
 
 The displayed convention absorbs the quantum factor in $g^2$; writing
 $g^2=\hbar g_{\rm cl}^2$ restores physical $\hbar$ explicitly.
+Rotational invariance makes each component's variance
+$\sigma^2=g^2/(48\pi^2t^2)$, one third of this trace. Their joint
+Gaussian law is $\sigma^2 I_3$. Its radial density is proportional to
+$r^2e^{-r^2/(2\sigma^2)}$, so in the large-threshold regime
+$$\log\mathbb P\left(|b_t|>\frac{\eta_t}{t}\right)
+=-\frac{24\pi^2\eta_t^2}{g^2}
++O\big(\log(\eta_t/g)\big),\qquad \eta_t/g\to\infty.$$
+The polynomial radial prefactor is not a constant uniform in threshold.
+Using the trace variance as the variance of each component would instead
+give the incorrect $8\pi^2$ coefficient. With $\ell^2=8t$, a
+threshold $\eta_\ell/\ell^2$ means $\eta_t=\eta_\ell/8$; even this
+particular free-field logarithmic exponent becomes
+$-3\pi^2\eta_\ell^2/(8g^2)$. Neither value is a sharp-block or an
+interacting constant. A sharp average uses a different covariance;
+nonabelian field averaging also requires a gauge convention or an
+invariant block-$L^2$ observable, with its own covariance.
+
 A single-point Gaussian variance is neither a bound on the field supremum
 over a continuum region nor on the whole-interval curvature block norm.
 Substitution of $g/(4\pi t)$ into a deterministic kernel hypothesis is
 only a model estimate. Even for a Gaussian vector field, its component
 variance, radial tail, spatial correlation and continuum supremum require
-their own constants; the old scalar exponent $8\pi^2\eta^2/g^2$ and
-$V/(8t)^{3/2}$ independent-cell count did not prove such a theorem.
+their own constants; a $V/(8t)^{3/2}$ independent-cell count does not
+prove such a theorem.
 Replacing $g$ by a running coupling is a perturbative suggestion, not a
 nonperturbative interacting probability bound.
 

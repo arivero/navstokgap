@@ -153,7 +153,7 @@ their own $\hbar^2$ and $\hbar^{4/3}$ laws, proved in the
 The number of steps between $a$ and a fixed $\xi$ grows as
 $\log_2(\xi/a)$. Refinement adds weak-coupling steps at the ultraviolet
 end. A fixed range of physical scales near $\xi$ still requires infrared
-control. The [confinement-scale bands](confinement-scale-bands.md) collect
+control. The [confinement-scale bands](mass-gap-conditional-theorem.md#numerical-orientation-and-its-limits) collect
 the finite-lattice Wilson-action evidence; numerical bands or a finite
 verification proposal are not a certified mixing theorem.
 

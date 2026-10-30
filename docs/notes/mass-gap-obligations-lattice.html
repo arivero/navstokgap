@@ -160,6 +160,27 @@ class="math inline">\(\operatorname{tr}U_p\)</span> is conjugation
 invariant) and preserve positivity of functions. The physical space
 <span class="math inline">\(\mathcal H_{\rm phys}\)</span> is the joint
 fixed space (Gauss’s law).</p>
+<h3 id="su3-group-factors">SU(3) group factors</h3>
+<p>In this normalization <span class="math inline">\(N=3\)</span>, <span
+class="math inline">\(\dim SU(3)=8\)</span>, <span
+class="math inline">\(C_2(R_{\rm f})=4/3\)</span>, <span
+class="math inline">\(C_2(\mathrm{adj})=3\)</span> and <span
+class="math inline">\(Z(SU(3))=\mathbb Z_3\)</span>. The fundamental
+trace has <span class="math inline">\(\operatorname{tr}1=3\)</span>, so
+each magnetic plaquette term satisfies <span
+class="math inline">\(\|w_p\|\le12\hbar c/(ag^2)\)</span>. The <a
+href="strong-coupling-uniform-gap.html">strong-coupling proof</a>, <a
+href="lattice-gap-upper-bounds.html">variational upper bounds</a>, <a
+href="lieb-robinson-kogut-susskind.html">locality estimate</a> and <a
+href="ground-state-measure-transfer.html">vacuum identities</a> give
+their specializations beside the corresponding hypotheses and proofs.
+The <a href="blocking-criterion-monotone.html">blocking comparison</a>,
+<a
+href="torus-valley-potential.html#saturation-and-central-holonomies">central
+holonomies</a> and <a
+href="finiteness-half-flowed-susceptibility.html#the-bound-and-coupling-cancellation">free
+colour-species cancellation</a> retain different geometries, sectors and
+approximation assumptions.</p>
 <h2
 id="t1-every-finite-lattice-has-a-gap-above-a-unique-physical-ground-state">2.
 T1: every finite lattice has a gap above a unique physical ground
@@ -693,6 +714,15 @@ class="math display">\[a\Lambda_{\rm
 lat}(g)=(b_0g^2)^{-b_1/(2b_0^2)}\,e^{-1/(2b_0g^2)}\,[1+O(g^2)],\]</span>
 a dimensionless function that vanishes faster than any power of <span
 class="math inline">\(g\)</span>.</p>
+<p>For <span class="math inline">\(SU(3)\)</span>, <span
+class="math inline">\(b_0=11/(16\pi^2)\simeq0.06966\)</span>, <span
+class="math inline">\(b_1/(2b_0^2)=51/121\simeq0.4215\)</span> and <span
+class="math inline">\(1/(2b_0)=8\pi^2/11\simeq7.180\)</span>. Thus <span
+class="math display">\[a\Lambda_{\rm lat}(g)=(b_0g^2)^{-51/121}
+e^{-8\pi^2/(11g^2)}[1+O(g^2)].\]</span> Here <span
+class="math inline">\(\Lambda_{\rm lat}\)</span> has units of inverse
+length; the corresponding energy scale is <span
+class="math inline">\(\hbar c\Lambda_{\rm lat}\)</span>.</p>
 <blockquote>
 <p><strong>T3.</strong> The limit <span
 class="math inline">\(\displaystyle\frac{m}{\hbar c\,\Lambda_{\rm lat}}
@@ -722,28 +752,35 @@ class="math inline">\(a=\Lambda_{\rm lat}^{-1}\,a\Lambda_{\rm
 lat}(g)\)</span>; Jaffe and Witten note (p. 6, passage) that a gap
 uniform in the volume would also serve to construct the infinite-volume
 limit, which is the reverse order.</p>
-<p><strong>The small-volume corner.</strong> For <span
-class="math inline">\(L\ll\hbar c/\Lambda\)</span> the constant-mode
-sector of the continuum torus theory has gap <span
-class="math inline">\(\delta_1g(L)^{2/3}\hbar c/L\)</span> (C133, G07
-Proposition 7), and Lüscher’s expansion (Nucl. Phys. B219 (1983) 233,
-abstract) supplies the corrections in powers of <span
-class="math inline">\(g^{2/3}\)</span> with <span
-class="math inline">\(g\)</span> the renormalized coupling at scale
-<span class="math inline">\(L\)</span>. In the variable <span
-class="math inline">\(z(L)=\Delta(L)L/(\hbar c)\)</span> the two ends
-read <span
-class="math display">\[z(L)=\delta_1\,g(L)^{2/3}\,[1+O(g^{2/3})]\ \
-(L\to0),\qquad
-z(L)\sim\frac{mL}{\hbar c}\ \ (L\to\infty),\]</span> and Lüscher–Münster
-(Nucl. Phys. B232 (1984) 445, abstract) place the crossover near <span
-class="math inline">\(z\simeq2\)</span>. The conjecture, in this
-variable, is that <span class="math inline">\(z(L)\)</span> is a
-function that starts at zero and grows without bound, with <span
-class="math inline">\(m\)</span> the slope of its linear asymptote. The
-corner is the only place where the gap of the continuum theory is
-presently computable, and it is controlled by the mechanism of <a
-href="low-dimensional-mass-gap.html#conditional-orbit-area-bounds-and-state-counting">G08</a>.</p>
+<p><strong>The conditional small-volume corner.</strong> The weak-volume
+regime is <span class="math inline">\(L\Lambda_{\rm lat}\ll1\)</span>.
+Homogeneity of the constant-mode matrix Hamiltonian gives the candidate
+scale <span class="math inline">\(g(L)^{2/3}\hbar c/L\)</span>. The <a
+href="low-dimensional-mass-gap.html">positive matrix gap</a> is proved
+here for <span class="math inline">\(SU(2)\)</span>; an <span
+class="math inline">\(SU(3)\)</span> substitution supplies group
+constants, not the missing matrix theorem. Even with that input, the <a
+href="weak-coupling-feshbach-reduction.html">Feshbach hypotheses</a> on
+nonzero modes, gauge-compatible projection and uniform errors must be
+proved before transferring the scale to the field theory. Lüscher’s
+expansion (<em>Nucl. Phys. B</em> <strong>219</strong> (1983) 233,
+abstract-level reading) is source orientation, not a verification of
+those hypotheses here.</p>
+<p>If small-volume comparison and continuum reconstruction both hold,
+one expects <span class="math inline">\(z(L)=\Delta(L)L/(\hbar
+c)\)</span> to satisfy <span
+class="math display">\[z(L)=\delta_1g(L)^{2/3}[1+O(g(L)^{2/3})]\quad(L\to0).\]</span>
+Separately, if the infinite-volume physical gap is a finite positive
+energy <span class="math inline">\(m\)</span> and the finite-volume gaps
+converge to it, then <span class="math inline">\(z(L)\sim mL/(\hbar
+c)\)</span> as <span class="math inline">\(L\to\infty\)</span>. Neither
+endpoint proves a monotone interpolation, excludes intervening behavior
+or constructs the continuum theory. Lüscher–Münster’s crossover near
+<span class="math inline">\(z\simeq2\)</span> (<em>Nucl. Phys. B</em>
+<strong>232</strong> (1984) 445, abstract) remains a historical
+orientation; the <a href="torus-valley-potential.html">one-loop valley
+calculation</a> does not establish that crossover as a spectral
+theorem.</p>
 <h2 id="t4-existence">6. T4: existence</h2>
 <p>The lattice route needs the continuum limit of the Euclidean lattice
 theory with Osterwalder–Schrader reconstruction. Known: ultraviolet
@@ -901,7 +938,8 @@ extensive, so it bounds the global excess only</td>
 </tr>
 </tbody>
 </table>
-<p>The exact <a href="magnetic-energy-identities.html">magnetic-energy
+<p>The exact <a
+href="ground-state-measure-transfer.html#common-setting-and-magnetic-identities">magnetic-energy
 sum rule</a> and <a
 href="ground-state-measure-transfer.html">ground-state transfer</a>
 remain useful identities. A normalized isotropic Wilson estimate does

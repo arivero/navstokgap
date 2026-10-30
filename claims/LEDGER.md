@@ -575,7 +575,7 @@ current spectral statements are in the
 | H005 | Plutarch's cone-section passage was printed in Xylander's 1570 Latin Moralia, pp. 823–824 | H04 librarian retrieval; coordinator visual verification of IIIF canvases 603151/603152 |
 | H006 | How did the cone-section dilemma enter early-modern discussions of indivisibles and the continuum? | H04 bounded search; H05 author-specific reception audit remains |
 | Q001 | Which independent premises force a positive universal action parameter? | Open target; WP4 Branch B |
-| Q002 | Which additional-field action generates an action-value or spectral gap? | Model design; `ideas/I001-action-field.md` |
+| Q002 | Which additional-field action generates an action-value or spectral gap? | Model design; [four interpretations](../notes/newton-indeterminacy-routes.md#model-interpretations-of-an-additional-action-datum) |
 
 ## Resolved objections
 

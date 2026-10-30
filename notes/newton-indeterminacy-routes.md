@@ -37,6 +37,22 @@ Source claims carry their reading levels; the historical observations
 supply no fitted or invented data. The scope remains Newton's inertial
 line versus falling parabola and the records used to distinguish them.
 
+## Model interpretations of an additional action datum
+
+The originating action-field proposal has four mathematically different
+readings. Each needs its own object and comparison; a result for one
+does not establish another.
+
+| Reading | Object and decisive comparison | Maintained boundary |
+| --- | --- | --- |
+| Trajectory fluctuation | A variation and its quadratic action cost versus a normalized Jacobi spectrum | [Amplitude scaling](action-unit-dimensional-selection.md) allows costs tending to zero; a Hessian gap is not a minimum action. |
+| Additional field | A specified field space, coupling and measure for $S[q,\chi]$, followed by elimination of $\chi$ | Each effective scale must be traced to its input; no field or universal positive coefficient is constructed merely by naming it. |
+| Operational resolution | Preparations, phase encoding, resource count and confidence | [Finite-copy discrimination](newton-insertion-action.md#a-conditional-finite-copy-phase-threshold-is-not-an-action-lattice) has a positive threshold with supplied physical $\hbar$ and fixed resources. |
+| Distributional constraint | A normalized kernel, test-function class and its derivative limit | [Refinement limits](refinement-composition-and-limit.md) distinguish convergence of a kernel from convergence of its derivatives and permit a zero-action classical branch. |
+
+Newton's shrinking-magnitude passages belong to the historical source
+geometry, not evidence that he proposed any of these modern structures.
+
 ## 1. What the corrected two-pointer theorem requires
 
 Theorem I in the [unit note](necessity-unit-and-indeterminacy.md) permits

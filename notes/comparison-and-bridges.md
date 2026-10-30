@@ -1,40 +1,83 @@
-# Navier–Stokes and Yang–Mills: comparison and bridges
+# Navier–Stokes and Yang–Mills: exact targets and conditional bridges
 
-The two problems share questions about nonlinear fields, scaling, constraints and
-uniform estimates. This comparison derives their scaling and dissipation
-identities, distinguishes regularity from relaxation and spectral separation,
-and specifies what each proposed bridge must transport.
+Navier–Stokes asks for smooth deterministic evolution under precise data
+and forcing quantifiers. Yang–Mills asks for a nontrivial axiomatic quantum
+theory in infinite volume and a finite positive physical spectral edge.
+Their scaling and dissipation calculations share useful structures but do
+not identify regularity, auxiliary relaxation or a physical energy gap.
 
-First substantive milestone, 2026-09-05; exposition revised 2026-09-06.
-
-The [definitions](millennium-problem-definitions.md) preserve the official targets;
-the [source catalogue](../docs/README.md) provides PDFs and reading scope. Below,
-“derived” means an elementary calculation under the stated hypotheses, “cited”
-means a result imported from a named source, and “proposed” means a comparison
-whose transfer obligations remain to be specified. Source companions record the
-versions and passages used.
+The definitions below come from the held Clay documents, passage-read at
+[Fefferman, pp. 1–2](../docs/Fefferman_NavierStokes.pdf) and
+[Jaffe–Witten, §§3–5, pp. 5–7](../docs/JaffeWitten_YangMills.pdf).
+“Derived” labels elementary calculations under stated hypotheses;
+“cited” labels imported source results; proposed bridges name their
+missing transfer assumptions. The [source catalog](../docs/README.md)
+records versions and reading scope.
 
 ## 1. Exact targets and unlike meanings of existence
 
-| Feature | Navier–Stokes | Yang–Mills |
+### Navier–Stokes admissibility and alternatives
+
+For viscosity $\nu>0$, $x\in\mathbb R^3$, $t\ge0$, velocity $u$,
+pressure $p$ and prescribed force $f$,
+$$\partial_tu+(u\cdot\nabla)u=\nu\Delta u-\nabla p+f,
+\qquad\nabla\cdot u=0,\qquad u(x,0)=u_0(x).$$
+Initial velocity is smooth and divergence-free. On whole space, for all
+spatial multi-indices $\alpha$ and nonnegative integers $m,K$,
+$$|\partial_x^\alpha u_0(x)|\le C_{\alpha K}(1+|x|)^{-K},\qquad
+|\partial_x^\alpha\partial_t^mf(x,t)|
+\le C_{\alpha mK}(1+|x|+t)^{-K}.$$
+An admissible global solution has smooth $u,p$ and
+$\sup_{t\ge0}\int_{\mathbb R^3}|u(x,t)|^2dx<\infty$.
+
+For the periodic alternatives, $u_0,f,u$ are unit-periodic spatially,
+$u_0$ is smooth, $u,p$ are globally smooth, and
+$$|\partial_x^\alpha\partial_t^mf(x,t)|
+\le C_{\alpha mK}(1+t)^{-K}.$$
+Fefferman's stated periodic target does not additionally require periodic
+$p$; imposing the usual periodic-pressure convention in a derived
+calculation below is a stronger specified setting, not a restatement of
+his alternatives. The whole-space uniform-energy condition is not an
+extra condition in the periodic alternatives.
+
+| Alternative | Domain | Quantifier and conclusion |
 | --- | --- | --- |
-| Setting | Three spatial dimensions, forward time; whole space or spatially periodic | Four-dimensional quantum spacetime |
-| Quantifier | Any admissible initial velocity for A/B; an admissible counterexample for C/D | Every compact simple gauge group |
-| External force | Zero for A/B; admissible smooth forcing permitted for C/D | Pure gauge-theory target |
-| Required object | Global smooth velocity and pressure, with the specified admissibility | Nontrivial quantum theory with the required axiomatic properties |
-| Required extra control | Whole-space energy uniformly bounded in time | Positive, finite lower edge of nonvacuum energy |
-| Accepted alternative | Prove one of A–D | Construct the theory and prove its mass gap |
+| A | Whole space | Every admissible $u_0$, with $f=0$, admits a global admissible solution. |
+| B | Periodic | Every admissible $u_0$, with $f=0$, admits a global admissible solution. |
+| C | Whole space | Some admissible $u_0,f$ admit no global admissible solution. |
+| D | Periodic | Some admissible $u_0,f$ admit no global admissible solution. |
 
-Sources: [F, pp. 1–2](../docs/Fefferman_NavierStokes.pdf) and
-[JW, §§3–5](../docs/JaffeWitten_YangMills.pdf).
-Fefferman's existence alternatives A/B specify zero forcing; breakdown
-alternatives C/D permit admissible forcing. These quantifiers and forcing
-hypotheses determine the exact target.
+Proving any one alternative suffices in the source formulation. Breakdown
+permits forcing; existence specifies zero forcing. The held
+[OpenAI announcement companion](../docs/OpenAI_NavierStokes_2026.md)
+records its 8 September 2026 claim of forced breakdown and linked
+formalization as an attributed source artifact. This consolidation adds
+no independent verification or prize-adjudication claim; A/B retain their
+own hypotheses. [B19](../references/batches/B19.md) concerns the distinct
+multiscale programme for other fluid equations.
 
-The required evidence concerns smooth deterministic evolution for the fluid and
-quantum correlations, reconstruction and spectrum for the gauge theory. Each
-bridge must identify which object it transports and how it supplies the target's
-remaining structure.
+### Quantum Yang–Mills existence and mass gap
+
+For **every compact simple gauge group** $G$, construct a nontrivial
+quantum Yang–Mills theory on $\mathbb R^4$, with axiomatic properties at
+least as strong as the cited Wightman or Osterwalder–Schrader formulations.
+The physical description includes a Hilbert space, Poincaré covariance,
+positive energy, a vacuum unique up to phase and locality; the full source
+axioms govern. Gauge-invariant local quantum observables must correspond,
+with renormalization subtleties, to curvature polynomials and covariant
+derivatives. Short-distance correlations must match asymptotic freedom
+and perturbative renormalization, including the prescribed stress tensor
+and operator-product singularities.
+
+For the reconstructed physical energy operator,
+$$H\Omega=0,\qquad H\ge0,\qquad
+\operatorname{spec}(H)\cap(0,\Delta)=\varnothing$$
+for some $\Delta>0$, with finite positive lower edge
+$\Delta_{\rm phys}=\inf\operatorname{spec}(H|_{\Omega^\perp})$.
+Here $\Delta_{\rm phys}$ is an energy; its mass equivalent is
+$\Delta_{\rm phys}/c^2$. A finite cutoff or compact-volume theory alone
+is not the infinite-volume continuum construction. Confinement and an
+isolated one-particle state are further questions beyond this target.
 
 ## 2. Equations and the several time variables
 
@@ -58,14 +101,16 @@ F_{ij}=\partial_iA_j-\partial_jA_i+[A_i,A_j],
 \qquad D_i=\partial_i+[A_i,\,\cdot\,].
 $$
 
-The Euclidean Yang–Mills action in our normalisation is
+The geometric Yang–Mills functional used for the gradient identities is
 
 $$
-S(A)=\frac12\int|F_A|^2\,d^dy.
+\mathcal Y(A)=\frac12\int|F_A|^2\,d^dy.
 $$
 
-Coupling factors can be restored; this convention fixes the gradient identities
-below. Gauge heat flow has the form
+This fixes an auxiliary geometric normalization. A physical Euclidean
+action requires its coupling and action-valued coefficient, with quantum
+weight $\exp(-S_E/\hbar)$; $\mathcal Y$ alone supplies no physical
+action unit. Gauge heat flow has the form
 
 $$
 \partial_sA=-D_A^*F_A.
@@ -79,8 +124,8 @@ provides the concrete flow and gauge modification. The parameter $s$ is auxiliar
 | Parameter | Meaning | Generator or operation |
 | --- | --- | --- |
 | $t$ | Fluid evolution time | Nonlinear Navier–Stokes evolution |
-| $\tau$ | Quantum real time | Unitary evolution $e^{-i\tau H}$ |
-| $r$ | Euclidean physical-time separation | Semigroup $e^{-rH}$, when reconstruction applies |
+| $\tau$ | Quantum real time | Unitary evolution $e^{-i\tau H/\hbar}$ |
+| $r$ | Euclidean separation in length units (physical time $r/c$) | Semigroup $e^{-rH/(\hbar c)}$, when reconstruction applies |
 | $s$ | Gauge heat-flow or Langevin time | Auxiliary deterministic or stochastic evolution |
 
 In a stochastic construction in $d=4$, the noise lives over $(s,y)$: an auxiliary
@@ -120,7 +165,7 @@ and commutator contributions give
 
 $$
 F_{A_\lambda}(y)=\lambda^2F_A(\lambda y),\qquad
-S(A_\lambda)=\lambda^{4-d}S(A).
+\mathcal Y(A_\lambda)=\lambda^{4-d}\mathcal Y(A).
 $$
 
 Thus the classical Euclidean action is scale-invariant in $d=4$: action-critical
@@ -147,12 +192,12 @@ $u\cdot\nabla(|u|^2/2)$ and using $\nabla\cdot u=0$. The pressure term vanishes
 under the same hypotheses. For smooth gauge heat flow the first variation is
 
 $$
-\delta S(A)[a]=\langle D_A^*F_A,a\rangle,
-\qquad \frac{dS}{ds}=-\|D_A^*F_A\|_2^2.
+\delta \mathcal Y(A)[a]=\langle D_A^*F_A,a\rangle,
+\qquad \frac{d\mathcal Y}{ds}=-\|D_A^*F_A\|_2^2.
 $$
 
 Both identities hold under the stated regularity and boundary assumptions.
-Here $E$ is quadratic in velocity; $S$ is quadratic in curvature, which contains
+Here $E$ is quadratic in velocity; $\mathcal Y$ is quadratic in curvature, which contains
 derivatives and commutators. Navier–Stokes combines viscous diffusion and
 energy-conserving advection. For comparison, ordinary $L^2$ gradient descent of
 kinetic energy would give $\partial_tu=-u$.
@@ -246,24 +291,26 @@ operator still requires that identification with the field-theory Hamiltonian.
 ### 6.3 The quantum gap and physical correlations
 
 Derived spectral consequence: assume a self-adjoint physical $H\geq0$, a unique
-vacuum $\Omega$, and a gap $m>0$. Let $\psi$ be a well-defined state orthogonal
+vacuum $\Omega$, and an energy gap $\Delta>0$. Let $\psi$ be a well-defined state orthogonal
 to $\Omega$, for example one created by a suitably smeared centred observable.
 The spectral theorem gives
 
 $$
-\langle\psi,e^{-rH}\psi\rangle
-=\int_{[m,\infty)}e^{-rE}\,d\rho_\psi(E)
-\leq e^{-mr}\|\psi\|^2,\quad r\geq0.
+\langle\psi,e^{-rH/(\hbar c)}\psi\rangle
+=\int_{[\Delta,\infty)}e^{-rE/(\hbar c)}\,d\rho_\psi(E)
+\leq e^{-r\Delta/(\hbar c)}\|\psi\|^2,\quad r\geq0.
 $$
 
-This is decay in Euclidean physical-time separation $r$, as distinct from
+This is decay over Euclidean length separation $r$, or physical time
+$r/c$, as distinct from
 auxiliary relaxation time $s$. An observable constrains the energies to which
 it couples. Proving a full spectral gap requires a decay bound for a class of
 observables that detects all states under consideration.
 
-In units $\hbar=c=1$, mass has inverse-length units. A fluid decay rate has
-inverse-time units, with $\nu$ carrying length-squared/time. Equating their numerical
-values requires a physically justified conversion.
+A quantum energy edge gives an inverse-length rate $\Delta/(\hbar c)$
+and an inverse-time rate $\Delta/\hbar$. A fluid decay rate has inverse-time
+units, with $\nu$ carrying length-squared/time. Equal dimensions do not
+identify operators or justify equating these rates.
 
 ## 7. Bridge assessment
 
@@ -281,11 +328,11 @@ values requires a physically justified conversion.
 For any regularised spectral calculation use a cutoff label $a$ and box size $L$.
 The statement $m_{a,L}>0$ at each fixed pair is weaker than a positive bound in
 physical units along a justified continuum and infinite-volume construction.
-For example, a dimensionless lattice gap may scale as $a m$ and tend to zero
-while a physical $m$ stays positive. Conversely a box-induced gap can disappear.
+For example, a dimensionless lattice gap may scale as $a m/(\hbar c)$ and tend to zero
+while its physical energy $m$ stays positive. Conversely a box-induced gap can disappear.
 The construction must specify the order of limits and justify any interchange.
 
-## 8. Applying the comparison
+## 8. Consequence for STATE
 
 For each toy model, specify its variables and symmetries, its trajectory or state
 space, its clock and generator, its scale transformation and its limiting

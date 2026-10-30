@@ -1,10 +1,8 @@
-# Source ideas for the next calculation
+# Source connections
 
-Select the task in [STATE](../research/STATE.md), then read its capsule here.
-These cards route existing bibliography into the selected premise decision.
-They do not schedule work. [STRATEGY](../AGENTS.md) governs whether
-an additional calculation or source batch is useful. Older suggestions below
-are retained context; their words "next" and "current" describe that milestone.
+[STATE](../research/STATE.md) owns priorities. These source-to-argument
+connections retain reading coverage and missing premises; former task IDs
+are retrieval aliases. The maintained proofs govern reuse.
 
 ## Conservative topological selection — Q04
 
@@ -74,8 +72,8 @@ primary premise and its role -> compare the classical countermodel and the
 remaining dynamical action-unit step -> full proof reading remains unaudited.
 [B01](batches/B01.md) supplies routes and coverage. Choose one bounded passage
 question first; a full audit of both papers is not the default first session.
-K01 uses [I007](../ideas/I007-static-compatibility.md) when measurement-context
-compatibility is the premise that needs testing.
+The [fixed-time compatibility premises](../notes/ancient-cuts-provenance.md#fixed-time-compatibility-and-calibration)
+state what a measurement-context comparison would have to specify.
 
 ## Interacting spectral control — G03
 
@@ -293,7 +291,7 @@ optimal-recovery and convex-norm context. Borrow the error-set viewpoint for
 R15: compare separately supplied block budgets with the global ball before
 equating their preparations. This is the deciding composition premise.
 
-**H10 supporting capsule:** [the static-source synthesis](../notes/static-composition-classics.md)
+**H10 supporting capsule:** [the static-source synthesis](../notes/ancient-cuts-provenance.md#contacts-and-spatial-composition-across-traditions)
 connects Vasubandhu's six contacts, Liu Hui's solid remainder and the Mohist
 body/effect distinction to explicit interface and apparatus variables.
 [H10 coverage](batches/H10.md) distinguishes the verified Sanskrit and Mohist
@@ -448,7 +446,7 @@ M07/C053 now shows that softening the core closes the angular threshold.
 Use a circular bound preparation for A15 and separate angular action from
 displacement fluctuations; core admissibility and coupling dependence remain
 scale-selection premises. See
-[I004](../ideas/I004-bound-action-and-transport.md).
+[I004](../notes/action-unit-dimensional-selection.md#singular-and-softened-relativistic-coulomb-cores).
 
 **Current capsule, A13 to A14:** [B26](batches/B26.md) supplied bounded
 background coverage and the preparation comparison. Collision paper §6
@@ -555,5 +553,5 @@ area/action calculations. For manuscript claims use the
 **Use next:** identify the uniformity assumption in the chosen shrinking-area
 argument and test it in a specified force-controlled path family. Historical
 attribution requires a dated passage; the proposed action-scale reading is a
-modern conjecture. Cone-reception and I003 drafts keep their separate source
+modern conjecture. The maintained cut-source and scalar-propagation arguments keep their separate source
 and proof gates in the task board.

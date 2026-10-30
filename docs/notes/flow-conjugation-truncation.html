@@ -132,11 +132,11 @@ for a fixed state <span class="math inline">\(\psi\)</span>; if both
 state and observable are transformed consistently, their expectation is
 unchanged. In particular this is no proof that the physical ground-state
 measure has uniform local large-field tails. The corrected <a
-href="agmon-ground-state-suppression.html">Agmon analysis</a> controls
-integrated global excess only; the <a
-href="magnetic-energy-identities.html">magnetic identities</a> show that
-its simple Gibbs-comparison repair does not supply the missing local
-estimate.</p>
+href="ground-state-measure-transfer.html#weighted-estimates-and-global-magnetic-tails">Agmon
+analysis</a> controls integrated global excess only; the <a
+href="ground-state-measure-transfer.html#common-setting-and-magnetic-identities">magnetic
+identities</a> show that its simple Gibbs-comparison repair does not
+supply the missing local estimate.</p>
 <span id="the-kinetic-term-and-the-free-example"></span><h2
 id="kinetic-metric-free-cancellation-and-lattice-derivatives">Kinetic
 metric, free cancellation and lattice derivatives</h2>
@@ -647,16 +647,38 @@ leading perturbative statement.</p>
 <p>The displayed convention absorbs the quantum factor in <span
 class="math inline">\(g^2\)</span>; writing <span
 class="math inline">\(g^2=\hbar g_{\rm cl}^2\)</span> restores physical
-<span class="math inline">\(\hbar\)</span> explicitly. A single-point
-Gaussian variance is neither a bound on the field supremum over a
-continuum region nor on the whole-interval curvature block norm.
-Substitution of <span class="math inline">\(g/(4\pi t)\)</span> into a
-deterministic kernel hypothesis is only a model estimate. Even for a
-Gaussian vector field, its component variance, radial tail, spatial
-correlation and continuum supremum require their own constants; the old
-scalar exponent <span class="math inline">\(8\pi^2\eta^2/g^2\)</span>
-and <span class="math inline">\(V/(8t)^{3/2}\)</span> independent-cell
-count did not prove such a theorem. Replacing <span
+<span class="math inline">\(\hbar\)</span> explicitly. Rotational
+invariance makes each component’s variance <span
+class="math inline">\(\sigma^2=g^2/(48\pi^2t^2)\)</span>, one third of
+this trace. Their joint Gaussian law is <span
+class="math inline">\(\sigma^2 I_3\)</span>. Its radial density is
+proportional to <span
+class="math inline">\(r^2e^{-r^2/(2\sigma^2)}\)</span>, so in the
+large-threshold regime <span class="math display">\[\log\mathbb
+P\left(|b_t|&gt;\frac{\eta_t}{t}\right)
+=-\frac{24\pi^2\eta_t^2}{g^2}
++O\big(\log(\eta_t/g)\big),\qquad \eta_t/g\to\infty.\]</span> The
+polynomial radial prefactor is not a constant uniform in threshold.
+Using the trace variance as the variance of each component would instead
+give the incorrect <span class="math inline">\(8\pi^2\)</span>
+coefficient. With <span class="math inline">\(\ell^2=8t\)</span>, a
+threshold <span class="math inline">\(\eta_\ell/\ell^2\)</span> means
+<span class="math inline">\(\eta_t=\eta_\ell/8\)</span>; even this
+particular free-field logarithmic exponent becomes <span
+class="math inline">\(-3\pi^2\eta_\ell^2/(8g^2)\)</span>. Neither value
+is a sharp-block or an interacting constant. A sharp average uses a
+different covariance; nonabelian field averaging also requires a gauge
+convention or an invariant block-<span
+class="math inline">\(L^2\)</span> observable, with its own
+covariance.</p>
+<p>A single-point Gaussian variance is neither a bound on the field
+supremum over a continuum region nor on the whole-interval curvature
+block norm. Substitution of <span class="math inline">\(g/(4\pi
+t)\)</span> into a deterministic kernel hypothesis is only a model
+estimate. Even for a Gaussian vector field, its component variance,
+radial tail, spatial correlation and continuum supremum require their
+own constants; a <span class="math inline">\(V/(8t)^{3/2}\)</span>
+independent-cell count does not prove such a theorem. Replacing <span
 class="math inline">\(g\)</span> by a running coupling is a perturbative
 suggestion, not a nonperturbative interacting probability bound.</p>
 <p>At <span class="math inline">\(R=\kappa\sqrt{8t}\)</span>, the

@@ -38,7 +38,7 @@ companions and manuscripts:
 
 ```sh
 rg -n -i 'mechanism|synonym|operator|claim-id' notes/index.md
-rg -l -i 'mechanism|synonym|operator|claim-id|counterexample' notes ideas references research claims papers docs --glob '*.md' --glob '*.bib' --glob '*.tex' --glob '*.txt'
+rg -l -i 'mechanism|synonym|operator|claim-id|counterexample' notes references research claims papers docs --glob '*.md' --glob '*.bib' --glob '*.tex' --glob '*.txt'
 ```
 
 Replace the examples with the actual terms. Inspect filenames before
@@ -59,6 +59,12 @@ off-spine hit when it might change a premise, proof, countertest or
 analogy; follow its corrections as needed. If no useful hit appears,
 return to the calculation without manufacturing a connection or a tour of
 unrelated notes.
+
+Before transferring a result between models, name the source and destination
+observables, their hypotheses, the transformation and a decisive compatibility
+test. A variance law, minimax radius and quantum phase can share dimensions
+without sharing an aggregation rule or an action calibration. The former
+I006 discovery-by-connection proposal is this retrieval heuristic, not a theorem.
 
 Carry forward only what is needed: the proved statement and hypotheses,
 the relevant countermodel or correction, and the estimate or test for the

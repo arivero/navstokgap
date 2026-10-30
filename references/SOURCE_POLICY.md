@@ -2,7 +2,8 @@
 
 Store each original once in `docs/` with its source-facing companion.
 Use `references/` for shared BibTeX and search batches,
-`notes/` for our derivations and `ideas/` for model proposals.
+`notes/` for derivations and explicitly labeled model proposals. Former idea
+names resolve through the canonical catalog; STATE owns current priorities.
 
 ## Companion contents
 

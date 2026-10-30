@@ -4,6 +4,13 @@
 Arrows below indicate mathematical input or reading order as specified, not an
 implication between physical premises. Former names resolve to canonical notes.
 
+Multiscale control connects the repository's three settings:
+[gauge construction and spectral transfer](../notes/mass-gap-conditional-theorem.md),
+[tangent-groupoid and refinement limits](../notes/groupoid-quantum-newton-states.md)
+and [fluid scaling and concentration](../notes/comparison-and-bridges.md).
+Each asks which estimates survive refinement; their states, clocks, regulators
+and target operators require separate identifications.
+
 | Question | Argument path | Dependency that remains explicit |
 | --- | --- | --- |
 | Classical initial-value construction | [Polygons and regularity](../notes/balaban-ode-lesson.md) | Stability/residual estimates; the logarithmic arrival test replaces a sufficient Lipschitz hypothesis only in its conservative family |
@@ -22,6 +29,7 @@ implication between physical premises. Former names resolve to canonical notes.
 | Physical gauge spectrum | [Lattice and limit obligations](../notes/mass-gap-obligations-lattice.md) with [Wilson](../notes/wilson-strong-coupling-explicit.md), [Dobrushin](../notes/dobrushin-uniqueness-wilson.md) and [KS](../notes/strong-coupling-uniform-gap.md) inputs | Operators, physical units, volume/cutoff order, nontriviality and observable weight must match |
 | Solved gauge models | [Matrix, classical area and singular comparisons](../notes/low-dimensional-mass-gap.md) → [3D field limit](../notes/three-dimensional-gap-one-function.md) | A classical sublevel bound is not a quantum gap; invariant sectors, nonzero modes and physical limits remain separate |
 | Small-volume transfer | [Feshbach](../notes/weak-coupling-feshbach-reduction.md) → [torus valley](../notes/torus-valley-potential.md) | Renormalized H1/H2 complement/Schur control and H3 gap, not ground energy alone |
+| Gauge vacuum probabilities | [Magnetic identities, Agmon and slice transfer](../notes/ground-state-measure-transfer.md) → [action cost](../notes/large-field-action-lower-bound.md) and [operator comparison](../notes/large-field-operator-inequality.md) | An extensive global tail differs from a normalized local event and a signed Hamiltonian inequality |
 
 The [gauge atlas](../notes/halving-atlas.md) gives the dimension/group map;
 [three continuum limits](../notes/three-continuum-limits.md) retains the distinct

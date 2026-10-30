@@ -93,7 +93,7 @@ rule independently at every cut would change the coarse law or violate speed.
 
 The independent-increment version is rigid: a scalar convolution semigroup
 supported in $[-ut,ut]$ is a deterministic drift. The
-[cut-paradox treatment](cut-paradox-two-faces.md#the-euclidean-face) gives the
+[cut-paradox treatment](cut-paradox-two-faces.md#scalar-probability-kernels) gives the
 variance proof and its distinct scalar unitary counterpart. The bridge below
 retains velocity memory instead of resetting position increments.
 

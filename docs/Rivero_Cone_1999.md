@@ -18,5 +18,5 @@ successive cylinder approximations at a common scale.
 ## Use in this project
 
 Keep finite separation, the limiting face and the rescaled difference as distinct
-objects. The [maintained cut comparison](../notes/cut-paradox-two-faces.md#cone-source-trail-and-the-free-kernel-comparison) transfers that discipline
+objects. The [maintained cut comparison](../notes/cut-paradox-two-faces.md#exact-free-kernel-composition) transfers that discipline
 to time refinement.

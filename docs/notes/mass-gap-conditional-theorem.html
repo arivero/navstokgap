@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The map as one conditional theorem: H1 and H2 give a volume-uniform lattice gap bound, and continuum existence stays a separate obligation</title>
+<title>Conditional gauge-gap transfer: multiscale control, mixing and certification</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,145 +79,32 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>The map as one conditional theorem: H1 and H2 give a volume-uniform
-lattice gap bound, and continuum existence stays a separate
-obligation</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/mass-gap-conditional-theorem.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/mass-gap-conditional-theorem.pdf">PDF</a></p><p>Later corrections: <a
-href="mass-gap-openings.html#correlation-inequalities-and-the-transfer-they-require">reasons
-to stop</a> rejects certification of H2 at <span
-class="math inline">\(\beta_W\simeq6\)</span> by any certified method
-known here; <a href="confinement-scale-bands.html">the bands note</a>
-(correction of 2026-10-02) makes box sides <span
-class="math inline">\(3\)</span>–<span class="math inline">\(5\)</span>
-trial sizes, withdraws the reduction to three open blocking steps and
-corrects the energy conversion; <a
-href="mass-gap-obligations-lattice.html#existing-estimates-and-examined-routes">the
-position note</a> (correction of 2026-10-02) fixes the strong-coupling
-threshold set; <a
-href="https://github.com/arivero/navstokgap/blob/main/research/obstructions.md">obstruction
-map</a> lists this note’s overclaims (relevant passages read).</p>
-<blockquote>
-<p><strong>Correction (2026-10-02).</strong> The earlier conclusion
-outran its stated hypotheses. The changes, made in place below:</p>
-<ol type="1">
-<li><em>Scope.</em> “Nothing else is missing”, “a proof of the mass gap
-for <span class="math inline">\(SU(3)\)</span> consists of H1 and H2”,
-“the repository’s formal endpoint” and “progress … on H1 or H2, and
-nothing else” are <strong>withdrawn</strong>. H1 and H2 yield lattice
-statements: decay of correlations and a volume-uniform gap of the Wilson
-transfer matrix at each spacing of the trajectory, and the limit of that
-bound. Convergence of Schwinger functions, the Osterwalder–Schrader
-axioms, the infinite-volume continuum theory, nontriviality and T3 are
-separate obligations. The former item 4 is split into a lattice
-statement (item 4) and a continuum statement conditional on a separately
-constructed limit (item 5, hypothesis (E)).</li>
-<li><em>Prefactors.</em> The constants <span
-class="math inline">\(C_k\)</span> may grow with <span
-class="math inline">\(K(a_0)\)</span>. The proof now shows why that is
-harmless: at fixed <span class="math inline">\(a_0\)</span> the spectral
-theorem turns decay with any finite prefactor into a gap whose prefactor
-is <span class="math inline">\(\|\psi\|^2\)</span>, and that prefactor
-survives a continuum limit.</li>
-<li><em>H1.</em> The former H1 bounded fluctuation covariances only for
-observables local on the <span class="math inline">\(k\)</span>-th
-lattice. The proof applied it to conditional expectations of fine
-observables, which are only quasi-local there, and its coarse remainder
-needed a locality property that was never assumed. H1 now states (a) the
-fluctuation bound for those projections, (b) quasi-locality of the
-coarse projection, and (c) a gauge-invariant Gibbs representation on
-periodic boxes. The cross terms of the proof vanish exactly (Lemma 2),
-replacing “bounded by the same rates”.</li>
-<li><em>H2 and periodic boxes.</em> Strong mixing of <span
-class="math inline">\(\Phi_0\)</span> on one box with a robustness
-margin gives no decay in other volumes without a further theorem. H2 now
-assumes strong mixing for every gauge-invariant interaction of the <span
-class="math inline">\(r\)</span>-ball on every coarse periodic box of
-side at least <span class="math inline">\(L_0\)</span>, and Lemma 1
-derives decay there. The reduction to one finite box is a finite-size
-criterion (Dobrushin–Shlosman; Martinelli–Olivieri) whose transfer to
-link variables with <span class="math inline">\(SU(3)\)</span> spins,
-exponentially decaying interactions and periodic boxes is
-<strong>assumed, not derived</strong>. The reading “on the
-gauge-invariant content of <span class="math inline">\(W\)</span>, the
-small Wilson loops” is replaced by an exact statement, Lemma 0, whose
-invariant <span class="math inline">\(\sigma\)</span>-algebra includes
-boundary-attached open lines. Box sides <span
-class="math inline">\(3\)</span>–<span class="math inline">\(5\)</span>
-are trial sizes, and certification at <span
-class="math inline">\(\beta_W\simeq6\)</span> is out of reach of every
-certified method known here. Item 1 no longer claims a unique
-infinite-volume Gibbs state.</li>
-<li><em>Numbers.</em> The glueball energy, printed as <span
-class="math inline">\(1.66\,\hbar c\,{\rm fm}^{-1}\)</span>, is <span
-class="math inline">\(8.42\,\hbar c\,{\rm fm}^{-1}\simeq1.66\)</span>
-GeV, the value behind <span
-class="math inline">\(\mu_{0^{++}}a\simeq0.78\)</span>. The spacing
-<span class="math inline">\(a_*\)</span> is <span
-class="math inline">\(0.093\)</span> fm at <span
-class="math inline">\(\beta_W=6.0\)</span> and <span
-class="math inline">\(0.17\)</span> fm at <span
-class="math inline">\(\beta_W=5.7\)</span> with <span
-class="math inline">\(r_0=0.5\)</span> fm; the former lead’s “<span
-class="math inline">\(0.1\)</span> to <span
-class="math inline">\(0.17\)</span> fm” rounds the first figure and §4’s
-<span class="math inline">\(0.093\)</span> fm is the same endpoint.
-These spacings and the rate <span class="math inline">\(0.78\)</span>
-are continuum-scaled estimates, and identifying <span
-class="math inline">\(a_*\)</span> with a published spacing is
-heuristic.</li>
-<li><em>What is in place.</em> “Both hypotheses are finite in kind” and
-H1’s “non-perturbative part is three steps” are
-<strong>withdrawn</strong>, following the bands note. “T1, T2 … all in
-place with explicit constants” is corrected: the volume-uniform
-Kogut–Susskind gap rests on Yarotsky’s existential threshold, and the
-explicit rigorous thresholds belong to the Wilson transfer matrix, <span
-class="math inline">\(g^2&gt;444\)</span> (Dobrushin) and <span
-class="math inline">\(g^2\ge1059\)</span> (polymer expansion, all
-representations), with <span class="math inline">\(176\)</span> the
-leading-activity figure only. The theorem uses none of them.</li>
-</ol>
-</blockquote>
-<p>The programme’s pure-<span class="math inline">\(SU(3)\)</span> map
-can be stated as one conditional theorem about the Wilson lattice
-theory. Hypothesis H1 controls the blocking steps from the bare spacing
-<span class="math inline">\(a_0\)</span> up to a spacing <span
-class="math inline">\(a_*\)</span>, where the effective interaction lies
-within a radius <span class="math inline">\(r\)</span> of a reference
-interaction <span class="math inline">\(\Phi_0\)</span>. Hypothesis H2
-asks every gauge-invariant interaction of that neighbourhood to be
-strongly mixing, uniformly over periodic boxes. The conclusion is a
-volume-uniform lower bound on the gap of the Wilson transfer matrix at
-each spacing of the trajectory, <span
-class="math display">\[\Delta(a_0)\ \ge\ \frac{\hbar
-c}{a_0}\cdot\frac{\min(\gamma_*,\gamma&#39;)}{2^{K(a_0)}},
-\qquad
-\liminf_{a_0\to0}\Delta(a_0)\ \ge\ \frac{\hbar
-c\,\min(\gamma_*,\gamma&#39;)}{a_*},\]</span> where <span
-class="math inline">\(\gamma_*\)</span> is the decay rate of H1, <span
-class="math inline">\(\gamma&#39;\)</span> the mixing rate of H2, both
-per coarse lattice unit, and <span
-class="math inline">\(2^{K(a_0)}a_0\to a_*\)</span>. If <span
-class="math inline">\(\Phi_0\)</span> is the Wilson interaction at <span
-class="math inline">\(\beta_W\)</span> between <span
-class="math inline">\(5.7\)</span> and <span
-class="math inline">\(6.0\)</span>, then <span
-class="math inline">\(a_*\)</span> is, heuristically, the published
-spacing there: from <span class="math inline">\(0.17\)</span> fm down to
-<span class="math inline">\(0.093\)</span> fm with <span
-class="math inline">\(r_0=0.5\)</span> fm.</p>
-<p>H1 and H2 leave the continuum construction open. They give no
-convergence of Schwinger functions as <span
-class="math inline">\(a_0\to0\)</span>, no Osterwalder–Schrader axioms
-(Euclidean invariance in particular), no infinite-volume continuum
-theory and no nontriviality. The same number bounds the gap of a
-continuum Hamiltonian only for a continuum limit constructed separately,
-with the axioms, in the sense of hypothesis (E) of §3. The upper side
-<span class="math inline">\(m&lt;\infty\)</span> needs nontriviality,
-and T3 is not implied. Neither hypothesis is available today: no
-blocking step of H1 is controlled with explicit constants, and H2 has no
-feasible certified route at <span
-class="math inline">\(\beta_W\simeq6\)</span>. Constants explicit;
-nothing promoted.</p>
-<h2 id="setting">1. Setting</h2>
+<h1>Conditional gauge-gap transfer: multiscale control, mixing and
+certification</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/mass-gap-conditional-theorem.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/mass-gap-conditional-theorem.pdf">PDF</a></p><p>An exact retained-variable blocking scheme with hypotheses H1 and H2
+below gives a volume-uniform <strong>Wilson-transfer</strong> energy gap
+along its trajectory:</p>
+<p><span class="math display">\[\Delta_W(a_0)\ge\frac{\hbar
+c\,\gamma_m}{2^{K(a_0)}a_0},\qquad
+\liminf_{a_0\downarrow0}\Delta_W(a_0)
+\ge\frac{\hbar c\,\gamma_m}{a_*},\qquad
+\gamma_m=\min(\gamma_*,\gamma&#39;)&gt;0.\]</span></p>
+<p>H1 requires decay of every retained fluctuation, quasi-local coarse
+projections and a controlled Gibbs interaction. H2 requires uniform
+mixing for a whole interaction neighbourhood in every relevant periodic
+box. Neither hypothesis is proved for the proposed physical trajectory.
+A separately constructed continuum theory satisfying (E) inherits the
+lower bound; H1/H2 alone construct no continuum quantum field
+theory.</p>
+<p>A finite-box certificate is one possible way to obtain H2
+<strong>if</strong> an applicable finite-size theorem and its
+quantitative margin are supplied. It is not an automatic reduction of
+the problem to a small box or two coupling numbers. The exact
+gauge-reduction argument, robustness bound and numerical scale
+comparisons below state what such a certificate would need. All proof
+checks here are internal written checks; source reading levels are
+stated and no literature novelty is asserted.</p>
+<span id="setting"></span><span id="the-map-as-one-conditional-theorem-h1-and-h2-give-a-volume-uniform-lattice-gap-bound-and-continuum-existence-stays-a-separate-obligation"></span><h2 id="wilson-measures-and-retained-variables">Wilson measures and
+retained variables</h2>
 <p><em>Measures.</em> The Wilson measure <span
 class="math inline">\(\mu_{\beta_0}\)</span> lives on the links of a
 periodic box in <span class="math inline">\((a_0\mathbb Z)^4\)</span> at
@@ -246,8 +133,7 @@ class="math inline">\(D_k=E_k-E_{k+1}\)</span>. For a function <span
 class="math inline">\(F\)</span> of level-<span
 class="math inline">\(k\)</span> links, <span
 class="math inline">\(E_{k+1}F\)</span> is the conditional expectation
-given the coarse links, written <span class="math inline">\(\bar
-F\)</span> in the earlier version.</p>
+given the coarse links.</p>
 <p><em>Distances and supports.</em> Distances are <span
 class="math inline">\(\ell^\infty\)</span> distances between link
 midpoints, measured on the torus in units of the lattice concerned. A
@@ -284,7 +170,8 @@ class="math inline">\(\|\mu-\nu\|_{\rm
 TV}=\sup_A|\mu(A)-\nu(A)|\)</span>, so that <span
 class="math inline">\(|\mu(f)-\nu(f)|\le2\|f\|_\infty\|\mu-\nu\|_{\rm
 TV}\)</span> for bounded <span class="math inline">\(f\)</span>.</p>
-<h2 id="the-hypotheses">2. The hypotheses</h2>
+<span id="the-hypotheses"></span><h2 id="multiscale-and-mixing-hypotheses">Multiscale and mixing
+hypotheses</h2>
 <p><strong>H2 (uniform strong mixing near <span
 class="math inline">\(\Phi_0\)</span>).</strong> There are a
 gauge-invariant reference interaction <span
@@ -315,8 +202,8 @@ set.</p>
 with spacings <span class="math inline">\(a_0\to0\)</span> (the
 trajectory) there are integers <span
 class="math inline">\(K=K(a_0)\)</span> with <span
-class="math inline">\(2^Ka_0\to a_*\)</span> and a number <span
-class="math inline">\(\gamma_*&gt;0\)</span>, with the following
+class="math inline">\(2^Ka_0\to a_*\in(0,\infty)\)</span> and a number
+<span class="math inline">\(\gamma_*&gt;0\)</span>, with the following
 properties on every fine periodic box whose sides are multiples of <span
 class="math inline">\(2^Ka_0\)</span> and at least <span
 class="math inline">\(2^KL_0a_0\)</span> (<span
@@ -360,142 +247,8 @@ interaction <span class="math inline">\(\Phi^{(K)}\)</span> with <span
 class="math inline">\(\|\Phi^{(K)}-\Phi_0\|_\kappa\le r\)</span>.</li>
 </ol></li>
 </ul>
-<p>For <span class="math inline">\(F,G\)</span> functions of level-<span
-class="math inline">\(k\)</span> links, the left side of (a) equals
-<span class="math inline">\(\langle F;G\rangle_{\mu^{(k)}}-\langle\bar
-F;\bar G\rangle_{\mu^{(k+1)}}\)</span>, the quantity of the earlier H1.
-That version stopped at such <span class="math inline">\(F,G\)</span>;
-the proof applies (a) to <span class="math inline">\(E_kF\)</span> for
-fine <span class="math inline">\(F\)</span>, which is a function of
-level-<span class="math inline">\(k\)</span> links but only quasi-local
-on that lattice. In words: the fluctuation added at each step clusters
-exponentially at the scale of that step, the coarse projection of a
-local observable is exponentially well localized at the final scale, and
-the trajectory arrives within distance <span
-class="math inline">\(r\)</span> of <span
-class="math inline">\(\Phi_0\)</span>.</p>
-<p><em>What is known about H1.</em> At small effective coupling,
-rigorous small-field renormalization (Balaban and others, metadata
-level, as listed in <a
-href="mass-gap-openings.html#correlation-inequalities-and-the-transfer-they-require">reasons
-to stop</a>) controls effective actions in finite volume with
-unspecified constants; no source read here derives (a)–(c) from it. The
-repository’s <a href="small-field-step-gaussian.html">Gaussian blocking
-treatment</a> proves a tube gap and a distinct soft-constraint decay
-criterion. Its interacting remainder test is conditional; the former
-numerical thresholds mixed lattice norms and hard/soft covariances and
-supply no certified region for (a)–(c). The final steps, in which the
-continuum-scaled <span class="math inline">\(\xi/a\)</span> passes from
-about <span class="math inline">\(10\)</span> to about <span
-class="math inline">\(1\)</span>, are the confinement-scale problem;
-<span class="math inline">\(\log_210\simeq3.3\)</span> doublings is a
-kinematic count and does not show that only these steps are open (<a
-href="confinement-scale-bands.html">bands note</a> §§1, 2b). Part (c)
-can fail for block maps in general: <a
-href="https://arxiv.org/abs/hep-lat/9210032">van Enter, Fernández and
-Sokal</a> (J. Stat. Phys. 72 (1993) 879; abstract read, as recorded in
-the bands note §2b) give non-Gibbsian images.</p>
-<p><strong>Lemma 0 (gauge reduction).</strong> Let <span
-class="math inline">\(\Phi\)</span> be gauge-invariant, <span
-class="math inline">\(\Lambda\)</span> a set of links, and <span
-class="math inline">\(\mathsf G_\Lambda\)</span> the group of gauge
-transformations at the sites all of whose incident links lie in <span
-class="math inline">\(\Lambda\)</span>. For configurations <span
-class="math inline">\(\omega,\omega&#39;\)</span> outside <span
-class="math inline">\(\Lambda\)</span> and <span
-class="math inline">\(W\subseteq\Lambda\)</span>, the total-variation
-distance between the marginals of <span
-class="math inline">\(\mu_\Lambda^{\Phi,\omega}\)</span> and <span
-class="math inline">\(\mu_\Lambda^{\Phi,\omega&#39;}\)</span> on <span
-class="math inline">\(W\)</span> equals the supremum of <span
-class="math inline">\(|\mu_\Lambda^{\Phi,\omega}(A)-\mu_\Lambda^{\Phi,\omega&#39;}(A)|\)</span>
-over <span class="math inline">\(\mathsf G_\Lambda\)</span>-invariant
-events <span class="math inline">\(A\)</span> of the links of <span
-class="math inline">\(W\)</span>.</p>
-<p><em>Proof.</em> An element of <span class="math inline">\(\mathsf
-G_\Lambda\)</span> moves only links of <span
-class="math inline">\(\Lambda\)</span>, leaves <span
-class="math inline">\(\omega\)</span> fixed, preserves Haar measure and
-every <span class="math inline">\(\Phi_X\)</span>, and so preserves
-<span class="math inline">\(\mu_\Lambda^{\Phi,\omega}\)</span>; it maps
-configurations of <span class="math inline">\(W\)</span> to
-configurations of <span class="math inline">\(W\)</span>. For <span
-class="math inline">\(|f|\le1\)</span> on <span
-class="math inline">\(W\)</span>, the Haar average <span
-class="math inline">\(Pf\)</span> of <span
-class="math inline">\(f\)</span> over <span
-class="math inline">\(\mathsf G_\Lambda\)</span> is invariant, satisfies
-<span class="math inline">\(|Pf|\le1\)</span>, and has the same
-expectation as <span class="math inline">\(f\)</span> under both
-measures. Since the total-variation distance is half the supremum of
-<span class="math inline">\(|\mu(f)-\nu(f)|\)</span> over <span
-class="math inline">\(|f|\le1\)</span>, the supremum may be taken over
-invariant <span class="math inline">\(f\)</span>. <span
-class="math inline">\(\square\)</span></p>
-<p>The invariant <span class="math inline">\(\sigma\)</span>-algebra
-contains the traces of closed loops in <span
-class="math inline">\(W\)</span> and the matrix entries of open paths in
-<span class="math inline">\(W\)</span> whose endpoints are sites with an
-incident link outside <span class="math inline">\(\Lambda\)</span>. A
-selection of small Wilson loops is not known to generate it. So H2 is to
-be read on this whole <span
-class="math inline">\(\sigma\)</span>-algebra, boundary-attached lines
-included; interior single-link marginals are Haar and contribute nothing
-(<a href="confinement-scale-bands.html">bands note</a>).</p>
-<p><em>From one box to H2.</em> The earlier H2 asked for the mixing
-bound for <span class="math inline">\(\Phi_0\)</span> on one box <span
-class="math inline">\(V\)</span> of side <span
-class="math inline">\(R\)</span>, with a margin covering the <span
-class="math inline">\(r\)</span>-ball. Statements of that kind are the
-input of finite-size criteria: the Dobrushin–Shlosman constructive
-criterion and complete analyticity (<em>Statistical Physics and
-Dynamical Systems</em>, Birkhäuser 1985, 347 and 371; J. Stat. Phys. 46
-(1987) 983) and the strong-mixing theory of Martinelli and Olivieri
-(Commun. Math. Phys. 161 (1994) 447 and 487), all at metadata level.
-They pass from a quantitative condition on one finite box to mixing in
-every volume of a class. The proof needs H2 as stated, in every periodic
-box. Applying those criteria here requires their transfer to link
-variables with <span class="math inline">\(SU(3)\)</span> spins, to
-interactions with exponential tails such as <span
-class="math inline">\(\Phi^{(K)}\)</span>, and to periodic boxes; this
-note assumes that transfer and does not derive it. The robustness margin
-itself is elementary: replacing <span
-class="math inline">\(\Phi_0\)</span> by <span
-class="math inline">\(\Phi\)</span> with <span
-class="math inline">\(\|\Phi-\Phi_0\|_\kappa\le r\)</span> changes the
-energy of a box <span class="math inline">\(V\)</span> by at most <span
-class="math inline">\(|V|\,r\)</span> in sup norm, hence each
-conditional measure on <span class="math inline">\(V\)</span> by at most
-<span class="math inline">\(e^{2|V|r}-1\)</span> in total variation (<a
-href="dobrushin-uniqueness-wilson.html">Dobrushin note</a>, Lemma
-1).</p>
-<p><em>The reference interaction.</em> A natural <span
-class="math inline">\(\Phi_0\)</span> is the Wilson interaction at <span
-class="math inline">\(\beta_W\)</span> between <span
-class="math inline">\(5.7\)</span> and <span
-class="math inline">\(6.0\)</span>, where the continuum-scaled <span
-class="math inline">\(\xi/a\)</span> runs from <span
-class="math inline">\(0.70\)</span> to <span
-class="math inline">\(1.28\)</span> (<a
-href="confinement-scale-bands.html">bands note</a>, table). A nearby
-interaction with a small negative adjoint term moves <span
-class="math inline">\(\Phi_0\)</span> away from the endpoint of the
-fundamental–adjoint first-order line, where the scalar channel softens
-(precision of 2026-09-23, <a href="mass-gap-openings.html">openings
-note</a> §1). Boxes of side <span class="math inline">\(R=3\)</span> to
-<span class="math inline">\(5\)</span> are trial sizes, and no
-sufficient size is known. For them a certified bound is an integral over
-<span class="math inline">\(1728\)</span> to <span
-class="math inline">\(16000\)</span> real dimensions with a supremum
-over boundary conditions (bands note §2). <a
-href="mass-gap-openings.html#correlation-inequalities-and-the-transfer-they-require">Reasons
-to stop</a> records that no certified method known here reaches <span
-class="math inline">\(\beta_W\simeq6\)</span>; certified polymer
-enumeration is proved only for <span
-class="math inline">\(\beta_W\lesssim10^{-2}\)</span> (<a
-href="mass-gap-obligations-lattice.html#existing-estimates-and-examined-routes">position
-note</a>, correction of 2026-10-02).</p>
-<h2 id="the-theorem">3. The theorem</h2>
+<span id="the-theorem"></span><h2 id="conditional-spectral-transfer">Conditional spectral
+transfer</h2>
 <p>Write <span
 class="math inline">\(\gamma_m=\min(\gamma_*,\gamma&#39;)\)</span>. A
 periodic box is admissible for <span class="math inline">\(a_0\)</span>
@@ -546,8 +299,11 @@ class="math inline">\(F\)</span> with lattice approximants <span
 class="math inline">\(F_{a_0}\)</span>, such that: with <span
 class="math inline">\(\psi_{F,a_0}\)</span> the lattice vector of <span
 class="math inline">\(F_{a_0}\)</span> minus its vacuum component and
-<span class="math inline">\(n=\lfloor\tau/a_0\rfloor\)</span>, the inner
-products <span class="math inline">\(\langle\psi_{F,a_0},\mathcal
+<span class="math inline">\(n=\lfloor\tau/a_0\rfloor\)</span>, with
+<span class="math inline">\(\tau\)</span> a Euclidean separation in
+length units (physical time <span
+class="math inline">\(\tau/c\)</span>), the inner products <span
+class="math inline">\(\langle\psi_{F,a_0},\mathcal
 T^n\psi_{F,a_0}\rangle\)</span> converge for every <span
 class="math inline">\(\tau\ge0\)</span> to <span
 class="math inline">\(\langle\psi_F,e^{-\tau H/\hbar
@@ -613,8 +369,6 @@ and <span class="math inline">\(\mathbb E[D_kF]=0\)</span>. Expand <span
 class="math inline">\(\mathbb E[FG]\)</span> and use <span
 class="math inline">\(\mathbb E F=\mathbb E\,E_KF\)</span>. <span
 class="math inline">\(\square\)</span></p>
-<p>The earlier proof bounded the cross terms by the decay rates; they
-vanish identically.</p>
 <p><strong>Lemma 3 (the coarse term).</strong> Assume H1(b), H1(c) and
 H2. Let local fine <span class="math inline">\(F,G\)</span> have images
 <span class="math inline">\(S_F^{(K)},S_G^{(K)}\)</span> at level-<span
@@ -760,88 +514,348 @@ class="math inline">\(B(F)\)</span> and <span
 class="math inline">\(A_\varepsilon\)</span>, which may grow with <span
 class="math inline">\(K(a_0)\)</span>, never reach item 5: the passage
 to the continuum needs (E) and no uniformity in those constants.</p>
-<p><strong>Jaffe–Witten and T3.</strong> Item 5 supplies the lower half
-of the Jaffe–Witten clause <span
-class="math inline">\(0&lt;m&lt;\infty\)</span> for a continuum theory
-constructed by other means. The upper half is the bound <span
-class="math inline">\(m\le M_0/M_{-1}\)</span> of <a
-href="finiteness-half-flowed-susceptibility.html#positive-spectral-measures-and-the-observable-channel">the
-spectral upper-bound treatment</a>, with a nonzero admissible
-Hamiltonian insertion and finite positive moments <span
-class="math inline">\(M_0,M_{-1}\)</span>. Four-dimensional flow
-ultraviolet finiteness alone does not establish the insertion or
-infrared hypotheses. The observed channel can miss lower states. T3 asks
-the scaled gap <span class="math inline">\(\Delta(a_0)/(\hbar
-c\Lambda)\)</span> to converge. Item 4 bounds its lower limit by <span
-class="math inline">\(\gamma_m/(a_*\Lambda)\)</span> and is silent on
-convergence. <a href="intermediate-region-finite-verification.html">The
-finite-verification note</a> §4 relates T3 to the convergence of
-blocking trajectories under its assumption of exact low-energy
-reductions; that relation is heuristic.</p>
-<h2 id="what-the-theorem-makes-visible">4. What the theorem makes
-visible</h2>
-<p><em>The bound is a ratio of a rate to a physical length.</em> Suppose
-<span class="math inline">\(\Phi_0\)</span> is the Wilson interaction at
-<span class="math inline">\(\beta_W=6.0\)</span> and <span
-class="math inline">\(\Phi^{(K)}\)</span> lies close to it.
-Heuristically <span class="math inline">\(a_*\)</span> is then the
-published spacing at that coupling, <span
-class="math inline">\(a_*\simeq0.093\)</span> fm (<span
-class="math inline">\(r_0/a=5.37\)</span>, <span
-class="math inline">\(r_0=0.5\)</span> fm). The continuum-scaled
-glueball estimate <span class="math inline">\(E_{0^{++}}=8.42\,\hbar
-c\,{\rm fm}^{-1}\simeq1.66\)</span> GeV gives <span
-class="math inline">\(\mu_{0^{++}}a_*\simeq0.78\)</span> (<a
-href="confinement-scale-bands.html">bands note</a>, table; a
-continuum-scaled value, not a measured lattice mass). A proved <span
-class="math inline">\(\gamma_m\)</span> of any positive size gives item
-4. A rate <span class="math inline">\(\gamma_m=0.1\)</span> would give
-<span class="math inline">\(\hbar c\,\gamma_m/a_*\simeq1.07\,\hbar
-c\,{\rm fm}^{-1}\simeq0.21\)</span> GeV, about one eighth of that
-estimate. At <span class="math inline">\(\beta_W=5.7\)</span> the same
-figures are <span class="math inline">\(a_*\simeq0.17\)</span> fm and
-<span class="math inline">\(\mu_{0^{++}}a\simeq1.44\)</span>.</p>
-<p><em>What the hypotheses cost.</em> H1 has <span
-class="math inline">\(K(a_0)\simeq\log_2(a_*/a_0)\)</span> steps,
-unbounded as <span class="math inline">\(a_0\to0\)</span>, so it is an
-infinite family of statements with order-one coupling only at its end;
-no step is controlled here with explicit constants (§2). H2 is uniform
-strong mixing in every periodic box for a whole neighbourhood of
-interactions. It reduces to one finite box only through the assumed
-transfer of a finite-size criterion, and the certification of that box
-at <span class="math inline">\(\beta_W\simeq6\)</span> is out of reach
-of the certified methods known here.</p>
-<p><em>What is in place, and what is left.</em> In place: T1 for every
-finite lattice (<a href="mass-gap-obligations-lattice.html">obligations
-map</a> §2); the decay-to-gap transfer (item 3; <a
-href="wilson-strong-coupling-explicit.html">the Wilson note</a> §3);
-volume-uniform strong-coupling gaps for the Wilson transfer matrix at
-<span class="math inline">\(g^2&gt;444\)</span> (Dobrushin) and <span
-class="math inline">\(g^2\ge1059\)</span> (polymer expansion, all
-representations), with <span class="math inline">\(176\)</span> the
-leading-activity figure only; T2 for the Kogut–Susskind Hamiltonian from
-Yarotsky’s existential threshold, which his proof makes <span
-class="math inline">\(g_0^2\simeq10^{101}\)</span>; and the upper side
-of the gap given existence and nontriviality. The theorem uses none of
-the strong-coupling results, since its trajectory comes from weak
-coupling. Left: H1 and H2, and outside the theorem the construction (E)
-with the axioms and the infinite-volume limit, nontriviality, and
-T3.</p>
-<h2 id="consequence-for-state">5. Consequence for STATE</h2>
-<p>The pure-gauge map is a conditional lattice theorem. H1 and H2 give a
-volume-uniform gap of the Wilson transfer matrix at each spacing of the
-trajectory, at least <span class="math inline">\(\hbar
-c\min(\gamma_*,\gamma&#39;)/(2^Ka_0)\)</span>, whose lower limit is at
-least <span class="math inline">\(\hbar
-c\min(\gamma_*,\gamma&#39;)/a_*\)</span>. In a continuum limit
-constructed separately with the Osterwalder–Schrader axioms, the same
-number bounds the Hamiltonian’s gap from below. H2 now means uniform
-strong mixing in every periodic box; it reduces to one box only through
-an assumed transfer of a finite-size criterion, and it has no feasible
-certified route at <span class="math inline">\(\beta_W\simeq6\)</span>.
-The STATE line, with H1/H2 open and continuum construction and
-nontriviality explicit obligations, stands as written; the catalogs need
-this note’s new title and scope.</p>
+<h2 id="what-a-finite-certificate-would-have-to-prove">What a finite
+certificate would have to prove</h2>
+<p>The gauge theory is a compact-spin Gibbs specification on links, with
+<span
+class="math inline">\(\Phi_p=-(\beta_W/N)\operatorname{Re}\operatorname{tr}U_p\)</span>
+and <span class="math inline">\(\beta_W=2N/g^2\)</span>. Finite range
+and bounded plaquette terms do not by themselves supply the
+strong-mixing certificate required by H2. Dobrushin–Shlosman, <em>J.
+Stat. Phys.</em> <strong>46</strong> (1987) 983, and
+Martinelli–Olivieri, <em>CMP</em> <strong>161</strong> (1994) 447 and
+487, are finite-size and mixing source leads at
+<strong>metadata</strong> level here. Applying their criteria to this
+link specification, periodic boxes and exponentially tailed generated
+interactions is an additional theorem, not checked merely by identifying
+a compact spin space.</p>
+<p>For a finite set <span class="math inline">\(V\)</span> of links, a
+perturbation with <span class="math inline">\(\|\Phi-\Phi_0\|_\kappa\le
+r\)</span> changes its conditional energy by at most <span
+class="math inline">\(|V|r\)</span>. Normalizing the two densities gives
+the elementary bound</p>
+<p><span
+class="math display">\[\|\mu_V^{\Phi,\omega}-\mu_V^{\Phi_0,\omega}\|_{\rm
+TV}
+\le\min\{1,e^{2|V|r}-1\}.\]</span></p>
+<p>Thus a <strong>verified</strong> quantitative finite-size condition
+with slack could yield a neighbourhood. This bound supplies neither the
+original contraction margin nor the passage from one box to all volumes.
+A decay-looking inequality on one finite box can be vacuous if its
+prefactor is allowed to be arbitrarily large.</p>
+<h3 id="gauge-invariance-and-the-marginal-that-must-be-controlled">Gauge
+invariance and the marginal that must be controlled</h3>
+<p>If an endpoint of a link <span class="math inline">\(x\)</span> has
+all incident links in <span class="math inline">\(V\)</span>, gauge
+transformations there preserve <span
+class="math inline">\(\mu_V^{\Phi,\omega}\)</span> for every fixed
+external boundary <span class="math inline">\(\omega\)</span> and act
+transitively by left or right multiplication on <span
+class="math inline">\(U_x\)</span>. Its single-link marginal is Haar,
+independent of <span class="math inline">\(\omega\)</span>. A
+boundary-influence test using only those marginals is therefore empty.
+Equal one-link marginals do not imply equal joint laws. This does not
+invalidate the ordinary single-link Dobrushin criterion, which
+conditions on <strong>all other links</strong>, removing that free gauge
+transformation.</p>
+<p><strong>Gauge-reduction lemma.</strong> Let <span
+class="math inline">\(\Phi\)</span> be gauge-invariant, <span
+class="math inline">\(\Lambda\)</span> a set of links, and <span
+class="math inline">\(\mathsf G_\Lambda\)</span> the group of gauge
+transformations at the sites all of whose incident links lie in <span
+class="math inline">\(\Lambda\)</span>. For configurations <span
+class="math inline">\(\omega,\omega&#39;\)</span> outside <span
+class="math inline">\(\Lambda\)</span> and <span
+class="math inline">\(W\subseteq\Lambda\)</span>, the total-variation
+distance between the marginals of <span
+class="math inline">\(\mu_\Lambda^{\Phi,\omega}\)</span> and <span
+class="math inline">\(\mu_\Lambda^{\Phi,\omega&#39;}\)</span> on <span
+class="math inline">\(W\)</span> equals the supremum of <span
+class="math inline">\(|\mu_\Lambda^{\Phi,\omega}(A)-\mu_\Lambda^{\Phi,\omega&#39;}(A)|\)</span>
+over <span class="math inline">\(\mathsf G_\Lambda\)</span>-invariant
+events <span class="math inline">\(A\)</span> of the links of <span
+class="math inline">\(W\)</span>.</p>
+<p><em>Proof.</em> An element of <span class="math inline">\(\mathsf
+G_\Lambda\)</span> moves only links of <span
+class="math inline">\(\Lambda\)</span>, leaves <span
+class="math inline">\(\omega\)</span> fixed, preserves Haar measure and
+every <span class="math inline">\(\Phi_X\)</span>, and so preserves
+<span class="math inline">\(\mu_\Lambda^{\Phi,\omega}\)</span>; it maps
+configurations of <span class="math inline">\(W\)</span> to
+configurations of <span class="math inline">\(W\)</span>. For <span
+class="math inline">\(|f|\le1\)</span> on <span
+class="math inline">\(W\)</span>, the Haar average <span
+class="math inline">\(Pf\)</span> of <span
+class="math inline">\(f\)</span> over <span
+class="math inline">\(\mathsf G_\Lambda\)</span> is invariant, satisfies
+<span class="math inline">\(|Pf|\le1\)</span>, and has the same
+expectation as <span class="math inline">\(f\)</span> under both
+measures. Since the total-variation distance is half the supremum of
+<span class="math inline">\(|\mu(f)-\nu(f)|\)</span> over <span
+class="math inline">\(|f|\le1\)</span>, the supremum may be taken over
+invariant <span class="math inline">\(f\)</span>. <span
+class="math inline">\(\square\)</span></p>
+<p>The invariant <span class="math inline">\(\sigma\)</span>-algebra
+contains the traces of closed loops in <span
+class="math inline">\(W\)</span> and the matrix entries of open paths in
+<span class="math inline">\(W\)</span> whose endpoints are sites with an
+incident link outside <span class="math inline">\(\Lambda\)</span>. A
+selection of small Wilson loops is not known to generate it. So H2 is to
+be read on this whole <span
+class="math inline">\(\sigma\)</span>-algebra, boundary-attached lines
+included; interior single-link marginals are Haar and contribute nothing
+as shown by the single-link argument above.</p>
+<h3 id="the-target-is-a-neighbourhood-of-interactions">The target is a
+neighbourhood of interactions</h3>
+<p>A usable target is a certified mixing set in the full normed
+interaction space. A blocked law has higher and longer-range terms; one
+scalar Wilson coupling does not describe its distance from that set. Nor
+is the set of gapped couplings proved to be an upper interval.
+Certification at one <span class="math inline">\(g^2\)</span>
+consequently certifies neither every larger coupling nor every
+subsequent blocked image. A schematic inequality <span
+class="math inline">\(g_{\rm RG}^2\ge g_{\rm DS}^2\)</span> omits both
+these qualifications and the observable/projection bounds H1 needs for
+transfer.</p>
+<p>Even the Gibbs representation in H1(c) is substantive. A measurable
+block map always has a pushforward measure; it need not have a summable
+Gibbs interaction. Van Enter–Fernández–Sokal, <a
+href="https://arxiv.org/abs/hep-lat/9210032">hep-lat/9210032</a>,
+abstract read, supplies non-Gibbsian examples, not a quantitative
+theorem for our map. Preserving a Gibbs representation would still leave
+the generated interaction norm and renewed mixing estimates to
+prove.</p>
+<p>The simple oscillation method shows one failed improvement route.
+Using the one-link density-oscillation estimate in <a
+href="dobrushin-uniqueness-wilson.html">the Dobrushin proof</a>, replace
+every block influence <span class="math inline">\(\rho_V(x,y)\)</span>
+by <span class="math inline">\(e^{4\beta_W}-1\)</span>. Its block sum is
+then bounded by <span class="math inline">\(|V||\partial
+V|(e^{4\beta_W}-1)\)</span>; the corresponding test <span
+class="math inline">\(|\partial V|(e^{4\beta_W}-1)&lt;1\)</span> gets
+worse with the boundary. This crude majorant captures no screening.
+Improvement requires actual joint sub-block influence estimates, not a
+declaration that larger blocks are better. Its failure excludes neither
+other criteria nor other proofs of a gap.</p>
+<h2 id="numerical-orientation-and-its-limits">Numerical orientation and
+its limits</h2>
+<p>The following are scale comparisons, <strong>not
+certificates</strong>. For pure <span
+class="math inline">\(SU(3)\)</span> use Necco–Sommer, <em>Nucl. Phys.
+B</em> <strong>622</strong> (2002) 328, metadata, for <span
+class="math inline">\(r_0/a\)</span>; Morningstar–Peardon, <a
+href="https://arxiv.org/abs/hep-lat/9901004">hep-lat/9901004</a>,
+abstract read, for the retained continuum-scaled input <span
+class="math inline">\(r_0\mu_{0^{++}}=4.21\)</span>. The orienting
+string-tension input is <span
+class="math inline">\(r_0^2\sigma\simeq1.35\)</span>. Here <span
+class="math inline">\(\mu\)</span> is inverse length and physical energy
+is <span class="math inline">\(\hbar c\mu\)</span>; physical string
+tension is <span class="math inline">\(\hbar c\sigma\)</span>.</p>
+<p><span class="math display">\[\mu_{0^{++}}a=\frac{4.21}{r_0/a},\qquad
+\frac\xi a=\frac{r_0/a}{4.21},\qquad
+\sigma a^2=\frac{1.35}{(r_0/a)^2}.\]</span></p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(\beta_W\)</span></th>
+<th><span class="math inline">\(g^2\)</span></th>
+<th><span class="math inline">\(r_0/a\)</span></th>
+<th>scaled <span class="math inline">\(\mu a\)</span></th>
+<th>scaled <span class="math inline">\(\xi/a\)</span></th>
+<th>scaled <span class="math inline">\(\sigma a^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(5.7\)</span></td>
+<td><span class="math inline">\(1.05\)</span></td>
+<td><span class="math inline">\(2.92\)</span></td>
+<td><span class="math inline">\(1.44\)</span></td>
+<td><span class="math inline">\(0.70\)</span></td>
+<td><span class="math inline">\(0.16\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(6.0\)</span></td>
+<td><span class="math inline">\(1.00\)</span></td>
+<td><span class="math inline">\(5.37\)</span></td>
+<td><span class="math inline">\(0.78\)</span></td>
+<td><span class="math inline">\(1.28\)</span></td>
+<td><span class="math inline">\(0.047\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(6.2\)</span></td>
+<td><span class="math inline">\(0.97\)</span></td>
+<td><span class="math inline">\(7.38\)</span></td>
+<td><span class="math inline">\(0.57\)</span></td>
+<td><span class="math inline">\(1.75\)</span></td>
+<td><span class="math inline">\(0.025\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(6.4\)</span></td>
+<td><span class="math inline">\(0.94\)</span></td>
+<td><span class="math inline">\(9.74\)</span></td>
+<td><span class="math inline">\(0.43\)</span></td>
+<td><span class="math inline">\(2.31\)</span></td>
+<td><span class="math inline">\(0.014\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>These are continuum-scaled estimates, not measured lattice masses or
+uniform boundary-mixing rates. Near <span
+class="math inline">\(\beta_W\simeq5.7\)</span>, scalar softening beside
+the fundamental–adjoint first-order endpoint can increase the actual
+lattice correlation length; the source scope is in <a
+href="mass-gap-openings.html">the crossover comparison</a>. Adding a
+negative adjoint term changes the interaction and requires its own
+certificate. Neither an area coefficient nor a vacuum correlation length
+is a boundary-influence contraction margin.</p>
+<p>With the conventional <span class="math inline">\(r_0=0.5\)</span>
+fm, <span
+class="math inline">\(\mu_{0^{++}}=8.42\,\mathrm{fm}^{-1}\)</span> and
+<span class="math inline">\(E_{0^{++}}\simeq1.66\)</span> GeV using
+<span class="math inline">\(\hbar c\simeq0.1973\)</span> GeV fm. The
+spacings are about <span class="math inline">\(0.17\)</span> fm at <span
+class="math inline">\(\beta_W=5.7\)</span> and <span
+class="math inline">\(0.093\)</span> fm at <span
+class="math inline">\(6.0\)</span>. Identifying the theorem’s <span
+class="math inline">\(a_*\)</span> with one of these spacings is
+heuristic. If it were <span class="math inline">\(0.093\)</span> fm and
+a rate <span class="math inline">\(\gamma_m=0.1\)</span> were proved,
+its lower bound would be about <span class="math inline">\(0.21\)</span>
+GeV, not the central glueball estimate. The theorem needs a positive
+rate, not that value.</p>
+<h3 id="trial-boxes-and-the-costs-not-removed-by-symmetry">Trial boxes
+and the costs not removed by symmetry</h3>
+<p>A free-boundary four-dimensional cube with <span
+class="math inline">\(R\)</span> sites per axis and only internal links
+integrated has</p>
+<p><span
+class="math display">\[|V|=4(R-1)R^3=216,768,2000\quad(R=3,4,5).\]</span></p>
+<p>Without gauge reduction these are <span
+class="math inline">\(8|V|=1728,6144,16000\)</span> real integration
+dimensions, plus the supremum over external boundary links meeting the
+interaction. The counts are exact for that convention; <span
+class="math inline">\(R=3\)</span>–<span
+class="math inline">\(5\)</span> are trial sizes, not sufficient sizes.
+Proposed sizes <span class="math inline">\(10\)</span>–<span
+class="math inline">\(30\)</span> are likewise not a proved requirement.
+No certificate at the physical crossover is supplied here.</p>
+<p>For contrast, the sufficient <strong>fixed-cutoff Wilson</strong>
+one-link condition is <span
+class="math inline">\(\beta_W&lt;\tfrac14\log(19/18)\)</span>, implied
+by <span class="math inline">\(g^2&gt;444\)</span>. It yields</p>
+<p><span class="math display">\[\Delta_W\ge\frac{\hbar c}{a}
+\log\frac1{18(e^{24/g^2}-1)}&gt;0.\]</span></p>
+<p>The source is the <a
+href="dobrushin-uniqueness-wilson.html">Dobrushin argument</a>; the
+separate <a href="wilson-strong-coupling-explicit.html">polymer
+argument</a> has the sufficient integer bound <span
+class="math inline">\(g^2\ge1059\)</span>. Neither supplies a margin at
+<span class="math inline">\(\beta_W\simeq6\)</span>, and neither is the
+Kogut–Susskind stability theorem. The latter has an existential local
+threshold, not a proved <span class="math inline">\(10^{101}\)</span> or
+<span class="math inline">\(10^{102}\)</span> numerical threshold. The
+three old coupling bands are therefore orientation relative to
+particular sufficient methods, not phase boundaries.</p>
+<h3 id="blocking-counts-and-an-area-law-countertest">Blocking counts and
+an area-law countertest</h3>
+<p>Pure-<span class="math inline">\(SU(3)\)</span> one-loop running has
+<span class="math inline">\(2b_0\log2\simeq0.09657\)</span>, hence the
+extrapolation</p>
+<p><span class="math display">\[n\simeq\frac{g_{\rm UV}^{-2}-g_{\rm
+ref}^{-2}}{2b_0\log2}.\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(g_{\rm UV}^2\)</span></th>
+<th>formal <span class="math inline">\(n\)</span> as <span
+class="math inline">\(g_{\rm ref}^{-2}\to0\)</span></th>
+<th><span class="math inline">\(2^n\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(10.4\)</span></td>
+<td><span class="math inline">\(1.4\times10^3\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(1/2\)</span></td>
+<td><span class="math inline">\(20.7\)</span></td>
+<td><span class="math inline">\(1.7\times10^6\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(1/4\)</span></td>
+<td><span class="math inline">\(41.4\)</span></td>
+<td><span class="math inline">\(2.9\times10^{12}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>At the same bare-coupling convention the <span
+class="math inline">\(SU(2)\)</span> counts are <span
+class="math inline">\(15.5,31.1,62.1\)</span>. This compares
+perturbative coefficients, not total proof difficulty. From <span
+class="math inline">\(g^2=1/2\)</span> to <span
+class="math inline">\(1\)</span> the <span
+class="math inline">\(SU(3)\)</span> formula gives about <span
+class="math inline">\(10.4\)</span> doublings. At fixed physical <span
+class="math inline">\(\xi\)</span>, a decrease of <span
+class="math inline">\(\xi/a\)</span> from <span
+class="math inline">\(10\)</span> to <span
+class="math inline">\(1\)</span> takes <span
+class="math inline">\(\log_2 10\simeq3.32\)</span> doublings
+kinematically. Neither calculation proves that earlier steps are
+controlled or that only the last three steps remain open. The number
+<span class="math inline">\(K(a_0)\)</span> in H1 is unbounded as <span
+class="math inline">\(a_0\downarrow0\)</span>.</p>
+<p>Straight-link product blocking makes a coarse plaquette exactly a
+<span class="math inline">\(2^k\times2^k\)</span> fine loop. Modelling
+its expectation by <span class="math inline">\(e^{-\sigma a^2
+4^k}\)</span> at <span class="math inline">\(\sigma a^2=0.16\)</span>
+gives <span class="math inline">\(0.53\)</span>, <span
+class="math inline">\(0.077\)</span>, <span
+class="math inline">\(3.6\times10^{-5}\)</span> for <span
+class="math inline">\(k=1,2,3\)</span>. This omits perimeter terms,
+prefactors and finite-loop effects. An expectation is not a polymer
+activity or an interaction norm; no three-step arrival at a certified
+region follows. The analogous Migdal–Kadanoff fourth-power recursion,
+Kadanoff <em>Ann. Phys.</em> <strong>100</strong> (1976) 359, metadata,
+is heuristic here.</p>
+<span id="consequence-for-state"></span><span id="what-the-theorem-makes-visible"></span><h2
+id="continuum-construction-spectral-weight-and-consequence-for-state">Continuum
+construction, spectral weight and consequence for STATE</h2>
+<p>H1(a) must hold for the projections of fine observables, not merely
+for local functions on each coarse lattice. H1(b) is essential for the
+coarse covariance; H1(c) and H2 control full generated interactions. The
+<a href="small-field-step-gaussian.html">Gaussian tube and
+soft-constraint estimates</a> do not establish this nonlinear package.
+The weak-side and certificate questions remain open in the <a
+href="mass-gap-openings.html">mechanism comparison</a>.</p>
+<p>The theorem’s gap lower bound is neither existence nor convergence of
+the normalized gap in T3. An exact low-energy reduction may motivate a
+trajectory-matching picture, but entering a mixing neighbourhood does
+not prove contraction of irrelevant directions or convergence of the
+physical spectrum. The <a
+href="mass-gap-obligations-lattice.html">spectral obligations</a> retain
+those separate problems. Upper spectral estimates additionally need a
+nonzero admissible Hamiltonian insertion and infrared moments; <a
+href="finiteness-half-flowed-susceptibility.html">one observed
+channel</a> may miss the global edge. Four-dimensional flow smoothness
+supplies neither those hypotheses nor a continuum reconstruction.</p>
+<p>The maintained output is the conditional transfer proof and the exact
+gauge/robustness diagnostics, with numerical comparisons explicitly
+scoped. No finite certificate, normalized multiscale trajectory,
+continuum existence theorem or universal physical <span
+class="math inline">\(\hbar\)</span> is derived.</p>
 
 </main>
 <footer class="site"><div class="wrap">

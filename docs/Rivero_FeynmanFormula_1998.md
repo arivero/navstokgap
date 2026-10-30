@@ -27,7 +27,7 @@ explicitly when interpreting the proposed proportionality of regulators.
 
 Write the finite-dimensional blocking map first, including its normalization,
 then track mesh size and action scale independently. The
-[research note](../notes/cut-paradox-two-faces.md#cone-source-trail-and-the-free-kernel-comparison) routes this reading into M04.
+[research note](../notes/cut-paradox-two-faces.md#exact-free-kernel-composition) routes this reading into M04.
 The completed [M05 audit](../papers/regulator-limits.tex) now supplies the
 partition determinant, single-quadratic critical-point normalization and an
 explicit running-coefficient map. Printed p. 1 was visually checked again

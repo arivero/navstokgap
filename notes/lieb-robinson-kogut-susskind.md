@@ -108,6 +108,11 @@ $\Delta\ge\gamma C_2g^2\hbar c/(2a)$, the algebraic consequence is
 $$\frac{\hbar v_{\rm LR}}{\Delta}
  \le\frac{32C_{\rm LR}aN}{\gamma C_2g^4}.$$
 
+For $SU(3)$ the same norm count gives $J\le48\hbar c/(ag^2)$,
+$v_{\rm LR}\le48C_{\rm LR}c/g^2$ and
+$\hbar v_{\rm LR}/\Delta\le72C_{\rm LR}a/(\gamma g^4)$.
+The theorem-dependent $C_{\rm LR}$ is still unspecified.
+
 This controls the dynamical quotient, not $\xi$ by itself. The earlier
 claim $\xi=O(ag^{-4})$ is withdrawn. A plaquette-tube weight of order
 $g^{-4d/a}$ instead has inverse decay length of order $\log g/a$.

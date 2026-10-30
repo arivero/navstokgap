@@ -401,7 +401,7 @@ selection of a positive universal quantum-role parameter remains open.
 
 ### 8.5. Source construction and next experiment
 
-I005's classical readings motivate retaining transition information across
+The [classical cut sources](ancient-cuts-provenance.md) motivate retaining transition information across
 cuts; its historical attributions remain in that idea entry. A10 and B23
 supply the explicit spring receiver. Ford–Kac–Mazur p. 505, (2)–(5), supplies
 the established harmonic propagator, and Zwanzig p. 219, (21)–(24), supplies
