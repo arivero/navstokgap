@@ -103,7 +103,7 @@ $A=c\sigma_z$, $B_H=\omega_0\sigma_x$ similarly has
 $\|[A,B_H]\|=2c\omega_0$. Converting frequency into rest energy uses a
 **supplied** action $K$, $m=K\omega_0/c^2$; physical $\hbar$ enters only
 if separately identified with $K$. A commutator norm does not see every slow
-mode: [the four-state counterexample](susceptibility-gap.md#fixed-plateau-with-a-closing-full-gap-c041)
+mode: [the four-state counterexample](susceptibility-gap.md#3-fixed-plateau-with-a-closing-full-gap-c041)
 keeps the plateau fixed as an independent hidden label's relaxation gap closes.
 For $Q=0$, a random constant velocity $\pm u$ instead has
 $\operatorname{Var}(X_\Delta-X_0)=u^2\Delta^2$; a deterministic velocity has
@@ -147,7 +147,7 @@ $\kappa=ma\ge0$; $a=0$ is the deterministic Dirac member. Requiring a
 positive density rules out zero by premise. Passing from positive kernels
 to oscillatory unitary propagation is another chosen step, and neither step
 identifies $\kappa$ with physical $\hbar$. The
-[Newton synthesis](groupoid-quantum-newton-states.md#regulators-and-a-normalized-blocking-test)
+[Newton synthesis](groupoid-quantum-newton-states.md#6-regulators-and-a-normalized-blocking-test)
 distinguishes this free fixed-line result from the two-regulator RG question.
 
 ## Consequence for STATE

@@ -61,7 +61,7 @@ $\|w_p\|\le12\hbar c/(ag^2)$. The
 [vacuum identities](ground-state-measure-transfer.md) give their
 specializations beside the corresponding hypotheses and proofs.
 The [blocking comparison](blocking-criterion-monotone.md),
-[central holonomies](torus-valley-potential.md#saturation-and-central-holonomies)
+[central holonomies](torus-valley-potential.md#4-saturation-and-central-holonomies)
 and [free colour-species cancellation](finiteness-half-flowed-susceptibility.md#the-bound-and-coupling-cancellation)
 retain different geometries, sectors and approximation assumptions.
 

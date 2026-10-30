@@ -28,7 +28,7 @@ levels are placed inside the finite interval $[0,1)$.
 ## Source-facing notes
 
 The forced problem is what is solved here. Alternatives A and B of the Millennium statement require
-$f=0$; this construction lives on the side that permits forcing ([local definitions](../../../notes/comparison-and-bridges.md#exact-targets-and-unlike-meanings-of-existence)).
+$f=0$; this construction lives on the side that permits forcing ([local definitions](../../../notes/comparison-and-bridges.md#1-exact-targets-and-unlike-meanings-of-existence)).
 
 Attribution stated by the authors, pp. 2–3: the multiscale induction, transported phase, finite
 asymptotic velocity expansion and phase-harmonic cancellation are due to Córdoba and

@@ -39,7 +39,7 @@ comparison and iteration open
 [Generated-action matching](../notes/four-dimensional-composition.md), the
 [small-volume bridge](../notes/weak-coupling-feshbach-reduction.md),
 continuum reconstruction and surviving physical spectral weight retain
-separate obligations. The [valley correction](../notes/torus-valley-potential.md#saturation-and-central-holonomies)
+separate obligations. The [valley correction](../notes/torus-valley-potential.md#4-saturation-and-central-holonomies)
 removes the unsupported global perturbation inference. The external
 [Gross-led shepherding process](../docs/AI_Mathematics_News_2026.md#yangmills-shepherding-gross-chairs-the-committee)
 concerns a claimed existence construction and leaves the mass gap open.

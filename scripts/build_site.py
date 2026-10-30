@@ -25,6 +25,8 @@ import re
 import subprocess
 import sys
 from pathlib import Path
+from html.parser import HTMLParser
+from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
@@ -1052,8 +1054,6 @@ NOTE_FRAGMENT_REDIRECTS = {'action-unit-dimensional-selection': {'setting': ('ac
                               'which-limits-of-newtons-construction-reach-the-zero-branch': ('zero-branch-reachability',
                                                                                              'consequence-for-state')}}
 
-# Retain headings changed while integrating retired review corrections.
-
 CSS = """
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -1305,7 +1305,9 @@ def rewrite_links(md, slug_set, note_prefix=""):
     """
     def sub(m):
         target, frag = m.group(1), m.group(2) or ""
-        if target.startswith(("http://", "https://", "mailto:", "#")):
+        if target.startswith("#"):
+            return "](" + re.sub(r"^#\d+-", "#", target) + ")"
+        if target.startswith(("http://", "https://", "//", "mailto:")):
             return m.group(0)
         # GitHub retains a heading's initial section number; Pandoc's default
         # HTML identifier drops it. Preserve external/source fragments above.
@@ -1332,6 +1334,69 @@ def pandoc(md_text):
     if r.returncode:
         raise SystemExit(f"pandoc failed: {r.stderr[:400]}")
     return r.stdout
+
+
+class SourceAnchors(HTMLParser):
+    """Read retained HTML anchors without changing archived source bytes."""
+
+    def __init__(self, text):
+        super().__init__()
+        self.ids = set()
+        self.feed(text)
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        anchor = attrs.get("id") or (attrs.get("name") if tag == "a" else None)
+        if anchor:
+            self.ids.add(anchor)
+
+
+def restore_source_links(body, source):
+    """Route identifiers lost in a transcription to the held original HTML.
+
+    The Markdown extraction discarded original footnote/Bekker identifiers.
+    Use only anchors actually present in the checksum-registered original;
+    retain valid companion anchors and leave unknown targets for the checker.
+    """
+    original = source.with_suffix(".html")
+    if not original.is_file():
+        return body
+    rendered_ids = SourceAnchors(body).ids | {"top"}
+    original_ids = SourceAnchors(original.read_text(encoding="utf-8")).ids
+
+    def restore(match):
+        fragment = match.group(1)
+        anchor = unquote(html.unescape(fragment))
+        if anchor not in rendered_ids and anchor in original_ids:
+            return f'href="../classics/{original.name}#{fragment}"'
+        return match.group(0)
+
+    return re.sub(r'href="#([^\"]+)"', restore, body)
+
+
+def source_link(target, fragment, source, output, companion_stems):
+    """Resolve companion/index links relative to their real Markdown source."""
+    local = (source.parent / unquote(target)).resolve()
+    if not local.is_relative_to(ROOT):
+        raise ValueError(f"Source link escapes the repository: {source}: {target}")
+    rel = local.relative_to(ROOT)
+    if local.parent == ROOT / "notes" and local.suffix == ".md":
+        stem = local.stem
+        anchor = fragment.removeprefix("#")
+        if anchor in NOTE_FRAGMENT_REDIRECTS.get(stem, {}):
+            stem, anchor = NOTE_FRAGMENT_REDIRECTS[stem][anchor]
+        elif stem in NOTE_REDIRECTS:
+            stem, anchor = NOTE_REDIRECTS[stem]
+        destination = OUT_NOTES / f"{stem}.html"
+        suffix = "#" + re.sub(r"^\d+-", "", anchor) if anchor else ""
+        return os.path.relpath(destination, output.parent) + suffix
+    if local == DOCS / "classics/README.md":
+        return os.path.relpath(DOCS / "sources.html", output.parent) + fragment
+    if local.parent == DOCS / "classics" and local.suffix == ".md" and local.stem in companion_stems:
+        return os.path.relpath(OUT_SOURCES / f"{local.stem}.html", output.parent) + fragment
+    if local.is_relative_to(DOCS) and local.suffix != ".md":
+        return os.path.relpath(local, output.parent) + fragment
+    return f"{BLOB}/{rel.as_posix()}{fragment}"
 
 
 def last_edited_date():
@@ -1481,7 +1546,7 @@ search.addEventListener('input', () => {
         source = ROOT / "research" / f"{slug}.md"
         def map_link(m):
             target, frag = m.group(1), m.group(2) or ""
-            if target.startswith(("http://", "https://", "mailto:", "#")):
+            if target.startswith(("http://", "https://", "//", "mailto:", "#")):
                 return m.group(0)
             resolved = (source.parent / target).resolve()
             try:
@@ -1489,7 +1554,8 @@ search.addEventListener('input', () => {
             except ValueError:
                 return f"]({BLOB}/{target}{frag})"
             if rel.parent == Path("notes"):
-                return f"](../notes/{rel.stem}.html{frag})"
+                note_frag = re.sub(r"^#\d+-", "#", frag)
+                return f"](../notes/{rel.stem}.html{note_frag})"
             if rel.parent == Path("research") and rel.stem in maps:
                 return f"]({rel.stem}.html{frag})"
             return f"]({BLOB}/{rel.as_posix()}{frag})"
@@ -1550,26 +1616,15 @@ search.addEventListener('input', () => {
                    if q.name != "README.md")
     comp_stems = {q.stem for q in comps}
 
-    def src_links(md):
+    def src_links(md, source):
         """Inside a companion: classics files are served, notes are built."""
         def sub(m):
             target, frag = m.group(1), m.group(2) or ""
-            if target.startswith(("http://", "https://", "mailto:", "#")):
+            if target.startswith(("http://", "https://", "//", "mailto:", "#")):
                 return m.group(0)
-            if target.startswith("../../"):
-                rel = target[6:]
-                if rel.startswith("notes/"):
-                    return f"](../notes/{Path(rel).stem}.html{frag})"
-                return f"]({BLOB}/{rel})"
-            if target.startswith("../"):
-                rel = target[3:]
-                if rel.startswith("notes/"):
-                    return f"](../notes/{Path(rel).stem}.html{frag})"
-                return f"]({BLOB}/{rel})"
-            stem = Path(target).stem
-            if target.endswith(".md") and stem in comp_stems:
-                return f"]({stem}.html{frag})"
-            return f"](../classics/{target}{frag})"
+            destination = source_link(target, frag, source,
+                                      OUT_SOURCES / f"{source.stem}.html", comp_stems)
+            return f"]({destination})"
         return LINK.sub(sub, md)
 
     for q in comps:
@@ -1580,8 +1635,9 @@ search.addEventListener('input', () => {
         head = (f"<h1>{pandoc(title).strip()[3:-4]}</h1>"
                 f'<p class="meta"><a href="{BLOB}/docs/classics/{q.name}">'
                 f"Companion source</a></p>")
+        body = restore_source_links(pandoc(src_links(md, q)), q)
         (OUT_SOURCES / f"{q.stem}.html").write_text(
-            page(strip_math(title), head + pandoc(src_links(md)), root="../"),
+            page(strip_math(title), head + body, root="../"),
             encoding="utf-8")
 
     src = (ROOT / "docs/classics/README.md").read_text(encoding="utf-8")
@@ -1589,17 +1645,11 @@ search.addEventListener('input', () => {
 
     def idx_links(m):
         target, frag = m.group(1), m.group(2) or ""
-        if target.startswith(("http", "#")):
+        if target.startswith(("http", "//", "#")):
             return m.group(0)
-        if target.startswith("../"):
-            rel = target[3:]
-            if rel.startswith("notes/"):
-                return f"](notes/{Path(rel).stem}.html{frag})"
-            return f"]({BLOB}/{rel})"
-        stem = Path(target).stem
-        if target.endswith(".md") and stem in comp_stems:
-            return f"](sources/{stem}.html{frag})"
-        return f"]({BLOB}/docs/classics/{target}{frag})"
+        destination = source_link(target, frag, DOCS / "classics/README.md",
+                                  DOCS / "sources.html", comp_stems)
+        return f"]({destination})"
 
     src = LINK.sub(idx_links, src)
     (DOCS / "sources.html").write_text(page(
@@ -1612,6 +1662,8 @@ search.addEventListener('input', () => {
         "<code>docs/SHA256SUMS</code>. Companions state what a source "
         "supplies to the research and where its dating or attribution is "
         "contested.</p>"
+        f'<p>Modern literature and current announcement companions are in the '
+        f'<a href="{BLOB}/docs/README.md">full source catalog</a>.</p>'
         + pandoc(src)), encoding="utf-8")
 
     (DOCS / ".nojekyll").write_text("", encoding="utf-8")

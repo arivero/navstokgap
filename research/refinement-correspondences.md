@@ -65,7 +65,7 @@ d(1/g²)/d log μ=2b0+… and supplies a matched scale of the form
 Sources: [stochastic route](../notes/composition-universality.md#continuous-free-paths-and-ultimate-velocity),
 [rotation composition](../notes/rotation-composition-universality.md),
 [parallel logarithm](../notes/four-dimensional-parallel-log.md),
-[UV/IR](../notes/halving-atlas.md#why-ultraviolet-refinement-bears-on-an-infrared-gap).
+[UV/IR](../notes/halving-atlas.md#3-why-ultraviolet-refinement-bears-on-an-infrared-gap).
 The Newton coefficient has action units and may be zero. Λ has inverse-length
 units, and a physical positive gap needs a surviving positive coefficient
 and observable weight as well as a continuum construction. These are

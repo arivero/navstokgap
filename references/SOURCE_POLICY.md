@@ -21,11 +21,11 @@ In research prose retain the qualifications that affect the claim being used.
 
 ## Integration
 
-The coordinator checks worker batches, integrates metadata into
-`references/library.bib` and registers original bytes in
+Integrate source metadata into
+`references/library.bib` and register original bytes in
 `docs/SHA256SUMS`. Keep public/archive URLs beside local paths.
-Checksums verify byte identity; source interpretation and proof checking have
-their own review records.
+Checksums verify byte identity. Source companions record reading coverage;
+the maintained arguments contain interpretations, proofs and corrections.
 
 Prefer primary sources and lawful open routes. For unclear high-energy citations,
 start with INSPIRE metadata and follow its versioned links. For Newton, use the

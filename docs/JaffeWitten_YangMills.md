@@ -12,4 +12,4 @@ The target is in §4, PDF p. 6. Section 3 introduces the quantum axiomatic setti
 
 Retain the distinction between physical energy spectrum and any auxiliary differential operator. Pages 6–7 discuss clustering and the infinite-volume problem. These historical comments do not establish today's research frontier. The references to axioms remain authoritative; our explanatory list is not their complete specification.
 
-Use: [local definitions](../notes/comparison-and-bridges.md#exact-targets-and-unlike-meanings-of-existence). Relevant passages checked; the cited axiom papers have not been independently audited here.
+Use: [local definitions](../notes/comparison-and-bridges.md#1-exact-targets-and-unlike-meanings-of-existence). Relevant passages checked; the cited axiom papers have not been independently audited here.

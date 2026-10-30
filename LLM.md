@@ -65,6 +65,11 @@ has a two-sided negative tower and no ground state.
 requires nonzero-mode control before assigning the constant-mode asymptotic to
 the full physical theory. Dimensional covariance and local stochastic time
 evolution supply no such spectral transport.
+- The [one-loop valley](notes/torus-valley-potential.md#4-saturation-and-central-holonomies)
+has bounded periodic full potential, but subtracting its linear zero-mode term
+does not preserve those properties on the cover. A local quadratic coefficient
+does not prove the global H3 gap or relative bound in the
+[Feshbach reduction](notes/weak-coupling-feshbach-reduction.md).
 
 - [Independent boxes and Gaussian marks](notes/mark-cost-and-statistical-floor.md)
 use different noise assumptions. Marginal hard widths do not establish an

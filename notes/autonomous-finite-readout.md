@@ -19,7 +19,7 @@ B35, B37, B47 and B50–B55 records. All estimates below are written derivations
 ## Receiver and one autonomous apparatus
 
 The reduced three-body receiver of
-[the receiver treatment](conservative-harmonic-receiver.md#a-third-body-exact-memory-and-recoverable-history)
+[the receiver treatment](conservative-harmonic-receiver.md#9-a-third-body-exact-memory-and-recoverable-history)
 has state $z=(x,P,y,Q)$ and
 
 $$H_s=\frac{P^2}{2\mu}+\frac{Q^2}{2\nu}

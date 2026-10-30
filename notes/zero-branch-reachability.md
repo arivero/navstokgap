@@ -851,7 +851,7 @@ no universal late-time obstruction.
 A vanishing-action limit and a large-action regime at fixed $h$ also vary
 different data. Their distinction does not prove that classical mechanics
 exists only as one of them. Classical initial-value construction,
-[cusp-history completion](newton-cusp-preparation-floor.md#the-trajectory-state-completion)
+[cusp-history completion](newton-cusp-preparation-floor.md#2-the-trajectory-state-completion)
 and singular [domain selection](self-sufficiency-contrast.md) have separate
 hypotheses. The interpretation of exact Newtonian geometry or Leibniz's text
 as a physical complete-record rule remains a historical/physical premise,

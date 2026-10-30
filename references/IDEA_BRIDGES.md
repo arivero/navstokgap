@@ -523,7 +523,7 @@ This connects a known quantum construction to the still-open selection gate.
 
 **Source construction:** Wilson–Kogut compare cutoff models at a common
 physical correlation length. Read [the companion](../docs/WilsonKogut_1974.md)
-for §12.2 coverage, then [the two-regulator audit](../notes/groupoid-quantum-newton-states.md#regulators-and-a-normalized-blocking-test).
+for §12.2 coverage, then [the two-regulator audit](../notes/groupoid-quantum-newton-states.md#6-regulators-and-a-normalized-blocking-test).
 
 **Use next:** specify what measured quantity is held fixed as cuts are inserted,
 and compute which mechanical coefficients must run. Test whether force/energy

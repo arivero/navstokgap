@@ -63,7 +63,7 @@ conditional Gaussian record information. This analogy imports no gauge gap.
 
 | Dimension | Exact part | Retained correction or scale | Surviving conclusion and proof status |
 | --- | --- | --- | --- |
-| $0+0$ | One compact integral | $e^{-c/t}$ image structures | Gross–Witten large-$N$ transition is a different limit; [dimension ladder](halving-atlas.md#dimension-and-group-map) |
+| $0+0$ | One compact integral | $e^{-c/t}$ image structures | Gross–Witten large-$N$ transition is a different limit; [dimension ladder](halving-atlas.md#2-dimension-and-group-map) |
 | $1+0$ mechanics | Constant-force series law after cubic scalar correction | $-F^2uv(u+v)/(8m)$ insertion defect | Supplied-$\hbar$ propagator, or classical motion at zero; [refinement](refinement-composition-and-limit.md) |
 | $1+1$ gauge | Heat-kernel series convolution; no parallel plane | General actions retain a conjugation-invariant Lévy exponent $\psi(R)$ | Circle spectrum $\hbar cL\psi(R)$; Yang–Mills under the specified Lindeberg condition; no local particle gap; [zero-spacing theorem](zero-spacing-any-action.md) |
 | $1+2$ gauge | One parallel plane; exact free Schur defect | Relative free defect $a^2K^2/16+(Ga)^2/8$; compact $U(1)$ image density $e^{-\pi^2/(8t)}$ | At fixed physical $\lambda_3$, compact $U(1)$ tends to a free photon; $SU(N)$ gap $C_3\hbar c\lambda_3$ remains open |

@@ -36,7 +36,7 @@ $$H_{\rm KS}=\frac{\hbar c}{a}\{A'(-\Delta)+B'V\},\quad
  A'=g^2/2,\quad B'=2/g^2,\quad
  V=\sum_p(N-\operatorname{Re}\operatorname{tr}U_p).$$
 
-The [finite-lattice theorem](mass-gap-obligations-lattice.md#t1-every-finite-lattice-has-a-gap-above-a-unique-physical-ground-state)
+The [finite-lattice theorem](mass-gap-obligations-lattice.md#2-t1-every-finite-lattice-has-a-gap-above-a-unique-physical-ground-state)
 gives a smooth positive normalized gauge-invariant ground state
 $\Omega$, with $e_0=aE_0/(\hbar c)$ and
 $-A'\Delta\Omega+(B'V-e_0)\Omega=0$. In particular

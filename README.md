@@ -36,7 +36,9 @@ numerical/symbolic verification scripts are prohibited. The landing diagrams
 illustrate refinement; they are not simulations or proofs.
 
 The [generated sitemap](https://arivero.github.io/navstokgap/sitemap.xml) follows
-the site manifest; building sends no external notifications. The repository
+the site manifest; building sends no external notifications. Generated `docs/`
+output is committed and published through the existing GitHub Pages configuration.
+Run `make site` before committing source or navigation changes. The repository
 contains primary-source companions, independently useful manuscripts and dated
 research history. Their original claims and next-task wording do not override
 maintained arguments or STATE. Commits/pushes are authorized; external submissions

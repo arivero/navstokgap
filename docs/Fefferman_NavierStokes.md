@@ -12,4 +12,4 @@ Source authority for the fluid target. PDF pp. 1–2, equations (1)–(11), spec
 
 The whole-space energy requirement is uniform in time. In the periodic formulation, equation (10) explicitly imposes periodicity on velocity. Do not silently add a pressure normalisation to the problem. The historical discussion is not a survey of results as of 2026.
 
-Use: [local definitions](../notes/comparison-and-bridges.md#exact-targets-and-unlike-meanings-of-existence). Only the cited statement and background passages were checked; no proof audit is claimed.
+Use: [local definitions](../notes/comparison-and-bridges.md#1-exact-targets-and-unlike-meanings-of-existence). Only the cited statement and background passages were checked; no proof audit is claimed.
