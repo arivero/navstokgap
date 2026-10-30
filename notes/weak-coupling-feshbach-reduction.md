@@ -91,7 +91,10 @@ Set
 $$P=1_{\text{const}}\otimes|\Omega_\perp\rangle\langle\Omega_\perp| .$$
 $P$ commutes with the constant gauge transformations because
 $\Omega_\perp$ is invariant under them, so Lemma 1 can be applied inside
-the physical sector. The compression is
+the Gauss-invariant space. This does not select a centre character.
+Any further sector restriction in H3 must be named and preserved by the
+projection; a one-patch expansion is not a global sector identification.
+The compression is
 $$A=PHP=H_0+\langle\Omega_\perp,W\Omega_\perp\rangle(a)+E_\perp,$$
 where $\langle\Omega_\perp,W_2\Omega_\perp\rangle(a)$ is a function of the
 constant modes only (the Gaussian expectation of a quadratic form in
@@ -355,12 +358,19 @@ renormalization; its formal expected order does not establish a bound.
 
 ## 5. Consequence for STATE
 
-The weak-coupling lower bound is now three inequalities on explicit
-polynomial operators, with a proved transfer lemma. The next step on
-the lower side is the fibered (H2): the non-adiabatic terms and the
-$W_3$ Schur error against the nonzero-mode gap, on a lattice cutoff, with
-the C133 ground state as weight; (H1) and (H3) are relatively bounded
-perturbation statements, (H3) requiring the finite one-loop torus
-potential. Their proof would close the small-volume corner
-S from both sides and make a conditional small-volume result; controlling the crossover, physical
-spectral transfer and the continuum remain separate obligations.
+The Schur lemmas transfer a specified compressed gap; H1--H3, domains,
+cutoff-uniform constants and physical reconstruction remain open.
+The [periodic holonomy countertest](torus-valley-potential.md#a-centre-odd-variational-countertest)
+has centre-odd Weyl-even states with an exponentially small upper gap,
+so a local $g^{2/3}$ spacing cannot be called its global gap. This
+countertest is not an identification of $PHP$ with the scalar benchmark.
+H3 must first specify whether centre transformations are gauged, which
+centre character is retained and how the projection and effective measure
+respect it. A bound in the trivial sector would not by itself control
+other sectors or construct the continuum theory. The nonadiabatic and
+cubic Schur estimates then have to be proved for that same operator.
+A polynomial error upper bound of order $g^{4/3}\hbar c/L$ alone
+would not certify positivity at the benchmark's exponentially smaller
+inter-sector scale: the transfer lemma needs an error smaller than its
+chosen compressed gap. This is an insufficiency of the supplied estimate,
+not a lower bound on the actual Schur error or a no-go theorem for dressing.

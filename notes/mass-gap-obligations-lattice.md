@@ -484,12 +484,17 @@ before transferring the scale to the field theory. Lüscher's expansion
 (*Nucl. Phys. B* **219** (1983) 233, abstract-level reading) is source
 orientation, not a verification of those hypotheses here.
 
-If small-volume comparison and continuum reconstruction both hold,
-one expects $z(L)=\Delta(L)L/(\hbar c)$ to satisfy
-$$z(L)=\delta_1g(L)^{2/3}[1+O(g(L)^{2/3})]\quad(L\to0).$$
+If small-volume comparison and continuum reconstruction hold in a declared
+sector $\mathcal C$, the candidate sector gap obeys
+$$z_{\mathcal C}(L)=\frac{\Delta_{\mathcal C}(L)L}{\hbar c}
+=\delta_{1,\mathcal C}g(L)^{2/3}[1+O(g(L)^{2/3})]\quad(L\to0).$$
+This is not automatically the full finite-box gap. The
+[periodic holonomy countertest](torus-valley-potential.md#a-centre-odd-variational-countertest)
+has a much smaller centre-sector splitting. The sector, physical observable
+algebra and projection must match before transferring a local matrix spacing.
 Separately, if the infinite-volume physical gap is a finite positive
 energy $m$ and the finite-volume gaps converge to it, then
-$z(L)\sim mL/(\hbar c)$ as $L\to\infty$. Neither endpoint proves a
+$z(L):=\Delta(L)L/(\hbar c)\sim mL/(\hbar c)$ as $L\to\infty$. Neither endpoint proves a
 monotone interpolation, excludes intervening behavior or constructs
 the continuum theory. Lüscher--Münster's crossover near $z\simeq2$
 (*Nucl. Phys. B* **232** (1984) 445, abstract) remains a historical

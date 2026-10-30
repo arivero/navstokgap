@@ -5,13 +5,15 @@ consolidation and index/reference/site consistency checks.** The
 [88-argument catalog](../notes/index.md) owns coverage and short completed-work
 phrases; git preserves retired notes and process records.
 
-Current bounded question: does the small-volume H3 gap comparison concern one
-centre sector or the full finite-volume spectrum? Test the retained periodic
-holonomy benchmark, then state exactly what sector identification and projection
-control would be needed to transfer its conclusion to the field theory.
-[Valley input](../notes/torus-valley-potential.md#4-saturation-and-central-holonomies)
-and [Feshbach assumptions](../notes/weak-coupling-feshbach-reduction.md) own the
-argument. No full Yang–Mills spectral result is assumed.
+The bounded centre-sector test is complete: the declared periodic holonomy
+benchmark has an exponentially small inter-sector upper gap, including a
+cubic-invariant trial. The exact lattice adjoint-loop trial targets the neutral
+sector; the fundamental-loop one-patch variance is not a global expectation.
+[Proof and scope](../notes/torus-valley-potential.md#a-centre-odd-variational-countertest),
+[neutral trial](../notes/lattice-gap-upper-bounds.md#conditional-small-volume-comparison).
+The remaining H3 question is a sector- and observable-algebra-matched comparison
+with the actual compressed field operator, including measure, projection and
+nonzero-mode errors. No full Yang–Mills spectral result is assumed.
 
 ## Goals and current proof boundaries
 

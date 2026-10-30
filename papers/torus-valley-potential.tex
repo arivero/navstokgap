@@ -16,6 +16,19 @@
 spectral
 limits}\label{one-loop-torus-valleys-local-confinement-periodicity-and-spectral-limits}}
 
+\textbf{Sector-gap result.} For the explicitly specified flat-holonomy
+benchmark \(H_{\rm hol}=(\hbar c/L)[-(g^2/2)\Delta_b+2\Phi(b)/\pi^2]\)
+on the \(4\pi\) torus, retaining centre transformations as physical
+symmetries, a centre-odd Weyl-even trial state gives
+\[\Delta_{\rm hol}\le\frac{\hbar c}{L}
+\frac{32C_\psi}{\pi^2v_0}\,g^{8/3}
+\exp\!\left[-\frac{\pi\sqrt{v_0}}{2g}\right]\] for all sufficiently
+small \(g>0\). The fixed positive barrier \(v_0\) and trial constant
+\(C_\psi\) are defined in Section 4. This rules out a uniform positive
+\(g^{2/3}\hbar c/L\) lower bound for that benchmark's full Weyl-even
+spectrum. It does not identify the benchmark with the compressed
+field-theory Hamiltonian or prove its physical gap.
+
 For a constant abelian \(SU(2)\) background on \(T^3_L\), the one-loop
 zero-point energy defined by discarding the formal \(m=0\) Fourier term
 in the Poisson-summed expression (distinct from the physical \(k=0\)
@@ -231,6 +244,118 @@ loss of a small parameter; it proves no delocalization, sector
 coalescence or crossover at a specified value of
 \(z=\Delta L/(\hbar c)\).
 
+\hypertarget{a-centre-odd-variational-countertest}{%
+\subsubsection{A centre-odd variational
+countertest}\label{a-centre-odd-variational-countertest}}
+
+The distinction can be proved without calculating a tunnelling
+asymptotic. Take the declared scalar operator
+\[h_g=-\frac{g^2}{2}\Delta_b+W(b),\qquad
+W(b)=\frac{2}{\pi^2}\Phi(b),\qquad
+b\in\mathbb T_{4\pi}^3=(\mathbb R/4\pi\mathbb Z)^3,\] on flat
+\(L^2(d^3b)\) with its periodic \(H^2\) domain, and set
+\(H_{\rm hol}=(\hbar c/L)h_g\). Its Weyl-even subspace consists of
+\(f(-b)=f(b)\). Centre translations are \((T_if)(b)=f(b+2\pi e_i)\), not
+gauge identifications in this model. These commuting involutions commute
+with \(h_g\) and with Weyl reflection. The nonnegative bounded
+continuous \(W\) has exactly eight zeros
+\(Z=(2\pi\mathbb Z)^3\bmod4\pi\), and \(W(b)\le C_W|b|\) near zero. No
+nonzero-mode, orbit-measure or Berry term is included in this benchmark;
+matching those terms is a separate field-theory obligation. Rayleigh
+quotients below use the closed quadratic form
+\(q_g[v]=(g^2/2)\int|\nabla v|^2+\int W|v|^2\), with domain \(H^1\); the
+Lipschitz cutoffs need not belong to the operator's \(H^2\) domain.
+
+Let \(e_0(g)\) and \(\Omega_g>0\) be the normalized ground eigenpair.
+Compactness and positivity improvement give a simple ground state, fixed
+by every \(T_i\) and by Weyl reflection. Its energy is also the lowest
+energy in the Weyl-even subspace. Fix a normalized
+\(\psi\in C_c^\infty(B_1(0))\), and put
+\[C_\psi=\frac12\int|\nabla\psi|^2d^3z
++C_W\int|z|\,|\psi(z)|^2d^3z.\] For \(s=g^{2/3}\) small enough that
+\(W(b)\le C_W|b|\) on \(B_s\), the normalized trial
+\(s^{-3/2}\psi(b/s)\) gives \[0\le e_0(g)\le C_\psi g^{2/3}. \tag{V1}\]
+Indeed its kinetic energy is \(g^2s^{-2}\int|\nabla\psi|^2/2\) and its
+potential energy is at most \(C_Ws\int|z||\psi|^2\). This is a
+ground-energy upper bound, not an excitation-gap estimate.
+
+Use the flat torus distance, let \(A\) be the union of the eight closed
+balls of radius \(r=\pi/4\) about \(Z\), and define the fixed constant
+\[v_0=\min_{\operatorname{dist}(b,Z)\ge\pi/4}W(b)>0.\] Assume \(g\) is
+small enough for (V1) and \(e_0\le v_0/4\). The Lipschitz weight
+\[\rho(b)=\frac{\sqrt{v_0}}2\operatorname{dist}(b,A)\] vanishes on
+\(A\). The
+\href{ground-state-measure-transfer.md\#weighted-estimates-and-global-magnetic-tails}{weighted
+eigenfunction identity}, with kinetic coefficient \(g^2/2\) and weight
+\(\rho/g\), reads \[\frac{g^2}{2}\int|\nabla(e^{\rho/g}\Omega_g)|^2
++\int\left(W-e_0-\frac{|\nabla\rho|^2}{2}\right)
+ e^{2\rho/g}\Omega_g^2=0.\] On \(A^c\), its second coefficient is at
+least \(v_0-v_0/4-v_0/8\ge v_0/2\); on \(A\) it is at least \(-e_0\).
+Consequently
+\[\int_{A^c}e^{2\rho/g}\Omega_g^2\le\frac{2e_0}{v_0}. \tag{V2}\] All
+constants here are fixed by this compact benchmark, not uniform
+field-theory or continuum estimates.
+
+Choose a real periodic Lipschitz \(f=f(b_1)\) with plateaus \(+1\) about
+\(b_1=0\) and \(-1\) about \(b_1=2\pi\). Interpolate linearly across the
+two strips of half-width \(\delta=\pi/4\) centered at \(\pi,3\pi\). Then
+\(f(b_1+2\pi)=-f(b_1)\), \(f(-b_1)=f(b_1)\), \(|f'|\le4/\pi\), and
+\(f^2=1\) off their union \(B\). Every point of \(B\) has distance at
+least \(\pi/2\) from \(A\), so (V2) gives
+\[p_B:=\int_B\Omega_g^2\le\frac{2e_0}{v_0}
+ e^{-\pi\sqrt{v_0}/(2g)}\le\frac12.\]
+
+The vector \(f\Omega_g\) is Weyl-even and has centre characters
+\((-,+,+)\). It is orthogonal to \(\Omega_g\) by the \(T_1\) symmetry,
+and the exact ground-state transform gives
+\[\frac{q_g[f\Omega_g]-e_0\|f\Omega_g\|^2}
+ {\|f\Omega_g\|^2}
+=\frac{g^2}{2}\frac{\int|\nabla f|^2\Omega_g^2}{\int f^2\Omega_g^2}
+\le\frac{8g^2}{\pi^2}\frac{p_B}{1-p_B}
+\le\frac{32g^2e_0}{\pi^2v_0}
+ e^{-\pi\sqrt{v_0}/(2g)}.\] Rayleigh--Ritz and (V1) prove the displayed
+physical bound for the gap above the vacuum in the full Weyl-even
+benchmark. They also upper-bound the lowest \((-,+,+)\) sector energy
+above \(E_0\). In particular
+\[\frac{L\Delta_{\rm hol}}{\hbar c\,g^{2/3}}
+\le\frac{32C_\psi}{\pi^2v_0}g^2e^{-\pi\sqrt{v_0}/(2g)}\longrightarrow0.\]
+This is an upper bound, not a matching tunnelling formula. \(\square\)
+
+Even cubic symmetry alone does not remove this benchmark trial. The
+three vectors \(f(b_i)\Omega_g\) have different centre characters and
+are mutually orthogonal, also for \(q_g-e_0\). Cubic symmetry gives them
+equal norms and form energies. Their sum is invariant under coordinate
+permutations and sign changes and has the same Rayleigh quotient. Thus
+the bound also holds in the cubic-invariant subspace when all centre
+characters are admitted. This sum has no trivial-centre component,
+although it has no single charged character. The calculation concerns
+the declared scalar symmetry action, not an imported classification of
+the full gauge-theory levels.
+
+The trial is excluded if centre translations are gauged or the Hilbert
+space is restricted to the trivial centre character. That exclusion
+alone proves no \(g^{2/3}\) lower bound in the remaining space. Thus H3
+must name its sector, global holonomy domain, measure and projection; a
+local matrix spacing cannot stand for every centre sector. Nor does this
+finite-volume benchmark settle any infinite-volume gap: \(g(L)\), the
+full operator and the order of limits must first be identified. The
+vacuum subspace cyclic for a centre-neutral local observable algebra
+must also be distinguished from the full finite-box Gauss-invariant
+space; the charged trial is not produced by a neutral multiplication
+observable.
+
+\textbf{Source boundary.} The separation of channel energies and
+electric-flux splittings is established literature, not a novelty claim.
+Lüscher--Münster's 1984 publisher abstract defines its \(z\) using the
+\(J^p=0^+\) sector. Weisz--Ziemann, \emph{Nucl. Phys. B} \textbf{284}
+(1987) 157--170,
+\href{https://www-library.desy.de/preparch/desy/postpr/1986/desy86-109.pdf}{printed
+p.~168}, passage-read, discusses electric-flux sectors, perturbative
+degeneracy and tunnelling. The Koller--van Baal calculation cited there
+has not been read here. The bound above is a written derivation for the
+declared scalar benchmark, not a verification of that field-theory
+calculation.
+
 \hypertarget{consequence-for-state}{%
 \subsection{5. Consequence for STATE}\label{consequence-for-state}}
 
@@ -240,7 +365,8 @@ minima and a local correction
 argument identifies its quadratic form under the stated
 smooth-prescription assumption. Global (H3), nonzero-mode comparison,
 \(SU(3)\) matrix control, cutoff removal and physical spectral transport
-remain separate. The abelian zero-mode benchmark has no such one-loop
-valley potential; that contrast alone proves no nonabelian continuum
-gap.
+remain separate. The centre-odd variational bound additionally shows why
+the global benchmark gap differs from a local matrix spacing; H3 must
+specify its centre sector. The abelian comparison alone proves no
+nonabelian continuum gap.
 \end{document}

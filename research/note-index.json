@@ -2363,7 +2363,7 @@
     {
       "path": "notes/lattice-gap-upper-bounds.md",
       "title": "Variational lattice-gap bounds: plaquettes, electric trials and holonomies",
-      "summary": "The KS Feynman-Bijl identity gives plaquette strong-coupling order, an abelian structure-factor gaplessness test and an exact averaged-Polyakov susceptibility bound. Constant-colour electric trials vanish for semisimple gauge algebras; a universal string cost for all field-dependent dressed trials is unproved.",
+      "summary": "The KS Feynman-Bijl identity gives plaquette strong-coupling order, an abelian structure-factor gaplessness test and an exact averaged-Polyakov susceptibility bound. Constant-colour electric trials vanish for semisimple gauge algebras; a universal string cost for all field-dependent dressed trials is unproved. An exact SU2 adjoint-loop bound targets the neutral centre sector; the one-patch fundamental variance is not a global vacuum variance.",
       "thematic_area": "Yang–Mills/gauge",
       "strongest_result": "The KS Feynman-Bijl identity gives plaquette strong-coupling order, an abelian structure-factor gaplessness test and an exact averaged-Polyakov susceptibility bound. Constant-colour electric trials vanish for semisimple gauge algebras; a universal string cost for all field-dependent dressed trials is unproved.",
       "status": "result",
@@ -2400,13 +2400,17 @@
         "physical gap upper bound",
         "self-averaging",
         "su3-constants",
-        "SU3 specialization"
+        "SU3 specialization",
+        "centre neutral adjoint Polyakov trial",
+        "dual plane symmetry",
+        "fundamental loop mean zero",
+        "8 hbar c g squared over L variance"
       ],
       "role": "result,infrastructure",
       "value": "surprising-result,known-boundary",
       "limitations": "Nonzero variances and stated domains are required. The Gauss-law exclusion is semisimple, not every nonabelian group; a nonvanishing upper bound proves no converse gap criterion. Small-volume expectation transport and any universal dressing cost remain unproved.",
-      "content_coverage": "All merged source arguments and later corrections read; coherent premise/proof rewrite. Internal checks are not independent peer review.",
-      "completed_work": "Placed useful SU3 specializations beside their parent hypotheses and corrected their scope."
+      "content_coverage": "Changed statements, constants, quadratic-form proof and surrounding assumptions read in full; written derivations without numerical/symbolic scripts, independent peer review or novelty claim.",
+      "completed_work": "Added the exact neutral adjoint-loop upper bound and corrected the one-patch/global variance identification."
     },
     {
       "path": "notes/leibniz-continuity-records.md",
@@ -2826,9 +2830,9 @@
       ],
       "role": "synthesis,result",
       "value": "synthesis,infrastructure",
-      "limitations": "Finite-lattice existence, strong-coupling positivity, all-coupling stability, continuum scaling and reconstruction are separate. The small-volume field asymptotic and positive SU3 matrix gap are conditional; Lambda_lat is inverse length and m is an energy. No monotone crossover is proved.",
-      "content_coverage": "Full changed arguments and later corrections read during consolidation; internal written checks are not independent peer review or literature-novelty evidence.",
-      "completed_work": "Placed useful SU3 specializations beside their parent hypotheses and corrected their scope."
+      "limitations": "Finite-lattice existence, strong-coupling positivity, all-coupling stability, continuum scaling and reconstruction are separate. The small-volume field asymptotic and positive SU3 matrix gap are conditional; Lambda_lat is inverse length and m is an energy. No monotone crossover is proved. The small-volume scaling statement names a centre sector; it is not automatically the full finite-box gap.",
+      "content_coverage": "Changed statements, constants, quadratic-form proof and surrounding assumptions read in full; written derivations without numerical/symbolic scripts, independent peer review or novelty claim.",
+      "completed_work": "Separated the small-volume sector asymptotic from the global physical spectral target."
     },
     {
       "path": "notes/mass-gap-openings.md",
@@ -4531,8 +4535,8 @@
     {
       "title": "One-loop torus valleys: local confinement, periodicity and spectral limits",
       "thematic_area": "Yang–Mills/gauge",
-      "status": "conditional",
-      "current_relevance": "Corrects the global bounded-correction inference while retaining the local spectral input.",
+      "status": "result",
+      "current_relevance": "Tests the sector and global-domain premise of H3, while preserving the local one-loop input and the missing field-theory comparison.",
       "relations": [
         {
           "type": "uses",
@@ -4543,12 +4547,22 @@
           "type": "continues",
           "target": "notes/weak-coupling-feshbach-reduction.md",
           "reason": "Computes the valley potential and leading nonzero-mode quadratic correction required by H3."
+        },
+        {
+          "type": "uses",
+          "target": "notes/ground-state-measure-transfer.md",
+          "reason": "Uses the weighted eigenfunction identity with an explicit compact barrier."
+        },
+        {
+          "type": "corrects",
+          "target": "notes/weak-coupling-feshbach-reduction.md",
+          "reason": "H3 needs a declared centre sector and globally matched operator; local spacing is not the benchmark global gap."
         }
       ],
       "path": "notes/torus-valley-potential.md",
-      "summary": "Derives the SU2 one-loop periodic valley potential under an explicit Fourier subtraction, with local linear/quadratic terms, conditional general-background symmetry and central holonomy labels. Full U is bounded; U minus its linear zero-mode term is unbounded and nonperiodic on the cover.",
-      "strongest_result": "Explicit one-loop Fourier series, local expansion and domain-aware limits of its use as Feshbach H3 input.",
-      "proof_status": "specified one-loop calculation; general-background and field-theory transfer conditional",
+      "summary": "The one-loop SU2 valley has bounded periodic full potential and an unbounded nonperiodic subtracted correction. For the declared flat 4pi holonomy operator, centre-odd and cubic-invariant trials give an explicit g^(8/3) exp(-c/g) upper gap, so local g^(2/3) spacing is not its global gap.",
+      "strongest_result": "For the flat SU2 holonomy benchmark, Delta <= (hbar c/L) 32 Cpsi g^(8/3)/(pi^2 v0) exp[-pi sqrt(v0)/(2g)], with fixed barrier v0>0 and explicit trial constant; the bound also holds in its cubic-invariant subspace.",
+      "proof_status": "written scalar benchmark theorem; specified one-loop calculation and conditional field transfer",
       "retrieval_priority": 3,
       "surprising": false,
       "route_closure": false,
@@ -4559,13 +4573,19 @@
         "periodic centre minima",
         "2hbar c norm a",
         "nonzero-mode correction",
-        "Feshbach H3"
+        "Feshbach H3",
+        "centre-odd variational bound",
+        "electric flux splitting",
+        "flat holonomy torus",
+        "cubic invariant charged sum",
+        "g8/3 exp minus c over g",
+        "Weisz Ziemann 1987"
       ],
-      "role": "result,infrastructure",
+      "role": "result,obstruction",
       "value": "infrastructure,open-mechanism",
-      "limitations": "A matched smooth gauge-fixed determinant is assumed for general backgrounds. No small global relative perturbation, matrix-to-field gap, tunnelling splitting, crossover or cutoff-uniform continuum estimate is proved. Cubic-lattice coefficient sign is borrowed.",
-      "content_coverage": "Full changed arguments and later corrections read during consolidation; internal written checks are not independent peer review or literature-novelty evidence.",
-      "completed_work": "Corrected global valley subtraction and distinguished local power counting from H3."
+      "limitations": "Flat measure, scalar kinetic operator, all centre characters and the specified one-loop potential are benchmark inputs. No identification with PHP, full field-theory splitting, matching tunnelling asymptotic, SU3 theorem or continuum gap is proved. Gauging centre translations or restricting their character changes the admissible trial; neutral local cyclic space differs from the full finite-box Gauss space.",
+      "content_coverage": "Changed statements, constants, quadratic-form proof and surrounding assumptions read in full; written derivations without numerical/symbolic scripts, independent peer review or novelty claim.",
+      "completed_work": "Proved the centre-sector benchmark bound and separated global, cubic and neutral spectral targets."
     },
     {
       "path": "notes/villain-monopole-refinement.md",
@@ -4608,7 +4628,7 @@
     {
       "path": "notes/weak-coupling-feshbach-reduction.md",
       "title": "The weak-coupling gap in a small box reduces to three inequalities through the Schur complement",
-      "summary": "A proved relative Schur-transfer lemma reduces the small-volume gap lower bound to nonzero-mode separation, a relative coupling error and an effective zero-mode gap. Includes the scalar-shift transfer lemma and formal ultraviolet Berry and cubic estimates.",
+      "summary": "Proves abstract Schur gap-transfer lemmas, including a constant-shift/relative-error version. Physical H1–H3, UV-uniform domains and bounds remain open, and H3 must identify the centre sector and observable algebra before a local matrix spacing can represent its compressed gap.",
       "thematic_area": "Yang–Mills/gauge",
       "strongest_result": "A proved relative Schur-transfer lemma reduces the small-volume gap lower bound to nonzero-mode separation, a relative coupling error and an effective zero-mode gap. Scope: All three physical inequalities remain open; the bare sharp-cutoff vacuum fails UV control. A fibered projection and gauge-compatible cutoff identify the corrected estimates, not a completed fixed-lattice gap theorem.",
       "status": "conditional",
@@ -4642,11 +4662,11 @@
         "ultraviolet power counting",
         "schur-error-ultraviolet"
       ],
-      "limitations": "H1–H3, projection domains and uniform constants remain open. Bare sharp-cutoff control fails; linear valley confinement does not automatically control quadratic multiplication globally. Formal SU2 cubic slope and Berry terms are not certified SU3 or continuum bounds.",
+      "limitations": "H1–H3, projection domains and uniform constants remain open. Bare sharp-cutoff control fails; linear valley confinement does not automatically control quadratic multiplication globally. Formal SU2 cubic slope and Berry terms are not certified SU3 or continuum bounds. The scalar centre-sector countertest is not a construction or identification of PHP.",
       "role": "live,conditional",
       "value": "open-mechanism,infrastructure",
-      "content_coverage": "Transfer lemmas and changed physical hypotheses read; the explicitly requested Terra check confirmed the valley subtraction problem and identified the related quadratic-control overstatement. This is internal review, not independent peer review.",
-      "completed_work": "Retained Schur transfer lemmas and removed the unsupported global quadratic-control inference."
+      "content_coverage": "Changed statements, constants, quadratic-form proof and surrounding assumptions read in full; written derivations without numerical/symbolic scripts, independent peer review or novelty claim.",
+      "completed_work": "Made the Schur target sector-explicit and integrated the periodic holonomy countertest."
     },
     {
       "path": "notes/wilson-strong-coupling-explicit.md",

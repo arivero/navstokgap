@@ -259,9 +259,9 @@ and \(\frac{\hbar cg^2}{2a}\cdot\frac{N}{2N_s}=\frac{\hbar cg^2N}{4L}\).
 \subsubsection{Conditional small-volume
 comparison}\label{conditional-small-volume-comparison}}
 
-For the formal weak-coupling constant-mode comparison, assume the links
-are near the identity and the gauge-invariant content of a Polyakov line
-is the holonomy of the constant mode:
+For the formal weak-coupling constant-mode comparison in one central
+holonomy patch, assume the gauge-invariant content of a Polyakov line is
+the holonomy of the constant mode:
 \(\prod_{\ell\in\lambda}U_\ell\approx\exp(iLa_i)\) with \(a_i=a_i^bT^b\)
 the constant mode of \href{low-dimensional-mass-gap.md}{G07} Proposition
 7, whose ground-state width is \(|a_i|\sim g^{2/3}/L\) in natural units.
@@ -289,14 +289,35 @@ applied inside the zero-mode model with the trial operator
 \(|\vec\xi_i|^2\); the model version of the Polyakov-loop bound is exact
 and says exactly that.
 
-What is proved and what is not: the Polyakov-loop bound is exact. The
-two approximations, replacing the ground-state expectations by their
-constant-mode values, are the leading order of the small-volume
-expansion (Lüscher; abstract, B78) and are not proved here. The
-statement that follows from them is that the exact lattice inequality
-carries the \(g^{2/3}\) scaling of the small-volume corner on its upper
-side; a lower bound with that scaling remains the open weak-coupling
-target of STATE.
+The fundamental-loop calculation above is a \textbf{one-patch
+diagnostic}. On the full periodic \(SU(2)\) lattice, a centre
+transformation across a dual plane leaves the Hamiltonian invariant and
+changes every winding \(P_\lambda\) in that direction to \(-P_\lambda\).
+The unique positive ground state is centre invariant, hence
+\(\langle\bar P_i\rangle_0=0\), not the one-patch value near \(2\).
+Therefore the one-patch variance cannot be substituted into the global
+ground-state formula. The exact fundamental-loop inequality remains
+valid and can probe a charged sector.
+
+For a centre-neutral trial in \(SU(2)\) use instead
+\[\bar A_i=N_s^{-2}\sum_\lambda(P_\lambda^2-1),\] the averaged adjoint
+character. Its centered multiplication preserves the trivial centre
+sector. Since each link enters only one winding line,
+\(\nabla_\ell\bar A_i=2P_{\lambda(\ell)}\nabla_\ell\bar P_i\) and
+\(|P_\lambda|\le2\), so
+\[\sum_\ell|\nabla_\ell\bar A_i|^2\le16/N_s,\qquad
+\Delta^{(0)}_{a,L}\le\frac{8\hbar c\,g^2}
+{L\operatorname{Var}_0\bar A_i}.\] Here \(\Delta^{(0)}\) is the
+excitation gap in the trivial centre sector; Rayleigh--Ritz applies
+there because the trial stays in that space. Near either central
+holonomy \(P_\lambda=\pm2\), \(A_\lambda-3\simeq\pm4(P_\lambda\mp2)\) in
+the corresponding patch. The gradient and variance both gain the same
+factor \(16\), leaving the displayed conditional \(g^{2/3}\) ratio
+unchanged. Matching that local neutral distribution and the other modes
+to the field theory remains unproved. A neutral-sector upper bound is
+distinct from the full gap and from a lower bound; the
+\href{torus-valley-potential.md\#a-centre-odd-variational-countertest}{periodic
+benchmark} makes the smaller inter-sector scale explicit.
 
 \hypertarget{infinite-volume-susceptibility-condition}{%
 \subsubsection{Infinite-volume susceptibility
