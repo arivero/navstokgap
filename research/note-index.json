@@ -347,14 +347,14 @@
     },
     {
       "path": "notes/groupoid-quantum-newton-states.md",
-      "title": "A tangent-groupoid formulation of the quantum construction of Newton motion",
-      "summary": "Continuous-field state limit for smooth Weyl observables is O(hbar+mesh) under coherent preparation and smooth subquadratic hypotheses. Separates geometric epsilon=hbar/S0, bare regulator, mesh and blocking. Exact normalized Gaussian RG retains all action parameters including zero; bridge action defect can survive a chosen double limit. Correct min-plus constant-force law and free counterexample to an ordinary additive groupoid morphism.",
+      "title": "Tangent-groupoid scaling and the quantum construction of Newton motion",
+      "summary": "Exact interacting dilation commutes with kernel composition and normalized bridge marginalization. Matched hbar=epsilon S0 and time/distance epsilon give a local heat expansion with explicit second-order potential terms and a refinement-uniform Gaussian bridge limit. The shifted kernel product retains insertion centres lost at zero. Row-normalized harmonic transitions fail the semigroup law; well-resolving scaling differs. Retains the O(hbar+mesh) coherent-state field theorem, free zero-action control and bridge action defect.",
       "thematic_area": "refinement/comparison",
-      "strongest_result": "Continuous-field state limit for smooth Weyl observables is O(hbar+mesh) under coherent preparation and smooth subquadratic hypotheses.",
+      "strongest_result": "Exact scalar dilation/composition map and locally uniform interacting tangent heat-kernel expansion, with explicit second-order coefficients and refinement-compatible normalized bridges.",
       "status": "result",
-      "proof_status": "conditional written theorem and exact tests; established groupoid framework; no universal positive-action selection",
+      "proof_status": "written dilation, local heat-kernel and normalized-bridge proofs plus conditional state theorem; established analytic inputs; no universal positive-action selection",
       "retrieval_priority": 3,
-      "current_relevance": "Retained for the continuous-field observable-state theorem, regulator dictionary and actual normalized RG tests; it uses rather than repeats the quantum-product domain proof.",
+      "current_relevance": "User-directed scaling question: relates the supplied-action Hamiltonian, tangent chart, time scale and complete bridge marginalization; distinguishes a local kernel limit from well-resolving spectral dilation.",
       "relations": [
         {
           "type": "uses",
@@ -440,6 +440,16 @@
           "type": "uses",
           "target": "notes/halving-atlas.md",
           "reason": "Interprets ballistic/diffusive scaling in the refinement dimensional ladder."
+        },
+        {
+          "type": "uses",
+          "target": "notes/constructive-qft-one-time.md",
+          "reason": "Uses its normalized endpoint bridges, ground-state Markov transform and quartic spectral scaling."
+        },
+        {
+          "type": "uses",
+          "target": "notes/low-dimensional-mass-gap.md",
+          "reason": "Compares the tangent short-time zoom with the established homogeneous spectral dilation and its sector hypotheses."
         }
       ],
       "surprising": false,
@@ -484,13 +494,28 @@
         "time-graded groupoid",
         "min-plus action",
         "convolution",
-        "ballistic versus diffusive"
+        "ballistic versus diffusive",
+        "matched tangent scaling",
+        "interacting kernel dilation",
+        "normalized endpoint bridge",
+        "row normalization",
+        "Mehler kernel",
+        "strong versus norm limit",
+        "semiclassical heat symbol",
+        "Wigner Kirkwood",
+        "well-resolving scaling",
+        "harmonic versus quartic time scale",
+        "action mass normalization",
+        "inserted point",
+        "shifted kernel product",
+        "finite-scale base point",
+        "pair arrow factorization"
       ],
       "role": "result,synthesis",
       "value": "infrastructure,synthesis",
-      "limitations": "Positive action scale is supplied; the O(h) bound uses the bounded third derivative in the standing smoothness hypotheses and does not show quantum-propagator norm convergence along all joint schedules. Widths remain O(sqrt(h)).",
-      "content_coverage": "Full consolidated arguments and later corrections read; mechanical link-only changes preserve the established proof scope. Internal model checks are not independent peer review.",
-      "completed_work": "Formulated the state field and separated the groupoid scale from mesh and physical-action calibration."
+      "limitations": "The heat-kernel rate assumes nonnegative C3 scalar potential with bounded second and third derivatives and compact q,v,T ranges with T>0. Resolvent and heat convergence under dilation are strong, not operator norm. The separate monomial well scaling is exact, but no general long-time or global uniform estimate follows. Physical hbar and positive action remain supplied; the coherent-state rate has its earlier smoothness/preparation hypotheses.",
+      "content_coverage": "Changed scaling proof and surrounding state, regulator, Gaussian and action-composition arguments read; source coverage is passage-specific. Written calculations only; no independent peer review or novelty claim.",
+      "completed_work": "Derived the interacting scale/composition map, tangent heat correction and normalization countertest."
     },
     {
       "path": "notes/quantum-blocks-construct-newton.md",

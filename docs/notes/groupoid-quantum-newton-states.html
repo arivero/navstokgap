@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>A tangent-groupoid formulation of the quantum construction of Newton motion</title>
+<title>Tangent-groupoid scaling and the quantum construction of Newton motion</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
 --card:#fff;--code:#f2efe8}
@@ -79,13 +79,31 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>A tangent-groupoid formulation of the quantum construction of Newton
-motion</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/groupoid-quantum-newton-states.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/groupoid-quantum-newton-states.pdf">PDF</a></p><p><strong>Result, 2026-10-27.</strong> The tangent groupoid carries a
-continuous field of observable algebras whose positive-parameter fibers
-are quantum and whose zero fiber is classical. After fixing an action
-unit <span class="math inline">\(S_*\)</span> and setting <span
-class="math inline">\(\hbar=\epsilon S_*\)</span>, the finite quantum
-products and classical initial-value construction of <a
+<h1>Tangent-groupoid scaling and the quantum construction of Newton
+motion</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/groupoid-quantum-newton-states.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/groupoid-quantum-newton-states.pdf">PDF</a></p><p><strong>Scaling result, 2026-10-30.</strong> For a nonnegative scalar
+potential on the line, coordinate/time dilation has an exact action on
+the full quantum Hamiltonian, its kernels and its normalized endpoint
+bridges. With <span class="math inline">\(\hbar=\epsilon S_0\)</span>,
+<span class="math inline">\(t=\epsilon T\)</span> and <span
+class="math inline">\(x-y=\epsilon v\)</span>, the rescaled Hamiltonian
+has supplied action <span class="math inline">\(S_0\)</span> and
+potential <span class="math inline">\(V(q+\epsilon X)\)</span>. For
+<span class="math inline">\(V\in C^3\)</span> with bounded second and
+third derivatives, its heat kernel has a locally uniform tangent limit
+and an explicit second-order potential correction. The scale/composition
+comparison in <a
+href="#interacting-kernels-under-tangent-scaling">§7</a> retains the
+whole interaction. Normalizing each transition separately generally
+destroys its semigroup law; normalizing a complete endpoint bridge
+preserves refinement consistency. The local tangent limit and the
+scaling that resolves a quantum well retain different information, as <a
+href="#which-zoom-resolves-a-quantum-well">§8</a> makes precise.</p>
+<p><strong>State result, 2026-10-27.</strong> The tangent groupoid
+carries a continuous field of observable algebras whose
+positive-parameter fibers are quantum and whose zero fiber is classical.
+After fixing an action unit <span class="math inline">\(S_0\)</span> and
+setting <span class="math inline">\(\hbar=\epsilon S_0\)</span>, the
+finite quantum products and classical initial-value construction of <a
 href="quantum-blocks-construct-newton.html">the quantum product
 theorem</a> define compatible states on these fibers. On every compact
 time interval, their values on smooth Weyl observables converge to the
@@ -103,8 +121,8 @@ to the exact quantum propagator as <span
 class="math inline">\(\hbar\to0\)</span>, nor makes a quantum
 superposition a single classical trajectory. The groupoid parameter is a
 geometric deformation parameter until the identification <span
-class="math inline">\(h=\epsilon S_*\)</span> is chosen. The time mesh
-is an additional scale.</p>
+class="math inline">\(\hbar=\epsilon S_0\)</span> is chosen. The time
+mesh is an additional scale.</p>
 <p>The <a href="dirichlet-wall-impulse.html">wall construction</a>
 treats boundary domains and impact separately; the whole-line theorem
 here does not cover that problem. The <a
@@ -114,8 +132,9 @@ supply the dynamics used below.</p>
 <p>The groupoid and strict quantization are established: in particular,
 Cariñena, Clemente-Gallardo, Follana, Gracia-Bondía, Rivero and Várilly,
 <a href="https://arxiv.org/abs/math/9802102">Connes’ Tangent Groupoid
-and Strict Quantization</a> (abstract and the prior repository
-companion), already includes the user’s work. Landsman–Ramazan’s <a
+and Strict Quantization</a> (§§3.1–3.3, selected passages read; see the
+repository companion), already includes the user’s work.
+Landsman–Ramazan’s <a
 href="https://arxiv.org/abs/math-ph/0001005">continuous-field
 construction</a> (abstract) supplies the general Lie-groupoid setting.
 The following state estimate applies the quantum product theorem’s
@@ -149,22 +168,22 @@ convolution to pointwise multiplication of functions of <span
 class="math inline">\((q,p)\)</span>. The positive fibers are abstractly
 isomorphic, but the continuous field specifies how families of their
 elements approach a classical observable.</p>
-<p>Choose an action unit <span class="math inline">\(S_*&gt;0\)</span>
-and set <span class="math display">\[\hbar=\epsilon S_*.\tag{4}\]</span>
+<p>Choose an action unit <span class="math inline">\(S_0&gt;0\)</span>
+and set <span class="math display">\[\hbar=\epsilon S_0.\tag{4}\]</span>
 For <span class="math inline">\(a\in C_c^\infty(T^*\mathbb R)\)</span>,
 Weyl quantization has kernel <span class="math display">\[
-K_\epsilon^a(x,y)=\frac1{2\pi\epsilon S_*}
-\int_{\mathbb R}e^{i(x-y)p/(\epsilon S_*)}
+K_\epsilon^a(x,y)=\frac1{2\pi\epsilon S_0}
+\int_{\mathbb R}e^{i(x-y)p/(\epsilon S_0)}
        a\!\left(\frac{x+y}{2},p\right)dp.\tag{5}
 \]</span> In chart (2), <span class="math display">\[
 \epsilon K_\epsilon^a
   \big(q+\epsilon v/2,q-\epsilon v/2\big)
-=\frac1{2\pi S_*}\int e^{ivp/S_*}a(q,p)dp.\tag{6}
+=\frac1{2\pi S_0}\int e^{ivp/S_0}a(q,p)dp.\tag{6}
 \]</span> The rescaled kernel is the inverse Fourier transform of the
 zero-fiber symbol. The established strict-quantization construction
 makes <span
 class="math inline">\(\epsilon\mapsto\operatorname{Op}_{\epsilon
-S_*}^W(a)\)</span>, together with <span class="math inline">\(a\)</span>
+S_0}^W(a)\)</span>, together with <span class="math inline">\(a\)</span>
 at zero, a continuous section. Equation (6) displays the chart and
 normalization in this flat case; it is not a new proof of the general
 continuous-field theorem.</p>
@@ -206,12 +225,12 @@ K_\hbar^{a_s}(x,y).\tag{10a}
 class="math inline">\(\|V&#39;&#39;&#39;\|_\infty|x-y|^3/24\)</span>.
 Rapid decay of the Fourier transform of <span
 class="math inline">\(a_s\)</span> in its momentum variable, the change
-<span class="math inline">\(x-y=hz\)</span>, and Schur’s test bound the
-operator norm by <span class="math inline">\(C_{a,T}\hbar^2\)</span>.
-Integrating this commutator remainder by Duhamel’s formula gives (10).
-This uses the standard Weyl calculus and the flow already constructed in
-the quantum product theorem; it is not being used to prove that flow
-exists.</p>
+<span class="math inline">\(x-y=\hbar z\)</span>, and Schur’s test bound
+the operator norm by <span
+class="math inline">\(C_{a,T}\hbar^2\)</span>. Integrating this
+commutator remainder by Duhamel’s formula gives (10). This uses the
+standard Weyl calculus and the flow already constructed in the quantum
+product theorem; it is not being used to prove that flow exists.</p>
 <h2 id="a-quantitative-state-on-every-fiber">3. A quantitative state on
 every fiber</h2>
 <p>Use the coherent packet <span
@@ -263,7 +282,7 @@ class="math display">\[
 \left|\langle\psi_{\hbar,\pi,j},\operatorname{Op}_\hbar^W(a)
                          \psi_{\hbar,\pi,j}\rangle-a(z(t_j))\right|
 \le J_a C^2 e^{2\beta T}\hbar+
-I_aG_T(C_\delta|\pi|+C_hh).\tag{14}
+I_aG_T(C_\delta|\pi|+C_\hbar\hbar).\tag{14}
 \]</span> The constants <span
 class="math inline">\(C,\beta,G_T,C_\delta,C_\hbar\)</span> are
 explicitly defined in that document and depend on the common <span
@@ -271,12 +290,12 @@ class="math inline">\(\hbar_0,T,V,m,\omega\)</span> and initial data,
 not on <span class="math inline">\(\hbar\)</span> or the number of
 cells. No differentiability of an unbounded quantum expectation is used
 in this step.</p>
-<p>With <span class="math inline">\(\hbar=\epsilon S_*\)</span>, choose
+<p>With <span class="math inline">\(\hbar=\epsilon S_0\)</span>, choose
 any <span class="math inline">\(\alpha&gt;0\)</span> and a time unit
-<span class="math inline">\(T_*&gt;0\)</span> so that <span
-class="math inline">\(|\pi_\epsilon|\le T_*\epsilon^\alpha\)</span>.
+<span class="math inline">\(T_0&gt;0\)</span> so that <span
+class="math inline">\(|\pi_\epsilon|\le T_0\epsilon^\alpha\)</span>.
 Equation (14) yields <span class="math display">\[
-\langle\operatorname{Op}_{\epsilon S_*}^W(a)\rangle_{\pi_\epsilon}
+\langle\operatorname{Op}_{\epsilon S_0}^W(a)\rangle_{\pi_\epsilon}
 \longrightarrow a(\Phi_t(q_0,p_0))
 \quad\text{at vertices tending to }t,\tag{15}
 \]</span> with error <span
@@ -306,16 +325,16 @@ the action parameter and the duration must not be conflated.</p>
 <p>Consider a drifted free reference increment <span
 class="math display">\[Y-X=u\delta+\sqrt{\frac{\hbar\delta}{m}}\,Z,
 \qquad Z\sim N(0,1).\tag{16}\]</span> Set <span
-class="math inline">\(\hbar=\epsilon S_*\)</span> and <span
-class="math inline">\(\delta=T_*\epsilon^\alpha\)</span> with <span
+class="math inline">\(\hbar=\epsilon S_0\)</span> and <span
+class="math inline">\(\delta=T_0\epsilon^\alpha\)</span> with <span
 class="math inline">\(\alpha&gt;0\)</span>. The physical-time difference
 quotient is <span class="math display">\[\frac{Y-X}{\delta}
-=u+\sqrt{\frac{S_*}{mT_*}}\,
+=u+\sqrt{\frac{S_0}{mT_0}}\,
        \epsilon^{(1-\alpha)/2}Z,\tag{17}\]</span> whereas the
 tangent-groupoid chart variable is <span
 class="math display">\[v_\epsilon=\frac{Y-X}{\epsilon}
-=uT_*\epsilon^{\alpha-1}
-  +\sqrt{\frac{S_*T_*}{m}}\,
+=uT_0\epsilon^{\alpha-1}
+  +\sqrt{\frac{S_0T_0}{m}}\,
        \epsilon^{(\alpha-1)/2}Z.\tag{18}\]</span></p>
 <ul>
 <li>If <span class="math inline">\(0&lt;\alpha&lt;1\)</span>, the
@@ -324,8 +343,8 @@ class="math inline">\(u\)</span>, but <span
 class="math inline">\(v_\epsilon\)</span> is not tight.</li>
 <li>If <span class="math inline">\(\alpha=1\)</span>, <span
 class="math inline">\(v_\epsilon\)</span> converges in law to a
-nondegenerate Gaussian of mean <span class="math inline">\(uT_*\)</span>
-and variance <span class="math inline">\(S_*T_*/m\)</span>.</li>
+nondegenerate Gaussian of mean <span class="math inline">\(uT_0\)</span>
+and variance <span class="math inline">\(S_0T_0/m\)</span>.</li>
 <li>If <span class="math inline">\(\alpha&gt;1\)</span>, <span
 class="math inline">\(v_\epsilon\to0\)</span> in probability, while the
 physical-time quotient is not tight.</li>
@@ -484,14 +503,15 @@ calculation. Those examples motivate testing which independent force or
 derivative bounds suppress such a defect; they do not make the defect
 universal or identify it with <span
 class="math inline">\(\hbar\)</span>.</p>
-<p>The open RG problem is to construct a compatible control or blocking
-map for the actual normalized kernels, states and generated
-interactions, including the increments and all required limits, and then
-determine whether its effective action has a universal physical
-identification. Geometric zoom, coarse-graining and running parameters
-can participate in one construction, but a geometric dilation alone does
-not establish that construction or force <span
-class="math inline">\(\hbar\)</span> to run. The <a
+<p>The interacting scalar comparison in §7 now gives an exact dilation
+map commuting with kernel composition and endpoint-bridge
+marginalization. It uses an already defined Hamiltonian and retains its
+complete kernels; it supplies no closed finite list of effective
+couplings. The wider RG question is uniform control of generated
+interactions at the required physical times and preparations, and any
+independent universal calibration of the action. Geometric zoom,
+coarse-graining and running parameters can participate in that
+construction; they remain different operations. The <a
 href="groupoid-quantum-newton-states.html#geometric-zoom-and-kernel-composition">corrected
 groupoid comparison</a> and <a
 href="https://github.com/arivero/navstokgap/blob/main/research/refinement-correspondences.md">scale
@@ -503,11 +523,12 @@ class="math inline">\((x,y,\epsilon)\mapsto(x,y,\lambda^{-1}\epsilon)\)</span>
 and <span class="math inline">\((x,v,0)\mapsto(x,\lambda v,0)\)</span>.
 Debord–Skandalis <a
 href="https://doi.org/10.1016/j.aim.2014.02.012">2014</a> and van
-Erp–Yuncken <a href="https://doi.org/10.1515/crelle-2017-0035">2019</a>
-(metadata read) relate this geometry to pseudodifferential kernels
-homogeneous modulo smoothing terms; the zero-fiber restriction gives
-their principal symbols. This source result identifies geometric
-structure, not a Wilsonian integration or a law for physical <span
+Erp–Yuncken <a href="https://arxiv.org/pdf/1511.01041">2019</a> (§1.1
+and §4.1, Definition 17, passages read; Debord–Skandalis metadata only)
+relate this geometry to pseudodifferential kernels homogeneous modulo
+smoothing terms; the zero-fiber restriction gives their principal
+symbols. This source result identifies geometric structure, not a
+Wilsonian integration or a law for physical <span
 class="math inline">\(\hbar\)</span>. Earlier identifications of all
 three were too broad.</p>
 <p>The user’s 2003 note (<a
@@ -573,11 +594,11 @@ href="https://doi.org/10.1017/S096249290100006X">Marsden and West
 2001</a>, metadata), and discrete Lagrangian mechanics on groupoids is
 <a href="https://doi.org/10.1090/fic/007/10">Weinstein’s (1996)</a>
 (metadata). The kick–drift–kick cell <span
-class="math inline">\(S_\hbar=K_{Fh/2}D_hK_{Fh/2}\)</span> of the
-refinement note is the variational (Störmer–Verlet) integrator of the
-trapezoidal discrete Lagrangian <span
-class="math inline">\(L_\hbar\)</span>, and the cubic counterterm turns
-<span class="math inline">\(L_\hbar\)</span> into the exact one. The
+class="math inline">\(S_\delta=K_{F\delta/2}D_\delta
+K_{F\delta/2}\)</span> of the refinement note is the variational
+(Störmer–Verlet) integrator of the trapezoidal discrete Lagrangian <span
+class="math inline">\(L_\delta\)</span>, and the cubic counterterm turns
+<span class="math inline">\(L_\delta\)</span> into the exact one. The
 laws of Proposition 1 can be related through a Euclidean Laplace limit:
 under coercivity and regularity conditions, <span
 class="math inline">\(-\hbar\log\int e^{-S/\hbar}dy\to\inf_y S\)</span>
@@ -586,23 +607,454 @@ href="https://doi.org/10.1090/conm/377/06982">Litvinov 2005</a>,
 metadata). This does not turn an oscillatory real-time integral into a
 probability integral, nor make every stationary real-time branch a
 global minimum.</p>
-<h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<h2 id="interacting-kernels-under-tangent-scaling">7. Interacting
+kernels under tangent scaling</h2>
+<p>Here the kinetic energy, mass and potential are specified. The
+conclusions do not follow from the groupoid law without those dynamical
+inputs. Work on <span class="math inline">\(\mathbb R\)</span>, with
+<span class="math inline">\(m,S_0&gt;0\)</span> and <span
+class="math inline">\(V\ge0\)</span>. For the estimates assume <span
+class="math inline">\(V\in C^3\)</span> and bounded <span
+class="math inline">\(V&#39;&#39;\)</span> and <span
+class="math inline">\(V&#39;&#39;&#39;\)</span>. Use the nonnegative
+Friedrichs Hamiltonians <span
+class="math display">\[H_{a,V}=-\frac{a^2}{2m}\partial_x^2+V(x),\qquad
+a&gt;0.\]</span> Their Euclidean kernels <span
+class="math inline">\(K_{a,V}(t;x,y)\)</span> are those of <span
+class="math inline">\(e^{-tH_{a,V}/a}\)</span>. The action-dimensional
+<span class="math inline">\(a\)</span> is a family parameter; the
+semiclassical family below sets <span
+class="math inline">\(a=\hbar=\epsilon S_0\)</span>. Neither <span
+class="math inline">\(\epsilon\)</span> nor a duration is being assigned
+the units of physical <span class="math inline">\(\hbar\)</span>.</p>
+<h3 id="exact-dilation-and-composition">Exact dilation and
+composition</h3>
+<p>For dimensionless <span class="math inline">\(r,s&gt;0\)</span> and a
+fixed centre <span class="math inline">\(q\)</span>, put <span
+class="math display">\[
+(D_{q,s}f)(X)=s^{1/2}f(q+sX),\qquad
+a&#39;=\frac{ra}{s^2},\qquad
+V_{r,s,q}(X)=\frac{r^2}{s^2}V(q+sX).
+\tag{20}
+\]</span> Direct differentiation gives the exact operator identity <span
+class="math display">\[
+\frac r a D_{q,s}H_{a,V}D_{q,s}^{-1}
+=\frac1{a&#39;}H_{a&#39;,V_{r,s,q}}.
+\tag{21}
+\]</span> Unitary conjugation preserves the Friedrichs domains and
+proves (21) also for the closed forms. Spectral calculus therefore gives
+<span class="math display">\[
+s K_{a,V}(rt;q+sX,q+sY)
+=K_{a&#39;,V_{r,s,q}}(t;X,Y).
+\tag{22}
+\]</span> The same conjugation holds for real-time unitary propagators;
+their kernels need not be positive functions. We use (22) as a
+probability calculation only in Euclidean time.</p>
+<p>Keeping <span class="math inline">\(m\)</span> fixed in (20) is a
+declared normalization, not an invariant meaning of action running.
+Equivalently keep <span class="math inline">\(a\)</span> fixed, use
+<span class="math inline">\(m&#39;=ms^2/r\)</span> and <span
+class="math inline">\(\widehat V(X)=rV(q+sX)\)</span>, and obtain the
+same rescaled kernel from <span
+class="math inline">\(H_{a,m&#39;,\widehat V}\)</span>. Here the extra
+mass subscript makes the kinetic coefficient explicit. Physical
+calibration must distinguish these parametrizations; the coordinate/time
+identity alone cannot do so.</p>
+<p>Composition commutes with this dilation. Indeed, substituting <span
+class="math inline">\(z=q+sZ\)</span> in <span
+class="math inline">\(K(r(t+u))=\int K(rt)K(ru)\,dz\)</span> cancels
+exactly one kernel Jacobian and gives the composition law for the right
+side of (22). For an endpoint bridge with <span
+class="math inline">\(N\)</span> cells, the <span
+class="math inline">\(N\)</span> kernel factors contribute <span
+class="math inline">\(s^{-N}\)</span>, its <span
+class="math inline">\(N-1\)</span> internal integrations contribute
+<span class="math inline">\(s^{N-1}\)</span>, and division by the total
+endpoint kernel contributes <span class="math inline">\(s\)</span>.
+Their product is one. Thus the normalized bridge and every marginal
+transform exactly, before or after eliminating any subset of inserted
+points. No generated term is dropped. This extends the free comparison
+in §6 to a specified interacting Hamiltonian; the dilation itself is
+invertible, whereas eliminating bridge points generally is not.</p>
+<h3 id="inserted-points-and-the-boundary-product">Inserted points and
+the boundary product</h3>
+<p>The user’s insertion question distinguishes the arrow law from the
+kernel law. At fixed <span class="math inline">\(\epsilon&gt;0\)</span>,
+composable arrows have exactly <span
+class="math inline">\((x-y)+(y-z)=x-z\)</span>. In symmetric chart
+coordinates write <span class="math inline">\(u=(x-y)/\epsilon\)</span>,
+<span class="math inline">\(v-u=(y-z)/\epsilon\)</span> and <span
+class="math inline">\(q=(x+z)/2\)</span>. The two factors have different
+centres: <span class="math display">\[
+q_1=\frac{x+y}{2}=q+\frac\epsilon2(v-u),\qquad
+q_2=\frac{y+z}{2}=q-\frac\epsilon2u.
+\tag{22a}
+\]</span> For kernels <span
+class="math inline">\(A_\epsilon,B_\epsilon\)</span> with absolutely
+convergent product, put <span
+class="math inline">\(\kappa^A_\epsilon(q,v)=\epsilon
+A_\epsilon(q+\epsilon v/2,q-\epsilon v/2)\)</span>, and similarly for
+<span class="math inline">\(B\)</span>. Substitution of <span
+class="math inline">\(y=x-\epsilon u\)</span> in the product integral
+gives <span class="math display">\[
+\kappa^{AB}_\epsilon(q,v)=\int
+\kappa^A_\epsilon\!\left(q+\tfrac\epsilon2(v-u),u\right)
+\kappa^B_\epsilon\!\left(q-\tfrac\epsilon2u,v-u\right)du.
+\tag{22b}
+\]</span> The tangent-bundle law at zero still permits the decomposition
+<span class="math inline">\(v=u+(v-u)\)</span>, but the separate
+finite-scale centres have collapsed to the same <span
+class="math inline">\(q\)</span>. Its convolution is consequently
+fibrewise; Fourier transformation makes its product commutative. The
+exact positive-scale formula retains the shifts, rather than merely
+adding two tangent vectors at an unchanged base point. Thus the bare
+zero-fibre bundle does not retain where an intermediate finite-scale
+point was inserted.</p>
+<p>For heat kernels with durations <span
+class="math inline">\(t,u&gt;0\)</span>, refinement additionally
+requires integrating <span
+class="math inline">\(K(t;x,y)K(u;y,z)\)</span> over that inserted point
+to obtain <span class="math inline">\(K(t+u;x,z)\)</span>. The product
+at one chosen <span class="math inline">\(y\)</span> is one integrand,
+not the whole composed kernel. A duration split is extra data beyond the
+ordinary pair-groupoid arrow; the time-graded formulation in §6 records
+it. This is compatible with (22b) and with the distinction between
+elimination and pointwise action addition already proved there.</p>
+<h3 id="the-matched-tangent-limit">The matched tangent limit</h3>
+<p>Take <span class="math inline">\(a=\epsilon S_0\)</span> and <span
+class="math inline">\(r=s=\epsilon\)</span>. Equations (20)–(22) become
+<span class="math display">\[
+\widetilde H_{\epsilon,q}
+=-\frac{S_0^2}{2m}\partial_X^2+V(q+\epsilon X),
+\tag{23a}
+\]</span> <span class="math display">\[
+\epsilon K_{\epsilon S_0,V}
+       (\epsilon T;q+\epsilon X,q+\epsilon Y)
+=K_{S_0,V(q+\epsilon\,\cdot)}(T;X,Y).
+\tag{23b}
+\]</span> The potential on the right tends locally to <span
+class="math inline">\(V(q)\)</span>. On <span
+class="math inline">\(C_c^\infty\)</span>, the operators consequently
+converge to <span
+class="math inline">\(H_{0,q}=-S_0^2\partial_X^2/(2m)+V(q)\)</span> in
+norm on each test vector. Fix an energy <span
+class="math inline">\(E_{\rm ref}&gt;0\)</span>. For <span
+class="math inline">\(f\)</span> in this core, <span
+class="math display">\[
+\begin{aligned}
+&amp;(\widetilde H_{\epsilon,q}+E_{\rm ref})^{-1}
+                         (H_{0,q}+E_{\rm ref})f-f\\
+&amp;\quad=(\widetilde H_{\epsilon,q}+E_{\rm ref})^{-1}
+                 (H_{0,q}-\widetilde H_{\epsilon,q})f\longrightarrow0.
+\end{aligned}
+\]</span> The resolvents have norm at most <span
+class="math inline">\(E_{\rm ref}^{-1}\)</span> and <span
+class="math inline">\((H_{0,q}+E_{\rm ref})C_c^\infty\)</span> is dense,
+so convergence extends strongly to every vector. Continuous functional
+calculus gives strong convergence of the heat operators. Local kernel
+convergence, with a rate, follows independently from the bridge
+calculation below. There is no claim of operator-norm convergence on
+this one fixed <span class="math inline">\(L^2\)</span> space: for a
+harmonic potential every positive-<span
+class="math inline">\(\epsilon\)</span> heat operator is compact, while
+the limiting free heat operator times <span
+class="math inline">\(e^{-TV(q)/S_0}\)</span> is not. A norm limit of
+compact operators would be compact. This comparison under dilation is
+distinct from continuity of the groupoid field with different zero and
+positive fibers.</p>
+<p>For the symmetric chart <span class="math inline">\(X=v/2\)</span>,
+<span class="math inline">\(Y=-v/2\)</span>, define <span
+class="math display">\[
+\kappa_\epsilon(q,v;T)
+=\epsilon K_{\epsilon S_0,V}
+       (\epsilon T;q+\epsilon v/2,q-\epsilon v/2).
+\tag{24}
+\]</span> Then, locally uniformly in <span
+class="math inline">\(q,v\)</span> and in <span
+class="math inline">\(T\)</span> bounded away from zero and infinity,
+<span class="math display">\[
+\kappa_\epsilon(q,v;T)\longrightarrow
+\kappa_0(q,v;T)
+=\sqrt{\frac m{2\pi S_0T}}
+   \exp\!\left[-\frac{mv^2}{2S_0T}-\frac{TV(q)}{S_0}\right].
+\tag{25}
+\]</span> The tangent Fourier transform is exactly <span
+class="math display">\[
+\int e^{-ivp/S_0}\kappa_0(q,v;T)\,dv
+=\exp\!\left[-\frac T{S_0}
+              \left(\frac{p^2}{2m}+V(q)\right)\right].
+\tag{26}
+\]</span> At fixed <span class="math inline">\(q\)</span>,
+tangent-vector convolution of these Gaussian kernels adds <span
+class="math inline">\(T\)</span>; after Fourier transformation this is
+multiplication of the displayed classical heat symbols. The boundary
+value is the semiclassical symbol of the specified family <span
+class="math inline">\(H_{\epsilon S_0,V}\)</span>. It is not the
+ordinary principal symbol of a fixed second-order operator, for which
+<span class="math inline">\(V\)</span> is lower order. Nor is (26) a
+real-time path probability or a claim that every heat operator lies in a
+compact-operator fiber. For example, a constant potential gives bounded
+multipliers, not elements of <span class="math inline">\(\mathcal
+K(L^2(\mathbb R))\)</span>, and its symbol does not vanish at spatial
+infinity.</p>
+<p>This scaling follows a family of near-diagonal arrows as well as
+changing the physical duration. It is not a single orbit of the
+adiabatic zoom in §6, which fixes the positive-fiber endpoints. The
+kinetic variance <span class="math inline">\(\hbar t/m=\epsilon^2
+S_0T/m\)</span> explains why the tangent displacement is order <span
+class="math inline">\(\epsilon\)</span> here. At fixed positive physical
+<span class="math inline">\(\hbar\)</span>, a short-time diffusive
+displacement instead has order <span class="math inline">\(\sqrt
+t\)</span>.</p>
+<h3 id="the-first-surviving-potential-correction">The first surviving
+potential correction</h3>
+<p>Write <span class="math inline">\(B_s\)</span>, <span
+class="math inline">\(0\le s\le1\)</span>, for a standard real Brownian
+bridge and put <span class="math display">\[
+\sigma^2=\frac{S_0T}{m},\qquad
+\xi_s=(\tfrac12-s)v+\sigma B_s,\qquad
+A_\epsilon=\frac T{S_0}\int_0^1 V(q+\epsilon\xi_s)\,ds.
+\]</span> The Feynman–Kac bridge formula gives <span
+class="math display">\[
+\kappa_\epsilon
+=\sqrt{\frac m{2\pi S_0T}}e^{-mv^2/(2S_0T)}
+     \mathbb E e^{-A_\epsilon}.
+\tag{27}
+\]</span> The formula is established: <a
+href="https://arxiv.org/pdf/math-ph/9907022">Simon 1999</a>, Theorem 1.1
+and equations (1.1)–(1.3), printed pp. 1–2, passages read. The
+Brownian-bridge expansion is also standard Wigner–Kirkwood machinery;
+see <a href="https://arxiv.org/pdf/1309.0206">Jizba–Zatloukal 2014</a>,
+§IV, equations (34)–(42), passages read. The constants and local
+remainder used here are derived next; no novelty is asserted for the
+method.</p>
+<p>Let <span class="math inline">\(I_1=\int_0^1\xi_s ds\)</span> and
+<span class="math inline">\(I_2=\int_0^1\xi_s^2 ds\)</span>. The bridge
+covariance <span class="math inline">\(\min(s,u)-su\)</span> gives <span
+class="math display">\[
+\mathbb EI_1=0,\qquad
+\mathbb EI_1^2=\frac{\sigma^2}{12},\qquad
+\mathbb EI_2=\frac{v^2}{12}+\frac{\sigma^2}{6}.
+\]</span> For example, integrating the covariance first in <span
+class="math inline">\(u\)</span> gives <span
+class="math inline">\(s(1-s)/2\)</span>, and its integral in <span
+class="math inline">\(s\)</span> is <span
+class="math inline">\(1/12\)</span>. Differentiating <span
+class="math inline">\(\mathbb E e^{-A_\epsilon}\)</span> twice at zero
+therefore yields <span class="math display">\[
+\kappa_\epsilon=\kappa_0
+          [1+\epsilon^2 C(q,v,T)+O(\epsilon^3)],
+\tag{28a}
+\]</span> <span class="math display">\[
+C=\frac{T^3[V&#39;(q)]^2}{24mS_0}
+    -\frac{T V&#39;&#39;(q)v^2}{24S_0}
+    -\frac{T^2V&#39;&#39;(q)}{12m}.
+\tag{28b}
+\]</span> There is no linear term in this symmetric endpoint kernel. To
+justify the expansion, <span class="math inline">\(V\ge0\)</span> bounds
+<span class="math inline">\(e^{-A_\theta}\)</span> by one for real <span
+class="math inline">\(\theta\)</span>. Bounded <span
+class="math inline">\(V&#39;&#39;\)</span> gives <span
+class="math inline">\(|V&#39;(q+\theta\xi)|\le
+|V&#39;(q)|+\|V&#39;&#39;\|_\infty|\theta\xi|\)</span>. The first three
+derivatives of <span class="math inline">\(e^{-A_\theta}\)</span> are
+consequently bounded by polynomials in <span
+class="math inline">\(\int|\xi_s|^jds\)</span>, <span
+class="math inline">\(j\le3\)</span>, with locally uniform coefficients
+for <span class="math inline">\(|\theta|\le1\)</span>. All required
+Gaussian moments are finite. For an explicit remainder bound put <span
+class="math inline">\(\beta=T/S_0\)</span>, <span
+class="math inline">\(G=|V&#39;(q)|\)</span>, <span
+class="math inline">\(L=\|V&#39;&#39;\|_\infty\)</span>, <span
+class="math inline">\(M=\|V&#39;&#39;&#39;\|_\infty\)</span> and <span
+class="math inline">\(U_j=\int_0^1|\xi_s|^jds\)</span>. Define <span
+class="math display">\[
+\begin{aligned}
+\mathcal M(q,v,T)=\mathbb E\big[&amp;\beta^3(GU_1+LU_2)^3\\
+&amp;+3\beta^2 L(GU_1+LU_2)U_2+\beta M U_3\big].
+\end{aligned}
+\]</span> The absolute value of the relative remainder in (28a) is at
+most <span class="math inline">\(\epsilon^3 e^{\beta V(q)}\mathcal
+M(q,v,T)/6\)</span>, for <span
+class="math inline">\(0\le\epsilon\le1\)</span>. This follows from <span
+class="math inline">\(|\partial_\theta^3 e^{-A_\theta}|\le
+|A&#39;_\theta|^3+3|A&#39;_\theta
+A&#39;&#39;_\theta|+|A&#39;&#39;&#39;_\theta|\)</span> and the bounds
+above. The Gaussian moment constant is finite and locally uniform. There
+is no uniform assertion over all <span class="math inline">\(q\)</span>,
+all durations or arbitrary singular potentials.</p>
+<h3 id="normalization-that-survives-refinement">Normalization that
+survives refinement</h3>
+<p>The full normalized bridge on the rescaled path <span
+class="math inline">\(\xi\)</span> has density <span
+class="math display">\[
+R_\epsilon=\frac{e^{-A_\epsilon}}{\mathbb E e^{-A_\epsilon}}
+=1-\epsilon\frac{T V&#39;(q)}{S_0}I_1+O_{L^1}(\epsilon^2)
+\tag{29}
+\]</span> relative to its free bridge. The same differentiation bounds
+prove this <span class="math inline">\(L^1\)</span> expansion, with its
+normalizer bounded away from zero on the stated compact sets. Thus the
+bridge changes at first order even though the integrated symmetric
+kernel changes only at second order. In physical coordinates its mean is
+<span class="math display">\[
+\mathbb E[q+\epsilon\xi_s]
+=q+\epsilon(\tfrac12-s)v
+   -\epsilon^2\frac{T^2V&#39;(q)}{2m}s(1-s)+O(\epsilon^3).
+\tag{30}
+\]</span> Here the expectation is under the interacting bridge. The
+covariance <span
+class="math inline">\(\operatorname{Cov}(\xi_s,I_1)=\sigma^2s(1-s)/2\)</span>
+proves the correction; Gaussian moments justify the same expansion with
+the inserted <span class="math inline">\(\xi_s\)</span>. Its sign agrees
+with the Euclidean stationary equation <span
+class="math inline">\(m\ddot q=+V&#39;(q)\)</span>, and must not be
+substituted for the real-time Newton force.</p>
+<p>This comparison is uniform over refinements at the level of lifted
+densities. On any partition of <span
+class="math inline">\([0,1]\)</span>, replace the integral in <span
+class="math inline">\(A_\epsilon\)</span> by the endpoint trapezoidal
+sum and call it <span class="math inline">\(A_{\epsilon,\pi}\)</span>.
+For every continuous bridge path, <span class="math display">\[
+\sup_\pi\left|A_{\epsilon,\pi}-\frac{TV(q)}{S_0}\right|
+\le\frac T{S_0}\sup_s|V(q+\epsilon\xi_s)-V(q)|\longrightarrow0.
+\]</span> All weights lie in <span class="math inline">\([0,1]\)</span>,
+so dominated convergence gives <span
+class="math inline">\(\sup_\pi\|R_{\epsilon,\pi}-1\|_{L^1}\to0\)</span>.
+At fixed <span class="math inline">\(\epsilon\)</span>, ordinary mesh
+refinement gives <span class="math inline">\(R_{\epsilon,\pi}\to
+R_\epsilon\)</span> in <span class="math inline">\(L^1\)</span>. Free
+polygonal interpolation converges uniformly pathwise as <span
+class="math inline">\(|\pi|\to0\)</span>. Therefore any joint schedule
+<span class="math inline">\(\epsilon\to0\)</span>, <span
+class="math inline">\(|\pi|\to0\)</span> has the free rescaled bridge as
+its weak path limit. No relation between the dimensionless mesh and
+<span class="math inline">\(\epsilon\)</span> is required. Total
+variation is asserted for densities lifted to the common free path
+space, not for polygon-supported measures against a non-polygonal
+Brownian law. Exact projective consistency belongs to the complete
+heat-kernel bridges; trapezoidal single-cell weights acquire generated
+terms when blocked.</p>
+<p>Dividing each transition by its row integral is a different
+operation. For <span class="math inline">\(V(x)=m\omega^2x^2/2\)</span>,
+the Mehler kernel is <span class="math display">\[
+K_{a,V}(t;x,y)=\sqrt{\frac{m\omega}{2\pi a\sinh\omega t}}
+\exp\!\left[-\frac{m\omega[(x^2+y^2)\cosh\omega t-2xy]}
+                  {2a\sinh\omega t}\right].
+\]</span> It solves the heat equation with the delta initial condition.
+Completing the square shows that its row-normalized transition is <span
+class="math display">\[
+N_t(x,dy)=\mathcal N\!\left(
+       \frac{x}{\cosh\omega t},\frac{a}{m\omega}\tanh\omega t
+                                      \right)(dy).
+\tag{31}
+\]</span> The mean of <span class="math inline">\(N_tN_u\)</span> is
+<span class="math inline">\(x/(\cosh\omega t\cosh\omega u)\)</span>,
+whereas that of <span class="math inline">\(N_{t+u}\)</span> is <span
+class="math inline">\(x/\cosh\omega(t+u)\)</span>. For <span
+class="math inline">\(x\ne0\)</span>, <span
+class="math inline">\(t,u&gt;0\)</span> they differ. Hence this
+normalized family is not a semigroup. A genuine Markov semigroup, when a
+positive ground state exists, is the <a
+href="constructive-qft-one-time.html#arbitrary-time-refinement">ground-state
+transform</a>, which retains the eigenfunction ratios and vacuum-energy
+factor.</p>
+<h2 id="which-zoom-resolves-a-quantum-well">8. Which zoom resolves a
+quantum well?</h2>
+<p>The ordinary tangent chart samples distances of order <span
+class="math inline">\(\epsilon\)</span> and, in (23), durations of order
+<span class="math inline">\(\epsilon\)</span>. It freezes the potential
+locally. To resolve a well rather than a diagonal kernel, use a
+different scaling. For the separate model <span
+class="math inline">\(V(x)=\lambda x^{2k}\)</span>, <span
+class="math inline">\(k\ge1\)</span>, <span
+class="math inline">\(\lambda&gt;0\)</span>, set <span
+class="math inline">\(\hbar=\epsilon S_0\)</span>, <span
+class="math inline">\(q=0\)</span> and <span class="math display">\[
+s=\epsilon^{1/(k+1)},\qquad
+r=\epsilon^{(1-k)/(k+1)}.
+\tag{32}
+\]</span> Equations (20)–(22) now give <span
+class="math inline">\(a&#39;=S_0\)</span> and <span
+class="math inline">\(V_{r,s,0}(X)=\lambda X^{2k}\)</span> exactly.
+Equivalently, <span class="math display">\[
+D_{0,s}H_{\epsilon S_0,V}D_{0,s}^{-1}
+=\epsilon^{2k/(k+1)}H_{S_0,V}.
+\tag{33}
+\]</span> The equal exponents follow by balancing <span
+class="math inline">\(\epsilon^2/s^2=s^{2k}\)</span>. This is the
+standard homogeneous spectral dilation, not a new gap theorem; the <a
+href="constructive-qft-one-time.html#a-vacuum-and-a-gap-from-the-hamiltonian">quartic
+construction</a> already gives its <span
+class="math inline">\(k=2\)</span> case, and <a
+href="low-dimensional-mass-gap.html#the-exact-hbar-scaling-of-spectra-for-homogeneous-potentials">matrix-model
+scaling</a> has its own operator and invariant-sector conditions.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Limit, with <span class="math inline">\(S_0\)</span> fixed</th>
+<th>Position scale</th>
+<th>Physical duration scale</th>
+<th>What remains</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Matched ordinary tangent kernel</td>
+<td><span class="math inline">\(\epsilon\)</span></td>
+<td><span class="math inline">\(\epsilon\)</span></td>
+<td>Free tangent heat kernel times <span
+class="math inline">\(e^{-TV(q)/S_0}\)</span></td>
+</tr>
+<tr class="even">
+<td>Harmonic well, <span class="math inline">\(k=1\)</span></td>
+<td><span class="math inline">\(\epsilon^{1/2}\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td>Full fixed-action harmonic dynamics</td>
+</tr>
+<tr class="odd">
+<td>Quartic well, <span class="math inline">\(k=2\)</span></td>
+<td><span class="math inline">\(\epsilon^{1/3}\)</span></td>
+<td><span class="math inline">\(\epsilon^{-1/3}\)</span></td>
+<td>Full fixed-action quartic dynamics</td>
+</tr>
+</tbody>
+</table>
+<p>The durations multiply a fixed reference time, and the position
+factors multiply a fixed reference length or the coordinate <span
+class="math inline">\(X\)</span> in (20). The two monomial gaps scale
+respectively as <span class="math inline">\(\epsilon\)</span> and <span
+class="math inline">\(\epsilon^{4/3}\)</span> by (33); their existence
+is supplied by the confining Hamiltonians. The growing quartic duration
+lies outside the bounded-<span class="math inline">\(T\)</span> local
+estimate (28). A well-resolving quantum limit therefore cannot be
+inferred from that ordinary tangent estimate. It is a different rescaled
+family; it does not replace the commutative zero fiber of (3).</p>
+<p>All these constructions admit any supplied <span
+class="math inline">\(S_0&gt;0\)</span>. They construct no independent
+action floor, and no preferred dimensional normalization of the groupoid
+parameter. Identifying a particular member with measured physical <span
+class="math inline">\(\hbar\)</span> still requires physical
+information. Normalized free refinement at action zero remains the
+classical countermodel in §6.</p>
+<h2 id="consequence-for-state">9. Consequence for STATE</h2>
 <p>The constructed <span class="math inline">\(0+1\)</span> quantum
 family, the semiclassical Newton flow and the user’s tangent-groupoid
-framework now meet in a concrete state theorem with a joint mesh/action
-error bound. The strong operator product limit remains a fixed-<span
-class="math inline">\(\hbar\)</span> theorem; the Euclidean density
-tower and the real-time coherent states have distinct roles. No positive
-universal action scale or four-dimensional Yang–Mills result
-follows.</p>
-<p><strong>Targeted advisor check (GPT-6.1 Sol, 2026-10-27).</strong> An
-internal mathematical review checked the chart and Fourier
-normalizations, the state and Gaussian-scale bounds, the extension to
-continuous sections, and the estimate (10). It is not independent peer
-review of the underlying continuous-field theorem or of the literature.
-The centered <span class="math inline">\(O(\hbar)\)</span> state
-improvement in §3 is a subsequent written derivation and was not part of
-that earlier check.</p>
+framework meet in a state theorem with a joint mesh/action error bound.
+The scalar scaling question now also has an exact dilation/composition
+map, a controlled local interacting heat kernel and a
+refinement-compatible normalized bridge. Ordinary tangent and
+well-resolving limits use different spatial and temporal scales. The
+strong product limit remains a fixed-<span
+class="math inline">\(\hbar\)</span> theorem. Physical calibration,
+uniform control over growing times or noncompact preparations, and
+four-dimensional Yang–Mills construction remain separate
+obligations.</p>
 
 </main>
 <footer class="site"><div class="wrap">

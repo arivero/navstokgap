@@ -20,6 +20,8 @@ dimensional couplings explicit when converting rates or cutoffs to physics.
 | δ, σ; Δ | Position resolution and impulse spread | Apparatus/preparation resources. σ may be a Gaussian pointer width, not a cutoff; δ also denotes other errors in gauge notes |
 | L, P; LP | Position/momentum aperture; action product | Bounds on body states used by a protocol; a balanced aspect ratio is extra input, so area alone is insufficient |
 | Statistical/Bures angle θ | Dimensionless distance between laws/states | Record distinguishability or information path length, not an action scale. Multiplication by a supplied h* or ℏ enters a speed bound |
+| ε_G=ℏ/S0 | Dimensionless groupoid parameter, after choosing an action unit S0 | In the [matched kernel scaling](../notes/groupoid-quantum-newton-states.md#7-interacting-kernels-under-tangent-scaling), duration is ε_G T and separation ε_G v; neither is a time mesh |
+| v_G=(x−y)/ε_G | Length-valued tangent coordinate in that chart | Physical velocity would require a duration; the tangent heat symbol is Fourier dual to momentum using S0 |
 | ε | Error probability, action resolution, or small perturbation depending on note | Never substitute one role for another; ε→0 may change preparation and resources |
 
 Newton sources: [insertion action](../notes/newton-insertion-action.md),

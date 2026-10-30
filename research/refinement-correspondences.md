@@ -1,6 +1,6 @@
 # Newton–Yang–Mills correspondence test
 
-Begun 2026-10-01; groupoid/RG reading updated 2026-10-28. An exact formula in each theory is not automatically an exact
+Begun 2026-10-01; groupoid/RG scaling updated 2026-10-30. An exact formula in each theory is not automatically an exact
 identification between the theories. The classifications below keep the
 objects and the map explicit. Sources retain their stated reading levels;
 this document introduces no new physical premise.
@@ -114,9 +114,12 @@ quotient and groupoid chart variable; it is not a probability law for
 real-time Feynman paths. The [1998 control-map test](../notes/rivero-1998-conjecture-central-forces.md)
 and [groupoid states](../notes/groupoid-quantum-newton-states.md) separate
 geometric zoom, a bare phase regulator, physical $\hbar$, mesh, and
-conditional-density blocking. Constructing a map relating them is an
-open RG problem; a zoom alone does not integrate fluctuations or select
-a universal action. Read the [corrected groupoid trajectories](../notes/groupoid-quantum-newton-states.md#geometric-zoom-and-kernel-composition)
+conditional-density blocking. The [interacting scalar scaling map](../notes/groupoid-quantum-newton-states.md#7-interacting-kernels-under-tangent-scaling)
+now commutes exactly with kernel composition and normalized bridge
+marginalization. Its local tangent heat limit and well-resolving spectral
+zoom have different scales. Uniform global control and physical action
+calibration remain open; the zero-fibre addition law retains no distinct
+finite-scale insertion centres. Read the [corrected groupoid trajectories](../notes/groupoid-quantum-newton-states.md#geometric-zoom-and-kernel-composition)
 and [refinement §§3c–3d](../notes/refinement-composition-and-limit.md).
 A gauge double-groupoid organizing parallel moves is proposed, not proved.
 

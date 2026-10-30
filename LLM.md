@@ -47,7 +47,7 @@ and locality premises; neither dimensionless witness calibrates physical $\hbar$
 | --- | --- |
 | Smooth quantum/mesh classical limit | [Quantum blocks](notes/quantum-blocks-construct-newton.md): supplied action, smooth scalar potential, packet widths and mean errors; uncut quartic extension is not proved there |
 | Weaker regularity | [Lipschitz lift](notes/lipschitz-certificate-quantum-lift.md): $C^{1,1}$, no lower potential bound, sharp square-root rate and separate fixed-action product estimate |
-| Quantum/classical field of states | [Groupoid theorem](notes/groupoid-quantum-newton-states.md): geometric deformation, normalized free RG and observable-state limit; zoom is not integration of fluctuations |
+| Quantum/classical field of states | [Groupoid scaling and states](notes/groupoid-quantum-newton-states.md): exact interacting dilation/bridge comparison and local heat expansion; tangent and quantum-well scales differ; physical action remains supplied |
 | Boundary impulse | [Wall](notes/dirichlet-wall-impulse.md): specified domains and packet; position uniform through impact, current away, impulse weakly as a measure |
 | Cusp quantum branch choice | [Preparation selection](notes/cusp-quantum-preparation-selection.md): distinct microscopic preparations can share an incoming classical limit |
 | Gaussian preparation closure | [Canonical central limit](notes/central-limit-canonical-gaussian-sector.md): copying/mixing and closure; positive infimum is additional |

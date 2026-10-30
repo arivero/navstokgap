@@ -5,15 +5,14 @@ consolidation and index/reference/site consistency checks.** The
 [88-argument catalog](../notes/index.md) owns coverage and short completed-work
 phrases; git preserves retired notes and process records.
 
-The bounded centre-sector test is complete: the declared periodic holonomy
-benchmark has an exponentially small inter-sector upper gap, including a
-cubic-invariant trial. The exact lattice adjoint-loop trial targets the neutral
-sector; the fundamental-loop one-patch variance is not a global expectation.
-[Proof and scope](../notes/torus-valley-potential.md#a-centre-odd-variational-countertest),
-[neutral trial](../notes/lattice-gap-upper-bounds.md#conditional-small-volume-comparison).
-The remaining H3 question is a sector- and observable-algebra-matched comparison
-with the actual compressed field operator, including measure, projection and
-nonzero-mode errors. No full Yang–Mills spectral result is assumed.
+The user-directed tangent-groupoid scaling calculation is complete for the
+specified scalar Hamiltonian: exact dilation commutes with kernel composition
+and normalized endpoint-bridge marginalization. The local heat expansion,
+finite-scale insertion formula and distinct quantum-well scalings are in the
+[canonical argument](../notes/groupoid-quantum-newton-states.md#7-interacting-kernels-under-tangent-scaling).
+The remaining physical question is which independently specified preparations
+and time scales justify a particular control and action calibration; neither
+local convergence nor the supplied quantum family selects physical $\hbar$.
 
 ## Goals and current proof boundaries
 
@@ -34,8 +33,8 @@ must survive the [cusp and history tests](../notes/newton-cusp-preparation-floor
 and [complete-record controller models](../notes/sed-closure-under-recording.md).
 Coherent point-record behavior obeys the stated
 [frequency and preparation conditions](../notes/zero-branch-reachability.md).
-A [normalized blocking map](../notes/groupoid-quantum-newton-states.md) is
-still needed before identifying its scale with physical $\hbar$.
+The [scalar scaling map](../notes/groupoid-quantum-newton-states.md) retains
+the complete kernels; universal physical action calibration remains open.
 
 For gauge theory, retained-barrier weak-strip (112)/(116) and quadratic
 source test (177) leave nonlinear (113), physical recoupling, $SU(3)$

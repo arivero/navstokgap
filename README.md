@@ -16,7 +16,7 @@ physical $\hbar$ remain different claims.
 | How does refinement construct motion? | [Newton polygons](notes/balaban-ode-lesson.md), [quantum lift](notes/lipschitz-certificate-quantum-lift.md) |
 | What do cuts, phases and records retain? | [Cut energy](notes/cut-measure-newton.md), [Gaussian marks](notes/mark-cost-and-statistical-floor.md), [general quantum resources](notes/record-distance-path-length.md) |
 | Can classical completion or apparatus laws imply a floor? | [Cusp histories/floors](notes/newton-cusp-preparation-floor.md), [meter countermodel](notes/gaussian-meter-entropy-floor.md), [apparatus/calibration](notes/calibration-tolerance-recovery.md) |
-| What is the role of the groupoid scale? | [State theorem and normalized blocking tests](notes/groupoid-quantum-newton-states.md) |
+| What is the role of the groupoid scale? | [Interacting scaling, state limits and normalized bridges](notes/groupoid-quantum-newton-states.md) |
 | Which gauge bounds survive the physical limit? | [Spectral obligations](notes/mass-gap-obligations-lattice.md), [refinement atlas](notes/halving-atlas.md) |
 | What do Newton and earlier sources actually support? | [Historical manuscript](notes/planck-gap-paper.md), [cut provenance](notes/ancient-cuts-provenance.md) |
 
