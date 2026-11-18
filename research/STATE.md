@@ -10,28 +10,30 @@ principle that excludes zero action under arbitrarily fine subdivision?
 A physical premise specifies which motions or continuations the dynamics
 admit. It needs a justification independent of $\hbar$.
 
-In Lemma X Newton changed “regular” force in 1687 to finite force in
-1713. The new Corollary 4 relates force to the initial displacement
-divided by squared time. Proposition VI then invokes it for orbital
-motion. The immediate question is where that argument requires a limit
-for each given trajectory and whether any step requires a bound uniform
-over a family of trajectories. Specify the force law, the class of
-orbits and what is held fixed as points are inserted.
-[Edition comparison](../notes/newton-insertion-action.md#lemma-x-and-the-measurement-of-initial-force).
+Newton's 1713 Corollary 4 to Lemma X relates force to the initial
+displacement divided by squared time. Proposition VI invokes it for
+orbital motion. [Lemma X in 1687 and 1713](../notes/newton-insertion-action.md#lemma-x-and-the-measurement-of-initial-force).
+In a letter of 11 October 1709 Newton gave Cotes the
+uniqueness argument added to Proposition XIII. It concerns tangent
+inverse-square orbits at a given launch.
+[Edition passages and letter](../docs/Newton_Principia_Motte1846.md#corollary-1-to-proposition-xiii).
 
-The force coefficient converges uniformly for bounded-speed orbits in
-a compact region with one continuous force. Even then the centre can
-admit delayed departures. For an outward radial force a sum of tangent
-displacements on one moving orbit decides whether rest is unique. If
-the force can reverse sign, two laws can have identical displacements
-at all successive half-times and opposite answers about rest.
-[Radial proof and counterexample](../notes/balaban-ode-lesson.md#what-one-moving-orbit-determines-about-rest).
+For one continuous inward force at nonzero speed, placing each impulse
+before or after free flight gives opposite limiting departures from a
+circle. A nonnegative spherical mass instead gives unique nonradial
+motion under joint source and time refinement.
+[Polygon limits and gravitational bound](../notes/balaban-ode-lesson.md#tangent-orbits-under-the-two-impulse-orders).
 
-What part of the central-force argument, if any, requires the current
-position and momentum to specify the entire continuation at a joining
-time? A reversible shift on complete classical histories is available.
-[History completion](../notes/newton-cusp-preparation-floor.md) and
-[fixed-force counterexample](../notes/balaban-newton-time-blocking.md#central-force-passage-under-point-insertion).
+Uniform agreement over trial actions is equivalent to a positive
+action infimum for the stated canonical family. A classical ensemble
+with a positive lower width passes the same criterion. At the scale
+where the time step is comparable to the dimensionless packet width,
+do the two dynamics select different probabilities for the two orbits?
+Their current bounds come from initial overlaps. The actual selection,
+and a mechanical reason to exclude classical dispersion or branch
+information, remain open.
+[Action criterion and classical comparison](../notes/balaban-ode-lesson.md#uniform-refinement-over-a-set-of-trial-actions)
+and [history completion](../notes/newton-cusp-preparation-floor.md).
 
 A vanishing action along a particular orbit or time cell differs from a
 vanishing physical action parameter. A quantum lift exists for every

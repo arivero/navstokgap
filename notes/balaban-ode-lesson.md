@@ -17,6 +17,14 @@ Allowing the force to change sign gives two explicit laws with the same
 moving positions, velocities and accelerations at all those times and
 opposite answers about rest.
 
+At a point of nonzero speed and curvature, one finite inward force
+gives opposite continuum orbits for the two orders of an impulse and a
+free flight. A nonnegative spherical gravitating source restores unique
+nonradial motion. For the branching force, uniform agreement of the
+canonical products over a set of trial actions is equivalent to a
+positive infimum of that set. A positive lower width for classical
+ensembles gives the same refinement property.
+
 The polygon proof uses standard stability, consistency and Gronwall arguments.
 The arrival test is a direct energy calculation, not the general first-order
 Osgood criterion. Teschl [@TeschlODE2012, §2.7, pp.54--56 and Problem 2.25,
@@ -623,6 +631,349 @@ Kato--Rellich input. These facts neither require $\hbar=0$ to be a
 member of the same state theory nor select a positive numerical lower
 bound across the family. No relativistic ingredient or $c$ is used.
 
+## Tangent orbits under the two impulse orders
+
+**6.1 Sol Max, 2026-11-18.** Newton used uniqueness in Book I,
+Proposition XIII, Corollary 1. In 1687 he stated the converse from an
+inverse-square force to a conic. On 11 October 1709 he sent Cotes the
+additional sentences about curvature and mutually tangent orbits. They
+appear in 1713. In 1726 he made the role of the body's speed explicit
+twice in the added argument. All three versions give the launch speed
+at the outset. Corollary 2 expressly excepts straight descent to the
+centre. Proposition VI connects the orbital force to the short-time
+displacement of Lemma X. These are claims about inverse-square conics
+in Proposition XIII. Extending the uniqueness inference to a general
+finite inward force is a mathematical question.
+[1687, XIII.1](https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00077#par109),
+[1713, XIII.1](https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082#par140)
+and [1726, XIII.1](https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00087#par130)
+(diplomatic passages). [Letter to Cotes and edition comparison](../docs/Newton_Principia_Motte1846.md#corollary-1-to-proposition-xiii).
+Guicciardini discusses this revision in [*Reading the Principia*,
+§8.6.2.1](https://doi.org/10.1017/CBO9780511524752) (historical analysis, passage).
+
+### A circle with two tangent departures
+
+Use length $R>0$, inverse time $\omega>0$ and inertial mass $m>0$.
+In this section positions are in units $R$, times in $1/\omega$,
+momenta in $mR\omega$ and energies in $mR^2\omega^2$. Write $r=|q|$.
+Launch in the plane at $q_0=(1,0)$ with $v_0=(0,1)$. Specific angular
+momentum in these units is one. The acceleration is $-g(r)q/r$. Fix
+$b=e^{-20}$ and on $|y|=|r-1|\le b$ set
+
+$$
+ g(r)=r^{-3}-\alpha(y),\qquad
+ \alpha(y)=y(L^4-2L^3),\quad L=\log(1/|y|),\qquad \alpha(0)=0. \tag{C1}
+$$
+
+The odd $\alpha$ is strictly increasing there since its derivative off zero
+is $L^2(L^2-6L+6)>0$. Also $\alpha(b)<1/4$. Hence $g$ is positive and
+strictly decreasing on the annulus. Extend $g$ linearly from zero to
+$g(1-b)$ on the inside and by $g(1+b)(1+b)^2/r^2$ outside. This is
+one continuous inward force, bounded by $3$ in acceleration units,
+with a bounded $C^1$ potential $U$, $U'=g$. Its magnitude on the
+departing outward branch decreases continuously near the join.
+
+The same force occurs as a reciprocal interaction in a closed
+Newtonian two-body Hamiltonian. Take positive inertial masses $m_1,m_2$
+with reduced mass $m$ and pair potential
+$mR^2\omega^2 U(|q_1-q_2|/R)$ in dimensional positions. The centre
+of mass moves freely and the relative motion is exactly (C1).
+
+The radial equation and angular velocity are $y''=\alpha(y)$ and
+$\theta'=r^{-2}$. At the common energy, $|y'|=|y|L^2$ once $y\ne0$.
+Besides the circle, either radial branch can leave after any waiting
+time $s$. Their radii for $t>s$ are
+
+$$
+ r(t)=1\pm Y(t-s),\qquad Y(u)=e^{-1/u}\quad(u>0), \tag{C2}
+$$
+
+until $Y=b$. This is the logarithmic example (L3) translated to a
+circular orbit by the centrifugal term. Integrating $r^{-2}$ gives
+the angle with the common value at $s$. All time derivatives of the
+two motions agree with the circle at the join. In physical units the
+speed is $R\omega$, the acceleration magnitude is $R\omega^2$ and
+the curvature is $1/R$ there. The same entire incoming arc, angular
+momentum, energy and short-time force coefficient admit both futures.
+
+### Which orbit the polygons select
+
+Fix $0<T<1/40$ in the same time units and set $h=T/N$. Use exactly
+the drift and kick of (2), with the same force and initial point in
+each run. Drifting first converges to $r=1+Y(t)$. Kicking first
+converges to $r=1-Y(t)$ on $[0,T]$. The order difference survives in
+a position at a fixed positive time.
+
+For either constant ordering the vertices satisfy
+$q_{n+1}-2q_n+q_{n-1}=-h^2g(r_n)q_n/r_n$ at interior vertices and
+$q_n\wedge q_{n+1}=h$. Here the wedge is the signed planar determinant.
+The drift-first first radius is $\sqrt{1+h^2}$ and the kick-first one
+is $\sqrt{1-h^2+h^4}$. Write $s_n=\pm(r_n-1)$, with the plus
+sign for drift first. In both cases $s_0=0$ and $s_1\ge h^2/4$.
+
+Velocities have norm at most $1+3T<2$ and the broken lines stay
+within $2T$ of $q_0$. Compactness and the integral-equation residual
+from §3, using the force's uniform continuity there, make every
+subsequential limit an exact solution. Such a solution needs at least
+$\int_0^b du/[u\log^2(1/u)]=1/20$ to leave the annulus, by the
+radial energy integral. Thus all vertices lie in its interior for
+large $N$. Compactness alone has yet to choose a branch.
+
+Let $z=h^2/r_n^2$ and $B(w,z)=(w+\sqrt{w^2-z})^{-1}$. The radial
+projection of $q_{n\pm1}$ on $q_n/r_n$ is
+$\sqrt{r_{n\pm1}^2-z}$ by the determinant identity. The positive root
+applies throughout the ball about $q_0$. Therefore
+
+$$
+ \frac{r_{n+1}-2r_n+r_{n-1}}{h^2}
+ =-g(r_n)+\frac{B(r_{n+1},z)+B(r_{n-1},z)}{r_n^2}
+ =\alpha(r_n-1)+e_n,\qquad |e_n|\le350h^2 . \tag{C3}
+$$
+
+For the constant, each neighbour differs in radius by at most $2h$.
+Taylor's formula for $|q|$, with Hessian norm at most $2$ in the
+ball, bounds the radial second difference by $(3+8)h^2$. For
+$w\ge1/2$, $|B(w,z)-1/(2w)|\le z/(2w^3)\le16h^2$.
+The first two derivatives of $1/(2w)$ have magnitude at most $2$ and
+$8$. Summing its two Taylor expansions about $r_n$ costs at most
+$(22+32)h^2$. Multiplication by $r_n^{-2}\le4$ gives (C3).
+
+Since $\alpha(h^2/4)/h^2\to\infty$, induction in (C3) gives positive
+increments of $s_n$ and second difference at least $h^2\alpha(s_n)/2$.
+From level $w$, reaching $2w$ costs at most $2\sqrt{w/\alpha(w)}+h$
+in time, by summing this lower acceleration until the level is reached.
+For a fixed small $0<d<b/2$ use levels $w=d2^{-k}$. The mesh
+contribution to the time to $d$ is at most
+$h[2+\log_2(4d/h^2)]$ for sufficiently small $h$. The rest is at most
+
+$$
+ 2\sqrt2\sum_{k\ge1}[\log(1/d)+k\log2]^{-2}
+ \le \frac{2\sqrt2}{\log2\,\log(1/d)} . \tag{C4}
+$$
+
+For every $t>0$ first choose $d$ so the latter bound is less than
+$t$, then take $h$ small. The signed radius has reached $d$ by $t$.
+Every limit therefore departs immediately on its prescribed side.
+The energy integral gives precisely (C2) with $s=0$, and the angular
+equation fixes the full curve. This identifies every subsequential
+limit. The closure on full classical histories in the
+[cusp construction](newton-cusp-preparation-floor.md) retains the
+branch as state information.
+
+### What a nonnegative spherical source supplies
+
+Newton's shell theorem gives a physically independent restriction on
+the force law. Return to dimensional variables. Let $G>0$ and let
+$M(r)$ be the enclosed mass of a finite nonnegative spherical source,
+continuous at $r>0$, with $0<M(\infty)<\infty$. A point mass at zero
+is allowed. The inward acceleration is $g(r)=GM(r)/r^2$. For every
+nonzero specific angular momentum $j=|q\wedge\dot q|$, this force has
+a unique global trajectory from each nonradial point state, including
+when the radial speed vanishes. No derivative bound on the density is
+needed. [Newton, 1713, Book I, Propositions LXX–LXXI](https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082#par469)
+(spherical shell theorems, passages).
+
+Write $\Phi'=g$, $\Phi(\infty)=0$ and
+$U_j(r)=j^2/(2r^2)+\Phi(r)$ for the energy per unit mass at a radial
+turn. Its unique stationary radius $R_c$ satisfies $GR_c M(R_c)=j^2$:
+$rM(r)$ increases strictly wherever $M(r)>0$. For every $r>0$,
+monotonicity of the enclosed mass gives
+$\Phi(r)-\Phi(R_c)\ge GM(R_c)(1/R_c-1/r)$ on either side of $R_c$.
+Consequently
+
+$$
+ U_j(r)-U_j(R_c)\ \ge\ \frac{j^2}{2}
+               \left(\frac1r-\frac1{R_c}\right)^2 . \tag{C5}
+$$
+
+A point source attains equality. Starting at the circular energy
+forces $r=R_c$. Elsewhere a radial turning point is simple, and its
+nonzero radial acceleration fixes the continuation by the energy
+quadrature. With nonzero radial velocity the same quadrature determines
+the motion directly. Finally $U_j(r)\ge j^2/(2r^2)-GM(\infty)/r$
+keeps every finite-energy orbit away from zero. The speed is bounded
+on that exterior region, giving global continuation.
+
+For (C1), $r^2g(r)<1$ just outside the unit circle while $g(1)=1$.
+Its dimensionless Poisson density $(r^2g)'/(4\pi r^2)$ is signed.
+It is constant in the core, zero beyond $1+b$ and integrable to
+every finite power in the shell. Indeed the sole unbounded factor
+there grows as $\log^4(1/|r-1|)$ and the integral for its $p$th
+power is bounded by a constant times
+$\int_{20}^{\infty} L^{4p}e^{-L}dL$. Continuity of $r^2g$ excludes
+a surface delta at the joins. The squared field integral
+$4\pi\int_0^\infty r^2g(r)^2dr$ is finite. Thus integrability of
+the signed source and finiteness of its field integral allow the
+order dependence in (C3).
+
+This uniqueness survives source and time refinement together. Let
+$M_k\to M$ uniformly on compact radial intervals in $(0,\infty)$ for
+continuous enclosed masses as above. Fix the initial nonradial state
+and a finite time interval. Choose an annulus containing the whole
+limiting orbit strictly in its interior. Cut off all forces beyond a
+slightly larger annulus with the same cutoff, equal to one on the first.
+They now converge uniformly to a continuous bounded field.
+The §3 compactness argument, with the uniform force difference added
+to the residual, applies to arbitrary positive time partitions and
+arbitrary choices of impulse order. Every limit follows the unique
+orbit up to any first exit, which the orbit never makes. The original
+polygons thus have the same limit along every joint refinement.
+For a point source [the fixed-time Coulomb estimate, §5a](self-sufficiency-contrast.md)
+also takes a supplied reduced action to zero at fixed noncollisional
+initial position and momentum. Holding the nonzero angular momentum of
+the orbit fixed is compatible with this limit.
+
+### Uniform refinement over a set of trial actions
+
+Use (C1) again, in its dimensionless variables. The fixed terminal
+time is $T/\omega$ and an equal time cell lasts $h/\omega$ in physical
+units. The dimensional reference action is $S_0=mR^2\omega$. Write $\epsilon=a/S_0$ for a
+trial reduced action $a$. For $\epsilon>0$ take the canonical kinetic
+and potential operators on $L^2(\mathbb R^2)$, $P=-i\epsilon\nabla$,
+and the normalized state
+
+$$
+ \psi_\epsilon(x)=(\pi\epsilon)^{-1/2}
+ \exp[-|x-q_0|^2/(2\epsilon)+i v_0\cdot(x-q_0)/\epsilon].
+$$
+
+Its coordinate and momentum standard deviations per component in
+physical units are $R\sqrt{\epsilon/2}$ and
+$mR\omega\sqrt{\epsilon/2}$. Use the same state for either impulse
+placement. Fix a smooth radial function $0\le f\le1$, equal to zero
+for $r\le1-Y(T)/2$ and one for $r\ge1+Y(T)/2$. Its transition width
+in physical units is $R Y(T)$, independent of the partition and action.
+Thus changing $a$ changes the preparation widths while the spatial
+readout and its terminal time stay fixed.
+For a step $s$ write $K_s=e^{-isU(Q)/\epsilon}$ and
+$D_s=e^{-isP^2/(2\epsilon)}$. For each positive partition $\pi$ of
+$[0,T]$ and a choice $\sigma$ of the order in every cell, let
+$p_{a,\pi,\sigma}$ be the final expectation of $f(Q)$. At $a=0$ use
+the two classical factors (2) on the point $(q_0,v_0)$ and evaluate $f$.
+
+For any nonempty set $A\subset[0,\infty)$ of dimensional trial actions,
+the following dichotomy holds for this one force, initial family and $f$:
+
+$$
+ \lim_{\delta\downarrow0}
+ \sup_{\substack{a\in A,\ |\pi|\le\delta\\\sigma,\sigma'}}
+ |p_{a,\pi,\sigma}-p_{a,\pi,\sigma'}|
+ =\begin{cases}0,&\inf A>0,\\1,&\inf A=0.\end{cases} \tag{C6}
+$$
+
+**Arbitrarily small action.** At a fixed finite partition a localized
+state follows its classical product as $a\downarrow0$. For the drift
+this follows from the exact shear $Q\mapsto Q+sP$. A kick shifts
+$P$ by $-s\nabla U(Q)$. For a state of unit norm localized near $q$
+and any $l>0$, the norm of its force fluctuation is bounded by
+
+$$
+ \|[\nabla U(Q)-\nabla U(q)]\psi\|
+ \le \omega_{\nabla U}(l)+2\|\nabla U\|_\infty
+                                     \|(Q-q)\psi\|/l .
+$$
+
+Here $\nabla U$ is bounded and uniformly continuous. Starting with the
+Gaussian, induction propagates vanishing position and momentum deviations
+for the finitely many factors, first sending $a$ to zero and then $l$
+to zero at each step. For all sufficiently fine uniform meshes the
+classical terminal radii lie inside the opposite plateaus of $f$, by
+(C2)–(C4). If $A$ accumulates at zero, take the small-action limit at
+each such mesh within $A$. If $0\in A$ the classical products already
+give the unit difference. This proves the second line of (C6).
+
+**Positive action floor.** For fixed $\epsilon>0$ both products have
+the same unitary continuum limit. The potential is a bounded real
+multiplier. [Trotter, 1959](https://doi.org/10.1090/S0002-9939-1959-0108732-6)
+(product formula). For the required uniformity, put
+$B_\epsilon(t)=D_{-t}U(Q)D_t/\epsilon$. In the interaction picture
+each split product evolves with $B_\epsilon$ frozen at the chosen
+endpoint of each cell. On any compact positive $\epsilon$ interval
+these operators are uniformly bounded and jointly strongly continuous
+in $t,\epsilon$. The exact interaction-picture vector
+$w_\epsilon(t)$ is norm-continuous in both variables by its integral
+equation with bounded generator and the norm-continuous initial Gaussian.
+Duhamel bounds the product error by
+
+$$
+ T\sup_{|s-t|\le\delta}
+        \|(B_\epsilon(s)-B_\epsilon(t))w_\epsilon(t)\|.
+$$
+
+This tends uniformly to zero on the compact parameter interval.
+For the large-$\epsilon$ tail, each split product differs from free
+evolution by at most $T\|U\|_\infty/\epsilon$ in operator norm, by
+telescoping. These bounds prove the first line of (C6).
+
+The order effect also has a definite scale on equal cells $h=T/N$.
+The products satisfy $(K_h D_h)^N=K_h(D_h K_h)^N K_h^{-1}$. Since
+$f(Q)$ commutes with the final kick, their score difference is bounded
+by the pure-state trace distance between $\psi_\epsilon$ and
+$K_h^{-1}\psi_\epsilon$. Removing the phase $hU(q_0)/\epsilon$ bounds
+this distance by $3h/\sqrt\epsilon$ using (C1) and the initial spatial
+rms width. More precisely, if $h,\epsilon\to0$ with
+$h/\sqrt\epsilon\to\lambda<\infty$, write $x=q_0+\sqrt\epsilon\,y$.
+Differentiability at $q_0$, where $\nabla U(q_0)=(1,0)$, and dominated
+convergence give overlap modulus $e^{-\lambda^2/4}$ by the Gaussian
+Fourier transform. Thus the limiting upper bound on the score
+difference is $\sqrt{1-e^{-\lambda^2/2}}$. Full separation requires
+$a/S_0=o(h^2)$ along a vanishing-action sequence. Conversely (C6)
+allows some such sequences. For $a/S_0=h$, the two constant orderings
+agree in the limit in the sense that their difference vanishes.
+[Pure-state distance](record-distance-path-length.md) (standard identity).
+
+### The same refinement criterion for classical ensembles
+
+Could (C6) by itself establish that the width comes from a physical
+quantum of action? Keep the force, the partitions, the two classical
+maps, $T$ and $f$ fixed. On classical phase space take the density
+$(\pi w)^{-2}\exp[-(|q-q_0|^2+|p-v_0|^2)/w]$ for $w>0$ and the
+point state for $w=0$. Each position and momentum marginal matches
+the initial quantum one at $w=\epsilon$. Here $w$ is freely supplied
+classical dispersion. At every $w$ the evolution uses only Newton's
+equation.
+
+For any nonempty width set $B\subset[0,\infty)$ the exact dichotomy
+(C6) holds for the classical scores with $A$ replaced by $B$.
+If $\inf B=0$, continuity of the finite products takes the concentrated
+densities to their point-state answers, so (C3)–(C4) give the unit
+difference. For $w>0$, the initial hypersurfaces
+$|q\wedge p|=1$ have measure zero. Away from them every orbit is
+unique. The field is locally Lipschitz away from $r=1$. At $r=1$,
+nonzero radial speed gives unique passage by the energy integral and
+zero radial speed gives a simple turn since $r''=|q\wedge p|^2-1\ne0$.
+The bounded force then gives convergence of arbitrary refining polygons
+for almost every initial state. On $w_0\le w\le w_1$ with $w_0>0$ the
+densities have a common integrable Gaussian envelope. Dominated convergence
+along any sequence of partitions and placements proves uniform agreement there.
+
+For the remaining tail, every terminal polygon position lies within
+$3T^2$ of the free position $q+Tp$, by summing the bounded kicks.
+The free position has density bounded by $1/[\pi w(1+T^2)]$.
+Whenever it lies outside the disk of radius $1+Y(T)/2+3T^2$
+about zero, every ordering gives final score one. The probability of
+that disk tends to zero as $w\to\infty$, uniformly in the ordering.
+
+There is a distinct finite-ratio bound for these ensembles. For the
+two constant orderings the initial momentum shift is $h\nabla U(q)$
+up to sign. At each $q$ the equal-covariance Gaussian total-variation
+formula gives $\operatorname{erf}(h|\nabla U(q)|/(2\sqrt w))$.
+Averaging over position bounds the score difference. This upper bound
+tends to $\operatorname{erf}(\lambda/2)$ at $h/\sqrt w\to\lambda$,
+$w\downarrow0$. Both this and the quantum overlap bound concern
+possible terminal differences. An actual difference between the two
+dynamics at the critical scale requires their branch probabilities.
+[Devroye, Mehrabian and Reddad, p. 3](https://arxiv.org/pdf/1810.08693#page=3)
+(equal-covariance formula).
+
+Newton's letter uses point-state uniqueness in the inverse-square
+conic argument. Equation (C5) justifies it classically in
+a broader gravitational class. Equation (C6) identifies what would
+exclude zero for the specified canonical family. One must independently
+admit the force (C1), require agreement of impulse placements uniformly
+over allowed actions, and justify the chosen state space and dynamics.
+The historical passage supplies none of these extensions.
+
 ## 6. Consequence for STATE
 
 Initial-value construction, continuation, endpoint caustics and finite-time
@@ -636,3 +987,10 @@ uses an actual full-state merger and additional preparation laws. The separate
 Hessians, normalization and source response; the
 [nonlinear cell](newton-nonlinear-time-cell.md) controls a supplied positive
 weight. Neither operation follows solely from constructing a classical orbit.
+The moving-circle example now distinguishes uniform agreement over trial
+actions from agreement at each fixed positive action. A nonnegative
+spherical source admits order-independent classical refinement, including
+at a circular orbit. Classical ensembles of positive lower width also
+admit uniform refinement. Which dynamics or composition law requires a
+physical action in addition to a restriction on classical preparations
+remains open.

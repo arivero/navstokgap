@@ -31,7 +31,7 @@ history in which Newton carries interference from optics into mechanics.
   Joachim passage digest and provenance of the modern refinement analogy.
 
 - [Classics: pre-1901 primary sources](classics/README.md): Archimedes, Plutarch, Galileo, Gregory, Berkeley, Euler, Maupertuis, Hamilton, Jacobi and Mach, each with a companion and registered checksums ([H06](../references/batches/H06.md)).
-- [Newton, Motte/Chittenden 1846 opening material](Newton_Principia_Motte1846.md), with local HTML and two selected historical figures.
+- [Newton, Motte/Chittenden 1846](Newton_Principia_Motte1846.md) includes the opening material, the three versions of Proposition XIII, Corollary 1, and Newton's 1709 instructions to Cotes.
 - [Newton, Book I Section I, Motte/Wilkins excerpt](Newton_Principia_BookI_SectionI_Motte1729_Wilkins2002.md), with local PDF and readable formulae.
 - [Feynman, action and path phases](Feynman_LeastAction_II19.md), online reading note; direct HTML download returned 403.
 - [Feynman 1948 primary-paper metadata and abstract](Feynman_SpaceTime_1948.md).

@@ -1094,13 +1094,13 @@
     {
       "path": "notes/balaban-ode-lesson.md",
       "title": "Constructing Newton motion: refinement, continuation and regularity",
-      "summary": "Arbitrary positive partitions and mixed kick/drift orders construct global-Lipschitz Newton motion with explicit mesh error. Conservative energy gives local continuation and magnetic global examples. The logarithmic family has uniqueness threshold beta=2, vanishing annular action and a local WKB residual. Uniform recovery of the force coefficient allows delayed departure. For an outward radial force one moving orbit determines uniqueness from rest. Two central potentials agree on the moving positions, speeds and accelerations at every successive half-time while only one permits departure from rest.",
+      "summary": "Mixed impulse orders converge with an explicit mesh error for globally Lipschitz forces. The conservative logarithmic family has uniqueness threshold beta=2, vanishing annular action and a local WKB residual. For outward radial forces one moving orbit determines uniqueness from rest. Sign-changing forces can agree at all successive half-times and differ on departure. At a moving circle the two impulse orders select opposite limiting orbits for one fixed finite inward force. A nonnegative spherical gravitating mass gives unique nonradial motion. For the stated canonical family, uniform agreement under refinement is equivalent to a positive lower bound on the allowed actions. Classical Gaussian ensembles satisfy the same criterion for their widths.",
       "thematic_area": "Newton/action",
-      "strongest_result": "Arbitrary positive partitions and mixed kick/drift orders construct global-Lipschitz Newton motion with explicit mesh error. With outward radial acceleration the dyadic tangent excess on one nonzero-speed orbit bounds the time for departure from rest on both sides. Two explicit autonomous force laws give opposing rest uniqueness for the same sequence of moving positions, speeds and accelerations when the radial acceleration can change sign.",
+      "strongest_result": "For the finite inward force (C1), first and last impulses select the two immediate departures, which share all time derivatives and have nonzero speed and curvature. Inequality (C5) gives joint source and time refinement for nonnegative spherical gravity. For the canonical family and fixed radial position score, the worst order discrepancy under refinement is exactly zero or one according as the allowed actions have positive or zero infimum. Classical Gaussian ensembles give the same dichotomy in their preparation widths.",
       "status": "result",
       "proof_status": "written proof; standard polygon methods and exact conservative examples; internal checks only",
       "retrieval_priority": 3,
-      "current_relevance": "Distinguishes uniform validity of Newton’s short-time force coefficient from uniqueness at a joining time. The derivative-free criterion uses a single moving orbit of a fixed force.",
+      "current_relevance": "Newton supplied the tangent-orbit argument to Cotes in October 1709. The force coefficient of Lemma X can converge uniformly while the two polygon orders select different continuations. The classical width criterion isolates the extra state-space premise needed to infer physical action.",
       "relations": [
         {
           "type": "continues",
@@ -1152,13 +1152,21 @@
         "dyadic departure time",
         "outward central force",
         "force sign reversals",
-        "uniqueness from rest"
+        "uniqueness from rest",
+        "Newton to Cotes 11 October 1709",
+        "Proposition XIII Corollary 1",
+        "same tangent and curvature",
+        "circular branch selection",
+        "impulse placement",
+        "nonnegative spherical source",
+        "uniform action refinement",
+        "classical Gaussian widths"
       ],
       "role": "result,synthesis",
       "value": "infrastructure,open-mechanism",
-      "limitations": "Global ODE construction assumes a globally Lipschitz acceleration; local forces require continuation control. Weighted-law and Euclidean/real-time identification remain separate physical premises. This lesson supplies no independent positivity argument for hbar. The two-sided dyadic estimate uses continuous outward radial acceleration, positive work primitive and bounded crossing speed near the centre. Equality of the counterexample concerns one nested sequence. Additional insertions can distinguish the curves.",
-      "content_coverage": "Full consolidated arguments and later corrections read; mechanical link-only changes preserve the established proof scope. Internal model checks are not independent peer review. Read the conservative arrival criterion, logarithmic family and Newton passages. Checked (D1)–(D4), the comparison constants and the sign-changing construction by written argument.",
-      "completed_work": "Characterized departure from rest by the tangent excess at successive half-times."
+      "limitations": "The global mesh error assumes globally Lipschitz acceleration. The radial half-time criterion uses outward acceleration and the counterexample agrees on one nested sequence. The moving-circle force is a reciprocal pair interaction with signed Poisson density. Spherical gravitational uniqueness assumes nonnegative enclosed mass and nonzero angular momentum. The action dichotomy fixes the Gaussian state family, dynamics and radial score. Bounds at the critical scale do not determine the branch probabilities. Physical action necessity remains open.",
+      "content_coverage": "Read the conservative and magnetic continuation arguments, logarithmic threshold, WKB residual and dyadic comparison (D1) through (D4). Compared the 1687, 1713 and 1726 passages and the 1709 letter. Checked the polygon selection, spherical energy bound, action criterion and classical ensemble comparison in writing. Internal checks only.",
+      "completed_work": "Determined the two impulse-order limits at a moving circle and the corresponding action and width criteria."
     },
     {
       "path": "notes/blocking-criterion-monotone.md",

@@ -98,6 +98,13 @@ force coefficient converges uniformly over bounded-speed orbits in both
 cases. Allowing the force to change sign gives two explicit laws with
 the same moving positions, velocities and accelerations at all those
 times and opposite answers about rest.</p>
+<p>At a point of nonzero speed and curvature, one finite inward force
+gives opposite continuum orbits for the two orders of an impulse and a
+free flight. A nonnegative spherical gravitating source restores unique
+nonradial motion. For the branching force, uniform agreement of the
+canonical products over a set of trial actions is equivalent to a
+positive infimum of that set. A positive lower width for classical
+ensembles gives the same refinement property.</p>
 <p>The polygon proof uses standard stability, consistency and Gronwall
 arguments. The arrival test is a direct energy calculation, not the
 general first-order Osgood criterion. Teschl [<span class="citation"
@@ -761,6 +768,449 @@ class="math inline">\(\hbar=0\)</span> to be a member of the same state
 theory nor select a positive numerical lower bound across the family. No
 relativistic ingredient or <span class="math inline">\(c\)</span> is
 used.</p>
+<h2 id="tangent-orbits-under-the-two-impulse-orders">Tangent orbits
+under the two impulse orders</h2>
+<p><strong>6.1 Sol Max, 2026-11-18.</strong> Newton used uniqueness in
+Book I, Proposition XIII, Corollary 1. In 1687 he stated the converse
+from an inverse-square force to a conic. On 11 October 1709 he sent
+Cotes the additional sentences about curvature and mutually tangent
+orbits. They appear in 1713. In 1726 he made the role of the body’s
+speed explicit twice in the added argument. All three versions give the
+launch speed at the outset. Corollary 2 expressly excepts straight
+descent to the centre. Proposition VI connects the orbital force to the
+short-time displacement of Lemma X. These are claims about
+inverse-square conics in Proposition XIII. Extending the uniqueness
+inference to a general finite inward force is a mathematical question.
+<a
+href="https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00077#par109">1687,
+XIII.1</a>, <a
+href="https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082#par140">1713,
+XIII.1</a> and <a
+href="https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00087#par130">1726,
+XIII.1</a> (diplomatic passages). <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Newton_Principia_Motte1846.md">Letter
+to Cotes and edition comparison</a>. Guicciardini discusses this
+revision in <a
+href="https://doi.org/10.1017/CBO9780511524752"><em>Reading the
+Principia</em>, §8.6.2.1</a> (historical analysis, passage).</p>
+<h3 id="a-circle-with-two-tangent-departures">A circle with two tangent
+departures</h3>
+<p>Use length <span class="math inline">\(R&gt;0\)</span>, inverse time
+<span class="math inline">\(\omega&gt;0\)</span> and inertial mass <span
+class="math inline">\(m&gt;0\)</span>. In this section positions are in
+units <span class="math inline">\(R\)</span>, times in <span
+class="math inline">\(1/\omega\)</span>, momenta in <span
+class="math inline">\(mR\omega\)</span> and energies in <span
+class="math inline">\(mR^2\omega^2\)</span>. Write <span
+class="math inline">\(r=|q|\)</span>. Launch in the plane at <span
+class="math inline">\(q_0=(1,0)\)</span> with <span
+class="math inline">\(v_0=(0,1)\)</span>. Specific angular momentum in
+these units is one. The acceleration is <span
+class="math inline">\(-g(r)q/r\)</span>. Fix <span
+class="math inline">\(b=e^{-20}\)</span> and on <span
+class="math inline">\(|y|=|r-1|\le b\)</span> set</p>
+<p><span class="math display">\[
+g(r)=r^{-3}-\alpha(y),\qquad
+\alpha(y)=y(L^4-2L^3),\quad L=\log(1/|y|),\qquad \alpha(0)=0. \tag{C1}
+\]</span></p>
+<p>The odd <span class="math inline">\(\alpha\)</span> is strictly
+increasing there since its derivative off zero is <span
+class="math inline">\(L^2(L^2-6L+6)&gt;0\)</span>. Also <span
+class="math inline">\(\alpha(b)&lt;1/4\)</span>. Hence <span
+class="math inline">\(g\)</span> is positive and strictly decreasing on
+the annulus. Extend <span class="math inline">\(g\)</span> linearly from
+zero to <span class="math inline">\(g(1-b)\)</span> on the inside and by
+<span class="math inline">\(g(1+b)(1+b)^2/r^2\)</span> outside. This is
+one continuous inward force, bounded by <span
+class="math inline">\(3\)</span> in acceleration units, with a bounded
+<span class="math inline">\(C^1\)</span> potential <span
+class="math inline">\(U\)</span>, <span
+class="math inline">\(U&#39;=g\)</span>. Its magnitude on the departing
+outward branch decreases continuously near the join.</p>
+<p>The same force occurs as a reciprocal interaction in a closed
+Newtonian two-body Hamiltonian. Take positive inertial masses <span
+class="math inline">\(m_1,m_2\)</span> with reduced mass <span
+class="math inline">\(m\)</span> and pair potential <span
+class="math inline">\(mR^2\omega^2 U(|q_1-q_2|/R)\)</span> in
+dimensional positions. The centre of mass moves freely and the relative
+motion is exactly (C1).</p>
+<p>The radial equation and angular velocity are <span
+class="math inline">\(y&#39;&#39;=\alpha(y)\)</span> and <span
+class="math inline">\(\theta&#39;=r^{-2}\)</span>. At the common energy,
+<span class="math inline">\(|y&#39;|=|y|L^2\)</span> once <span
+class="math inline">\(y\ne0\)</span>. Besides the circle, either radial
+branch can leave after any waiting time <span
+class="math inline">\(s\)</span>. Their radii for <span
+class="math inline">\(t&gt;s\)</span> are</p>
+<p><span class="math display">\[
+r(t)=1\pm Y(t-s),\qquad Y(u)=e^{-1/u}\quad(u&gt;0), \tag{C2}
+\]</span></p>
+<p>until <span class="math inline">\(Y=b\)</span>. This is the
+logarithmic example (L3) translated to a circular orbit by the
+centrifugal term. Integrating <span
+class="math inline">\(r^{-2}\)</span> gives the angle with the common
+value at <span class="math inline">\(s\)</span>. All time derivatives of
+the two motions agree with the circle at the join. In physical units the
+speed is <span class="math inline">\(R\omega\)</span>, the acceleration
+magnitude is <span class="math inline">\(R\omega^2\)</span> and the
+curvature is <span class="math inline">\(1/R\)</span> there. The same
+entire incoming arc, angular momentum, energy and short-time force
+coefficient admit both futures.</p>
+<h3 id="which-orbit-the-polygons-select">Which orbit the polygons
+select</h3>
+<p>Fix <span class="math inline">\(0&lt;T&lt;1/40\)</span> in the same
+time units and set <span class="math inline">\(h=T/N\)</span>. Use
+exactly the drift and kick of (2), with the same force and initial point
+in each run. Drifting first converges to <span
+class="math inline">\(r=1+Y(t)\)</span>. Kicking first converges to
+<span class="math inline">\(r=1-Y(t)\)</span> on <span
+class="math inline">\([0,T]\)</span>. The order difference survives in a
+position at a fixed positive time.</p>
+<p>For either constant ordering the vertices satisfy <span
+class="math inline">\(q_{n+1}-2q_n+q_{n-1}=-h^2g(r_n)q_n/r_n\)</span> at
+interior vertices and <span class="math inline">\(q_n\wedge
+q_{n+1}=h\)</span>. Here the wedge is the signed planar determinant. The
+drift-first first radius is <span
+class="math inline">\(\sqrt{1+h^2}\)</span> and the kick-first one is
+<span class="math inline">\(\sqrt{1-h^2+h^4}\)</span>. Write <span
+class="math inline">\(s_n=\pm(r_n-1)\)</span>, with the plus sign for
+drift first. In both cases <span class="math inline">\(s_0=0\)</span>
+and <span class="math inline">\(s_1\ge h^2/4\)</span>.</p>
+<p>Velocities have norm at most <span
+class="math inline">\(1+3T&lt;2\)</span> and the broken lines stay
+within <span class="math inline">\(2T\)</span> of <span
+class="math inline">\(q_0\)</span>. Compactness and the
+integral-equation residual from §3, using the force’s uniform continuity
+there, make every subsequential limit an exact solution. Such a solution
+needs at least <span class="math inline">\(\int_0^b
+du/[u\log^2(1/u)]=1/20\)</span> to leave the annulus, by the radial
+energy integral. Thus all vertices lie in its interior for large <span
+class="math inline">\(N\)</span>. Compactness alone has yet to choose a
+branch.</p>
+<p>Let <span class="math inline">\(z=h^2/r_n^2\)</span> and <span
+class="math inline">\(B(w,z)=(w+\sqrt{w^2-z})^{-1}\)</span>. The radial
+projection of <span class="math inline">\(q_{n\pm1}\)</span> on <span
+class="math inline">\(q_n/r_n\)</span> is <span
+class="math inline">\(\sqrt{r_{n\pm1}^2-z}\)</span> by the determinant
+identity. The positive root applies throughout the ball about <span
+class="math inline">\(q_0\)</span>. Therefore</p>
+<p><span class="math display">\[
+\frac{r_{n+1}-2r_n+r_{n-1}}{h^2}
+=-g(r_n)+\frac{B(r_{n+1},z)+B(r_{n-1},z)}{r_n^2}
+=\alpha(r_n-1)+e_n,\qquad |e_n|\le350h^2 . \tag{C3}
+\]</span></p>
+<p>For the constant, each neighbour differs in radius by at most <span
+class="math inline">\(2h\)</span>. Taylor’s formula for <span
+class="math inline">\(|q|\)</span>, with Hessian norm at most <span
+class="math inline">\(2\)</span> in the ball, bounds the radial second
+difference by <span class="math inline">\((3+8)h^2\)</span>. For <span
+class="math inline">\(w\ge1/2\)</span>, <span
+class="math inline">\(|B(w,z)-1/(2w)|\le z/(2w^3)\le16h^2\)</span>. The
+first two derivatives of <span class="math inline">\(1/(2w)\)</span>
+have magnitude at most <span class="math inline">\(2\)</span> and <span
+class="math inline">\(8\)</span>. Summing its two Taylor expansions
+about <span class="math inline">\(r_n\)</span> costs at most <span
+class="math inline">\((22+32)h^2\)</span>. Multiplication by <span
+class="math inline">\(r_n^{-2}\le4\)</span> gives (C3).</p>
+<p>Since <span
+class="math inline">\(\alpha(h^2/4)/h^2\to\infty\)</span>, induction in
+(C3) gives positive increments of <span
+class="math inline">\(s_n\)</span> and second difference at least <span
+class="math inline">\(h^2\alpha(s_n)/2\)</span>. From level <span
+class="math inline">\(w\)</span>, reaching <span
+class="math inline">\(2w\)</span> costs at most <span
+class="math inline">\(2\sqrt{w/\alpha(w)}+h\)</span> in time, by summing
+this lower acceleration until the level is reached. For a fixed small
+<span class="math inline">\(0&lt;d&lt;b/2\)</span> use levels <span
+class="math inline">\(w=d2^{-k}\)</span>. The mesh contribution to the
+time to <span class="math inline">\(d\)</span> is at most <span
+class="math inline">\(h[2+\log_2(4d/h^2)]\)</span> for sufficiently
+small <span class="math inline">\(h\)</span>. The rest is at most</p>
+<p><span class="math display">\[
+2\sqrt2\sum_{k\ge1}[\log(1/d)+k\log2]^{-2}
+\le \frac{2\sqrt2}{\log2\,\log(1/d)} . \tag{C4}
+\]</span></p>
+<p>For every <span class="math inline">\(t&gt;0\)</span> first choose
+<span class="math inline">\(d\)</span> so the latter bound is less than
+<span class="math inline">\(t\)</span>, then take <span
+class="math inline">\(h\)</span> small. The signed radius has reached
+<span class="math inline">\(d\)</span> by <span
+class="math inline">\(t\)</span>. Every limit therefore departs
+immediately on its prescribed side. The energy integral gives precisely
+(C2) with <span class="math inline">\(s=0\)</span>, and the angular
+equation fixes the full curve. This identifies every subsequential
+limit. The closure on full classical histories in the <a
+href="newton-cusp-preparation-floor.html">cusp construction</a> retains
+the branch as state information.</p>
+<h3 id="what-a-nonnegative-spherical-source-supplies">What a nonnegative
+spherical source supplies</h3>
+<p>Newton’s shell theorem gives a physically independent restriction on
+the force law. Return to dimensional variables. Let <span
+class="math inline">\(G&gt;0\)</span> and let <span
+class="math inline">\(M(r)\)</span> be the enclosed mass of a finite
+nonnegative spherical source, continuous at <span
+class="math inline">\(r&gt;0\)</span>, with <span
+class="math inline">\(0&lt;M(\infty)&lt;\infty\)</span>. A point mass at
+zero is allowed. The inward acceleration is <span
+class="math inline">\(g(r)=GM(r)/r^2\)</span>. For every nonzero
+specific angular momentum <span class="math inline">\(j=|q\wedge\dot
+q|\)</span>, this force has a unique global trajectory from each
+nonradial point state, including when the radial speed vanishes. No
+derivative bound on the density is needed. <a
+href="https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082#par469">Newton,
+1713, Book I, Propositions LXX–LXXI</a> (spherical shell theorems,
+passages).</p>
+<p>Write <span class="math inline">\(\Phi&#39;=g\)</span>, <span
+class="math inline">\(\Phi(\infty)=0\)</span> and <span
+class="math inline">\(U_j(r)=j^2/(2r^2)+\Phi(r)\)</span> for the energy
+per unit mass at a radial turn. Its unique stationary radius <span
+class="math inline">\(R_c\)</span> satisfies <span
+class="math inline">\(GR_c M(R_c)=j^2\)</span>: <span
+class="math inline">\(rM(r)\)</span> increases strictly wherever <span
+class="math inline">\(M(r)&gt;0\)</span>. For every <span
+class="math inline">\(r&gt;0\)</span>, monotonicity of the enclosed mass
+gives <span class="math inline">\(\Phi(r)-\Phi(R_c)\ge
+GM(R_c)(1/R_c-1/r)\)</span> on either side of <span
+class="math inline">\(R_c\)</span>. Consequently</p>
+<p><span class="math display">\[
+U_j(r)-U_j(R_c)\ \ge\ \frac{j^2}{2}
+               \left(\frac1r-\frac1{R_c}\right)^2 . \tag{C5}
+\]</span></p>
+<p>A point source attains equality. Starting at the circular energy
+forces <span class="math inline">\(r=R_c\)</span>. Elsewhere a radial
+turning point is simple, and its nonzero radial acceleration fixes the
+continuation by the energy quadrature. With nonzero radial velocity the
+same quadrature determines the motion directly. Finally <span
+class="math inline">\(U_j(r)\ge j^2/(2r^2)-GM(\infty)/r\)</span> keeps
+every finite-energy orbit away from zero. The speed is bounded on that
+exterior region, giving global continuation.</p>
+<p>For (C1), <span class="math inline">\(r^2g(r)&lt;1\)</span> just
+outside the unit circle while <span
+class="math inline">\(g(1)=1\)</span>. Its dimensionless Poisson density
+<span class="math inline">\((r^2g)&#39;/(4\pi r^2)\)</span> is signed.
+It is constant in the core, zero beyond <span
+class="math inline">\(1+b\)</span> and integrable to every finite power
+in the shell. Indeed the sole unbounded factor there grows as <span
+class="math inline">\(\log^4(1/|r-1|)\)</span> and the integral for its
+<span class="math inline">\(p\)</span>th power is bounded by a constant
+times <span class="math inline">\(\int_{20}^{\infty}
+L^{4p}e^{-L}dL\)</span>. Continuity of <span
+class="math inline">\(r^2g\)</span> excludes a surface delta at the
+joins. The squared field integral <span
+class="math inline">\(4\pi\int_0^\infty r^2g(r)^2dr\)</span> is finite.
+Thus integrability of the signed source and finiteness of its field
+integral allow the order dependence in (C3).</p>
+<p>This uniqueness survives source and time refinement together. Let
+<span class="math inline">\(M_k\to M\)</span> uniformly on compact
+radial intervals in <span class="math inline">\((0,\infty)\)</span> for
+continuous enclosed masses as above. Fix the initial nonradial state and
+a finite time interval. Choose an annulus containing the whole limiting
+orbit strictly in its interior. Cut off all forces beyond a slightly
+larger annulus with the same cutoff, equal to one on the first. They now
+converge uniformly to a continuous bounded field. The §3 compactness
+argument, with the uniform force difference added to the residual,
+applies to arbitrary positive time partitions and arbitrary choices of
+impulse order. Every limit follows the unique orbit up to any first
+exit, which the orbit never makes. The original polygons thus have the
+same limit along every joint refinement. For a point source <a
+href="self-sufficiency-contrast.html">the fixed-time Coulomb estimate,
+§5a</a> also takes a supplied reduced action to zero at fixed
+noncollisional initial position and momentum. Holding the nonzero
+angular momentum of the orbit fixed is compatible with this limit.</p>
+<h3 id="uniform-refinement-over-a-set-of-trial-actions">Uniform
+refinement over a set of trial actions</h3>
+<p>Use (C1) again, in its dimensionless variables. The fixed terminal
+time is <span class="math inline">\(T/\omega\)</span> and an equal time
+cell lasts <span class="math inline">\(h/\omega\)</span> in physical
+units. The dimensional reference action is <span
+class="math inline">\(S_0=mR^2\omega\)</span>. Write <span
+class="math inline">\(\epsilon=a/S_0\)</span> for a trial reduced action
+<span class="math inline">\(a\)</span>. For <span
+class="math inline">\(\epsilon&gt;0\)</span> take the canonical kinetic
+and potential operators on <span class="math inline">\(L^2(\mathbb
+R^2)\)</span>, <span class="math inline">\(P=-i\epsilon\nabla\)</span>,
+and the normalized state</p>
+<p><span class="math display">\[
+\psi_\epsilon(x)=(\pi\epsilon)^{-1/2}
+\exp[-|x-q_0|^2/(2\epsilon)+i v_0\cdot(x-q_0)/\epsilon].
+\]</span></p>
+<p>Its coordinate and momentum standard deviations per component in
+physical units are <span
+class="math inline">\(R\sqrt{\epsilon/2}\)</span> and <span
+class="math inline">\(mR\omega\sqrt{\epsilon/2}\)</span>. Use the same
+state for either impulse placement. Fix a smooth radial function <span
+class="math inline">\(0\le f\le1\)</span>, equal to zero for <span
+class="math inline">\(r\le1-Y(T)/2\)</span> and one for <span
+class="math inline">\(r\ge1+Y(T)/2\)</span>. Its transition width in
+physical units is <span class="math inline">\(R Y(T)\)</span>,
+independent of the partition and action. Thus changing <span
+class="math inline">\(a\)</span> changes the preparation widths while
+the spatial readout and its terminal time stay fixed. For a step <span
+class="math inline">\(s\)</span> write <span
+class="math inline">\(K_s=e^{-isU(Q)/\epsilon}\)</span> and <span
+class="math inline">\(D_s=e^{-isP^2/(2\epsilon)}\)</span>. For each
+positive partition <span class="math inline">\(\pi\)</span> of <span
+class="math inline">\([0,T]\)</span> and a choice <span
+class="math inline">\(\sigma\)</span> of the order in every cell, let
+<span class="math inline">\(p_{a,\pi,\sigma}\)</span> be the final
+expectation of <span class="math inline">\(f(Q)\)</span>. At <span
+class="math inline">\(a=0\)</span> use the two classical factors (2) on
+the point <span class="math inline">\((q_0,v_0)\)</span> and evaluate
+<span class="math inline">\(f\)</span>.</p>
+<p>For any nonempty set <span
+class="math inline">\(A\subset[0,\infty)\)</span> of dimensional trial
+actions, the following dichotomy holds for this one force, initial
+family and <span class="math inline">\(f\)</span>:</p>
+<p><span class="math display">\[
+\lim_{\delta\downarrow0}
+\sup_{\substack{a\in A,\ |\pi|\le\delta\\\sigma,\sigma&#39;}}
+|p_{a,\pi,\sigma}-p_{a,\pi,\sigma&#39;}|
+=\begin{cases}0,&amp;\inf A&gt;0,\\1,&amp;\inf A=0.\end{cases} \tag{C6}
+\]</span></p>
+<p><strong>Arbitrarily small action.</strong> At a fixed finite
+partition a localized state follows its classical product as <span
+class="math inline">\(a\downarrow0\)</span>. For the drift this follows
+from the exact shear <span class="math inline">\(Q\mapsto Q+sP\)</span>.
+A kick shifts <span class="math inline">\(P\)</span> by <span
+class="math inline">\(-s\nabla U(Q)\)</span>. For a state of unit norm
+localized near <span class="math inline">\(q\)</span> and any <span
+class="math inline">\(l&gt;0\)</span>, the norm of its force fluctuation
+is bounded by</p>
+<p><span class="math display">\[
+\|[\nabla U(Q)-\nabla U(q)]\psi\|
+\le \omega_{\nabla U}(l)+2\|\nabla U\|_\infty
+                                     \|(Q-q)\psi\|/l .
+\]</span></p>
+<p>Here <span class="math inline">\(\nabla U\)</span> is bounded and
+uniformly continuous. Starting with the Gaussian, induction propagates
+vanishing position and momentum deviations for the finitely many
+factors, first sending <span class="math inline">\(a\)</span> to zero
+and then <span class="math inline">\(l\)</span> to zero at each step.
+For all sufficiently fine uniform meshes the classical terminal radii
+lie inside the opposite plateaus of <span
+class="math inline">\(f\)</span>, by (C2)–(C4). If <span
+class="math inline">\(A\)</span> accumulates at zero, take the
+small-action limit at each such mesh within <span
+class="math inline">\(A\)</span>. If <span class="math inline">\(0\in
+A\)</span> the classical products already give the unit difference. This
+proves the second line of (C6).</p>
+<p><strong>Positive action floor.</strong> For fixed <span
+class="math inline">\(\epsilon&gt;0\)</span> both products have the same
+unitary continuum limit. The potential is a bounded real multiplier. <a
+href="https://doi.org/10.1090/S0002-9939-1959-0108732-6">Trotter,
+1959</a> (product formula). For the required uniformity, put <span
+class="math inline">\(B_\epsilon(t)=D_{-t}U(Q)D_t/\epsilon\)</span>. In
+the interaction picture each split product evolves with <span
+class="math inline">\(B_\epsilon\)</span> frozen at the chosen endpoint
+of each cell. On any compact positive <span
+class="math inline">\(\epsilon\)</span> interval these operators are
+uniformly bounded and jointly strongly continuous in <span
+class="math inline">\(t,\epsilon\)</span>. The exact interaction-picture
+vector <span class="math inline">\(w_\epsilon(t)\)</span> is
+norm-continuous in both variables by its integral equation with bounded
+generator and the norm-continuous initial Gaussian. Duhamel bounds the
+product error by</p>
+<p><span class="math display">\[
+T\sup_{|s-t|\le\delta}
+        \|(B_\epsilon(s)-B_\epsilon(t))w_\epsilon(t)\|.
+\]</span></p>
+<p>This tends uniformly to zero on the compact parameter interval. For
+the large-<span class="math inline">\(\epsilon\)</span> tail, each split
+product differs from free evolution by at most <span
+class="math inline">\(T\|U\|_\infty/\epsilon\)</span> in operator norm,
+by telescoping. These bounds prove the first line of (C6).</p>
+<p>The order effect also has a definite scale on equal cells <span
+class="math inline">\(h=T/N\)</span>. The products satisfy <span
+class="math inline">\((K_h D_h)^N=K_h(D_h K_h)^N K_h^{-1}\)</span>.
+Since <span class="math inline">\(f(Q)\)</span> commutes with the final
+kick, their score difference is bounded by the pure-state trace distance
+between <span class="math inline">\(\psi_\epsilon\)</span> and <span
+class="math inline">\(K_h^{-1}\psi_\epsilon\)</span>. Removing the phase
+<span class="math inline">\(hU(q_0)/\epsilon\)</span> bounds this
+distance by <span class="math inline">\(3h/\sqrt\epsilon\)</span> using
+(C1) and the initial spatial rms width. More precisely, if <span
+class="math inline">\(h,\epsilon\to0\)</span> with <span
+class="math inline">\(h/\sqrt\epsilon\to\lambda&lt;\infty\)</span>,
+write <span class="math inline">\(x=q_0+\sqrt\epsilon\,y\)</span>.
+Differentiability at <span class="math inline">\(q_0\)</span>, where
+<span class="math inline">\(\nabla U(q_0)=(1,0)\)</span>, and dominated
+convergence give overlap modulus <span
+class="math inline">\(e^{-\lambda^2/4}\)</span> by the Gaussian Fourier
+transform. Thus the limiting upper bound on the score difference is
+<span class="math inline">\(\sqrt{1-e^{-\lambda^2/2}}\)</span>. Full
+separation requires <span class="math inline">\(a/S_0=o(h^2)\)</span>
+along a vanishing-action sequence. Conversely (C6) allows some such
+sequences. For <span class="math inline">\(a/S_0=h\)</span>, the two
+constant orderings agree in the limit in the sense that their difference
+vanishes. <a href="record-distance-path-length.html">Pure-state
+distance</a> (standard identity).</p>
+<h3 id="the-same-refinement-criterion-for-classical-ensembles">The same
+refinement criterion for classical ensembles</h3>
+<p>Could (C6) by itself establish that the width comes from a physical
+quantum of action? Keep the force, the partitions, the two classical
+maps, <span class="math inline">\(T\)</span> and <span
+class="math inline">\(f\)</span> fixed. On classical phase space take
+the density <span class="math inline">\((\pi
+w)^{-2}\exp[-(|q-q_0|^2+|p-v_0|^2)/w]\)</span> for <span
+class="math inline">\(w&gt;0\)</span> and the point state for <span
+class="math inline">\(w=0\)</span>. Each position and momentum marginal
+matches the initial quantum one at <span
+class="math inline">\(w=\epsilon\)</span>. Here <span
+class="math inline">\(w\)</span> is freely supplied classical
+dispersion. At every <span class="math inline">\(w\)</span> the
+evolution uses only Newton’s equation.</p>
+<p>For any nonempty width set <span
+class="math inline">\(B\subset[0,\infty)\)</span> the exact dichotomy
+(C6) holds for the classical scores with <span
+class="math inline">\(A\)</span> replaced by <span
+class="math inline">\(B\)</span>. If <span class="math inline">\(\inf
+B=0\)</span>, continuity of the finite products takes the concentrated
+densities to their point-state answers, so (C3)–(C4) give the unit
+difference. For <span class="math inline">\(w&gt;0\)</span>, the initial
+hypersurfaces <span class="math inline">\(|q\wedge p|=1\)</span> have
+measure zero. Away from them every orbit is unique. The field is locally
+Lipschitz away from <span class="math inline">\(r=1\)</span>. At <span
+class="math inline">\(r=1\)</span>, nonzero radial speed gives unique
+passage by the energy integral and zero radial speed gives a simple turn
+since <span class="math inline">\(r&#39;&#39;=|q\wedge
+p|^2-1\ne0\)</span>. The bounded force then gives convergence of
+arbitrary refining polygons for almost every initial state. On <span
+class="math inline">\(w_0\le w\le w_1\)</span> with <span
+class="math inline">\(w_0&gt;0\)</span> the densities have a common
+integrable Gaussian envelope. Dominated convergence along any sequence
+of partitions and placements proves uniform agreement there.</p>
+<p>For the remaining tail, every terminal polygon position lies within
+<span class="math inline">\(3T^2\)</span> of the free position <span
+class="math inline">\(q+Tp\)</span>, by summing the bounded kicks. The
+free position has density bounded by <span class="math inline">\(1/[\pi
+w(1+T^2)]\)</span>. Whenever it lies outside the disk of radius <span
+class="math inline">\(1+Y(T)/2+3T^2\)</span> about zero, every ordering
+gives final score one. The probability of that disk tends to zero as
+<span class="math inline">\(w\to\infty\)</span>, uniformly in the
+ordering.</p>
+<p>There is a distinct finite-ratio bound for these ensembles. For the
+two constant orderings the initial momentum shift is <span
+class="math inline">\(h\nabla U(q)\)</span> up to sign. At each <span
+class="math inline">\(q\)</span> the equal-covariance Gaussian
+total-variation formula gives <span
+class="math inline">\(\operatorname{erf}(h|\nabla U(q)|/(2\sqrt
+w))\)</span>. Averaging over position bounds the score difference. This
+upper bound tends to <span
+class="math inline">\(\operatorname{erf}(\lambda/2)\)</span> at <span
+class="math inline">\(h/\sqrt w\to\lambda\)</span>, <span
+class="math inline">\(w\downarrow0\)</span>. Both this and the quantum
+overlap bound concern possible terminal differences. An actual
+difference between the two dynamics at the critical scale requires their
+branch probabilities. <a
+href="https://arxiv.org/pdf/1810.08693#page=3">Devroye, Mehrabian and
+Reddad, p. 3</a> (equal-covariance formula).</p>
+<p>Newton’s letter uses point-state uniqueness in the inverse-square
+conic argument. Equation (C5) justifies it classically in a broader
+gravitational class. Equation (C6) identifies what would exclude zero
+for the specified canonical family. One must independently admit the
+force (C1), require agreement of impulse placements uniformly over
+allowed actions, and justify the chosen state space and dynamics. The
+historical passage supplies none of these extensions.</p>
 <h2 id="consequence-for-state">6. Consequence for STATE</h2>
 <p>Initial-value construction, continuation, endpoint caustics and
 finite-time mergers have different hypotheses. Unbounded force slope
@@ -775,7 +1225,13 @@ href="balaban-newton-time-blocking.html">endpoint blocking argument</a>
 retains inverse Hessians, normalization and source response; the <a
 href="newton-nonlinear-time-cell.html">nonlinear cell</a> controls a
 supplied positive weight. Neither operation follows solely from
-constructing a classical orbit.</p>
+constructing a classical orbit. The moving-circle example now
+distinguishes uniform agreement over trial actions from agreement at
+each fixed positive action. A nonnegative spherical source admits
+order-independent classical refinement, including at a circular orbit.
+Classical ensembles of positive lower width also admit uniform
+refinement. Which dynamics or composition law requires a physical action
+in addition to a restriction on classical preparations remains open.</p>
 <span id="retain-an-intermediate-time-as-a-fluctuating-variable"></span><p class="meta">Moved section: <a href="balaban-newton-time-blocking.html#arbitrary-intermediate-times">balaban-newton-time-blocking</a>.</p><span id="the-part-of-balabans-method-visible-here"></span><p class="meta">Moved section: <a href="newton-nonlinear-time-cell.html#source-comparison-full-densities-and-locality">newton-nonlinear-time-cell</a>.</p><span id="what-a-nonlinear-time-block-actually-produces"></span><p class="meta">Moved section: <a href="newton-nonlinear-time-cell.html#the-complete-one-vertex-weight">newton-nonlinear-time-cell</a>.</p><script>const formerFragments={"retain-an-intermediate-time-as-a-fluctuating-variable": "balaban-newton-time-blocking.html#arbitrary-intermediate-times", "the-part-of-balabans-method-visible-here": "newton-nonlinear-time-cell.html#source-comparison-full-densities-and-locality", "what-a-nonlinear-time-block-actually-produces": "newton-nonlinear-time-cell.html#the-complete-one-vertex-weight"};const formerHash=decodeURIComponent(location.hash.slice(1));if(formerFragments[formerHash])location.replace(formerFragments[formerHash]);</script>
 </main>
 <footer class="site"><div class="wrap">

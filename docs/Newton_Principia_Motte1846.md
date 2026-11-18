@@ -20,3 +20,39 @@ ultimate proportions, distinguishes limits from least determinate magnitudes,
 and uses the limiting polygon in the area-law argument. This passage-level
 check supports attribution; the modern receding-centre derivation has its own
 [draft audit](../notes/newton-insertion-action.md#a-genuine-receding-centre-subtract-before-taking-the-limit).
+
+## Corollary 1 to Proposition XIII
+
+On 11 October 1709 Newton sent Roger Cotes a proposed addition to
+Book I, Proposition XIII, Corollary 1. Given a focus, contact point
+and tangent, he discusses a conic with the prescribed curvature. He
+then invokes the uniqueness of the tangent orbit under the same force.
+In the following lines Newton thanks Cotes for corrections to two
+theorems in *De Quadratura*. The letter documents Newton's own request
+for the change during preparation of the second edition. [Edleston,
+Letter III, printed pp. 4–5](https://www.mercaba.es/britania/cartas_I_de_newton.pdf#page=131)
+(letter passage) and [Cambridge correspondence, letter 766](https://doi.org/10.1017/9781108642453.007)
+(catalog entry).
+
+- **London, 1687.** Corollary 1 states the inverse-square conic
+  conclusion for a given launch. It ends after the converse. At the
+  end of Corollary 2 Newton excepts straight descent to the centre.
+  [Book I, XIII.1–2, paragraphs 109–110](https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00077#par109).
+- **Cambridge, 1713.** The curvature and tangency argument now follows
+  the earlier conclusion. The final sentence names the centripetal
+  force. The launch speed was specified earlier in the corollary.
+  Corollary 2 retains the rectilinear exception. [Book I, XIII.1–2,
+  paragraphs 140–141](https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082#par140).
+- **London, 1726.** Newton expressly couples the speed with the force
+  in determining curvature and again in the final uniqueness statement.
+  The held Motte–Chittenden English, printed p. 120, reflects this later
+  wording. [Book I, XIII.1–2, paragraphs 130–131](https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00087#par130)
+  and [held English text, p. 120](Newton_Principia_Motte1846.html#Page_120).
+
+Checked these diplomatic passages, the held English paragraph and the
+text of Edleston's 1850 letter edition on 18 November 2026. In Book I,
+Section XII, Newton separately treats the attraction of spherical shells
+and the interior and exterior of balls. These results determine the
+radial force of a given nonnegative spherical source. [1713, Propositions
+LXX–LXXIV](https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082#par469)
+(shell-theorem statements).
