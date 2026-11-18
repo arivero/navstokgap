@@ -39,7 +39,10 @@ probabilities gives a conditional lower bound on the trial action, with
 an explicit allowance for a recoiling source. For two trapped ions there
 is already a measured spin signal. Its attribution to a force
 transmitted through the ions' motion admits a quantitative test using
-the optical wavelength and the trap clock.
+the optical wavelength and the trap clock. For a circular orbit, three
+direct angle readings on separately prepared pairs give a test that
+tolerates finite ruler and clock resolution. A classical impulse model
+reproduces the ideal mean fluorescence of a published rotor echo.
 
 This treatment integrates the constant-force derivation and its
 receding-centre correction with the controlled reunion. Written
@@ -404,6 +407,207 @@ quadratures by a quantum maximum-likelihood fit. Their reported Wigner
 negativity does not supply these three counts. A verified violation
 would constrain the calibrated motional models above. Extending that
 constraint to all preparations requires a further physical argument.
+
+\subsection{Three angle readings on a central
+orbit}\label{three-angle-readings-on-a-central-orbit}
+
+\textbf{6.1 Sol Max, 2026-11-18.} A torque-free circular orbit permits
+any initial angle and speed, yet three angular distributions at equal
+time steps must satisfy (1) below with phase zero. A violation would
+also bound the reduced action in the canonical planar rotor, even if the
+release state were unknown. One coherent aperture gives opposite signs
+in the same detector for two trial actions. Rotational fractional
+revivals and their use to probe quantization are established.
+\href{https://arxiv.org/pdf/1903.05763\#page=2}{Urban et al., Eq. (1)}
+(passage, planar rotor spectrum) and
+\href{https://arxiv.org/abs/1803.01778}{Stickler et al.} (abstract,
+proposed orientational revival measurement).
+
+\textbf{The three exposures.} Two equal masses \(m\) rotate in a plane
+at fixed separation \(d\). The relative inertia is \(I=\mu d^2\), with
+\(\mu=m/2\). Calibrate \(m\) by mechanical mass comparison, \(d\) by
+imaging, and the gate spacing \(T>0\) and duration \(\delta>0\) by a
+clock. After one common release, choose one of three gates independently
+on each run. Read the interparticle axis just once at \(jT+s\),
+\(j=0,1,2\), where \(s\) is uniform on \([0,\delta]\) for each choice.
+Its distribution is independent of the release. The record retains the
+gate label and angle. There are no drives between release and detection.
+For an unoriented axis choose the even harmonic \(k=2\). A ruler giving
+uniform arc error on \([-\ell,\ell]\) at radius \(d/2\) gives angular
+half-width \(\eta=2\ell/d\). The observed moment of order \(q\) is the
+true moment times \(b_q=\operatorname{sinc}(q\eta)\), with
+\(\operatorname{sinc}(x)=\sin(x)/x\) and value one at zero. The detector
+response and any angular dependence of losses require independent
+calibration. Keep all accepted releases in the denominator.
+
+Divide the measured moments by their nonzero \(b_q\). Call the results
+\(z_0,z_1,z_2\) in time order, using harmonics \(k,2k,k\) respectively.
+For classical torque-free trajectories the admissible values obey
+
+\[
+ \left|e^{-i\Phi}z_2-z_1\overline{z_0}\right|\le R,\qquad
+ R=\sqrt{(1-|z_0|^2)(1-|z_1|^2)},\qquad \Phi=0.                 \tag{1}
+\]
+
+Indeed \(\theta_2=2\theta_1-\theta_0\) modulo \(2\pi\) for every initial
+angle and speed. A common random offset \(s\) couples the three time
+marginals without changing any of them. Cauchy--Schwarz bounds the mean
+product of the centred \(e^{2ik\theta_1}\) and \(e^{-ik\theta_0}\) in
+absolute value by \(R\). Any hidden release labels and any correlations
+between angle and speed are allowed.
+
+For a canonical rotor of trial reduced action \(a>0\) the same disk (1)
+holds with \(\Phi=ak^2T/I\). Write \(A_j(q)=U_{jT}^\dagger
+e^{iq\theta}U_{jT}\). On the angular mode \(|n\rangle\) the free
+propagator gives phase \(\exp[-ian^2t/(2I)]\), and \(e^{iq\theta}\)
+shifts \(n\) to \(n+q\). Consequently
+\(A_2(k)=e^{i\Phi}A_1(2k)A_0(k)^\dagger\). In the common release state
+averaged over \(s\), subtract the means of the two unitary factors and
+apply operator Cauchy--Schwarz. Their variances are exactly the two
+factors in \(R^2\). This proof includes mixed states. In particular, if
+the measured moments give \(S=|z_2-z_1\overline{z_0}|-R>0\), then
+\(S\le |1-e^{i\Phi}|\) and
+
+\[
+                 a\ \ge\ \frac{2I}{k^2T}\arcsin(S/2).              \tag{2}
+\]
+
+Use the infimum of \(S\) over simultaneous error intervals for an
+experimental bound. Equations (1) and (2) hold for every subdivision of
+the motion between the physical gates.
+
+\textbf{One preparation with a finite ruler and clock.} Start the scalar
+rotor in the uniform, zero-winding mode. At release transmit amplitude
+\(A(\theta)=\cos^4(k\theta/2)\) and count rejects. This specifies a
+coherent real aperture with no angle-dependent phase. Its transmission
+intensity alone fixes the success probability \(35/128\) for the uniform
+input. Its amplitude law is an additional preparation premise for the
+predictions that follow. Repeatability suffices for the preparation in
+(1). The five accepted mode amplitudes, at \(n/k=-2,-1,0,1,2\), are
+\((1,4,6,4,1)/\sqrt{70}\). Fix \(\eta=1/(8k)\) and \(\delta=T/(100\pi)\)
+before comparing models. Use this same mask, ruler and clock under
+\(a\mapsto 2a\).
+
+Set \(a_*=\pi I/(k^2T)\). At the nominal gates and \(a=a_*\) the moments
+are \((4/5,2/5,-4/5)\). The adjacent coefficient products sum to
+\(56/70\) and the next-neighbour products to \(28/70\). The middle gate
+retains the latter products. At the final gate mode \(n=jk\) has
+acquired \((-1)^j\), reversing the first harmonic. At \(a=2a_*\) the
+final gate returns the original \(+4/5\). Every populated pair of modes
+has a frequency difference at most \(2ak^2/I\). As the sums of absolute
+coefficient products are at most one, averaging over \(s\) changes each
+moment from its nominal value by at most \(1/50\) at \(a_*\) and
+\(1/25\) at \(2a_*\). The \textbf{raw mean cosine in the last gate}
+therefore has opposite signs at the two scales, since \(b_k>0\). The
+dimensional calibrations are \(m,d,\ell,T,\delta\), all fixed
+independently of the trial action. The chosen resolution ratios leave
+\(m,d,T\) freely specifiable.
+
+The same clock can also make two actions \textbf{exactly
+indistinguishable}. Take \(a_1=4\pi I/(k^2\delta)\) and \(a_2=2a_1\). At
+either action, every nonzero frequency difference between populated
+modes is an integer multiple of \(2\pi/\delta\). Averaging over a
+complete gate removes all those terms in the position density.
+Coherences between opposite modes of equal energy survive identically.
+Thus the success rate and the entire blurred angle distribution in every
+gate coincide for \(a_1\) and \(a_2\). The unrecorded time within a gate
+matters for absolute identification.
+
+Even allowing the preparation in a competing model to vary, the three
+predictions at \(a_*\) exclude zero under the stated dynamics. After
+correcting for the known \(b_q\), the distance
+\(|z_2-z_1\overline{z_0}|\) is at least \(28/25-3/50\), whereas
+\(R\le\sqrt{1-(4/5-1/50)^2}<2/3\). Thus \(S>1/3\) survives both finite
+resolutions. The figures describe an attainable model preparation.
+Applying (2) to a physical pair requires the three measured moments.
+
+Korobenko, Hepburn and Milner observed oxygen axes changing between two
+and four lobes during a field-free rotation. They varied the release
+angle and sampled a fixed pinhole, binning the release into 11 angular
+intervals for their main scan. Lobe counts alone allow a simple
+classical model. Start two equally weighted axes together with speeds
+\(\omega\) and \(\omega+\pi/(2T)\). At \(T\) they are perpendicular, and
+at \(2T\) they coincide modulo \(\pi\). Testing (1) on such a scan needs
+the calibrated lobe directions, weights, background and departure from
+planar motion.
+\href{https://pubs.rsc.org/en/content/getauthorversionpdf/C4CP04434G\#page=4}{Korobenko
+et al., Fig. 4 and experimental procedure} (passages).
+
+\textbf{Allowing radial motion.} Suppose the relative separation lies in
+a calibrated annulus \(d_-\le r\le d_+\) with \(d_->0\). Let
+\(\beta=\sup_{[d_-,d_+]}|1/(\mu r^2)-1/I|\). For each classical
+trajectory with \(|L|\le L_{\max}\) the drift relative to rotation at
+the constant rate \(L/I\) is at most \(t\beta L_{\max}\). Here \(L\) is
+conserved under any radial force. Thus the order-\(q\) angle moment
+changes by at most \(t\beta |q|L_{\max}\). The additional dimensional
+inputs are the two radial limits and a mechanical upper bound on angular
+momentum, obtainable from an upper speed and radius.
+
+For the canonical central Hamiltonian assume radial confinement in that
+annulus, a common self-adjoint radial operator \(H_r\) independent of
+angle, and an initial state supported in \(|L|\le L_{\max}\). Compare
+\(H_r+L^2/(2\mu r^2)\) with \(H_r+L^2/(2I)\). The reference angle mode
+at any time shifts \(L\) by \(aq\) and commutes with radial multipliers.
+Its commutator with the Hamiltonian difference, divided by \(a\), has
+norm on the occupied sector at most \(\beta(|q|L_{\max}+a q^2/2)\). The
+Duhamel bound gives at most \(t\beta(|q|L_{\max}+a q^2/2)\) error per
+moment. Both evolutions preserve the occupied sector, and the shifted
+sector also has a bounded Hamiltonian difference. To exclude a whole
+trial interval \(0<a\le a_c\), use \(a_c\) on the right and
+\(t\le jT+\delta\) for each gate. Enlarge the moment errors in (1) by
+these amounts. A mean bond length alone supplies no such control. For an
+actual angle detector the calibrated angular response must also hold
+throughout the annulus.
+
+\textbf{What the ion experiment reads.} Glikin et al.~prepared two
+rotating calcium ions, applied three sideband pulses and read out mean
+fluorescence. With sideband order \(k\), total echo time \(\tau\), and
+angular momentum variance growth \(2D\) per unit time, their ideal
+signed fringe amplitude is
+
+\[
+ \cos\!\left(\frac{a k^2\tau}{2I}\right)
+ \exp\!\left[-\frac{D\tau}{2a^2}
+       \left(1-\operatorname{sinc}\frac{ak\tau}{I}\right)\right].
+                                                                    \tag{3}
+\]
+
+The paper includes the cosine when fitting its weak-noise, third-order
+measurements. It gives 2.1 ms for the first ideal node and 2.4 ms after
+simulating pulse imperfections. These are predicted node times. The
+measured quantity is the contrast of an electronic phase scan.
+\href{https://arxiv.org/pdf/2310.13293\#page=11}{Glikin et al., Fig. 3,
+Eq. (A53) and Appendix B, Fig. 5} (passages).
+
+A classical rotor can reproduce the entire ideal mean fringe. Give the
+apparatus a mechanical angular impulse scale \(J>0\) and the rotor
+arbitrary initial angle and speed. Between pulses apply independent
+random impulses \(\pm 2J\) with equal sign probabilities at total
+Poisson rate \(D/(2J^2)\). The angular momentum variance growth is
+\(2D\). At the middle pulse add an independent impulse \(\pm kJ\) with
+equal probabilities. Let a classical phase recorder accumulate
+\(k[\theta(0)-2\theta(\tau/2)+\theta(\tau)]\) and give a bright
+probability \((1-\cos(\phi+\text{accumulated phase}))/2\) for analyzer
+phase \(\phi\). It samples the same initial ensemble for all \(\phi\).
+An impulse at \(u\) contributes its impulse times \(k\min(u,\tau-u)/I\)
+to the accumulated phase. The middle pulse therefore contributes the
+cosine of (3) with \(a=J\). The characteristic function of the
+independent Poisson impulses gives the exponential there, since the time
+average of \(\cos[2Jk\min(u,\tau-u)/I]\) is
+\(\operatorname{sinc}(Jk\tau/I)\).
+\href{https://stoch.math.kit.edu/img/Last/lastpenrose2017.pdf}{Last and
+Penrose, Theorem 3.9 and Proposition 5.4} (passages, Poisson functional
+and independent marking).
+
+This alternative carries zero wave action and a finite \textbf{apparatus
+impulse} \(J\). Its independent dimensional specifications are \(I\),
+\(J\), \(D\) and \(\tau\). It makes a further prediction at fixed
+diffusion strength. With the middle pulse absent, the fourth cumulant of
+the angular momentum increment in time \(t\) is \(8DJ^2t\). Gaussian
+torque increments have zero fourth cumulant. Matching the mean
+fluorescence and the diffusion rate leaves this independent force
+measurement open. The direct angle test uses a single terminal exposure
+and removes the middle-pulse impulse altogether.
 
 \subsection{A force transmitted between two
 ions}\label{a-force-transmitted-between-two-ions}
@@ -818,5 +1022,7 @@ gradient and relative speed of a reciprocal source gives a testable
 trajectories directly. Independent evidence for the calibrated
 probability excess remains open. In the two-ion experiment the spin
 excess is observed. Its attribution to mechanical action depends on
-isolating the force path from other entangling interactions.
+isolating the force path from other entangling interactions. On a
+central orbit the outstanding observation is a violation of the
+three-angle disk with radial motion and detector losses bounded.
 \end{document}

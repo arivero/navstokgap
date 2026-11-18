@@ -9,6 +9,10 @@ The first priority is an explanation of positive physical action from the
 central-force trajectory limit itself. Newton connects [Lemma X's force
 measurement](../notes/newton-insertion-action.md#lemma-x-and-the-measurement-of-initial-force)
 to the orbital force rule in Book I, Proposition VI (1713).
+On a single central pair, do [three separately timed angle
+readings](../notes/newton-insertion-action.md#three-angle-readings-on-a-central-orbit)
+violate the torque-free trajectory bound after allowing for radial motion
+and detector error? An ion fluorescence echo admits a classical impulse model.
 The [point-insertion test](../notes/balaban-newton-time-blocking.md#central-force-passage-under-point-insertion)
 exposes the sensitivity of one orbit to its preparation. The
 [three-energy scattering test](../notes/balaban-newton-time-blocking.md#a-three-energy-test-of-central-force-trajectories)
@@ -18,9 +22,8 @@ cancels any common impact distribution. Internal states can fit the
 excludes freely mobile classical Gibbs atoms even with internal
 states. [Isotope enrichment](../notes/balaban-newton-time-blocking.md#isotope-exchange-as-a-test-of-central-forces)
 also excludes changing inertial mass alone for constrained atoms.
-Can an independent force measurement bound the work of exchanging
-isotopes between vapour and liquid, including the forces that first
-appear when a third atom is present?
+The liquid test still needs a bound on isotope exchange work including
+forces that first appear in the presence of a third atom.
 For individual trajectories the [argon transmission and finite work
 tests](../notes/balaban-newton-time-blocking.md#an-exterior-force-test-with-argon)
 require an independent exterior force calibration. The [77 K shutter
