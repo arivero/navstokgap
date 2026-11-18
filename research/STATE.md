@@ -24,9 +24,10 @@ The potassium [two-power test](../notes/balaban-newton-time-blocking.md#locating
 uses guarded returns and a common optical work calibration.
 For a harmonic central force the [trapped-ion contrast estimates](../notes/newton-insertion-action.md#three-measured-contrasts-of-a-trapped-ion)
 exceed the additive phase ceiling by $0.268$ at one preparation. Can
-the probe's rms displacement error be bounded independently below
-$0.268/(2\pi)$ of its measured fringe pitch after allowing for the
-other errors, or does the excess persist in direct position images?
+the probe's rms displacement error be bounded below $0.268/(2\pi)$
+of its fringe pitch after other errors? For [atom photographs](../notes/newton-insertion-action.md#two-action-scales-in-the-same-atom-photographs),
+does the bounded average of raw positions fall below zero with the
+hold times, camera response and missing launches accounted for?
 For a freely rotating pair a separate [three-angle test](../notes/newton-insertion-action.md#three-angle-readings-on-a-central-orbit)
 allows for radial motion.
 The [point-insertion test](../notes/balaban-newton-time-blocking.md#central-force-passage-under-point-insertion)

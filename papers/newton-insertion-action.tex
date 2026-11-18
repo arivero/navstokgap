@@ -800,6 +800,217 @@ negativity does not supply these three counts. A verified violation
 would constrain the calibrated motional models above. Extending that
 constraint to all preparations requires a further physical argument.
 
+\subsection{Two action scales in the same atom
+photographs}\label{two-action-scales-in-the-same-atom-photographs}
+
+\textbf{6.1 Sol Max, 2026-11-18.} A specified set of position
+photographs in a central harmonic trap admits two reduced actions
+differing by a factor of two. One calibrated quartic central impulse
+separates them using the third moment of the same camera coordinate. A
+bounded statistic of the photographs would already exclude zero action
+if the specified profile were observed with the tolerances below.
+
+Load the same source repeatedly, with no promise about its purity or
+level populations. Prepare the ensemble by holding it in the trap for an
+independently chosen time uniform over one period. Keep the load flag.
+Impose any further hold only after preparation, switch off the trap,
+allow free flight for time \(T\), and read one terminal position. A
+common independent jitter on the randomized hold, of fixed clock width
+\(\delta t\), preserves uniform phase modulo a period. In one Cartesian
+component let \(m\) be the inertial mass and let \(\omega\) be the
+angular frequency measured from trajectories. For a Hooke force,
+\(Z=x(T_{\rm release})+T p_x(T_{\rm release})/m\) projects
+\((x,p_x/(m\omega))\) on a rotated axis with gain
+\(M=\sqrt{1+\omega^2T^2}\). Use the ruler coordinate \(y=Z/M\). In these
+coordinates the quantum commutator of the two projected axes is
+\(ia/(m\omega)\) for trial reduced action \(a\). The same physical hold
+averages over rotations for every \(a\), and the same ruler and clock
+give \(M\) for every \(a\).
+
+Fix a ruler length \(L\) independently. Write \(G_L\) for a centred
+Gaussian density of standard deviation \(L\). The target at every hold
+has \(\eta=3/4\) and density
+
+\[
+ g(y)=G_L(y)(1-\eta+\eta y^2/L^2),\qquad
+ g_{\rm camera}=G_b*g .
+\]
+
+Here \(b>0\) is the independently calibrated Gaussian readout width in
+\(y\), or \(Mb\) in the object plane. A camera bin records the integral
+of \(g_{\rm camera}\) over its edges. For the exact profile statement
+one can scan the bin edges in ruler units. A fixed finite set of bin
+counts has less information. A full profile at known Gaussian resolution
+determines the intrinsic profile uniquely since the Gaussian Fourier
+transform is nowhere zero. The bounded test below avoids this inverse.
+
+\textbf{An explicit pair.} Put \(a_*=2m\omega L^2\). At \(a_*\) take the
+stationary mixture with level probabilities \(p_0=1/4,\ p_1=3/4\). At
+\(a_*/2\) take the stationary mixture with \(p_0=0,\ p_n=4n/3^{n+1}\)
+for \(n\ge1\). These are two assignments to one operationally specified
+source. They differ on a level measurement, which the preparation does
+not use. Both have the same Wigner function in physical position and
+momentum, hence the same law before and after the hold, at every flight
+time, and after a common camera or clock response. The oscillator level
+length at \(a_*/2\) is \(L/\sqrt2\). The populations above are the
+diagonal dilation coefficients at this changed length. The exact
+compatible interval for this profile is \([a_*/2,a_*]\). These are
+applications of the established Narcowich--Wigner spectrum for the
+zero--one mixture. \href{https://doi.org/10.1063/1.531326}{Bröcker and
+Werner, §V} (bibliographic record) and
+\href{https://arxiv.org/html/2611.03544v1\#A1.SS2}{Frigerio et al.,
+Appendix A.2, Eqs. (81)--(83)} (passage, including the attribution to
+the 1995 result).
+
+\textbf{A finite-accuracy observation.} Give each raw position \(y\) the
+bounded weight
+
+\[
+ f_u(y)=u^2\int_0^\infty k e^{-u^2k^2/2}\cos(ky)\,dk,\qquad |f_u|\le1 .
+\]
+
+On a Newtonian orbit of amplitude \(R\) in the projected plane the
+uniform hold makes the angular mean of the cosine \(J_0(kR)\). Including
+camera blur and writing \(v^2=b^2+u^2\), the resulting weight is
+\((u^2/v^2)e^{-R^2/(2v^2)}\ge0\) by the two-dimensional Gaussian Fourier
+transform. Arbitrary release ensembles inherit the sign. For a canonical
+state the same average samples its Wigner density smoothed isotropically
+at width \(v\) at the origin, with a positive prefactor. Gaussian
+smoothing gives the same sign whenever \(a\le2m\omega v^2\). Both
+filtered projection tests and Gaussian positivity are established.
+\href{https://arxiv.org/html/1508.00828v1\#S3}{Fresta, Borregaard and
+Sørensen, Eqs. (28)--(30)} (passage) and
+\href{https://doi.org/10.1016/0378-4371(76)90145-X}{Cartwright}
+(abstract).
+
+The target has raw cosine mean \((1-\eta L^2k^2)\exp[-(L^2+b^2)k^2/2]\).
+Choose the two ruler widths \(b=u=L/\sqrt8\). Integrating this mean
+against the specified weight gives
+
+\[
+ \langle f_u\rangle=
+ \frac{u^2[v^2+(1-2\eta)L^2]}{(L^2+v^2)^2}=-\frac1{50}.
+\]
+
+Thus an upper error endpoint below zero would exclude every classical
+release and all canonical \(a\le a_*/4\) under the calibrated laws, even
+for profiles outside the target family. Pixel centres with pitch
+\(\Delta y\) cost at most \(\sqrt{\pi/2}\,\Delta y/(2u)\) since this
+bounds the slope of the weight times the half-pitch. Each missing launch
+can contribute at most one to the unnormalized sum. Uncertainty in
+flight time or force and position-dependent detection need their own
+error bounds. The pair's equality also holds for finite independent
+flight-time exposures, by averaging its common law at each \(T\). To use
+the quoted \(1/50\) margin with such exposures, scale by the recorded
+\(M(T)\) and match the response width for each \(T\), or include the
+flight-window error.
+
+\textbf{A clock with finitely many settings.} Choose uniformly among
+\(N\) holds spaced by \(\pi/(N\omega)\) over a half-period. The even
+score has period \(\pi\) in angle. Let \(Q_\theta\) be the ruler
+quadrature and \(V_\theta=\partial_\theta Q_\theta\). Bound
+\(R_2^2=\langle Q_\theta^2+V_\theta^2\rangle\) from two quarter-period
+separated position readings, accounting for the common blur. This
+quantity is invariant under the hold. Put \(c=a/(m\omega)\), or \(c=0\)
+on classical orbits. For the score mean \(S(\theta)\) at one angle,
+
+\[
+ \sup_\theta |S''(\theta)|\le H=
+ \sqrt{\pi/2}\,\frac{u^2 R_2}{v^3}
+ +\frac{2u^2 R_2^2}{v^4}+\frac{2u^2 c^2}{v^6}.
+\]
+
+Indeed \(U=e^{ikQ_\theta}\) has derivative \(ik\{V_\theta,U\}/2\), where
+braces denote the anticommutator. Differentiating again uses
+\(V_\theta'=-Q_\theta\) and
+\(\{V_\theta,\{V_\theta,U\}\}=4V_\theta U V_\theta+c^2 k^2 U\). These
+expectations extend as quadratic forms to states of finite second
+moment. Unitarity and Cauchy--Schwarz bound \(|\langle U''\rangle|\) by
+\(|k|R_2+k^2 R_2^2+c^2k^4/4\). Integration against
+\(u^2 k e^{-v^2 k^2/2}\) gives \(H\). The classical estimate follows by
+ordinary differentiation at \(c=0\). Averaging the symmetric Taylor
+remainder in each angular cell gives error at most \(H(\pi/N)^2/24\).
+Independent common timing jitter obeys the same bound, by averaging
+shifted grids. Additional offsets of at most \(\epsilon_t\) per setting
+cost at most \(\sqrt{\pi/2}\,u^2 R_2\omega\epsilon_t/v^3\) by the first
+derivative.
+
+For the target \(R_2^2=5L^2\). If the two position readings certify this
+upper bound, \(H<27\) for every \(a\le a_*/4\) and every classical
+candidate. With \(N=32\) the grid can lower the mean by less than
+\(0.011\). The target is stationary and still gives \(-0.020\) at these
+settings. This leaves more than \(0.009\) for the other errors. A
+different measured second-moment bound or clock spacing goes into the
+displayed formula.
+
+\textbf{A central-force measurement separating the pair.} Translate the
+phase-averaged preparation by a ruler displacement \(d\ne0\) along the
+observed axis. This can be done by first holding the trap centred at
+\(d\) and then applying a pulse about the fixed origin. The preparation
+translation \(e^{-id P_x/a}\) shifts both states by the same physical
+\(d\), or by \(d/L\) and \(\sqrt{2}d/L\) in their respective level
+units. In three dimensions use a product with the same physical
+transverse Wigner densities in the two models, for instance independent
+oscillator Gaussians with position width \(L\) and momentum width
+\(m\omega L\). Apply the radial potential impulse
+\(J(\mathbf x)=\lambda|\mathbf x|^4/4\). Its integrated force is
+\(-\lambda|\mathbf x|^2\mathbf x\). Calibrate \(\lambda\) from a
+momentum impulse at a known radius, in mass divided by length squared
+and time. Let \(\beta=T/m\). The kick in the position representation is
+multiplication by \(e^{-iJ/a}\). In the characteristic function of the
+final position the two arguments of \(J\) differ by \(ak\beta\) along
+the observed axis. With \(x\) the axial coordinate and
+\(r=|\mathbf x|\), their difference divided by \(a\) is
+
+\[
+ k\beta\lambda r^2 x+\tfrac14 a^2k^3\beta^3\lambda x .
+\]
+
+The first term gives the same classical impulse in both models. The
+second multiplies the common integrand by an extra phase with negative
+sign in the exponent. Its cubic Taylor coefficient adds
+\((3/2)a^2\beta^3\lambda d\) to the third raw moment. The first two
+moments agree, so the third \textbf{central} moments of final
+object-plane position differ by
+
+\[
+ \mu_3(a_*)-\mu_3(a_*/2)=\frac98\,\lambda d\,(T/m)^3 a_*^2 .
+\]
+
+The sign reverses with \(d\). An independent additive camera error with
+finite third moment contributes equally to both predictions. At fixed
+\(T\), reversing \(d\) also cancels additive momentum noise whose
+distribution is independent of the preparation and displacement. Noise
+that changes with radius needs its own calibration. For a common
+independent flight-time exposure replace \(T^3\) by \(\mathbb E T^3\).
+The formula assumes an impulsive switch, finite moments and calibrated
+force over the occupied radii. A finite pulse duration, transverse
+preparation errors, and lost tails in a third moment require separate
+control. This is a proposed change of the applied force. Finer
+subdivision of the propagation has no effect on either prediction.
+
+\textbf{What the atom photographs establish.} Brown et al.~obtained an
+independent ruler by releasing an atom under gravity. Their \(16\,\mu\)m
+camera pixels and measured \(64(1)\) magnification give \(0.25\,\mu\)m
+per pixel in the object plane. Figure 2(e) averages 48,309 images at one
+hold and \(0.5\) ms flight, with a \(10\,\mu\)s exposure. At one hold an
+arbitrary distribution of one projected coordinate always has a positive
+joint extension, for instance by assigning the orthogonal coordinate
+zero. Figure 3(d) covers 64 quadratures of a separately prepared,
+slightly squeezed atom. Its displayed profiles have been deconvolved.
+The quoted \(-0.060(6)\) is a Wigner minimum from a density matrix fit.
+The experiment measures a component of an anharmonic tweezer. Using the
+harmonic bound requires a force-error estimate over the admitted motion.
+The calibrations for the bounded raw average also include the actual
+phase weights, the non-Gaussian camera response, and how fluorescence
+and losses weight accepted launches. The paper makes the data available
+on request. \href{../docs/BrownEtAl_AtomTimeOfFlight_2023.md}{Imaging
+and calibration passages},
+\href{https://arxiv.org/pdf/2203.03053v2}{Brown et al., Figs. 2--3 and
+supplement II, IV} (passages) and
+\href{https://par.nsf.gov/servlets/purl/10431090\#page=5}{published data
+statement} (passage).
+
 \subsection{Three angle readings on a central
 orbit}\label{three-angle-readings-on-a-central-orbit}
 
@@ -1654,9 +1865,12 @@ isolating the force path from other entangling interactions. On a
 central orbit the outstanding observation is a violation of the
 three-angle disk with radial motion and detector losses bounded. For the
 harmonic ion the observed contrast margin instead sets the precision
-needed for an independent mechanical check of its probe. Four
-central-force releases now give a test using mechanical energy variances
-and third moments. The hydrogen fragment counts constrain selective
-capture, while the four unconditioned release measurements needed for
-the action bound remain open.
+needed for an independent mechanical check of its probe. For the atom
+photographs a negative bounded position average would exclude small
+actions. A calibrated quartic pulse could distinguish two actions
+compatible with the entire specified passive profile. Four central-force
+releases now give a test using mechanical energy variances and third
+moments. The hydrogen fragment counts constrain selective capture, while
+the four unconditioned release measurements needed for the action bound
+remain open.
 \end{document}
