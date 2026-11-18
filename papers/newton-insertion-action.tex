@@ -36,7 +36,10 @@ same forced-particle propagator at the first reading. A bound on how
 fast the force changes restores uniform recovery with sufficient
 differential position accuracy. A separate test using three position
 probabilities gives a conditional lower bound on the trial action, with
-an explicit allowance for a recoiling source.
+an explicit allowance for a recoiling source. For two trapped ions there
+is already a measured spin signal. Its attribution to a force
+transmitted through the ions' motion admits a quantitative test using
+the optical wavelength and the trap clock.
 
 This treatment integrates the constant-force derivation and its
 receding-centre correction with the controlled reunion. Written
@@ -134,13 +137,46 @@ In Book I, Lemma X, Newton changes \emph{vi regulari} in the London 1687
 edition to \emph{Vi finita} in the Cambridge 1713 edition, specifying a
 force that is constant, continually increasing or continually
 decreasing. In the new Corollary 4 he infers force from initial
-displacement divided by time squared, as a proportion. The following
-measurement is a modern realization for a body of independently
-calibrated inertial mass \(m\).
-\href{https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00077\#par27}{1687,
-Lemma X} and
-\href{https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082\#par28}{1713,
-Lemma X and Corollaries 3--5} (diplomatic transcriptions, passages).
+displacement divided by time squared, as a proportion. Both proofs still
+represent velocities as ordinates, identify displacement with the area
+and invoke Lemma IX. The 1687 proof of IX already constructs a similar
+figure. The 1713 proof explicitly holds the length \(Ae\) fixed
+(\emph{manente longitudine Ae}) while the original points approach
+\(A\). After X, the new Corollary 5 inverts the same proportion for time
+squared, and the ensuing Scholium explains what proportionality between
+quantities of different kinds means. The fixed segment belongs to the
+geometric construction. Its scale on a diagram supplies no physical
+resolution for a moving body.
+\href{https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00077\#par25}{1687,
+Lemmas IX--X} and
+\href{https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082\#par26}{1713,
+Lemmas IX--X, corollaries and Scholium} (diplomatic transcriptions,
+passages).
+
+Newton explains his decision to defer publication in the preface to the
+1687 edition. Halley urged him to communicate his orbital proof. Newton
+says he postponed publication to investigate more subjects together,
+explicitly including the measurement of gravity and other forces.
+Earlier in that preface he treats accurate construction of a line or
+circle as something geometry asks of mechanics. He attributes ordinary
+errors to the practitioner. These passages connect force measurement to
+the delay and physical construction to the proof method.
+\href{https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00074}{Newton,
+1687 author's preface} (diplomatic transcription, passages on practical
+mechanics and publication).
+
+Newton's retrospective notes on his correspondence with Cotes place the
+printing of the sheets through page 224 before 15 April 1710, Old Style.
+Lemma X is on pp.~29--30 of those sheets. The same draft describes a
+later objection by N. Bernoulli to a different problem in Book II.
+Newton thus dates the printing of the early sheets. A causal link
+between two friends' questions and this particular revision still
+requires a document identifying the argument.
+\href{https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00283}{Newton,
+CUL MS Add. 9597/2/18/79--80, fol.~79r} (diplomatic transcription,
+passage) and
+\href{newton-NATP00385-audit.md\#publication-and-controversy}{publication
+evidence in Newton's drafts} (passage).
 
 \textbf{What the marks have to resolve.} Read positions \(y\) against an
 inertial ruler at the calibrated times \(0,\tau/2,\tau\). Let
@@ -164,12 +200,18 @@ Here \(L\) has units force/time and \(\rho_\tau\) is a length.
 Calibration of the gate times or their contribution to \(\rho_\tau\) is
 part of the protocol. Uniform recovery follows if
 \(m\rho_\tau/\tau^2\to0\). For a specified force accuracy it suffices to
-keep the right side below that accuracy. The equations of classical
-mechanics allow all these conditions. For linear three-meter
-measurements of a free mass under a prescribed force, the same
-difference removes the initial test-body variables. Measuring a suitable
-combination of the middle pointer's position and momentum also cancels
-its recoil from the output, at a cost in meter preparation. This
+keep the right side below that accuracy. The mass \(m\) is calibrated by
+inertia. To see the distinction from Lemma IX's fixed comparison length,
+fix a clock interval \(T>0\) and magnify the recorded difference by
+\((T/\tau)^2\). For constant \(f\), its signal is now \(fT^2/(4m)\) and
+its input error bound is \((T/\tau)^2\rho_\tau\). Magnifying the diagram
+supplies no improvement in force accuracy. A transducer acting before
+the position error enters would be an additional physical operation.
+Classical mechanics allows arbitrarily accurate marks. For linear
+three-meter measurements of a free mass under a prescribed force, the
+same difference removes the initial test-body variables. Measuring a
+suitable combination of the middle pointer's position and momentum also
+cancels its recoil from the output, at a cost in meter preparation. This
 prevents inferring an irreducible record error from the test mass's
 initial spread alone.
 \href{https://arxiv.org/pdf/gr-qc/0109003\#page=7}{Braginsky et al., §II
@@ -362,6 +404,206 @@ quadratures by a quantum maximum-likelihood fit. Their reported Wigner
 negativity does not supply these three counts. A verified violation
 would constrain the calibrated motional models above. Extending that
 constraint to all preparations requires a further physical argument.
+
+\subsection{A force transmitted between two
+ions}\label{a-force-transmitted-between-two-ions}
+
+In a modern test of the force measurement, give ion 2 a small transverse
+impulse \(J\) and measure ion 1's displacement at time \(t\). For two
+equal inertial masses \(m\) in a harmonic trap the impulse response is
+
+\[
+\chi_{12}(t)=\frac{\delta x_1(t)}{J}
+=\frac{1}{2m}\left(\frac{\sin\omega_C t}{\omega_C}
+                    -\frac{\sin\omega_R t}{\omega_R}\right).
+\]
+
+Here \(C,R\) denote the in-phase and relative modes. The displacements
+of the two modes initially cancel at ion 1. The first surviving term is
+\(-(\omega_C^2-\omega_R^2)t^3/(12m)\). The force gradient between the
+ions is measurable through this delayed response. Newton's Lemma X
+concerns displacement of the body on which the force acts directly. This
+extension specifies where a second body can register the force. The
+impulse can be calibrated as \(m\) times an observed change in velocity.
+Alternatively, the two periods fix \(m\chi_{12}\).
+\href{rotation-composition-universality.md\#reciprocal-mechanical-calibration}{Reciprocal
+mechanical calibration} (passage, mass normalization).
+
+\textbf{An observed spin readout.} Wong-Campos et al.~prepared both ion
+spins by optical pumping and a microwave rotation, applied ten optical
+kicks, and used microwave analysis and separate fluorescence detectors.
+They reported Bell fidelity \(F_{\rm obs}=0.76(1)\) and parity contrast
+\(0.69(1)\). The fidelity is half the sum of the even-spin population
+and the contrast. Separable spins have Bell fidelity at most \(1/2\) for
+trusted local spin analysis. The reported uncertainties are statistical.
+\href{https://link.aps.org/accepted/10.1103/PhysRevLett.119.230501}{Wong-Campos
+et al., Figs. 1--2 and Eqs. (1)--(7)} and
+\href{https://quantum.prof/publications/2007/measuringGates.pdf}{White
+et al., Appendix B} (passages).
+
+\textbf{What each optical kick fixes.} Let \(\kappa\) be the difference
+of the two beam wave vectors projected on the motional axis. It is
+\(4\pi/\lambda\) for collinear counterpropagating beams of equal
+wavelength. A coherent spin flip at position \(x\) carries the measured
+optical phase \(\pm\kappa x\) up to a position-independent phase. This
+position-local pulse law is a physical assumption that can be tested by
+scanning spin phase against a ruler. The corresponding mechanical
+impulse is an output of the model. The calculation uses neither a photon
+momentum nor an oscillator ground-state width as a calibration.
+\href{groupoid-quantum-newton-states.md\#preparation-and-readout}{Clocked
+grating, preparation and readout} (passage).
+
+Prepare separable spins independently of the joint motional state. The
+two modes act on distinct factors and may be correlated in that state.
+In the interaction picture require the calibrated harmonic response for
+positions as observables,
+
+\[
+Q_\mu(t)=Q_\mu\cos(\omega_\mu t)
+        +\frac{P_\mu}{m\omega_\mu}\sin(\omega_\mu t),
+\qquad
+x_{1,2}(t)=\frac{Q_C(t)\pm Q_R(t)}{\sqrt2}.
+\]
+
+A centroid check on a single state is weaker than this dynamical
+premise. Remove the known local spin flips and spatially constant
+phases. For a spin branch \(z_1,z_2=\pm1\), kick \(n\) at \(t_n\) then
+acts by \(e^{iB_n}\) with \(B_n=s_n\kappa[z_1x_1(t_n)+z_2x_2(t_n)]\).
+The signs \(s_n=\pm1\) include the effect of all preceding spin flips.
+Allow a commutative motional algebra as well as regular operator
+realizations. Write \(K_\mu=\|[Q_\mu,P_\mu]\|\). For the norm estimate
+take the commutators bounded, and the real linear combinations and
+partial sums self-adjoint on closure from a common invariant core on
+which their unitary groups permit Duhamel differentiation. No scalar
+commutator is required.
+
+Replace the ordered product on each branch by \(e^{i\sum_n B_n}\). With
+\(L_\mu=\kappa\sum_n s_n Q_\mu(t_n)/\sqrt2\), the replacement applies
+local spin rotations with angles given by the two commuting observables
+\(L_C+L_R\) and \(L_C-L_R\). Tracing motion averages product rotations
+over their joint spectral measure. Thus the replacement leaves the spins
+separable for any admitted motional preparation, including a trajectory
+that fails to return to its initial point.
+
+On each branch the replacement has norm error at most
+\(\tfrac12\sum_{j<n}\|[B_n,B_j]\|\). This uses the unitary Lie product
+bound for each partial sum.
+\href{https://arxiv.org/pdf/2401.06635\#page=5}{Iserles and
+Kropielnicka, Theorem 2.1 and §3.1} (passage). Equal spin signs select
+\(C\), opposite signs select \(R\). In the selected mode
+\(B_n=\pm\sqrt2\,s_n\kappa Q_\mu(t_n)\), and
+\([Q_\mu(t_j),Q_\mu(t_n)]=[Q_\mu,P_\mu]\sin(\omega_\mu d_{nj})/(m\omega_\mu)\)
+with \(d_{nj}=t_n-t_j>0\). The norm error bounds the change in a Bell
+probability even after tracing the motion. Define
+
+\[
+D_\mu=\sum_{j<n}\frac{|\sin(\omega_\mu d_{nj})|}{\omega_\mu},
+\qquad
+B_{\rm ion}=\frac{\kappa^2}{m}\max_{\mu=C,R} K_\mu D_\mu .
+\]
+
+Let \(F_{\rm low}\) be a statistical lower limit, and \(e\) an
+independently justified upper bound on the upward shift of the Bell
+probability from preparation, readout and dynamics outside this model.
+Put \(\Delta=F_{\rm low}-1/2-e\). For a prescribed optical reference,
+\(\Delta\le B_{\rm ion}\). In particular, for \(N\ge2\) kicks,
+
+\[
+\boxed{\quad \Delta>0\quad\Longrightarrow\quad
+\frac{\max_\mu K_\mu}{m}\ \ge\
+\frac{\omega_{\min}\Delta}{\kappa^2\binom{N}{2}}>0,\qquad
+\omega_{\min}=\min(\omega_C,\omega_R).\quad}
+\]
+
+This bounds the norm of a mechanical commutator in units of action,
+uniformly over initial motional states. For regular canonical modes with
+common trial value \([Q_\mu,P_\mu]=iaI\) it bounds \(|a|\). The signed
+phase difference between equal- and opposite-spin branches at motional
+reunion is then \(\Phi=2a\kappa^2\sum_{j<n}s_js_n\chi_{12}(d_{nj})\), by
+the cited gate formula, Eq. (3). Write \(\Lambda=\Phi/a\). If
+\(\Lambda\ne0\), the two positive values \(a\) and \(a+2\pi/|\Lambda|\)
+give identical spin statistics for this one closed schedule and the same
+mechanical impulse response. Nevertheless \(\Phi\to0\) as \(a\to0\) at
+fixed wavelength. The controlled reunion below fixes a mechanical force
+and gives an inverse-action phase. At physically shortened delays the
+cubic impulse response suppresses the cross phase. Arbitrary
+mathematical cuts between fixed kicks preserve the propagator. Splitting
+a kick into pieces at its own time with the same sign and total gradient
+also preserves the estimate with the actual piece gradients in its pair
+sum.
+
+\textbf{Ruler, clock and source.} In the reported gate \(\lambda=355\)
+nm, \(\omega_{C,R}/(2\pi)=1.267,1.170\) MHz, and the clock rate was
+\(81.42\) MHz. Alternating delays of 175 and 157 clock periods gave a
+gate of \(18.5\) microseconds. Each effective kick used a shaped train
+of about \(2.3\) ns. Treating it as instantaneous requires a pulse-error
+allowance. The coarse coefficient
+\(\omega_{\min}/(\kappa^2\binom{10}{2})\) is about
+\(1.3\times10^{-10}\ {\rm m}^2/{\rm s}\). This multiplies the certified
+\(\Delta\). The gate times, mode periods and projected wavelength are
+the dimensional inputs to the specific-action bound. An absolute action
+uses an independently calibrated mass \(m\). If \(\chi_{12}\) is
+measured directly, the additional ruler displacement and impulse enter
+through their ratio. For \(x=sX,\ t=rT\), the pulse gradient becomes
+\(s\kappa\), the frequencies \(r\omega_\mu\), the times \(t_n/r\) and
+the specific commutator norm \((r/s^2)K_\mu/m\). Spin preparation angles
+and the observed probabilities are dimensionless. The whole inequality
+is covariant and the fixed laboratory settings remove this dilation.
+
+A physical reference may recoil. For example, put the pulse phase at
+\(\kappa(x_i-Y)\) with a common free reference \(Y(t)=Y+tP_s/M\) of
+independent mass \(M\). Let its algebra commute with both ion modes,
+allow any joint motional state, and write \(K_s=\|[Y,P_s]\|\) under the
+same regularity hypotheses. The summed reference generator again
+produces shared local rotations. The ordered factors add at most
+\(2\kappa^2(K_s/M)\sum_{j<n}d_{nj}\) to the norm bound, because the
+reference coefficient is \(-s_n\kappa(z_1+z_2)\). Consequently
+
+\[
+\Delta\le B_{\rm ion}+2\kappa^2(K_s/M)\sum_{j<n}d_{nj}.
+\]
+
+A positive margin forces a positive commutator somewhere in this closed
+mechanical model. Attributing it to the ions alone requires an upper
+bound on the reference contribution. Other optical modes, a direct spin
+interaction or memory in the drive require separate control. Classical
+shared records and local operations cannot entangle initially separable
+spins, even with feedback. The classical-mediation theorem requires that
+all communication between the probes use that channel.
+\href{https://quantum-journal.org/papers/q-2022-08-17-779/}{Galley,
+Giacomini and Selby, Theorem 1} (theorem passage).
+
+\textbf{A direct-spin counterexample and a discriminating control.} The
+measured excess is \(0.26\) at the central value. The paper studies gate
+errors but does not report an independent bound on spin entanglement
+through all paths outside the two modeled modes. The distinction can be
+tested explicitly. Keep the oscillators classical and let a direct
+\(e^{i\pi Z_1 Z_2/4}\) on two equatorial spins prepare a Bell state up
+to local rotations. Here \(Z_i\) is the spin Pauli matrix. Use the even
+Bell state with probability \(0.69\), an incoherent even pair with
+probability \(0.14\), and an incoherent odd pair with probability
+\(0.17\). The even population is \(0.83\), the parity contrast \(0.69\)
+and the Bell fidelity \(0.76\). This reproduces the two central readouts
+with commuting ion motion once a direct spin gate is admitted.
+
+One further control cancels an arbitrary common diagonal spin gate in
+the prescribed-reference model. Prepare spin 1 on its equator and spin 2
+in a fixed \(Z_2\) eigenstate. Reverse the optical gradient on ion 2
+alone between runs while keeping the schedule, spin flips, spin 1 pulse
+and its Ramsey analyzer fixed. Denote the probabilities for one output
+of that analyzer by \(p_\pm\). In the summed-generator comparison the
+angle on spin 1 is \(L_C+L_R\) for both settings. The sign change on
+spin 2 drops out after tracing motion, even if the path does not close.
+A common diagonal spin gate supplies the same local phase in both runs.
+Therefore \(|p_+-p_-|\le 2B_{\rm ion}+e_{\rm diff}\), where
+\(e_{\rm diff}\) covers the setting-dependent error in the difference,
+including changes in the source. For a closed canonical gate the
+nonlocal phases reverse sign. The two Ramsey quadratures then give a
+separation \(2|\sin\Phi|\) between the ideal equatorial Bloch vectors,
+independent of the common diagonal phase. The published common-beam
+schedule scan does not implement this local reversal. A second
+interaction that also reverses with the gradient still requires an
+independent bound.
 
 \subsection{Matched endpoints, arbitrary partitions and action
 normalization}\label{matched-endpoints-arbitrary-partitions-and-action-normalization}
@@ -574,5 +816,7 @@ exclusion of zero action remains open. For Lemma X, a bound on the force
 gradient and relative speed of a reciprocal source gives a testable
 \(L\). The three-time experiment instead tests a common distribution of
 trajectories directly. Independent evidence for the calibrated
-probability excess remains open.
+probability excess remains open. In the two-ion experiment the spin
+excess is observed. Its attribution to mechanical action depends on
+isolating the force path from other entangling interactions.
 \end{document}

@@ -8,9 +8,11 @@ phrases; git preserves retired notes and process records.
 The Newton priority is the [1713 Lemma X force measurement](../notes/newton-insertion-action.md#lemma-x-and-the-measurement-of-initial-force).
 Which physical premise survives refinement and excludes zero action before
 assuming a quantum phase law? The [three-time position test](../notes/newton-insertion-action.md#a-three-time-test-with-a-calibrated-position-resolution)
-requires an independently observed excess above the force and detector
-errors. Its relation to the [clocked grating's action per unit mass](../notes/groupoid-quantum-newton-states.md#9-action-calibration-with-a-clocked-grating)
-and to a universal coefficient is open.
+requires an observed excess. The [two-ion force experiment](../notes/newton-insertion-action.md#a-force-transmitted-between-two-ions)
+has a measured spin excess. Can independent controls attribute enough of it
+to the mechanical modes after reference recoil and direct spin coupling?
+The [clocked grating](../notes/groupoid-quantum-newton-states.md#9-action-calibration-with-a-clocked-grating)
+calibrates action per unit mass within its stated dynamics.
 
 ## Goals and current proof boundaries
 
