@@ -24,18 +24,22 @@ circle. A nonnegative spherical mass instead gives unique nonradial
 motion under joint source and time refinement.
 [Polygon limits and gravitational bound](../notes/balaban-ode-lesson.md#tangent-orbits-under-the-two-impulse-orders).
 
-For one force the canonical Gaussian and its classical ensemble give
-the same [outgoing radial law at every relative refinement rate](../notes/balaban-ode-lesson.md#branch-probabilities-for-shrinking-gaussian-preparations).
-For three forces sharing the circular orbit, one common classical
-preparation with the stated initial spread scores at most $2/3$.
-A specified squeezed quantum state scores about $0.687$. Retaining
-only the limiting launch point lets classical branches match all
-three probabilities. Giving every preparation the same radial velocity
-spread closes that loophole and turns an excess into a bound relative
-to the preparation area. Does Newton's mechanics independently require
-the excess under this common change of velocity?
-[Three-force construction](../notes/cusp-quantum-preparation-selection.md#three-central-forces-on-the-same-moving-circle)
-and [action bound](../notes/cusp-quantum-preparation-selection.md#a-quantitative-bound-with-a-common-radial-velocity-spread).
+In planar inverse-square gravity, fix energy and angular momentum.
+A stationary Newtonian ellipse and infinitely many trial actions tending
+to zero have exactly the same mean inward force. A specified bounded
+radius reading selects $a=J/3$ at sharp inputs and excludes $a\le J/5$
+at the stated finite tolerances, where $J$ is angular momentum. The mean energy
+and the corresponding mean force can enforce zero energy spread.
+The classical ellipse satisfies both. What principle
+of admissible central-force motion would require a different radial law?
+[Stationary Kepler comparison](../notes/self-sufficiency-contrast.md#stationary-kepler-preparations).
+
+On a near-circular Kepler orbit three timed radius readings also bound
+every concentrated classical preparation. A specified coherent profile
+exceeds the bound for this one source. The earlier three-force result
+bounds action relative to a shrinking preparation.
+[One Kepler source](../notes/self-sufficiency-contrast.md#three-radial-readings-on-a-near-circular-kepler-orbit)
+and [three-force action bound](../notes/cusp-quantum-preparation-selection.md#a-quantitative-bound-with-a-common-radial-velocity-spread).
 
 A vanishing action along a particular orbit or time cell differs from a
 vanishing physical action parameter. A quantum lift exists for every

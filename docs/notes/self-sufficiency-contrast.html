@@ -80,7 +80,17 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </nav></div></header>
 <main class="wrap">
 <h1>Coulomb completion and its classical limit: domains, collisions and
-preparation</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/self-sufficiency-contrast.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/self-sufficiency-contrast.pdf">PDF</a></p><p>For <span class="math inline">\(V=-k/r\)</span> in three dimensions,
+preparation</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/self-sufficiency-contrast.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/self-sufficiency-contrast.pdf">PDF</a></p><p>Newton’s inverse-square force gives two different answers to the
+action question for the same stationary planar preparation. Fix the
+mass, source, energy and angular momentum. The mean inward force agrees
+exactly for the Newtonian ellipse and infinitely many trial actions
+tending to zero. One bounded radial observable distinguishes two of
+those actions and excludes all sufficiently small ones for its specified
+value. The classical ellipse satisfies the preparation even under
+arbitrarily fine time subdivision. <a
+href="#stationary-kepler-preparations">Stationary Kepler
+preparations</a>.</p>
+<p>For <span class="math inline">\(V=-k/r\)</span> in three dimensions,
 the inward radial classical flow reaches a collision in finite time,
 whereas the nonrelativistic Coulomb Hamiltonian <span
 class="math inline">\(-h^2\Delta/(2m)-k/r\)</span> on the specified
@@ -115,8 +125,8 @@ class="math inline">\(h_P=2\pi\hbar\)</span>), <span
 class="math inline">\(m&gt;0\)</span> the mass, <span
 class="math inline">\(k&gt;0\)</span> the force constant and <span
 class="math inline">\(r=|x|\)</span>. Written model checks are internal;
-cited source theorems retain their reading labels. The planar case is a
-separate remark.</p>
+cited source theorems retain their reading labels. Sections 5c and 5d
+use the regular planar form of §3.</p>
 <h2 id="statement">1. Statement</h2>
 <p><strong>Theorem 1 (self-sufficiency contrast for Kepler’s
 force).</strong></p>
@@ -998,6 +1008,410 @@ selection principle nor the measured value of <span
 class="math inline">\(h\)</span>. In particular there is no single
 unqualified set <span class="math inline">\([h_{\min},\infty)\)</span>
 shared by these models.</p>
+<h2 id="stationary-kepler-preparations">Stationary Kepler
+preparations</h2>
+<p><strong>5c. 6.1 Sol Max, 2026-11-19.</strong> In 1713 Lemma X,
+Corollary 4 identifies the initial force through displacement in a short
+time. Proposition VI applies it along an orbit. Proposition XXXI asks
+for the position on a given ellipse at an assigned time. The following
+comparison uses a modern stationary ensemble. Newton’s propositions
+specify the motion of each member. <a
+href="newton-insertion-action.html#lemma-x-and-the-measurement-of-initial-force">Lemma
+X and its revision</a> and <a
+href="https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082#par286">Proposition
+XXXI, second edition</a> (passages).</p>
+<p>Fix a particle mass <span class="math inline">\(m\)</span>, a
+gravitational parameter <span class="math inline">\(\mu=GM&gt;0\)</span>
+and a positive signed angular momentum <span
+class="math inline">\(J\)</span> in a specified plane. The potential is
+<span class="math inline">\(-m\mu/r\)</span>. Set the length <span
+class="math inline">\(R\)</span>, inverse time <span
+class="math inline">\(\omega\)</span>, semimajor axis <span
+class="math inline">\(A\)</span>, energy <span
+class="math inline">\(E\)</span> and total Kepler action <span
+class="math inline">\(I\)</span> by</p>
+<p><span class="math display">\[
+R=\frac{J^2}{m^2\mu},\qquad \omega=\sqrt{\frac{\mu}{R^3}},\qquad
+A=\frac94R,\qquad E=-\frac{m\mu}{2A},\qquad I=m\sqrt{\mu A}=\frac32J .
+\]</span></p>
+<p>Require stationarity and the sharp constants <span
+class="math inline">\(E,J\)</span>. A classical invariant probability is
+uniform in time on each of its ellipses. Their orientations can have any
+distribution because the readout is radial. The eccentricity satisfies
+<span class="math inline">\(1-e^2=R/A\)</span>, so the periapsis <span
+class="math inline">\(A(1-e)&gt;0\)</span> makes Newton’s short-time
+force limit regular along every orbit in this preparation. In eccentric
+anomaly <span class="math inline">\(u\)</span> the radius is <span
+class="math inline">\(A(1-e\cos u)\)</span> and uniform time has measure
+<span class="math inline">\((1-e\cos u)\,du/(2\pi)\)</span>. These are
+the standard elliptic Kepler relations. <a
+href="https://spsweb.fltops.jpl.nasa.gov/portaldataops/mpg/MPG_Docs/MPG%20Book/Release/Chapter7-OrbitalMechanics.pdf">JPL,
+chapter 7, equations (7-48)–(7-56)</a> (passage). They give</p>
+<p><span class="math display">\[
+\overline{r^{-2}}=\frac{1}{A^{3/2}\sqrt R},\qquad
+r_{\mathrm{cl}}:=\overline r=\frac{3A-R}{2}=\frac{23R}{8}.
+\]</span></p>
+<p>Here and below the force observable is its <em>inward magnitude</em>
+<span class="math inline">\(m\mu/r^2\)</span>. On the classical orbit it
+is twice the mass times the leading inward displacement from the
+inertial continuation, divided by the squared time step. On a quantum
+state we use the expectation of the same position function as a positive
+quadratic form.</p>
+<p>Write <span class="math inline">\(a&gt;0\)</span> for the trial
+reduced action (<span class="math inline">\(h\)</span> above, <span
+class="math inline">\(h_P=2\pi a\)</span>). Use the single-valued,
+spinless planar Schrödinger representation and the Friedrichs
+Hamiltonian. Confinement of configuration space to the plane is a model
+assumption. The regular bound states have <span
+class="math inline">\(J=ka\)</span>, <span
+class="math inline">\(I=(n+k+\tfrac12)a\)</span> for <span
+class="math inline">\(k\ge1\)</span> and radial index <span
+class="math inline">\(n\ge0\)</span>. At fixed <span
+class="math inline">\(k\)</span> each radial level is simple. The sharp
+inputs therefore select one radial probability for each admissible
+action. The complete list at our fixed <span
+class="math inline">\(I/J\)</span> is</p>
+<p><span class="math display">\[
+k=2n+1,\qquad a_n=\frac{J}{2n+1},\qquad n=0,1,\ldots .
+\]</span></p>
+<p>This uses the exact <a
+href="https://arxiv.org/pdf/math-ph/0205031">planar spectrum and radial
+eigenfunctions, Appendix A</a> (passage, Parfitt and Portnoi), extending
+the <a href="rivero-1998-conjecture-central-forces.html">fixed-torus
+phase comparison</a> to the position law. In the standard radial moment
+formulas put <span class="math inline">\(\eta=I/a\)</span>, <span
+class="math inline">\(L=k-1/2\)</span> and <span
+class="math inline">\(Z=m^2\mu/a^2\)</span> in physical length units.
+They give</p>
+<p><span class="math display">\[
+\begin{aligned}
+\langle r^{-2}\rangle_a&amp;=\frac{1}{A^{3/2}\sqrt R},\\
+\langle r\rangle_a&amp;=r_{\mathrm{cl}}+\frac{a^2}{8m^2\mu},\\
+\langle r^2\rangle_a&amp;=\frac A2
+\left(5A-3R+\frac{7a^2}{4m^2\mu}\right)\le\frac{45}{4}R^2 .
+\end{aligned}
+\]</span></p>
+<p>The last bound uses <span class="math inline">\(a\le J\)</span>. The
+equality of mean force holds on the entire sequence, down to the
+classical limiting value. The shift in the mean radius uses planar
+angular momentum. In three dimensions fixing <span
+class="math inline">\(L^2=a^2\ell(\ell+1)\)</span> removes this
+particular shift. <a href="https://arxiv.org/pdf/2011.12242">Dehesa and
+Puertas-Centeno, equations (17), (26)</a> (passage, with <span
+class="math inline">\(D=2\)</span>, <span
+class="math inline">\(k&gt;0\)</span> here).</p>
+<p><strong>One bounded readout.</strong> Prescribe a radial bin width
+<span class="math inline">\(\rho=R/1024\)</span>, a maximum reading
+<span class="math inline">\(B=1024R\)</span>, and a uniform time of
+reading in <span class="math inline">\([1/\omega,2/\omega]\)</span>. Use
+these same length and time resolutions for every <span
+class="math inline">\(a\)</span>. Stationarity permits any independently
+fixed clock window of positive duration. The observable and its mean
+reading are</p>
+<p><span class="math display">\[
+F(r)=\rho\left\lfloor\frac{\min(r,B)}{\rho}\right\rfloor,\qquad
+M=\langle F(r)\rangle .
+\]</span></p>
+<p>For example, the exact reading specified at <span
+class="math inline">\(a=J/3\)</span> is <span
+class="math inline">\(\int_0^\infty F(Rs)p_1(s)\,ds\)</span>. With
+respect to <span class="math inline">\(ds\)</span> for <span
+class="math inline">\(s=r/R\)</span>, the cited eigenfunctions give the
+two densities</p>
+<p><span class="math display">\[
+p_0(s)=\frac{(4/3)^4}{6}\,s^3 e^{-4s/3},\qquad
+p_1(s)=\frac{4^8}{9\cdot7!}\,s^7(7-4s)^2e^{-4s}.
+\]</span></p>
+<p>Since <span class="math inline">\((r-B)_+\le r^2/(4B)\)</span>, the
+loss from rounding and clipping obeys <span
+class="math inline">\(0\le\langle r\rangle_a-M\le\rho+\langle
+r^2\rangle_a/(4B)
+\le61R/16384&lt;R/250\)</span>. The disjoint readings can consequently
+be specified by intervals, without resolving the individual radial
+nodes.</p>
+<table>
+<thead>
+<tr>
+<th>Preparation at the same <span
+class="math inline">\(E,J\)</span></th>
+<th>Mean reading <span class="math inline">\(M/R\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(a=J\)</span></td>
+<td>between <span class="math inline">\(3-1/250\)</span> and <span
+class="math inline">\(3\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(a=J/3\)</span></td>
+<td>between <span class="math inline">\(26/9-1/250\)</span> and <span
+class="math inline">\(26/9\)</span></td>
+</tr>
+<tr>
+<td>Every <span class="math inline">\(a=J/(2n+1)\)</span> with <span
+class="math inline">\(n\ge2\)</span></td>
+<td>at most <span class="math inline">\(23/8+1/200\)</span></td>
+</tr>
+<tr>
+<td>Stationary Newtonian ellipses</td>
+<td>at most <span class="math inline">\(23/8\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Thus a reading in the second interval identifies <span
+class="math inline">\(a=J/3\)</span> within these sharp preparations.
+The conic reproduces the exact mean force of that state. Its different
+mean radius is the additional datum that matters. The dimensional inputs
+are <span class="math inline">\(m,\mu,J\)</span>, the energy chosen
+above, and the fixed length and time windows. Here the reference action
+is <span class="math inline">\(S_0=J\)</span> and <span
+class="math inline">\(\epsilon=a/J\)</span>. At fixed <span
+class="math inline">\(m,\mu,J\)</span>, scaling <span
+class="math inline">\(a\)</span> changes the allowed indices and the
+second line of the moment formula. If instead <span
+class="math inline">\(m,J,E,a\)</span> are all multiplied by the same
+positive number with <span class="math inline">\(\mu\)</span> fixed,
+then <span class="math inline">\(H_a/a\)</span>, <span
+class="math inline">\(R,A,\omega\)</span> and the entire sequence of
+radial readout laws in corresponding states are unchanged. A radius and
+a clock alone therefore fix no mass normalization.</p>
+<p><strong>Finite preparation tolerances.</strong> Allow stationary
+states with joint energy and angular momentum supported in <span
+class="math inline">\(|E&#39;-E|\le\zeta |E|\)</span>, <span
+class="math inline">\(|J&#39;-J|\le\xi J\)</span>, with <span
+class="math inline">\(0\le\zeta,\xi&lt;1\)</span>. In each component
+<span class="math inline">\(A&#39;\le A/(1-\zeta)\)</span> and <span
+class="math inline">\(R&#39;\ge R(1-\xi)^2\)</span>. Different energy
+components add by stationarity. The radial observable commutes with
+angular momentum, so components of a degenerate energy with different
+angular indices also add. Applying the first radial moment in each
+component, and <span class="math inline">\(F(r)\le r\)</span>, gives</p>
+<p><span class="math display">\[
+a^2\ \ge\ 8m^2\mu
+\left[M-\frac12\left(\frac{3A}{1-\zeta}-R(1-\xi)^2\right)\right]_+ .
+\]</span></p>
+<p>For a classical stationary preparation the same upper bound on <span
+class="math inline">\(M\)</span> holds with <span
+class="math inline">\(a=0\)</span>. At <span
+class="math inline">\(\zeta=\xi=1/1024\)</span> the classical upper
+bound increases by less than <span
+class="math inline">\((27/(8\cdot1023)+1/1024)R\)</span>. Even the lower
+end of the <span class="math inline">\(J/3\)</span> interval then forces
+<span class="math inline">\(a&gt;J/5\)</span>. This bound applies to all
+trial actions admitting a state in the bands, including ones absent from
+the sharp list.</p>
+<p><strong>How much preparation information does the force
+give?</strong> With just the <em>mean</em> energy <span
+class="math inline">\(E\)</span> and sharp <span
+class="math inline">\(J\)</span>, there is a classical stationary
+ensemble giving exactly the <span class="math inline">\(J/3\)</span>
+binned mean. Compare a single-energy ensemble to an equal mixture on
+<span class="math inline">\(E(1-1/10)\)</span> and <span
+class="math inline">\(E(1+1/10)\)</span>. Both have mean energy <span
+class="math inline">\(E\)</span>. The second has mean radius <span
+class="math inline">\(r_{\mathrm{cl}}+3A/(2\cdot99)\)</span>. Its radii
+are below <span class="math inline">\(5R\)</span>, so rounding costs at
+most <span class="math inline">\(R/1024\)</span>. Its reading lies above
+<span class="math inline">\(26R/9\)</span> and the single-energy reading
+lies below <span class="math inline">\(26R/9-R/250\)</span>. A convex
+combination matches the specified <span class="math inline">\(M\)</span>
+exactly.</p>
+<p>The mean inverse-square force distinguishes this mixture. For any
+stationary bound ensemble at sharp <span
+class="math inline">\(J\)</span>, let <span
+class="math inline">\(x=|E&#39;|/|E|\)</span> and suppose <span
+class="math inline">\(\langle x\rangle=1\)</span>. In either model the
+force mean divided by the sharp-energy force mean is <span
+class="math inline">\(\langle x^{3/2}\rangle\)</span>. Indeed <span
+class="math inline">\(A&#39;=A/x\)</span> in the common inverse-square
+moment. Strict convexity makes equality possible only at <span
+class="math inline">\(x=1\)</span> almost surely. More quantitatively,
+<span class="math inline">\(0&lt;x\le A/R=9/4\)</span> and <span
+class="math inline">\((x^{3/2})&#39;&#39;\ge1/2\)</span> there, so <span
+class="math inline">\(\operatorname{Var}(x)\le4(\langle
+x^{3/2}\rangle-1)\)</span>. The two mean inputs, energy and force at
+fixed <span class="math inline">\(J\)</span>, can thus enforce the
+sharp-energy preparation in either theory. The Newtonian ellipse
+satisfies both and survives every time refinement. A requirement on its
+radial distribution is still missing.</p>
+<h2 id="three-radial-readings-on-a-near-circular-kepler-orbit">Three
+radial readings on a near-circular Kepler orbit</h2>
+<p><strong>5d. 6.1 Sol Max, 2026-11-19.</strong> One inverse-square
+source also permits a time-dependent comparison. Keep <span
+class="math inline">\(m,\mu,J,R,\omega\)</span> from §5c, and now use a
+preparation near the circle <span class="math inline">\(r=R\)</span>.
+The three times, in units <span class="math inline">\(\theta=\omega
+t\)</span>, are <span class="math inline">\(2\pi/3,4\pi/3,2\pi\)</span>.
+At each time average a single radial reading over the same distribution
+of clock offsets. Each term is a one-time marginal of the same initial
+law.</p>
+<p>For a classical ellipse of eccentricity <span
+class="math inline">\(0&lt;e&lt;1\)</span> and angular momentum <span
+class="math inline">\(J\)</span>, the semimajor axis is <span
+class="math inline">\(R/(1-e^2)\)</span>. The condition <span
+class="math inline">\(r&gt;R\)</span> is <span
+class="math inline">\(\cos u&lt;e\)</span> in eccentric anomaly. In mean
+anomaly <span class="math inline">\(u-e\sin u\)</span> this is an
+<strong>open arc</strong> of length <span
+class="math inline">\(W(e)\)</span>. The clock advances mean anomaly by
+<span class="math inline">\(v(e)\)</span> between successive readings,
+where</p>
+<p><span class="math display">\[
+W(e)=\pi+2\arcsin e+2e\sqrt{1-e^2},\qquad
+v(e)=\frac{2\pi}{3}(1-e^2)^{3/2}.
+\]</span></p>
+<p>The gaps between the three sampled phases on the circle are <span
+class="math inline">\(v,v,2\pi-2v\)</span>. The shortest closed arc
+containing all three has length <span class="math inline">\(2v\)</span>.
+Since <span class="math inline">\(W&#39;(e)=4\sqrt{1-e^2}\)</span> and
+<span class="math inline">\(v\)</span> decreases, there is exactly one
+<span class="math inline">\(e_c\in(0,1)\)</span> with <span
+class="math inline">\(W(e_c)=2v(e_c)\)</span>. For <span
+class="math inline">\(0&lt;e\le e_c\)</span> at most two of the three
+readings can have <span class="math inline">\(r&gt;R\)</span>, including
+at equality. Above <span class="math inline">\(e_c\)</span> some initial
+phase realizes all three. In particular <span
+class="math inline">\(e_c&gt;1/10\)</span>, since <span
+class="math inline">\(W(1/10)\le\pi+2/5&lt;2v(1/10)\)</span>. On the
+circular orbit all three strict inequalities fail. The same bound holds
+for any common clock shift, hence for the average of shifted triples.
+This uses the Kepler clock in §5c.</p>
+<p>Here is an explicit pair with finite time and radius resolutions. Use
+<span class="math inline">\(d=10^{-8}\)</span>, <span
+class="math inline">\(X=(r/R-1)/d\)</span>, <span
+class="math inline">\(\delta=10^{-4}\)</span> and the bounded reading
+<span class="math inline">\(f(X)=\max(0,\min(1,X/\delta))\)</span>. Its
+transition width in length is <span
+class="math inline">\(Rd\delta\)</span>. Take the clock offset uniform
+on <span class="math inline">\([-10^{-3},10^{-3}]\)</span> in <span
+class="math inline">\(\theta\)</span> units, a physical window <span
+class="math inline">\(2\cdot10^{-3}/\omega\)</span>. Let <span
+class="math inline">\(P\)</span> be the average of the three
+expectations of <span class="math inline">\(f\)</span>. Compare <span
+class="math inline">\(a=Jd^2\tau\)</span> for <span
+class="math inline">\(\tau=1,1/3\)</span>. Both have integer angular
+index <span class="math inline">\(J/a\)</span>. Prescribe the same
+<strong>real radial half-density</strong>, including its signs, in <span
+class="math inline">\(L^2(dX)\)</span>. It is proportional to <span
+class="math inline">\(\chi(dX)\phi(X)\)</span>, where</p>
+<p><span class="math display">\[
+\phi=\frac1{\sqrt2}
+\left(\frac4{\sqrt{21}}\,|0\rangle-|3\rangle
+                  +\sqrt{\frac5{21}}\,|6\rangle\right).
+\]</span></p>
+<p>Here <span class="math inline">\(|j\rangle\)</span> are the unit
+oscillator Hermite functions in <span class="math inline">\(X\)</span>.
+Take <span class="math inline">\(0\le\chi\le1\)</span>, equal to one on
+<span class="math inline">\(|y|\le1/32\)</span> and zero on <span
+class="math inline">\(|y|\ge1/16\)</span>. On each transition use <span
+class="math inline">\(1-10z^3+15z^4-6z^5\)</span> with <span
+class="math inline">\(z=32|y|-1\)</span>. Thus <span
+class="math inline">\(\|\chi&#39;\|_\infty\le64\)</span> and <span
+class="math inline">\(\|\chi&#39;&#39;\|_\infty\le15360\)</span>. The
+angular factor is <span
+class="math inline">\(e^{i(J/a)\vartheta}/\sqrt{2\pi}\)</span> in the
+polar angle <span class="math inline">\(\vartheta\)</span>. The two
+inputs agree in initial radial density, radial current (zero) and
+angular momentum. Their radial momentum variances depend on <span
+class="math inline">\(a\)</span>. The coherent profile and oscillator
+sign observable are borrowed. <a
+href="https://arxiv.org/pdf/2212.06017">Zaw and Scarani, equation (3)
+and figure 2</a> and <a href="https://arxiv.org/pdf/2204.10498">Zaw, Aw,
+Lasmar and Scarani, equation (D11)</a> (passages).</p>
+<p>The following bound controls the transfer from that oscillator to the
+actual Kepler flow. Subtract the circular energy <span
+class="math inline">\(E_c=-m\mu/(2R)\)</span> and use energy unit <span
+class="math inline">\(mR^2\omega^2d^2\)</span>. After absorbing the
+radial Jacobian the exact equation on <span
+class="math inline">\(X&gt;-1/d\)</span> is</p>
+<p><span class="math display">\[
+i\tau\partial_\theta u=H_\tau u,\qquad
+H_\tau=\frac{\Pi_\tau^2}{2}
+       +\frac{X^2}{2(1+dX)^2}-\frac{\tau^2d^2}{8(1+dX)^2},
+\qquad \Pi_\tau=-i\tau\partial_X .
+\]</span></p>
+<p>Let <span class="math inline">\(G_\tau(\theta)\)</span> be the
+whole-line oscillator evolution with potential <span
+class="math inline">\(X^2/2\)</span>, and put <span
+class="math inline">\(Q=X\)</span>, <span
+class="math inline">\(\Pi=-i\partial_X\)</span>. The Heisenberg position
+is <span class="math inline">\(Q\cos\theta+\tau\Pi\sin\theta\)</span>
+and the momentum is <span
+class="math inline">\(-Q\sin\theta+\tau\Pi\cos\theta\)</span>. Each pair
+of coefficients has Euclidean norm at most one. A rotated quadrature on
+number indices <span class="math inline">\(\le N\)</span> raises the
+largest index by at most one and has norm there at most <span
+class="math inline">\(\sqrt{2N+1}\)</span>, by <span
+class="math inline">\(Q^2+\Pi^2=2N_{\rm op}+1\)</span>. It follows that
+<span class="math inline">\(\|XG_\tau\phi\|,\|\Pi_\tau
+G_\tau\phi\|\le\sqrt{13}\)</span> and <span
+class="math inline">\(\|X^3G_\tau\phi\|\le\sqrt{13\cdot15\cdot17}&lt;58\)</span>.</p>
+<p>On the support of <span class="math inline">\(\chi(dX)\)</span> the
+potential differs from <span class="math inline">\(X^2/2\)</span> by at
+most <span class="math inline">\(2d|X|^3+\tau^2d^2/4\)</span>. Compare
+the exact solution with <span
+class="math inline">\(\chi(dX)G_\tau\phi\)</span> using Duhamel’s
+formula. The kinetic commutator costs at most <span
+class="math inline">\(64\tau d\sqrt{13}+7680\tau^2d^2\)</span> in the
+residual. Initial normalization and the final cutoff each cost at most
+<span class="math inline">\(32\sqrt{13}\,d\)</span> in norm by the bound
+on <span class="math inline">\(\|XG_\tau\phi\|\)</span>. Extending the
+half-line solution by zero, for <span
+class="math inline">\(0\le\theta\le7\)</span> this gives</p>
+<p><span class="math display">\[
+\|u(\theta)-G_\tau(\theta)\phi\|
+\le 64\sqrt{13}\,d+
+7\big(116d/\tau+64\sqrt{13}\,d+7681\tau d^2\big)&lt;5000d .
+\]</span></p>
+<p>For the sharp half-line oscillator observable the probability is
+<span class="math inline">\(1/2+C\cos(3\alpha)\)</span>, where <span
+class="math inline">\(C=\sqrt7/(8\sqrt\pi)\)</span> and <span
+class="math inline">\(\alpha=\arg(\cos\theta+i\tau\sin\theta)\)</span>.
+Indeed, parity leaves only the <span class="math inline">\(0,3\)</span>
+and <span class="math inline">\(3,6\)</span> cross terms, whose
+half-line matrix elements from (D11) above are <span
+class="math inline">\(-1/(2\sqrt{3\pi})\)</span> and <span
+class="math inline">\(-\sqrt5/(8\sqrt{3\pi})\)</span>. At the three
+central times its average is <span class="math inline">\(1/2+C\)</span>
+for <span class="math inline">\(\tau=1\)</span> and <span
+class="math inline">\(1/2+C/3\)</span> for <span
+class="math inline">\(\tau=1/3\)</span>. The clock costs at most <span
+class="math inline">\(9C\cdot10^{-3}\)</span> since <span
+class="math inline">\(|\alpha&#39;|\le3\)</span>. For the ramp, the
+rotated Hermite superposition has position density at most <span
+class="math inline">\(2\sqrt{13}\)</span> by the one-dimensional Sobolev
+bound. The dilation <span
+class="math inline">\(|\cos\theta+i\tau\sin\theta|\ge1/3\)</span>
+therefore costs at most <span
+class="math inline">\(6\sqrt{13}\,\delta\)</span> in probability. Adding
+the Kepler comparison error <span class="math inline">\(10^4d\)</span>,
+each actual <span class="math inline">\(P\)</span> is within <span
+class="math inline">\(7/1000\)</span> of its respective value. Thus the
+first action scores above <span
+class="math inline">\(2/3+1/100\)</span>, and the second below <span
+class="math inline">\(2/3\)</span>, at the same fixed resolutions.</p>
+<p>The classical comparison can use an independently stated energy
+allowance. Require <span class="math inline">\(\langle
+H-E_c\rangle\le20mR^2\omega^2d^2\)</span> and sharp <span
+class="math inline">\(J\)</span>. Both quantum preparations satisfy it.
+On their support <span
+class="math inline">\((1+dX)^{-2}\le(16/15)^2\)</span>, the unnormalized
+kinetic norm is <span class="math inline">\(\le\sqrt{13}+64d\)</span>,
+and <span
+class="math inline">\(\|\chi(dX)\phi\|\ge1-32\sqrt{13}\,d\)</span>.
+These bounds give <span class="math inline">\(\langle
+H_\tau\rangle&lt;20\)</span>. A classical initial law with the same
+radial density and zero radial velocity also qualifies. For every
+classical conic at this <span class="math inline">\(J\)</span>, <span
+class="math inline">\(e^2=2(H-E_c)/(mR^2\omega^2)\)</span>. At most
+<span class="math inline">\(4000d^2\)</span> of any admissible positive
+law can have <span class="math inline">\(e&gt;1/10\)</span>, including
+unbound trajectories. The pointwise arc bound gives <span
+class="math inline">\(P\le 2/3+4000d^2/3\)</span> for the full law. The
+specified coherent preparation supplies the excess. Classical
+stationarity or Newton’s short-time force prescription does not supply
+its relative signs.</p>
 <h2 id="what-the-theorem-establishes-and-what-it-does-not">6. What the
 theorem establishes and what it does not</h2>
 <p>Theorem 1 compares an incomplete classical point-force flow with a
@@ -1006,19 +1420,29 @@ fixed-interval Kepler localization and both first-moment limits under
 its stated regularization and coherent-preparation hypotheses.
 Proposition 2 assigns endpoints to explicit selection criteria; it does
 not derive those criteria from Newton’s axioms.</p>
-<p>Still open: the planar operator beyond the cited form construction;
-critical full Klein–Gordon dynamics under the no-log prescription;
-long-time or shrinking-regularization estimates; and the necessity claim
-that every completion of Newton’s mechanics requires positive <span
-class="math inline">\(h\)</span>. Classical regularizations remain
-possible added prescriptions, and Dirac self-adjoint extensions exist at
-every <span class="math inline">\(h&gt;0\)</span> if boundary data are
-allowed. Excluding those routes requires an independently justified
-premise. The quartic Newtonian initial-value problem is globally well
-posed; its contrast concerns the particular classical-first time-slicing
+<p>The planar calculations use the form realization of §3 and its
+regular bound states. Critical full Klein–Gordon dynamics under the
+no-log prescription, long-time or shrinking-regularization estimates,
+and necessity of a positive physical action remain open here. Classical
+regularizations remain possible added prescriptions, and Dirac
+self-adjoint extensions exist at every <span
+class="math inline">\(h&gt;0\)</span> if boundary data are allowed.
+Excluding those routes requires an independently justified premise. The
+quartic Newtonian initial-value problem is globally well posed; its
+contrast concerns the particular classical-first time-slicing
 construction. These limitations are part of the statement, not
 consequences to be inferred from a threshold formula.</p>
 <h2 id="consequence-for-state">7. Consequence for STATE</h2>
+<p>For the planar inverse-square source, Lemma X’s mean force at fixed
+<span class="math inline">\(E,J\)</span> agrees with every state on an
+exact sequence <span class="math inline">\(a\downarrow0\)</span>. At
+sharp inputs the bounded radial reading selects <span
+class="math inline">\(J/3\)</span>. At the stated finite tolerances it
+excludes every <span class="math inline">\(a\le J/5\)</span>. The
+classical ellipse satisfies the same conserved inputs and force law. The
+open question is which independent principle about admissible
+central-force motion requires a different radial law. The separate
+foundational note depends on that step.</p>
 <p>The fixed-<span class="math inline">\(T\)</span>, fixed-<span
 class="math inline">\(\delta\)</span> localization obligation (L) and
 the Kepler centroid obligation are closed by the written derivation in
@@ -1029,13 +1453,10 @@ selection <span class="math inline">\([k/c,\infty)\)</span>, and
 Klein–Gordon strict-energy construction <span
 class="math inline">\((2k/c,\infty)\)</span>; its radial principal
 Friedrichs endpoint is included, with full critical dynamics still open.
-Next: decide which selection premises can be required independently of
-the desired action gap, then address the exclusion of completions
-without <span class="math inline">\(h\)</span>. The October 1 referee
-acceptance applies to the original Theorem 1 as then printed. The
-October 2 localization, moment proof and replacement Proposition 2 are
-written, source-supported additions by Codex and have not received
-independent verification or referee acceptance.</p>
+The October 1 referee acceptance applies to the original Theorem 1 as
+then printed. The October 2 localization, moment proof and replacement
+Proposition 2 are written, source-supported additions by Codex and have
+not received independent verification or referee acceptance.</p>
 
 </main>
 <footer class="site"><div class="wrap">

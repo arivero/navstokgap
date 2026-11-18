@@ -56,3 +56,13 @@ and the interior and exterior of balls. These results determine the
 radial force of a given nonnegative spherical source. [1713, Propositions
 LXX–LXXIV](https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082#par469)
 (shell-theorem statements).
+
+## Position on an ellipse at an assigned time
+
+Book I, Proposition XXXI poses the problem of finding where a body on
+a given ellipse will be at an assigned time. This supplies the historical
+question behind the Kepler clock. The probability law used for a
+stationary ensemble is a modern construction. [Cambridge, 1713,
+Proposition XXXI, paragraph 286](https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082#par286)
+and [Motte–Chittenden, 1846, printed p. 156](Newton_Principia_Motte1846.html#i_156)
+(proposition statements).
