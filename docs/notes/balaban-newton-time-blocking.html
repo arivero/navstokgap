@@ -89,6 +89,14 @@ of incoming classical flux that reaches either core tends to zero as an
 exact power of its radius. <a
 href="#central-force-passage-under-point-insertion">Central-force
 passage</a>.</p>
+<p>For repulsive inverse-square scattering, three incident energies make
+a different test possible. A sum of measured angular yields must vanish
+for every common classical distribution of impact parameters, including
+a sharply concentrated beam. An observed excess over the calibration
+error gives a lower bound on a trial action in the spin-zero Coulomb
+exchange model. <a
+href="#a-three-energy-test-of-central-force-trajectories">Three-energy
+test</a>.</p>
 <p><strong>First calculation, 2026-10-27; written derivation,
 unrefereed.</strong> In one spatial coordinate and one time variable,
 the same discrete Green function controls three operations: constructing
@@ -885,6 +893,316 @@ Seiler</a> (abstract, lattice gauge theory). The committee’s 10 November
 and a positive physical mass gap remain open there. <a
 href="https://github.com/yang-mills-group/YM">Committee assessment and
 submission scope</a> (passage).</p>
+<h2 id="a-three-energy-test-of-central-force-trajectories">A
+three-energy test of central-force trajectories</h2>
+<p>Newton’s force measurement and an outgoing orbit direction give an
+action difference in mechanical units. Consider two equal masses in a
+nonrelativistic elastic collision. Write <span
+class="math inline">\(\mu\)</span> for their reduced mass, <span
+class="math inline">\(v\)</span> for their incident relative speed,
+<span class="math inline">\(E=\mu v^2/2\)</span>, and <span
+class="math inline">\(\kappa&gt;0\)</span> for the coefficient of the
+repulsive potential <span class="math inline">\(\kappa/r\)</span>
+(energy times length). With <span class="math inline">\(d=\kappa/(\mu
+v^2)\)</span> the Rutherford orbit gives the impact parameter <span
+class="math inline">\(b=d\cot(\theta/2)\)</span> for the labelled
+centre-of-mass deflection <span
+class="math inline">\(0&lt;\theta&lt;\pi\)</span>. The turning radius is
+<span class="math inline">\(d+\sqrt{d^2+b^2}\ge 2d\)</span>. Any change
+of force confined strictly inside <span
+class="math inline">\(2d\)</span> leaves every such incoming classical
+orbit intact. Deflections outside that region, including atomic
+screening or multiple collisions, require an independent error bound. <a
+href="https://www.physics.utoronto.ca/~phy326/cc/Rutherford1911.pdf">Rutherford,
+1911, §2, pp. 672–674</a> (passage, applied to relative motion).</p>
+<p>If the outgoing particles are unlabelled, the two possible angles are
+<span class="math inline">\(\theta\)</span> and <span
+class="math inline">\(\pi-\theta\)</span>. Their relative angular
+characteristic action, set to zero at <span
+class="math inline">\(\pi/2\)</span>, has magnitude</p>
+<p><span class="math display">\[
+|\Delta W|=\frac{2\kappa}{v}u,\qquad u=|\log\cot(\theta/2)|.
+\]</span></p>
+<p>Indeed Hamilton’s endpoint variation gives the angular momentum as
+the magnitude of the angular derivative. The two alternative derivatives
+enter the difference with the same sign and their magnitudes sum to
+<span class="math inline">\(\mu v
+d[\cot(\theta/2)+\tan(\theta/2)]=2\kappa/(v\sin\theta)\)</span>. The
+difference uses a common large-radius reference, so the common radial
+action constant drops out. This supplies a mechanical action coordinate
+for the detector, before specifying any rule for phases. <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/classics/Hamilton_GeneralMethodDynamics_1834_Wilkins.md">Hamilton,
+1834, law of varying action</a> (passage).</p>
+<p><strong>Three settings on one incoming ensemble.</strong> Count each
+collision once and accept the full azimuth. With a target at rest the
+smaller of the two laboratory fork angles is <span
+class="math inline">\(\alpha\le\pi/4\)</span> and <span
+class="math inline">\(u=\log\cot\alpha\)</span>. Choose a dimensionless
+angular displacement <span class="math inline">\(U\)</span> and a fixed
+width <span class="math inline">\(0&lt;w&lt;U\)</span>. Choose incident
+energies so that <span class="math inline">\(d_\pm=d_0 e^{\pm
+U}\)</span> (<span class="math inline">\(E_\pm=E_0e^{\mp U}\)</span>).
+For any reference length <span class="math inline">\(b_{\rm
+ref}&gt;0\)</span> set <span class="math inline">\(X=\log(b/b_{\rm
+ref})\)</span> and <span class="math inline">\(s_j=\log(d_j/b_{\rm
+ref})\)</span>. The classical observation at setting <span
+class="math inline">\(j\)</span> is exactly <span
+class="math inline">\(u_j=|X-s_j|\)</span>, including both possible
+assignments of the outgoing particles. A head-on collision lies outside
+the finite angular windows below.</p>
+<p>Let <span class="math inline">\(H_w(y)=(1-|y|/w)_+\)</span> and let
+<span class="math inline">\(Y_j[h]\)</span> be the sum of the event
+weights <span class="math inline">\(h(u)\)</span> divided by the
+integrated luminosity in that run. For a thin uniform target the latter
+is the incident particle count times its areal number density, so <span
+class="math inline">\(Y_j\)</span> has units of area. The incoming
+impact measure per unit exposure may be arbitrary, provided it is common
+across the three settings. Define</p>
+<p><span class="math display">\[
+C=Y_+[H_w]+Y_-[H_w]-Y_0[H_w(\,\cdot-U)] .
+\]</span></p>
+<p>Then <strong><span class="math inline">\(C=0\)</span> for Newton
+trajectories</strong>. For each individual <span
+class="math inline">\(X\)</span>, the two disjoint triangular windows
+centered at <span class="math inline">\(s_0\pm U\)</span> sum exactly to
+<span class="math inline">\(H_w(|X-s_0|-U)\)</span>. Integration proves
+the identity even for point masses in the incoming law. The reference
+length cancels. It is enough that <span
+class="math inline">\((X,\zeta)\)</span> have one joint law when the
+actual Coulomb length is <span class="math inline">\(d_je^\zeta\)</span>
+in run <span class="math inline">\(j\)</span>. The same identity then
+holds pointwise in <span class="math inline">\(X-\zeta\)</span>. Thus
+even a common fractional energy spread correlated with impact parameter
+is allowed. A common error in the absolute force strength also cancels.
+Time insertion leaves the continuum deflection unchanged on these
+collision-free orbits.</p>
+<p>The detector weight is Lipschitz with constant <span
+class="math inline">\(1/w\)</span>. If the measured <span
+class="math inline">\(u_j\)</span> differs from the ideal value by at
+most <span class="math inline">\(e_j\)</span>, the classical residual
+obeys <span class="math inline">\(|C|\le M(e_++e_-+e_0)/w\)</span>. Here
+<span class="math inline">\(M\)</span> is an upper bound on the common
+impact measure of the union of the three preimages, enlarged by their
+error margins. A discrepancy <span
+class="math inline">\(\epsilon_j\)</span> between the actual and common
+input measures, measured by the largest absolute difference on weights
+between zero and one on that union, adds <span
+class="math inline">\(\sum_j\epsilon_j\)</span> to the bound. The <span
+class="math inline">\(\epsilon_j\)</span> and <span
+class="math inline">\(M\)</span> have units of area. Uncertainties in
+efficiency, backgrounds, luminosity and sampling enter in the units of
+<span class="math inline">\(C\)</span>. A detector distance and pixel
+width set the angular error <span
+class="math inline">\(\delta\alpha\)</span>. On an acceptance enlarged
+to <span class="math inline">\(\alpha\ge\alpha_{\min}&gt;0\)</span>
+within the folded half, its contribution to <span
+class="math inline">\(e_j\)</span> is at most <span
+class="math inline">\(2\delta\alpha/\sin(2\alpha_{\min})\)</span>. A
+flight length <span class="math inline">\(\ell\)</span> and an
+independent clock interval <span class="math inline">\(t\)</span> give
+<span class="math inline">\(s_j=\log(\kappa t^2/(\mu b_{\rm
+ref}\ell^2))\)</span>. Thus calibrated errors in <span
+class="math inline">\(\ell,t\)</span> propagate directly to <span
+class="math inline">\(s_j\)</span>. The clock and position resolutions
+stay fixed while the mathematical time mesh shrinks.</p>
+<p>Run normalization can also be eliminated for the classical test. At
+three widths <span class="math inline">\(w_k&lt;U\)</span>, let <span
+class="math inline">\(N_{jk}\)</span> be the background- and
+efficiency-corrected weighted counts with the above windows. If only the
+three positive run exposures are unknown, the middle-setting row <span
+class="math inline">\((N_{0k})_k\)</span> must be a positive linear
+combination of the other two rows with the same coefficients at all
+widths in the mean. The matrix of mean counts therefore has determinant
+zero. This tests relative angular shapes alone when the aperture
+response is known.</p>
+<p><strong>How accurately must the force be known?</strong> Write the
+actual radial force on a scattering orbit as <span
+class="math inline">\(\kappa[1+g(r)]/r^2\)</span>, positive outwards.
+Measure the polar angle <span class="math inline">\(\phi\)</span> from
+the incoming asymptote and let <span
+class="math inline">\(\Phi=\pi-\theta\)</span> at exit. For <span
+class="math inline">\(b&gt;0\)</span> and a repulsive scattering orbit
+with <span class="math inline">\(0&lt;\Phi&lt;\pi\)</span>, Binet’s
+equation for <span class="math inline">\(y=1/r\)</span> is <span
+class="math inline">\(y&#39;&#39;+y=-(d/b^2)[1+g(r)]\)</span>, with
+<span class="math inline">\(y(0)=0\)</span>, <span
+class="math inline">\(y&#39;(0)=1/b\)</span>. At the exit <span
+class="math inline">\(y(\Phi)=0\)</span>. The sine Green function
+gives</p>
+<p><span class="math display">\[
+\frac{b}{d}\tan(\theta/2)=1+\bar g,\qquad
+\bar g=\frac{\int_0^\Phi\sin(\Phi-\phi)\,g(r(\phi))\,d\phi}
+                    {1-\cos\Phi}.
+\]</span></p>
+<p>This is a positive weighted average of the actual force error along
+the orbit. It requires no bound on a force gradient. An independent
+bound <span class="math inline">\(|\bar g|\le\gamma&lt;1\)</span> adds
+at most <span class="math inline">\(-\log(1-\gamma)\)</span> to the
+error <span class="math inline">\(e_j\)</span> above. A bound on <span
+class="math inline">\(|g|\)</span> from short-time force measurements on
+the traversed annulus suffices if the tails are also controlled. An
+outer portion of total polar angle <span
+class="math inline">\(h\)</span> with <span class="math inline">\(|g|\le
+D\)</span> contributes at most <span
+class="math inline">\(Dh/(1-\cos\Phi)\)</span> to the average. This
+allows a screened tail to be treated separately. <a
+href="https://teorica.fis.ucm.es/artemio/Notas%20de%20curso/CM.pdf">Binet’s
+equation, <em>Motion in a central potential</em>, §2</a> (passage).</p>
+<p>There is a direct threshold for an ideal counter accepting <span
+class="math inline">\(0\le u\le w\)</span> with full azimuth, uniform
+incident fluence and one fixed speed. For any ray it accepts, the
+force-error identity confines <span class="math inline">\(b\)</span> to
+<span class="math inline">\([d(1-\gamma)e^{-w},d(1+\gamma)e^w]\)</span>.
+Dividing the area of this annulus by the unperturbed aperture cross
+section gives</p>
+<p><span class="math display">\[
+\frac{Y_{\rm actual}}{Y_{\rm Coulomb}}
+\le 1+\gamma^2+2\gamma\coth(2w).
+\]</span></p>
+<p>For a twofold excess one therefore needs <span
+class="math inline">\(\gamma\ge
+1/(\sqrt{1+\coth^2(2w)}+\coth(2w))\)</span>. For <span
+class="math inline">\(w=\log\cot40^\circ\)</span> this is about <span
+class="math inline">\(0.16\)</span>. The statement is independent of a
+phase law and of the mathematical time partition. It bounds the largest
+orbit-averaged force error on accepted rays if force alone is to account
+for the ideal counter’s excess. A real counter needs its measured
+angular response in place of the ideal window.</p>
+<p><strong>What an excess measures.</strong> Take the established
+plane-wave Mott cross section for identical spin-zero particles with
+uniform incident fluence and only elastic Coulomb scattering. A finite
+beam requires calibration of the incident directions, coherence and
+detector response for this law to apply. In terms of a trial reduced
+action <span class="math inline">\(a&gt;0\)</span> and <span
+class="math inline">\(\eta_j=\kappa/(a v_j)\)</span>, its full-azimuth
+cross section on the folded half-sphere is</p>
+<p><span class="math display">\[
+dY_j=4\pi d_j^2
+       [\cosh(2u)+\cos(2\eta_j u)]\,du,\qquad u\ge0 .
+\]</span></p>
+<p>The first term is the sum of the two classical contributions. The
+second is the exchange term, with argument <span
+class="math inline">\(|\Delta W|/a\)</span>. <a
+href="https://doi.org/10.1098/rspa.1930.0006">Mott, 1930</a> (article
+metadata) and <a href="https://arxiv.org/html/1402.1858#S3">Canto,
+Hussein and Mittig, §III, Eqs. (9)–(10)</a> (formula passages). At a
+<em>single</em> energy the bounded nonnegative relative classical
+illumination</p>
+<p><span class="math display">\[
+1+\frac{\cos(k\log(b/d))}{\cosh(2\log(b/d))}
+\]</span></p>
+<p>multiplies both branches by the same factor. Choosing the
+dimensionless frequency <span class="math inline">\(k=2\eta_j\)</span>
+reproduces the entire angular distribution. Independence of the target
+positions can exclude such a reweighting physically. For example,
+translate one collision partner independently and uniformly over a
+transverse area <span class="math inline">\(A\)</span>. Conditional on
+an arbitrary other impact point, the probability for the relative offset
+to lie in a set <span class="math inline">\(B\)</span> is <span
+class="math inline">\(|B|/|A|\)</span> whenever its translated preimage
+is contained in <span class="math inline">\(A\)</span>. This guard
+condition suffices for the finite accepted annuli. A homogeneous gas
+independent of the incident beam gives the same area weighting in the
+thin-target approximation. The three-energy identity also covers a
+common nonuniform illumination.</p>
+<p>With <span class="math inline">\(S_j=\sin(\eta_j w)/(\eta_j
+w)\)</span>, integration against the three specified triangular weights
+gives</p>
+<p><span class="math display">\[
+C_a=2\pi w\big[d_+^2 S_+^2+d_-^2 S_-^2
+                 -2d_0^2 S_0^2\cos(2\eta_0 U)\big] .
+\]</span></p>
+<p>The half-window cosine integral at the origin is <span
+class="math inline">\(w S_j^2/2\)</span> and the full translated one is
+<span class="math inline">\(w S_0^2\cos(2\eta_0 U)\)</span>. Retaining a
+finite <span class="math inline">\(w\)</span> is essential. If <span
+class="math inline">\(|C_{\rm obs}|-\rho=C_{\rm low}&gt;0\)</span>,
+where <span class="math inline">\(\rho\)</span> bounds all errors
+relative to this ideal prediction at the asserted confidence level,
+<span class="math inline">\(|\sin|\le1\)</span> gives the model
+bound</p>
+<p><span class="math display">\[
+a\ \ge\ \kappa\sqrt{\frac{w C_{\rm low}}
+{2\pi(d_+^2v_+^2+d_-^2v_-^2+2d_0^2v_0^2)}} .
+\]</span></p>
+<p>For a common incoherent mixture of relative speeds as above, average
+each <span class="math inline">\(d_j^2v_j^2\)</span> over the measured
+spread, assuming these moments are finite and the uniform-fluence law
+applies at each speed. The angular settings and the energy preparation
+in this bound are fixed independently of <span
+class="math inline">\(a\)</span>. With <span
+class="math inline">\(U=\log4\)</span> and monochromatic runs, for
+example, <span class="math inline">\(a_1=\kappa w/(\pi v_0)\)</span>
+gives <span class="math inline">\(C_{a_1}=w d_0^2/(2\pi)\)</span>,
+whereas <span class="math inline">\(a_1/2\)</span> gives zero. Moreover
+<span class="math inline">\(a_1/2\)</span> and <span
+class="math inline">\(a_1/4\)</span> give exactly the same three
+weighted yields as the classical uniform beam, since all three sine
+factors vanish for both. These examples distinguish rejection of the
+classical prediction from unique identification of a positive
+action.</p>
+<p>The separation of <span class="math inline">\(a_1\)</span> from <span
+class="math inline">\(a_1/2\)</span> survives a finite incoming speed
+band with the same detector. Let the actual speeds be <span
+class="math inline">\(\lambda v_j\)</span> with a common distribution of
+<span class="math inline">\(|\lambda-1|\le\delta_v=1/100\)</span>. For
+an integer <span class="math inline">\(n&gt;0\)</span>, <span
+class="math inline">\(|\sin(n\pi/\lambda)/(n\pi/\lambda)|\le\delta_v\)</span>,
+while <span
+class="math inline">\(\sin(\pi/(2\lambda))/(\pi/(2\lambda))&gt;1/2\)</span>
+throughout this band. At <span class="math inline">\(a_1\)</span> the
+minus-setting factor therefore exceeds <span
+class="math inline">\(1/2\)</span> and the middle one is at most <span
+class="math inline">\(\delta_v\)</span> in magnitude. At <span
+class="math inline">\(a_1/2\)</span> all three are at most <span
+class="math inline">\(\delta_v\)</span>. Since the squared length ratios
+are <span class="math inline">\(16,1,1/16\)</span> and each <span
+class="math inline">\(d_j^2\)</span> acquires the same factor <span
+class="math inline">\(\lambda^{-4}\)</span>, the difference of the two
+mean contrasts is at least <span class="math inline">\(2\pi w
+d_0^2(1/64-21\delta_v^2)/(1+\delta_v)^4&gt;0\)</span>. This leaves a
+positive allowance for calibration error at fixed clock and angular
+resolution. The exact equality of the other pair above was for
+monochromatic runs.</p>
+<p><strong>What was actually measured.</strong> Chadwick used a helium
+gas target, graphite diaphragms admitting laboratory angles from <span
+class="math inline">\(40\)</span> to <span
+class="math inline">\(50\)</span> degrees, and argon runs at matched
+stopping power. He reported an observed-to-classical ratio near two at
+the lowest speeds. The argon standard assumes Coulomb scattering, and
+the different particle energies at the screen could reduce helium
+counting efficiency in the two slowest runs. This is evidence for a
+finite-aperture excess independent of fitting a Mott amplitude. For any
+<em>fixed</em> integrable angular response, its exchange contribution
+vanishes as <span class="math inline">\(a\downarrow0\)</span> by the
+Riemann–Lebesgue lemma, also after averaging a fixed speed distribution
+with integrable scattering weight. Thus an independently calibrated
+excess in that aperture already excludes the zero limit within the Mott
+family. Chadwick’s apparatus had its own angular response. <a
+href="https://doi.org/10.1098/rspa.1930.0098">Chadwick, 1930,
+pp. 116–121</a> (<a
+href="https://archive.org/details/dli.ernet.27026">volume scan</a>,
+passages read in the library OCR) and <a
+href="https://www.iitg.ac.in/rksri/MA746%20Fourier%20Analysis%20Lecture%20notes%202025.pdf">Riemann–Lebesgue
+lemma, Theorem 2.13</a> (statement).</p>
+<p>Blackett and Champion recorded both outgoing arms for 428 forks among
+56,820 photographed tracks. Their range and angle cuts and their
+geometrical identification of helium events can be checked against the
+cloud-chamber preparation. They report a discrepancy statistic of 15.3
+for the classical and 1.04 for the Mott expectations in the upper six
+cells. Their cell boundaries used the Mott phase, and they report missed
+short spurs in the lower cells. Heydenburg and Temmer later measured
+precise relative angular distributions below 400 keV. Their absolute
+normalization below 2 MeV used a fitted scattering phase shift. None of
+these published summaries gives the three matched weighted yields or
+their calibration errors. A numerical value of <span
+class="math inline">\(C_{\rm low}\)</span> for this test remains open.
+<a href="https://doi.org/10.1098/rspa.1931.0011">Blackett and Champion,
+1931, pp. 382–388</a> (<a
+href="https://archive.org/details/dli.ernet.7436">volume scan</a>,
+passages read in the library OCR) and <a
+href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.104.123">Heydenburg
+and Temmer, 1956</a> (abstract).</p>
 <h2 id="consequence-for-state">7. Consequence for STATE</h2>
 <p>Newton action necessity is the active priority. This note gives the
 first <span class="math inline">\(0+1\)</span> background construction:
@@ -895,10 +1213,14 @@ class="math inline">\(\hbar\)</span>. Its oscillator example separates
 boundary caustics from initial-value failure. The return-side detector
 gives a common observable for the two orders of the core and action
 limits. The incoming Liouville flux already controls the sensitive
-trajectories classically. The open physical question is which
-concentrations in energy and angular momentum can be realized at every
-source radius, and whether their observed return laws exclude zero
-action.</p>
+trajectories classically. The open physical question is whether observed
+return laws exclude zero action. The three-energy collision identity
+removes arbitrary common impact concentration from a classical
+comparison. Its use on real data requires control of the accessible
+force, of how the ensemble changes with the setting, and of the angular
+response. A lower bound from Mott exchange also supplies that dynamical
+law. The physical premise that would force a positive action for central
+motion in general remains open.</p>
 
 </main>
 <footer class="site"><div class="wrap">

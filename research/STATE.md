@@ -9,10 +9,13 @@ The first priority is an explanation of positive physical action from the
 central-force trajectory limit itself. Newton connects [Lemma X's force
 measurement](../notes/newton-insertion-action.md#lemma-x-and-the-measurement-of-initial-force)
 to the orbital force rule in Book I, Proposition VI (1713).
-The [return-position test](../notes/balaban-newton-time-blocking.md#central-force-passage-under-point-insertion)
-asks which concentrations in energy and angular momentum are physically
-realizable as the source shrinks. Is there a premise, independent of
-$\hbar$, that excludes the classical predictions even for such preparations?
+The [point-insertion test](../notes/balaban-newton-time-blocking.md#central-force-passage-under-point-insertion)
+exposes the sensitivity of one orbit to its preparation. The
+[three-energy scattering test](../notes/balaban-newton-time-blocking.md#a-three-energy-test-of-central-force-trajectories)
+cancels any common impact distribution. Can independent force and
+detector calibrations exclude the Newton prediction for measured
+angular yields? Inferring a trial action from Mott exchange still
+assumes the exchange law.
 Earlier apparatus tests use [three positions and two ions](../notes/newton-insertion-action.md),
 an [electron and shutter](../notes/galileo-two-path-interference.md#two-slits-and-a-position-detector)
 and a [clocked grating](../notes/groupoid-quantum-newton-states.md#9-action-calibration-with-a-clocked-grating).
