@@ -11,8 +11,9 @@ measurement](../notes/newton-insertion-action.md#lemma-x-and-the-measurement-of-
 to the orbital force rule in Book I, Proposition VI (1713).
 For a [Kepler pair selected by binding energy](../notes/newton-insertion-action.md#a-radius-count-beyond-the-kepler-turning-point),
 can a calibrated detector count pairs beyond the outer turning radius?
-The [bare lithium fraction from helium-6](../notes/newton-insertion-action.md#a-stronger-coulomb-attraction-and-the-measured-bare-lithium-fraction)
-tests the work an outgoing beta can supply to a bound electron.
+For the [bare lithium fraction from helium-6](../notes/newton-insertion-action.md#the-field-of-one-outgoing-beta),
+can independent source and charge-readout data bound departures from the
+calculated beta-ray escape fraction below 0.49 percentage points?
 For [neutrons returning under gravity](../notes/dirichlet-wall-impulse.md#counting-turning-heights-from-neutron-positions),
 does a height measurement at an independently randomized time assign a
 negative count to any interval of turning heights?

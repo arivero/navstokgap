@@ -515,6 +515,297 @@ initial binding energy as $a^{-2}$. This ambiguity is removed by a
 mechanical energy tag. The measured helium fraction and the calibrated
 Kepler radius count above test different premises.
 
+### The field of one outgoing beta
+
+**6.1 Sol Max, 2026-11-18.** An individual point beta can give the
+electron a large impulse if it heads sufficiently close to it. For the
+specified classical source and preparation below, **less than 1.77%**
+of the electrons can escape. The electron moves throughout the
+encounter. The estimate includes the electromagnetic pulse at the
+decay vertex, the magnetic force and the subsequent field of the
+massive beta for all times. The measured fraction is
+$(2.339\pm0.036)\%$. The comparison tests the direction of emission
+relative to the electron, its binding and the source motion during
+the encounter. [Couratin et al., cuts and Eq. (5)](https://in2p3.hal.science/in2p3-00709325v1/document#page=3)
+(passages).
+
+Consider a point electron of mass $m$ moving under the Lorentz force.
+The prescribed conserved current has an incoming nucleus of charge
+$+2e$ at rest, an outgoing nucleus of charge $+3e$, and a beta of
+charge $-e$. The outgoing sources start together and coast on
+straight rays. The daughter mass and the recoil ceiling give a boost
+speed below $0.00075c$ and $mc^2(\gamma_d-1)<0.14$ eV, as above.
+The 0.4 MeV beta deposit cut implies a beta speed $u=\beta c>0.82c$
+even in the daughter frame, for a correctly reconstructed event.
+Retain a binding-energy band $54\le B\le55$ eV in the parent frame.
+Use $mc^2=511$ keV to the precision needed here. The other dimensional
+inputs are $k=e^2/(4\pi\epsilon_0)$, $c$, and the detector lengths,
+times and voltages identified in the
+[charge measurement](../docs/CouratinEtAl_Helium6_ChargeReadout.md).
+
+Before decay allow every collision-free bound orbit in the
+static relativistic Coulomb Hamiltonian of the parent. Sample the
+time of the vertex uniformly in radial phase, meaning uniformly in
+elapsed time within its radial period. For the probability estimate
+assume that, conditional on radius and binding energy when the signal
+reaches the electron, the relative direction of the primary beta in
+the parent frame is uniform in solid angle. Random orbital orientations
+independent of the accepted nuclear emission suffice. The bound on
+each individual trajectory below uses neither sampling assumption.
+Recoil may correlate with the beta direction. A passive collision
+continuation may be used after the encounter.
+
+**A sufficient condition for retention.** In the daughter frame let
+$r_0$ be the radius at which the electron meets the light front of the
+vertex. It meets it at $t_0=r_0/c$. Let $\theta$ be the angle there
+between the radial direction and the beta ray, and put
+
+$$
+ d=k/r_0,\qquad y=d/(mc^2),\qquad x=B/d,\qquad s=\sin(\theta/2).
+$$
+
+If $x\ge0.08$ and $s\ge C\sqrt y$, the electron stays within
+$300r_0$ of the daughter at all later times. Use $C=12$ for
+$0.08\le x<0.5$ and $C=10$ for $x\ge0.5$. This finite-distance
+statement applies to a charge detector far outside the atom.
+
+Let $r_p$ be the radius at the same light-front event in the parent
+frame. Null propagation gives $0.9992<r_0/r_p<1.0008$. The incoming
+electron has parent-frame kinetic energy $2k/r_p-B$. Boosting its
+four-momentum gives the following bound on the daughter-frame kinetic
+energy $T_-$ just before the pulse:
+
+$$
+        T_-/d \le 2.004-0.99x+0.15\sqrt{x},\qquad
+        |\boldsymbol p_-|/(mc)\le 2.01\sqrt y .
+$$
+
+Indeed $0.08\le x<2.002$ and $y<0.00135$. The parent momentum
+satisfies $p_pc=\sqrt{T_p(2mc^2+T_p)}\le2.01\sqrt{mc^2d}$.
+The added boost energy is at most
+$(\gamma_d-1)(mc^2+T_p)+\gamma_d V_d p_p$, where $V_d$ is the
+daughter speed. The first term is below $0.003d x$ and the second
+below $0.15d\sqrt{x}$. The resulting bound on $T_-/d$ is less than
+two throughout this range.
+
+At the light front only the transverse impulsive field contributes
+to the momentum jump. Its transverse impulse $j$ obeys
+
+$$
+ \frac{j}{mc}\le y\left(\frac{\beta\sin\theta}{1-\beta\cos\theta}
+                   +0.002\right)
+       \le y\big(\cot(\theta/2)+0.002\big).
+$$
+
+The small term allows for the incoming charge $2e$ moving in the
+daughter frame. The field follows by superposing the point-source
+solutions at the vertex. Across the pulse $p^-=(mc^2+T)/c-p_r$
+is conserved. The factor $1-v_r/c$ in the transverse Lorentz force
+cancels the same factor in $d(t-r/c)/dt$. Thus the electron takes
+the stated transverse impulse even while moving. The mass shell gives
+$\Delta T/c=(2\boldsymbol p_\perp\cdot\boldsymbol j+j^2)/(2p^-)$.
+Here $p^-/(mc)>0.925$ and $j/(mc\sqrt y)\le1/C+0.002\sqrt y$.
+The increase in $T/d$ is below $0.190$ for $C=12$ and $0.225$ for
+$C=10$. [Hnizdo and Vaman, Eqs. (30)–(32)](https://arxiv.org/pdf/2311.17652)
+(exact field at finite distance) and [Adamo, Cristofoli and Ilderton,
+Appendix A](https://doi.org/10.1007/JHEP08%282022%29281) (Lorentz
+motion through a wave).
+
+**Work by the passing beta.** Use its direction as the $z$ axis,
+write $\rho$ for transverse distance from the axis, and put
+$D=z-ut$, $\gamma=(1-\beta^2)^{-1/2}$. After the front the
+repulsive scalar potential energy and a bound on the electric force
+are
+
+$$
+ \Phi=\frac{k}{\sqrt{D^2+\rho^2/\gamma^2}},\qquad
+ e|\boldsymbol E_\beta|
+ \le\frac{k/\gamma}{D^2+\rho^2/\gamma^2}.
+$$
+
+These are the constant-velocity Liénard–Wiechert field and potential.
+Magnetic forces change the path and do no kinetic work.
+[Feynman, Leighton and Sands, Vol. II, §26-2](https://www.feynmanlectures.caltech.edu/II_26.html#Ch26-S2)
+(field components). Write $H_c=T-3k/r$ and $q=ut/r_0$. Until the
+first possible $H_c=0$, $|\boldsymbol v|/c\le\sqrt{6yr_0/r}$.
+Integration gives, starting at $q=\beta$,
+
+$$
+ \left[1-\frac{3\sqrt{6y}}{2\beta}(q-\beta)\right]^{2/3}
+ \le \frac r{r_0}\le 1+\frac{\sqrt{6y}}{\beta}(q-\beta).
+$$
+
+The lower bound is used only while its bracket is positive. For
+$q\le2$ it gives $r/r_0>0.86$ and $|\boldsymbol v|/u\le
+\lambda=3.24\sqrt y$. Hence $-\dot D\ge u(1-\lambda)$ and the
+transverse displacement from the front is at most $3.83r_0\sqrt y$.
+When $s\le1/2$, $\sin\theta\ge\sqrt3\,s$, so
+$\rho/r_0\ge b=(\sqrt3\,C-3.83)\sqrt y$. Integrating the electric
+force bound in $D$ up to its initial value $r_0 h$, $h=\cos\theta-\beta$,
+gives an upper bound on the absolute work divided by $d$:
+
+$$
+ L_1=\frac{\lambda}{(1-\lambda)b}
+      \left(\frac{\pi}{2}+\arctan\frac{\gamma h}{b}\right).
+$$
+
+For $s>1/2$ one has $h<-0.32$ and can instead integrate
+$1/D^2$. This gives $\lambda/[(1-\lambda)\gamma |h|]<0.25$.
+These integrals bound the work along the actual path even when its
+velocity changes direction.
+
+For $2\le q\le5$ the radial lower bound gives $r/r_0>0.45$ and
+$|\boldsymbol v|/u<4.46\sqrt y$. The upper bound gives
+$-D/r_0\ge0.89q-0.91$. Thus the second absolute work divided by $d$
+is below $2.52\sqrt y$, using $\gamma^{-1}<0.573$ and
+$\int_2^5(0.89q-0.91)^{-2}dq<0.98$. At $q=5$,
+$\Phi/d<0.283$.
+
+The following bounds are in units of $d$. The last column is the
+energy available before reaching zero, $3-T_-/d$. Each row pays the
+two work allowances, the pulse, and the potential at the final point.
+
+| $x$ | Pulse | Work to $q=2$ | Work from $2$ to $5$ | $\Phi$ at $5$ | $3-T_-/d$ greater than |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| $[0.08,0.32]$ | 0.190 | 0.450 | 0.093 | 0.283 | 1.032 |
+| $(0.32,0.5)$ | 0.190 | 0.640 | 0.047 | 0.283 | 1.227 |
+| $[0.5,2.002)$ | 0.225 | 0.800 | 0.038 | 0.283 | 1.384 |
+
+In the first row $\sqrt y>\sqrt{54/(0.32\times511000)}$, so
+$b>0.307$ and $\max(0,\gamma h)<0.150$. The latter bound uses
+$h\le1-2C^2y-\beta$ and the fact that
+$(\cos\theta-\beta)/\sqrt{1-\beta^2}$ decreases in $\beta$.
+Insertion in $L_1$ gives the first work allowance. For the other two
+rows use $\pi$ for its factor in parentheses. In each row the bounds
+also hold on the corresponding partial intervals, ruling out the
+first $H_c=0$ through $q=5$.
+
+At $q=5$, $z<ut$ and the instantaneous energy including the passing
+charge satisfies both $H_c+\Phi<-0.01d$ and $H_c+\Phi<-1$ eV. For
+the second bound multiply each row's remaining margin by the smallest
+$d=B/x$ in that row. Along the subsequent orbit,
+
+$$
+ \frac{d}{dt}(H_c+\Phi)
+    =(1-u v_z/c^2)\,\partial_t\Phi,\qquad
+ \partial_t\Phi=\frac{kuD}{(D^2+\rho^2/\gamma^2)^{3/2}} .
+$$
+
+This uses the vector potential $\boldsymbol u\Phi/c^2$ with the
+electron charge included. The energy cannot rise while $D\le0$.
+A first crossing to $D>0$ would require $v_z\ge u$ at $r\ge5r_0$.
+There $T<3d/5$ gives $|\boldsymbol v|<0.041c$. Thus the sign
+persists and $r<300r_0$ follows from positivity of $T$ and $\Phi$.
+
+There is also a direct apparatus check. After $q=5$ let the extraction
+apparatus add a potential energy $U(t,\boldsymbol r)$, with its value
+at the daughter subtracted. On the ball of radius $R=10$ nm let
+$F=\sup|\nabla U|$ and $V=\int\sup|\partial_t\nabla U|\,dt$ over
+the remaining flight. While the electron stays in the ball and
+$D\le0$, the energy identity with $U$ included gives
+$H_c+\Phi<-1\ {\rm eV}+(2F+V)R$. If
+
+$$
+        \frac{3k}{R}+(2F+V)R<1\ {\rm eV},
+$$
+
+the electron cannot reach the ball's boundary or overtake the beta.
+The two endpoint values of $U$ and its change during flight account
+for the whole time-dependent field. Since $3k/R\simeq0.432$ eV,
+$(2F+V)/e<5.6\times10^7$ V/m suffices. This criterion concerns
+post-encounter stripping by an electrostatic apparatus. It requires
+field gradients along the ion flight as well as electrode voltages.
+
+**How frequently can the excluded geometries occur?** Put
+$E=mc^2-B$, $D_E=m^2c^4-E^2$, $K=2k$ and $A=EK/D_E$ in the
+parent frame. For angular momentum greater than $K/c$, the radial
+turning points give $r_p=A(1-e_{\rm orb}\cos w)$ with eccentricity
+$0\le e_{\rm orb}<1$. The radial elapsed-time weight is
+
+$$
+ \frac{dt}{P}=\frac{X+\ell}{1+\ell}\frac{dw}{2\pi},\qquad
+ X=1-e_{\rm orb}\cos w,\qquad \ell=D_E/E^2<0.00022 .
+$$
+
+Indeed the radial momentum polynomial gives
+$dt/dr=(Er+K)/(c\sqrt{D_E}\sqrt{(r_+-r)(r-r_-)})$ on the outgoing
+leg. $P$ is the radial period. At the front the emission time is
+$t-r_p(t)/c$. For every radial observable $f(r_p)$, the extra
+factor $1-\dot r_p/c$ leaves its integral unchanged since
+$f(r_p)\dot r_p$ is a full-period derivative. Sampling the vertex in
+time gives the displayed radius distribution *at signal arrival*.
+[Boyer, Eqs. (14)–(20)](https://arxiv.org/pdf/physics/0405090)
+(relativistic radial quadrature).
+
+Charge the entire uniform-anomaly part of weight
+$\ell/(1+\ell)$ to possible escape. In the remaining weight $X\,dw/(2\pi)$,
+the maximal probability $M(v)$ of $X<v<1$ over eccentricities is
+
+$$
+ M(v)=\frac{\arcsin\sqrt v-\sqrt{v(1-v)}}{\pi}
+       \le\frac{2v^{3/2}}{3\pi\sqrt{1-v}} .
+$$
+
+For $e_{\rm orb}\ge1-v$ the integral is
+$[\arccos((1-v)/e_{\rm orb})-\sqrt{e_{\rm orb}^2-(1-v)^2}]/\pi$.
+It is largest at $e_{\rm orb}=\sqrt{1-v}$. This sharpens the
+eccentricity-uniform time bound used for spherical screening.
+
+Let $y_A=k/(mc^2A)\in(0.000105,0.000108)$. The recoil boost gives
+$x<0.08\Rightarrow X<0.0801$ and $x<0.5\Rightarrow X<0.501$.
+It changes the half-chord $s$ of the incident radial and beta
+directions by less than $0.002$. For each momentum the change of
+unit direction under the boost is bounded by
+$2[(\gamma_d-1)+\gamma_d V_d/v]$ with $v=c$ or $v>0.82c$.
+Since $\sqrt{k/(mc^2r_p)}>0.0072$, it suffices to count parent-frame
+cones of half-chord $C'\sqrt{y_A/X}$, with $C'=12.4$ for
+$X<0.501$ and $C'=10.4$ otherwise.
+
+For the stated relative-direction law the probability of a cone of
+half-chord $h$ is at most $h^2$. The factor $X$ in the time weight
+cancels $1/X$ in this bound. At most $0.335$ of uniform anomaly has
+$X<0.501$, since it requires $\cos w>0.499$. The integrated angular
+allowance is therefore below
+$0.000108[10.4^2+0.335(12.4^2-10.4^2)]<0.01334$.
+On $X<0.0801$ replace the angular allowance by the entire weight.
+Its added integrand $X-12.4^2y_A$ is at most $0.8X$ there. This
+gives the final escape ceiling
+
+$$
+ p_{\rm ray}<0.01334+0.8M(0.0801)+0.00022<0.0177 .
+$$
+
+The published fraction minus two quoted standard errors is $0.02267$.
+There is a margin of more than $0.0049$ of the parents for departures
+from these premises. An independent upper bound below that margin on
+the combined effect of source, preparation, acceptance and subsequent
+stripping would reject this trajectory model. A spherically symmetric
+one-particle beta histogram alone gives no upper bound on its
+correlation with the electron. For example, mix an isotropic independent
+ray with a ray aimed at the electron on one percent of randomly
+oriented orbits. Both marginal direction distributions stay uniform.
+The calculation also prescribes the source current. Mutual deflection,
+finite-time nuclear emission, extra radiation and field work in the
+apparatus can change it or the charge reading. The measured charge
+fraction does not itself certify the required combined bound.
+
+For an action-limit comparison, hold the source size, emission
+duration, flight time and detector resolution fixed in physical units.
+One sufficient mathematical setting uses a common compact phase-space
+cutoff, smooth real Hamiltonians for the entire finite flight with
+uniform symbol bounds, and a smooth bounded detector score. Suppose
+the admitted incoming states are tight and all their classical limits
+satisfy the preparation and direction conditions above. If calibrations
+bound the change of the **classical** count from smoothing the sources,
+restricting the phase space and reading the detector by $\eta$, finite-time
+Egorov propagation gives $\limsup_{a\downarrow0}p_a\le0.0177+\eta$
+for that model. Indeed every subsequential semiclassical measure reads
+the score transported by the classical flow. One can use
+$L=k/(54\ {\rm eV})$ and dimensionless action $a/(mcL)$.
+The ideal point-current calculation alone supplies no value of $\eta$.
+[Zworski, *Semiclassical Analysis*, Theorem 11.1](https://math.jhu.edu/~lindblad/633/Zworski_final.pdf)
+(fixed-time smooth-symbol theorem).
+
 ## Four central-force releases measured by final speeds
 
 **6.1 Sol Max, 2026-11-18.** The same four sets of outgoing speeds
@@ -2027,6 +2318,7 @@ selective capture, while the four unconditioned release measurements
 needed for the action bound remain open.
 For an inverse-square attraction a mechanically tagged binding energy and
 a count beyond the outer turning radius would give a positive action
-bound at any gate time. The helium-6 daughter counts already constrain
-how frequently a trajectory explanation would need additional electronic
-work. Its magnitude in individual beta encounters remains open.
+bound at any gate time. For helium-6, an individual beta on a straight
+ray has a calculated escape ceiling. The outstanding empirical question
+is whether preparation, angular correlation, departures of the current
+from that ray and charge readout together account for the measured excess.

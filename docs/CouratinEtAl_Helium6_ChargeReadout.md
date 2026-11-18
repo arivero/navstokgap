@@ -48,9 +48,20 @@ energy-scale discussion](https://doi.org/10.1140/epjs/s11734-026-02488-4)
 
 ## Reading coverage
 
+An earlier measurement with the same apparatus inferred the angular
+correlation of the beta and antineutrino from beta coincidences and
+the recoil-ion flight time. It gives $a_{\beta\nu}=-0.3335$ with
+statistical and systematic errors of 0.0073 and 0.0075. The apparatus
+simulation includes electrode field maps and beta scattering on its
+surfaces. That angular observable contains no measurement of the
+bound electron's direction at emission. [Fléchard et al., abstract
+and §§3.1.1–3.1.4](https://in2p3.hal.science/in2p3-00581086v1/document)
+(apparatus passages).
+
 Read the indicated passages on 18 November 2026. The HAL v1 PDF was
-retrieved from the authors' deposit and its text extracted with
+retrieved for each paper and its text extracted with
 pdftotext. The quoted values come from the text, equations and table.
 The original and figures remain at HAL. The
 [central-force work bound](../notes/newton-insertion-action.md#a-stronger-coulomb-attraction-and-the-measured-bare-lithium-fraction)
-is a separate calculation.
+and the [calculation for one moving beta](../notes/newton-insertion-action.md#the-field-of-one-outgoing-beta)
+are separate from the experimental analyses.
