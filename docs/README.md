@@ -11,6 +11,8 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Mechanics investigation
 
+- [Eid et al. optical-barrier measurements](EidEtAl_OpticalBarriers_2024.md)
+  give the source of the potassium fractions measured at two barrier powers.
 - [Valahu et al. grid-state data](ValahuEtAl_GridContrast_2024.md) give
   the measured axis and diagonal fluorescence contrasts of a single ion.
 - [Spin publication source comparison](batches/B76/spin-positioning-source-companion.md):

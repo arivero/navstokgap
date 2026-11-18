@@ -16,6 +16,14 @@ a sharply concentrated beam. An observed excess over the calibration
 error gives a lower bound on a trial action in the spin-zero Coulomb
 exchange model. [Three-energy test](#a-three-energy-test-of-central-force-trajectories).
 
+In a potassium waveguide, the fraction crossing a repulsive barrier at
+high laser power bounds how many low-power atoms could have turned
+near it. At the reported preparation's nominal widths, at least ten
+percentage points of the incident flux need another explanation if the
+beam presents the same axial potential to every atom. A second image
+would locate the returning atoms. The same bound applies to outward
+motion through a spherical shell. [Two barrier powers](#locating-a-turn-with-two-barrier-powers).
+
 Electron transmission through argon supplies a single-energy comparison
 without identical-particle exchange. A finite annulus of exterior Newton
 orbits would miss the measured exit aperture if the polarization force
@@ -1010,6 +1018,336 @@ $C_{\rm low}$ for this test remains open.
 ([volume scan](https://archive.org/details/dli.ernet.7436), passages
 read in the library OCR) and [Heydenburg and Temmer, 1956](https://journals.aps.org/pr/abstract/10.1103/PhysRev.104.123)
 (abstract).
+
+## Locating a turn with two barrier powers
+
+**6.1 Sol Max, 2026-11-18.** Eid et al. counted potassium atoms on
+either side of a repulsive optical barrier. Among the plotted points,
+more than 36% were on the reflected side near one-quarter laser power,
+and more than 35% were transmitted near three-quarters power. In a
+static one-dimensional Newtonian field, the atoms that cross at the
+higher power set an upper bound on the work required everywhere they
+pass. This limits the fraction that could have reversed in the same
+region at lower power. It uses the power ratio and allows an unknown
+barrier height, arbitrary optical sidelobes and a non-Gaussian launch.
+Newton's 1713 Lemma X, Corollary 4, compares forces by nascent
+displacements from rest in equal times. Here that comparison can
+calibrate how much changing the illumination changes the force on
+each part of the incident beam. The scattering and the camera counts
+are a modern application. [Newton, 1713, Book I, Lemma X and
+corollaries](https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082#par26)
+(diplomatic transcription, passage).
+
+**What was measured.** The same three-pixel mask was used throughout
+this power scan. The central incident speed was about $3.7$ mm/s,
+set by release distance in a guide of acceleration $g=0.20$ m/s$^2$.
+The source reports a cold launch spread near $0.35$ mm/s, an estimated
+rms size $3.5\,\mu{\rm m}$, and a thermal fraction near 20%. Read
+the centres of the experimental circles in Fig. 3 in the following
+rounded intervals. The inequalities leave room for reading the plot.
+They carry no statistical confidence level.
+
+| Fraction of full power | Recorded fraction used |
+|---|---|
+| $0.240$–$0.255$ | reflected side $>0.36$ |
+| $0.745$–$0.760$ | transmitted side $>0.35$ |
+| $0.895$–$0.910$ | transmitted side $>0.27$ |
+
+The measured quantity is the atom number on each side when the two
+clouds are separated. The authors point out that atoms still approaching
+the barrier can enter the reflected count. Their thin-barrier fit and
+their determination of the optical response from scattering are separate
+from the plotted data used here. [Eid et al., Figs. 1–4](https://arxiv.org/html/2405.14466v1#S0.F3)
+(apparatus passages and plotted data; [reading coverage](../docs/EidEtAl_OpticalBarriers_2024.md)).
+
+**What a crossing bounds.** Set $z=0$ at the central light maximum.
+In the guide use the potential $mg[P u(z)-z]$ at relative power $P$,
+with $u\ge0$ measured in units of length relative to the dark guide.
+The mass $m$ cancels from the trajectory test. Let the initial position
+be $-d-X$, with $\mathbb E X=0$, $\mathbb E X^2\le s^2$ in the cold
+part of the incident beam. Write
+
+$$
+ w=\frac{\mathbb E v_0^2}{2g},\qquad
+ u_{\rm in}=\mathbb E[P_H u(-d-X)],\qquad
+ c(p)=\sqrt{(1-p)/p}.
+$$
+
+The two mean energies per $mg$ are bounded at release, before selection
+by either detector. They have dimensions of length. The static force
+profile is common to both powers. Energy exchange with other atoms,
+transverse motion and changes of internal state require independent
+control for the axial law to apply.
+
+Choose a left plane $-b$ and a right plane $L>-b$. If a fraction
+$p$ or more of the cold atoms crosses the whole interval at high
+power, every point in it satisfies
+
+$$
+ P_Hu(z)-z \ \le\ H=d+s\,c(p)+(w+u_{\rm in})/p .
+$$
+
+Indeed the incident specific energy in these units is
+$d+X+v_0^2/(2g)+P_Hu(-d-X)$. It bounds the potential at each
+crossed point. Conditional on a crossing, the mean of $X$ is at most
+$s\,c(p)$ by Cauchy–Schwarz applied to the centred event indicator.
+The two nonnegative terms contribute at most their total mean divided
+by $p$. No independence of initial position and velocity is needed.
+
+At low power the potential at the same points obeys
+
+$$
+ P_Lu(z)-z\ \le\ B=b+(H-b)/r,\qquad r=P_H/P_L>1 .
+$$
+
+At a longitudinal turn the kinetic energy vanishes. Since the
+low-power launch energy is at least $d+X$, a turn in $[-b,L]$
+requires $X\le B-d$. For $B<d$, the one-sided variance inequality
+gives the cold fraction of such turns at most
+
+$$
+ q_{\rm turn}=\frac{s^2}{s^2+(d-B)^2}.
+$$
+
+The same moment inequality gives $\rho_b=s^2/[s^2+(d-b)^2]$ as an
+upper bound on the fraction starting at or beyond $-b$ when $d>b$.
+[Cantelli's inequality, Pinelis, Eq. (2)](https://arxiv.org/pdf/1011.6065#page=1)
+(statement for a finite second moment).
+
+**Size of the discrepancy.** Take $b=10\,\mu{\rm m}$ and count a
+high-power transmission only beyond $L$. For illustration take the
+reported preparation values as bounds, zero incident mean velocity
+and negligible optical energy at release. They give
+$d\simeq v_{\rm inc}^2/(2g)=34.2\,\mu{\rm m}$, $s=3.5\,\mu{\rm m}$,
+$w<0.307\,\mu{\rm m}$ and $\rho_b<0.021$. Assign every member of a
+20% thermal fraction the outcome most favourable to a classical fit
+at each setting. At the first high power the cold crossing probability
+is at least $(0.35-0.20)/0.80-\rho_b>0.16$. With $r\ge2.9$, one gets
+$H<44.2\,\mu{\rm m}$, $B<21.8\,\mu{\rm m}$ and $q_{\rm turn}<0.075$.
+Even counting every thermal atom, **less than 26%** of the incident
+beam can turn in the interval. At least ten percentage points of the
+reported reflected fraction would have to turn elsewhere, reach the
+apparatus late, or be explained by changes in the source, forces or
+counting. These fractions use a common incident denominator. Loss and
+normalization errors must be carried into them.
+
+The second high-power point checks the comparison away from the
+largest plotted transmission in that part of the scan. Here $p>0.065$
+and $r\ge3.5$, giving $H<52.3\,\mu{\rm m}$, $B<22.1\,\mu{\rm m}$
+and $q_{\rm turn}<0.079$. Nor must the light vanish exactly at
+release. For every one of the reported 36% to be a local return in
+the first comparison, at least $q=0.20$ of the cold atoms must turn,
+so $B\ge d-s c(q)=27.2\,\mu{\rm m}$. With the same bounds this
+would require $u_{\rm in}>2.5\,\mu{\rm m}$. The optical work from
+a dark reference to the launch cloud is measurable by integrating
+the change in acceleration with position. The change can be measured
+with the clocked displacements of [Lemma X](newton-insertion-action.md#lemma-x-and-the-measurement-of-initial-force).
+Alternatively, at negligible launch light allow extra longitudinal
+work up to $mg h_H$ gained at high power and $mg h_L$ lost at low
+power along the relevant paths. These changes raise the allowed
+low-power turning threshold by $h_H/r+h_L$. Accounting for all
+36% as local returns then requires $h_H/r+h_L>5.4\,\mu{\rm m}$,
+by $27.2-21.8$. This is a mechanical work tolerance for transverse
+exchange, time-dependent fields or residual interatomic forces.
+
+**A position measurement that locates the reversal.** On independently
+chosen releases at *the same low power*, image the fraction $C_1$ to
+the right of $-b$ at time $t_1$ and the fraction $C_2$ to its left
+at $t_2>t_1$. A common trajectory ensemble puts at least
+$C_1+C_2-1$ in both events. Each such atom starting left of $-b$
+must have turned on its right. Let $e_L$ bound the fraction of all
+launches that are cold, start left of $-b$, pass $L$ and return
+behind $-b$ by $t_2$. For example, if the axial
+acceleration stays positive beyond $L$ up to the furthest accessible
+position, then $e_L=0$. For the first high-power setting the null
+prediction, with the numerical bounds above, is
+
+$$
+ C_1+C_2-1\ \le\ 0.20+0.80(\rho_b+q_{\rm turn})+e_L
+                \ <\ 0.277+e_L .
+$$
+
+If the late image confirms $C_2\ge0.36$ behind the specified plane,
+an early fraction $C_1>0.917+e_L$ would cross this ceiling before
+other errors. Finite imaging resolution works with two separated
+position windows: count early images securely right of the plane and
+late images securely left. Similarly score high images only beyond
+the right guard. Any remaining leakage, loss or sampling error needs
+a bound on incident counts. Independent finite shutter windows suffice
+when the whole early window precedes the late one and the downstream
+return allowance uses the latest late time. There is a single terminal
+exposure per atom. Fig. 3 supplies neither this early occupancy nor
+the guarded late fractions with their errors.
+
+The downstream return allowance can itself be set by the clock and
+ruler. Write $S$ for the actual low-power launch energy per $mg$.
+Except for a cold fraction at most $\delta$, the conditional-mean
+bound gives
+
+$$
+ S\le S_c=d+s c(\delta)+(w+u_{\rm in}/r)/\delta .
+$$
+
+Nonnegativity of the optical potential gives
+$|\dot z|\le\sqrt{2g(z+S)}$. A trajectory that starts and ends left
+of $-b$ and visits $L$ must cover the interval twice. Integrating the
+inverse maximum speed, its elapsed time is at least
+$2\sqrt{2/g}\,(\sqrt{L+S_c}-\sqrt{S_c-b})$ when $S_c>b$.
+This remains true for radial speed in the shell below. Consequently
+the latest late time $t_2$ guarantees $e_L\le\delta$ for the cold
+trajectories initially left of the plane if
+
+$$
+ L>-b+t_2\sqrt{g(S_c-b)/2}+g t_2^2/8.
+$$
+
+For example, the nominal source with negligible launch light gives
+$S_c<100\,\mu{\rm m}$ at $\delta=0.01$. A right plane at
+$L=110\,\mu{\rm m}$ then suffices for $t_2\le30$ ms. One concrete
+choice is a calibrated $1\,\mu{\rm m}$ spatial guard on each scored
+side and terminal exposure windows of 18–19 and 29–30 ms at low
+power, and 49–50 ms at high power. The high-power count must be
+measured beyond this particular $L$. With the same lower fractions
+$0.35$ and $0.36$ there and in the late left window, respectively,
+$C_1>0.927$ would suffice before the remaining calibration and
+statistical allowances. The times, guards and fraction specify a
+proposed test. The published figures give no such timed triple.
+
+**Checking the launch with two blank images.** The thermal assignment
+and both fitted widths can be dropped in the axial guide. Choose the
+power independently at release. On blank runs with the same preparation,
+leave only the measured uniform acceleration on. At an early time
+$t_a$ and a later time $t_b$, use separate terminal images to score
+$Y(t)=z(t)+d-gt^2/2$. Ordinary trajectories give
+$Y(t)=-X+v_0t$. This allows a test using only bounded position counts.
+
+Use windows of 0–0.1 ms and 40.1–40.2 ms, respectively, with
+calibrated time stamps or an allowance for the variation of $gt^2/2$
+within a shutter. Let $e_a$ bound the fraction outside
+$|Y(t_a)|\le8\,\mu{\rm m}$. Let $e_n,e_w$ bound the fractions
+outside $|Y(t_b)|\le37$ and $192\,\mu{\rm m}$ in the *same* later
+image. A fixed spatial guard and measured leakage can be included in
+each of these bounds. Assume the high-power optical work at launch
+is at most $mg$ times $1\,\mu{\rm m}$ for $|X|\le8.5\,\mu{\rm m}$.
+
+* If the high-power fraction observed past $110\,\mu{\rm m}$ exceeds
+  $e_a+e_n$, some transmitted trajectories also satisfy both narrow
+  blank windows under the classical common-release hypothesis. This
+  is a union bound across settings. On that overlap,
+  $|v_0|\le(8+37)\,\mu{\rm m}/(40\,{\rm ms})=1.125$ mm/s and
+  $|X|\le8.113\,\mu{\rm m}$. They start left of $-b$ and cross the
+  whole interval. Substituting the upper launch energy gives
+  $H<46.5\,\mu{\rm m}$ and $B<22.6\,\mu{\rm m}$ at $r\ge2.9$.
+  The existence of even one such path bounds the common barrier.
+* Outside a total fraction at most $e_a+e_w$, the wider windows give
+  $|v_0|\le5$ mm/s and $|X|\le8.5\,\mu{\rm m}$. These low-power
+  atoms have energy per $mg$ at least $25.7\,\mu{\rm m}$, too high
+  to turn in the interval, and at most
+  $34.2+8.5+62.5+1/2.9<106\,\mu{\rm m}$. The return-time bound
+  therefore prevents them from passing $110\,\mu{\rm m}$ and
+  returning behind $-10\,\mu{\rm m}$ by 30 ms.
+
+Consequently the four independently timed exposures (two blank and
+two low-power), together with the high-power terminal count, test
+
+$$
+ T_H>e_a+e_n
+ \quad\Longrightarrow\quad C_1+C_2-1\le e_a+e_w .
+$$
+
+For example, upper tail fractions $0.17,0.17,0.02$, high transmission
+above $0.35$ and late low-power occupancy at least $0.36$ would
+make an early occupancy above $0.83$ decisive, with the inequalities
+applied to simultaneous error bounds. This score requires no
+measurement of position and velocity together. It uses the same
+release, dark-guide acceleration, static scalar optical work and
+calibrated image windows in every setting. The blank guide must be
+ballistic to the stated accuracy. These blank and intermediate
+counts are experimental inputs, not values inferred from Fig. 3.
+
+**An explicit classical alternative to a common axial force.** Let
+four transverse strips have incident fractions $0.38,0.25,0.09,0.28$.
+In each strip take a smooth nonnegative axial light profile supported
+in $|z|\le1\,\mu{\rm m}$ with its maximum at zero. Give the maxima
+at low power the respective heights $70,20,10.5,5\,\mu{\rm m}$ in units
+of $mg$. A single smooth optical intensity can have these four
+plateaux across the beam, joined between the populated strips. Atoms
+at rest transversely on a plateau feel only its axial force.
+
+Make the third strip cold, with $X=0$. Split the remaining $0.91$
+of the beam into $0.71$ cold and $0.20$ thermal. Take
+$X=\pm3.5\sqrt{0.80/0.71}\,\mu{\rm m}$ on these other cold rays
+and $X=\pm3.5\,\mu{\rm m}$ on the thermal rays, with equal signs.
+The cold source has the specified rms size. Give the cold and thermal
+atoms launch velocities $\pm0.35$ and $\pm2.6$ mm/s respectively,
+with both signs equiprobable. All energies per $mg$ lie between 30
+and $55\,\mu{\rm m}$. In the third strip the energy is about
+$34.5\,\mu{\rm m}$. At powers $1,3,3.6$ times the low setting,
+that strip passes, passes and reflects: its tilted peak is at most
+$32.5\,\mu{\rm m}$ at the middle power and at least $37.8\,\mu{\rm m}$
+at the highest. Only the strongest strip reflects at low power,
+and only the weakest transmits at the highest power. A sufficiently
+late side image gives $0.38$ reflected, $0.37$ transmitted and
+$0.28$ transmitted at the respective settings. This fits all three
+rounded readings and the launch spreads with ordinary trajectories.
+Testing it requires
+the axial work across the *occupied* transverse beam. For fixed strip
+gains ranging by a factor $\kappa<r$, the calculation still holds with
+$r/\kappa$ in place of $r$. At negligible launch light, fitting 36%
+true local returns would require $\kappa\ge r(27.2-10)/(44.2-10)>1.45$
+in this class. The remaining points of the power scan were not used
+to choose the strips.
+
+**Central motion and the action limit.** There is an exact central
+version. Put the same potential on a shell with $z=R-R_B$, where $R$
+is the radius, and launch inside the shell at $R_0>0$. For angular
+momentum $J$, include the initial transverse energy
+$J^2/(2mR_0^2)$ in $mgw$ when averaging over the source. The
+centrifugal energy at each high-power crossing is nonnegative. At a
+low-power radial turn outside $R_0$ it is at most its launch value.
+Thus $P_Lu(z)-z\ge d+X$ there, and the moment and return-time
+bounds apply to arbitrary admitted angular momenta. A launch to the
+left of $-b$ ensures the required radial ordering for a return in
+the interval. The two blank images give the stated ballistic bounds
+on a radial ray with $J=0$. For $J\ne0$ the blank radial acceleration
+also contains $J^2/(m^2R^3)$. If bounded by $c_*$, this adds at most
+$c_*t^2/2$ to a blank displacement and must be allowed along with
+the initial transverse energy. The potassium experiment implements an
+axial guide. A shell with measured total launch kinetic energy would
+test central orbits themselves.
+
+For fixed smooth scalar forces, a strict excess in the guarded
+finite-time observations would also exclude a sequence of canonical
+reduced actions $a\downarrow0$. Keep the shell (smoothly extended
+away from the admitted region), source bounds, power settings and
+position responses fixed in physical units. Use normalized initial
+density matrices, tight in position and momentum with the stated
+second-moment bounds. Use a common low-power preparation at the two
+times and, when using the blank-image test, the same release state
+before the independent choice of field. Use bounded continuous
+position scores supported on their assigned sides. For smooth
+potentials with bounded derivatives of
+order two and higher on finite time intervals, subsequential Wigner
+measures are positive, have full mass by tightness, and propagate by
+the classical Hamiltonian flow. Their moments obey the bounds by
+truncation. They would reproduce those scores and violate the trajectory
+inequality. This uses semiclassical transport for fixed potentials.
+[Lions and Paul](https://doi.org/10.4171/RMI/143) (abstract, Wigner
+measures and Liouville transport). If a reconstructed force profile
+can itself develop structure on a length that vanishes with $a$, this
+argument requires independent control of its derivatives.
+
+The dimensional inputs are inertial mass if energies or action are
+quoted, the driving acceleration, launch displacement and velocity
+moments, work at release, the two plane positions, clock times and
+gate widths, and the spatial response of the images. The experiment
+uses 532 nm light and a projected pixel pitch of $0.196\,\mu{\rm m}$.
+The shell also specifies $R_B$ and the source radii and angular momenta
+if their energy contribution is measured separately.
+Only the *ratio* of optical powers enters the bound. For example,
+$t_*=\sqrt{d/g}$, $S_*=md^2/t_*$ express a trial action by $a/S_*$.
+Neither the camera scale nor the clock follows this dilation. Refining
+the mathematical orbit between the images leaves all these inputs fixed.
 
 ## An exterior force test with argon
 
@@ -3018,3 +3356,5 @@ atoms even with internal states. Isotope enrichment bounds the extra
 work needed even with constrained atoms. An independent bound on the
 isotope-dependent force during passage between the two environments
 would test the remaining classical alternative.
+The two-power barrier comparison needs guarded return counts and
+independent control of the optical work across the occupied beam.

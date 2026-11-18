@@ -9,6 +9,10 @@ The first priority is an explanation of positive physical action from the
 central-force trajectory limit itself. Newton connects [Lemma X's force
 measurement](../notes/newton-insertion-action.md#lemma-x-and-the-measurement-of-initial-force)
 to the orbital force rule in Book I, Proposition VI (1713).
+In the potassium [two-power test](../notes/balaban-newton-time-blocking.md#locating-a-turn-with-two-barrier-powers),
+did the counted atoms reverse near the barrier? Two blank images
+calibrate the launch. An early and a late count locate a return, and the
+high-power count bounds the work across a commonly illuminated beam.
 For a harmonic central force the [trapped-ion contrast estimates](../notes/newton-insertion-action.md#three-measured-contrasts-of-a-trapped-ion)
 exceed the additive phase ceiling by $0.268$ at one preparation. Can
 the probe's rms displacement error be bounded independently below
