@@ -104,7 +104,10 @@ free flight. A nonnegative spherical gravitating source restores unique
 nonradial motion. For the branching force, uniform agreement of the
 canonical products over a set of trial actions is equivalent to a
 positive infimum of that set. A positive lower width for classical
-ensembles gives the same refinement property.</p>
+ensembles gives the same refinement property. For the shrinking Gaussian
+preparations the two theories also give the same probabilities for each
+of the two limiting radii. The odds change when the impulse interval is
+comparable to the position width times its squared logarithm.</p>
 <p>The polygon proof uses standard stability, consistency and Gronwall
 arguments. The arrival test is a direct energy calculation, not the
 general first-order Osgood criterion. Teschl [<span class="citation"
@@ -1199,9 +1202,8 @@ upper bound tends to <span
 class="math inline">\(\operatorname{erf}(\lambda/2)\)</span> at <span
 class="math inline">\(h/\sqrt w\to\lambda\)</span>, <span
 class="math inline">\(w\downarrow0\)</span>. Both this and the quantum
-overlap bound concern possible terminal differences. An actual
-difference between the two dynamics at the critical scale requires their
-branch probabilities. <a
+overlap bound concern possible terminal differences. The next
+calculation gives the actual terminal law. <a
 href="https://arxiv.org/pdf/1810.08693#page=3">Devroye, Mehrabian and
 Reddad, p. 3</a> (equal-covariance formula).</p>
 <p>Newton’s letter uses point-state uniqueness in the inverse-square
@@ -1211,6 +1213,469 @@ for the specified canonical family. One must independently admit the
 force (C1), require agreement of impulse placements uniformly over
 allowed actions, and justify the chosen state space and dynamics. The
 historical passage supplies none of these extensions.</p>
+<h3 id="branch-probabilities-for-shrinking-gaussian-preparations">Branch
+probabilities for shrinking Gaussian preparations</h3>
+<p><strong>6.1 Sol Max, 2026-11-18.</strong> Keep the force (C1), the
+initial state, the radial readout and <span
+class="math inline">\(0&lt;T&lt;1/40\)</span>. Use equal cells <span
+class="math inline">\(h=T/N\)</span> and write <span
+class="math inline">\(\sigma=+1\)</span> for a kick after each flight
+and <span class="math inline">\(\sigma=-1\)</span> for a kick before
+each flight. Put <span class="math inline">\(d=\sqrt{a/S_0}\)</span> in
+the quantum family and <span class="math inline">\(d=\sqrt w\)</span> in
+the classical ensemble. Let <span
+class="math inline">\(\ell=\log(1/d)\)</span> and take <span
+class="math inline">\(d\downarrow0\)</span> and <span
+class="math inline">\(h\downarrow0\)</span> with <span
+class="math inline">\(h/(d\ell^2)\to\lambda\)</span>, <span
+class="math inline">\(0\le\lambda\le\infty\)</span>. For
+<strong>both</strong> evolutions the terminal radius converges in
+distribution to</p>
+<p><span class="math display">\[
+(1-P_\sigma)\delta_{1-Y(T)}+P_\sigma\delta_{1+Y(T)},\qquad
+P_\sigma=\frac{1+\sigma\,\operatorname{erf}(\lambda/2)}2 .
+\tag{C7}
+\]</span></p>
+<p>Here <span
+class="math inline">\(\operatorname{erf}(+\infty)=1\)</span>. In
+particular <span class="math inline">\(h\)</span> comparable to <span
+class="math inline">\(d\)</span> gives equal branch weights in both
+orders. An order bias survives at <span class="math inline">\(h\)</span>
+comparable to <span class="math inline">\(d\ell^2\)</span>, and complete
+separation holds exactly when <span
+class="math inline">\(h/(d\ell^2)\to\infty\)</span>.</p>
+<h4 id="which-part-of-the-initial-preparation-leaves-on-each-side">Which
+part of the initial preparation leaves on each side</h4>
+<p>First suppose <span class="math inline">\(\lambda&lt;\infty\)</span>.
+Let <span class="math inline">\(x=(r_0-1)/d\)</span>, let <span
+class="math inline">\(p_r\)</span> be the initial radial velocity and
+let <span class="math inline">\(\gamma\)</span> be the square of the
+dimensionless angular momentum per unit mass. First restrict <span
+class="math inline">\(x\)</span>, <span
+class="math inline">\(p_r/d\)</span> and <span
+class="math inline">\((\gamma-1)/d\)</span> to bounded sets. During a
+flight <span class="math inline">\(r&#39;&#39;=\gamma/r^3\)</span>. At a
+kick the radial velocity decreases by <span class="math inline">\(h
+g(r)\)</span>. The determinant calculation (C3), now with <span
+class="math inline">\(z=h^2\gamma/r_n^2\)</span> and the two <span
+class="math inline">\(B\)</span> terms multiplied by <span
+class="math inline">\(\gamma\)</span>, gives, for <span
+class="math inline">\(y_n=r_n-1\)</span>,</p>
+<p><span class="math display">\[
+\frac{y_{n+1}-2y_n+y_{n-1}}{h^2}
+   =\alpha(y_n)+\frac{\gamma-1}{r_n^3}+O(h^2),\qquad
+\frac{y_1-y_0}{h}=p_r+h\bigl(\sigma/2+o(1)\bigr).
+\tag{C8}
+\]</span></p>
+<p>The second formula follows by taking the length of the first drift
+vector, with the initial velocity changed only in the kick-first case.
+The error in the first formula is uniform near the circle by the same
+Taylor bounds as in (C3). All limiting trajectories stay strictly in the
+annulus up to <span class="math inline">\(T\)</span> by (C2) and
+compactness.</p>
+<p>In the variables <span class="math inline">\(Z=y/d\)</span>, <span
+class="math inline">\(u=t\ell^2\)</span> the mesh is <span
+class="math inline">\(h\ell^2\to0\)</span>. On bounded <span
+class="math inline">\(Z\)</span> intervals <span
+class="math inline">\(\alpha(dZ)/(d\ell^4)\to Z\)</span> uniformly,
+including at zero, since <span class="math inline">\(|Z|\,|\log
+|Z||^k\)</span> stays bounded near zero for each <span
+class="math inline">\(k\le4\)</span>. The other acceleration terms in
+(C8), divided by <span class="math inline">\(d\ell^4\)</span>, vanish.
+Thus on every bounded <span class="math inline">\(u\)</span> interval
+the scaled positions and their difference quotients converge to the
+solution of <span class="math inline">\(Z&#39;&#39;=Z\)</span>,</p>
+<p><span class="math display">\[
+Z(u)=x\cosh u+(\sigma\lambda/2)\sinh u .                       \tag{C9}
+\]</span></p>
+<p>Uniformity on compact initial sets follows by summing the recurrence
+for position and velocity and applying the Lipschitz estimate for the
+limiting linear equation up to exit from a larger bounded interval. For
+<span class="math inline">\(|x+\sigma\lambda/2|\ge\eta&gt;0\)</span>,
+(C9) and its derivative have the sign of <span
+class="math inline">\(x+\sigma\lambda/2\)</span> and magnitude bounded
+below at some fixed <span class="math inline">\(u_*\)</span>, uniformly
+on the restricted set. At that node the signed radius displacement is at
+least <span class="math inline">\(c d\)</span>, for a fixed <span
+class="math inline">\(c&gt;0\)</span>, and is increasing. Thereafter its
+signed second difference divided by <span
+class="math inline">\(h^2\)</span> is at least <span
+class="math inline">\(\alpha(|y_n|)/2\)</span>, since <span
+class="math inline">\(\alpha(cd)\gg d+h^2\)</span> and <span
+class="math inline">\(\alpha\)</span> is increasing. The level estimate
+(C4) applies from <span class="math inline">\(cd\)</span>. Its mesh
+contribution is <span class="math inline">\(O(h\log(1/d))\to0\)</span>.
+Consequently the limiting orbit leaves immediately on this side. This
+argument is uniform for the indicated compact sets, including sets of
+initial points which cross the circle during the short interval <span
+class="math inline">\(u\le u_*\)</span>.</p>
+<p>For the classical Gaussian, <span class="math inline">\(x\)</span>
+converges in law to a variable with density <span
+class="math inline">\(e^{-x^2}/\sqrt\pi\)</span>. The other two scaled
+initial quantities are tight, as follows by expanding <span
+class="math inline">\(q\wedge p\)</span> and the radial projection of
+<span class="math inline">\(p\)</span> at <span
+class="math inline">\((q_0,v_0)\)</span>. The dividing point <span
+class="math inline">\(x=-\sigma\lambda/2\)</span> has limiting
+probability zero. Removing the cutoffs gives <span
+class="math inline">\(\Pr(x+\sigma\lambda/2&gt;0)=P_\sigma\)</span>.
+This proves the classical statement. More generally, if <span
+class="math inline">\(p_r/(d\ell^2)\to v\)</span>, the coefficient of
+<span class="math inline">\(\sinh u\)</span> in (C9) is <span
+class="math inline">\(v+\sigma\lambda/2\)</span>. Varying the impulse
+bias for this force therefore reads the distribution of the single
+variable <span class="math inline">\(x+v\)</span> at its continuity
+points. Any atomless law for that variable is realized classically by
+assigning it to <span class="math inline">\(x\)</span>, taking <span
+class="math inline">\(v=0\)</span> and fixing <span
+class="math inline">\(\gamma=1\)</span>. Truncating <span
+class="math inline">\(x\)</span> to <span
+class="math inline">\(|x|\le1/(2d)\)</span> keeps all initial radii
+positive and preserves the limit.</p>
+<h4 id="quantum-transport-through-the-circle">Quantum transport through
+the circle</h4>
+<p>In polar coordinates the coherent state’s only angular factor is
+<span class="math inline">\(\exp(r e^{i\theta}/d^2)\)</span>. In <span
+class="math inline">\(L^2(dr)\)</span> the initial radial amplitude in
+mode <span class="math inline">\(k\ge0\)</span> is therefore
+proportional to <span
+class="math inline">\(u_k(r)=r^{k+1/2}\exp(-r^2/(2d^2))\)</span>.
+Integrating these squared amplitudes with their Fourier coefficients
+gives Poisson weights of mean <span
+class="math inline">\(d^{-2}\)</span> for <span
+class="math inline">\(k\)</span>. Every factor preserves <span
+class="math inline">\(k\)</span>, and a radial observable is diagonal in
+these modes. Discarding <span
+class="math inline">\(|d^2k-1|&gt;Md\)</span> costs at most <span
+class="math inline">\(M^{-2}\)</span> in probability. The radial kinetic
+operator in a retained mode is</p>
+<p><span class="math display">\[
+-\tfrac12 d^4\partial_r^2+\frac{\gamma}{2r^2},
+\qquad \gamma=d^4(k^2-1/4)=1+O_M(d).
+\]</span></p>
+<p>Use smooth compact cutoffs in <span
+class="math inline">\(x=(r-1)/d\)</span> on the two sides of the
+dividing point, leaving out <span
+class="math inline">\(|x+\sigma\lambda/2|&lt;\eta\)</span>. The initial
+phase in each mode is constant. For either cutoff radial amplitude <span
+class="math inline">\(A_0\)</span> and <span
+class="math inline">\(j=0,1,2\)</span> we have <span
+class="math inline">\(\|\partial_r^j A_0\|\le C d^{-j} n_k\)</span>,
+where <span class="math inline">\(n_k\)</span> is the norm of the full
+initial mode including its Fourier coefficient. This follows by
+differentiating <span class="math inline">\(u_k\)</span> on <span
+class="math inline">\(r=1+O(d)\)</span> with <span
+class="math inline">\(d^2k=1+O_M(d)\)</span>. Constants below may depend
+on these fixed cutoffs, <span class="math inline">\(T\)</span> and a
+finite upper bound for <span
+class="math inline">\(h/(d\ell^2)\)</span>.</p>
+<p>Some rays cross <span class="math inline">\(r=1\)</span> before
+leaving. To control the wave at that crossing, set <span
+class="math inline">\(s=d/\ell\)</span>. In <span
+class="math inline">\(\alpha\)</span> replace <span
+class="math inline">\(L(y)\)</span> inside <span
+class="math inline">\(|y|&lt;s\)</span> by <span
+class="math inline">\(\log(1/s)+b_0(y/s)\)</span> with <span
+class="math inline">\(b_0\)</span> smooth and even, zero for <span
+class="math inline">\(|y/s|\le1/2\)</span> and equal to <span
+class="math inline">\(\log(1/|y/s|)\)</span> for <span
+class="math inline">\(|y/s|\ge 1\)</span>, with a smooth transition.
+Denote the modified potential by <span class="math inline">\(\widetilde
+U\)</span>. Its additive constant can be chosen so that it agrees with
+<span class="math inline">\(U\)</span> on both sides of the strip, since
+the change of its derivative is odd in <span
+class="math inline">\(y\)</span>. Expanding the fourth power and using
+the bound on <span class="math inline">\(|Z|\,|\log |Z||^k\)</span>
+gives</p>
+<p><span class="math display">\[
+\|\widetilde U-U\|_\infty\le C s^2\ell^3 .
+\tag{C10}
+\]</span></p>
+<p>The modified forces converge uniformly to the original one and obey
+the same scaled force limit in (C9). Thus all the retained rays of the
+modified problem reach their prescribed branch, also for <span
+class="math inline">\(p_r=0\)</span> and the modal <span
+class="math inline">\(\gamma\)</span> above.</p>
+<p>Here are the uniform transport estimates needed to apply
+time-dependent WKB to these shrinking amplitudes. Write <span
+class="math inline">\(R_t(v)\)</span> for the radial position of a
+modified ray starting at radius <span class="math inline">\(v\)</span>
+with zero radial velocity and set <span
+class="math inline">\(J=\partial_v R_t\)</span>, <span
+class="math inline">\(H=\partial_v^2R_t\)</span>, <span
+class="math inline">\(I=\partial_v^3R_t\)</span>. Primes on <span
+class="math inline">\(J\)</span> denote time derivatives. During a
+flight <span class="math inline">\(J&#39;&#39;=-3\gamma
+R_t^{-4}J\)</span>. At a kick <span
+class="math inline">\(J&#39;\)</span> gains <span
+class="math inline">\(h c_nJ\)</span> with <span
+class="math inline">\(c_n=-\widetilde g&#39;(r_n)\ge0\)</span>. This
+holds throughout the annulus for small <span
+class="math inline">\(d\)</span> because the leading term in the
+derivative of the modified <span class="math inline">\(\alpha\)</span>
+in the strip is <span class="math inline">\(\log^4(1/s)\)</span>. We
+have <span class="math inline">\(J(0)=1\)</span> and initial derivative
+zero before any kick. Use the sine and cosine solution formula with
+background coefficient <span class="math inline">\(10\ge3\gamma
+R_t^{-4}\)</span>. The remaining continuous source is <span
+class="math inline">\((10-3\gamma R_t^{-4})J\)</span> and the kick terms
+are positive. Since <span
+class="math inline">\(\sqrt{10}T&lt;\pi/4\)</span>, the cosine is at
+least <span class="math inline">\(1/2\)</span> and the sine is
+increasing. Up to a putative first zero this gives positivity and, by
+comparing the formulas at two times, <span class="math inline">\(J(t)\ge
+J(v&#39;)/2\)</span> for <span class="math inline">\(0\le v&#39;\le t\le
+T\)</span>. In particular each cutoff evolves without a caustic.</p>
+<p>Define <span class="math inline">\(t_1=2000\log\ell/\ell^2\)</span>
+and <span class="math inline">\(t_2=2t_1\)</span> for large <span
+class="math inline">\(\ell\)</span>. Up to <span
+class="math inline">\(t_2\)</span>, summing (C8) for <span
+class="math inline">\(|y_n|+|\Delta y_n|/(h\ell^2)\)</span> gives <span
+class="math inline">\(|y_n|\le C d\exp(C\ell^2 t_2)&lt;\sqrt d\)</span>.
+Here the modified force term is bounded by <span
+class="math inline">\(C\ell^4 |y_n|\)</span> in the annulus. On this
+short interval <span class="math inline">\(c_n\ge\ell^4/100\)</span> for
+small <span class="math inline">\(d\)</span>. After <span
+class="math inline">\(u_*/\ell^2\)</span> the signed nodal acceleration
+is also at least <span class="math inline">\(\ell^4|y_n|/100\)</span>
+until <span class="math inline">\(t_2\)</span>. These inequalities
+give</p>
+<p><span class="math display">\[
+|R_t-1|\ge d\ell^8\quad(t_1\le t\le T),\qquad
+\frac{J(v&#39;)}{J(t)}\le C\ell^{-8}
+       \quad(0\le v&#39;\le t_1,\ t_2\le t\le
+T).                 \tag{C11}
+\]</span></p>
+<p>Indeed on a block of length <span
+class="math inline">\(100/\ell^2\)</span> the signed displacement, once
+increasing, at least doubles by summing its lower acceleration. For
+<span class="math inline">\(J\)</span> use the positive kick terms of
+the sine formula on the block. The earlier terms contribute at least
+half the starting <span class="math inline">\(J\)</span>. Each later
+<span class="math inline">\(J\)</span> is at least half that value and
+<span class="math inline">\(\sin(\sqrt{10}\,t)/\sqrt{10}\ge t/2\)</span>
+there. The sum of <span class="math inline">\(h\)</span> times the
+remaining time over the kicks is at least one quarter of the squared
+block length, since <span class="math inline">\(h\ell^2\to0\)</span>.
+This again more than doubles <span class="math inline">\(J\)</span>.
+Each of the intervals from <span
+class="math inline">\(u_*/\ell^2\)</span> to <span
+class="math inline">\(t_1\)</span> and from <span
+class="math inline">\(t_1\)</span> to <span
+class="math inline">\(t_2\)</span> contains <span
+class="math inline">\(20\log\ell-O(1)\)</span> blocks. Subsequently the
+signed nodal increments stay positive. During a flight the radius
+differs from linear interpolation by <span
+class="math inline">\(O(h^2)\)</span>, by bounded centrifugal
+acceleration. This proves (C11).</p>
+<p>For clarity about diffraction, put <span
+class="math inline">\(E_2=d|H|/J^2\)</span> and <span
+class="math inline">\(E_3=d^2|I|/J^3\)</span>. Let <span
+class="math inline">\(F_j\)</span> denote the <span
+class="math inline">\(j\)</span>th radial derivative of the acceleration
+during flight or of the velocity increment per unit <span
+class="math inline">\(h\)</span> at a kick, as appropriate, and use the
+sum of continuous and impulse integrals <span
+class="math inline">\(d\nu=dt+h\sum_n\delta_{t_n}\)</span>. The explicit
+modified force bounds on the rays are</p>
+<p><span class="math display">\[
+|F_2|\le C(1+\ell^3/\max(s,|y|)),\qquad
+|F_3|\le C(1+\ell^3/\max(s,|y|)^2).
+\]</span></p>
+<p>The Jacobi Green function is <span
+class="math inline">\(J(t)J(v&#39;)\int_{v&#39;}^t
+J(u)^{-2}du\le4(t-v&#39;)J(t)/J(v&#39;)\)</span>. This follows from the
+Wronskian, which is preserved across every velocity jump.
+Differentiating the ray equation twice and three times gives sources
+<span class="math inline">\(F_2J^2\)</span> and <span
+class="math inline">\(F_3J^3+3F_2JH\)</span>. Put <span
+class="math inline">\(B_2=d\,|F_2|\)</span>, <span
+class="math inline">\(B_3=d^2|F_3|\)</span> and <span
+class="math inline">\(D=J(v&#39;)/J(t)\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+E_2(t)&amp;\le4\int_0^t(t-v&#39;)D B_2\,d\nu(v&#39;),\\
+E_3(t)&amp;\le4\int_0^t(t-v&#39;)D^2
+          \bigl(B_3+3B_2 E_2(v&#39;)\bigr)d\nu(v&#39;).
+\end{aligned}                                                   \tag{C12}
+\]</span></p>
+<p>Up to <span class="math inline">\(t_2\)</span>, <span
+class="math inline">\(D\le2\)</span>, <span
+class="math inline">\(B_2=O(\ell^4)\)</span>, <span
+class="math inline">\(B_3=O(\ell^5)\)</span> and the time integral of
+<span class="math inline">\(t-v&#39;\)</span> is at most <span
+class="math inline">\(2t(t+h)\)</span>. Hence <span
+class="math inline">\(E_2=O((\log\ell)^2)\)</span> and <span
+class="math inline">\(E_3=O(\ell(\log\ell)^2+(\log\ell)^4)\)</span>.
+After <span class="math inline">\(t_2\)</span>, split each integral at
+<span class="math inline">\(t_1\)</span>. On its first part <span
+class="math inline">\(D=O(\ell^{-8})\)</span>. On its second part (C11)
+gives <span class="math inline">\(B_2+B_3=O(d+\ell^{-5})\)</span>. First
+applying the <span class="math inline">\(E_2\)</span> bound and then the
+<span class="math inline">\(E_3\)</span> bound gives <span
+class="math inline">\(E_2+E_3=o(1)\)</span> uniformly for <span
+class="math inline">\(t_2\le t\le T\)</span>.</p>
+<p>Transport the half-density along these rays, so <span
+class="math inline">\(A(t,R_t(v))=A_0(v)/\sqrt{J(t,v)}\)</span>. Use the
+classical phase for each flight and subtract <span
+class="math inline">\(h\widetilde U\)</span> at each kick. The standard
+caustic-free WKB residual bounds the norm error from the flights by
+<span class="math inline">\(\tfrac12
+d^2\int_0^T\|\partial_r^2A(t)\|dt\)</span>. <a
+href="https://arxiv.org/pdf/1112.4056">Schubert, Vallejos and Toscano,
+§2, (20)–(22)</a> (transport and Duhamel estimate, passage). The
+amplitudes have compact support away from the radial endpoint, and kicks
+preserve the norm. Twice differentiating the transported half-density
+gives</p>
+<p><span class="math display">\[
+d^2\|\partial_r^2 A(t)\|\le C n_k
+\sup_v\bigl(J^{-2}+E_2/J+E_2^2+E_3\bigr).
+\]</span></p>
+<p>On <span class="math inline">\([0,t_2]\)</span> the integral of this
+bound is <span
+class="math inline">\(O(n_k(\log\ell)^3/\ell)=o(n_k)\)</span>. On <span
+class="math inline">\([t_2,T]\)</span> it is <span
+class="math inline">\(o(n_k)\)</span> by (C11)–(C12). Using the
+<strong>original</strong> quantum kicks on the approximate wave adds at
+most <span class="math inline">\(C
+n_k(t_1+h)s^2\ell^3/d^2=o(n_k)\)</span> by (C10). After <span
+class="math inline">\(t_1\)</span> its support is outside the modified
+strip. Unitarity propagates these residual bounds through every factor.
+All errors are uniform over retained modes, so their squared norms sum
+to <span class="math inline">\(o(1)\)</span>.</p>
+<p>For either cutoff the final approximate wave is supported at radii
+converging uniformly to its selected radius. The two supports are
+disjoint at <span class="math inline">\(T\)</span>. Their masses equal
+their initial cutoff masses. The full initial radial position law gives
+the same limiting <span class="math inline">\(x\)</span> density <span
+class="math inline">\(e^{-x^2}/\sqrt\pi\)</span> as in the classical
+calculation. Letting the angular and radial cutoffs increase and <span
+class="math inline">\(\eta\)</span> decrease to zero removes an
+arbitrarily small initial norm. This proves (C7) for every bounded
+continuous radial score, including <span
+class="math inline">\(f\)</span>.</p>
+<h4 id="complete-separation-and-the-continuum-dynamics">Complete
+separation and the continuum dynamics</h4>
+<p>Suppose now <span
+class="math inline">\(h/(d\ell^2)\to\infty\)</span>. Define <span
+class="math inline">\(e\)</span> by <span
+class="math inline">\(eL_e^2=h\)</span>, <span
+class="math inline">\(L_e=\log(1/e)&gt;2\)</span>. Then <span
+class="math inline">\(d/e\to0\)</span> and <span
+class="math inline">\(L_e\sim\log(1/h)\)</span>. In (C8) rescale the
+radius by <span class="math inline">\(e\)</span> and time by <span
+class="math inline">\(L_e^{-2}\)</span>. For every bounded initial
+cutoff the rescaled displacement starts at zero in the limit and its
+initial difference quotient tends to <span
+class="math inline">\(\sigma/2\)</span>. Formula (C9) now reads <span
+class="math inline">\((\sigma/2)\sinh u\)</span>. The same level
+estimate yields the immediate <span
+class="math inline">\(\sigma\)</span> branch for the classical
+ensemble.</p>
+<p>For the quantum state first consider subsequences with <span
+class="math inline">\(\ell/L_e\)</span> bounded. Keep the preparation
+width <span class="math inline">\(d\)</span> and smoothing width <span
+class="math inline">\(s=d/\ell\)</span>. The smoothed force has the same
+inner limit since its change is <span
+class="math inline">\(O(s\ell^3)=o(e L_e^4)\)</span>. Use <span
+class="math inline">\(L_e\)</span> in <span
+class="math inline">\(t_1,t_2\)</span>. All rays on a bounded initial
+cutoff now lie on the selected side after <span
+class="math inline">\(u_*\)</span>. The early upper bound is <span
+class="math inline">\(Ce\exp(C L_e^2 t_2)&lt;\sqrt e\)</span>. Equation
+(C11) then gives <span class="math inline">\(|R_t-1|\ge eL_e^8\)</span>
+and <span class="math inline">\(D=O(L_e^{-8})\)</span> on its respective
+intervals. The early bounds for <span
+class="math inline">\(B_2,B_3\)</span> are <span
+class="math inline">\(O(L_e^4),O(L_e^5)\)</span>, and their late sum is
+<span class="math inline">\(O(d+L_e^{-5})\)</span> since <span
+class="math inline">\(d\le e\)</span>. Thus the same transport proof
+gives vanishing norm error, including the smoothing cost <span
+class="math inline">\(O((t_1+h)\ell)\)</span>. There is just one
+outgoing radius.</p>
+<p>If <span class="math inline">\(\ell/L_e\to\infty\)</span>, <span
+class="math inline">\(d\)</span> tends to zero faster than every fixed
+power of <span class="math inline">\(h\)</span>. Compare the packet
+directly with its point polygon <span
+class="math inline">\((q_n,p_n)\)</span> in (C3). For <span
+class="math inline">\(r_n=|q_n|=1+y_n\)</span>, <span
+class="math inline">\(n\ge1\)</span>, put <span
+class="math inline">\(\Lambda_n=1+\log^2(1/|y_n|)\)</span>. The
+acceleration field <span class="math inline">\(F\)</span> satisfies</p>
+<p><span class="math display">\[
+|F(x)-F(q_n)|\le C\Lambda_n^2 |x-q_n|.
+\]</span></p>
+<p>Within <span class="math inline">\(|y_n|/2\)</span> of <span
+class="math inline">\(q_n\)</span> this is the derivative bound from
+(C1). For larger distances use its global short-distance modulus <span
+class="math inline">\(Cv(1+|\log v|^4)\)</span> at distance <span
+class="math inline">\(v\)</span>, obtained by integrating <span
+class="math inline">\(1+\log^4(1/|y|)\)</span> across a radial interval
+of length <span class="math inline">\(v\)</span>. The direction factor
+is Lipschitz in the annulus, the core is linear and the exterior has
+bounded derivative. In particular <span class="math inline">\(F\)</span>
+is <span class="math inline">\(1/2\)</span>-Hölder globally. This
+anchored estimate uses the same moment argument as the <a
+href="cusp-quantum-preparation-selection.html">power-cusp
+propagation</a>.</p>
+<p>At the first cell Hölder continuity and the exact drift and kick
+shears bound both root-mean-square deviations from the point polygon by
+<span class="math inline">\(C\sqrt d\)</span>. For subsequent cells let
+<span
+class="math inline">\(E_n=\Lambda_n\|(Q-q_n)\psi_n\|+\|(P-p_n)\psi_n\|\)</span>.
+The signed displacement grows along this polygon, so <span
+class="math inline">\(\Lambda_n\)</span> decreases. The exact shears and
+the anchored bound give <span class="math inline">\(E_{n+1}\le(1+C
+h\Lambda_n)^2 E_n\)</span> in either order. The initial <span
+class="math inline">\(|y_1|\)</span> is at least <span
+class="math inline">\(h^2/4\)</span>. By (C4) each level <span
+class="math inline">\(v\le |y_n|&lt;2v\)</span> costs at most <span
+class="math inline">\(C/\log^2(1/v)+O(h)\)</span> in time. Summing over
+at most <span class="math inline">\(C\log(1/h)\)</span> dyadic levels
+gives <span class="math inline">\(\sum_{n\ge1}^{N-1}h\Lambda_n
+=O(\log(1/h)+h\log^3(1/h))\)</span>. The amplification is at most a
+fixed power of <span class="math inline">\(1/h\)</span>, whereas <span
+class="math inline">\(E_1=O(\Lambda_1\sqrt d)\)</span> decays faster
+than every such power. The terminal packet therefore selects the same
+radius as the point polygon. Every subsequence has a further subsequence
+in one of the two regimes for <span
+class="math inline">\(\ell/L_e\)</span>. This completes the joint limit
+in (C7), including <span
+class="math inline">\(\lambda=\infty\)</span>.</p>
+<p>For the exact continuum evolution, at each fixed positive <span
+class="math inline">\(d\)</span> the products converge for the quantum
+state by the product formula and for the classical ensemble by its
+almost-everywhere uniqueness. For any sequence <span
+class="math inline">\(d\downarrow0\)</span> and any fixed bounded
+continuous radial score, choose equal cells with <span
+class="math inline">\(h&lt;d^2\)</span> and a score error less than
+<span class="math inline">\(d\)</span> from that continuum evolution.
+Formula (C7) at <span class="math inline">\(\lambda=0\)</span> gives the
+equal mixture for the exact dynamics as well.</p>
+<p>In dimensional terms the inputs are <span
+class="math inline">\(m,R,\omega\)</span>, the time <span
+class="math inline">\(T/\omega\)</span>, the cell duration <span
+class="math inline">\(h/\omega\)</span> and the specified preparation.
+They fix <span class="math inline">\(S_0=mR^2\omega\)</span>, the
+potential energy unit <span class="math inline">\(mR^2\omega^2\)</span>,
+the initial position and momentum deviations <span
+class="math inline">\(Rd/\sqrt2\)</span> and <span
+class="math inline">\(mR\omega d/\sqrt2\)</span>, and the readout width
+<span class="math inline">\(R Y(T)\)</span>. The fixed constants <span
+class="math inline">\(b,T\)</span> and the function of <span
+class="math inline">\(|q_{\rm phys}|/R\)</span> used for the score are
+dimensionless. For a quantum sequence <span
+class="math inline">\(a\)</span> with <span
+class="math inline">\(0&lt;\lambda&lt;\infty\)</span>, the sequence
+<span class="math inline">\(c a\)</span> at the same cells, <span
+class="math inline">\(c&gt;0\)</span>, has parameter <span
+class="math inline">\(\lambda/\sqrt c\)</span>. Distinct <span
+class="math inline">\(c\)</span> therefore give different limiting
+scores within the prescribed canonical family. The model with zero
+quantum action and classical widths <span
+class="math inline">\(w=a/S_0\)</span> reproduces the entire limiting
+radial law of the first sequence, including its order bias. Equality is
+asserted for these limits and this observable family.</p>
 <h2 id="consequence-for-state">6. Consequence for STATE</h2>
 <p>Initial-value construction, continuation, endpoint caustics and
 finite-time mergers have different hypotheses. Unbounded force slope
@@ -1230,8 +1695,15 @@ distinguishes uniform agreement over trial actions from agreement at
 each fixed positive action. A nonnegative spherical source admits
 order-independent classical refinement, including at a circular orbit.
 Classical ensembles of positive lower width also admit uniform
-refinement. Which dynamics or composition law requires a physical action
-in addition to a restriction on classical preparations remains open.</p>
+refinement. Even the two branch probabilities at the transition scale
+agree for matched preparations. In the scaled radial variables the
+momentum unit is <span
+class="math inline">\(mR\omega\,d\log^2(1/d)\)</span>. Its product with
+<span class="math inline">\(Rd\)</span> exceeds the Gaussian action
+<span class="math inline">\(a\)</span> by a factor <span
+class="math inline">\(\log^2(1/d)\)</span>. Whether the central-force
+argument imposes any independent relation between these two resolutions
+remains open.</p>
 <span id="retain-an-intermediate-time-as-a-fluctuating-variable"></span><p class="meta">Moved section: <a href="balaban-newton-time-blocking.html#arbitrary-intermediate-times">balaban-newton-time-blocking</a>.</p><span id="the-part-of-balabans-method-visible-here"></span><p class="meta">Moved section: <a href="newton-nonlinear-time-cell.html#source-comparison-full-densities-and-locality">newton-nonlinear-time-cell</a>.</p><span id="what-a-nonlinear-time-block-actually-produces"></span><p class="meta">Moved section: <a href="newton-nonlinear-time-cell.html#the-complete-one-vertex-weight">newton-nonlinear-time-cell</a>.</p><script>const formerFragments={"retain-an-intermediate-time-as-a-fluctuating-variable": "balaban-newton-time-blocking.html#arbitrary-intermediate-times", "the-part-of-balabans-method-visible-here": "newton-nonlinear-time-cell.html#source-comparison-full-densities-and-locality", "what-a-nonlinear-time-block-actually-produces": "newton-nonlinear-time-cell.html#the-complete-one-vertex-weight"};const formerHash=decodeURIComponent(location.hash.slice(1));if(formerFragments[formerHash])location.replace(formerFragments[formerHash]);</script>
 </main>
 <footer class="site"><div class="wrap">

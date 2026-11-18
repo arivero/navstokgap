@@ -1,6 +1,6 @@
 # State
 
-Updated 2026-11-18. New research is mathematical physics. The
+Updated 2026-11-19. New research is mathematical physics. The
 [catalog](../notes/index.md) records earlier work and its limitations.
 
 ## Newton's central-force trajectory limit
@@ -24,16 +24,18 @@ circle. A nonnegative spherical mass instead gives unique nonradial
 motion under joint source and time refinement.
 [Polygon limits and gravitational bound](../notes/balaban-ode-lesson.md#tangent-orbits-under-the-two-impulse-orders).
 
-Uniform agreement over trial actions is equivalent to a positive
-action infimum for the stated canonical family. A classical ensemble
-with a positive lower width passes the same criterion. At the scale
-where the time step is comparable to the dimensionless packet width,
-do the two dynamics select different probabilities for the two orbits?
-Their current bounds come from initial overlaps. The actual selection,
-and a mechanical reason to exclude classical dispersion or branch
-information, remain open.
-[Action criterion and classical comparison](../notes/balaban-ode-lesson.md#uniform-refinement-over-a-set-of-trial-actions)
-and [history completion](../notes/newton-cusp-preparation-floor.md).
+For one force the canonical Gaussian and its classical ensemble give
+the same [outgoing radial law at every relative refinement rate](../notes/balaban-ode-lesson.md#branch-probabilities-for-shrinking-gaussian-preparations).
+For three forces sharing the circular orbit, one common classical
+preparation with the stated initial spread scores at most $2/3$.
+A specified squeezed quantum state scores about $0.687$. Retaining
+only the limiting launch point lets classical branches match all
+three probabilities. Giving every preparation the same radial velocity
+spread closes that loophole and turns an excess into a bound relative
+to the preparation area. Does Newton's mechanics independently require
+the excess under this common change of velocity?
+[Three-force construction](../notes/cusp-quantum-preparation-selection.md#three-central-forces-on-the-same-moving-circle)
+and [action bound](../notes/cusp-quantum-preparation-selection.md#a-quantitative-bound-with-a-common-radial-velocity-spread).
 
 A vanishing action along a particular orbit or time cell differs from a
 vanishing physical action parameter. A quantum lift exists for every

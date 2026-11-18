@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "coverage": "88 maintained arguments; former notes, ideas and completed task/file names are canonical retrieval aliases. Short completed-work phrases and git history provide provenance. Proofs and source companions govern scientific scope.",
   "priority_basis": "User independent retrieval analysis, 2026-10-01; not novelty or proof quality.",
   "notes": [
@@ -164,13 +164,13 @@
     {
       "path": "notes/cusp-quantum-preparation-selection.md",
       "title": "Quantum preparations select continuations at a bounded Newton cusp",
-      "summary": "Two Gaussian families have identical position densities and the same limiting incoming trajectory, yet converge to reflection or transmission through the C1 cusp; their superpositions yield any mixture of the two outgoing branches.",
+      "summary": "At a bounded power cusp two Gaussian families with the same initial position density and limiting incoming orbit select reflection or transmission. At a moving circle three finite central forces give a classical score at most 2/3 for one common scaled preparation. A squeezed canonical state gives about 0.687. An independent common radial boost preserves a strict excess and bounds the trial action relative to the preparation area. The circular point alone admits classical histories matching all three unboosted probabilities.",
       "thematic_area": "Newton/action",
-      "strongest_result": "For the specified bounded C1 cusp and logarithmic preparations, the exact Schrödinger states share one incoming semiclassical phase-space history while different vanishing momentum shifts select opposite outgoing branches.",
+      "strongest_result": "For three autonomous forces with the same Lemma X displacement on a circle, the continuum radial score converges to the spectral probability of Pi plus kappa Q for a specified squeezed family. This transfers the established three-quadrature witness to terminal radii for a localized moving launch. A boosted excess gives the explicit fixed-ratio action bound (30).",
       "status": "result",
       "proof_status": "proved-unrefereed",
       "retrieval_priority": 3,
-      "current_relevance": "Retained because quantum semiclassical branch selection uses actual quantum preparation/dynamics; classical history and preparation-floor proofs assume different state spaces and evolution laws.",
+      "current_relevance": "Resolves how to distinguish canonical dynamics from one common positive classical preparation using only central-force outcomes. The remaining foundational premise is an independent reason that the violating coherent preparation must be admissible.",
       "relations": [
         {
           "type": "continues",
@@ -181,6 +181,11 @@
           "type": "continues",
           "target": "notes/lipschitz-certificate-quantum-lift.md",
           "reason": "Carries out its suggested singular-continuation test."
+        },
+        {
+          "type": "uses",
+          "target": "notes/balaban-ode-lesson.md",
+          "reason": "Uses the moving-circle force, radial scale, outward transport and its Jacobi estimates for three distinct force laws."
         }
       ],
       "surprising": false,
@@ -194,12 +199,22 @@
         "pure superposition",
         "Wigner mixture",
         "Athanassoulis Paul",
-        "Chabu"
+        "Chabu",
+        "three central forces",
+        "common preparation",
+        "three quadrature sign inequality",
+        "Tsirelson precession",
+        "Zaw Scarani number state",
+        "radial velocity boost",
+        "Husimi marginal",
+        "squeezed radial state",
+        "two thirds classical bound"
       ],
       "role": "result,live",
       "value": "open-mechanism,infrastructure",
-      "limitations": "Specified logarithmically shrinking preparations and a finite local time interval; the result does not classify all preparations or waiting times or derive a positive action scale.",
-      "content_coverage": "Full note and derivation read; Athanassoulis–Paul Theorem 2.1 and Lemma 5.3 and Chabu Theorem 1.12 and Proposition 3.1 checked at statement level; Chabu permits equal position profiles in the conical example. Written derivation without independent peer review."
+      "limitations": "The power-cusp theorem fixes logarithmically shrinking preparations. The circle comparison assumes tight scaled radial data and specified angular momentum control. The common launch alone can reproduce the three scores. The quantum construction uses a prepared coherent superposition and supplied action. The bound is on action divided by the shrinking preparation area, in the limit at each fixed trial ratio. A uniform joint remainder and physical action necessity remain open.",
+      "content_coverage": "Read the complete maintained note including the power cusp, equal-profile prior art, three central forces, quantum inner propagation, outgoing transport, angular localization and classical history construction. Checked Tsirelson, the Zaw and Scarani state, the quadratic Fourier kernel and Werner marginal formula at the cited passages. Internal written checks only.",
+      "completed_work": "Realized the three-quadrature inequality with central-force radii and bounded the boosted action ratio."
     },
     {
       "path": "notes/lipschitz-certificate-quantum-lift.md",
@@ -1094,13 +1109,13 @@
     {
       "path": "notes/balaban-ode-lesson.md",
       "title": "Constructing Newton motion: refinement, continuation and regularity",
-      "summary": "Mixed impulse orders converge with an explicit mesh error for globally Lipschitz forces. The conservative logarithmic family has uniqueness threshold beta=2, vanishing annular action and a local WKB residual. For outward radial forces one moving orbit determines uniqueness from rest. Sign-changing forces can agree at all successive half-times and differ on departure. At a moving circle the two impulse orders select opposite limiting orbits for one fixed finite inward force. A nonnegative spherical gravitating mass gives unique nonradial motion. For the stated canonical family, uniform agreement under refinement is equivalent to a positive lower bound on the allowed actions. Classical Gaussian ensembles satisfy the same criterion for their widths.",
+      "summary": "Mixed impulse orders converge for globally Lipschitz forces. The conservative logarithmic family has uniqueness threshold beta=2 and vanishing annular action. One moving orbit decides uniqueness from rest for outward radial forces, while sign-changing forces can agree at successive half-times and differ on departure. At a moving circle one finite inward force gives opposite point-polygon limits. Nonnegative spherical mass gives unique nonradial motion. Uniform Gaussian agreement requires a lower bound on allowed actions or classical widths. The entire limiting radial law for either constant order is the same for matched quantum and classical Gaussians at every relative refinement rate.",
       "thematic_area": "Newton/action",
-      "strongest_result": "For the finite inward force (C1), first and last impulses select the two immediate departures, which share all time derivatives and have nonzero speed and curvature. Inequality (C5) gives joint source and time refinement for nonnegative spherical gravity. For the canonical family and fixed radial position score, the worst order discrepancy under refinement is exactly zero or one according as the allowed actions have positive or zero infimum. Classical Gaussian ensembles give the same dichotomy in their preparation widths.",
+      "strongest_result": "For the circular logarithmic force, the outward branch probability is (1 plus or minus erf(lambda/2))/2 for both matched Gaussians, where lambda is the ratio of the cell duration to the dimensionless position width times its squared logarithm. This includes complete separation for infinite ratio and an equal mixture for the exact continuum dynamics. The general initial radial position and velocity select by a single linear combination in the classical inner limit.",
       "status": "result",
       "proof_status": "written proof; standard polygon methods and exact conservative examples; internal checks only",
       "retrieval_priority": 3,
-      "current_relevance": "Newton supplied the tangent-orbit argument to Cotes in October 1709. The force coefficient of Lemma X can converge uniformly while the two polygon orders select different continuations. The classical width criterion isolates the extra state-space premise needed to infer physical action.",
+      "current_relevance": "The two terminal radii and every fixed radial score have a common classical and quantum Gaussian explanation even when the two impulse orders give different odds. The branch selection and transport estimates are inputs to the three-force comparison.",
       "relations": [
         {
           "type": "continues",
@@ -1160,13 +1175,19 @@
         "impulse placement",
         "nonnegative spherical source",
         "uniform action refinement",
-        "classical Gaussian widths"
+        "classical Gaussian widths",
+        "Gaussian branch probabilities",
+        "log squared time scale",
+        "radial angular modes",
+        "impulse order error function",
+        "caustic free WKB",
+        "continuum equal mixture"
       ],
       "role": "result,synthesis",
       "value": "infrastructure,open-mechanism",
-      "limitations": "The global mesh error assumes globally Lipschitz acceleration. The radial half-time criterion uses outward acceleration and the counterexample agrees on one nested sequence. The moving-circle force is a reciprocal pair interaction with signed Poisson density. Spherical gravitational uniqueness assumes nonnegative enclosed mass and nonzero angular momentum. The action dichotomy fixes the Gaussian state family, dynamics and radial score. Bounds at the critical scale do not determine the branch probabilities. Physical action necessity remains open.",
-      "content_coverage": "Read the conservative and magnetic continuation arguments, logarithmic threshold, WKB residual and dyadic comparison (D1) through (D4). Compared the 1687, 1713 and 1726 passages and the 1709 letter. Checked the polygon selection, spherical energy bound, action criterion and classical ensemble comparison in writing. Internal checks only.",
-      "completed_work": "Determined the two impulse-order limits at a moving circle and the corresponding action and width criteria."
+      "limitations": "The global mesh error uses globally Lipschitz acceleration. The dyadic rest criterion assumes outward acceleration, and its counterexample agrees on one sequence. The branching force has signed Poisson density. Nonnegative spherical gravity is unique for nonradial data. The exact branch weights concern the specified Gaussian preparations, two constant orders, equal cells and a fixed short terminal time. Arbitrary per-cell placements enter the separate uniformity dichotomy (C6).",
+      "content_coverage": "Read the continuation and magnetic examples, logarithmic WKB residual, (D1) through (D4), Newton editions and Cotes letter. Checked (C1) through (C12), including angular reduction, smoothing at the crossing, Jacobi and WKB norm estimates, the infinite-ratio endpoint and continuum order of limits. Internal written checks only.",
+      "completed_work": "Determined all Gaussian branch weights under joint mesh and action refinement."
     },
     {
       "path": "notes/blocking-criterion-monotone.md",

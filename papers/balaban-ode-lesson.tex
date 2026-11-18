@@ -38,7 +38,10 @@ flight. A nonnegative spherical gravitating source restores unique
 nonradial motion. For the branching force, uniform agreement of the
 canonical products over a set of trial actions is equivalent to a
 positive infimum of that set. A positive lower width for classical
-ensembles gives the same refinement property.
+ensembles gives the same refinement property. For the shrinking Gaussian
+preparations the two theories also give the same probabilities for each
+of the two limiting radii. The odds change when the impulse interval is
+comparable to the position width times its squared logarithm.
 
 The polygon proof uses standard stability, consistency and Gronwall
 arguments. The arrival test is a direct energy calculation, not the
@@ -983,10 +986,9 @@ formula gives \(\operatorname{erf}(h|\nabla U(q)|/(2\sqrt w))\).
 Averaging over position bounds the score difference. This upper bound
 tends to \(\operatorname{erf}(\lambda/2)\) at \(h/\sqrt w\to\lambda\),
 \(w\downarrow0\). Both this and the quantum overlap bound concern
-possible terminal differences. An actual difference between the two
-dynamics at the critical scale requires their branch probabilities.
-\href{https://arxiv.org/pdf/1810.08693\#page=3}{Devroye, Mehrabian and
-Reddad, p.~3} (equal-covariance formula).
+possible terminal differences. The next calculation gives the actual
+terminal law. \href{https://arxiv.org/pdf/1810.08693\#page=3}{Devroye,
+Mehrabian and Reddad, p.~3} (equal-covariance formula).
 
 Newton's letter uses point-state uniqueness in the inverse-square conic
 argument. Equation (C5) justifies it classically in a broader
@@ -995,6 +997,341 @@ for the specified canonical family. One must independently admit the
 force (C1), require agreement of impulse placements uniformly over
 allowed actions, and justify the chosen state space and dynamics. The
 historical passage supplies none of these extensions.
+
+\subsubsection{Branch probabilities for shrinking Gaussian
+preparations}\label{branch-probabilities-for-shrinking-gaussian-preparations}
+
+\textbf{6.1 Sol Max, 2026-11-18.} Keep the force (C1), the initial
+state, the radial readout and \(0<T<1/40\). Use equal cells \(h=T/N\)
+and write \(\sigma=+1\) for a kick after each flight and \(\sigma=-1\)
+for a kick before each flight. Put \(d=\sqrt{a/S_0}\) in the quantum
+family and \(d=\sqrt w\) in the classical ensemble. Let
+\(\ell=\log(1/d)\) and take \(d\downarrow0\) and \(h\downarrow0\) with
+\(h/(d\ell^2)\to\lambda\), \(0\le\lambda\le\infty\). For \textbf{both}
+evolutions the terminal radius converges in distribution to
+
+\[
+ (1-P_\sigma)\delta_{1-Y(T)}+P_\sigma\delta_{1+Y(T)},\qquad
+ P_\sigma=\frac{1+\sigma\,\operatorname{erf}(\lambda/2)}2 .
+ \tag{C7}
+\]
+
+Here \(\operatorname{erf}(+\infty)=1\). In particular \(h\) comparable
+to \(d\) gives equal branch weights in both orders. An order bias
+survives at \(h\) comparable to \(d\ell^2\), and complete separation
+holds exactly when \(h/(d\ell^2)\to\infty\).
+
+\paragraph{Which part of the initial preparation leaves on each
+side}\label{which-part-of-the-initial-preparation-leaves-on-each-side}
+
+First suppose \(\lambda<\infty\). Let \(x=(r_0-1)/d\), let \(p_r\) be
+the initial radial velocity and let \(\gamma\) be the square of the
+dimensionless angular momentum per unit mass. First restrict \(x\),
+\(p_r/d\) and \((\gamma-1)/d\) to bounded sets. During a flight
+\(r''=\gamma/r^3\). At a kick the radial velocity decreases by
+\(h g(r)\). The determinant calculation (C3), now with
+\(z=h^2\gamma/r_n^2\) and the two \(B\) terms multiplied by \(\gamma\),
+gives, for \(y_n=r_n-1\),
+
+\[
+ \frac{y_{n+1}-2y_n+y_{n-1}}{h^2}
+   =\alpha(y_n)+\frac{\gamma-1}{r_n^3}+O(h^2),\qquad
+ \frac{y_1-y_0}{h}=p_r+h\bigl(\sigma/2+o(1)\bigr).
+ \tag{C8}
+\]
+
+The second formula follows by taking the length of the first drift
+vector, with the initial velocity changed only in the kick-first case.
+The error in the first formula is uniform near the circle by the same
+Taylor bounds as in (C3). All limiting trajectories stay strictly in the
+annulus up to \(T\) by (C2) and compactness.
+
+In the variables \(Z=y/d\), \(u=t\ell^2\) the mesh is \(h\ell^2\to0\).
+On bounded \(Z\) intervals \(\alpha(dZ)/(d\ell^4)\to Z\) uniformly,
+including at zero, since \(|Z|\,|\log |Z||^k\) stays bounded near zero
+for each \(k\le4\). The other acceleration terms in (C8), divided by
+\(d\ell^4\), vanish. Thus on every bounded \(u\) interval the scaled
+positions and their difference quotients converge to the solution of
+\(Z''=Z\),
+
+\[
+ Z(u)=x\cosh u+(\sigma\lambda/2)\sinh u .                       \tag{C9}
+\]
+
+Uniformity on compact initial sets follows by summing the recurrence for
+position and velocity and applying the Lipschitz estimate for the
+limiting linear equation up to exit from a larger bounded interval. For
+\(|x+\sigma\lambda/2|\ge\eta>0\), (C9) and its derivative have the sign
+of \(x+\sigma\lambda/2\) and magnitude bounded below at some fixed
+\(u_*\), uniformly on the restricted set. At that node the signed radius
+displacement is at least \(c d\), for a fixed \(c>0\), and is
+increasing. Thereafter its signed second difference divided by \(h^2\)
+is at least \(\alpha(|y_n|)/2\), since \(\alpha(cd)\gg d+h^2\) and
+\(\alpha\) is increasing. The level estimate (C4) applies from \(cd\).
+Its mesh contribution is \(O(h\log(1/d))\to0\). Consequently the
+limiting orbit leaves immediately on this side. This argument is uniform
+for the indicated compact sets, including sets of initial points which
+cross the circle during the short interval \(u\le u_*\).
+
+For the classical Gaussian, \(x\) converges in law to a variable with
+density \(e^{-x^2}/\sqrt\pi\). The other two scaled initial quantities
+are tight, as follows by expanding \(q\wedge p\) and the radial
+projection of \(p\) at \((q_0,v_0)\). The dividing point
+\(x=-\sigma\lambda/2\) has limiting probability zero. Removing the
+cutoffs gives \(\Pr(x+\sigma\lambda/2>0)=P_\sigma\). This proves the
+classical statement. More generally, if \(p_r/(d\ell^2)\to v\), the
+coefficient of \(\sinh u\) in (C9) is \(v+\sigma\lambda/2\). Varying the
+impulse bias for this force therefore reads the distribution of the
+single variable \(x+v\) at its continuity points. Any atomless law for
+that variable is realized classically by assigning it to \(x\), taking
+\(v=0\) and fixing \(\gamma=1\). Truncating \(x\) to \(|x|\le1/(2d)\)
+keeps all initial radii positive and preserves the limit.
+
+\paragraph{Quantum transport through the
+circle}\label{quantum-transport-through-the-circle}
+
+In polar coordinates the coherent state's only angular factor is
+\(\exp(r e^{i\theta}/d^2)\). In \(L^2(dr)\) the initial radial amplitude
+in mode \(k\ge0\) is therefore proportional to
+\(u_k(r)=r^{k+1/2}\exp(-r^2/(2d^2))\). Integrating these squared
+amplitudes with their Fourier coefficients gives Poisson weights of mean
+\(d^{-2}\) for \(k\). Every factor preserves \(k\), and a radial
+observable is diagonal in these modes. Discarding \(|d^2k-1|>Md\) costs
+at most \(M^{-2}\) in probability. The radial kinetic operator in a
+retained mode is
+
+\[
+ -\tfrac12 d^4\partial_r^2+\frac{\gamma}{2r^2},
+ \qquad \gamma=d^4(k^2-1/4)=1+O_M(d).
+\]
+
+Use smooth compact cutoffs in \(x=(r-1)/d\) on the two sides of the
+dividing point, leaving out \(|x+\sigma\lambda/2|<\eta\). The initial
+phase in each mode is constant. For either cutoff radial amplitude
+\(A_0\) and \(j=0,1,2\) we have
+\(\|\partial_r^j A_0\|\le C d^{-j} n_k\), where \(n_k\) is the norm of
+the full initial mode including its Fourier coefficient. This follows by
+differentiating \(u_k\) on \(r=1+O(d)\) with \(d^2k=1+O_M(d)\).
+Constants below may depend on these fixed cutoffs, \(T\) and a finite
+upper bound for \(h/(d\ell^2)\).
+
+Some rays cross \(r=1\) before leaving. To control the wave at that
+crossing, set \(s=d/\ell\). In \(\alpha\) replace \(L(y)\) inside
+\(|y|<s\) by \(\log(1/s)+b_0(y/s)\) with \(b_0\) smooth and even, zero
+for \(|y/s|\le1/2\) and equal to \(\log(1/|y/s|)\) for \(|y/s|\ge 1\),
+with a smooth transition. Denote the modified potential by
+\(\widetilde U\). Its additive constant can be chosen so that it agrees
+with \(U\) on both sides of the strip, since the change of its
+derivative is odd in \(y\). Expanding the fourth power and using the
+bound on \(|Z|\,|\log |Z||^k\) gives
+
+\[
+ \|\widetilde U-U\|_\infty\le C s^2\ell^3 .
+ \tag{C10}
+\]
+
+The modified forces converge uniformly to the original one and obey the
+same scaled force limit in (C9). Thus all the retained rays of the
+modified problem reach their prescribed branch, also for \(p_r=0\) and
+the modal \(\gamma\) above.
+
+Here are the uniform transport estimates needed to apply time-dependent
+WKB to these shrinking amplitudes. Write \(R_t(v)\) for the radial
+position of a modified ray starting at radius \(v\) with zero radial
+velocity and set \(J=\partial_v R_t\), \(H=\partial_v^2R_t\),
+\(I=\partial_v^3R_t\). Primes on \(J\) denote time derivatives. During a
+flight \(J''=-3\gamma R_t^{-4}J\). At a kick \(J'\) gains \(h c_nJ\)
+with \(c_n=-\widetilde g'(r_n)\ge0\). This holds throughout the annulus
+for small \(d\) because the leading term in the derivative of the
+modified \(\alpha\) in the strip is \(\log^4(1/s)\). We have \(J(0)=1\)
+and initial derivative zero before any kick. Use the sine and cosine
+solution formula with background coefficient \(10\ge3\gamma R_t^{-4}\).
+The remaining continuous source is \((10-3\gamma R_t^{-4})J\) and the
+kick terms are positive. Since \(\sqrt{10}T<\pi/4\), the cosine is at
+least \(1/2\) and the sine is increasing. Up to a putative first zero
+this gives positivity and, by comparing the formulas at two times,
+\(J(t)\ge J(v')/2\) for \(0\le v'\le t\le T\). In particular each cutoff
+evolves without a caustic.
+
+Define \(t_1=2000\log\ell/\ell^2\) and \(t_2=2t_1\) for large \(\ell\).
+Up to \(t_2\), summing (C8) for \(|y_n|+|\Delta y_n|/(h\ell^2)\) gives
+\(|y_n|\le C d\exp(C\ell^2 t_2)<\sqrt d\). Here the modified force term
+is bounded by \(C\ell^4 |y_n|\) in the annulus. On this short interval
+\(c_n\ge\ell^4/100\) for small \(d\). After \(u_*/\ell^2\) the signed
+nodal acceleration is also at least \(\ell^4|y_n|/100\) until \(t_2\).
+These inequalities give
+
+\[
+ |R_t-1|\ge d\ell^8\quad(t_1\le t\le T),\qquad
+ \frac{J(v')}{J(t)}\le C\ell^{-8}
+       \quad(0\le v'\le t_1,\ t_2\le t\le T).                 \tag{C11}
+\]
+
+Indeed on a block of length \(100/\ell^2\) the signed displacement, once
+increasing, at least doubles by summing its lower acceleration. For
+\(J\) use the positive kick terms of the sine formula on the block. The
+earlier terms contribute at least half the starting \(J\). Each later
+\(J\) is at least half that value and
+\(\sin(\sqrt{10}\,t)/\sqrt{10}\ge t/2\) there. The sum of \(h\) times
+the remaining time over the kicks is at least one quarter of the squared
+block length, since \(h\ell^2\to0\). This again more than doubles \(J\).
+Each of the intervals from \(u_*/\ell^2\) to \(t_1\) and from \(t_1\) to
+\(t_2\) contains \(20\log\ell-O(1)\) blocks. Subsequently the signed
+nodal increments stay positive. During a flight the radius differs from
+linear interpolation by \(O(h^2)\), by bounded centrifugal acceleration.
+This proves (C11).
+
+For clarity about diffraction, put \(E_2=d|H|/J^2\) and
+\(E_3=d^2|I|/J^3\). Let \(F_j\) denote the \(j\)th radial derivative of
+the acceleration during flight or of the velocity increment per unit
+\(h\) at a kick, as appropriate, and use the sum of continuous and
+impulse integrals \(d\nu=dt+h\sum_n\delta_{t_n}\). The explicit modified
+force bounds on the rays are
+
+\[
+ |F_2|\le C(1+\ell^3/\max(s,|y|)),\qquad
+ |F_3|\le C(1+\ell^3/\max(s,|y|)^2).
+\]
+
+The Jacobi Green function is
+\(J(t)J(v')\int_{v'}^t J(u)^{-2}du\le4(t-v')J(t)/J(v')\). This follows
+from the Wronskian, which is preserved across every velocity jump.
+Differentiating the ray equation twice and three times gives sources
+\(F_2J^2\) and \(F_3J^3+3F_2JH\). Put \(B_2=d\,|F_2|\), \(B_3=d^2|F_3|\)
+and \(D=J(v')/J(t)\). Then
+
+\[
+ \begin{aligned}
+ E_2(t)&\le4\int_0^t(t-v')D B_2\,d\nu(v'),\\
+ E_3(t)&\le4\int_0^t(t-v')D^2
+          \bigl(B_3+3B_2 E_2(v')\bigr)d\nu(v').
+ \end{aligned}                                                   \tag{C12}
+\]
+
+Up to \(t_2\), \(D\le2\), \(B_2=O(\ell^4)\), \(B_3=O(\ell^5)\) and the
+time integral of \(t-v'\) is at most \(2t(t+h)\). Hence
+\(E_2=O((\log\ell)^2)\) and \(E_3=O(\ell(\log\ell)^2+(\log\ell)^4)\).
+After \(t_2\), split each integral at \(t_1\). On its first part
+\(D=O(\ell^{-8})\). On its second part (C11) gives
+\(B_2+B_3=O(d+\ell^{-5})\). First applying the \(E_2\) bound and then
+the \(E_3\) bound gives \(E_2+E_3=o(1)\) uniformly for
+\(t_2\le t\le T\).
+
+Transport the half-density along these rays, so
+\(A(t,R_t(v))=A_0(v)/\sqrt{J(t,v)}\). Use the classical phase for each
+flight and subtract \(h\widetilde U\) at each kick. The standard
+caustic-free WKB residual bounds the norm error from the flights by
+\(\tfrac12 d^2\int_0^T\|\partial_r^2A(t)\|dt\).
+\href{https://arxiv.org/pdf/1112.4056}{Schubert, Vallejos and Toscano,
+§2, (20)--(22)} (transport and Duhamel estimate, passage). The
+amplitudes have compact support away from the radial endpoint, and kicks
+preserve the norm. Twice differentiating the transported half-density
+gives
+
+\[
+ d^2\|\partial_r^2 A(t)\|\le C n_k
+ \sup_v\bigl(J^{-2}+E_2/J+E_2^2+E_3\bigr).
+\]
+
+On \([0,t_2]\) the integral of this bound is
+\(O(n_k(\log\ell)^3/\ell)=o(n_k)\). On \([t_2,T]\) it is \(o(n_k)\) by
+(C11)--(C12). Using the \textbf{original} quantum kicks on the
+approximate wave adds at most \(C n_k(t_1+h)s^2\ell^3/d^2=o(n_k)\) by
+(C10). After \(t_1\) its support is outside the modified strip.
+Unitarity propagates these residual bounds through every factor. All
+errors are uniform over retained modes, so their squared norms sum to
+\(o(1)\).
+
+For either cutoff the final approximate wave is supported at radii
+converging uniformly to its selected radius. The two supports are
+disjoint at \(T\). Their masses equal their initial cutoff masses. The
+full initial radial position law gives the same limiting \(x\) density
+\(e^{-x^2}/\sqrt\pi\) as in the classical calculation. Letting the
+angular and radial cutoffs increase and \(\eta\) decrease to zero
+removes an arbitrarily small initial norm. This proves (C7) for every
+bounded continuous radial score, including \(f\).
+
+\paragraph{Complete separation and the continuum
+dynamics}\label{complete-separation-and-the-continuum-dynamics}
+
+Suppose now \(h/(d\ell^2)\to\infty\). Define \(e\) by \(eL_e^2=h\),
+\(L_e=\log(1/e)>2\). Then \(d/e\to0\) and \(L_e\sim\log(1/h)\). In (C8)
+rescale the radius by \(e\) and time by \(L_e^{-2}\). For every bounded
+initial cutoff the rescaled displacement starts at zero in the limit and
+its initial difference quotient tends to \(\sigma/2\). Formula (C9) now
+reads \((\sigma/2)\sinh u\). The same level estimate yields the
+immediate \(\sigma\) branch for the classical ensemble.
+
+For the quantum state first consider subsequences with \(\ell/L_e\)
+bounded. Keep the preparation width \(d\) and smoothing width
+\(s=d/\ell\). The smoothed force has the same inner limit since its
+change is \(O(s\ell^3)=o(e L_e^4)\). Use \(L_e\) in \(t_1,t_2\). All
+rays on a bounded initial cutoff now lie on the selected side after
+\(u_*\). The early upper bound is \(Ce\exp(C L_e^2 t_2)<\sqrt e\).
+Equation (C11) then gives \(|R_t-1|\ge eL_e^8\) and \(D=O(L_e^{-8})\) on
+its respective intervals. The early bounds for \(B_2,B_3\) are
+\(O(L_e^4),O(L_e^5)\), and their late sum is \(O(d+L_e^{-5})\) since
+\(d\le e\). Thus the same transport proof gives vanishing norm error,
+including the smoothing cost \(O((t_1+h)\ell)\). There is just one
+outgoing radius.
+
+If \(\ell/L_e\to\infty\), \(d\) tends to zero faster than every fixed
+power of \(h\). Compare the packet directly with its point polygon
+\((q_n,p_n)\) in (C3). For \(r_n=|q_n|=1+y_n\), \(n\ge1\), put
+\(\Lambda_n=1+\log^2(1/|y_n|)\). The acceleration field \(F\) satisfies
+
+\[
+ |F(x)-F(q_n)|\le C\Lambda_n^2 |x-q_n|.
+\]
+
+Within \(|y_n|/2\) of \(q_n\) this is the derivative bound from (C1).
+For larger distances use its global short-distance modulus
+\(Cv(1+|\log v|^4)\) at distance \(v\), obtained by integrating
+\(1+\log^4(1/|y|)\) across a radial interval of length \(v\). The
+direction factor is Lipschitz in the annulus, the core is linear and the
+exterior has bounded derivative. In particular \(F\) is \(1/2\)-Hölder
+globally. This anchored estimate uses the same moment argument as the
+\href{cusp-quantum-preparation-selection.md}{power-cusp propagation}.
+
+At the first cell Hölder continuity and the exact drift and kick shears
+bound both root-mean-square deviations from the point polygon by
+\(C\sqrt d\). For subsequent cells let
+\(E_n=\Lambda_n\|(Q-q_n)\psi_n\|+\|(P-p_n)\psi_n\|\). The signed
+displacement grows along this polygon, so \(\Lambda_n\) decreases. The
+exact shears and the anchored bound give
+\(E_{n+1}\le(1+C h\Lambda_n)^2 E_n\) in either order. The initial
+\(|y_1|\) is at least \(h^2/4\). By (C4) each level \(v\le |y_n|<2v\)
+costs at most \(C/\log^2(1/v)+O(h)\) in time. Summing over at most
+\(C\log(1/h)\) dyadic levels gives \(\sum_{n\ge1}^{N-1}h\Lambda_n
+=O(\log(1/h)+h\log^3(1/h))\). The amplification is at most a fixed power
+of \(1/h\), whereas \(E_1=O(\Lambda_1\sqrt d)\) decays faster than every
+such power. The terminal packet therefore selects the same radius as the
+point polygon. Every subsequence has a further subsequence in one of the
+two regimes for \(\ell/L_e\). This completes the joint limit in (C7),
+including \(\lambda=\infty\).
+
+For the exact continuum evolution, at each fixed positive \(d\) the
+products converge for the quantum state by the product formula and for
+the classical ensemble by its almost-everywhere uniqueness. For any
+sequence \(d\downarrow0\) and any fixed bounded continuous radial score,
+choose equal cells with \(h<d^2\) and a score error less than \(d\) from
+that continuum evolution. Formula (C7) at \(\lambda=0\) gives the equal
+mixture for the exact dynamics as well.
+
+In dimensional terms the inputs are \(m,R,\omega\), the time
+\(T/\omega\), the cell duration \(h/\omega\) and the specified
+preparation. They fix \(S_0=mR^2\omega\), the potential energy unit
+\(mR^2\omega^2\), the initial position and momentum deviations
+\(Rd/\sqrt2\) and \(mR\omega d/\sqrt2\), and the readout width
+\(R Y(T)\). The fixed constants \(b,T\) and the function of
+\(|q_{\rm phys}|/R\) used for the score are dimensionless. For a quantum
+sequence \(a\) with \(0<\lambda<\infty\), the sequence \(c a\) at the
+same cells, \(c>0\), has parameter \(\lambda/\sqrt c\). Distinct \(c\)
+therefore give different limiting scores within the prescribed canonical
+family. The model with zero quantum action and classical widths
+\(w=a/S_0\) reproduces the entire limiting radial law of the first
+sequence, including its order bias. Equality is asserted for these
+limits and this observable family.
 
 \subsection{6. Consequence for STATE}\label{consequence-for-state}
 
@@ -1015,6 +1352,10 @@ distinguishes uniform agreement over trial actions from agreement at
 each fixed positive action. A nonnegative spherical source admits
 order-independent classical refinement, including at a circular orbit.
 Classical ensembles of positive lower width also admit uniform
-refinement. Which dynamics or composition law requires a physical action
-in addition to a restriction on classical preparations remains open.
+refinement. Even the two branch probabilities at the transition scale
+agree for matched preparations. In the scaled radial variables the
+momentum unit is \(mR\omega\,d\log^2(1/d)\). Its product with \(Rd\)
+exceeds the Gaussian action \(a\) by a factor \(\log^2(1/d)\). Whether
+the central-force argument imposes any independent relation between
+these two resolutions remains open.
 \end{document}

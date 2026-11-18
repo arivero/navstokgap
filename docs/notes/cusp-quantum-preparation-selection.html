@@ -101,6 +101,15 @@ nor selects a waiting-time distribution. It shows explicitly that the
 limiting incoming phase-space history alone does not determine the
 outgoing limit of these quantum families. The positive value of <span
 class="math inline">\(\hbar\)</span> is supplied, not derived.</p>
+<p>For three finite central forces that agree on a moving circle, the
+terminal radii impose a common-preparation inequality. A positive
+classical distribution with the stated spread in initial conditions
+gives a mean score at most <span class="math inline">\(2/3\)</span>. One
+squeezed radial state of the canonical theory gives about <span
+class="math inline">\(0.687\)</span> in the same limit. The
+three-quadrature inequality and its violating state are established
+results. The calculation below realizes the three sign choices as inward
+and outward departures under autonomous central forces.</p>
 <p>This phenomenon has substantial prior art. <a
 href="https://arxiv.org/pdf/1011.1651">Athanassoulis–Paul, Theorem 2.1
 and Lemma 5.3</a> (theorem statements and relevant passages read) treat
@@ -383,6 +392,432 @@ single point on the common incoming path; for <span
 class="math inline">\(t&gt;0\)</span> it has the prescribed two branch
 weights. The result does not assert that the finite-<span
 class="math inline">\(\hbar\)</span> Wigner function is nonnegative.</p>
+<h2 id="three-central-forces-on-the-same-moving-circle">Three central
+forces on the same moving circle</h2>
+<p><strong>6.1 Sol Max, 2026-11-19.</strong> Use the mass <span
+class="math inline">\(m\)</span>, length <span
+class="math inline">\(R\)</span>, inverse time <span
+class="math inline">\(\omega\)</span> and reference action <span
+class="math inline">\(S_0=mR^2\omega\)</span> of the <a
+href="balaban-ode-lesson.html#tangent-orbits-under-the-two-impulse-orders">moving-circle
+construction</a>. Use dimensionless radii <span
+class="math inline">\(r\)</span> and time <span
+class="math inline">\(t\)</span>. Write <span
+class="math inline">\(y=r-1\)</span>, <span
+class="math inline">\(b=e^{-20}\)</span>, <span
+class="math inline">\(L(y)=\log(1/|y|)\)</span> and <span
+class="math inline">\(\alpha(y)=y(L(y)^4-2L(y)^3)\)</span>, with <span
+class="math inline">\(\alpha(0)=0\)</span>. Consider the three finite
+inward accelerations of magnitude</p>
+<p><span class="math display">\[
+g_\kappa(r)=r^{-3}-\kappa^2\alpha(y),\quad |y|\le b,
+\qquad \kappa\in\{1/2,1,3/2\}.                                  \tag{25}
+\]</span></p>
+<p>Continue each by the linear core and inverse-square exterior of (C1),
+matching the values at the ends of the annulus. All three are positive
+on the annulus and have bounded <span class="math inline">\(C^1\)</span>
+potentials <span class="math inline">\(U_\kappa\)</span> with <span
+class="math inline">\(U_\kappa&#39;=g_\kappa\)</span>. Each gives the
+same circular orbit with unit speed and unit normal acceleration. Thus
+the tangent displacement in Lemma X on that orbit is identical for the
+three laws. As in (C1) each is a reciprocal two-body force. Their
+Poisson densities can be signed.</p>
+<p>Fix <span class="math inline">\(0&lt;T&lt;1/40\)</span>. The two
+immediate radial departures at <span class="math inline">\(T\)</span>
+are <span class="math inline">\(1\pm e^{-1/(\kappa T)}\)</span>. Fix one
+smooth <span class="math inline">\(0\le f\le1\)</span> equal to zero for
+<span class="math inline">\(r\le1-e^{-2/T}/2\)</span> and one for <span
+class="math inline">\(r\ge1+e^{-2/T}/2\)</span>. Write <span
+class="math inline">\(p_\kappa\)</span> for the expectation of <span
+class="math inline">\(f\)</span> at <span
+class="math inline">\(T\)</span> after choosing that force. Count an
+outward departure for the two extreme forces and an inward departure for
+the middle force. The observable is</p>
+<p><span class="math display">\[
+\mathcal
+P=\tfrac13(p_{1/2}+1-p_1+p_{3/2}).                      \tag{26}
+\]</span></p>
+<h3 id="what-a-common-newtonian-preparation-permits">What a common
+Newtonian preparation permits</h3>
+<p>Let <span class="math inline">\(d\downarrow0\)</span>, <span
+class="math inline">\(\ell=\log(1/d)\)</span> and <span
+class="math inline">\(X=(r_0-1)/d\)</span>, <span
+class="math inline">\(V=p_{r,0}/(d\ell^2)\)</span> in dimensionless
+variables. Admit any common positive initial law with <span
+class="math inline">\((X,V)\)</span> tight and <span
+class="math inline">\((\gamma-1)/(d\ell^4)\to0\)</span> in probability,
+where <span class="math inline">\(\gamma\)</span> is squared specific
+angular momentum. Require that no subsequential limiting law charges
+<span class="math inline">\((X,V)=(0,0)\)</span>. An initial scaled
+position marginal with an atomless limit already ensures this.
+Dependence between <span class="math inline">\(X\)</span> and <span
+class="math inline">\(V\)</span>, and any choice of an admissible
+continuation at a nonunique state, are allowed. Then</p>
+<p><span class="math display">\[
+                  \tfrac13\le\liminf\mathcal P
+                 \le\limsup\mathcal P\le\tfrac23
+.                \tag{27}
+\]</span></p>
+<p>Indeed in time <span class="math inline">\(u=t\ell^2\)</span> the
+radial equation <span
+class="math inline">\(r&#39;&#39;=\kappa^2\alpha(y)+(\gamma-1)/r^3\)</span>
+gives <span class="math inline">\(y/d\to X\cosh(\kappa
+u)+(V/\kappa)\sinh(\kappa u)\)</span> on bounded <span
+class="math inline">\(u\)</span> intervals for convergent initial data.
+This follows from the uniform scaled force estimate in <a
+href="balaban-ode-lesson.html#which-part-of-the-initial-preparation-leaves-on-each-side">(C8)–(C9)</a>.
+Where <span class="math inline">\(V+\kappa X\ne0\)</span> the ray leaves
+immediately on its sign. After a fixed inner time it has signed
+displacement <span class="math inline">\(\ge c d\)</span> and positive
+signed velocity. The signed acceleration is then at least <span
+class="math inline">\(\kappa^2\alpha(|y|)/2\)</span>, including a
+perturbation <span class="math inline">\(|\gamma-1|=o(d\ell^4)\)</span>.
+The level estimate (C4) excludes waiting. Compactness and the limiting
+energy equation <span
+class="math inline">\(|y&#39;|=\kappa|y|L(y)^2\)</span> give the stated
+terminal radius.</p>
+<p>For <span class="math inline">\((X,V)\ne(0,0)\)</span> the three
+numbers <span class="math inline">\(V+\kappa X\)</span> are ordered in
+<span class="math inline">\(\kappa\)</span>, and at most one vanishes.
+The middle lies between the extremes. The sum in (26) is between one and
+two pointwise, even assigning any score in <span
+class="math inline">\([0,1]\)</span> to a vanishing number. For a
+sequence of laws take a joint weak limit of the scaled inputs and three
+bounded scores along a subsequence. The scores may be coupled
+conditional on the common initial data. The sign conclusion holds
+uniformly on compact sets away from each dividing line, and the common
+origin has zero limiting mass. Integrating proves (27).</p>
+<h3 id="a-squeezed-radial-preparation-in-continuum-quantum-dynamics">A
+squeezed radial preparation in continuum quantum dynamics</h3>
+<p>Let <span class="math inline">\(\epsilon=a/S_0=d^2\ell^2\)</span> and
+let <span class="math inline">\(k\)</span> be the integer nearest <span
+class="math inline">\(1/\epsilon\)</span>. Use the same normalized
+angular mode <span
+class="math inline">\(e^{ik\theta}/\sqrt{2\pi}\)</span> in all three
+evolutions. Its squared centrifugal coefficient in radial <span
+class="math inline">\(L^2(dr)\)</span> is <span
+class="math inline">\(\gamma=\epsilon^2(k^2-1/4)=1+O(\epsilon)\)</span>.
+In that space use initial radial amplitude proportional to <span
+class="math inline">\(d^{-1/2}\chi(r-1)\phi((r-1)/d)\)</span>, where
+<span class="math inline">\(\|\phi\|_2=1\)</span>, <span
+class="math inline">\(\phi\)</span> is Schwartz, and <span
+class="math inline">\(\chi\)</span> is a smooth cutoff equal to one on
+<span class="math inline">\(|y|\le b/2\)</span> and zero on <span
+class="math inline">\(|y|\ge3b/4\)</span>. The corresponding planar
+amplitude includes <span class="math inline">\(r^{-1/2}\)</span>. The
+angle is uniform. The incoming scaled radial position has limiting
+density <span class="math inline">\(|\phi|^2\)</span>, and the radial
+velocity scale is <span class="math inline">\(d\ell^2\)</span>. The
+product of the position and momentum units is the trial action. The
+actual standard deviations also depend on <span
+class="math inline">\(\phi\)</span>. For all three <strong>exact
+continuum</strong> Schrödinger evolutions,</p>
+<p><span class="math display">\[
+  p_\kappa\longrightarrow
+  \int_0^\infty\left|\widehat{\exp(i\kappa X^2/2)\phi}(\xi)\right|^2d\xi
+  =\langle\phi,\mathbf1_{(0,\infty)}(\Pi+\kappa Q)\phi\rangle ,
+  \quad Q=X,\quad\Pi=-i\partial_X
+.                              \tag{28}
+\]</span></p>
+<p>Here the Fourier transform is unitary with kernel <span
+class="math inline">\(e^{-i\xi X}/\sqrt{2\pi}\)</span>. Equation (28) is
+the step transferring a quadrature to a fixed macroscopic position
+score.</p>
+<p><strong>Exit from the inner region.</strong> On the annulus the
+effective potential <span
+class="math inline">\(W=U_\kappa+\gamma/(2r^2)\)</span> satisfies</p>
+<p><span class="math display">\[
+W(1+y)-W(1)=\tfrac{\gamma-1}{2}\big((1+y)^{-2}-1\big)
+              -\tfrac{\kappa^2}{2}y^2L(y)^4
+.                    \tag{29}
+\]</span></p>
+<p>In <span class="math inline">\(X=y/d\)</span>, <span
+class="math inline">\(u=t\ell^2\)</span>, remove the constant phase. The
+kinetic operator is <span class="math inline">\(\Pi^2/2\)</span> and the
+potential is (29) divided by <span
+class="math inline">\(d^2\ell^4\)</span>. On the cutoff support its
+difference from <span class="math inline">\(-\kappa^2X^2/2\)</span> is
+bounded by <span
+class="math inline">\(C(1+|X|^3)/\ell+Cd|X|/\ell^2\)</span>. For <span
+class="math inline">\(|X|\le1\)</span> use boundedness of <span
+class="math inline">\(|X|^2|\log |X||^j\)</span>, <span
+class="math inline">\(1\le j\le4\)</span>. For <span
+class="math inline">\(1\le|X|\le b/d\)</span> use <span
+class="math inline">\(0\le\log|X|/\ell\le1\)</span>. Let <span
+class="math inline">\(G_\kappa(u)\)</span> be the inverted oscillator
+group and put <span class="math inline">\(u_*=(\log\ell)/20\)</span>.
+The exact linear Heisenberg evolution bounds its third position moment
+in norm by <span class="math inline">\(C_\phi e^{3\kappa u}\)</span> and
+its momentum norm by <span class="math inline">\(C_\phi e^{\kappa
+u}\)</span>. Applying Duhamel to <span
+class="math inline">\(\chi(dX)G_\kappa(u)\phi\)</span> for <span
+class="math inline">\(0\le u\le u_*\)</span> costs <span
+class="math inline">\(o(1)\)</span> because <span
+class="math inline">\(u_* e^{3\kappa u_*}/\ell\to0\)</span> and the
+cutoff commutator costs <span class="math inline">\(O(u_*(d e^{\kappa
+u_*}+d^2))\)</span>. The cutoff keeps the comparison in the domain of
+the radial half-line operator. The removed norm tends to zero by the
+same position bound.</p>
+<p>At <span class="math inline">\(u_*\)</span> put <span
+class="math inline">\(B=\sinh(\kappa u_*)/\kappa\)</span> and <span
+class="math inline">\(A=\cosh(\kappa u_*)\)</span>. The exact quadratic
+propagator gives, up to a constant phase,</p>
+<p><span class="math display">\[
+G_\kappa(u_*)\phi(X)= B^{-1/2} e^{i A X^2/(2B)}
+       \widehat{e^{i A Q^2/(2B)}\phi}(X/B).
+\]</span></p>
+<p>This is the standard metaplectic kernel for the linear Hamiltonian
+flow with upper row <span class="math inline">\((A,B)\)</span>. <a
+href="https://iris.polito.it/retrieve/72e5ea46-6226-42f1-b494-80940b4b02b8/NT_CMP20_rev.pdf">Nicola
+and Trapasso, Theorem 2.5</a> (quadratic Fourier kernel) and <a
+href="https://arxiv.org/pdf/1112.4056">Schubert, Vallejos and Toscano,
+Appendix A.3.1</a> (quadratic propagation). In the coordinate <span
+class="math inline">\(\xi=y/D\)</span>, <span
+class="math inline">\(D=dB\)</span>, the envelope converges in Schwartz
+space to <span class="math inline">\(\widehat{\exp(i\kappa
+Q^2/2)\phi}\)</span>. The radial phase has slope <span
+class="math inline">\(p_r=\ell^2(A/B)y\)</span>. Thus on each side of
+the circle it points away from the circle.</p>
+<p><strong>Transport to the terminal radius.</strong> Localize that
+envelope smoothly to <span class="math inline">\(\eta\le|\xi|\le
+M\)</span> on either side. The exact classical rays for <span
+class="math inline">\(W\)</span> start there at time <span
+class="math inline">\(u_*/\ell^2=o(1)\)</span> with the displayed phase
+slope. They stay on that side by the acceleration bound used in (27).
+Their terminal radii converge uniformly to the corresponding <span
+class="math inline">\(1\pm e^{-1/(\kappa T)}\)</span>. To control
+diffraction, use the <a
+href="balaban-ode-lesson.html#quantum-transport-through-the-circle">Jacobi
+and transported-amplitude estimates (C11)–(C12)</a> with width <span
+class="math inline">\(D\)</span>. The following rates account for the
+larger action <span
+class="math inline">\(\epsilon/D^2=\ell^2/B^2\)</span> in these
+estimates.</p>
+<p>Measure time from the start of this transport and let <span
+class="math inline">\(t_1=4000\log\ell/\ell^2\)</span>, <span
+class="math inline">\(t_2=2t_1\)</span>. Along the support, <span
+class="math inline">\(J(0)=1\)</span>, <span
+class="math inline">\(J&#39;(0)=\ell^2 A/B\)</span> for the derivative
+of position with respect to its initial radius. The initial second and
+third derivatives of the velocity vanish. Write <span
+class="math inline">\(F=-W&#39;\)</span> there. Then <span
+class="math inline">\(J&#39;&#39;=F&#39;J\)</span> with <span
+class="math inline">\(F&#39;=\kappa^2\alpha&#39;-3(\gamma-1)/r^4&gt;0\)</span>.
+Up to <span class="math inline">\(t_2\)</span>, <span
+class="math inline">\(|y|\le CD\exp(C\ell^2t_2)&lt;\sqrt d\)</span>
+since <span class="math inline">\(|y|\ge\eta D\)</span> and <span
+class="math inline">\(F=O(\ell^4 |y|)\)</span>. In this interval <span
+class="math inline">\(F&#39;\ge\ell^4/200\)</span> and the signed
+acceleration is at least <span
+class="math inline">\(\ell^4|y|/200\)</span> for large <span
+class="math inline">\(\ell\)</span>. The same block summation, or
+integration over blocks of length <span
+class="math inline">\(100/\ell^2\)</span>, gives <span
+class="math inline">\(|y|\ge D\ell^8\)</span> after <span
+class="math inline">\(t_1\)</span> and <span
+class="math inline">\(J(v)/J(t)=O(\ell^{-8})\)</span> for <span
+class="math inline">\(v\le t_1,\ t\ge t_2\)</span>. Both <span
+class="math inline">\(J\)</span> and <span
+class="math inline">\(|y|\)</span> are increasing.</p>
+<p>In (C12) the time measure here is ordinary time. The scaled higher
+derivative bounds <span
+class="math inline">\(D|F&#39;&#39;|+D^2|F&#39;&#39;&#39;|\)</span> are
+<span class="math inline">\(O(\ell^3)\)</span> at first since <span
+class="math inline">\(|y|\ge\eta D\)</span>. They are <span
+class="math inline">\(O(D+\ell^{-5})\)</span> after <span
+class="math inline">\(t_1\)</span> by (25). Consequently <span
+class="math inline">\(E_2+E_3=O(1)\)</span> up to <span
+class="math inline">\(t_2\)</span> and <span
+class="math inline">\(O(\ell^{-5})\)</span> after <span
+class="math inline">\(t_2\)</span>, by splitting the two integrals in
+(C12) at <span class="math inline">\(t_1\)</span>. The envelope on each
+cutoff has bounded derivatives in <span
+class="math inline">\(\xi\)</span> through order two. The transported
+half-density estimate thus bounds its total WKB error in norm by</p>
+<p><span class="math display">\[
+C\,\frac{\ell^2}{B^2}\big(t_2+T\ell^{-5}\big)=o(1),
+\]</span></p>
+<p>since <span class="math inline">\(B\)</span> grows as a positive
+power of <span class="math inline">\(\ell\)</span>. The two propagated
+parts are supported in disjoint terminal plateaus, with their respective
+initial cutoff masses. Sending <span class="math inline">\(\eta\)</span>
+to zero and <span class="math inline">\(M\)</span> to infinity proves
+the integral in (28). Conjugating momentum by the displayed quadratic
+phase gives its spectral form.</p>
+<p>One can use a single moving point as the limiting launch. Replace the
+constant angular amplitude by <span
+class="math inline">\(d^{-1/4}g(\theta/\sqrt d)\)</span>, with a fixed
+unit-norm smooth <span class="math inline">\(g\)</span> supported in
+<span class="math inline">\((-1,1)\)</span>, and retain the factor <span
+class="math inline">\(e^{ik\theta}\)</span>. Position and velocity now
+converge to <span class="math inline">\((1,0)\)</span> and <span
+class="math inline">\((0,1)\)</span>, respectively. Indeed the radial
+derivative in the momentum norm costs <span
+class="math inline">\(O(\epsilon/d)=O(d\ell^2)\)</span>, and the angular
+envelope costs <span class="math inline">\(O(\epsilon/\sqrt d)\)</span>
+in angular momentum. In the Fourier sum the probability of <span
+class="math inline">\(|n-k|&gt;M/\sqrt d\)</span> is at most <span
+class="math inline">\(\|g&#39;\|^2/M^2\)</span>. The remaining sectors
+have the same radial initial profile and <span
+class="math inline">\(\gamma-1=O_M(\epsilon/\sqrt d)\)</span>. In the
+inner potential comparison this replaces <span
+class="math inline">\(Cd|X|/\ell^2\)</span> by <span
+class="math inline">\(C_M\sqrt d\,|X|/\ell^2\)</span>, still giving
+<span class="math inline">\(o(1)\)</span> in norm by <span
+class="math inline">\(u_*\)</span>. The outer force and Jacobi estimates
+are uniform for these sectors since <span
+class="math inline">\(\epsilon/\sqrt d=o(D\ell^4)\)</span>.
+Orthogonality for the radial readout and then <span
+class="math inline">\(M\to\infty\)</span> prove (28) for this localized
+launch.</p>
+<h3 id="a-common-preparation-with-score-above-two-thirds">A common
+preparation with score above two thirds</h3>
+<p>Write <span class="math inline">\(L_\kappa=\Pi+\kappa Q\)</span> and
+<span class="math inline">\(s=(\sqrt3/2)^{1/2}\)</span>. The pair <span
+class="math inline">\(Q&#39;=sL_{3/2}\)</span> and <span
+class="math inline">\(P&#39;=2s(L_{1/2}+L_{3/2}/2)/\sqrt3\)</span> has
+<span class="math inline">\([Q&#39;,P&#39;]=i\)</span>. Its three
+quadratures at angles <span
+class="math inline">\(0,2\pi/3,4\pi/3\)</span> are <span
+class="math inline">\(sL_{3/2},sL_{1/2},-2sL_1\)</span>. Thus (26) is
+exactly Tsirelson’s three-quadrature score in this limit. Take <span
+class="math inline">\(\phi\)</span> in the oscillator number basis of
+<span class="math inline">\((Q&#39;,P&#39;)\)</span> to be</p>
+<p><span class="math display">\[
+\phi=\frac1{\sqrt2}\left(\frac4{\sqrt{21}}|0\rangle
+          -|3\rangle+\sqrt{\frac5{21}}|6\rangle\right).
+\]</span></p>
+<p>This is Schwartz by metaplectic covariance. The published score of
+this specific state is approximately <span
+class="math inline">\(0.687&gt;2/3\)</span>. <a
+href="https://arxiv.org/pdf/quant-ph/0611147">Tsirelson, §1</a>
+(original oscillator sign problem) and <a
+href="https://arxiv.org/pdf/2212.06017">Zaw and Scarani, Eq. (3) and
+Fig. 2</a> (state and score, passage). Equations (25)–(29) give the same
+strict excess for the limiting central-force radii. The gap persists for
+all sufficiently small <span class="math inline">\(d\)</span> in this
+specified quantum family. At each fixed <span
+class="math inline">\(d&gt;0\)</span> its score also survives
+arbitrarily fine time subdivision by the bounded-potential product
+formula.</p>
+<p>All three number states in <span class="math inline">\(\phi\)</span>
+have the same phase under rotation by <span
+class="math inline">\(2\pi/3\)</span>. Thus if <span
+class="math inline">\(P_*\)</span> denotes the cited score, the three
+outward probabilities in increasing <span
+class="math inline">\(\kappa\)</span> order are <span
+class="math inline">\((P_*,1-P_*,P_*)\)</span>. If only the limiting
+launch point and final radii are specified, a classical construction can
+reproduce this triple. Prepare the circular point and a single uniform
+variable <span class="math inline">\(z\in[0,1]\)</span> before choosing
+the force. For each law take the immediate outward solution when <span
+class="math inline">\(z\)</span> is below its indicated probability and
+the immediate inward solution otherwise. Both are exact central-force
+trajectories. This preparation has <span
+class="math inline">\(X=V=0\)</span> with certainty. The scaled initial
+position law in (27) and (28) distinguishes it.</p>
+<p>The dimensional inputs to this comparison are <span
+class="math inline">\(m,R,\omega\)</span>, the trial <span
+class="math inline">\(a=mR^2\omega\,d^2\log^2(1/d)\)</span>, the normal
+length <span class="math inline">\(Rd\)</span>, the radial momentum unit
+<span class="math inline">\(mR\omega\,d\ell^2\)</span>, the fixed time
+<span class="math inline">\(T/\omega\)</span> and the common readout
+width <span class="math inline">\(R e^{-2/T}\)</span>. The force and
+potential units are <span class="math inline">\(mR\omega^2\)</span> and
+<span class="math inline">\(mR^2\omega^2\)</span>. The three <span
+class="math inline">\(\kappa\)</span>, the cutoff ratios and the
+profiles are dimensionless. The angular momentum is <span
+class="math inline">\(k a\to S_0\)</span> in the single mode. In the
+localized version the tangential length is <span
+class="math inline">\(R\sqrt d\)</span> and the angular momentum spread
+is <span class="math inline">\(O(a/\sqrt d)\)</span>. This comparison
+fixes the same preparation before the force is chosen. Its violation
+excludes the positive classical preparation class in (27). Every trial
+action in the construction can be made arbitrarily small.</p>
+<h3 id="a-quantitative-bound-with-a-common-radial-velocity-spread">A
+quantitative bound with a common radial velocity spread</h3>
+<p>A finite common velocity spread gives a state-independent bound on
+the trial action ratio. Set <span
+class="math inline">\(\tau=a/(S_0d^2\ell^2)&gt;0\)</span> and take the
+radial refinement at each <strong>fixed</strong> <span
+class="math inline">\(\tau\)</span>. In (28) the result is then the
+positive spectral probability for <span
+class="math inline">\(L_{\kappa,\tau}=\Pi_\tau+\kappa Q\)</span>, <span
+class="math inline">\(\Pi_\tau=-i\tau\partial_X\)</span>. Indeed the
+inner equation has <span class="math inline">\(i\tau\partial_u\)</span>
+and kinetic energy <span class="math inline">\(\Pi_\tau^2/2\)</span>.
+The same quadratic kernel uses the Fourier transform with action <span
+class="math inline">\(\tau\)</span> and phase <span
+class="math inline">\(\kappa Q^2/(2\tau)\)</span>. Duhamel’s inner error
+gains a fixed factor <span class="math inline">\(1/\tau\)</span> and the
+outer transport error a fixed factor <span
+class="math inline">\(\tau\)</span>. The same convergence applies to a
+fixed mixed radial state by finite Schwartz approximation in trace norm,
+since the scores are bounded.</p>
+<p>Give the common preparation a signed radial momentum increment <span
+class="math inline">\(mR\omega\,d\ell^2 z\)</span> in physical units.
+Draw <span class="math inline">\(z\)</span> uniformly on <span
+class="math inline">\([-\eta,\eta]\)</span>, <span
+class="math inline">\(\eta&gt;0\)</span> fixed, independently of the
+initial state and the subsequent force choice. In the canonical model
+the multiplier on the radial state is <span
+class="math inline">\(e^{izX/\tau}\)</span>. In either model this
+replaces the positive-sign indicator by <span
+class="math inline">\(F_\eta(v)=\Pr(v+z&gt;0)\)</span>, a ramp with
+Lipschitz constant <span class="math inline">\(1/(2\eta)\)</span> and
+<span class="math inline">\(F_\eta(-v)=1-F_\eta(v)\)</span>. The
+classical bound persists by conditioning on the common <span
+class="math inline">\(z\)</span>. In particular the continuous increment
+removes an atom at the common origin for tight classical initial data.
+Even the circular-point construction above must obey (27) when this
+boost is implemented as an actual change of radial velocity before the
+force is chosen.</p>
+<p>For any canonical state on the scaled radial line, its Husimi
+distribution is a common positive law on <span
+class="math inline">\((X,V)\)</span>. Its marginal along <span
+class="math inline">\(V+\kappa X\)</span> equals the spectral law of
+<span class="math inline">\(L_{\kappa,\tau}\)</span> convolved with a
+centered Gaussian of variance <span
+class="math inline">\(\tau(1+\kappa^2)/2\)</span>. This uses the
+isotropic coherent-state seed with component variances <span
+class="math inline">\(\tau/2\)</span>, the phase-space marginal formula,
+and rotation of that seed. <a
+href="https://www.rintonpress.com/xqic4/qic-4-67/546-562.pdf">Werner,
+(26)–(27)</a> (covariant marginals and convolution error, passage).
+Replacing a spectral marginal by this positive-law marginal changes its
+ramp expectation by at most <span
+class="math inline">\(\sqrt{\tau(1+\kappa^2)/\pi}/(2\eta)\)</span>. The
+three positive-law expectations obey the same pointwise order bound with
+the common increment. Thus for the limiting boosted score <span
+class="math inline">\(\mathcal P_\eta\)</span>, any excess <span
+class="math inline">\(\Delta=\mathcal P_\eta-2/3&gt;0\)</span>
+requires</p>
+<p><span class="math display">\[
+\frac{a}{mR^2\omega\,d^2\log^2(1/d)}
+=\tau\ \ge\
+\frac{36\pi\,\eta^2\Delta^2}
+{(\sqrt{5/4}+\sqrt{2}+\sqrt{13/4})^2}.                         \tag{30}
+\]</span></p>
+<p>The explicit preparation above gives a positive excess even after a
+nonzero boost spread. At <span class="math inline">\(\tau=1\)</span> its
+three limiting quadrature densities are bounded by <span
+class="math inline">\(M_\phi=\|\phi\|_1^2/(2\pi)\)</span> by (28).
+Averaging the momentum increment changes each probability by at most
+<span class="math inline">\(M_\phi\eta/2\)</span>. For example, taking
+<span class="math inline">\(\eta=(P_*-2/3)/M_\phi\)</span> leaves an
+excess of at least <span class="math inline">\((P_*-2/3)/2\)</span>.
+Dephasing the same three number-state populations gives a
+parity-invariant mixture. All three linear quadratures then have
+symmetric distributions and the boosted limiting score is <span
+class="math inline">\(1/2\)</span>.</p>
+<p>Equation (30) bounds the action relative to the declared preparation
+area from its spread and a dimensionless probability. It compares the
+limits at fixed trial ratios. A remainder uniform in a trial ratio
+tending to zero together with <span class="math inline">\(d\)</span> is
+open. The dimensional reference area itself tends to zero in this
+family. Newton’s common circular trajectory supplies the three force
+coefficients at launch. It does not supply a premise requiring a
+positive boosted excess.</p>
 <h2 id="consequence-for-state">5. Consequence for STATE</h2>
 <p>The cusp’s unique quantum evolution need not choose one classical
 continuation from the limiting incoming phase-space history. Even
@@ -393,6 +828,12 @@ preparations supplement the earlier point-merger obstruction and align
 with established rough-potential selection results; they do not derive a
 physical preparation rule, a waiting-time selection, or a necessary
 positive action constant.</p>
+<p>Three forces sharing the same Lemma X displacement now give a
+radial-position inequality for a common classical preparation. The
+canonical dynamics supplies an explicit violating preparation and (30)
+converts a surviving excess into a bound relative to that preparation.
+Whether Newton’s trajectory argument independently requires admission of
+those three responses remains open.</p>
 
 </main>
 <footer class="site"><div class="wrap">
