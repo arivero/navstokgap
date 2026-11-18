@@ -38,5 +38,18 @@ beam for Fig. 3.
 and [Fig. 4 and discussion](https://arxiv.org/html/2405.14466v1#S0.F4)
 (figures and passages).
 
+In Fig. 5 each of the two masks occupies two pixels at 75% power and
+the incident speed is about 3.3 mm/s. The paper reports roughly 70%
+transmission for one barrier and 50% at larger separations. In the
+original Fig. 5 the red circle near $3.3\,\mu{\rm m}$ lies close to
+0.11. It is an experimental point. The theory uses an optical field
+with a sinc component and a broader Gaussian component, fitted across
+the mask measurements. The authors attribute the oscillations to
+both optical and matter-wave interference. Equal mask settings do
+not establish equal local forces for successive passages. These
+parameters differ from the single-barrier Fig. 3 power scan.
+[Fig. 5 and discussion](https://arxiv.org/html/2405.14466v1#S0.F5)
+(apparatus passage and original plot, read 18 November 2026).
+
 The original figures and article are held by the linked providers.
 The preprint uses the [arXiv non-exclusive distribution licence](https://arxiv.org/licenses/nonexclusive-distrib/1.0/).
