@@ -123,6 +123,14 @@ allowance for heating, and the displacement of a field-free thermal
 packet at a fixed time. The latter uses one final position per electron.
 <a href="#a-thermal-test-with-two-shutters">The thermal shutter and
 displacement tests</a>.</p>
+<p>Three helium-3 gas measurements test a central force without
+specifying its strength at any radius. Every fixed classical pair
+potential gives a concave second virial coefficient as a function of
+inverse temperature. The published values bend the other way. A
+classical atom with thermally populated internal states can reproduce
+the three readings. <a
+href="#helium-pressure-at-three-temperatures">Helium pressure at three
+temperatures</a>.</p>
 <p><strong>First calculation, 2026-10-27; written derivation,
 unrefereed.</strong> In one spatial coordinate and one time variable,
 the same discrete Green function controls three operations: constructing
@@ -2821,6 +2829,312 @@ class="math inline">\(\delta\)</span> has been measured for this
 preparation. The result supplies the small-action passage for the stated
 regular system and leaves the independent physical necessity premise
 open.</p>
+<h2 id="helium-pressure-at-three-temperatures">Helium pressure at three
+temperatures</h2>
+<p><strong>6.1 Sol Max, 2026-11-18.</strong> In helium-3 the published
+second virial coefficient at 3 K falls <span
+class="math inline">\(6.244\ {\rm cm^3/mol}\)</span> below the line
+between the readings at 1.5 and 9 K when plotted against <span
+class="math inline">\(1/T\)</span>. Every fixed central pair potential
+for classical point atoms in thermal equilibrium puts the middle reading
+on or above that line. This is a modern test of what it means to reuse a
+force measured by Newton’s Lemma X. A displacement experiment determines
+force at a preparation. The further premise here is that the same force
+acts at the same separation after the gas is prepared at another
+temperature. <a
+href="newton-insertion-action.html#lemma-x-and-the-measurement-of-initial-force">Newton,
+1713, Book I, Lemma X and Proposition VI</a> (edition comparison and
+passages).</p>
+<h3 id="a-pressure-inequality-independent-of-the-force-profile">A
+pressure inequality independent of the force profile</h3>
+<p>Let <span class="math inline">\(\rho\)</span> be molar density, <span
+class="math inline">\(R_{\rm g}=N_Ak_B\)</span> the molar gas constant,
+<span class="math inline">\(\beta=1/(k_BT)\)</span> and <span
+class="math inline">\(B(T)\)</span> the coefficient of <span
+class="math inline">\(\rho\)</span> in <span
+class="math inline">\(p/(\rho R_{\rm g}T)=1+\rho
+B(T)+O(\rho^2)\)</span>. Take canonical equilibrium, ordinary
+translational kinetic energy and a temperature-independent pair
+potential <span class="math inline">\(V(r)\)</span> with a well-defined
+gas branch and integrable Mayer functions at the three temperatures. The
+classical second virial formula is <span class="math display">\[
+B_0(T)=\frac{N_A}{2}\int_{\mathbb R^3}
+             [1-\exp(-\beta V(|\mathbf r|))]\,d^3\mathbf r .
+\]</span> An impenetrable core is allowed. At each separation the
+integrand is concave in <span class="math inline">\(\beta\)</span>,
+including on the core. Hence for cold, middle and warm temperatures with
+<span class="math inline">\(\beta_m=w\beta_c+(1-w)\beta_w\)</span>,
+<span class="math display">\[
+\mathcal D[B]=w B(T_c)+(1-w)B(T_w)-B(T_m)\le0.
+\]</span> The inequality survives pointwise limits of the three
+coefficients, even for a succession of different core regularizations if
+each uses one potential at all temperatures. It holds for repulsive and
+attractive forces of arbitrary strength. For the established virial
+formula see <a href="https://doi.org/10.1063/1.1587684">Giese, Audette
+and York, Eqs. (6)–(9)</a> (passage).</p>
+<p>At <span class="math inline">\((T_c,T_m,T_w)=(1.50,3.00,9.00)\ {\rm
+K}\)</span> the cold weight is <span
+class="math inline">\(w=2/5\)</span>. The reported experimental values
+are respectively <span class="math inline">\(-170.54\pm0.5\)</span>,
+<span class="math inline">\(-86.31\pm0.5\)</span> and <span
+class="math inline">\(-19.75\pm0.3\)</span>, all in <span
+class="math inline">\(\mathrm{cm^3/mol}\)</span>. The interpolation
+gives <span class="math inline">\(-80.066\)</span> at 3 K. Moving the
+endpoints down and the middle point up by their respective quoted
+uncertainties leaves <span class="math inline">\(\mathcal D[B]=5.364\
+{\rm cm^3/mol}\)</span>. This interval calculation assigns no coverage
+probability. Aziz, Janzen and Moldover identify the measurements as
+corrected for the third virial and credit Matacotta et al. and a private
+communication. The comparison uses the experimental column. <a
+href="https://www.nist.gov/system/files/documents/2017/11/30/085_aziz_ab_initio_prl_1995.pdf">Aziz,
+Janzen and Moldover, p. 1588 and Table III</a> (passages).</p>
+<p>The mechanical readout can also be tested in the original experiment.
+Matacotta et al. used a copper bulb of <span
+class="math inline">\(1002.9\ {\rm cm^3}\)</span> at <span
+class="math inline">\(273.16\ {\rm K}\)</span> and four fillings. A
+pressure balance measured <span class="math inline">\(p=Mg/A\)</span>
+using a calibrated piston area <span class="math inline">\(A\)</span>,
+load mass <span class="math inline">\(M\)</span> and local gravity <span
+class="math inline">\(g\)</span>. Resistance thermometers used the
+NPL-75 gas scale down to 2.6 K and a magnetic scale below. The authors
+corrected for bulb contraction, dead volume, pressure head and
+thermomolecular pressure. Their density normalization used a
+<strong>calculated</strong> <span class="math inline">\(B(20.3\ {\rm
+K})=0.30\pm0.10\ {\rm cm^3/mol}\)</span>. Their finite-density
+observable was <span class="math inline">\(b(T,\rho)=[p/(\rho R_{\rm
+g}T)-1]/\rho\)</span>. These entries come from a single filling before
+fitting its temperature dependence or applying the later third-virial
+correction.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><span class="math inline">\(T\)</span>
+(K)</th>
+<th style="text-align: right;"><span class="math inline">\(\rho\)</span>
+(<span class="math inline">\(\mathrm{mol/m^3}\)</span>)</th>
+<th style="text-align: right;"><span class="math inline">\(b\)</span>
+(<span class="math inline">\(\mathrm{cm^3/mol}\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1.50899</td>
+<td style="text-align: right;">274.497</td>
+<td style="text-align: right;"><span
+class="math inline">\(-170.69\)</span></td>
+</tr>
+<tr>
+<td style="text-align: right;">3.00330</td>
+<td style="text-align: right;">274.444</td>
+<td style="text-align: right;"><span
+class="math inline">\(-87.33\)</span></td>
+</tr>
+<tr>
+<td style="text-align: right;">9.04158</td>
+<td style="text-align: right;">274.338</td>
+<td style="text-align: right;"><span
+class="math inline">\(-19.50\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The measured inverse temperatures give <span
+class="math inline">\(0.402&lt;w&lt;0.404\)</span> and hence <span
+class="math inline">\(6.7&lt;\mathcal D[b]&lt;7.1\)</span> in <span
+class="math inline">\(\mathrm{cm^3/mol}\)</span>. A common density
+rescaling <span class="math inline">\(\rho_i\mapsto s\rho_i\)</span>
+changes the result to <span class="math inline">\(s^{-2}(\mathcal
+D[b]+(1-s)\mathcal D[1/\rho])\)</span>. At equal density the offset
+cancels exactly. Here <span class="math inline">\(|\mathcal
+D[1/\rho]|&lt;2.2\ {\rm cm^3/mol}\)</span> from the two extreme
+densities. Temperature-dependent calibration errors enter separately.
+Since <span class="math inline">\(b=B+\rho C+\cdots\)</span>, an
+independent bound on the signed combination of density corrections is
+needed to extract the dilute result from this filling alone. The authors
+report excess scatter near 3 K and discuss the limited precision of
+their four-fill comparison. The later table and the original bulb share
+these data. <a
+href="https://doi.org/10.1088/0026-1394/24/2/002">Matacotta et al.,
+§§2–4 and Table 2</a> (passages and experimental table).</p>
+<h3 id="what-the-discrepancy-measures-about-a-trial-action">What the
+discrepancy measures about a trial action</h3>
+<p>Convergence to the classical gas at these three temperatures would
+exclude a sequence of trial actions tending to zero that fits the
+separated data. A quantitative version allows a steep core. In the
+spin-independent two-body Schrödinger family let <span
+class="math inline">\(h\)</span> denote the trial reduced action, <span
+class="math inline">\(m\)</span> the atomic mass, <span
+class="math inline">\(\mu=m/2\)</span> the reduced mass and <span
+class="math inline">\(\sigma=h\sqrt{\beta/\mu}\)</span>. Suppose <span
+class="math inline">\(V\ge-E\)</span>, with <span
+class="math inline">\(E\ge0\)</span>, and choose a radius <span
+class="math inline">\(a\)</span> beyond the minimum. Assume the
+truncated potential <span class="math inline">\(V_a\)</span> (zero
+outside <span class="math inline">\(a\)</span>) decreases to its minimum
+and then increases, allowing flat pieces and a hard core. Let <span
+class="math inline">\(I_a=\int_{|\mathbf r|&gt;a}|V|\,d^3\mathbf
+r\)</span> be finite. For the direct and exchange terms together, <span
+class="math display">\[
+\begin{split}
+|B_h(T)-B_0(T;V_a)|&amp;\le \varepsilon_T(h),\\
+\varepsilon_T(h)&amp;=N_A e^{\beta E}
+\left[8\pi\left(a^2c_1\sigma+\frac{c_3\sigma^3}{3}\right)
+       +\frac{\beta I_a}{2}+\frac{\lambda^3}{2^{5/2}}\right],\\
+\lambda&amp;=h\sqrt{2\pi\beta/m},\qquad
+c_j=6(3/2)^{j/2}\Gamma(1+j/2).
+\end{split}
+\]</span> The direct thermal trace uses the relative Brownian-bridge
+average of <span class="math inline">\(\exp[-\beta\int_0^1 V(|\mathbf
+r+\sigma b_t|)\,dt]\)</span> for a standard three-dimensional unit
+bridge <span class="math inline">\(b\)</span>. Replacing <span
+class="math inline">\(V\)</span> by <span
+class="math inline">\(V_a\)</span> costs at most <span
+class="math inline">\(N_A\beta e^{\beta E} I_a/2\)</span> by translation
+in <span class="math inline">\(\mathbf r\)</span> and the exponential’s
+slope on <span class="math inline">\([-E,\infty)\)</span>. For a hard
+core, cap the common repulsion first and then pass to the hard-core
+limit. The absolute exchange contribution is at most its free
+spin-polarized magnitude times <span class="math inline">\(e^{\beta
+E}\)</span>, giving the last term. Unpolarized spin one-half reduces the
+spin weight further. <a
+href="https://www.nist.gov/system/files/documents/mml/acmd/fluids_modeling/Harvey-Garberoglio-907690-2.pdf">Garberoglio
+and Harvey, direct and exchange traces, Eqs. (9)–(18)</a> (formula
+passages).</p>
+<p>To bound the remaining direct term, fix a bridge whose displacement
+never exceeds <span class="math inline">\(d=\sigma\sup_t|b_t|\)</span>.
+Its path weight lies between the smallest and largest values of <span
+class="math inline">\(f(r)=e^{-\beta V_a(r)}\)</span> on the sampled
+radii. At each level strictly between <span
+class="math inline">\(0\)</span> and <span
+class="math inline">\(e^{\beta E}\)</span>, except for plateau levels of
+measure zero, the region above that level has at most two radial
+boundaries of radii <span class="math inline">\(u\le a\)</span>. A level
+can contribute to the difference from <span
+class="math inline">\(f(|\mathbf r|)\)</span> only within <span
+class="math inline">\(d\)</span> of a boundary. Each shell has volume at
+most <span class="math inline">\(8\pi u^2d+8\pi d^3/3\)</span> by
+comparing the cubes of <span class="math inline">\(u+d\)</span> and
+<span class="math inline">\((u-d)_+\)</span>. Integrate over levels,
+multiply by <span class="math inline">\(N_A/2\)</span> and average. The
+one-coordinate bridge reflection formula and a union bound give <span
+class="math inline">\(\Pr(\sup_t |b_t|&gt;z)\le6e^{-2z^2/3}\)</span>, so
+<span class="math inline">\(\mathbb E[d^j]\le c_j\sigma^j\)</span>. The
+same shell bound holds for nonnegative quadrature weights of total one
+at any inserted times. <a
+href="https://atomoptics.uoregon.edu/~dsteck/teaching/stochastic-processes/stochastic-notes.pdf">Steck,
+<em>Stochastic Processes</em>, Eq. (6.17)</a> (one-sided bridge
+formula).</p>
+<p>If <span class="math inline">\(D_*&gt;0\)</span> bounds the
+experimental <span class="math inline">\(\mathcal D[B]\)</span> from
+below after all calibration allowances, then <span
+class="math display">\[
+w\varepsilon_{T_c}(h)+\varepsilon_{T_m}(h)
++(1-w)\varepsilon_{T_w}(h)\ \ge\ D_* .
+\]</span> When the left side at <span class="math inline">\(h=0\)</span>
+is smaller than <span class="math inline">\(D_*\)</span>, the unique
+positive root of the corresponding equality is a lower bound in action
+units. For each fixed single well with integrable tail one can increase
+<span class="math inline">\(a\)</span> until this holds. A numerical
+bound uniform over a class needs independent bounds on <span
+class="math inline">\(a\)</span>, <span class="math inline">\(E\)</span>
+and <span class="math inline">\(I_a\)</span> (energy times volume), as
+well as <span class="math inline">\(m\)</span>, the three thermal
+energies and the molar volume scale. The preparation fixes temperature
+and density, and the balance fixes force per area. Refining the thermal
+trace changes none of these inputs. This experiment uses equilibrium and
+has no microscopic flight-time readout.</p>
+<h3 id="a-classical-atom-that-reproduces-the-three-coefficients">A
+classical atom that reproduces the three coefficients</h3>
+<p>For an explicit alternative give a classical atom three equilibrating
+internal states. For an integer <span
+class="math inline">\(K&gt;1\)</span> give them multiplicities <span
+class="math inline">\((1,K^5,K^7)\)</span> and energies <span
+class="math inline">\((0,e,2e)\)</span> with <span
+class="math inline">\(e=k_B(10\ {\rm K})\log K\)</span>. Their free-atom
+Gibbs probabilities <span class="math inline">\(p_j(T)\)</span> are
+proportional to multiplicity times the Boltzmann factor. At the three
+measurement temperatures their respective dominant states approach
+probability one as <span class="math inline">\(K\)</span> increases. The
+successive crossings of the dominant Boltzmann weights occur at 2 K and
+5 K.</p>
+<p>Use a common hard core of radius <span
+class="math inline">\(b=0.15\)</span> nm. On the shell from <span
+class="math inline">\(b\)</span> to <span
+class="math inline">\(a=0.50\)</span> nm only like-state pairs interact,
+with well depth <span class="math inline">\(U_j\)</span>. All
+interactions vanish outside <span class="math inline">\(a\)</span>. Put
+<span class="math inline">\(v_b=2\pi N_A b^3/3\)</span> and <span
+class="math inline">\(v_s=2\pi N_A(a^3-b^3)/3\)</span>. Given the three
+negative experimental central values <span
+class="math inline">\(B_j\)</span> at <span
+class="math inline">\(T_j\)</span>, set <span class="math display">\[
+U_j=k_BT_j\log[1+(v_b-B_j)/v_s].
+\]</span> The classical second virial is <span
+class="math inline">\(v_b-v_s\sum_j p_j(T)^2(e^{\beta U_j}-1)\)</span>.
+At each <span class="math inline">\(T_j\)</span> this tends to <span
+class="math inline">\(B_j\)</span>. For example, <span
+class="math inline">\(K=10^6\)</span> gives <span
+class="math inline">\(1-p_j(T_j)&lt;2K^{-8/9}&lt;10^{-5}\)</span> at
+each temperature. The radii give <span
+class="math inline">\(v_b&lt;4.3\)</span> and <span
+class="math inline">\(153&lt;v_s&lt;155\)</span> in <span
+class="math inline">\(\mathrm{cm^3/mol}\)</span>, so <span
+class="math inline">\(U_j/k_B&lt;2\ {\rm K}\)</span> for all three
+wells. The error at <span class="math inline">\(T_j\)</span> is bounded
+by <span class="math inline">\(2(1-p_j(T_j))v_s(e^{2/1.5}-1)&lt;0.01\
+{\rm cm^3/mol}\)</span>. This single zero-action model fits all three
+quoted intervals. The hard core bounds the number of neighbours in the
+shell and makes the gas stable. Smoothing the potential steps and taking
+steep repulsion changes the three integrals arbitrarily little. The
+internal energies, multiplicities, shell radii and well depths are
+inputs of this alternative. At 2 K the free-state weights are <span
+class="math inline">\(1,1,K^{-3}\)</span>. The first two states alone
+give an internal heat capacity of at least <span
+class="math inline">\(k_B(5\log K)^2/(2+K^{-3})^2\)</span>, over <span
+class="math inline">\(1100\,k_B\)</span> per atom for this choice.
+Equilibrium calorimetry can distinguish it. This use of the canonical
+energy variance is standard. <a
+href="https://en.wikisource.org/wiki/Elementary_Principles_in_Statistical_Mechanics/Chapter_VII">Gibbs,
+1902, Ch. VII</a> (canonical averages and fluctuations).</p>
+<p>One can test this alternative even when higher density terms matter.
+At fixed <span class="math inline">\(T\)</span>, let <span
+class="math inline">\(G(\rho,T)=\int_0^\rho b(T,s)\,ds\)</span>, the
+excess molar Helmholtz free energy divided by <span
+class="math inline">\(R_{\rm g}T\)</span> relative to the same ideal
+gas. This follows from <span class="math inline">\(p=-(\partial
+F/\partial V)_T\)</span> at fixed atom number. Allow a
+temperature-independent microscopic energy with arbitrary internal
+variables and many-body forces, ordinary separable translational kinetic
+energy, canonical equilibrium and a single gas phase on the integration
+path. If <span class="math inline">\(q(T)\)</span> is the free atom’s
+internal partition function, <span class="math inline">\(G-\log
+q\)</span> differs by a temperature-independent constant from minus the
+log of the many-atom partition integral per atom after integrating
+translational momenta. It is concave in <span
+class="math inline">\(x=1/T\)</span> by Hölder’s inequality, also in a
+thermodynamic limit in which these free energies exist. Hence <span
+class="math inline">\(\mathcal D[G]\le\mathcal D[\log q]\)</span>. If
+independent calorimetry bounds the free atom’s internal heat capacity by
+<span class="math inline">\(c\,k_B\)</span> throughout the interval,
+then <span class="math inline">\((\log q)&#39;&#39;(x)\le
+c/x^2\)</span>. Subtracting <span class="math inline">\(\log q\)</span>
+from <span class="math inline">\(-c\log(x/x_m)\)</span> gives a convex
+function, so <span class="math display">\[
+\mathcal D[G]\le c\left(\frac35\log 3-\frac25\log 2\right).
+\]</span> This test uses pressure isotherms from zero to a common
+density and an independent thermal bound. It accommodates rare internal
+states and requires no cutoff radius or force fit. For example, if
+isotherms up to <span class="math inline">\(250\ {\rm mol/m^3}\)</span>
+establish that <span class="math inline">\(\mathcal D[b]\)</span> stays
+within <span class="math inline">\(1\ {\rm cm^3/mol}\)</span> of the
+dilute contrast, the lower value <span
+class="math inline">\(5.364\)</span> above would imply <span
+class="math inline">\(\mathcal D[G]\ge0.001091\)</span> and require
+<span class="math inline">\(c&gt;0.0028\)</span>. This tolerance
+specifies the experimental precision needed for that inference. The
+three tabulated coefficients alone give neither that pressure integral
+nor the internal heat capacity. They exclude the equilibrated point-atom
+pair potential class at the stated accuracy. Independent necessity of a
+positive physical action remains open.</p>
 <h2 id="consequence-for-state">7. Consequence for STATE</h2>
 <p>Newton action necessity is the active priority. This note gives the
 first <span class="math inline">\(0+1\)</span> background construction:
@@ -2845,7 +3159,10 @@ bypasses the absolute microwave boost calibration. Its remaining
 premises are the exterior binding work during passage and the driven
 velocity moment. The field-free, finite-time position measurement
 dispenses with the latter and has yet to be matched to data at the
-stated preparation.</p>
+stated preparation. The helium pressure comparison removes the unknown
+central potential from the classical dilute prediction. Extending that
+exclusion to thermally active internal states requires independent
+pressure and heat capacity information.</p>
 
 </main>
 <footer class="site"><div class="wrap">

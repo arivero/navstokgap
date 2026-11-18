@@ -12,18 +12,19 @@ to the orbital force rule in Book I, Proposition VI (1713).
 The [point-insertion test](../notes/balaban-newton-time-blocking.md#central-force-passage-under-point-insertion)
 exposes the sensitivity of one orbit to its preparation. The
 [three-energy scattering test](../notes/balaban-newton-time-blocking.md#a-three-energy-test-of-central-force-trajectories)
-cancels any common impact distribution. The [argon transmission
-test](../notes/balaban-newton-time-blocking.md#an-exterior-force-test-with-argon)
-compares an exterior force and a detector aperture with measured loss.
-[Three finite work readings and the low-energy rate](../notes/balaban-newton-time-blocking.md#three-work-readings-and-the-low-energy-limit)
-allow static charge penetration and nonlinear relaxation. The outward
-orbits retain a momentum-transfer signal as their angular momenta vanish.
-The [77 K double-shutter and field-free tests](../notes/balaban-newton-time-blocking.md#a-thermal-test-with-two-shutters)
-compare the exterior work with a measured drift and a fixed-time
-position readout. Can independent argon measurements bound the binding
-work and its slope outside $0.40$ nm during free passage? The shutter
-test also needs the driven velocity moment. An excess in the field-free
-test would bound a trial action in the stated finite-gas model.
+cancels any common impact distribution. The [helium-3 pressure
+measurements](../notes/balaban-newton-time-blocking.md#helium-pressure-at-three-temperatures)
+violate the dilute equilibrium inequality for every fixed central pair
+potential, within the published uncertainties. A classical atom with
+internal states fits all three coefficients. Can pressure isotherms
+and independently measured heat capacity [exclude that wider
+class](../notes/balaban-newton-time-blocking.md#a-classical-atom-that-reproduces-the-three-coefficients)?
+For individual trajectories the [argon transmission and finite work
+tests](../notes/balaban-newton-time-blocking.md#an-exterior-force-test-with-argon)
+require an independent exterior force calibration. The [77 K shutter
+and field-free tests](../notes/balaban-newton-time-blocking.md#a-thermal-test-with-two-shutters)
+need the binding work and its slope during passage outside $0.40$ nm
+for a drift velocity and a fixed-time position measurement, respectively.
 Earlier apparatus tests use [three positions and two ions](../notes/newton-insertion-action.md),
 an [electron and shutter](../notes/galileo-two-path-interference.md#two-slits-and-a-position-detector)
 and a [clocked grating](../notes/groupoid-quantum-newton-states.md#9-action-calibration-with-a-clocked-grating).
