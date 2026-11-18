@@ -15,10 +15,12 @@ exposes the sensitivity of one orbit to its preparation. The
 cancels any common impact distribution. The [argon transmission
 test](../notes/balaban-newton-time-blocking.md#an-exterior-force-test-with-argon)
 compares an exterior force and a detector aperture with measured loss.
-For a localized linear target, [two clocked pulse readings](../notes/balaban-newton-time-blocking.md#two-pulse-tests-for-a-freely-moving-charge)
-and static work suffice to bound a freely moving charge's deflection.
-Can charge penetration and nonlinear response in real argon be bounded
-on this annulus independently of the transmission count?
+[Three finite work readings and the low-energy rate](../notes/balaban-newton-time-blocking.md#three-work-readings-and-the-low-energy-limit)
+allow static charge penetration and nonlinear relaxation. The outward
+orbits retain a momentum-transfer signal as their angular momenta vanish.
+McPherson measured the initial microwave decay. Does an independently
+calibrated finite-energy rate cover enough of that pulse's velocity
+distribution to decide the comparison?
 Earlier apparatus tests use [three positions and two ions](../notes/newton-insertion-action.md),
 an [electron and shutter](../notes/galileo-two-path-interference.md#two-slits-and-a-position-detector)
 and a [clocked grating](../notes/groupoid-quantum-newton-states.md#9-action-calibration-with-a-clocked-grating).

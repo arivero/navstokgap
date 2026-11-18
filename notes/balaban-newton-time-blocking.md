@@ -28,6 +28,13 @@ delayed force changes the outgoing angle.
 [Argon transmission](#an-exterior-force-test-with-argon) and
 [free-charge calibration](#two-pulse-tests-for-a-freely-moving-charge).
 
+At lower energy the relevant orbits move out into the weak field of the
+atom. Their angular momenta tend to zero, yet they give a positive lower
+limit for relative speed times momentum-transfer cross section. Three
+finite work readings give a separate test at a specified energy, allowing
+charge penetration and nonlinear electrostatic relaxation.
+[Work measurements and the threshold rate](#three-work-readings-and-the-low-energy-limit).
+
 **First calculation, 2026-10-27; written derivation, unrefereed.** In
 one spatial coordinate and one time variable, the same discrete Green
 function controls three operations: constructing a Newton polygon on an
@@ -1535,6 +1542,342 @@ then exclude an entire neighbourhood of zero if the measured deficit
 exceeded its errors. The reported attenuations alone establish neither
 that calibration nor a universal physical $\hbar$.
 
+### Three work readings and the low-energy limit
+
+**6.1 Sol Max, 2026-11-18.** For an equilibrated spherical atom and a
+distinguishable negative test charge, the electrostatic binding energy
+is convex in inverse distance. This allows three work readings to bound
+the turn of an entire annulus without reconstructing a radial force or
+truncating a multipole series. If the equilibrium potential has the
+measured dipole coefficient in its asymptotic tail, the annulus can move
+outward as the collision energy falls. The resulting low-energy
+observable is the rate coefficient $vQ_{\rm mt}$, where $Q_{\rm mt}$
+weights each elastic collision by the fraction of incident longitudinal
+momentum it transfers.
+
+**Why charge penetration has a sign.** Fix a point nucleus of charge
+$+Ze$, a projectile of charge $-e$ with $e>0$, and
+$\kappa=e^2/(4\pi\epsilon_0)$. A trial state $a$ of the target has
+internal energy $H_a$, mobile electron number measure $n_a\ge0$ of mass
+$Z$, and energy at clamped probe position $\mathbf R$
+$$
+ H_a-E_0-\frac{Z\kappa}{|\mathbf R|}
+       +\kappa\int\frac{dn_a(x)}{|\mathbf R-x|}.
+$$
+Take the infimum over the same rotationally invariant family of states
+at every $\mathbf R$, with $E_0$ the isolated minimum. Assume this
+equilibrium work $W(r)$ is finite and continuous for $r>0$ and tends to
+zero at infinity. An unpolarized spherical minimizing state gives
+$W(r)\le0$ by the shell theorem. For a sphere of radius $d<|\mathbf R|$
+centred at $\mathbf R$, the nuclear term has its centre value as its
+average. Each repulsive electron kernel averages to
+$1/\max(d,|\mathbf R-x|)$, at most its centre value, including for
+electrons inside the averaging sphere. Every trial energy at the centre
+therefore dominates the average of $W$ over that sphere. Taking the
+infimum at the centre gives $\Delta W\le0$ in distributions. In radial
+coordinates this is precisely convexity of $-W(1/u)$ in $u>0$.
+Its value at $u=0$ is zero and it is nonnegative, so it is nondecreasing.
+The sign uses a negative probe and negative mobile charges. Exchange
+with the probe, magnetic forces and delayed relaxation are separate
+physical assumptions. Newton's shell theorem applies to each frozen
+state even when the minimum responds nonlinearly.
+[Motte 1729, Book I, Section XII, Propositions LXX–LXXI](https://en.wikisource.org/wiki/The_Mathematical_Principles_of_Natural_Philosophy_%281729%29/Book_1/Section_12)
+(passages). The variational treatment of an external potential also
+applies to electronic ground-state energies. The sign argument itself
+requires no quantum state law. [Lieb (1983)](https://doi.org/10.1002/qua.560240302)
+(abstract, variational background).
+
+**A finite preparation.** Choose an independently fixed length $\ell$
+and relative kinetic energy $E=\mu v^2/2$. Write $u=\ell/r$ and
+$w(u)=-W(\ell/u)/E$. Place the three clamped probes at dimensionless
+inverse radii $u_A,u_B,u_C$ within $0.001$ of $0.65,0.75,0.80$,
+respectively, on separate preparations of the same atom. Take as
+independent readings
+$$
+ w(u_A)\ge0.17,\qquad w(u_B)\le0.35,\qquad
+ w(u_C)-w(u_B)\le0.105 .
+$$
+For elastic motion in $W$, every impact radius
+$2.41\le b^2/\ell^2\le2.75$ then gives a turn between $0.156$ and
+$2.94$ rad. The calibration requires two works relative to infinity
+and one work difference. A smooth exterior potential suffices for the
+ordinary Newton orbit used here.
+
+Indeed, at a turning point $u$ one has $b^2/\ell^2=(1+w(u))/u^2$.
+This expression is above $2.75$ at $u_A$ and below $2.41$ at $u_B$.
+For any intervening root put $t=r_{\min}/r$. The central-orbit
+quadrature gives the angular advance from infinity to that root as
+$$
+ \Phi=\int_0^1\frac{(1-P(t))^{-1/2}}{\sqrt{1-t^2}}\,dt,\qquad
+ P(t)=\frac{w(u)-w(tu)}{(1+w(u))(1-t^2)},\qquad \chi=2\Phi-\pi .
+$$
+Convexity gives $w(tu)\le t w(u)$. The integrand is thus at least that
+of a Coulomb orbit with the same turning radius and binding energy.
+Its deflection is $2\arcsin(w(u)/(2+w(u)))>0.156$. For the upper
+bound every slope up to $u_B$ is at most $0.105/0.048$. For $t\le0.7$
+use $P\le(0.35/1.35)/(1-0.7^2)$. For $t\ge0.7$ use
+$P\le0.751(0.105/0.048)/(1.17\cdot1.7)$. In particular $P<1$
+everywhere, so the incoming orbit reaches the root and turns there.
+The respective factors $(1-P)^{-1/2}$ are below $1.43$ and $2.42$.
+Thus $\Phi<1.43\arcsin(0.7)+2.42(\pi/2-\arcsin(0.7))<3.04$,
+which excludes a full turn back into the aperture.
+[Hendi et al., Eqs. (1)–(4)](https://arxiv.org/pdf/cond-mat/0605637)
+(central-orbit quadrature) and [the Coulomb deflection formula used above](#a-three-energy-test-of-central-force-trajectories).
+
+For example take $\ell=(C_*/E_*)^{1/4}\simeq0.315$ nm with the fixed
+references $C_*=1.18\,10^{-3}$ eV nm$^4$ and $E_*=0.120$ eV. The
+work stations are about $0.484$, $0.420$ and $0.394$ nm from the
+nucleus. Over $0.118\le E\le0.122$ eV the three inequalities follow
+from binding work at A of at least $20.74$ meV, binding work at B of at
+most $41.30$ meV, and an increase from B to C of at most $12.39$ meV,
+including measurement uncertainties. The annulus area is
+$0.34\pi\ell^2>10.5$ square ångströms. The two upstream stops specified
+above can use gates $1.240$ microseconds apart with $2$ ns half-widths
+over $255$ mm. The admitted on-axis flight times select electrons
+inside the stated energy band for stationary argon. With the upstream-half acceptance of
+$0.020$ rad, good fraction $f\ge1/4$ and gain $G\le0.20$ square
+ångströms, the loss would exceed $2.42$ square ångströms. Buckman and
+Lohmann report $1.037$ square ångströms at $0.12$ eV with a $6.4\%$
+relative standard deviation. They did not measure these three works or
+the guarded counts. The adiabatic identification of the work gradient
+with the force in a free encounter is also required at this energy.
+[Buckman and Lohmann, Table 2 and §§2–4](https://doi.org/10.1088/0022-3700/19/16/013)
+(data and apparatus passages).
+
+**The outward annulus.** Now vary $E$, set $\ell_E=(C_4/E)^{1/4}$ and
+assume the physical work obeys $r^4W(r)\to-C_4<0$. This is an
+asymptotic material premise. For instance the bare interaction of a
+spherical neutral cloud contributes $o(r^{-4})$ if its third radial
+moment is finite. Its magnitude is then at most
+$\kappa r^{-4}\int_{|x|>r}|x|^3\,dn_0(x)$. The induced response must
+still give the stated coefficient. The weak uniform-field
+polarizability by itself sets no finite onset radius. The scaled work
+$w_E(u)=-W(\ell_E/u)/E$ tends to $u^4$ uniformly on bounded $u$ intervals.
+All three preceding work inequalities eventually hold. For a stronger
+momentum bound take turning radii with $m=u^4\in[1/4,0.64]$. In this
+limit the quadrature becomes
+$$
+ b^2/\ell_E^2=m^{-1/2}+m^{1/2},\qquad
+ \chi(m)=2\sqrt{1+m}\int_0^{\pi/2}(1-m\sin^2 z)^{-1/2}\,dz-\pi .
+$$
+The passage to this formula is uniform on the stated annulus. Away from
+$t=1$ it follows from uniform work convergence. Near $t=1$ the
+secants of the convex $w_E$ on either side bound its slopes, which
+therefore converge uniformly to $4u^3$ on compact positive $u$
+intervals. Thus $P$ stays uniformly below one there (its limiting
+maximum is $2m/(1+m)$). The integrable majorant is a constant times
+$(1-t^2)^{-1/2}$. The turning points are accessible from infinity.
+The inverse-fourth-power scaling is classical Langevin physics. The
+orbits used here stay outside the capture region.
+[Grier et al., p. 1](https://arxiv.org/pdf/0808.3620) (capture
+calculation, with twice the present convention for $C_4$).
+
+At $m=1/4$ Jensen's inequality gives a turn at least
+$\pi(\sqrt{1.25/(1-0.25/2)}-1)>0.61$. At $m=0.64$ the chord bound
+for the convex integrand as a function of $\sin^2 z$ gives an upper
+angle $\pi(\sqrt{1.64}(1+1/\sqrt{1-0.64})/2-1)<2.23$.
+The angle increases with $m$ in this formula, and the annulus area
+divided by $\ell_E^2$ tends to $0.45\pi$. For elastic scattering define
+$Q_{\rm mt}(E)=2\pi\int_0^\infty(1-\cos\chi)\,b\,db$. Then
+$$
+ \liminf_{E\downarrow0}vQ_{\rm mt}(E)
+ \ \ge\ 0.45\pi(1-\cos 0.61)\sqrt{2C_4/\mu}
+ \ >\ 0.25\sqrt{2C_4/\mu}.
+$$
+Only the outgoing annulus is needed in the integral. If a ray is
+captured, counting its full incident longitudinal momentum gives an
+additional nonnegative contribution. The last rate is about
+$5.1\,10^{-15}$ m$^3$/s for the nominal argon coefficient. Meanwhile
+the incoming angular momenta are proportional to
+$\sqrt{2\mu}\,C_4^{1/4}E^{1/4}$ and tend to zero. These two limits
+refer to the same rays. Inserting additional mathematical times changes
+neither.
+
+The quiet reciprocal oscillator model above also reaches this threshold
+along its **freely moving** paths. It needs no lower bound on mode
+frequencies. In the earlier orbit variables compare with the *pure*
+static dipole orbit $X$, taking $s=0$ at its turn. Here $q<0.24$ and
+$(|X|^2/2)''=1-q/|X|^4\ge1-0.64$. Thus $|X|\ge0.6g(s)$ and
+$|X'|\le\sqrt{1.64}$. While $D\le0.1$ the previous lag estimate
+applies with $a=0.5$ and $V=1.4$. Put $z=(r_1/(ba))^2$, where
+$U=\sum_{\ell\ge2}w_\ell$ at the fixed $r_1$ is finite.
+As $E\downarrow0$, $z\to0$ and the static higher forces are bounded by
+$3q a^{-5}Uz\,g^{-5}$. Use the slow-mode bound for every higher degree
+and for dipole frequencies up to a fixed $\nu_c>0$. The squared
+first-derivative factor for degree $\ell\ge2$ is at most
+$(\ell+1)^2z^{\ell-1}/4\le3z$ once $z\le0.36$. Thus in the displayed
+$B_{\rm lag}$ bound take $S=P_1((0,\nu_c])+3Uz$ and
+$\Lambda=v/(b\nu_c)$. The static force and derivative constants $2.3$
+and $12$ apply for sufficiently small $Uz,z$. Adding the static
+higher-force integral gives
+$$
+ D\le q(B_{\rm lag}+3a^{-5}Uz I_4)\exp(12q a^{-6}I_4).
+$$
+First choose $\nu_c$ so that the slow dipole weight is arbitrarily
+small, then lower $E$ so that $z$ and $\Lambda$ are small. The bound
+closes $D<0.1$ and tends to zero uniformly on the annulus. The outgoing
+velocities converge to the elastic reference velocities. The annular
+rate bound persists for the angular moment, and for longitudinal
+momentum transfer when other events have nonnegative mean loss. This
+two-limit proof supplies no numerical crossover energy for real argon.
+
+**Can finite data locate the onset?** A spherical shell of negative
+charge $-Ze$ and radius $a$ can move by a vector of length at most
+$d<a$ relative to its fixed positive nucleus, at elastic cost $ks^2/2$
+for displacement $s$. At $r>a+d$ its minimizing displacement points
+away from the probe. Its work is exactly
+$$
+ W_d(r)=\min_{0\le s\le d}\left\{\tfrac12ks^2+
+ Z\kappa[(r+s)^{-1}-r^{-1}]\right\}.
+$$
+Every $d>0$ gives the same weak uniform-field polarizability
+$(Ze)^2/k$ and the same $C_4=(Z\kappa)^2/(2k)$ since the minimizing
+$s$ at large $r$ is asymptotic to $Z\kappa/(kr^2)$. Yet on any fixed
+exterior radius band $0\le W'_d(r)\le2Z\kappa d/r^3$. A sufficiently
+small $d$ makes the force arbitrarily weak on that band. The onset of
+the threshold prediction is not uniform over targets with the same
+measured polarizability. A support mass and an elastic displacement
+stop give a classical mechanical realization.
+
+The clocked observable for a velocity-selected beam is the loss of mean
+longitudinal momentum per unit target column, divided by incident
+momentum, with the angular acceptance and missing output included in
+its errors. It yields $Q_{\rm mt}$ in elastic single-atom scattering.
+To approach the threshold one must keep the target spacing and cell
+dimensions large compared with $\ell_E$, use enough flight time to
+resolve the relative speed, and control the target velocity spread.
+At fixed nonzero target temperature a beam slowed to rest in the
+laboratory samples a distribution of relative energies.
+Milloy et al. give $Q_{\rm mt}=3.88$ square ångströms at $0.014$ eV,
+fitting drift and diffusion measurements with quantum phase shifts
+below $0.32$ eV. A finite scattering length in that fit gives
+$vQ_{\rm mt}\to0$. Inferring an action scale from this extrapolation
+would import the dynamics being tested.
+[Milloy et al., §4 and Tables 1–2](https://www.publish.csiro.au/ph/pdf/PH770061)
+(method and data passages) and [O'Malley, Rosenberg and Spruch (1962)](https://doi.org/10.1103/PhysRev.125.1300)
+(abstract, polarization threshold theory).
+
+**A finite current readout.** Prepare two dilute electron samples and
+neutral targets with independently checked Maxwell velocities at the
+same temperature $T$. Give the electrons opposite finite velocity
+increments $\pm U\hat z$, keeping the target preparation the same.
+Turn off the drive and measure both mean longitudinal velocities over
+the same flight interval $\Delta t$. Let $D_n(t)$ be half their
+difference at target number density $n$, so $D_n(0)=U$. After
+empty-cell subtraction take the dilute slope
+$$
+ {\cal R}(T,U)=-\frac{1}{U\Delta t}
+ \left.\frac{d}{dn}\big[D_n(\Delta t)-D_n(0)\big]\right|_{n=0}.
+$$
+Use completed, independent binary encounters in a homogeneous sample
+and count the entire velocity distribution. In binary kinetics an
+elastic encounter of relative velocity $\mathbf g$ changes the
+electron velocity by $(\mu/m_e)(\mathbf g'-\mathbf g)$. The angular
+integral of that change per unit time and density is
+$-(\mu/m_e)\mathbf g\,gQ_{\rm mt}$. At first order in density the
+field-free incident distributions stay fixed in the collision integral
+over the gate. The drifted-Maxwell momentum-transfer law and its
+constant rate for an exact inverse-speed cross section are established.
+[Pinto and Galli, Eqs. (2)–(8) and case (b) after Eq. (16)](https://arxiv.org/pdf/0804.2856)
+(binary elastic force, velocity average and polarization law).
+
+Let $f_T(\mathbf g)$ be the centered, normalized Maxwell density of the
+relative velocity with component variance $k_BT/\mu$. The two prepared
+currents measure the positive average
+$$
+ \begin{aligned}
+ {\cal R}(T,U)&=\frac{\mu}{m_e}\int gQ_{\rm mt}(\mu g^2/2)\,dP_{T,U},\\
+ dP_{T,U}&=\frac{g_z}{2U}
+ [f_T(\mathbf g-U\hat z)-f_T(\mathbf g+U\hat z)]\,d^3g .
+ \end{aligned}
+$$
+The bracket has the sign of $g_z$ and the two means differ by $2U$,
+so the weight is nonnegative and integrates to one at finite boost.
+For any independently calibrated energy band on which $vQ_{\rm mt}\ge K$,
+the raw readout therefore obeys $\mathcal R\ge(\mu/m_e)K P_{T,U}({\rm band})$.
+For $U=\lambda\sqrt{k_BT/\mu}$ with fixed $\lambda>0$ the weight
+concentrates at zero speed as $T$ falls. The same positive lower
+rate consequently survives the thermal average with factor $\mu/m_e$.
+A bounded low-energy cross section instead gives a vanishing rate if
+the high-energy contribution vanishes on each fixed positive-energy
+tail, as it does for polynomially bounded cross sections with these
+Maxwell preparations.
+
+For scale, a $1$ ns electric pulse with time integral
+$m_eU/e\simeq5.7\,10^{-8}$ V s/m supplies $U=10^4$ m/s. In a
+$10$ mm sensing region at $90$ K, use identical $50$ ps current gates
+centred $1$ ns apart after switch-off. At first order in density the
+current is affine in field-free time, so averaging in these equal
+gates preserves its difference. The pulse, actual
+relative speed distribution, field uniformity, drift during the gates,
+detector response and losses at the boundaries need calibration. At
+each energy the gate must encompass the binary encounter and the dilute
+slope must resolve single collisions. Along a threshold sequence the
+encounter duration grows as $\ell_E/v$ and the density must allow
+$n\ell_E^3\ll1$. A fixed clock resolution permits longer gates.
+Robertson's electron drift velocities at $89.6$ and $293$ K are
+steady-field measurements. The opposite-boost, field-free decay is a
+different measurement and would test the lower bound without an
+inversion for phase shifts. [Robertson, Table 1 and §3](https://www.publish.csiro.au/ph/pdf/PH770039)
+(instrument and drift data passages).
+
+There is already a measurement of the **initial decay**. McPherson
+excited the electron cyclotron motion with a $2.8$ GHz microwave pulse
+and measured the decay of the emitted field. His lowest-speed row,
+labelled $1.50\,10^5$ m/s, gives $(4.07^{+0.42}_{-0.41})\,10^4$
+s$^{-1}$ after residual subtraction, normalized to $10^{-3}$ Torr at
+$273.15$ K. At that reference pressure and temperature
+$n_{\rm ref}=p/(k_BT_{\rm ref})=3.54\,10^{19}$ m$^{-3}$. The measured
+decay per density is $1.15\,10^{-15}$ m$^3$/s, with reported upper
+value below $1.28\,10^{-15}$ m$^3$/s. This calculation uses the
+measured envelope slope, before the inversion for monoenergetic
+collision frequencies. [McPherson, 1974 thesis, pp. 53, 59–62, Table 1](https://repository.gatech.edu/bitstreams/b6e6ee45-e4b3-49d9-b1a8-492a589e7bee/download)
+(apparatus, slope and data passages) and
+[McPherson, Feeney and Hooper (1976)](https://doi.org/10.1103/PhysRevA.13.167)
+(abstract, published experiment).
+
+To compare that slope with the bound, demodulate in the rotating
+frame and assume that magnetic bending during a single encounter is
+negligible and residual dephasing is controlled. For an isotropic
+target the one-boost longitudinal collision integral equals the
+opposite-boost difference by reflection. If $U(x)$ varies across the
+waveguide and the detected initial current is in phase, weighting each
+local $P_{T,|U(x)|}$ by its nonnegative contribution to the initial
+signal gives a probability $P_{\rm eff}$. The initial logarithmic
+decay then measures exactly the same positive average to binary order.
+A rate $vQ_{\rm mt}\ge5.0\,10^{-15}$ m$^3$/s **certified on a finite
+energy band** carrying at least $26\%$ of this weight would exceed the
+reported upper value, allowing a further receiver error equal to the
+remaining margin. The asymptotic bound does not specify that band.
+The thesis assigned its absolute speed scale by matching the unfolded
+minimum to Golden's earlier argon result and discussed the thermal and
+waveguide averaging. Thus the small decay is an experimental datum,
+while the overlap with a calibrated band remains to be established.
+[McPherson, pp. 53, 67–82, 95](https://repository.gatech.edu/bitstreams/b6e6ee45-e4b3-49d9-b1a8-492a589e7bee/download)
+(energy calibration and averaging passages).
+
+One sufficient overlap test uses a velocity moment. The weight
+$P_{T,U}$ has mean relative energy
+$\mu U^2/2+5k_BT/2$, by the third moments of the shifted Maxwell
+distributions. If the certified band extends from zero to $E_c$,
+its weight is at least $[1-(\mu U^2/2+5k_BT/2)/E_c]_+$.
+For the waveguide use the initial-signal-weighted mean of $U(x)^2$.
+For the separately specified $90$ K, $10^4$ m/s preparation the mean
+is below $19.7$ meV, so calibration through $27$ meV would cover more
+than $26\%$. Those settings cannot be substituted for the 1974 pulse.
+
+The order of the energy and action limits matters. For a supplied
+reduced action $h$, the exterior Schrödinger equation in units of
+$\ell_E$ and $E$ has kinetic coefficient
+$[h/(\sqrt{2\mu E}\,\ell_E)]^2$. With $J_*=\sqrt{2\mu E_*}\,\ell_{E_*}$
+the schedule $E/E_*=(h/J_*)^4$ keeps this coefficient equal to one
+while $h$ and $E$ tend to zero. The core boundary condition, clocked
+preparation and readout still enter the measured rate. A finite discrepancy at a **fixed**
+calibrated energy would exclude a neighbourhood of zero in any trial
+family proved to recover this Newtonian readout there as $h\to0$.
+The fitted zero-energy law supplies neither that finite discrepancy
+nor a value of physical $\hbar$.
+
 ## 7. Consequence for STATE
 
 Newton action necessity is the active priority. This note gives the first
@@ -1552,8 +1895,9 @@ requires control of the accessible force, of how the ensemble changes
 with the setting, and of the angular response. A lower bound from
 Mott exchange also supplies that dynamical law. The physical premise
 that would force a positive action for central motion in general
-remains open. The two pulse readings would suffice to predict a
-resolved turn of a freely moving charge in the localized linear model.
-An equilibrated finite-radius work bound, the response at encounter
-strength and the guarded counts for real argon remain open. The elastic
-action discrepancy can already occur between two classical dynamics.
+remains open. Three equilibrium work readings control nonlinear static
+screening and charge penetration. The two-pulse test covers delayed
+motion in its stated model. The measured microwave decay is small
+enough for a test if a calibrated finite-energy rate covers a known
+fraction of its initial signal. The material onset and that independent
+velocity calibration for argon remain open.
