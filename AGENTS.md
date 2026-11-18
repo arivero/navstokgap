@@ -19,6 +19,15 @@ later results and corrections. The catalog is repository infrastructure;
 
 # The scientific task
 
+New research in this repository is mathematical physics only. A "physical
+premise" is a principle about the admissible states, forces or dynamics
+of a theory. "Physically realizable" asks whether a motion or limit exists
+under those principles. Justify a proposed premise independently of the
+conclusion and test it by a proof or a countermodel. Experimental proposals,
+apparatus calibration, searches for measurements and data analysis are
+outside the scope of new work. Earlier experimental applications remain
+in the catalog as historical results.
+
 The identified overlap families have been consolidated. The user authorized
 standard research after the index/reference/site consistency pass on 2026-10-30.
 STATE owns the current bounded question. Maintain arguments by scientific

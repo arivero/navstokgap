@@ -4,9 +4,10 @@
 [Maintained arguments](notes/index.md) · [Live state](research/STATE.md) ·
 [Manuscripts](research/pdf-audit.md) · [Primary sources](docs/README.md)
 
-The two open goals are a physically justified positive action scale for
-Newtonian completion and continuum pure $SU(3)$ Yang–Mills with a finite positive
-mass gap. The [pion comparison](notes/three-continuum-limits.md) tests which
+This is a mathematical physics repository. The two open goals are to
+determine whether Newtonian trajectory refinement requires positive physical
+action and to construct continuum pure $SU(3)$ Yang–Mills with a finite
+positive mass gap. The [pion comparison](notes/three-continuum-limits.md) tests which
 symmetries and spectral weights a proposed mechanism preserves. Classical
 existence, conditional action floors, quantum structure and identification with
 physical $\hbar$ remain different claims.
