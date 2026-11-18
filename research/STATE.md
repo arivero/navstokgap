@@ -1,18 +1,15 @@
 # State
 
-Updated 2026-10-30. **Standard research resumed by user direction after
+Updated 2026-11-18. **Standard research resumed by user direction after
 consolidation and index/reference/site consistency checks.** The
 [88-argument catalog](../notes/index.md) owns coverage and short completed-work
 phrases; git preserves retired notes and process records.
 
-The user-directed tangent-groupoid scaling calculation is complete for the
-specified scalar Hamiltonian: exact dilation commutes with kernel composition
-and normalized endpoint-bridge marginalization. The local heat expansion,
-finite-scale insertion formula and distinct quantum-well scalings are in the
-[canonical argument](../notes/groupoid-quantum-newton-states.md#7-interacting-kernels-under-tangent-scaling).
-The remaining physical question is which independently specified preparations
-and time scales justify a particular control and action calibration; neither
-local convergence nor the supplied quantum family selects physical $\hbar$.
+One [clocked grating preparation](../notes/groupoid-quantum-newton-states.md#9-action-calibration-with-a-clocked-grating)
+now distinguishes reduced actions at fixed inertial mass using the port
+and pixel record. Ruler and clock alone determine $a/m$. The open physical
+question is what forces another preparation to use the same coefficient
+without assuming a common quantum phase law.
 
 ## Goals and current proof boundaries
 
@@ -33,8 +30,8 @@ must survive the [cusp and history tests](../notes/newton-cusp-preparation-floor
 and [complete-record controller models](../notes/sed-closure-under-recording.md).
 Coherent point-record behavior obeys the stated
 [frequency and preparation conditions](../notes/zero-branch-reachability.md).
-The [scalar scaling map](../notes/groupoid-quantum-newton-states.md) retains
-the complete kernels; universal physical action calibration remains open.
+The [scalar scaling map](../notes/groupoid-quantum-newton-states.md#7-interacting-kernels-under-tangent-scaling)
+retains the complete kernels and normalized endpoint bridges.
 
 For gauge theory, retained-barrier weak-strip (112)/(116) and quadratic
 source test (177) leave nonlinear (113), physical recoupling, $SU(3)$

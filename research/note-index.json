@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-30",
+  "updated": "2026-11-18",
   "coverage": "88 maintained arguments; former notes, ideas and completed task/file names are canonical retrieval aliases. Short completed-work phrases and git history provide provenance. Proofs and source companions govern scientific scope.",
   "priority_basis": "User independent retrieval analysis, 2026-10-01; not novelty or proof quality.",
   "notes": [
@@ -348,13 +348,13 @@
     {
       "path": "notes/groupoid-quantum-newton-states.md",
       "title": "Tangent-groupoid scaling and the quantum construction of Newton motion",
-      "summary": "Exact interacting dilation commutes with kernel composition and normalized bridge marginalization. Matched hbar=epsilon S0 and time/distance epsilon give a local heat expansion with explicit second-order potential terms and a refinement-uniform Gaussian bridge limit. The shifted kernel product retains insertion centres lost at zero. Row-normalized harmonic transitions fail the semigroup law; well-resolving scaling differs. Retains the O(hbar+mesh) coherent-state field theorem, free zero-action control and bridge action defect.",
+      "summary": "Exact interacting dilation preserves kernel composition and normalized bridge marginals. Matched action, time and distance scaling gives a second-order heat correction and a refinement-uniform bridge limit. Finite-scale insertions retain their centres. Row-normalized harmonic transitions fail the semigroup law, and well-resolving scaling differs. The coherent-state error is O(hbar+mesh). Free zero-action control and the bridge action defect persist. A clocked grating measures action per unit mass by signed pixel counts. A positive three-outcome signal gives a conditional lower bound at fixed mass.",
       "thematic_area": "refinement/comparison",
-      "strongest_result": "Exact scalar dilation/composition map and locally uniform interacting tangent heat-kernel expansion, with explicit second-order coefficients and refinement-compatible normalized bridges.",
+      "strongest_result": "Exact scalar dilation through kernels, normalized bridges and a grating instrument, with an explicit local tangent heat correction. The gated port and pixel law identifies the reduced action at fixed mass and is invariant under joint action, mass and stiffness scaling.",
       "status": "result",
-      "proof_status": "written dilation, local heat-kernel and normalized-bridge proofs plus conditional state theorem; established analytic inputs; no universal positive-action selection",
+      "proof_status": "written dilation, tangent heat, bridge and finite-resolution recoil proofs plus conditional state theorem. Universal action selection remains open",
       "retrieval_priority": 3,
-      "current_relevance": "User-directed scaling question: relates the supplied-action Hamiltonian, tangent chart, time scale and complete bridge marginalization; distinguishes a local kernel limit from well-resolving spectral dilation.",
+      "current_relevance": "Connects the interacting kernel dilation to an operational preparation with independent length and time resolution. Identifies which mechanical calibration distinguishes two actions and how the conditional bound survives three-outcome readout.",
       "relations": [
         {
           "type": "uses",
@@ -450,6 +450,11 @@
           "type": "uses",
           "target": "notes/low-dimensional-mass-gap.md",
           "reason": "Compares the tangent short-time zoom with the established homogeneous spectral dilation and its sector hypotheses."
+        },
+        {
+          "type": "uses",
+          "target": "notes/rotation-composition-universality.md",
+          "reason": "Uses reciprocal mechanical mass calibration to interpret the common normalization left by the grating record."
         }
       ],
       "surprising": false,
@@ -509,13 +514,20 @@
         "inserted point",
         "shifted kernel product",
         "finite-scale base point",
-        "pair arrow factorization"
+        "pair arrow factorization",
+        "clocked grating",
+        "signed pixel centroid",
+        "finite clock gates",
+        "recoil calibration",
+        "action per unit mass",
+        "three-outcome readout",
+        "mass stiffness ambiguity"
       ],
       "role": "result,synthesis",
       "value": "infrastructure,synthesis",
-      "limitations": "The heat-kernel rate assumes nonnegative C3 scalar potential with bounded second and third derivatives and compact q,v,T ranges with T>0. Resolvent and heat convergence under dilation are strong, not operator norm. The separate monomial well scaling is exact, but no general long-time or global uniform estimate follows. Physical hbar and positive action remain supplied; the coherent-state rate has its earlier smoothness/preparation hypotheses.",
-      "content_coverage": "Changed scaling proof and surrounding state, regulator, Gaussian and action-composition arguments read; source coverage is passage-specific. Written calculations only; no independent peer review or novelty claim.",
-      "completed_work": "Derived the interacting scale/composition map, tangent heat correction and normalization countertest."
+      "limitations": "The local heat expansion assumes nonnegative C3 scalar potential with globally bounded second and third derivatives. The estimate is uniform on compact q,v,T ranges with T>0. The dilated resolvents and heat operators converge strongly, and general operator-norm convergence fails. The monomial well dilation gives no general long-time estimate. The coherent-state rate retains its smoothness and preparation hypotheses. Recoil identification assumes a calibrated coherent local grating, port-independent harmonic evolution, independent uniform clock gates and an unbiased pixel array. A clipped display supplies only the stated lower bound. An absolute action requires a mass or equivalent stiffness standard. Its necessity and universality remain open.",
+      "content_coverage": "The grating preparation, clock averaging, complete record dilation and clipped display bound were read with the surrounding scalar argument and mechanical mass normalization. Source reading levels are given in the note.",
+      "completed_work": "Carried the interacting dilation through a clocked grating and identified its mass calibration."
     },
     {
       "path": "notes/quantum-blocks-construct-newton.md",

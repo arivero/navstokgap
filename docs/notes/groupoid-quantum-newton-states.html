@@ -80,7 +80,20 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </nav></div></header>
 <main class="wrap">
 <h1>Tangent-groupoid scaling and the quantum construction of Newton
-motion</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/groupoid-quantum-newton-states.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/groupoid-quantum-newton-states.pdf">PDF</a></p><p><strong>Scaling result, 2026-10-30.</strong> For a nonnegative scalar
+motion</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/groupoid-quantum-newton-states.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/groupoid-quantum-newton-states.pdf">PDF</a></p><p><strong>Operational calibration, 2026-11-18.</strong> A two-port
+matter-wave grating in a harmonic trap gives a dimensionless observable
+proportional to <span class="math inline">\(a\tau/(m\ell^2)\)</span>.
+The ruler fixes <span class="math inline">\(\ell\)</span>, the clock
+fixes <span class="math inline">\(\tau\)</span>, and the incoming
+motional state can be unknown. At fixed inertial mass <span
+class="math inline">\(m\)</span>, two different reduced action
+coefficients <span class="math inline">\(a&gt;0\)</span> give different
+joint port and pixel statistics. With only the ruler and clock,
+simultaneous doubling of action, mass and trap stiffness preserves the
+entire record. <a
+href="#action-calibration-with-a-clocked-grating">§9</a> gives the
+preparation, the two finite clock gates and the detector response.</p>
+<p><strong>Scaling result, 2026-10-30.</strong> For a nonnegative scalar
 potential on the line, coordinate/time dilation has an exact action on
 the full quantum Hamiltonian, its kernels and its normalized endpoint
 bridges. With <span class="math inline">\(\hbar=\epsilon S_0\)</span>,
@@ -609,6 +622,7 @@ probability integral, nor make every stationary real-time branch a
 global minimum.</p>
 <h2 id="interacting-kernels-under-tangent-scaling">7. Interacting
 kernels under tangent scaling</h2>
+<p><span id="7-interacting-kernels-under-tangent-scaling"></span></p>
 <p>Here the kinetic energy, mass and potential are specified. The
 conclusions do not follow from the groupoid law without those dynamical
 inputs. Work on <span class="math inline">\(\mathbb R\)</span>, with
@@ -960,6 +974,7 @@ transform</a>, which retains the eigenfunction ratios and vacuum-energy
 factor.</p>
 <h2 id="which-zoom-resolves-a-quantum-well">8. Which zoom resolves a
 quantum well?</h2>
+<p><span id="8-which-zoom-resolves-a-quantum-well"></span></p>
 <p>The ordinary tangent chart samples distances of order <span
 class="math inline">\(\epsilon\)</span> and, in (23), durations of order
 <span class="math inline">\(\epsilon\)</span>. It freezes the potential
@@ -1042,7 +1057,240 @@ parameter. Identifying a particular member with measured physical <span
 class="math inline">\(\hbar\)</span> still requires physical
 information. Normalized free refinement at action zero remains the
 classical countermodel in §6.</p>
-<h2 id="consequence-for-state">9. Consequence for STATE</h2>
+<h2 id="action-calibration-with-a-clocked-grating">9. Action calibration
+with a clocked grating</h2>
+<p><span id="9-action-calibration-with-a-clocked-grating"></span></p>
+<p>Record the port <span class="math inline">\(B=\pm1\)</span> and
+integer pixel <span class="math inline">\(N\)</span> on each transmitted
+particle. For the preparation below, the signed mean in pixel units is
+<span class="math display">\[
+M:=\mathbb E[BN\mid\mathrm{pass}]
+     =\frac{16}{\pi^3}\frac{a\tau}{m\ell^2}.
+\tag{34}
+\]</span> This is a real-time Born probability experiment in the scalar
+family (21), with a two-state tag. Its independent dimensional inputs
+are a ruler length <span class="math inline">\(\ell&gt;0\)</span>, a
+clock interval <span class="math inline">\(\tau&gt;0\)</span> and, for
+an absolute action, an inertial mass <span
+class="math inline">\(m&gt;0\)</span> referred to a mechanical mass
+standard, for example by comparing accelerations under equal and
+opposite forces. Set the harmonic trap period by timing oscillations to
+be <span class="math inline">\(4\tau\)</span>. Its angular frequency is
+<span class="math inline">\(\omega=\pi/(2\tau)\)</span> and its
+stiffness is <span class="math inline">\(m\omega^2\)</span>. The ruler
+sets the aperture width, the grating pattern and the pixel pitch in the
+ratios specified below. No initial temperature, momentum width or
+oscillator ground-state length enters (34).</p>
+<h3 id="preparation-and-readout">Preparation and readout</h3>
+<p>Pass a fresh particle through an aperture of intensity transmission
+<span class="math inline">\(A_\ell(x)^2=\exp[-x^2/(2\ell^2)]\)</span>,
+with <span class="math inline">\(A_\ell\)</span> the positive amplitude.
+On transmission the grating writes the normalized internal tag <span
+class="math display">\[
+\chi_\ell(x)=
+\frac{e^{ix/\ell}|+\rangle+e^{-ix/\ell}|-\rangle}{\sqrt2}.
+\tag{35}
+\]</span> This specifies a coherent, position-local transfer at the
+preparation event. Its <em>relative</em> phase is accessible
+independently of recoil. Interfering the two internal components in two
+analyzer phases gives the cosine and sine of <span
+class="math inline">\(2x/\ell\)</span>, with ruler period <span
+class="math inline">\(\pi\ell\)</span>. For a transmitted calibration
+spot with measured position law <span class="math inline">\(\mathcal
+N(x_0,\ell^2/4)\)</span>, the average of <span
+class="math inline">\(e^{2ix/\ell}\)</span> is <span
+class="math inline">\(e^{-1/2}e^{2ix_0/\ell}\)</span>. Scanning <span
+class="math inline">\(x_0\)</span> resolves the phase winding even at
+that finite spot width. The two port populations alone are each <span
+class="math inline">\(1/2\)</span> for every phase gradient. The phase
+calibration and the position-local transfer are physical premises. An
+undetermined phase common to both ports can be included in the
+transmitted motional state.</p>
+<p>For an incident density operator <span
+class="math inline">\(\rho\)</span>, the accepted operations have
+amplitudes <span
+class="math inline">\(K_b=2^{-1/2}e^{ibQ/\ell}A_\ell(Q)\)</span>, <span
+class="math inline">\(b=\pm1\)</span>, where <span
+class="math inline">\(Q=x\)</span>. The rejected outcome has effect
+<span class="math inline">\(I-A_\ell(Q)^2\)</span> and is counted. The
+transmission probability is <span
+class="math inline">\(p=\operatorname{tr}(\rho A_\ell^2)&gt;0\)</span>.
+Given transmission, the two equally likely ports have states <span
+class="math display">\[
+\rho_b=e^{ibQ/\ell}\sigma e^{-ibQ/\ell},\qquad
+\sigma=A_\ell\rho A_\ell/p .
+\tag{36}
+\]</span> The argument allows any common <span
+class="math inline">\(\sigma\)</span> with finite position and momentum
+second moments. Even a position-preserving grating that leaves apparatus
+memory can have this form. If the calibrated tag at <span
+class="math inline">\(x\)</span> is pure, its joint output with a
+purified apparatus at <span class="math inline">\(x\)</span> factors as
+<span class="math inline">\(\chi_\ell(x)\otimes e_x\)</span>. Tracing
+out the apparatus multiplies the kernel of <span
+class="math inline">\(\sigma\)</span> in (36) by the same <span
+class="math inline">\(\langle e_y,e_x\rangle\)</span> in both ports. The
+motional source can be mixed and its beam velocity unknown. Both ports
+propagate with the same oscillator <span
+class="math inline">\(H_{a,V}\)</span> from §7 with <span
+class="math inline">\(V(x)=m\omega^2x^2/2\)</span> and <span
+class="math inline">\(P_a=-ia\,\partial_x\)</span>. The tag is
+retained.</p>
+<p>The preparation time <span class="math inline">\(u\)</span> is
+uniform in the first clock bin <span
+class="math inline">\([0,\tau]\)</span>. The detection time <span
+class="math inline">\(v\)</span> is independently uniform in the next
+bin <span class="math inline">\([\tau,2\tau]\)</span>. The incident
+state and the aperture acceptance are independent of these clock draws.
+Only the bins are retained. This is timing uncertainty for the
+calibrated transfer (35). Motional evolution during a physical grating
+pulse would have to be included if it changes that transfer.</p>
+<p>The position detector has pitch <span
+class="math inline">\(\ell\)</span> and response at pixel <span
+class="math inline">\(n\in\mathbb Z\)</span> given by <span
+class="math display">\[
+F_{n,\ell}(x)=(1-|x/\ell-n|)_+,\qquad
+\sum_n F_{n,\ell}(x)=1,\qquad \sum_n n F_{n,\ell}(x)=x/\ell .
+\tag{37}
+\]</span> A uniform offset across one pitch before rounding to the
+nearest pixel realizes this response. Between <span
+class="math inline">\(n\ell\)</span> and <span
+class="math inline">\((n+1)\ell\)</span> the two weights are the linear
+interpolation weights. The detector records just the integer. Equation
+(34) uses the full pixel range. A detector retaining only three position
+outcomes is treated below.</p>
+<h3 id="the-observed-displacement">The observed displacement</h3>
+<p>At elapsed time <span class="math inline">\(t=v-u\)</span>,
+oscillator evolution gives <span class="math display">\[
+Q(t)=Q\cos(\omega t)+\frac{P_a}{m\omega}\sin(\omega t).
+\]</span> The Heisenberg equations <span class="math inline">\(\dot
+Q=P_a/m\)</span>, <span class="math inline">\(\dot
+P_a=-m\omega^2Q\)</span> give the identity on Schwartz functions and
+hence on the oscillator form domain. Conjugating <span
+class="math inline">\(P_a\)</span> by the port phase gives <span
+class="math inline">\(e^{-ibQ/\ell}P_a e^{ibQ/\ell}=P_a+b
+a/\ell\)</span>. Thus the entire position law in port <span
+class="math inline">\(b\)</span> is the law of <span
+class="math inline">\(Q(t)\)</span> in <span
+class="math inline">\(\sigma\)</span> shifted by <span
+class="math inline">\(b d(t)\)</span>, where <span
+class="math display">\[
+d(t)=\frac{a}{m\omega\ell}\sin(\omega t).
+\tag{38}
+\]</span> At a given <span class="math inline">\(t\)</span> the mean of
+<span class="math inline">\(BN\)</span> is <span
+class="math inline">\(d(t)/\ell\)</span> by (37). The common motion
+cancels even for a displaced, chirped or mixed incoming state. Writing
+<span class="math inline">\(v-u=\tau+\eta-\xi\)</span> with independent
+centered uniforms of width <span class="math inline">\(\tau\)</span>
+gives <span class="math display">\[
+\mathbb E\sin\big(\omega(v-u)\big)
+=\sin(\omega\tau)
+  \left(\frac{\sin(\omega\tau/2)}{\omega\tau/2}\right)^2
+=\frac{8}{\pi^2}.
+\tag{39}
+\]</span> Each clock bin contributes one factor. Equations (38) and (39)
+prove (34). In particular, equality of the joint record laws forces
+equality of <span class="math inline">\(a\)</span> at the same <span
+class="math inline">\(m,\ell,\tau\)</span>, even if the two fits use
+different incident states. This is identifiability from trial
+probabilities. Finite samples estimate <span
+class="math inline">\(M\)</span> with statistical error.</p>
+<p>There is also a bound from the same records with a finite display.
+Merge all negative pixel numbers into <span
+class="math inline">\(-1\)</span> and all positive ones into <span
+class="math inline">\(+1\)</span>, retaining <span
+class="math inline">\(0\)</span>. By (37) the conditional mean of the
+displayed value at position <span class="math inline">\(x\)</span> is
+<span class="math inline">\(f(x)=\max(-1,\min(1,x/\ell))\)</span>. It is
+increasing and <span class="math inline">\(1/\ell\)</span>-Lipschitz.
+All admitted delays lie in <span
+class="math inline">\([0,2\tau]\)</span>, so <span
+class="math inline">\(d(t)\ge0\)</span>. The signed display mean at
+delay <span class="math inline">\(t\)</span> is the average in the
+common position law of <span
+class="math inline">\([f(x+d(t))-f(x-d(t))]/2\)</span>, which lies
+between zero and <span class="math inline">\(d(t)/\ell\)</span>.
+Consequently an observed lower bound <span
+class="math inline">\(M_*&gt;0\)</span> on <span
+class="math inline">\(\mathbb
+E[B\,\operatorname{sgn}N\mid\mathrm{pass}]\)</span> implies <span
+class="math display">\[
+a\ \ge\ \frac{\pi^3}{16}\frac{m\ell^2}{\tau}\,M_* .
+\tag{40}
+\]</span> The outer outcomes collect all overflow. Discarding particles
+outside a field of view would change the conditional law.</p>
+<h3 id="dilation-of-the-complete-record">Dilation of the complete
+record</h3>
+<p>Set <span class="math inline">\(q=0\)</span> in (20). Under <span
+class="math inline">\(x=sX\)</span> and <span
+class="math inline">\(t=rT\)</span>, the incident state becomes <span
+class="math inline">\(\rho&#39;=D_{0,s}\rho D_{0,s}^{-1}\)</span> and
+the apparatus settings become <span class="math display">\[
+\ell&#39;=\ell/s,\qquad \tau&#39;=\tau/r,\qquad
+\omega&#39;=r\omega,\qquad a&#39;=ra/s^2,\qquad m&#39;=m .
+\tag{41}
+\]</span> Indeed <span
+class="math inline">\(K_b(sX)=2^{-1/2}e^{ibX/\ell&#39;}A_{\ell&#39;}(X)\)</span>
+and <span
+class="math inline">\(F_{n,\ell}(sX)=F_{n,\ell&#39;}(X)\)</span>. Both
+uniform clock measures push forward to the corresponding bins of width
+<span class="math inline">\(\tau&#39;\)</span>. Writing <span
+class="math inline">\(U(t)\)</span> for <span
+class="math inline">\(e^{-itH_{a,V}/a}\)</span>, the unconditional
+probability of the record <span class="math inline">\((b,n)\)</span> is
+<span class="math display">\[
+\int_0^\tau\frac{du}{\tau}\int_\tau^{2\tau}\frac{dv}{\tau}\,
+\operatorname{tr}\!\left[
+F_{n,\ell}(Q)\,U(v-u)K_b\rho K_b^*U(v-u)^*\right].
+\tag{42}
+\]</span> Conjugating the trace by <span
+class="math inline">\(D_{0,s}\)</span> and using (21) gives precisely
+the primed probability, with the same port and pixel <em>labels</em>.
+The rejection effect transforms in the same way. In (34) the invariant
+is <span
+class="math inline">\(a&#39;\tau&#39;/(m\ell&#39;^2)=a\tau/(m\ell^2)\)</span>.
+Requiring the same physical ruler and clock fixes <span
+class="math inline">\(s=r=1\)</span>.</p>
+<p>If only <span class="math inline">\(\ell,\tau\)</span> and the
+oscillation period are calibrated, an explicit pair with the same
+incident <span class="math inline">\(\rho\)</span> and the same grating
+and detector is <span class="math display">\[
+(a,m,m\omega^2)\qquad\hbox{and}\qquad(2a,2m,2m\omega^2).
+\tag{43}
+\]</span> The Hamiltonian doubles, so <span
+class="math inline">\(H/a\)</span> and every probability in (42) agree.
+A mechanical mass or absolute stiffness calibration distinguishes this
+pair. Relative inertias have the same common-normalization freedom in
+the <a
+href="rotation-composition-universality.html#reciprocal-mechanical-calibration">reciprocal
+mechanical calibration</a>.</p>
+<p>The length and time standards alone therefore measure <span
+class="math inline">\(a/m\)</span>. With the mass standard, <span
+class="math inline">\(S_0=m\ell^2/\tau\)</span> is the laboratory action
+unit and (34) measures <span class="math inline">\(a/S_0\)</span>. For
+the member identified with physical <span
+class="math inline">\(\hbar\)</span>, this ratio is <span
+class="math inline">\(\epsilon\)</span> and <span
+class="math inline">\(h_P=2\pi\hbar\)</span>. No positive lower bound on
+<span class="math inline">\(M\)</span> has been assumed or observed
+here. Moreover a classical apparatus which assigns a fair port and a
+signed impulse <span class="math inline">\(bJ\)</span> reproduces the
+signed centroid with <span class="math inline">\(J=a/\ell\)</span>. Its
+mechanical impulse is an additional input. The inference to a quantum
+action uses the independently specified coherent grating and the
+Schrödinger dynamics.</p>
+<p>State-dependent recoil in a harmonic trap and action-to-mass recoil
+metrology have experimental precedents. Mizrahi et al. derive an ideal
+opposite-displacement operator in the short-pulse regime and compare it
+with a trapped-ion experiment (pp. 2–3, Eq. (7), passages read). Cadoret
+et al. measure <span class="math inline">\(h_P/m_{\rm Rb}\)</span> with
+Bloch oscillations and an atom interferometer (abstract read). The two
+clock gates and pixel statistic in (34) are the protocol specified here.
+<a href="https://arxiv.org/pdf/1201.6597">Mizrahi et al. 2013</a> and <a
+href="https://arxiv.org/abs/0810.3152">Cadoret et al. 2008</a>.</p>
+<h2 id="consequence-for-state">10. Consequence for STATE</h2>
+<p><span id="9-consequence-for-state"></span></p>
 <p>The constructed <span class="math inline">\(0+1\)</span> quantum
 family, the semiclassical Newton flow and the user’s tangent-groupoid
 framework meet in a state theorem with a joint mesh/action error bound.
@@ -1051,10 +1299,11 @@ map, a controlled local interacting heat kernel and a
 refinement-compatible normalized bridge. Ordinary tangent and
 well-resolving limits use different spatial and temporal scales. The
 strong product limit remains a fixed-<span
-class="math inline">\(\hbar\)</span> theorem. Physical calibration,
-uniform control over growing times or noncompact preparations, and
-four-dimensional Yang–Mills construction remain separate
-obligations.</p>
+class="math inline">\(\hbar\)</span> theorem. The grating record
+calibrates the reduced action of this dynamics given a mechanical mass
+standard. Independent necessity and a shared value for other
+preparations remain open, as do control over growing times and
+four-dimensional Yang–Mills construction.</p>
 
 </main>
 <footer class="site"><div class="wrap">
