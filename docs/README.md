@@ -11,6 +11,8 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Mechanics investigation
 
+- [Polonium-212 and lead-208](Polonium212_AlphaEscape.md) pairs the emitted
+  alpha energy and decay clock with incident elastic scattering on the daughter.
 - [Eid et al. optical-barrier measurements](EidEtAl_OpticalBarriers_2024.md)
   give the source of the potassium fractions measured at two barrier powers.
 - [Valahu et al. grid-state data](ValahuEtAl_GridContrast_2024.md) give

@@ -57,6 +57,13 @@ actions can give exactly the same complete site record.
 \hyperref[a-single-atom-returning-in-a-tilted-lattice]{A single atom
 returning in a tilted lattice}.
 
+For an alpha particle leaving lead-208, an exterior population gain on a
+fixed clock would bound a trial action if the same radial barrier covers
+every way out. Separate scattering and decay experiments test how much
+work a classical alternative must supply.
+\hyperref[a-clock-on-escape-through-a-central-force-barrier]{Polonium
+escape}.
+
 Electron transmission through argon supplies a single-energy comparison
 without identical-particle exchange. A finite annulus of exterior Newton
 orbits would miss the measured exit aperture if the polarization force
@@ -1959,6 +1966,201 @@ responses, the finite-time Wigner limit used above would exclude a
 sequence \(a\downarrow0\) if the classical count ceiling were exceeded
 after allowances. Neither the axial data nor the single-band contrast
 bound establishes universal action necessity.
+
+\subsection{A clock on escape through a central-force
+barrier}\label{a-clock-on-escape-through-a-central-force-barrier}
+
+\textbf{6.1 Sol Max, 2026-11-18.} How far does a force measured on an
+incoming particle constrain an outgoing one? Polonium-212 emits an alpha
+particle and leaves lead-208. One can also fire alpha particles at
+lead-208. If the two preparations share a radial barrier of measured
+height and width, any positive gain in exterior population in a fixed
+time gives an explicit positive lower bound on the action in local
+Schrödinger dynamics. The bound allows arbitrary motion inside the
+barrier. Gurney and Condon already used the scattering--decay comparison
+for uranium in their explanation of alpha decay. The question here is
+which measurements suffice to bound the action without entering its
+value. \href{https://doi.org/10.1103/PhysRev.33.127}{Gurney and Condon,
+§4} (historical passage) and
+\href{https://doi.org/10.1007/BF01343196}{Gamow's independent 1928
+treatment} (publication metadata).
+
+\textbf{What one returning trajectory measures.} The magnetic rigidity
+of the emitted alpha gives \(K_\alpha=8784.85\pm0.31\) keV. Adding the
+daughter recoil for the two-body line gives relative energy
+\(Q\simeq8.95\) MeV. With incident alphas at \(16.486\) MeV laboratory
+energy, the elastic yield at \(170^\circ\) is \(0.997\pm0.049\) times
+Rutherford in the digitization of Hudson and Davis's Fig. 1. Thus the
+same pair is observed going out and coming back at quite different
+energies.
+\href{https://rmf.smf.mx/ojs/index.php/rmf/article/download/975/738}{Del
+Castillo et al., pp.~24--26} (apparatus and Table I),
+\href{https://doi.org/10.1103/PhysRevC.9.1521}{Hudson and Davis} and
+\href{https://github.com/IAEA-NDS/exfor_master/blob/d3e392e3e86a1c20e9094451d1e80a95fff5eaac/exforall/C27/C2798.x4\#L53}{EXFOR
+C2798.002} (figure digitization).
+
+Take a Newtonian elastic ray at centre-of-mass energy \(E_s\), with
+impact parameter \(b>0\), turning radius \(r_m\), and signed, unwrapped
+outward deflection \(0<\Theta<\pi\). Set \(U(\infty)=0\). Suppose
+\(U(r)\ge-B\) for \(r\ge r_m\). In the central scattering quadrature,
+replacing \(U\) by \(-B\) increases the denominator. Hence
+
+\[
+ \frac{\pi-\Theta}{2}
+ =\int_{r_m}^\infty\frac{b\,dr}{r^2\sqrt{1-U(r)/E_s-b^2/r^2}}
+ \ \ge\ \arcsin\!\frac{b}{r_m\sqrt{1+B/E_s}} .
+\]
+
+The turning condition \(b^2/r_m^2=1-U(r_m)/E_s\) yields
+\(U(r_m)\ge E_s\sin^2(\Theta/2)-B\cos^2(\Theta/2)\). No impact
+distribution enters. At \(E_s\simeq16.17\) MeV an outward bend of at
+least \(160^\circ\) on a nonnegative exterior requires \(U(r_m)>15.6\)
+MeV, over \(6.6\) MeV above the outgoing line. An allowed negative depth
+\(B\) costs at most \(0.031 B\). The polar detector does not identify
+the sign or winding of the deflection. The bound also leaves the
+location and width of the high region open. On a scalar force curve with
+\(|U'|\le F_{\max}\) the potential stays above \(U(r_m)-F_{\max}D\) for
+the next outward distance \(D\). Newton's Lemma X, Corollary 4, suggests
+measuring that force independently by initial displacements.
+Transferring it to every outgoing state is a separate physical premise.
+\href{https://arxiv.org/html/1601.00064}{Chiron and Marcos, §II}
+(central scattering quadrature) and
+\href{newton-insertion-action.md\#lemma-x-and-the-measurement-of-initial-force}{Newton's
+two editions} (historical passages).
+
+\textbf{A bound from two position counts.} Let \(a>0\) be the trial
+reduced action and \(\mu\) the reduced mass. Use the time-independent
+local Hamiltonian \(H_a=-a^2\nabla^2/(2\mu)+U\) in the relative
+coordinate. Allow internal degrees of freedom, with \(U\) acting on
+their Hilbert space at each position. Assume a semibounded self-adjoint
+realization whose quadratic form admits bounded Lipschitz position
+cutoffs. Fix the energy band \([E_c-w,E_c+w]\) and its projector \(P\).
+Require the form bound \(U\ge E_c+w+\Delta\) in \textbf{every admitted
+internal state} throughout \(R\le r\le R+D\), with \(\Delta,D>0\). All
+energies use the same separated-pair threshold. Define a position score
+\(F\) that is zero up to \(R+D/3\), rises linearly to one at \(R+2D/3\),
+and stays one thereafter. Classical trajectories in the band have
+constant \(F\) by conservation of energy and continuity of the relative
+position.
+
+Put \(p_\Delta=\sqrt{2\mu\Delta}\) and \(v_\Delta=p_\Delta/\mu\). For
+any integer \(N\ge1\), any density matrix in the band and any elapsed
+time \(T\), evolution with \(i a\,\partial_t\psi=H_a\psi\) satisfies
+
+\[
+ |\langle F\rangle_T-\langle F\rangle_0|
+ \le \frac{3T v_\Delta}{D}\sqrt{1+w/\Delta}
+        \left(\frac{3N a}{D p_\Delta}\right)^{2N}.
+\]
+
+To see why the bound is uniform over preparations, put \(d=D/(3N)\).
+Take \(\chi_0=1\). For \(1\le j\le N\), let \(\chi_j\) rise linearly
+from zero at \(R+(j-1)d\) to one at \(R+jd\), stay one, and fall
+symmetrically at the outer edge, vanishing outside the two ramps. Each
+cutoff and its gradient are supported where the preceding cutoff equals
+one. Set \(X_j=\|\chi_jP\|\). For a unit vector \(\psi=P\psi\) the
+one-cutoff IMS identity and the shell bound give
+
+\[
+ \frac{\|a\nabla(\chi_j\psi)\|^2}{2\mu}
+       +(w+\Delta)\|\chi_j\psi\|^2
+ \le w X_j^2+\frac{a^2}{2\mu d^2}X_{j-1}^2 .
+\]
+
+Indeed \((H_a-E_c)\psi\) belongs to the band and has norm at most \(w\),
+so the localized energy pairing is bounded by \(wX_j^2\). Discard the
+kinetic term and take the supremum to get \(X_j\le q^j\) with
+\(q=a/(d p_\Delta)\). Keeping the kinetic term then bounds
+\(\|a\nabla(\chi_N\psi)\|\) by \((a/d)\sqrt{1+w/\Delta}\,q^{N-1}\). In
+the probability current paired against \(\nabla F\), the state and its
+gradient equal their \(\chi_N\)-localized versions. The absolute rate of
+change of the score is therefore at most
+\(3X_N\|a\nabla(\chi_N\psi)\|/(\mu D)\). Time evolution preserves the
+band. Integration and mixing give the displayed bound.
+\href{https://www.numdam.org/item/AIHPA_1983__38_3_295_0.pdf}{Simon,
+Lemma 3.1} (IMS localization identity).
+
+\textbf{Preparation and readout.} Use matched releases for the two
+counts. A guarded outer detector gives a lower bound on
+\(\langle F\rangle_T\) if a registered event guarantees that the pair is
+still outside at \(T\). Initial containment gives an upper bound on
+\(\langle F\rangle_0\). Both probabilities use all tagged parents in
+their denominator. Bound false tags, loss, spatial and timing errors in
+converting the counts. If at most \(\eta<1\) of the prepared energy
+probability lies outside the band, projecting and renormalizing changes
+either score by at most \(\sqrt{\eta}\), by purification and the
+fidelity bound on trace distance. Subtract \(2\sqrt{\eta}\) from the
+observed gain in addition to the readout allowances. For a positive
+remainder \(\delta\),
+
+\[
+ a\ \ge\ \frac{D p_\Delta}{3N}
+ \left(\frac{\delta D}{3T v_\Delta\sqrt{1+w/\Delta}}\right)^{1/(2N)} .
+\]
+
+Under \(a\mapsto s a\), the projector becomes the projector of
+\(H_{sa}\) on the same physical energy interval. The preparation may
+change arbitrarily within that constraint. Evolving to the same \(T\)
+with \(H_{sa}\) and reading the same \(F\) multiplies the gain ceiling
+by \(s^{2N}\). \(N\) subdivides the proof only. The estimate needs
+neither an attempt frequency inside the nucleus nor an exponential decay
+law. \href{https://arxiv.org/abs/quant-ph/9712042}{Fuchs and van de
+Graaf, Theorem 1} (trace distance and fidelity).
+
+For a sensitivity calculation take \(R=16\) fm, \(D=4\) fm, \(E_c=9.0\)
+MeV, \(w=0.5\) MeV, \(\Delta=2.0\) MeV, \(T=300\) ns and \(\delta=1/4\).
+For instance, fix an exterior counter with a calibrated linear response
+from zero at \(1.0\,\mu{\rm m}\) to one at \(1.1\,\mu{\rm m}\). Its
+score lies below \(F\). Average that score over independent exposure
+times from 299 to 300 ns and use the latest time in the bound. This
+specifies finite spatial and temporal resolutions for the proposed
+readout. Bounding the initial population at \(r>R+D/3\) still requires a
+separate preparation measurement. The electrostatic coefficient for
+charges \(2e,82e\) is \(C=164e^2/(4\pi\epsilon_0)\simeq236.2\) MeV fm.
+At \(20\) fm the Coulomb energy exceeds \(11.8\) MeV. A measured maximum
+lowering of \(0.30\) MeV across the shell would thus suffice. With
+\(\mu c^2\simeq3.65\,10^3\) MeV we have \(p_\Delta c>120\) MeV and
+\(v_\Delta<c/30\). The dimensionless ratio in parentheses is greater
+than \(2^{-54}\). Taking \(N=18\) gives \(a>3\) MeV fm\(/c\). The inputs
+are the two fragment masses, the charge and electrostatic force
+calibration, the shell radii and work relative to the threshold, the
+band edges, and the clock and position response with their errors. \(c\)
+converts mass and momentum units. The magnetic energy calibration uses
+measured field, orbit radius and charge. None of these inputs uses a
+wavelength converted to momentum by a supplied action.
+
+\textbf{What the experiment leaves open.} Belli et al.~find a
+\(295.1(4)\) ns half-life from selected beta--alpha pulse pairs. The
+slope of that delay histogram does not give the absolute gain for all
+tagged launches. Nor does one resolved alpha line bound their total
+energy leakage. The incident angular yield does not establish the
+proposed shell location or the \(0.30\) MeV allowance in every decay
+channel. \href{https://arxiv.org/pdf/2107.04233v1}{Belli et al.,
+§§3.2--3.3, Fig. 9} (pulse selection and timing fit),
+\href{../docs/Polonium212_AlphaEscape.md}{experimental source details}.
+
+A mechanical readout exists as well. Wang et al.~calibrated the recoil
+of a levitated silica sphere with electric impulses and detected alpha
+decays in the same chain. Their selected impulse component measures
+momentum deposited in the sphere. It leaves the point of release inside
+the nucleus unresolved. \href{https://arxiv.org/pdf/2402.13257v2}{Wang
+et al., Figs. 3--4} (apparatus and recoil selection).
+
+A zero-action alternative shows why a common force matters. Give the
+incident pair the repulsive \(C/r\) potential, consistent with the
+selected low-energy Rutherford ratio. In an unobserved outgoing internal
+state use \(\widetilde U(r)=f(C/r)\), with \(f(x)=x\) for \(x\le Q/4\),
+smoothly increasing to a plateau below \(Q/2\). A localized parent with
+energy \(Q\) releases the pair at a chosen internal clock time with
+radial kinetic energy \(Q-\widetilde U(r_{\rm birth})>0\). Sample its
+waiting time from the fitted delay law, allowing for the flight and
+detector response. The fragments reach the same ordinary Coulomb
+exterior with total kinetic energy tending to \(Q\) and opposite
+momenta. This model reproduces the named energy, delay scale and elastic
+row. It predicts different forces on the two preparations inside
+\(4C/Q\). An independent bound on that difference and an absolute
+exterior count would test it. The numerical action bound above remains
+conditional on those measurements and on the specified dynamics.
 
 \subsection{An exterior force test with
 argon}\label{an-exterior-force-test-with-argon}
@@ -3922,5 +4124,7 @@ independent bound on single-atom work. With one atom per guide the
 remaining conditions are the work across several cells, freeze and
 acceptance errors, and the time allowed for a distant return. For a
 central orbit the centrifugal drop between equal shell phases supplies
-the corresponding work in ruler and clock units.
+the corresponding work in ruler and clock units. For polonium the
+unresolved calibration is the radial work for every outgoing channel and
+the absolute fraction outside on the decay clock.
 \end{document}

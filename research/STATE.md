@@ -9,6 +9,10 @@ The first priority is an explanation of positive physical action from the
 central-force trajectory limit itself. Newton connects [Lemma X's force
 measurement](../notes/newton-insertion-action.md#lemma-x-and-the-measurement-of-initial-force)
 to the orbital force rule in Book I, Proposition VI (1713).
+[Polonium-212 escape](../notes/balaban-newton-time-blocking.md#a-clock-on-escape-through-a-central-force-barrier)
+tests whether the radial work measured on an incident alpha also bounds
+every outgoing channel. An absolute exterior count on the decay clock
+would then bound the action.
 [Four central-force releases](../notes/newton-insertion-action.md#four-central-force-releases-measured-by-final-speeds)
 test arbitrary launch distributions using only the final kinetic energies.
 Do their variances and third moments violate the radial trajectory bound
