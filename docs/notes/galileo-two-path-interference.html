@@ -121,6 +121,16 @@ automatic record-resolution law.</p>
 Proposition 2 is not used in the limiting Theorem 3. Its relative
 averaging prescription is part of the hypothesis. Model checks are
 internal, not independent review.</p>
+<p>A second experiment records the electron’s position after opening
+either slit or both. Three calibrated count distributions can give an
+action band. Moving a window of known width across the beam can
+determine a single reduced action magnitude in the scalar model, even
+with unknown illumination. The force the window exerts on the
+transmitted beam limits what published fringes establish about zero
+action. A classical shutter with one random-impulse scale reproduces the
+entire averaged pattern, even when the electron and shutter positions
+are read together. <a href="#two-slits-and-a-position-detector">Two
+slits and a position detector</a>.</p>
 <h2 id="the-galileo-area-and-the-two-histories">1. The Galileo area and
 the two histories</h2>
 <p>Let <span class="math inline">\(m,F,v,\tau&gt;0\)</span>, with
@@ -640,6 +650,590 @@ exponential representation is singular, while classical mechanics still
 supplies ordinary trajectories and, with state completeness, sharp
 pointer records as in Theorem C(c). A singular coordinate for that
 classical theory creates no inconsistency in the theory itself.</p>
+<h2 id="two-slits-and-a-position-detector">Two slits and a position
+detector</h2>
+<p>Newton’s 1713 Corollary 4 to Lemma X makes displacement a measure of
+force. Here the mechanical calibration is the displacement produced by a
+known transverse impulse <span class="math inline">\(J\)</span>. Denote
+it by <span class="math inline">\(BJ\)</span>. For free flight from a
+mask to a detector over time <span class="math inline">\(T\)</span>,
+<span class="math inline">\(B=T/m\)</span>, where <span
+class="math inline">\(m\)</span> is the inertial mass. Fix the ruler,
+screen pixel pitch <span class="math inline">\(b\)</span>, flight-time
+gate <span class="math inline">\(T_0\pm\Delta T\)</span> with <span
+class="math inline">\(T_0&gt;\Delta T\)</span>, and a nonzero screen
+frequency <span class="math inline">\(k\)</span> in radians per unit
+length. The gain can also be calibrated with a reference impulse and a
+ruler in a focusing apparatus. A mass referred to a mechanical standard
+gives action in absolute units. Free flight with just a ruler and clock
+gives action per unit mass. <a
+href="newton-insertion-action.html#lemma-x-and-the-measurement-of-initial-force">Newton’s
+revision, passages from 1687 and 1713</a>.</p>
+<p><strong>What to count.</strong> Randomize the setting on fresh trials
+from one source. Pass both beams, only the left, or only the right. For
+each setting <span class="math inline">\(s\)</span> let <span
+class="math inline">\(z_s(k)=\int e^{ikx}\,d\mu_s(x)\)</span>, with
+<span class="math inline">\(\mu_s\)</span> the screen count measure
+<em>per incident trial</em>. A loss contributes zero. A separately
+recorded common background cancels in <span
+class="math inline">\(C=z_{LR}-z_L-z_R+z_{\varnothing}\)</span>. Both
+quadratures are sums over the same observed positions. Fix an error
+allowance <span class="math inline">\(e(k)\)</span> such that <span
+class="math inline">\(\delta=(|C_{\rm obs}|-e(k))_+\)</span> is a lower
+bound on the ideal <span class="math inline">\(|C|\)</span>. It includes
+counting error, any change in incident flux, unmatched transmission and
+unobserved screen tails. An upper bound on a missed count probability
+bounds its whole Fourier contribution. Rounding to pixels introduces at
+most <span class="math inline">\(|k|b/2\)</span> per counted particle. A
+common translation-invariant detector blur multiplies <span
+class="math inline">\(C\)</span> by a characteristic function of modulus
+at most one. Three histograms normalized to their own transmitted counts
+discard the relative weights. This statistic uses only the counted
+positions. Phase retrieval from propagated intensities is established.
+For example, Teague uses irradiance and perimeter phase data under the
+wave propagation equation (abstract). <a
+href="https://doi.org/10.1364/JOSA.73.001434">Teague, 1983</a>.</p>
+<p><strong>What a positive excess measures.</strong> At the plane of
+selection let <span class="math inline">\(Q,P\)</span> be transverse
+position and mechanical momentum. First take two intervals with widths
+<span class="math inline">\(w_L,w_R\)</span>, centre separation <span
+class="math inline">\(D\)</span>, projections <span
+class="math inline">\(\Pi_L,\Pi_R\)</span> and <span
+class="math inline">\(d_\pm=D\pm(w_L+w_R)/2\)</span>, with <span
+class="math inline">\(d_-&gt;0\)</span>. The both-open state <span
+class="math inline">\(\rho\)</span> is supported on their union and has
+trace at most one. It can include arbitrary unobserved degrees of
+freedom. Each single-open operation must preserve its corresponding
+block <span class="math inline">\(\Pi_j\rho\Pi_j\)</span> to the
+accuracy charged to <span class="math inline">\(e(k)\)</span>. For
+classical trajectories this just means passing the same particles with
+the same downstream response on the open side. Any such classical
+source, including one with memory, gives <span
+class="math inline">\(C=0\)</span> by additivity.</p>
+<p>For operator models suppose the common detector coordinate is <span
+class="math inline">\(X=AQ+BP+c\)</span>, with <span
+class="math inline">\(A\)</span> dimensionless and <span
+class="math inline">\(c\)</span> a length. Take the real linear
+combinations self-adjoint on closure on a common invariant core
+permitting unitary commutator differentiation, and let <span
+class="math inline">\(K=\|[Q,P]\|&lt;\infty\)</span>. This class
+includes commuting motion. With <span
+class="math inline">\(E=e^{ikX}\)</span> the only contributions to <span
+class="math inline">\(C\)</span> are the two off-diagonal blocks. The
+separated-spectrum Sylvester estimate gives <span
+class="math inline">\(d_-\|\Pi_L
+E\Pi_R\|\le\|\Pi_L[Q,E]\Pi_R\|\)</span>, and likewise in reverse.
+Unitary commutator differentiation gives <span
+class="math inline">\(\|[Q,E]\|\le|kB|K\)</span>. With <span
+class="math inline">\(p_j=\operatorname{tr}(\rho\Pi_j)\)</span> the
+trace norm of each coherence block is at most <span
+class="math inline">\(\sqrt{p_Lp_R}\)</span> by Hilbert–Schmidt
+Cauchy–Schwarz. Consequently a measured <span
+class="math inline">\(\delta&gt;0\)</span> requires</p>
+<p><span class="math display">\[
+K\ \ge\ \frac{d_-\,\delta}{2\sqrt{p_Lp_R}\,|k|B_{\max}},
+\qquad B_{\max}=\sup |B|.
+\]</span></p>
+<p>The same bound holds for a common mixture of flight times in the
+gate, using Cauchy–Schwarz on the trial probabilities. A positive excess
+requires both arms to transmit. Using <span
+class="math inline">\(2\sqrt{p_Lp_R}\le1\)</span> gives a conservative
+bound without measuring the arm weights separately. It rules out wholly
+commuting motion in the stated apparatus. A lower bound on the norm
+leaves open commuting sectors of other preparations. No scalar
+commutator or calibrated relative phase enters. The ordered-interval
+estimate uses Theorem 9.2 with the compressed position operators shifted
+by the midpoint of the gap (passage). <a
+href="https://repository.ias.ac.in/2521/1/2521.pdf#page=10">Bhatia and
+Rosenthal</a>. For the unitary integral under the stated domain
+hypotheses see §3.1 (passage). <a
+href="https://arxiv.org/pdf/2401.06635#page=5">Iserles and
+Kropielnicka</a>.</p>
+<p>In a regular Weyl representation with trial reduced action <span
+class="math inline">\(a\)</span>, <span
+class="math inline">\(e^{ikX}\)</span> translates position support by a
+signed distance of magnitude <span class="math inline">\(|akB|\)</span>.
+Modular translations as probes of separated wave packets are established
+(passage, §II). <a href="https://arxiv.org/pdf/0910.4227">Tollaksen et
+al.</a>. An off-diagonal block can survive only if a translated interval
+meets the other. Thus for <span
+class="math inline">\(B_{\min}=\inf|B|&gt;0\)</span> a positive excess
+requires</p>
+<p><span class="math display">\[
+\frac{d_-}{|k|B_{\max}}\ \le\ |a|\ \le\
+\frac{d_+}{|k|B_{\min}} .
+\]</span></p>
+<p>Under the <a
+href="groupoid-quantum-newton-states.html#interacting-kernels-under-tangent-scaling">action
+dilation</a> <span class="math inline">\(x=sX&#39;,\,t=rT&#39;\)</span>,
+the slit widths, centres, offset <span class="math inline">\(c\)</span>
+and screen pitch divide by <span class="math inline">\(s\)</span>. The
+gate times divide by <span class="math inline">\(r\)</span>, momenta and
+impulses multiply by <span class="math inline">\(r/s\)</span>, and <span
+class="math inline">\(k&#39;=sk\)</span>, <span
+class="math inline">\(B&#39;=B/r\)</span>, <span
+class="math inline">\(a&#39;=ra/s^2\)</span> at fixed mass. Both the
+prepared slit labels and <span class="math inline">\(kx\)</span> at
+detection are invariant with these transformed settings. Holding the
+physical ruler and clock fixed makes the band independent of
+mathematical mesh.</p>
+<p><strong>Two positive scales can give identical records.</strong> Even
+with the same mass, slits, clock and pixels the band need not pick a
+unique <span class="math inline">\(a\)</span>. Take free flight at fixed
+<span class="math inline">\(T\)</span> inside the gate, <span
+class="math inline">\(a&gt;0\)</span>, <span
+class="math inline">\(\beta=aT/m\)</span>, slits of width <span
+class="math inline">\(D/4\)</span> about <span class="math inline">\(\pm
+D/2\)</span>, and a normalized coherent wave <span
+class="math inline">\(\psi\)</span> with a nonzero packet within <span
+class="math inline">\(D/64\)</span> of each centre and zero elsewhere.
+Put <span class="math inline">\(s=21/20\)</span>, <span
+class="math inline">\(\tilde a=sa\)</span> and choose the other incident
+wave by</p>
+<p><span class="math display">\[
+\tilde\psi(sq)=s^{-1/2}
+       \exp\!\big[i(1-s)q^2/(2\beta)\big]\,\psi(q).
+\]</span></p>
+<p>Both supports stay inside their original slits. In the free Fresnel
+kernel for <span class="math inline">\(\tilde a\)</span>, substituting
+<span class="math inline">\(q&#39;=sq\)</span> cancels the change in the
+input quadratic phase and leaves the same Fourier integral in <span
+class="math inline">\(x\)</span>. The output acquires only the factor
+<span class="math inline">\(\exp[i(1/s-1)x^2/(2\beta)]\)</span>. This
+works for each slit separately, their coherent sum and the rejected
+outcome. The full screen laws thus agree even before binning. The
+preparations obey the same measured slit transmissions while differing
+in their unresolved illumination within each slit. The only length in
+the chosen input envelope can be taken proportional to <span
+class="math inline">\(D\)</span>.</p>
+<p><strong>A mask displaced from the slits.</strong> One way to use
+three settings is to put complementary edges at the same coordinate
+<span class="math inline">\(q_*\)</span> in the <em>actual mask
+plane</em> and a both-open run. For a distance <span
+class="math inline">\(d&gt;0\)</span> measure the incident probabilities
+<span class="math inline">\(p_-(d)\)</span> in <span
+class="math inline">\([q_*-d,q_*)\)</span> and <span
+class="math inline">\(p_+(d)\)</span> in <span
+class="math inline">\([q_*,q_*+d]\)</span>. A translation of the same
+edge to <span class="math inline">\(q_*-d,q_*,q_*+d\)</span> measures
+these by differences of total transmission with full collection and
+calibrated position resolution (for a continuous beam the endpoint
+convention has no effect). When <span class="math inline">\(|akB|\le
+d\)</span>, translation in one direction allows only one of the two
+off-diagonal blocks to contribute. Its initial and final points both
+belong to these strips. Cauchy–Schwarz on that matrix element, and on
+any common time mixture, gives the observable implication</p>
+<p><span class="math display">\[
+\delta&gt;\sqrt{p_-^{\,\rm upper}(d)\,p_+^{\,\rm upper}(d)}
+\quad\Longrightarrow\quad |a|&gt;\frac{d}{|k|B_{\max}} .
+\]</span></p>
+<p>This control includes diffraction before the selector.</p>
+<p><strong>What a full mask scan adds.</strong> Translate one opaque
+screen with a clear window of fixed width <span
+class="math inline">\(W\)</span>. In the actual selector plane its ideal
+transmission at setting <span class="math inline">\(y\)</span> is <span
+class="math inline">\(M_y=\mathbf{1}_{[y,y+W]}(Q)\)</span>, acting as
+the identity on transmitted amplitudes. Let <span
+class="math inline">\(z_o\)</span> denote the mask-out harmonic and
+<span class="math inline">\(z_y\)</span> the transmitted harmonic,
+background subtracted and on the same incident count scale. Hold <span
+class="math inline">\(B\ne0\)</span> fixed for the moment. For a trial
+scalar action set <span class="math inline">\(u=akB\)</span>. The two
+factors in <span class="math inline">\(M_y E M_y\)</span> test
+membership of positions a distance <span
+class="math inline">\(|u|\)</span> apart. The set of <span
+class="math inline">\(y\)</span> that pass both has length <span
+class="math inline">\((W-|u|)_+\)</span>, independent of either
+position. Integrating the matrix element gives</p>
+<p><span class="math display">\[
+\int_{\mathbb R} z_y(k)\,dy=(W-|akB|)_+ z_o(k).
+\]</span></p>
+<p>This uses the familiar aperture autocorrelation (passage, Hopkins on
+the pupil function and frequency response). <a
+href="https://janrik.net/Papers/Hopkins-TheFrequencyResponseOfADefocusedOpticalSystem-withNotes.pdf">Hopkins,
+1955</a>. A stable common detector blur multiplies both sides by the
+same factor. Under the dilation above <span
+class="math inline">\(y&#39;=y/s\)</span>, <span
+class="math inline">\(W&#39;=W/s\)</span>. Thus integration over the
+physical mask settings scales by the same factor as <span
+class="math inline">\(W\)</span>. If <span
+class="math inline">\(z_o\ne0\)</span> and the observed ratio <span
+class="math inline">\(\int z_y\,dy/(Wz_o)\)</span> is a real number
+<span class="math inline">\(R\)</span> strictly between zero and one,
+the sole compatible magnitude is <span
+class="math inline">\(W(1-R)/|kB|\)</span>. An imaginary part outside
+the errors tests the model itself. Thus this scan can distinguish the
+explicit pair above on the same screen. A positive classical ensemble
+with a passive mask and any fixed downstream response contributes for
+exactly <span class="math inline">\(W\)</span> of mask travel per
+trajectory. It gives <span class="math inline">\(R=1\)</span>, including
+for rays with an unobserved history. This prediction assumes free
+passage through the clear window.</p>
+<p>A classical shutter can also transmit with a random transverse
+impulse. At fixed <span class="math inline">\(B\)</span> choose a
+classical incident ensemble giving the measured mask-out position law,
+then add an independent kick <span class="math inline">\(J\)</span> on
+transmission. After integration over <span
+class="math inline">\(y\)</span>, every incoming ray has weight <span
+class="math inline">\(W\)</span>. For the mechanical momentum scale
+<span class="math inline">\(j_0&gt;0\)</span> choose the density and its
+characteristic function</p>
+<p><span class="math display">\[
+g(J)=\frac{1}{2\pi j_0}\operatorname{sinc}^2\!
+          \left(\frac{J}{2j_0}\right),\qquad
+\mathbb E e^{ivJ}=(1-j_0|v|)_+ .
+\]</span></p>
+<p>Here <span
+class="math inline">\(\operatorname{sinc}x=\sin(x)/x\)</span> with value
+one at zero. This is the same rectangular-aperture Fourier pair. Setting
+<span class="math inline">\(j_0=|a|/W\)</span> gives the scalar model’s
+full averaged screen measure at every <span
+class="math inline">\(k\)</span>, including after common detector blur.
+In the classical model <span class="math inline">\(j_0\)</span> is an
+apparatus impulse. The ideal density has long tails. For the specified
+single harmonic and <span class="math inline">\(0\le R\le1\)</span>, two
+equally likely finite kicks <span
+class="math inline">\(J=\pm\arccos(R)/|kB|\)</span> give exactly the
+same ratio. Even the location of the integrated diffraction cutoff can
+therefore be reproduced by a force distribution. Keeping the individual
+mask positions supplies further observations. Classical random kicks as
+an explanation of certain which-way measurements have prior art
+(abstract). <a
+href="https://opg.optica.org/abstract.cfm?uri=iqec-1996-TuL115">Wiseman
+and colleagues, 1996</a>.</p>
+<p>With the original finite time gate one can still use <span
+class="math inline">\(D_{\rm scan}=|W z_o-\int z_y\,dy|\)</span>. For
+each common delay the loss of the overlap length is at most <span
+class="math inline">\(|ak|B_{\max}\)</span> and the absolute harmonic is
+at most the incident probability at the mask. Averaging gives <span
+class="math inline">\(D_{\rm scan}\le p|ak|B_{\max}\)</span>, where
+<span class="math inline">\(p\)</span> is the total mask-plane
+probability per incident trial. For measured value <span
+class="math inline">\(D_{\rm obs}\)</span> and total error <span
+class="math inline">\(e_D\)</span> in units of length, this gives <span
+class="math inline">\(|a|\ge(D_{\rm obs}-e_D)_+/(p|k|B_{\max})\)</span>
+without resolving the two slits. For a finite range <span
+class="math inline">\(I\)</span> choose <span
+class="math inline">\(y\)</span> uniformly there and multiply the trial
+mean by <span class="math inline">\(|I|\)</span>. With full transmission
+counting, the missing integral has modulus at most <span
+class="math inline">\(Wp-\int_I p_y\,dy\)</span>, since every position
+is passed for <span class="math inline">\(W\)</span> of travel and <span
+class="math inline">\(|z_y|\le p_y\)</span>. Finite position accuracy of
+the selector can be included by calibrating its actual translation
+distribution. These operations survive arbitrary mathematical
+subdivision of <span class="math inline">\(T\)</span>.</p>
+<p><strong>How a mechanical disturbance could imitate the
+signal.</strong> In free classical flight an extra transverse impulse
+<span class="math inline">\(J_j\)</span> at the selector changes the
+Fourier record of arm <span class="math inline">\(j\)</span> by at most
+<span class="math inline">\(p_j |k|B_{\max}\mathbb E_j|J_j|\)</span>,
+since <span class="math inline">\(|e^{iku}-1|\le |ku|\)</span>. Here
+<span class="math inline">\(J_j\)</span> is the change between shutter
+settings on a transmitted trajectory. For a distributed force difference
+use the endpoint displacement bound <span
+class="math inline">\(m^{-1}\int_0^T(T-t)|\Delta F_j(t)|\,dt\)</span> in
+place of <span class="math inline">\(B_{\max}|J_j|\)</span>. These are
+independent mechanical controls on a systematic error. In an operator
+realization a common additive self-adjoint error <span
+class="math inline">\(R\)</span> in <span
+class="math inline">\(X\)</span> with <span
+class="math inline">\(\|R\|\le r_x\)</span> changes each Fourier effect
+by at most <span class="math inline">\(|k|r_x\)</span> by the
+bounded-perturbation formula.</p>
+<p>Newtonian recoil gives one way to measure such a displacement
+independently of the electron pattern. For an isolated free shutter of
+mass <span class="math inline">\(M\)</span>, let <span
+class="math inline">\(D_M\)</span> be its final displacement relative to
+the continuation of its incoming inertial line. Conservation of the
+transverse centre of mass gives the particle’s extra displacement as
+<span class="math inline">\(-(M/m)D_M\)</span>, even for two opposite
+forces whose net impulse vanishes. Ruler readings on the shutter at
+<span class="math inline">\(-T_c,0,T\)</span> with absolute error <span
+class="math inline">\(\rho_M\)</span> bound the extrapolation error by
+<span class="math inline">\(2(1+T/T_c)\rho_M\)</span>. A force on the
+support or momentum carried away by another body or field belongs in
+this balance. An independent recoil bound needs the absolute
+displacement on transmitted trials, including readout disturbance. A
+signed mean can vanish for the two opposite kicks above.</p>
+<p>The scan allows a force test even if scattering directly at an edge
+is strong. Suppose independent controls localize unrestricted deflection
+to strips of width <span class="math inline">\(\eta\)</span> on the
+<em>inside</em> of each window edge, certify an opaque exterior, and
+bound extra displacement elsewhere in the transmitted beam by <span
+class="math inline">\(r_x\)</span>. For each classical ray at most <span
+class="math inline">\(2\eta\)</span> of window travel lies in the
+strips. There the Fourier readout can change by at most two. The
+resulting classical allowance in <span class="math inline">\(D_{\rm
+scan}\)</span> is at most <span
+class="math inline">\(p(4\eta+W|k|r_x)\)</span> in units of length. Edge
+transmission and deflection require their own calibration before using
+this allowance.</p>
+<p>There is an explicit classical <span
+class="math inline">\(a=0\)</span> alternative if the shutter can change
+that force freely. Fix classical incoming momentum zero and a continuous
+incoming position law on each slit with the measured slit weights. In
+each transmitted arm let <span class="math inline">\(u(q)\)</span> be
+its conditional cumulative probability, uniform on <span
+class="math inline">\([0,1]\)</span>. For shutter setting <span
+class="math inline">\(s\)</span> let <span
+class="math inline">\(H_s\)</span> be the target cumulative distribution
+of the detected coordinate, conditional on transmission. Apply the
+transverse impulse <span
+class="math inline">\(J_s(q)=[H_s^{-1}(u(q))-Aq-c]/B\)</span>. The same
+downstream flight now gives the prescribed <span
+class="math inline">\(H_s\)</span> for every setting and leaves the
+position at the selector unchanged. For a finite screen and <span
+class="math inline">\(B\ne0\)</span> the impulses are bounded. With
+additive transmitted weights this reproduces all three count measures,
+including a fringe pattern. Finite forces suffice even with the same
+flight time. In free flight keep the incident ray label <span
+class="math inline">\(q\)</span>, exert the constant force <span
+class="math inline">\(m[H_s^{-1}(u(q))-q]/[h(T-h/2)]\)</span> for any
+chosen duration <span class="math inline">\(0&lt;h&lt;T\)</span>, then
+let the particle coast. Its endpoint is exactly <span
+class="math inline">\(H_s^{-1}(u(q))\)</span>. Newton’s finite-force
+hypothesis alone permits this change of apparatus. The same force works
+under arbitrarily fine subdivision of the flight. Additional
+observations during the pulse, or an independent bound on its
+deflection, can distinguish it.</p>
+<p><strong>Can measuring both bodies remove the recoil
+alternative?</strong> Let the shutter move freely, with transverse
+position <span class="math inline">\(Y\)</span> and momentum <span
+class="math inline">\(P_M\)</span>. An offset <span
+class="math inline">\(y\)</span> within it selects the <em>relative</em>
+position <span class="math inline">\(S=Q-Y\)</span>. For fixed <span
+class="math inline">\(T\)</span> after the selection, read both
+endpoints <span class="math inline">\(X_e=Q+TP/m\)</span> and <span
+class="math inline">\(X_M=Y+TP_M/M\)</span>. Their joint harmonic has
+independent screen frequencies <span
+class="math inline">\(k_e,k_M\)</span>. In regular commuting constituent
+Weyl algebras with trial actions <span
+class="math inline">\(a_e,a_M\)</span>, its unitary translates the
+support of <span class="math inline">\(S\)</span> by a distance of
+magnitude <span class="math inline">\(T|a_e k_e/m-a_M k_M/M|\)</span>.
+The same window overlap therefore gives</p>
+<p><span class="math display">\[
+\frac1W\int_{\mathbb R}z_y(k_e,k_M)\,dy
+=\left(1-\frac{T}{W}
+    \left|\frac{a_e k_e}{m}-\frac{a_M k_M}{M}\right|\right)_+
+    z_o(k_e,k_M).
+\]</span></p>
+<p>For a common action <span class="math inline">\(a\)</span>, the
+classical construction above now gives the two bodies <em>opposite</em>
+impulses <span class="math inline">\((J,-J)\)</span> with <span
+class="math inline">\(j_0=|a|/W\)</span>. The joint harmonic acquires
+the same factor for every <span
+class="math inline">\((k_e,k_M)\)</span>. A classical incident ensemble
+can have any prescribed mask-plane position marginal and any prescribed
+mask-out endpoint pair at this fixed time: draw those two pairs and set
+each incoming momentum to its mass times its sampled displacement
+divided by <span class="math inline">\(T\)</span>. Thus both endpoint
+records and any common subsequent binning agree for the full averaged
+scan. Total transverse momentum is conserved in the classical
+construction.</p>
+<p>An explicit pair uses the same source at <em>every</em> time in the
+clock gate. Prepare independent centred Gaussian position and momentum
+marginals for each body <span class="math inline">\(i=e,M\)</span>, with
+zero cross covariances and independently fixed rms widths <span
+class="math inline">\(\ell_i\)</span> and <span
+class="math inline">\(\pi_i=m_i\sigma_{v,i}\)</span>. Set <span
+class="math inline">\(a_*=\min_i\ell_i\pi_i&gt;0\)</span>. The product
+Gaussian is an admitted Wigner state at <span
+class="math inline">\(a_*\)</span> since <span
+class="math inline">\(\ell_i\pi_i\ge a_*/2\)</span>. Its free-flight
+marginals equal those of classical Gaussian particles with those widths
+(Gaussian characterization and linear canonical propagation, abstracts).
+<a href="https://doi.org/10.1016/0375-9601(87)90625-6">Simon, Sudarshan
+and Mukunda</a> and <a
+href="https://doi.org/10.1103/PhysRevA.36.3868">their Gaussian
+propagation paper</a>. Use the passive window at <span
+class="math inline">\(a_e=a_M=a_*\)</span> and the window with opposite
+kicks of scale <span class="math inline">\(a_*/W\)</span> at <span
+class="math inline">\(a_e=a_M=0\)</span>. Their averaged joint position
+laws agree at each delay, hence with any common finite clock resolution.
+This preparation specifies lengths, velocity widths, masses, window,
+pixel pitches and clock gate. The positive trial scale is constructed
+from those inputs. It is independent of a value for physical <span
+class="math inline">\(\hbar\)</span>.</p>
+<p>A finite version uses just three mask offsets and three bounded
+kicks. Give the mask real amplitude transmission <span
+class="math inline">\(t(S-y)=[1+\cos(2\pi(S-y)/\Lambda)]/2\)</span> with
+ruler-calibrated pitch <span class="math inline">\(\Lambda\)</span>.
+Choose <span class="math inline">\(y=0,\Lambda/3,2\Lambda/3\)</span>
+equally often. Retain transmission, clock and both positions and average
+over the offset. The three spatial Fourier coefficients of <span
+class="math inline">\(t\)</span> are <span
+class="math inline">\(1/4,1/2,1/4\)</span> for orders <span
+class="math inline">\(-1,0,1\)</span>. Averaging the three offsets
+cancels every product of distinct orders. The pass probability is <span
+class="math inline">\(3/8\)</span>. Conditional on passing, the two-body
+output at <span class="math inline">\(a_*\)</span> is a mixture of
+opposite momentum shifts. In the classical model use the same incident
+Gaussian law and the measured acceptance <span
+class="math inline">\(t(S-y)^2\)</span>. On transmission apply opposite
+kicks <span class="math inline">\((J,-J)\)</span> drawn independently
+from</p>
+<p><span class="math display">\[
+\Pr(J=0)=\tfrac23,\qquad
+\Pr(J=+2\pi a_*/\Lambda)=\Pr(J=-2\pi a_*/\Lambda)=\tfrac16 .
+\]</span></p>
+<p>The averaged acceptance for <em>each</em> incoming relative position
+is <span class="math inline">\(3/8\)</span>, so the admitted classical
+Gaussian ensemble has the original weights. This gives exactly the same
+rejection probability and joint endpoint law at each delay in the gate
+with finite mask travel. Equal translation errors with the same
+distribution at the three offsets still cancel the cross terms. The
+mechanical parameter to check independently at this finite grating is
+the impulse <span class="math inline">\(2\pi a_*/\Lambda\)</span>.</p>
+<p><strong>Retaining the offset separates this explicit pair.</strong>
+Take <span class="math inline">\(\ell_e=\ell_M=\Lambda\)</span> and
+<span class="math inline">\(\pi_e=\pi_M=\pi_0\)</span>. Set <span
+class="math inline">\(\kappa=2\pi/\Lambda\)</span>, <span
+class="math inline">\(\mu=mM/(m+M)\)</span> and choose the clock centre
+<span class="math inline">\(T_0=\mu\Lambda/(a_*\kappa)\)</span> using
+the specified preparation widths. At offset zero count <span
+class="math inline">\(\cos(\kappa(X_e-X_M))\)</span> per incident
+particle. Write <span
+class="math inline">\(L^2=\ell_e^2+\ell_M^2\)</span> and <span
+class="math inline">\(\sigma_V^2=\sigma_{v,e}^2+\sigma_{v,M}^2\)</span>.
+At <span class="math inline">\(T_0\)</span> the relative Weyl
+translation spans one pitch. The centred positions in the two mask
+factors differ by one pitch, so each is a half-pitch from the midpoint.
+Their product changes the sign of the first Fourier order of <span
+class="math inline">\(t^2\)</span>. Every classical kick in the
+displayed pair contributes phase one. The Gaussian characteristic
+function gives the signed difference of the two predicted counts</p>
+<p><span class="math display">\[
+z_{\rm quantum}-z_{\rm classical}
+=-\tfrac12 e^{-(\kappa T_0\sigma_V)^2/2}
+             (1+e^{-2\kappa^2L^2}) .
+\]</span></p>
+<p>The difference stays observable with independently fixed resolutions.
+For <span class="math inline">\(s=T/T_0\in[0.95,1.05]\)</span> the first
+and second cosine coefficients of the mask-product difference are <span
+class="math inline">\((\cos(\pi s)-c_s)/2\)</span> and <span
+class="math inline">\((1-c_s)/8\)</span>, where <span
+class="math inline">\(c_s=(2+\cos(2\pi s))/3\)</span>. The constant
+coefficient cancels. The Gaussian position averages of these cosines
+against the readout are at least <span
+class="math inline">\(1/2\)</span> for the first and between zero and
+one for the second. Since <span class="math inline">\(\cos(\pi
+s)&lt;-3/4\)</span>, <span class="math inline">\(c_s&gt;5/6\)</span> and
+<span class="math inline">\(\kappa T_0\sigma_V\le1\)</span>, the
+negative difference has magnitude greater than <span
+class="math inline">\(3/16\)</span> throughout the gate. Pixel pitches
+<span class="math inline">\(b_e,b_M\)</span> and an offset error <span
+class="math inline">\(|\Delta y|\)</span> change the difference by at
+most <span class="math inline">\(\kappa(b_e+b_M+2|\Delta y|)\)</span>,
+using <span class="math inline">\(|t&#39;|\le\kappa/2\)</span>. Taking
+each at most <span class="math inline">\(\Lambda/256\)</span> leaves a
+gap greater than <span class="math inline">\(1/16\)</span> per incident
+trial before counting error. The prediction compares the two specified
+instruments. A force law allowed to vary with the setting still needs
+independent control.</p>
+<p>The long tails of <span class="math inline">\(g\)</span> are
+dispensable for any fixed finite detector. For <span
+class="math inline">\(n\)</span> exhaustive joint pixel and clock
+outcomes, including overflow, let <span
+class="math inline">\(v(J)\)</span> be the vector of their probabilities
+at fixed kick. Its components are measurable, bounded and sum to one.
+Positive cubature for these <span class="math inline">\(n\)</span>
+functions gives at most <span class="math inline">\(n\)</span> finite
+kicks and positive weights reproducing <span class="math inline">\(\int
+v(J)g(J)\,dJ\)</span> exactly. The weights sum to one because the pixels
+exhaust the outcomes (Corollary 2, passage). <a
+href="https://www.wias-berlin.de/people/bayerc/files/tchakaloff.pdf">Bayer
+and Teichmann</a>. For a fixed <span class="math inline">\(h\)</span>
+shorter than the earliest flight time, the opposite forces <span
+class="math inline">\(\pm(J/h)(4-6t/h)\)</span> on <span
+class="math inline">\(0&lt;t&lt;h\)</span> deliver exactly <span
+class="math inline">\(\pm J\)</span>. Their first time moments vanish,
+so at every <span class="math inline">\(T&gt;h\)</span> the endpoint
+shifts are exactly <span class="math inline">\(TJ/m\)</span> and <span
+class="math inline">\(-TJ/M\)</span>. The force remains finite under any
+mathematical refinement of the pulse. A <em>prescribed</em> independent
+ceiling <span class="math inline">\(J_{\max}\)</span> is a different
+condition. Truncating <span class="math inline">\(g\)</span> at this
+ceiling and renormalizing changes any pixel-event probability by at most
+the removed probability, bounded by <span
+class="math inline">\(4j_0/(\pi J_{\max})\)</span> using the displayed
+density. Distinguishing the alternatives requires a sufficiently small
+measured ceiling.</p>
+<p>In particular <span class="math inline">\(Z=X_e+(M/m)X_M\)</span>
+cancels the displacement due to <em>every</em> internal Newtonian
+impulse. Setting <span class="math inline">\(k_M=(M/m)k_e\)</span> shows
+that this readout tests only <span
+class="math inline">\(a_e-a_M\)</span>. At equal actions <span
+class="math inline">\(S\)</span> and <span
+class="math inline">\(Z\)</span> strongly commute. Their joint spectral
+measure is a positive classical joint law that reproduces every
+individual slit setting and every <span class="math inline">\(Z\)</span>
+bin, even without averaging. This uses the established commutation of
+relative position with total momentum (EPR, §2, passage) and the
+corresponding unequal-scale formula in the composition argument
+(passage). A measured incoming inertial line of the shutter, or separate
+endpoints <em>conditioned on the mask setting</em>, supplies information
+lost in these two readouts. <a
+href="https://doi.org/10.1103/PhysRev.47.777">Einstein, Podolsky and
+Rosen, 1935</a> and <a
+href="rotation-composition-universality.html#relation-to-fluctuation-composition-and-dimensional-selection">centre
+and relative variables</a>.</p>
+<p><strong>What was independently measured.</strong> Bach et
+al. measured both slits by electron microscopy. Their Table S1 gives
+width <span class="math inline">\(64.6\)</span> nm and separation <span
+class="math inline">\(282.7\)</span> nm, hence nominal <span
+class="math inline">\(d_-=218.1\)</span> nm and <span
+class="math inline">\(d_+=347.3\)</span> nm. A <span
+class="math inline">\(5\,\mu{\rm m}\)</span> detection slit sampled the
+unmagnified pattern at <span class="math inline">\(L=240\pm5\)</span>
+mm. Displacing it calibrated the deflection-plate scan. The fitted
+modulation period was about <span class="math inline">\(44\,\mu{\rm
+m}\)</span>. The fit uses <span class="math inline">\(\pi d_{\rm
+fit}/(\lambda L)\)</span>, so <span class="math inline">\(\lambda
+L/d_{\rm fit}\)</span> recovers the period on this calibrated screen.
+Taking their diffraction-fitted slit spacing as a second independent
+length would reuse their assumed de Broglie wavelength. <a
+href="https://www.tezu.ernet.in/rctp2015/2%20supp_double_slit.pdf">Bach
+et al., supplement, Fig. S2 and Table S1</a> (passages).</p>
+<p>The nominal 600 eV flight gives <span
+class="math inline">\(T\simeq16.5\)</span> ns in the nonrelativistic
+approximation, from <span
+class="math inline">\(T=L/\sqrt{2E_z/m}\)</span>. A flight-time gate or
+an accelerating voltage and independently calibrated charge-to-mass
+ratio are needed to establish this gain. At the quoted period, a
+differential signal from selectors <em>in the slit plane</em> would
+place <span class="math inline">\(|a|/m\)</span> nominally between <span
+class="math inline">\(9.3\times10^{-5}\)</span> and <span
+class="math inline">\(1.5\times10^{-4}\ {\rm m^2/s}\)</span>. These
+numbers describe the scale of the proposed test. The fitted visibility
+<span class="math inline">\(0.819\pm0.032\)</span> is from one pattern.
+The authors report limited scan range, possible beam-current drift, and
+a selection mask <span class="math inline">\(240\,\mu{\rm m}\)</span>
+from the slits. They see weak two-slit diffraction even at a nominal
+single-open setting. Their visibility and slit dimensions therefore do
+not supply <span class="math inline">\(\delta\)</span> and the two strip
+probabilities in the same plane. Table S1 gives the movable window’s SEM
+width as <span class="math inline">\(4.680\,\mu{\rm m}\)</span>. A
+translation <span class="math inline">\(|akB|=0.283\,\mu{\rm m}\)</span>
+would reduce its integrated harmonic by about six percent. The published
+mask scan uses a saturating intensity display. The supplement includes
+an image-charge potential at the mask in its wave simulation. Neither
+the displayed contrast nor that simulation bounds the classical
+shutter-dependent displacement in the scan statistic. <a
+href="https://doi.org/10.1088/1367-2630/15/3/033018">Bach et al., §3 and
+Fig. 2</a> and <a
+href="https://www.tezu.ernet.in/rctp2015/2%20supp_double_slit.pdf">supplement,
+Fig. S2, Tables S1–S2</a> (passages).</p>
+<p>Tavabi et al. placed a wire in a plane conjugate to the slits and
+recorded focused slit images before and after diffraction exposures to
+check drift. Their Fig. 4 shows progressive covering of the
+<em>right</em> slit and Fig. 5 gives intensity scans in arbitrary units.
+This demonstrates the practical near-plane control. The published
+comparison does not give both complementary count weights, strip bounds
+and a bound on shutter-dependent deflection for one common ensemble. <a
+href="https://doi.org/10.1038/s41598-019-43323-2">Tavabi et al., Figs.
+3–5</a> (passages).</p>
 <h2 id="consequence-for-state">6. Consequence for STATE</h2>
 <p>Item 2 gains an exact two-path error law on the Galileo cubic action,
 with the endpoint conversion, phase aliases, resources and limiting
@@ -648,11 +1242,16 @@ record; classical-first averaging or calibrated attenuation gives the
 precise contrasting limits. The result locates a conditional record
 threshold at <span class="math inline">\(K_\tau=\tau\Delta E/12\)</span>
 for the matched polygon protocol, and at the corresponding calibrated
-action for a literal inertial reunion. The remaining necessity step is
-to justify a common positive phase/readout scale independently of the
-quantum premises and a fixed experimental budget. Round 3 supplies the
-representation and its exact obstruction, while that physical
-scale-selection problem remains open.</p>
+action for a literal inertial reunion. Position counts after
+complementary apertures offer a different test. Three settings admit an
+explicit pair of positive action scales. The integrated movable-window
+harmonic distinguishes their magnitudes under calibrated passive
+transmission. Its outstanding physical input is an observed deviation
+from the classical sum larger than independently bounded shutter and
+detector effects. Opposite classical impulses reproduce the averaged
+electron and shutter positions jointly. The record that cancels internal
+force exactly also cancels a common quantum action. The necessity of
+such a common scale remains open.</p>
 
 </main>
 <footer class="site"><div class="wrap">
