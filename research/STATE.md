@@ -16,10 +16,11 @@ cancels any common impact distribution. Internal states can fit the
 [three helium-3 gas pressures](../notes/balaban-newton-time-blocking.md#a-classical-atom-that-reproduces-the-three-coefficients).
 [Liquid calorimetry](../notes/balaban-newton-time-blocking.md#how-many-atomic-motions-can-the-measured-heat-support)
 excludes freely mobile classical Gibbs atoms even with internal
-states, and bounds the trial action for each fixed finite-vessel
-fermion model considered there. Can a calibrated local impulse rule
-out constrained atomic motions at the same temperature and pressure,
-including atoms unrepresented in the measured recoil spectrum?
+states. [Isotope enrichment](../notes/balaban-newton-time-blocking.md#isotope-exchange-as-a-test-of-central-forces)
+also excludes changing inertial mass alone for constrained atoms.
+Can an independent force measurement bound the work of exchanging
+isotopes between vapour and liquid, including the forces that first
+appear when a third atom is present?
 For individual trajectories the [argon transmission and finite work
 tests](../notes/balaban-newton-time-blocking.md#an-exterior-force-test-with-argon)
 require an independent exterior force calibration. The [77 K shutter

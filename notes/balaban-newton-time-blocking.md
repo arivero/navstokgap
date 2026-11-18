@@ -50,6 +50,10 @@ liquid, the heat needed to warm a fixed volume independently tests whether
 those atoms retain three mobile, thermally equilibrated momenta apiece.
 [Gas pressure](#helium-pressure-at-three-temperatures) and
 [liquid calorimetry](#how-many-atomic-motions-can-the-measured-heat-support).
+In a helium isotope mixture the vapour and liquid compositions also
+test constrained atomic motion. Their measured enrichment fixes a
+minimum isotope-dependent work for a classical explanation.
+[Isotope exchange](#isotope-exchange-as-a-test-of-central-forces).
 
 **First calculation, 2026-10-27; written derivation, unrefereed.** In
 one spatial coordinate and one time variable, the same discrete Green
@@ -2689,6 +2693,302 @@ It supplies neither the opposite-work measurement nor that uniform
 sampling calibration. This is the remaining physical step between
 the heat deficit and Newton's individual force readout.
 
+### Isotope exchange as a test of central forces
+
+**6.1 Sol Max, 2026-11-18.** At 1.598 K the helium-3 to helium-4
+number ratio was about 31 times larger in vapour than in coexisting
+liquid. If isotope substitution changes only inertial mass, even an
+arbitrarily constrained classical Gibbs system allows an enrichment of
+at most $(m_4/m_3)^{3/2}<1.54$. A classical model with additional
+isotope-dependent forces must assign more than $k_B(4.68\,{\rm K})$
+of mean potential work to interchanging the two labels in the sampled
+environments if it retains the stated kinetic measure. Both the mass
+bound and the work test include atoms that a recoil detector could miss.
+
+**The bulk measurements.** Write $C_b=N_{3,b}/N_{4,b}$ for the number
+ratio in phase $b$, and $\alpha=C_A/C_B$ for the enrichment of phase
+$A$ relative to $B$. In Wansink's stable 1.598 K series the four
+liquid ratios were $0.206$, $0.228$, $0.253$ and $0.281$ percent.
+The corresponding vapour/liquid enrichments were $31.3$, $31.1$,
+$31.1$ and $31.0$. We use $\alpha>29$ after decreasing the smallest
+value by the author's overall 5% accuracy estimate. This margin is
+applied to an individual measured isotherm without extrapolating to
+zero concentration. The $454\,{\rm mm^3}$ copper vessel, measured
+liquid volume, bath pressure, differential manometer and isotope mass
+balance supplied the readout. The level and pressure were read at
+30 and 60 s intervals while a superleak removed helium-4. The
+reduction assumes local vapour/liquid equilibrium, retention of
+helium-3 in the cell and an empirical dew-point calibration, with a
+virial correction. Sommers's dew-point measurements used known
+room-temperature gas compositions. [Wansink, 1957](https://www.lorentz.leidenuniv.nl/history/proefschriften/sources/Wansink_1957.pdf)
+(Ch. I, §§2–6 and Table I) and [Sommers, 1952](https://doi.org/10.1103/PhysRev.88.113)
+(abstract, calibration method).
+
+One can dispense with the subtraction of two vapour inventories
+used to infer the small liquid concentration. In the first row,
+$V_L=13.65\,{\rm mm^3}$, the measured pressure excess is
+$0.361\,{\rm mmHg}$ and the emptied-cell value is $0.572\,{\rm mmHg}$.
+The latter gives $2.61\,\mu{\rm mol}$ of helium-3 in the whole vessel
+from $\Delta P_{\max}V/(R_{\rm g}T)$ before the virial correction.
+Take a loose upper allowance of $3.0\,\mu{\rm mol}$ for this inventory
+and lower the calibrated vapour ratio from about $0.064$ to $0.050$.
+If $\alpha\le1.54$, then $N_{4,L}\le1.54\,N_{3,L}/0.050$. Assigning
+even the entire light-isotope inventory to the liquid would require
+its total molar density to be below
+$(1+1.54/0.050)(3.0/13.65)=6.99\,{\rm mol/L}$ to the displayed
+precision. A direct liquid density measurement can test this prediction.
+For scale, Ptukha measured $0.13982\,{\rm g/cm^3}$ at 1.604 K even at
+10 mol percent helium-3, over $35\,{\rm mol/L}$, using a pycnometer
+and a calibrated room-temperature gas volume. This check still uses
+Wansink's dew-point and emptied-cell calibrations. [Wansink](https://www.lorentz.leidenuniv.nl/history/proefschriften/sources/Wansink_1957.pdf)
+(Ch. I, Eqs. 3–14, Table I and film-inventory discussion) and
+[Ptukha](https://jetp.ras.ru/cgi-bin/dn/e_007_01_0022.pdf)
+(apparatus and density table, printed pp. 23–24).
+
+There is a second measurement with the heater off. Zinov'eva and
+Peshkov watched the liquid/liquid interface appear and disappear
+during slow cooling and warming. In their first apparatus the two
+branches meet the same tabulated temperature, $0.61\,{\rm K}$, at
+helium-3 mole fractions $0.8499$ and $0.3028$. Interpreting these as
+the endpoints of the coexistence line at saturated vapour pressure
+gives an isotope odds ratio of about $13$. These are two separately
+prepared bulk fills. The authors checked the influence of vapour
+inventory by changing the size of the vapour space. The apparatus
+used a 20 mm glass capsule, a cathetometer and a resistance thermometer
+calibrated by helium-3 vapour pressure. Even fractions of $0.80$ and
+$0.35$ would give an odds ratio above seven. [Zinov'eva and Peshkov,
+1959](https://jetp.ras.ru/cgi-bin/dn/e_010_01_0022.pdf) (experimental
+procedure and table on printed pp. 23–24).
+
+**What inertial mass can change.** Consider an equilibrium mixture in
+which either isotope may occupy any admissible atomic position. Allow
+hidden internal coordinates, many-body forces and smooth ideal
+holonomic constraints. For the mass-only comparison the constraint
+surface, its statistical weights apart from the kinetic integral, and
+the positional energy are invariant under changing the isotope at a
+site. An isotope-specific constant energy or spin multiplicity can be
+included in its activity. Let $z$ be the common ratio of isotope
+activities in two coexisting phases, with these constants included.
+An observation region and its sampling rule must be defined without
+reference to the isotope of the atom to be counted.
+
+At fixed configuration the induced kinetic mass matrix has the form
+$G(m)=G_{\rm rest}+mB^\top B>0$, where $B$ maps generalized velocities
+to the three Cartesian velocity components of the chosen atom and
+$G_{\rm rest}\ge0$. Integrating the canonical momenta gives a weight
+proportional to $\sqrt{\det G(m)}$. In the mechanical realization of
+Lemma X above, the initial acceleration response of this atom to an
+applied force at the same atom is $BG^{-1}B^\top$.
+Consequently
+$$
+ \frac{d\log\sqrt{\det G(m)}}{d\log m}
+    =\tfrac12\operatorname{tr}(mBG^{-1}B^\top)\ \in[0,3/2].
+$$
+The matrix in the trace is a positive contraction because
+$mB^\top B\le G$. Integrating between the measured atomic masses gives
+$$
+ 1\le\sqrt{\det G(m_4)/\det G(m_3)}\le K,\qquad
+ K=(m_4/m_3)^{3/2}<1.54 .
+$$
+The conditional light/heavy odds at every position with the other
+labels held fixed therefore lie between $z/K$ and $z$. Integrating
+either inequality over a phase, with its other atoms and constraints,
+preserves it. Thus $K^{-1}\le\alpha\le K$. Comparing these ratios
+uses equilibration at a common temperature. Its absolute value is
+needed only to express the work in energy units. Unconstrained Cartesian
+atoms give exactly $\alpha=1$, the classical equilibrium isotope
+result. The determinant bound covers partially frozen motions as
+well. [Bigeleisen and Mayer](https://doi.org/10.1063/1.1746492)
+(abstract, equilibrium isotope separation), [Fixman](https://doi.org/10.1073/pnas.71.8.3050)
+(abstract, constrained kinetic determinant) and [NIST isotope masses](https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=He)
+(table).
+
+**How much extra force is required?** Draw a tagged helium-3
+environment in $A$ and a tagged helium-4 environment in $B$ from the
+equilibrium number-weighted samples. Take independent draws so that
+the two composition measurements enter through their product.
+At fixed coordinates interchange the isotopes. Let $W$ be the change
+in positional energy before the surroundings relax, and $D$ the ratio
+of the final product of kinetic weights to the initial product. The
+first substitution multiplies the kinetic weight by a factor in
+$[1,K]$ and the reverse one by a factor in
+$[1/K,1]$. Interchanging the labels again restores the original
+pair. Integrating the changed weights cancels both activity factors
+and gives the equilibrium perturbation identity
+$$
+ \frac1\alpha=\big\langle D e^{-\beta W}\big\rangle_{3A,4B},
+ \qquad K^{-1}\le D\le K,\qquad \beta=1/(k_BT).
+$$
+This form uses phases at common isotope chemical potentials. In a
+finite closed cell the same change of variables swaps two uniformly
+chosen atoms in different regions within one configuration. The
+left side then uses the ratio of the two *joint* probabilities of
+opposite labellings. No product approximation is needed for that
+version. For a mutual pair interaction the pair between the two
+chosen atoms stays the same. [Zwanzig, 1954](https://doi.org/10.1063/1.1740409)
+(equilibrium free-energy perturbation identity).
+
+One can also test the two reported marginal concentrations in a
+closed cell without inferring any joint probability. Fix positive
+isotope counts $N_3,N_4$ and condition on the unlabelled geometry.
+If $p_i$ is the probability that site $i$ is light, choose $j$
+uniformly among the other sites. The ratio of probabilities of
+$(3_i,4_j)$ and $(4_i,3_j)$ is precisely
+$p_iN_4/[(1-p_i)N_3]$. The mass-only swap bounds this by $K$ and
+its reciprocal by $K$, because the simultaneous mass changes have
+opposite signs. Thus every site's odds lie between $N_3/(K N_4)$
+and $K N_3/N_4$. The same interval contains the ratio of mean counts
+in any isotope-blind window, even with fluctuating window occupancy.
+In particular $\alpha\le K^2<2.38$ at fixed counts, already excluded
+by the measured isotherm. With a uniform bound $|W|\le w$ on all
+potential-energy changes, the same argument gives
+$\alpha\le K^2e^{2\beta w}$. The observed enrichment therefore
+requires some swaps costing more than $k_B(1.99\,{\rm K})$ even in
+the closed-cell comparison. The stronger mean bound below uses the
+common activities of coexisting phases.
+
+Jensen's inequality and restriction of the positive integral to any
+subset of swaps of cost at most $w$ give, respectively,
+$$
+ \langle W\rangle_{3A,4B}\ge k_BT\log(\alpha/K),\qquad
+ \Pr_{3A,4B}(W\le w)\le K e^{\beta w}/\alpha .
+$$
+For the Leiden isotherm the first lower bound exceeds
+$k_B(4.68\,{\rm K})$. The second says that fewer than one in ten of
+the represented pairs can have cost at most $k_B(1\,{\rm K})$.
+The probability bound continues to hold on the reversible subset if
+some substitutions are forbidden and assigned infinite cost, provided
+each counted swap has the same base-measure mapping and kinetic
+bound. Arbitrary isotope-dependent state multiplicities or constraints
+require a separate calibration of those weights. The gravitational
+contribution is at most $(m_4-m_3)gH$ for a vertical separation $H$.
+One metre gives less than $k_B(0.0012\,{\rm K})$ at terrestrial gravity.
+
+For pairwise central forces define $F_{st}(r)=-v'_{st}(r)$ positive
+outwards and normalize $v_{st}(\infty)=0$. Let $n^A_{3t}(r)$ count,
+in mean, neighbours of isotope $t$ within $r$ of a helium-3 atom in
+$A$, and define $n^B_{4t}$ in the other phase in the same way.
+The isotope-dependent part of the pair work is exactly
+$$
+ \langle W_{\rm pair}\rangle =
+ \sum_{t=3,4}\int_0^\infty
+ [F_{4t}(r)-F_{3t}(r)]\,[n^A_{3t}(r)-n^B_{4t}(r)]\,dr .
+$$
+Indeed, substitution at one site costs $\sum_j(v_{4t_j}-v_{3t_j})(r_j)$.
+Using $v_{st}(r_j)=\int_{r_j}^\infty F_{st}(r)\,dr$ and subtracting
+the reverse substitution gives the formula when the absolute integrals
+are finite. The counts are dimensionless. The two-body force can be
+calibrated as reduced mass times the radial projection of the relative
+vector acceleration, using lengths, elapsed times and a finite-time
+error allowance as above. An upper bound for this integral plus wall,
+field and isotope-specific many-body work below the measured threshold
+would reject the classical explanation. Bounds on a representative
+fraction of swaps suffice for the probability test.
+
+Burgmans, Farrar and Lee found no discernible difference between the
+helium-3/helium-4 and helium-4/helium-4 potentials within their angular
+scattering fits. The fit inferred a mixed-pair well depth of
+$k_B(10.57\,{\rm K})$ at $2.97$ ångströms by integrating the radial
+Schrödinger equation. This supplies evidence for a common force. It
+does not supply a classical, independently calibrated upper bound
+for the weighted force integral or the many-body term. [Burgmans,
+Farrar and Lee](https://doi.org/10.1063/1.432401) (abstract and
+preprint, data analysis and isotope comparison).
+
+For an explicit zero-action alternative take classical Cartesian
+particles with any isotope-independent host potential. Add a smooth
+radial one-body potential for helium-3 that is zero in the first
+sampling region and $u$ in the second. Take helium-4's added potential
+to be zero. The conditional local isotope odds then give exactly
+$\alpha=e^{\beta u}$, independently of the host forces. Choosing
+$u=k_B(1.598\,{\rm K})\log 31.1$ fits all four enrichment readings
+within their stated accuracy. The added force vanishes inside both
+plateaux. Its integral between them costs $k_B(5.49\,{\rm K})$ to
+the accuracy displayed. This model reproduces the concentration
+readout. The radial field and its spatial scale are additional
+physical inputs. They are testable by work during passage. A force
+measurement confined to the interior of each phase misses them.
+
+The $2.01\,{\rm K}$ run tests this explanation with the same field.
+For $C_B=0.210\%$ the measured $\alpha$ was $10.4$, while the simple
+offset predicts more than 15. One hidden classical coordinate is
+enough to reproduce both temperatures. Give the light isotope a
+harmonic internal coordinate of a fixed mass with spring constants
+$\kappa_A=49\kappa_B>0$ in the two regions. Its two classical
+partition integrals have ratio $1/7$. Set the fixed offset to
+$u=k_B(1.598\,{\rm K})\log(7\times31.1)$. The enrichment is now
+$e^{\beta u}/7$. This gives $31.1$ for the stable series and about
+$10.3$ at $2.01\,{\rm K}$ for the quoted neighbouring concentration.
+The isotope-selective energy and stiffness can both be interpolated
+smoothly between the regions. These are alternatives for the stated
+ratio measurements. Identifying either with the liquid requires
+independent force and internal-state data. [Wansink](https://www.lorentz.leidenuniv.nl/history/proefschriften/sources/Wansink_1957.pdf)
+(Ch. I, Table I, 2.01 K series and §6 on its scatter).
+
+Even exact forces in isolated atom pairs leave a possible many-body
+interaction. Take a smooth radial function $\phi$ of finite range
+$a$, with $0\le\phi\le1$ and zero slope at the origin. Put
+$n_i=\sum_{j\ne i}\phi(r_{ij})$ and choose a smooth $s$ that is zero
+for $n\le1$ and one for $n\ge2$, with $0\le s\le1$. Add
+$u\sum_i b_i s(n_i)$ to the host energy, where $b_i=1$ for helium-3
+and zero for helium-4. Substituting a light atom for a heavy one at
+fixed positions costs exactly $u s(n_i)$. The conditional isotope
+odds therefore have the same two plateaux as in the one-body example.
+The added force on atom $i$ from the $ij$ separation is
+$$
+ -u[b_i s'(n_i)+b_j s'(n_j)]\phi'(r_{ij})\,
+                   (x_i-x_j)/r_{ij}.
+$$
+These forces act along centre lines and satisfy action and reaction.
+They vanish on every isolated two-body trajectory, at every speed and
+separation. The many-body energy is stable for $u>0$. Its range and
+coordination dependence are extra inputs. To use it for the actual
+vapour and liquid one would need their populations of the two
+environments. It establishes that arbitrarily accurate isolated-pair
+measurements alone cannot bound the isotope-dependent work in a liquid.
+
+**Does taking the trial action small restore the enrichment?** For
+the mass-only hypothesis, fix a finite number of each isotope, the
+physical masses, vessel, bath temperature and sampling regions. Take
+a scalar Schrödinger Hamiltonian with a common label-independent,
+continuous, bounded-below potential on configurations and Dirichlet
+walls in a bounded vessel. Use Fermi statistics for helium-3 and
+Bose statistics for helium-4 with spin-independent forces. For every
+bounded position readout invariant under permutations within species,
+the equilibrium mean tends as the trial reduced action $h\downarrow0$
+to its full Cartesian classical mean. Consequently $\alpha_h\to1$
+for the ratio of mean isotope counts when their limiting denominators
+are positive. Thus a fixed model of this class fitting the measured
+enrichment excludes an interval next to zero action.
+
+To see that the statement also covers inserting times in the thermal
+kernel, put $\lambda_s=h\sqrt{2\pi\beta/m_s}$. Divide each permutation
+kernel by the free diagonal factor $\prod_i\lambda_{s_i}^{-3}$.
+For the identity permutation the Brownian bridges shrink to their
+initial positions. At any interior configuration the error for
+potential quadrature weights that are nonnegative and sum to $\beta$ is controlled
+by the variation of the potential over the bridges' full excursion,
+uniformly in the number and placement of inserted times. For a
+nonidentity within-species permutation $\sigma$ the absolute normalized
+kernel, omitting a bounded spin multiplicity, is at most
+$$
+ e^{-\beta\inf V}
+ \exp\!\left(-\pi\sum_i |x_i-x_{\sigma(i)}|^2/\lambda_{s_i}^2\right).
+$$
+This tends to zero off coincidence sets of measure zero.
+Bounded readouts and finite
+volume allow dominated convergence in the finite permutation sum.
+The surviving spatial weight is proportional to $e^{-\beta V}$
+with equal isotope odds at every label-independent site. This uses
+the standard thermal kernel and trace limit. [Güneysu](https://arxiv.org/abs/1701.04998)
+(abstract, semiclassical partition limit) and
+[Ceperley](https://people.physics.illinois.edu/Ceperley/papers/059a.pdf)
+(passage, permutation kernels). A numerical bound uniform over
+potentials would require physical control of their spatial variation
+and of the sampled populations. The explicit classical field above
+shows why the concentration assay alone cannot supply that control
+or select a universal physical action.
+
 ## 7. Consequence for STATE
 
 Newton action necessity is the active priority. This note gives the first
@@ -2714,7 +3014,7 @@ exterior binding work during passage and the driven velocity moment.
 The field-free, finite-time position measurement dispenses with the
 latter and has yet to be matched to data at the stated preparation.
 The liquid-helium heat measurement excludes mobile classical Gibbs
-atoms even with internal states. The finite-vessel fermion comparison
-gives a positive action bound for each fixed potential. An independent
-measurement of local atomic inertia in the same preparation would
-test whether classical constraints can account for the heat deficit.
+atoms even with internal states. Isotope enrichment bounds the extra
+work needed even with constrained atoms. An independent bound on the
+isotope-dependent force during passage between the two environments
+would test the remaining classical alternative.
