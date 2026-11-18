@@ -100,6 +100,13 @@ determine whether the quantum wave satisfies Dirichlet or Neumann
 boundary conditions. General Robin conditions are discussed through
 their scattering phases; no wavepacket limit is claimed here for
 arbitrary Robin parameters.</p>
+<p>For a particle falling back to a mirror, the time spent at different
+heights also measures how many trajectories turn in a chosen interval.
+One bounded average of recorded heights can give this count a negative
+sign. In linear gravity the size of such a deficit would bound a trial
+action even if the initial state changes with the action. <a
+href="#counting-turning-heights-from-neutron-positions">Turning heights
+and a finite clock</a>.</p>
 <p>The boundary contribution to Ehrenfest’s theorem is established
 literature: see <a
 href="https://www.scielo.org.mx/scielo.php?pid=S1870-35422013000200001&amp;script=sci_arttext">De
@@ -367,13 +374,276 @@ class="math inline">\(\sqrt{-2\kappa}e^{\kappa q}\)</span> of energy
 <span class="math inline">\(-\hbar^2\kappa^2/(2m)\)</span>, showing
 another quantum distinction that the free incoming bounce does not
 encode.</p>
+<h2 id="counting-turning-heights-from-neutron-positions">Counting
+turning heights from neutron positions</h2>
+<p><strong>6.1 Sol Max, 2026-11-18.</strong> A classical neutron that
+visits the top of a gravitational arc must spend time at the heights
+below it. This gives a test using one terminal position per neutron. It
+requires neither a model for the distribution of launch energies nor a
+fit to an interference pattern. Newton’s 1713 Lemma X, Corollary 4,
+supplies the mechanical calibration: measure the downward acceleration
+<span class="math inline">\(g\)</span> from initial displacements
+against a ruler and a clock. The observable below is a modern
+application to that measured force. <a
+href="newton-insertion-action.html#lemma-x-and-the-measurement-of-initial-force">Lemma
+X in 1687 and 1713</a> (historical passages).</p>
+<p><strong>A count from heights.</strong> Let <span
+class="math inline">\(z\)</span> be height above the reflecting surface.
+Choose a smooth nonnegative window <span
+class="math inline">\(\phi\)</span> supported on an interval <span
+class="math inline">\([b,b+d]\)</span> strictly above it. Give <span
+class="math inline">\(\phi\)</span> units of the square root of length.
+At the recorded height assign the dimensionless score</p>
+<p><span class="math display">\[
+B_\phi(z)=\int_0^z\frac{\phi&#39;(x)}{\sqrt{z-x}}\,dx .
+\]</span></p>
+<p>Set the score to zero below the support of the window. It is bounded,
+with <span class="math inline">\(M=\|B_\phi\|_\infty\le
+2\sqrt d\|\phi&#39;\|_\infty\)</span> and <span
+class="math inline">\(L=\|B_\phi&#39;\|_\infty\le
+2\sqrt d\|\phi&#39;&#39;\|_\infty\)</span>. On a full excursion of apex
+height <span class="math inline">\(H\)</span>, Newton’s fall law gives
+<span class="math inline">\(dt=|dz|/\sqrt{2g(H-z)}\)</span> on either
+leg. The Abel integral <span class="math inline">\(\int_x^H
+dz/\sqrt{(z-x)(H-z)}=\pi\)</span> therefore gives</p>
+<p><span class="math display">\[
+\int_{\rm excursion} B_\phi(z(t))\,dt
+       =\pi\sqrt{2/g}\,\phi(H)\ \ge 0 .
+\]</span></p>
+<p>Every return from below <span class="math inline">\(b\)</span> obeys
+this identity, even if the wall changes the energy between successive
+arcs. A partial excursion has absolute integral at most <span
+class="math inline">\(\pi\sqrt{2/g}\|\phi&#39;\|_1\)</span>, by using
+<span class="math inline">\(|\phi&#39;|\)</span> in the calculation. At
+most two excursions meet the ends of an interval of duration <span
+class="math inline">\(T\)</span>. Sampling a time uniformly in that
+interval, independently of the neutron, gives a mean score at least
+<span class="math inline">\(-C_{\rm cl}\)</span>, where <span
+class="math inline">\(C_{\rm
+cl}=2\pi\sqrt{2/g}\|\phi&#39;\|_1/T\)</span>. The same bound holds for
+the sum of two independent uniform waits on <span
+class="math inline">\([0,T]\)</span> by conditioning on the first wait.
+Loss, creation or an unmeasured impulse above <span
+class="math inline">\(b\)</span> requires its own allowance. The proof
+holds for continuous trajectories at every subdivision of the arc. <a
+href="https://dlmf.nist.gov/5.12.E1">Euler beta integral</a>
+(formula).</p>
+<p>There is an exact <strong>central-force</strong> version. Fix the
+conserved angular momentum <span class="math inline">\(J\)</span>, or
+record it for each release. Let <span
+class="math inline">\(U_J(r)=V(r)+J^2/(2mr^2)\)</span> be the
+independently calibrated effective potential and put <span
+class="math inline">\(u(r)=[U_J(r)-U_J(r_0)]/(mg)\)</span>, using a
+fixed reference acceleration <span
+class="math inline">\(g&gt;0\)</span>. Assume <span
+class="math inline">\(u&#39;&gt;0\)</span> from the lower gate to the
+apex. Score <span class="math inline">\(u&#39;(r)B_\phi(u(r))\)</span>
+instead. The radial speed is <span
+class="math inline">\(\sqrt{2g(H-u(r))}\)</span> for <span
+class="math inline">\(H=u(r_{\max})\)</span>. The factor <span
+class="math inline">\(u&#39;\)</span> converts <span
+class="math inline">\(dr\)</span> to <span
+class="math inline">\(du\)</span> and gives exactly the same count and
+endpoint allowance. Use gates below the support of <span
+class="math inline">\(\phi\)</span> and bound the response error in this
+transformed score. Thus even a nonconstant central force, with its
+centrifugal contribution, admits the classical test.</p>
+<p><strong>How a reduced action enters the same readout.</strong> For
+the action bound specialize to uniform <span
+class="math inline">\(g\)</span> and the Dirichlet half-line Hamiltonian
+<span class="math inline">\(H_a=-a^2\partial_z^2/(2m)+mgz\)</span>. The
+mirror boundary condition is an additional physical input. Set <span
+class="math inline">\(\ell=(a^2/(2m^2g))^{1/3}\)</span>, <span
+class="math inline">\(\sigma=\ell/2^{2/3}\)</span> and let <span
+class="math inline">\(-\lambda_n\)</span> be the negative Airy zeros in
+order of increasing <span class="math inline">\(\lambda_n\)</span>. The
+normalized density is <span
+class="math inline">\(\mathrm{Ai}((z-h_n)/\ell)^2/(\ell D_n)\)</span>
+with <span class="math inline">\(h_n=\ell\lambda_n\)</span> and <span
+class="math inline">\(D_n=\mathrm{Ai}&#39;(-\lambda_n)^2\)</span>. <a
+href="https://arxiv.org/pdf/1007.1623">Belloni and Robinett, §2</a>
+(normalized eigenfunctions).</p>
+<p>In that state the measured score is exactly</p>
+<p><span class="math display">\[
+\langle B_\phi\rangle_n =
+\frac{1}{2\sqrt{\ell}D_n}
+\int_{\mathbb R}\phi(x)\,\frac1{\sigma}
+        \mathrm{Ai}\!\left(\frac{x-h_n}{\sigma}\right)\,dx .
+\]</span></p>
+<p>To apply the known full-line Airy position marginal, take its two
+energy arguments equal. In dimensionless variables it gives <span
+class="math inline">\(\mathrm{Ai}(y)^2=(2^{2/3}\pi)^{-1}\int_0^\infty
+\mathrm{Ai}(2^{2/3}y+t)\,dt/\sqrt t\)</span>. Applying the same Abel
+integral once more gives the tail <span
+class="math inline">\(\int_x^\infty\rho_n(z)\,dz/\sqrt{z-x}
+=(2\sqrt\ell
+D_n)^{-1}\int_{(x-h_n)/\sigma}^\infty\mathrm{Ai}(t)\,dt\)</span> for
+<span class="math inline">\(x&gt;0\)</span>. Integration against <span
+class="math inline">\(\phi&#39;\)</span> gives the displayed score. Only
+the density on the positive half-line is used. <a
+href="https://arxiv.org/pdf/hep-th/0011137">Curtright, Uematsu and
+Zachos, Eqs. (51)–(53)</a> (Airy position marginal) and <a
+href="https://dlmf.nist.gov/9.5.E1">NIST, Eq. 9.5.1</a> (Fourier
+representation).</p>
+<p>Define <span class="math inline">\(\widehat\phi(k)=\int
+e^{-ikx}\phi(x)\,dx\)</span> and <span
+class="math inline">\(A_3=(2\pi)^{-1}\int
+|k|^3|\widehat\phi(k)|\,dk&lt;\infty\)</span>. The Airy convolution
+differs from <span class="math inline">\(\phi(h_n)\)</span> by at most
+<span class="math inline">\(\sigma^3 A_3/3\)</span>, since its Fourier
+multiplier is a phase with argument of magnitude <span
+class="math inline">\(\sigma^3|k|^3/3\)</span>. Also <span
+class="math inline">\(D_n\ge D_0=\mathrm{Ai}&#39;(0)^2&gt;0\)</span> by
+the Airy norm identity. Thus <strong>every diagonal mixture</strong>,
+including populations chosen anew for each <span
+class="math inline">\(a\)</span>, has mean score at least <span
+class="math inline">\(-\ell^{5/2}A_3/(24D_0)\)</span>. <a
+href="https://dlmf.nist.gov/9.11.E5">NIST, Eq. 9.11.5</a> (Airy norm
+identity).</p>
+<p><strong>A finite clock for coherent preparations.</strong> Bound the
+prepared vertical energy by <span
+class="math inline">\(E_*=mgH_*\)</span>, and write <span
+class="math inline">\(v_*=\sqrt{2E_*/m}\)</span>. The two independent
+uniform waits specified above permit arbitrary coherences in that band.
+Adjacent angular frequencies <span class="math inline">\(E_n/a\)</span>
+there are separated by at least <span class="math inline">\(\gamma=\pi
+g/v_*\)</span>. Indeed the Dirichlet interval inequality between
+consecutive Airy zeros gives <span
+class="math inline">\(\lambda_{n+1}-\lambda_n\ge\pi/\sqrt{\lambda_{n+1}}\)</span>,
+since the local squared wave number on the interval is at most <span
+class="math inline">\(\lambda_{n+1}\)</span>. Multiplying by <span
+class="math inline">\(mg\ell/a\)</span> gives the stated spacing.</p>
+<p>A frequency difference <span class="math inline">\(\omega\)</span>
+contributes at most <span class="math inline">\(4/(\omega T)^2\)</span>
+after the two waits. For any density matrix with diagonal <span
+class="math inline">\(p_n\)</span>, <span
+class="math inline">\(|\rho_{n,n+j}|\le\sqrt{p_n p_{n+j}}\)</span> and
+their sum over <span class="math inline">\(n\)</span> is at most one for
+each <span class="math inline">\(j\)</span>. Every score matrix element
+is bounded by <span class="math inline">\(M\)</span>. Summing both signs
+of <span class="math inline">\(j\)</span> bounds the entire off-diagonal
+correction by <span class="math inline">\(C_{\rm q}=4\pi^2 M/(3\gamma^2
+T^2)=4M v_*^2/(3g^2T^2)\)</span>. This uses the actual exposure
+distribution for every trial action.</p>
+<p><strong>A finite ruler.</strong> Suppose the recorded height is <span
+class="math inline">\(z+\xi\)</span>, where the response error has the
+same law at each height, independently of the launch, and <span
+class="math inline">\(|\xi|\le e_z&lt;b\)</span>. Averaging this readout
+replaces <span class="math inline">\(\phi(x)\)</span> by <span
+class="math inline">\(\bar\phi(x)=\mathbb E\,\phi(x+\xi)\)</span>
+exactly: the integral defining <span class="math inline">\(B\)</span>
+commutes with translations on the real line when the window is extended
+by zero. The effective window remains nonnegative and supported above
+the wall. Its variation, score norm and <span
+class="math inline">\(A_3\)</span> can only decrease. Thus blur of this
+kind preserves the classical sign and the quantum bound. A measured
+position-dependent remainder instead costs at most <span
+class="math inline">\(L\)</span> times its mean absolute error.</p>
+<p>Let <span class="math inline">\(s\)</span> be a lower confidence
+bound on minus the observed mean, after subtracting readout and
+preparation errors. A fraction <span class="math inline">\(f\)</span> of
+erroneous or missing scores costs at most <span
+class="math inline">\(2Mf\)</span> for the complete launch ensemble. A
+deviation <span class="math inline">\(\epsilon_t\)</span> in total
+variation from the specified clock law costs at most <span
+class="math inline">\(2M\epsilon_t\)</span>, with the bound valid
+conditional on the launch. An energy leakage probability <span
+class="math inline">\(\eta&lt;1\)</span> costs at most <span
+class="math inline">\(2M\sqrt\eta\)</span> by projection and the
+trace-distance bound. If <span class="math inline">\(s&gt;C_{\rm
+cl}\)</span>, the continuous classical trajectories fail. If also <span
+class="math inline">\(s&gt;C_{\rm q}\)</span>, the same fixed-ruler and
+fixed-clock observation gives</p>
+<p><span class="math display">\[
+a\ \ge\ m\sqrt{2g}
+   \left(\frac{24D_0(s-C_{\rm q})}{A_3}\right)^{3/5}
+\]</span></p>
+<p>within the stated Dirichlet dynamics. Under <span
+class="math inline">\(a\mapsto t a\)</span> the band projector and
+allowed preparation change, while <span
+class="math inline">\(m,g,H_*,T,b,d\)</span>, the height response and
+the clock law remain physical inputs. The diagonal error scales as <span
+class="math inline">\(t^{5/3}\)</span>. Neither bound contains a mesh.
+<a href="https://arxiv.org/abs/quant-ph/9712042">Fuchs and van de Graaf,
+Theorem 1</a> (trace distance).</p>
+<p>The sign can be attained at finite resolution. For instance, take
+<span class="math inline">\(b=1\,\mu{\rm m}\)</span>, <span
+class="math inline">\(d=2\,\mu{\rm m}\)</span> and <span
+class="math inline">\(\phi(x)=\sqrt d[4y(1-y)]^6\)</span> for <span
+class="math inline">\(y=(x-b)/d\)</span> in <span
+class="math inline">\([0,1]\)</span>, zero elsewhere. Fix a height
+response supported within <span class="math inline">\(e_z=0.5\,\mu{\rm
+m}\)</span> and choose a reference length <span
+class="math inline">\(\ell_0=6\,\mu{\rm m}\)</span> by the ruler. At
+<span class="math inline">\(a_0=m\sqrt{2g\ell_0^3}\)</span>, even the
+enlarged window from <span class="math inline">\(0.5\)</span> to <span
+class="math inline">\(3.5\,\mu{\rm m}\)</span> maps inside the first
+negative lobe <span
+class="math inline">\((-\lambda_2,-\lambda_1)\)</span> of the ground
+state’s Airy kernel. Let <span class="math inline">\(c_A\)</span> be the
+minimum of <span
+class="math inline">\(-\mathrm{Ai}((x-h_1)/\sigma)\)</span> on that
+enlarged interval at <span class="math inline">\(\ell=\ell_0\)</span>.
+The mean score is at most <span class="math inline">\(-s_0\)</span> with
+<span
+class="math inline">\(s_0=c_A\int\phi(x)\,dx/(2\sqrt{\ell_0}D_1\sigma)&gt;0\)</span>
+for every such height response. Take <span
+class="math inline">\(H_*=100\,\mu{\rm m}\)</span> and choose <span
+class="math inline">\(T\)</span> at least the larger of <span
+class="math inline">\(8\pi\sqrt{2/g}\|\phi&#39;\|_1/s_0\)</span> and
+<span class="math inline">\((4v_*/g)\sqrt{M/s_0}\)</span>. Both clock
+allowances are then at most <span class="math inline">\(s_0/4\)</span>.
+For a beam of independently selected horizontal speed <span
+class="math inline">\(v_\parallel\)</span>, a detector plane at distance
+<span class="math inline">\(v_\parallel(t_1+t_2)\)</span> implements the
+two waits on fresh launches; changes to the preparation or the time law
+across planes must be bounded. The reference prediction uses a ground
+state. The test of a measured deficit allows arbitrary populations and
+coherences within the calibrated energy band. <a
+href="https://dlmf.nist.gov/9.9#T1">NIST, Table 9.9.1</a> (first two
+zeros).</p>
+<p><strong>What existing neutron records establish.</strong> A simple
+check uses two adjacent equal-height bins. For a complete ballistic arc
+the lower occupancy is at least <span
+class="math inline">\(\sqrt2-1\)</span> times the upper occupancy.
+Integrating <span class="math inline">\(1/\sqrt{H-z}\)</span> in the two
+bins gives the minimum when the apex is at the upper edge of the upper
+bin. In Nesvizhevsky et al.’s direct track profile the bins centred at
+<span class="math inline">\(2\)</span> and <span
+class="math inline">\(4\,\mu{\rm m}\)</span> contain roughly 324 and 346
+events, well inside that inequality. The apparent ratio 47/161 at <span
+class="math inline">\(-2\)</span> and <span
+class="math inline">\(0\,\mu{\rm m}\)</span> involves a bin below the
+fitted mirror height. The authors excluded three edge points in their
+fit. Ichikawa et al.’s later magnified profile includes propagation from
+the guide through a cylindrical reflector. They report <span
+class="math inline">\(p=0.715\)</span> for their quantum fit and <span
+class="math inline">\(p=0.062\)</span> for their classical guide-loss
+model. <a href="https://arxiv.org/pdf/hep-ph/0502081">Nesvizhevsky et
+al., §4 and Fig. 15</a> and <a
+href="https://arxiv.org/pdf/1304.1660">Ichikawa et al., Fig. 3 and
+fit</a> (apparatus and experimental results).</p>
+<p>There is an exact classical ambiguity at a single detection plane.
+For a fixed flight time and any terminal height law <span
+class="math inline">\(f(dz)\)</span> within the energy ceiling, put all
+the neutrons at vertical rest with that height law at the readout plane
+and transport the measure backwards by the elastic gravitational flow to
+define the source. It gives the specified direct height law, including
+any calibrated position blur. The construction can be made conditional
+on horizontal flight speed. Independent randomized readout after launch
+tests that explanation. The cited experiments do not report the clocked
+height statistic. <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/NeutronGravity_HeightMeasurements.md">Source
+and graphical readings</a>.</p>
 <h2 id="consequence-for-state">4. Consequence for STATE</h2>
 <p>For a specified coherent packet, the Dirichlet force is a positive
 boundary measure converging to Newton’s impulsive momentum jump; the
 full Neumann boundary stress has the same limit. A classical bounce does
 not identify the boundary condition or reflection phase. This constructs
 neither a general boundary-groupoid theorem nor a
-positive-action-necessity result.</p>
+positive-action-necessity result. For gravitational returns the
+outstanding observation is a negative turning-height score with the
+independent clock and complete counts.</p>
 
 </main>
 <footer class="site"><div class="wrap">

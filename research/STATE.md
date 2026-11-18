@@ -9,6 +9,9 @@ The first priority is an explanation of positive physical action from the
 central-force trajectory limit itself. Newton connects [Lemma X's force
 measurement](../notes/newton-insertion-action.md#lemma-x-and-the-measurement-of-initial-force)
 to the orbital force rule in Book I, Proposition VI (1713).
+For [neutrons returning under gravity](../notes/dirichlet-wall-impulse.md#counting-turning-heights-from-neutron-positions),
+does a height measurement at an independently randomized time assign a
+negative count to any interval of turning heights?
 [Polonium-212 escape](../notes/balaban-newton-time-blocking.md#a-clock-on-escape-through-a-central-force-barrier)
 tests whether the radial work measured on an incident alpha also bounds
 every outgoing channel. An absolute exterior count on the decay clock

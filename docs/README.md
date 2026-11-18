@@ -11,6 +11,8 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Mechanics investigation
 
+- [Neutron heights above a mirror](NeutronGravity_HeightMeasurements.md)
+  records direct track counts and the readout used in the magnified profile.
 - [Polonium-212 and lead-208](Polonium212_AlphaEscape.md) pairs the emitted
   alpha energy and decay clock with incident elastic scattering on the daughter.
 - [Eid et al. optical-barrier measurements](EidEtAl_OpticalBarriers_2024.md)
