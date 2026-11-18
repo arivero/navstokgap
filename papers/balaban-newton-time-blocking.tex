@@ -2,6 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
+\DeclareUnicodeCharacter{1E93}{\d{z}}
 \usepackage{amsmath,amssymb}
 \usepackage[margin=25mm]{geometry}
 \usepackage[hidelinks]{hyperref}
@@ -12,6 +13,17 @@
 \begin{document}
 \section{Time blocking, Newton polygons and explicit quantum
 action}\label{time-blocking-newton-polygons-and-explicit-quantum-action}
+
+A bounded inward central force admits a unique classical passage through
+the centre at nonzero speed. At a zero-speed encounter with a bounded
+repulsive force, two continuations of the same incoming orbit obey the
+same force balance after every time insertion and have equal action on
+every cell. A detector at a fixed time distinguishes them. Two shrinking
+source profiles select the opposite returns, yet the fraction of
+incoming classical flux that reaches either core tends to zero as an
+exact power of its radius.
+\hyperref[central-force-passage-under-point-insertion]{Central-force
+passage}.
 
 \textbf{First calculation, 2026-10-27; written derivation, unrefereed.}
 In one spatial coordinate and one time variable, the same discrete Green
@@ -30,13 +42,11 @@ without finding an algebraic error. This was a targeted written check,
 not a full independent proof review. The arbitrary-cut interpretation
 below came from that pass.
 
-The user directs Newton action necessity first, beginning with Balaban's
-techniques in \(0+1\) dimensions. The comparison with Alpoge's work and
-Yang--Mills is deferred. Here \(0+1\) means a mechanical degree of
-freedom along time, not a field with spatial lattice sites. The
-construction is a modern force polygon; no identification with every
-historical Newton update is asserted. The Galileo observable remains the
-inertial-line / falling-parabola defect, not swept sectors.
+The time lattice has one dimension. Sections 1--6 place one mechanical
+coordinate at each time. The central-force calculation places a particle
+in three-dimensional space at each time. The force polygons are modern
+constructions. The Galileo observable remains the displacement between
+the inertial line and the falling parabola.
 
 We assemble standard Green-function, contraction and
 Gaussian-elimination arguments. No literature novelty is claimed. The
@@ -468,6 +478,279 @@ the oscillator's boundary caustics. Comparing that description with the
 endpoint action would separate loss of one coordinate description from
 an actual need for additional physical dynamics.
 
+\subsection{Central-force passage under point
+insertion}\label{central-force-passage-under-point-insertion}
+
+In the 1713 \emph{Principia}, Book I, Proposition I, Corollary 4
+compares forces by the inward sagittas of arcs traversed in equal times
+as the arcs shrink. In Proposition VI Newton explicitly points to the
+new Corollary 4 of Lemma X as another proof of the orbital force rule.
+Does this local force information determine where the body emerges from
+a small neighbourhood of the centre? Use one spatial position at a fixed
+time as the readout.
+\href{https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00077}{1687,
+Book I, Lemma X and Proposition I} and
+\href{https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082}{1713,
+Book I, Lemma X and Propositions I and VI} (diplomatic transcriptions,
+passages).
+
+\textbf{Finite inward force.} Take \(m>0\) and \(F(q)=-f(r)q/r\),
+\(r=|q|\), with \(f\ge0\), continuous force at zero, locally Lipschitz
+away from zero and \(|F|\le F_*\). The potential \(V\) has its minimum
+at the centre. Nonzero angular momentum prevents arrival there at finite
+energy. A radial arrival from a point with \(E>V(0)\) crosses with the
+nonzero velocity fixed by its incoming direction and energy. The radial
+travel integral \(\int dr/\sqrt{2(E-V(r))/m}\) fixes its clock on either
+side. At the minimum energy a body at rest at the centre stays there by
+energy conservation. These statements give uniqueness through the centre
+without bounding \(f'\). With a globally bounded force, compactness and
+uniqueness then give convergence of the usual kick--drift polygons on
+each finite time interval, including for changing positive time
+partitions. \href{balaban-ode-lesson.md}{Classical polygon construction
+and compactness argument} (passage).
+
+The impulse estimate is uniform over these force profiles. Suppose a ray
+enters a ball of radius \(b\) at speed at least \(v_0>0\) and
+\(bF_*/m\le v_0^2/2\). Attraction gives \(|\dot q|\ge v_0\) inside.
+Hence \((r^2)''=2|\dot q|^2+2q\cdot F/m\ge v_0^2\). Integrating on each
+side of closest approach bounds the time inside by \(2\sqrt2\,b/v_0\)
+and the change in momentum by \(2\sqrt2\,F_*b/v_0\). In particular no
+shrinking ball with this fixed force bound can reverse a finite incoming
+momentum. This is a classical restriction on trajectories.
+
+\textbf{A bounded central force at a turning point.} Fix a ruler
+distance \(R\), inertial mass \(m\) and \(A>0\) with units
+energy/length\(^{3/2}\). In three spatial dimensions take
+\(V_0(r)=-Ar^{3/2}\) up to \(2R\). The force points outward and tends
+continuously to zero at the origin. For \(r>2R\) continue its magnitude
+by the inverse square law matched at \(2R\). For each \(0<b<R\), keep
+this exterior potential for \(r\ge b\) and use
+\(V_{b,\pm}(r)=-A b^{3/2}v_\pm(r/b)\) inside, with
+
+\[
+ v_+(u)=\tfrac14+\tfrac34u^2,\qquad
+ v_-(u)=1-\tfrac32(1-u)+\tfrac38(1-u)^4,\qquad 0\le u\le1.
+\]
+
+Both profiles have \(v(1)=1\) and \(v'(1)=3/2\). Both derivatives
+increase from zero, with \(v_-'(u)=\tfrac32[1-(1-u)^3]\). Thus every
+core has a finite, outward, radially nondecreasing force and a Lipschitz
+gradient of the potential. A spherical distribution of like charges can
+source each profile because its enclosed charge is proportional to the
+nondecreasing function \(r^2|F(r)|\). The maximum force difference is at
+most \(3A\sqrt b/2\) and the maximum potential difference is
+\(3A b^{3/2}/8\). Each force converges uniformly to \(F_0\), since all
+three magnitudes inside \(b\) are at most \(3A\sqrt b/2\) and they agree
+outside. At the centre \(v_+(0)=1/4\) and \(v_-(0)=-1/8\). A diameter
+orbit of energy zero passes the first centre and turns before the
+second. Here zero energy is referred to \(V_0(0)\) in both runs. The
+incoming state at \(q=R e_1\) has the same inward momentum
+\(p_R=\sqrt{2mA}R^{3/4}\) for every \(b\).
+
+Write \(p_b=\sqrt{2mA}b^{3/4}\), \(t_b=mb/p_b\) and \(J_b=bp_b\). Let
+\(u_+=0\) and let \(u_-\) be the simple zero of \(v_-\). The time and
+ordinary mechanical action between entering the core and leaving it are
+respectively
+
+\[
+ 2t_b\int_{u_\pm}^1\frac{du}{\sqrt{v_\pm(u)}},
+ \qquad 2J_b\int_{u_\pm}^1\sqrt{v_\pm(u)}\,du .
+\]
+
+At \(E=0\), \(\int p\cdot dq\) equals the time action. All four
+integrals are finite. Inserting intermediate points on the trajectory
+adds the corresponding integrals exactly. Halving \(b\) scales the time
+by \(2^{-1/4}\) and the action by \(2^{-7/4}\) in either core. The
+exterior inward travel time to \(b\) is \(4(t_R-t_b)\), where
+\(t_R=mR/p_R\). Thus at the \emph{same clock time} \(T=8t_R\) the two
+positions tend to \(-Re_1\) and \(+Re_1\). The trajectories are unique
+and reversible for each fixed \(b\).
+
+\textbf{Point insertion with the source held fixed.} Now use the single
+potential \(V_0\) throughout. Put \(t_*=4t_R\), so \(T=2t_*\). Through
+the common arrival the signed diameter coordinate is
+\(x(t)=R(1-t/t_*)^4\). After arrival the two continuations are
+\(x_\pm(t)=\pm R(t/t_*-1)^4\), with \(p=m\dot x\). Both have zero
+velocity and acceleration at the join. From rest there, the signed force
+estimate \(2m x_\pm(t_*+\delta)/\delta^2\) tends to zero on both
+branches. Newton's short-time measurement returns the correct force even
+where it cannot determine the later side. For any outgoing time cell
+their actions coincide since \(m\dot x^2/2-V_0(x)\) is the same for the
+two signs. On the first duration \(\delta\) after arrival it is the
+integral of \(m\dot x^2\), namely \(16mR^2\delta^7/(7t_*^8)\). The
+finite-force cusp, its waiting solutions and reversible classical
+dynamics on entire histories are established in the
+\href{newton-cusp-preparation-floor.md}{arrival argument} (passage).
+
+One can test this on time nodes using only the given force law. On a
+cell of duration \(\tau\), interpolate \(F_0\) at its initial, midpoint
+and final positions by a quadratic \(B(u)\) in elapsed time. At
+\(s=\tau/2,\tau\) impose the impulse and displacement balances
+
+\[
+ p(s)=p(0)+\int_0^s B(u)\,du,\qquad
+ x(s)=x(0)+s p(0)/m+\frac1m\int_0^s(s-u)B(u)\,du .
+\]
+
+Start with a partition containing \(t_*\). On each branch the force in
+time is quadratic on each side of the join, so its interpolant is exact.
+Both sets of nodes solve the \emph{same} implicit cell equations on
+every subdivision, however fine. Selecting a root would supply a branch
+rule. Grant a detector independent position and clock error bounds
+\(\delta_x\le R/4\) and \(\delta_t\le t_R/4\), held fixed as the mesh
+and \(b\) shrink. Throughout that clock window the limiting distance is
+at least \(R(15/16)^4>R/2\). The explicit exterior travel time gives
+uniform convergence there for the two finite-core returns as well.
+Recording the side therefore separates them at these fixed resolutions.
+\href{https://dlmf.nist.gov/3.3.i}{Lagrange interpolation, DLMF §3.3(i)}
+(passage).
+
+\textbf{What the incoming flux sees.} At the incoming sphere \(r=R\) on
+the same energy shell, write \(p_\perp\) for the two tangential momentum
+components and \(L=R|p_\perp|\). The normalized inward Liouville flux is
+uniform on \(|p_\perp|<p_R\) for each entry point: the normal speed
+cancels the Jacobian of the energy delta function. A ray reaches \(b\)
+precisely when \(L<J_b\), up to tangency. Outside that disk both motions
+agree at every time. Consequently even the joint incoming and outgoing
+record has total-variation distance bounded by
+
+\[
+  (J_b/J_R)^2=(b/R)^{7/2},\qquad J_R=Rp_R .
+\]
+
+A preparation of density at most \(C\) relative to that flux has the
+same bound times \(C\), by coupling the same incoming rays. This
+normalizes crossings of a section at fixed energy. The diameter
+preparation is singular with respect to flux. At \(L=0\), an energy
+error smaller than \(Ab^{3/2}/8\) still puts the incoming energy between
+the two core maxima. Thus energy resolution and concentration in angular
+momentum are physical inputs when asking whether the orbit discrepancy
+can be observed as \(b\) shrinks. Refinement of a written polygon
+provides neither.
+
+\textbf{The two limits on the same position record.} For a trial reduced
+action \(a>0\) compare the two Schrödinger Hamiltonians with kinetic
+energy \(-a^2\Delta/(2m)\) and the displayed potentials. In core units
+\(z=q/b\), \(s=t/t_b\), \(\xi=a/J_b\), and
+\(w(z)=-V_{b,\pm}(b|z|)/(Ab^{3/2})\), the generator in
+\(i\xi\partial_s\) is \(-\xi^2\Delta_z/2-w/2\). The exterior matching
+radius \(2R/b\) is part of \(w\). The real-time kernel acquires a factor
+\(b^{-3}\), canceled at each inserted position by \(d^3q=b^3d^3z\). The
+launch coordinate and momentum magnitude become \(R/b\) and \(p_R/p_b\).
+The clock reads \(T/t_b\) and the detector tolerances are \(\delta_x/b\)
+and \(\delta_t/t_b\).
+\href{groupoid-quantum-newton-states.md\#7-interacting-kernels-under-tangent-scaling}{Exact
+propagator dilation, (20)--(22)} (passage).
+
+The event is \(Q_1(T)>0\) in both. The unitary Duhamel estimate bounds
+the absolute difference \(D(a,b)\) between event probabilities for
+\emph{every} common incoming state by
+
+\[
+ D(a,b)\le \min\{1,\,3AT b^{3/2}/(8a)\}.
+\]
+
+Indeed the norm distance of the two evolved unit vectors bounds the
+difference of any event probabilities, with purification covering mixed
+inputs. A common clock jitter of size \(\delta_t\) replaces \(T\) by
+\(T+\delta_t\) in the upper bound. To compare the two orders choose the
+same family of incoming Gaussians in both. Each is centered at the
+specified incoming state with component standard deviations
+\(R\sqrt{a/(2J_R)}\) and \(p_R\sqrt{a/(2J_R)}\). For each fixed \(b\)
+the forces are globally Lipschitz. The usual quadratic moment estimate
+concentrates this packet on its Newton trajectory as \(a\downarrow0\).
+In three dimensions the derivative of the summed moment
+\(\langle|Q-q(t)|^2+|P-p(t)|^2/(m\omega)^2\rangle\) is bounded above by
+\((\omega+\operatorname{Lip}(F)/(m\omega))\) times that moment for any
+\(\omega>0\). Its initial value is \(O(a)\). The estimate is only being
+used at \emph{fixed} \(b\).
+\href{lipschitz-certificate-quantum-lift.md}{Lipschitz packet bounds,
+§4} (passage). For all sufficiently small fixed \(b\) the two classical
+endpoints stay strictly on opposite sides throughout the detector
+window. The same conclusions hold with the stated bounded readout
+errors, since the moment bound is uniform on that window. Thus
+
+\[
+ \lim_{b\downarrow0}\lim_{a\downarrow0}D(a,b)=1,\qquad
+ \lim_{a\downarrow0}\lim_{b\downarrow0}D(a,b)=0 .
+\]
+
+Holding \(a>0\) fixed is sufficient for stability against the two core
+changes. Stability also holds along joint paths with \(a\to0\) and
+\(AT b^{3/2}/a\to0\), and under the classical flux bound above. No
+positive lower bound on physical \(\hbar\) follows from either limiting
+order. Here \(a/J_R\) is the dimensionless trial action,
+\(h_P=2\pi\hbar\) if \(a=\hbar\), \(b\) is a source radius, and the time
+mesh is a separate regulator. Semiclassical branch selection for rough
+Hamiltonians has substantial prior art.
+\href{https://arxiv.org/abs/1011.1651}{Athanassoulis and Paul}
+(abstract) and
+\href{cusp-quantum-preparation-selection.md}{cusp-preparation
+comparison} (passage).
+
+\textbf{Newtonian inverse-square attraction.} There is also a
+finite-angle test for the actual Kepler force. Give two transparent
+uniform source spheres the same total strength \(\kappa\) (energy times
+length) and radii \(b\) and \(b/2\). Their exterior potential is
+\(-\kappa/r\) and the interior force of a sphere of radius \(d\) is
+\(-\kappa q/d^3\). These are Newton's spherical attraction results.
+\href{https://en.wikisource.org/wiki/The_Mathematical_Principles_of_Natural_Philosophy_\%281729\%29/Book_1/Section_12}{Motte
+1729, Book I, Section XII, Propositions LXXIII--LXXIV} (passages). At
+zero energy and \(L=\sqrt{m\kappa b}\) the point-mass periapsis is
+\(b/2\). Take identical incoming data at a fixed exterior radius
+\(R>b\). The Kepler parabola has \(r=b/(1+\cos\theta)\), so the narrow
+source gives an angular advance \(\pi\) between the crossings of
+\(r=b\).
+
+For the wider source use \(b\) as length and \(t_K=\sqrt{mb^3/\kappa}\)
+as time. In the orbital plane the interior solution from entry is
+\((\cos s-\sin s,\sin s)\) since the inward and tangential velocity
+components have unit magnitude in these units. It exits at
+\(s=\arctan 2\) at \((-1,2)/\sqrt5\). Thus the two return angles at
+\(R\) differ by exactly \(\arctan 2\), independent of \(b\). The times
+inside \(r=b\) are \((4/3)t_K\) and \((\arctan 2)t_K\) for the narrow
+and wide sources. Each inner action is \(O(\sqrt{m\kappa b})\). The
+angular effect explains which part of an action estimate must survive
+point insertion. For either orbit let
+\(G(E,L)=2\int_{r_{\min}}^R\sqrt{2m(E-V(r))-L^2/r^2}\,dr\). At a simple
+turning point the endpoint term vanishes and \(-\partial_L G\) is the
+unwrapped angle between the two crossings of \(R\) along the orbit. The
+inner contributions to \(G\) shrink as \(O(\sqrt{m\kappa b})\), but
+their \(L\) derivatives differ by \(\arctan 2\) at the specified \(L\).
+\href{../docs/classics/Hamilton_GeneralMethodDynamics_1834_Wilkins.md}{Hamilton,
+1834, law of varying action} (passage).
+
+Here the peak force grows as \(b^{-2}\) and the entry speed as
+\(b^{-1/2}\). The affected disk of incoming flux has fraction \(b/R\)
+for the Kepler exterior. This tests near-radial preparations as the
+source shrinks. The \href{self-sufficiency-contrast.md}{Coulomb
+propagation estimate} concerns fixed collision-free intervals. Smoothing
+and the order of the angular-momentum and source limits have a
+literature. \href{https://arxiv.org/abs/0905.1579}{Castelli and
+Terracini} (abstract; their positive smoothing result concerns
+logarithmic singularities).
+
+\textbf{Scope of the Bałaban comparison.} Blocking here means
+eliminating intermediate times on a one-dimensional chain while
+retaining the entrance and exit data. The calculation identifies the set
+on which control of the exit fails and its weight under a specified law.
+Bałaban's gauge construction retains effective densities after block
+integration, with large-field estimates and gauge constraints.
+\href{../docs/balaban/Balaban_UltravioletStability_ICM1986_1987.md}{Bałaban,
+ICM 1986, pp.~1260--1262} (passage). The positive flux above is an
+ordinary trajectory measure. Integration over chiral lattice fermions
+uses Grassmann variables, and the phase of the integration measure must
+be chosen consistently under gauge transformations. Reflection
+positivity tests a form on reflected observables and enters
+Hilbert-space reconstruction. These are distinct conditions.
+\href{https://arxiv.org/pdf/hep-lat/9904009}{Lüscher, §§3--5} (passage)
+and \href{https://doi.org/10.1016/0003-4916(78)90039-8}{Osterwalder and
+Seiler} (abstract, lattice gauge theory). The committee's 10 November
+2026 assessment concerns a pure-gauge Wightman scaling limit. Uniqueness
+and a positive physical mass gap remain open there.
+\href{https://github.com/yang-mills-group/YM}{Committee assessment and
+submission scope} (passage).
+
 \subsection{7. Consequence for STATE}\label{consequence-for-state}
 
 Newton action necessity is the active priority. This note gives the
@@ -475,8 +758,10 @@ first \(0+1\) background construction: arbitrary unequal polygons
 converge on a stated Lipschitz-controlled interval; the same Green
 function controls source response and the Gaussian width proportional to
 \(\hbar\). Its oscillator example separates boundary caustics from
-initial-value failure. These are written, unrefereed calculations. Next
-retain the full weighted corrections and justify their physical
-weighting without importing the positive action constant to be derived.
-Alpoge and Yang--Mills remain for a later comparison.
+initial-value failure. The return-side detector gives a common
+observable for the two orders of the core and action limits. The
+incoming Liouville flux already controls the sensitive trajectories
+classically. The open physical question is which concentrations in
+energy and angular momentum can be realized at every source radius, and
+whether their observed return laws exclude zero action.
 \end{document}

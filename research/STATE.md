@@ -5,16 +5,17 @@ consolidation and index/reference/site consistency checks.** The
 [88-argument catalog](../notes/index.md) owns coverage and short completed-work
 phrases; git preserves retired notes and process records.
 
-The Newton priority is the [1713 Lemma X force measurement](../notes/newton-insertion-action.md#lemma-x-and-the-measurement-of-initial-force).
-Which physical premise survives refinement and excludes zero action before
-assuming a quantum phase law? The [three-time position test](../notes/newton-insertion-action.md#a-three-time-test-with-a-calibrated-position-resolution)
-requires an observed excess. The [two-ion experiment](../notes/newton-insertion-action.md#a-force-transmitted-between-two-ions)
-requires a bound on direct spin coupling. For the [electron double slit](../notes/galileo-two-path-interference.md#two-slits-and-a-position-detector),
-opposite classical impulses reproduce the averaged electron and shutter
-positions jointly. Can a setting-resolved measurement independently bound
-the force on the transmitted beam while retaining the position signal?
-The [clocked grating](../notes/groupoid-quantum-newton-states.md#9-action-calibration-with-a-clocked-grating)
-calibrates action per unit mass within its stated dynamics.
+The first priority is an explanation of positive physical action from the
+central-force trajectory limit itself. Newton connects [Lemma X's force
+measurement](../notes/newton-insertion-action.md#lemma-x-and-the-measurement-of-initial-force)
+to the orbital force rule in Book I, Proposition VI (1713).
+The [return-position test](../notes/balaban-newton-time-blocking.md#central-force-passage-under-point-insertion)
+asks which concentrations in energy and angular momentum are physically
+realizable as the source shrinks. Is there a premise, independent of
+$\hbar$, that excludes the classical predictions even for such preparations?
+Earlier apparatus tests use [three positions and two ions](../notes/newton-insertion-action.md),
+an [electron and shutter](../notes/galileo-two-path-interference.md#two-slits-and-a-position-detector)
+and a [clocked grating](../notes/groupoid-quantum-newton-states.md#9-action-calibration-with-a-clocked-grating).
 
 ## Goals and current proof boundaries
 
@@ -46,9 +47,10 @@ comparison and iteration open
 [small-volume bridge](../notes/weak-coupling-feshbach-reduction.md),
 continuum reconstruction and surviving physical spectral weight retain
 separate obligations. The [valley correction](../notes/torus-valley-potential.md#4-saturation-and-central-holonomies)
-removes the unsupported global perturbation inference. The external
-[Gross-led shepherding process](../docs/AI_Mathematics_News_2026.md#yangmills-shepherding-gross-chairs-the-committee)
-concerns a claimed existence construction and leaves the mass gap open.
+removes the unsupported global perturbation inference. The committee's
+[10 November assessment of the October pure-gauge submission](https://github.com/yang-mills-group/YM)
+accepts a Wightman scaling limit and leaves infinite-volume uniqueness
+and the physical mass gap open.
 
 Use [dependencies](dependencies.md) for reading order and
 [obstructions](obstructions.md) before reviving a failed route.

@@ -942,13 +942,13 @@
     {
       "path": "notes/balaban-newton-time-blocking.md",
       "title": "Time blocking, Newton polygons and explicit quantum action",
-      "summary": "For arbitrary unequal time grids, the exact Dirichlet Green row sum gives a contraction factor Lambda T squared over 8, polygon convergence and a uniform inverse-Hessian/source-response bound. Gaussian fluctuation widths retain an explicit hbar factor.",
+      "summary": "On arbitrary grids the Dirichlet Green bound controls endpoint response and Gaussian covariance. At a fixed repulsive cusp, equal actions on every refined cell allow opposite returns. Two finite cores distinguish one diameter orbit. Exactly (b/R)^(7/2) of the incoming flux reaches them. The core and trial-action limits give different return probabilities. Two shrinking Kepler sources give an exact angular difference arctan(2).",
       "thematic_area": "Newton/action",
-      "strongest_result": "For arbitrary unequal time grids, the exact Dirichlet Green row sum gives a contraction factor Lambda T squared over 8, polygon convergence and a uniform inverse-Hessian/source-response bound. Gaussian fluctuation widths retain an explicit hbar factor. Scope: Short two-endpoint intervals and stated global curvature bounds or invariant local tubes. Gaussian covariance is a quadratic reference, not a full nonlinear measure estimate. Harmonic boundary caustics do not obstruct initial-value uniqueness; positivity of hbar and physical weighting remain unproved.",
+      "strongest_result": "At the 3/2 repulsive cusp the same incoming orbit, cell equations and cell actions admit opposite returns under every subdivision through arrival. Two uniformly converging core forces select them with vanishing inner action. For the common timed position event the two iterated quantum limits are 1 and 0, while positive classical section flux bounds the difference by (b/R)^(7/2). Bounded inward forces have unique finite-speed central passage. The Green row sum gives contraction Lambda T squared over 8 and uniform inverse-Hessian bounds on short two-endpoint windows.",
       "status": "result",
       "proof_status": "proved-unrefereed",
       "retrieval_priority": 3,
-      "current_relevance": "Retained for arbitrary-grid endpoint Green/Hessian bounds and oscillator caustics. Nonlinear one-vertex normalized curvature and source-connected quartic cumulants are stronger but different objects; causal IVP construction uses different endpoint data.",
+      "current_relevance": "Tests Newton's force-to-orbit inference using the side of return at fixed clock and position resolution. Source smoothing and polygon insertion have distinct roles. A physical constraint on preparation concentration is open. Retains the arbitrary-grid Green/Hessian bounds and oscillator caustic.",
       "relations": [
         {
           "type": "continues",
@@ -964,9 +964,14 @@
           "type": "uses",
           "target": "notes/rivero-1998-conjecture-central-forces.md",
           "reason": "Retains its Schur determinant identity, the real/Euclidean sign distinction, quartic real-action branch caveat and existing zero-limit control."
+        },
+        {
+          "type": "uses",
+          "target": "notes/newton-cusp-preparation-floor.md",
+          "reason": "Uses the finite-force arrival law and retains the reversible classical completion on histories."
         }
       ],
-      "surprising": false,
+      "surprising": true,
       "route_closure": false,
       "keys": [
         "Balaban 0+1",
@@ -980,12 +985,21 @@
         "oscillator caustic",
         "quartic continuation",
         "Gaussian hat innovation",
-        "cut relative entropy"
+        "cut relative entropy",
+        "central-force trajectory limit",
+        "Lemma X",
+        "point insertion",
+        "repulsive cusp",
+        "Liouville flux",
+        "angular momentum",
+        "uniform spheres",
+        "order of limits"
       ],
       "role": "result,live",
       "value": "infrastructure,open-mechanism",
-      "limitations": "Short two-endpoint intervals and stated global curvature bounds or invariant local tubes. Gaussian covariance is a quadratic reference, not a full nonlinear measure estimate. Harmonic boundary caustics do not obstruct initial-value uniqueness; positivity of hbar and physical weighting remain unproved.",
-      "content_coverage": "Full note read after writing, including all proofs and controls. GPT-6.1 Terra supplied a targeted written check of the Green/Hessian/covariance/harmonic identities and the hat interpretation; no full independent proof review or numerical/symbolic verification."
+      "limitations": "Endpoint contraction requires a short interval and stated curvature bounds or an invariant tube. Gaussian covariance is a quadratic reference. The flux estimate is on a fixed-energy incoming section, the diameter ray is singular for it, the two-core quantum result specifies a canonical Hamiltonian, and the Kepler pair requires shrinking angular momentum and unbounded core force. A physical lower bound on action remains open.",
+      "content_coverage": "Full maintained argument read. The central-force passages and return laws are written derivations. Terra's earlier targeted check covered the Green/Hessian/covariance/harmonic identities and the hat interpretation.",
+      "completed_work": "Tested equal-action central-force returns against point insertion, source smoothing and incoming flux."
     },
     {
       "path": "notes/balaban-ode-lesson.md",
