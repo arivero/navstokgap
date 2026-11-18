@@ -92,6 +92,14 @@ polygons and quantum products agree at their vertices to <span
 class="math inline">\(O(\sqrt\hbar)\)</span>, uniformly in the mesh on a
 fixed time interval. Together with the classical certificate this gives
 the requested joint observable limit.</p>
+<p><strong>Extension, 2026-11-18 (6.1 Sol Max).</strong> On any finite
+network of exchange-coupled classical spins, the same sequence of
+rotations that constructs the trajectory gives a quantum product for
+every supplied action <span class="math inline">\(h&gt;0\)</span>. One
+estimate controls all simultaneous refinements of time and action on
+spin-coordinate readouts. Two irrationally related spin lengths admit
+this construction even though they admit no common action for an exact
+phase bundle on the given orbits (§6).</p>
 <p>This is a <strong>bounded instance</strong>, not a proof of the
 universal constructive lifting conjecture formulated below. The input
 includes the conservative action and a globally Lipschitz force; the
@@ -205,7 +213,7 @@ class="math display">\[
 \left\langle\psi_{\hbar,\pi}(t_j),
        \operatorname{Op}_\hbar^W(a)\psi_{\hbar,\pi}(t_j)\right\rangle
 \longrightarrow a(\Phi_t(z_0)),
-\qquad \hbar,|\pi|\longrightarrow0.    ag{C}
+\qquad \hbar,|\pi|\longrightarrow0. \tag{C}
 \]</span> Here <span class="math inline">\(z_0\)</span> is the initial
 canonical state, <span class="math inline">\(\Phi_t\)</span> the
 constructed classical flow, <span
@@ -218,8 +226,8 @@ class="math inline">\(t_j=t\)</span>. The limit holds along every joint
 schedule with <span class="math inline">\(\hbar,|\pi|\to0\)</span>. A
 different action class may require different preparations, observables
 and topologies while retaining its specified noncommutative quantum
-target. Equation (1) does not require convergence of every quantum state
-to a single classical point.</p>
+target. Condition (C) does not require convergence of every quantum
+state to a single classical point.</p>
 <p>The common-hypothesis implication <span
 class="math inline">\(\mathcal H\Rightarrow[C\ \mathrm{and}\
 (\forall\hbar&gt;0)Q_\hbar]\)</span> is weaker than extracting the
@@ -527,15 +535,178 @@ theorem for bounded <span
 class="math inline">\(V&#39;&#39;&#39;\)</span>: <span
 class="math inline">\(V&#39;\)</span> here has a corner at the
 origin.</p>
-<h2 id="consequence-for-state">6. Consequence for STATE</h2>
+<h2 id="a-constructive-lift-for-exchange-coupled-spins">6. A
+constructive lift for exchange-coupled spins</h2>
+<p>Fix a finite graph, one spin <span class="math inline">\(\mathbf
+z_i\)</span> of length <span class="math inline">\(s_i&gt;0\)</span> at
+each vertex, constant fields <span
+class="math inline">\(\boldsymbol\omega_i\)</span> and real symmetric
+edge couplings <span class="math inline">\(\lambda_{ik}\)</span>.
+Specify the initial directions and a fixed order of the edges. The
+mechanical action consists of the local spin actions on these spheres
+and the Hamiltonian <span class="math display">\[
+H_0=\sum_i\boldsymbol\omega_i\cdot\mathbf z_i,\qquad
+H_{ik}=\lambda_{ik}\mathbf z_i\cdot\mathbf z_k,\qquad
+H=H_0+\sum_{\{i,k\}}H_{ik}.
+\]</span> Use <span
+class="math inline">\(\{z_i^a,z_k^b\}=\delta_{ik}\epsilon^{abc}z_i^c\)</span>,
+so the field at <span class="math inline">\(i\)</span> generates <span
+class="math inline">\(\dot{\mathbf z}_i=\boldsymbol\omega_i\times\mathbf
+z_i\)</span>. The <span class="math inline">\(s_i\)</span> and the trial
+reduced action <span class="math inline">\(h\)</span> have action units,
+the fields have units of inverse time, and <span
+class="math inline">\(\lambda_{ik}\)</span> has units of inverse action
+times inverse time. The Hamiltonian has energy units. Directions, graph
+and edge order are dimensionless.</p>
+<p><strong>Classical certificate.</strong> On each time interval of
+length <span class="math inline">\(\delta\)</span>, apply the field
+rotations for <span class="math inline">\(\delta\)</span>, then each
+edge flow for <span class="math inline">\(\delta\)</span> in the
+specified order. For one edge the sum <span
+class="math inline">\(\mathbf z_i+\mathbf z_k\)</span> is conserved.
+Both spins rotate with angular velocity <span
+class="math inline">\(\lambda_{ik}(\mathbf z_i+\mathbf z_k)\)</span>,
+including the identity rotation when the sum vanishes. This makes every
+cell explicit. Write <span class="math inline">\(s_*=\max_i
+s_i\)</span>, <span class="math inline">\(B=2s_*\)</span>, <span
+class="math inline">\(W=\max_{i,a}|\omega_i^a|\)</span> and <span
+class="math inline">\(\Lambda=\sum_{\{i,k\}}|\lambda_{ik}|\)</span>. In
+the maximum coordinate norm the sums of the individual Lipschitz and
+speed bounds on the product of closed spin balls of radius <span
+class="math inline">\(B\)</span> are bounded respectively by <span
+class="math display">\[
+L=2W+4B\Lambda,\qquad V=2BW+2B^2\Lambda .
+\]</span> Each component of a cross product contains two products. For
+one edge, changing either factor gives the Lipschitz bound <span
+class="math inline">\(4B|\lambda_{ik}|\)</span>. All subflows and the
+exact flow preserve the individual lengths. During one cell every
+intermediate point is within <span
+class="math inline">\(V\delta\)</span> of its starting point.
+Integrating each subfield against that displacement bounds its residual
+from the initial tangent, summed over the cell, by <span
+class="math inline">\(LV\delta^2\)</span>. The full flow has the same
+residual bound. Cell stability is at most <span
+class="math inline">\(e^{L\delta}\)</span>. Thus, at every vertex <span
+class="math inline">\(t_j\)</span> of a partition <span
+class="math inline">\(\pi\)</span> of <span
+class="math inline">\([0,T]\)</span>, <span class="math display">\[
+\|z_\pi(t_j)-z(t_j)\|_\infty
+\le 2LVT e^{LT}|\pi|. \tag{23}
+\]</span></p>
+<p><strong>Quantum construction.</strong> For each supplied <span
+class="math inline">\(h&gt;0\)</span> set <span
+class="math inline">\(j_i=\lceil s_i/h\rceil\)</span> and take the
+tensor product of the ordinary spin-<span
+class="math inline">\(j_i\)</span> representations. Use <span
+class="math inline">\(S_i^a=hJ_i^a\)</span>, where the <span
+class="math inline">\(J_i^a\)</span> are dimensionless generators. At
+each site <span
+class="math inline">\([S_i^a,S_i^b]=ih\epsilon^{abc}S_i^c\)</span>;
+distinct sites commute. Every <span
+class="math inline">\(j_i\ge1\)</span>. Prepare the product <span
+class="math inline">\(\psi\)</span> of highest-weight coherent states in
+the given directions. Define <span class="math inline">\(\widehat
+H_\ell\)</span> by substituting <span class="math inline">\(\mathbf
+S\)</span> in each field or edge Hamiltonian. In the classical cell
+order apply <span class="math inline">\(\exp(-i\delta\widehat
+H_\ell/h)\)</span>, writing <span
+class="math inline">\(U_{h,\pi}(t_j)\)</span> for the accumulated
+product. All matrices are self-adjoint generators or unitary propagators
+as appropriate. At fixed <span class="math inline">\(h\)</span> the
+first-order unitary product bound gives <span class="math display">\[
+\left\|U_{h,\pi}(t_j)-e^{-it_j\sum_\ell\widehat H_\ell/h}\right\|
+\le \frac{T|\pi|}{2h^2}
+       \sum_{\ell&lt;k}\|[\widehat H_\ell,\widehat H_k]\| . \tag{24}
+\]</span> This follows cell by cell from the bounded-operator estimate
+of Childs et al., <a href="https://arxiv.org/pdf/1912.08854">Proposition
+15</a> (reading: passage). It gives norm convergence for every fixed
+<span class="math inline">\(h\)</span>. Its <span
+class="math inline">\(h\)</span> dependence requires a separate estimate
+for the joint limit.</p>
+<p><strong>Joint observable estimate.</strong> Take <span
+class="math inline">\(0&lt;h\le s_*\)</span>, so <span
+class="math inline">\(\|S_i^a\|\le hj_i\le B\)</span>. During each
+substep compare the Heisenberg coordinates <span
+class="math inline">\(S_i^a(u)=U(u)^*S_i^a U(u)\)</span> with the
+corresponding classical subflow <span
+class="math inline">\(z_i^a(u)\)</span>, starting from the same
+preceding cell history. Put <span class="math display">\[
+D(u)=\max_{i,a}\|(S_i^a(u)-z_i^a(u))\psi\|,\qquad
+d_h=\max_i\sqrt{h^2j_i+(hj_i-s_i)^2}.
+\]</span> The coherent-state mean <span
+class="math inline">\(hj_i\mathbf n_i\)</span> and Casimir <span
+class="math inline">\(h^2j_i(j_i+1)\)</span> give <span
+class="math inline">\(D(0)\le d_h\)</span> by summing the three squared
+errors at a site. These are the usual rotated highest-weight states. See
+<a href="https://doi.org/10.1103/PhysRevA.6.2211">Arecchi et al.</a>
+(reading: abstract, for the preparation).</p>
+<p>The exact Heisenberg equations have the same coordinate expressions
+as the classical equations in every substep. For an edge this uses
+commutativity between distinct sites. In each product the discrepancy is
+<span class="math display">\[
+S_k^b(u)(S_i^c(u)-z_i^c(u))
+       +z_i^c(u)(S_k^b(u)-z_k^b(u)).
+\]</span> Applied to <span class="math inline">\(\psi\)</span> its norm
+is at most <span class="math inline">\(2B D(u)\)</span>. Integrating the
+two terms of each cross-product component therefore gives <span
+class="math inline">\(D(u)\le D(0)+4B|\lambda_{ik}|\int_0^u
+D(v)\,dv\)</span> with time reset at the start of that substep. The
+field step gives the same inequality with <span
+class="math inline">\(2W\)</span>. Grönwall over the actual sequence
+gives <span class="math inline">\(D(t_j)\le e^{LT}d_h\)</span> relative
+to the split classical trajectory, independently of how many cells the
+partition has. Combining with (23), any ordered word <span
+class="math inline">\(P\)</span> of degree <span
+class="math inline">\(r\ge1\)</span> in the spin coordinates satisfies
+<span class="math display">\[
+\left|\langle U_{h,\pi}(t_j)\psi,P(\mathbf S)U_{h,\pi}(t_j)\psi\rangle
+               -P(z(t_j))\right|
+\le rB^{r-1} e^{LT}\bigl(d_h+2LVT|\pi|\bigr). \tag{25}
+\]</span> Indeed, replace the factors from right to left, leaving
+bounded operators to the left of each difference and scalars to its
+right. This also covers polynomial readouts by linearity and their
+self-adjoint combinations. Since <span class="math inline">\(d_h^2\le h
+s_*+2h^2\)</span>, (25) holds along every joint schedule <span
+class="math inline">\(h,|\pi|\to0\)</span> and at vertices tending to
+any specified time. The large-spin classical dynamics has established
+antecedents, including the Egorov theorem of <a
+href="https://arxiv.org/abs/0709.4561">Fröhlich, Knowles and
+Lenzmann</a> (reading: abstract). Here (23) and (25) use the same
+subfields and stability constants for an arbitrary finite graph and
+unequal spin lengths. The estimates are finite-time, finite-network
+statements.</p>
+<p><strong>Which compatibility can the certificate supply?</strong> Fix
+two sites with <span class="math inline">\(s_2=\sqrt 2\,s_1\)</span> and
+a nonzero exchange coupling. Equation (25) still applies for every small
+<span class="math inline">\(h\)</span>. The stronger target of exact
+<span class="math inline">\(U(1)\)</span> phase transport with the
+original orbit curvature divided by <span
+class="math inline">\(h\)</span> requires <span
+class="math inline">\(2s_i/h\in\mathbb Z\)</span> at both sites. The two
+periods exclude every common <span
+class="math inline">\(h&gt;0\)</span>, even a sparse sequence tending to
+zero. This is the <a
+href="rotation-composition-universality.html#common-scaling-local-caps-and-coupled-spheres">two-sphere
+period test</a> (reading: passage). The construction above instead
+realizes the mean lengths <span class="math inline">\(hj_i\)</span> in
+its preparations, with <span class="math inline">\(0\le
+hj_i-s_i&lt;h\)</span>. The readouts converge to those of the specified
+classical system. Exact holonomy at finite <span
+class="math inline">\(h\)</span> would add information beyond that
+observable limit. Neither target selects a positive physical <span
+class="math inline">\(\hbar\)</span>.</p>
+<h2 id="consequence-for-state">7. Consequence for STATE</h2>
 <p>The bounded certificate-to-quantum test is affirmative for the
 specified one-dimensional conservative <span
 class="math inline">\(C^{1,1}\)</span> action class. It constructs the
 noncommutative target and a quantum product estimate from the classical
 force data and the named analytic toolkit, and uses the classical
-polygon certificate in the observable limit. The universal conjecture,
-singular classical actions, quantum completion uniqueness and
-independent positive-action necessity remain open.</p>
+polygon certificate in the observable limit. Finite exchange networks
+supply a second action class with a constructive lift, including
+irrationally related orbit lengths. Requiring exact orbit phases would
+exclude the same example. The universal observable-lifting conjecture,
+singular completion and the Newtonian necessity of a positive physical
+action remain open.</p>
 
 </main>
 <footer class="site"><div class="wrap">

@@ -31,9 +31,10 @@ separate claims. For a stated $S_0$, $\epsilon=\hbar/S_0$ differs from
 mesh, lattice spacing and record resolution. QCD's pion remains a
 [symmetry benchmark](../notes/three-continuum-limits.md).
 
-For Newton, [classical construction](../notes/balaban-ode-lesson.md) and
-[quantum lifting](../notes/lipschitz-certificate-quantum-lift.md) do not
-exclude the retained classical completions. The missing physical premise
+For Newton, the [classical trajectory construction](../notes/balaban-ode-lesson.md)
+remains available. [Quantum lifting for Lipschitz forces and finite spin
+networks](../notes/lipschitz-certificate-quantum-lift.md) takes the action
+as an input. The missing physical premise
 must survive the [cusp and history tests](../notes/newton-cusp-preparation-floor.md),
 [selective meter counterexample](../notes/gaussian-meter-entropy-floor.md)
 and [complete-record controller models](../notes/sed-closure-under-recording.md).
