@@ -9,12 +9,15 @@ The first priority is an explanation of positive physical action from the
 central-force trajectory limit itself. Newton connects [Lemma X's force
 measurement](../notes/newton-insertion-action.md#lemma-x-and-the-measurement-of-initial-force)
 to the orbital force rule in Book I, Proposition VI (1713).
-On [return through one barrier](../notes/balaban-newton-time-blocking.md#two-images-of-a-returning-orbit),
-do the late far-side atoms exceed the early central population and the
-one-in-four allowance for an unresolved barrier top? Four separated
-launch energies and measured exterior flights test even a finite-force
-cusp. The rubidium soliton data leave individual axial work open. A single-atom
-preparation would test the static radial-orbit law directly on a shell.
+[Single rubidium atoms](../notes/balaban-newton-time-blocking.md#a-single-atom-returning-in-a-tilted-lattice)
+spread several cells downhill and return near the source. Can the three
+position counts exceed the orbit bound after independently measuring
+axial work, losses and freeze errors? On concentric shells the
+centrifugal drop supplies the downhill work from radii and a timed
+tangential launch. A clocked return also tests whether distinct action
+scales can agree once the actual stopping interval is fixed.
+[Two passages through one barrier](../notes/balaban-newton-time-blocking.md#two-images-of-a-returning-orbit)
+use four launch energies to bound a possible barrier-top cusp.
 The potassium [two-power test](../notes/balaban-newton-time-blocking.md#locating-a-turn-with-two-barrier-powers)
 uses guarded returns and a common optical work calibration.
 For a harmonic central force the [trapped-ion contrast estimates](../notes/newton-insertion-action.md#three-measured-contrasts-of-a-trapped-ion)

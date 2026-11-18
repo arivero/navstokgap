@@ -29,6 +29,12 @@ times alone bound a late population on the far side by an earlier
 population near the barrier. The unknown static force inside cancels.
 [Two images of a returning orbit](#two-images-of-a-returning-orbit).
 
+Individual rubidium atoms also return after spreading across a tilted
+lattice. Three site counts test whether a Newtonian atom can turn after
+crossing several downhill cells. On a discrete clock two different
+actions can give exactly the same complete site record.
+[A single atom returning in a tilted lattice](#a-single-atom-returning-in-a-tilted-lattice).
+
 Electron transmission through argon supplies a single-energy comparison
 without identical-particle exchange. A finite annulus of exterior Newton
 orbits would miss the measured exit aperture if the polarization force
@@ -1619,6 +1625,245 @@ excess after allowances would exclude every sequence $a\downarrow0$
 in that one-particle family, even as the orbit mesh tends to zero.
 The published side counts supply neither that excess at the specified
 gates nor a value for a universal physical $\hbar$.
+
+## A single atom returning in a tilted lattice
+
+**6.1 Sol Max, 2026-11-18.** A Newtonian atom that passes a lattice
+crest downhill must have enough energy to pass the next identical
+crest. Preiss et al. imaged individual rubidium atoms several cells
+downhill at 5 ms and back near the source at 11 ms, in separately
+stopped preparations. Three counts suffice to test the orbit law.
+There is also an exact ambiguity between different trial actions if
+the experiment stops only on clock ticks. The two claims use different
+hypotheses. [Preiss et al., Fig. 1(b) and Methods](https://arxiv.org/pdf/1409.3100v2)
+(figure and passages).
+
+**A test using three positions.** Orient $x$ downhill. Let the potential
+per unit mass be $p(x)-g x+u(x)$ with $g>0$, $p(x+d)=p(x)$ and $d$
+the measured pitch. Up to the last exposure, bound the oscillation of
+$u$ on the visited range by $B$, and the range of the specific axial
+energy $e=\dot x^2/2+p(x)-g x+u(x)$ by $W$. Both allowances have
+units of speed squared. The second covers unaccounted axial work.
+Suppose the scoring process places the atom within $d$ of its reported
+site $jd$. Use one preparation law, a common downhill orientation for
+the retained guides and a stopping time chosen independently of the
+launch. Each position event is measured on a separate set of releases.
+
+| event | reported sites | implication for the true position |
+|---|---|---|
+| $A$, release | $j=0$ | $x_0\le d$ |
+| $D$, 5 ms | $j=5,6,7$ downhill | $x_1\ge4d$ |
+| $C$, 11 ms | $j=-1,0,1$ | $x_2\le2d$ |
+
+A differentiable trajectory realizing all three reaches an interior
+maximum $z\ge4d$ with zero speed. It previously crossed a point
+$y\in[d,2d)$ with $z-y=nd$, $n\ge3$. Comparing the energies at the two
+positions cancels $p$ and requires $gnd\le B+W$. Thus $B+W<3gd$
+excludes the triple, regardless of the shape of a cell, a possible
+finite-force cusp or the distribution of the initial speeds. No
+bound involves the number of inserted times in the orbit.
+
+For attempted launches let $s_i$ be the probability of acceptance at
+stop $i$, and $q_i$ the probability of the indicated sites conditional
+on acceptance there. Use the same launch and guide weights at each stop.
+If the probability of any failure of the force, position or clock bounds
+in a common trajectory description is at most $\eta$, then
+
+$$
+             s_0q_A+s_1q_D+s_2q_C\ \le\ 2+\eta .
+$$
+
+Indeed a good orbit can score at most twice, even if the acceptance
+decision depends on position. Independent shutter choices sample its
+three marginals. This requires the same undisturbed flight up to each
+chosen shutter, with pinning errors charged to the position allowance.
+
+In Fig. 1(b), $d=680$ nm. Reading the experimental density cells against
+the printed probability scale gives $q_A>0.94$, $q_D>0.22$ on either
+choice of downhill side and $q_C>0.92$, allowing for the colour steps.
+The authors separately report $0.88(2)$ at the single origin site
+near 11 ms in six adjacent guides. The three conservative graphical
+readings sum to more than $2.08$. For instance, independently established
+$s_i\ge0.98$ and simultaneous lower probability bounds of those sizes
+would leave a margin greater than $0.038$ for $\eta$. The paper reports
+about 98% initial loading and conditions on the final tube occupation.
+The accepted fractions at each stop, simultaneous statistical bounds
+and the error in freezing a moving atom are still needed. [Source
+readings and apparatus](../docs/PreissEtAl_SingleAtomReturns_2015.md)
+(original figure, Methods and thesis passages).
+
+**Could a distant confining wall return the atom in time?** Replace
+$-gx$ by $\tfrac12\Omega^2(x-X)^2$, with $X>0$. The bare acceleration
+at the source is $\Omega^2 X$. A full period and centre of bare classical
+oscillation determine these parameters in clock and ruler units.
+Set $\delta=\operatorname{osc}u+W$ and choose $c>0$ with
+$c^2\ge2[\operatorname{osc}(p+u)+W]$. At the phase-matched points
+the energy comparison now gives
+
+$$
+  \tfrac12\Omega^2(z-y)(z+y-2X)\ge-\delta,\qquad
+  z-X\ge w_*:=X-2d-\frac{2\delta}{3\Omega^2d}.
+$$
+
+Writing $v=z-X$, energy relative to the turn bounds the speed anywhere
+on this excursion by $\sqrt{\Omega^2v^2+c^2}$. From release to return
+the path length is at least $2v+2X-3d$. For $w_*\ge0$ and $2X>3d$
+the elapsed time therefore satisfies
+
+$$
+ t_2-t_0\ \ge\
+ \min\left\{\frac{2}{\Omega},
+       \frac{2w_*+2X-3d}{\sqrt{\Omega^2w_*^2+c^2}}\right\}.
+$$
+
+The derivative of the length-to-speed ratio at $v$ has the sign of
+$2c^2-(2X-3d)\Omega^2v$. Its minimum on $v\ge w_*$ is at the left
+endpoint or the limit at infinity. An arbitrarily fast launch is
+included.
+
+For example, consider calibrated ranges $\Omega/(2\pi)=19$–$21$ Hz,
+$X=31$–$33\,\mu{\rm m}$, $c\le8$ mm/s and
+$\delta\le0.05(3d)\Omega^2X$. Then $v>26.5\,\mu{\rm m}$. In the
+ratio use $X\ge31\,\mu{\rm m}$ and $\Omega<132\,{\rm s}^{-1}$ before
+taking its endpoint and infinite-speed limits. They exceed 12.8 and
+15.1 ms, respectively. This would exclude a return even at a latest
+true stop of 11.2 ms. These are specifications for a calibration.
+They must hold over each possible excursion, or the probability of
+escape beyond the mapped region must be included in $\eta$. Geiger
+measured the bare magnetic curvature in a lithium apparatus by timing
+oscillations. The rubidium Fig. 1(b) still needs its own curvature,
+optical work and freeze-time bounds. Inferring $g$ from a Bloch period
+would use the action under test. [Geiger, §§4.3.4, 4.3.8 and 5.2](https://web.physics.ucsb.edu/~weld/publications/Geiger.pdf)
+(passages).
+
+**The central-force version.** Consider a particle moving outward
+through concentric shells of radial pitch $d$, with specific potential
+$p(R)+u(R)$ and conserved specific angular momentum $\ell$
+(length squared per time). The centrifugal contribution is
+$\ell^2/(2R^2)$. If a particle crosses $Y$ and turns farther out at
+$Z$ of the same shell phase, conservation with the same work allowances
+requires
+
+$$
+                 \frac{\ell^2}{2}(Y^{-2}-Z^{-2})\ \le\ B+W.
+$$
+
+In particular let $R_s$ be the outer source edge, and observe a far
+event beyond $R_f>R_s+d$ followed by a return inside it. Choose
+$Y\in[R_s,R_s+d)$ with $Z-Y$ an integer multiple of $d$.
+If $|\ell|\ge\ell_{\min}>0$, the left side is at least
+$\ell_{\min}^2[(R_s+d)^{-2}-R_f^{-2}]/2$. A finite launch segment
+can calibrate this without an action input. Let the source pass two
+position gates separated by time $h$ with the magnitude of its acceleration
+bounded by $A_s$ between gates. Its final velocity differs from the
+chord velocity by at most $A_sh/2$. Hence one may use the lower bound
+
+$$
+ |\ell|\ge
+ \frac{|\mathbf r_0\times(\mathbf r_0-\mathbf r_{-h})|}{h}
+ -R_s A_sh/2 .
+$$
+
+Take the infimum over the two gate widths and the calibrated interval
+for $h$. The radial tilt then comes entirely from the orbit. An exactly
+radial launch has zero centrifugal drop. The measured rubidium positions
+were axial.
+
+**Two actions on one clock.** Fix the ideal single-band chain on all
+integer sites, inertial mass $m$, pitch $d$, hopping energy $J_b$,
+and energy drop per cell $\Delta=mgd>0$. The site energies are
+$E_c-n\Delta$ and each nearest-neighbour matrix element is $-J_b$.
+Evolve with
+$\exp(-itH/a)$ for trial reduced action $a>0$. Prepare a single atom in
+a pinned lattice with zero hopping, condition a site measurement on
+site zero and retain its success probability. For example, randomly load site
+zero or one with equal probability using the same two source positions.
+Any diagonal pinning hold preserves those populations. The initial
+acceptance is one half for both actions and conditioning prepares the
+same site state. Unpin for
+the chosen elapsed time and repin. A fixed fluorescence exposure after
+repinning has effects $\sum_n f_j(nd)|n\rangle\langle n|$, where $f_j$
+is the calibrated spatial response, including missed counts. Pinned
+phases do not enter any of these probabilities.
+
+The Wannier–Stark ladder $E_c+n\Delta$ gives the period
+$P_a=2\pi a/\Delta$ up to a scalar phase. For ideal switchings on a grid
+of spacing $\tau=1$ ms, take
+
+$$
+                    \frac{1}{a_N}=\frac{1}{a}+\frac{2\pi N}{\Delta\tau},
+                      \qquad N=1,2,\ldots .
+$$
+
+At every integer tick the two flight propagators differ only by a
+scalar. All joint preparation and readout probabilities agree, including
+rejected outcomes, while $a_N\downarrow0$. This ambiguity survives an
+independently fixed pitch and clock. In the [fixed-mass continuum
+dilation](groupoid-quantum-newton-states.md#7-interacting-kernels-under-tangent-scaling)
+lengths divide by $s$, times by $r$ and $a'=ra/s^2$. Keeping both
+physical standards fixes $s=r=1$. The lattice ambiguity instead uses
+the discrete energy ladder and the specified times. Fixing $J_b$ in
+joules is an extra input to this effective chain. Holding a continuum
+optical potential fixed while changing $a$ generally changes $J_b$ and
+can introduce other bands. Physical ramps also require their own time
+responses. [Hartmann et al., Eqs. (18)–(20)](https://doi.org/10.1088/1367-2630/6/1/002)
+and [Glück et al., §1.2](https://arxiv.org/pdf/quant-ph/0111132#page=8)
+(passages).
+
+**A finite-duration measurement that separates the pair.** Draw the
+*true unpinned duration* independently and uniformly in a window of
+width $b$ about each nominal stop. Read the origin site. Write
+$C=|\bar q(11\,{\rm ms})-\bar q(5\,{\rm ms})|$ for the difference of
+its two averaged probabilities. For any $[0,1]$-valued periodic site
+probability of period $P_a$, the full periods in the two windows
+cancel. If $r=b\bmod P_a$, the remaining integrals differ by at most
+$r$, and also by at most $P_a-r$ upon taking their complements within
+one period. Thus
+
+$$
+                C\le\frac{P_a}{2b},\qquad
+                a\ge\frac{\Delta b}{\pi}C .
+$$
+
+Subtract statistical and readout allowances and the sum of the two
+total-variation errors in the timing laws from an experimental lower
+bound for $C$. This bound needs only the calibrated cell drop and
+clock width once the single-band ladder holds. The 500 ms camera exposure in the rubidium apparatus
+begins *after* pinning. It cannot be substituted for $b$.
+
+For an explicit setting take $m=1.44\,10^{-25}$ kg, $d=680$ nm and
+$g=0.50$ m/s$^2$ as specified mechanical inputs. Then
+$\Delta=4.896\,10^{-32}$ J. Choose $T=11$ ms, $a_0=\Delta T/(2\pi)$
+and $a_{10}=a_0/111$. Fix a detector that scores the pinned origin site
+with unit probability and every other site with zero probability. Set
+$4J_b/\Delta=z_1/\sin(5\pi/11)$, where $z_1=2.4048\ldots$ is the
+first positive zero of $J_0$. The cited single-site return law is
+$q(t)=J_0^2[(4J_b/\Delta)\sin(\pi t/P_a)]$. At $a_0$ its nominal
+values are zero at 5 ms and one at 11 ms. Set $b=0.20$ ms. Throughout
+either window the Bessel argument changes by less than
+$2.45\pi(0.10/11)<0.070$. The integral representation gives
+$|J_0'|\le1$. Consequently the slow pair member has
+$C\ge(1-0.070)^2-0.070^2>0.85$. The fast member has
+$C\le(11/111)/(2\cdot0.20)<0.25$. These are predictions for the
+specified hopping and clock window. The experimental Fig. 1(b) used
+another hopping setting. [Hartmann et al., Eq. (20)](https://doi.org/10.1088/1367-2630/6/1/002)
+and [NIST DLMF, §10.9(i)](https://dlmf.nist.gov/10.9#i) (formulas).
+
+The dimensional inputs to the action comparison are $m,d,g$ (or an
+independently fixed $\Delta$), $J_b$, the pinned detector pitch and
+spatial response, the launch and stop times, the tick $\tau$, and the
+width $b$ when randomized. One may hold the post-pin exposure at 500 ms. For
+the trajectory test the additional inputs are the axial work bounds
+$B,W$ or $\Omega,X,c,\delta$, the freeze displacement and timing errors,
+and the shell radii, launch gates, $h,A_s$ and $\ell_{\min}$ for shells. One can use $S_0=md^2/\tau$
+as an action unit. The ratio $a/S_0$, the clock tick and an orbit
+mesh are distinct. Only after physical calibration could $a$ be
+identified with $\hbar$ and $2\pi a$ with $h_P$. For fixed smooth
+continuum forces, tight common preparations and guarded continuous
+position responses, the finite-time Wigner limit used above would
+exclude a sequence $a\downarrow0$ if the classical count ceiling
+were exceeded after allowances. Neither the axial data nor the
+single-band contrast bound establishes universal action necessity.
 
 ## An exterior force test with argon
 
@@ -3633,3 +3878,7 @@ Returning through the same static barrier removes its interior force
 profile from the two-image bound. Four launch energies bound the effect
 of a nonunique barrier-top orbit. Applying this to rubidium requires
 matched guarded counts and an independent bound on single-atom work.
+With one atom per guide the remaining conditions are the work across
+several cells, freeze and acceptance errors, and the time allowed for
+a distant return. For a central orbit the centrifugal drop between
+equal shell phases supplies the corresponding work in ruler and clock units.
