@@ -12,13 +12,14 @@ to the orbital force rule in Book I, Proposition VI (1713).
 The [point-insertion test](../notes/balaban-newton-time-blocking.md#central-force-passage-under-point-insertion)
 exposes the sensitivity of one orbit to its preparation. The
 [three-energy scattering test](../notes/balaban-newton-time-blocking.md#a-three-energy-test-of-central-force-trajectories)
-cancels any common impact distribution. The [helium-3 pressure
-measurements](../notes/balaban-newton-time-blocking.md#helium-pressure-at-three-temperatures)
-violate the dilute equilibrium inequality for every fixed central pair
-potential, within the published uncertainties. A classical atom with
-internal states fits all three coefficients. Can pressure isotherms
-and independently measured heat capacity [exclude that wider
-class](../notes/balaban-newton-time-blocking.md#a-classical-atom-that-reproduces-the-three-coefficients)?
+cancels any common impact distribution. Internal states can fit the
+[three helium-3 gas pressures](../notes/balaban-newton-time-blocking.md#a-classical-atom-that-reproduces-the-three-coefficients).
+[Liquid calorimetry](../notes/balaban-newton-time-blocking.md#how-many-atomic-motions-can-the-measured-heat-support)
+excludes freely mobile classical Gibbs atoms even with internal
+states, and bounds the trial action for each fixed finite-vessel
+fermion model considered there. Can a calibrated local impulse rule
+out constrained atomic motions at the same temperature and pressure,
+including atoms unrepresented in the measured recoil spectrum?
 For individual trajectories the [argon transmission and finite work
 tests](../notes/balaban-newton-time-blocking.md#an-exterior-force-test-with-argon)
 require an independent exterior force calibration. The [77 K shutter

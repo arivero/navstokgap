@@ -45,8 +45,11 @@ Three helium-3 gas measurements test a central force without specifying
 its strength at any radius. Every fixed classical pair potential gives
 a concave second virial coefficient as a function of inverse temperature.
 The published values bend the other way. A classical atom with thermally
-populated internal states can reproduce the three readings.
-[Helium pressure at three temperatures](#helium-pressure-at-three-temperatures).
+populated internal states can reproduce the three readings. In the normal
+liquid, the heat needed to warm a fixed volume independently tests whether
+those atoms retain three mobile, thermally equilibrated momenta apiece.
+[Gas pressure](#helium-pressure-at-three-temperatures) and
+[liquid calorimetry](#how-many-atomic-motions-can-the-measured-heat-support).
 
 **First calculation, 2026-10-27; written derivation, unrefereed.** In
 one spatial coordinate and one time variable, the same discrete Green
@@ -2431,6 +2434,261 @@ heat capacity. They exclude the equilibrated point-atom pair potential
 class at the stated accuracy. Independent necessity of a positive
 physical action remains open.
 
+### How many atomic motions can the measured heat support?
+
+**6.1 Sol Max, 2026-11-18.** Warming normal liquid helium-3 from
+30 to 50 mK at fixed molar volume
+$32\,{\rm cm^3/mol}$ takes less than one fifth of the minimum heat for
+equilibrated Newton atoms with independently mobile momenta. Adding
+internal states, correlations or many-body positional forces cannot
+close that difference. In a finite vessel the same measurement excludes
+an interval of small positive trial actions for each fixed scalar
+fermion Hamiltonian described below. A mechanical measurement suggested
+by Lemma X would test the assumption that the atomic motions themselves
+remain accessible in the liquid.
+
+**The preparation and readout.** Greywall measured the constant-volume
+heat capacity of pure normal liquid helium-3 from 7 mK to 2.5 K and
+reported agreement with earlier measurements within about 5% between
+30 and 500 mK. The Bell Laboratories calorimeter used a roughly
+$12\,{\rm cm^3}$ cell, a $10\,{\rm k\Omega}$ heater and, below 150 mK,
+a melting-pressure thermometer with a separately measured heat addendum.
+The sample volume per mole, temperature change, heat delivered, cell
+background and amount of helium set the comparison. The heater delivers
+energy as the time integral of electrical power. The thermometer uses
+an empirical pressure-to-temperature scale. Neither a pulse duration
+nor that calibration measures the relaxation time of every putative
+hidden motion. Equilibration is a premise of the comparison.
+[Greywall, 1983](https://doi.org/10.1103/PhysRevB.27.2747) (abstract,
+range and interlaboratory comparison) and [Greywall and Busch,
+1982](https://doi.org/10.1103/PhysRevLett.49.146) (p. 146, apparatus).
+
+Let $\nu$ be the amount in moles, $N=\nu N_A$, $R_{\rm g}=N_Ak_B$,
+$T_c=0.030\,{\rm K}$, $T_w=0.050\,{\rm K}$ and $\Delta T=T_w-T_c$.
+On this isochore Greywall's published interpolation has
+$C_V/(\nu R_{\rm g})=T(b_1+b_3T^2+b_4T^3+b_5T^4)$. With $T$ in
+kelvin, its coefficients are $b_i=\sum_{j=0}^3 a_{ij}/32^j$ in
+$\mathrm{K}^{-i}$. Table I gives $b_1<3.3$, $b_3<0$, $b_4<1000$ and
+$b_5<1000$ in these units. Thus the fitted $C_V/(\nu R_{\rm g})$ is
+below $0.05(3.3+1000(0.05)^3+1000(0.05)^4)<0.172$ throughout the
+interval. Use the looser allowance
+$$
+ \bar c=\frac{Q}{N k_B\Delta T}\le 0.30,\qquad
+ Q=U(T_w)-U(T_c).
+$$
+This is a conservative envelope for the reported calorimetry, equivalent
+to $Q/(\nu R_{\rm g})\le0.006\,{\rm K}$. We chose the margin on the
+published interpolation. The paper reports calorimetry at a range of
+temperatures without quoting a confidence interval for this integrated
+20 mK rise. As a check on the readout, a separate calorimeter used
+timed current pulses, measured its heater resistance and separated
+bulk heat from the cell background by varying the filling. Its
+pressure-controlled $4.99$ bar result was
+$C/(\nu R_{\rm g}T)=2.39\,{\rm K}^{-1}$ in a colder normal-liquid
+interval. The bound above uses Greywall's fixed-volume data.
+[Kollar and Vollhardt](https://arxiv.org/html/cond-mat/9906222)
+(§II, Eqs. 5 and 7, Table I, interpolation and temperature scale) and
+[Alvesalo, Haavasoja and Manninen](https://doi.org/10.1007/BF00655140)
+(§§2–3, Table II, heater, thermometry, background and normal phase).
+
+**The classical exclusion.** Take a closed, fixed-volume Gibbs
+preparation with temperature-independent Hamiltonian and phase-space
+measure. Conditional on the configurations and internal variables $z$,
+allow $d$ unrestricted momenta with energy
+$\tfrac12(p-a(z))^\top M(z)^{-1}(p-a(z))+W(z)$, $M(z)>0$, and the
+ordinary momentum volume element. Equipartition and the canonical
+energy variance give
+$$
+ C_V(T)\ \ge\ \tfrac12 k_B\,\langle d\rangle_T,\qquad
+ \frac{1}{N\Delta T}\int_{T_c}^{T_w}\langle d\rangle_T\,dT
+       \ \le\ 2\bar c\ \le\ 0.60 .
+$$
+Indeed the conditional quadratic energy has variance
+$d(k_BT)^2/2$ even if $d$ depends on the sector. The variance of
+the conditional mean adds a nonnegative term. This use of the Gibbs
+identities allows arbitrary correlations, annealed labels and
+interactions in $W$. Ordinary point atoms have $d=3N$.
+Fixing the total momentum removes at most three such directions
+from the entire sample. Their minimum heat per mole over the interval
+is $0.030 R_{\rm g}\,{\rm K}$ up to that finite-size correction.
+Every mathematical subdivision of the heating interval gives the
+same finite-heat inequality.
+[Gibbs, 1902, Ch. VII](https://en.wikisource.org/wiki/Elementary_Principles_in_Statistical_Mechanics/Chapter_VII)
+(passage, canonical fluctuations and quadratic momenta).
+
+**An action bound for the same finite heat.** Put $\beta_i=1/(k_BT_i)$
+for $i=c,w$, $\beta_m=(\beta_c+\beta_w)/2$ and
+$J[f]=(f(\beta_c)+f(\beta_w))/2-f(\beta_m)$. For
+$f=N^{-1}\log Z$, the change in its slope between the endpoints is
+$Q/N$. Convexity bounds the midpoint difference by this slope change
+times $(\beta_c-\beta_w)/4$ (the maximum of the triangular kernel for
+the midpoint difference). For $3N$ classical momenta, integrating the
+Gaussians leaves a log-convex positional partition integral. Hence
+$$
+ J[f_{\rm obs}]\le\frac{(\beta_c-\beta_w)Q}{4N}\le0.020,\qquad
+ J[f_{\rm cl}]\ge\frac32\log
+   \frac{\beta_m}{\sqrt{\beta_c\beta_w}}
+   =\frac32\log\frac4{\sqrt{15}}>0.048 .
+$$
+The first inequality applies to any equilibrium model reproducing the
+heat. Additive energy offsets and constant normalization of the
+partition function cancel. The positive difference $\delta=0.028$ per
+atom uses only the two temperatures and the heat allowance.
+
+Consider $N$ identical spin-$\tfrac12$ atoms of mass $m$ with Dirichlet
+walls in a bounded vessel $\Omega$ with piecewise smooth boundary.
+Let $V$ be a fixed spin-independent permutation-symmetric scalar
+potential, bounded below, with $e^{-\beta V}$ Riemann integrable and
+positive in integral. This includes hard cores with null contact
+boundaries, interpreted as Dirichlet exclusions on the allowed open
+configurations. Write $Z_F^h$ for the fermionic trace with kinetic
+operator $-h^2\sum_i\Delta_i/(2m)$, where $h$ is a trial reduced action,
+and $\lambda_\beta=h\sqrt{2\pi\beta/m}$. In zero field sum over all spin
+states. The matching classical reference is
+$$
+ Z_{\rm cl}^h=\frac{2^N}{N!}\lambda_\beta^{-3N}
+          \int_{\Omega^N}e^{-\beta V(x)}\,dx .
+$$
+Take all grid cubes of side $\ell$ lying wholly in the vessel. In the
+sum below $D$ ranges over ordered products of $N$ distinct such cubes.
+Define the dimensionless loss of classical positional weight by
+$$
+ L_\beta(\ell)=
+ \frac{\sum_D \ell^{3N}e^{-\beta\sup_D V}}
+      {\int_{\Omega^N}e^{-\beta V(x)}\,dx},\qquad
+ A_\beta(\ell)=-N^{-1}\log L_\beta(\ell).
+$$
+For $0<\lambda_\beta<\ell$ and positive $L_\beta$,
+$$
+ 0\le\frac1N\log\frac{Z_{\rm cl}^h}{Z_F^h}
+   \le A_\beta(\ell)-3\log(1-\lambda_\beta/\ell).
+$$
+For the left inequality apply Golden–Thompson on the antisymmetric
+subspace. On its diagonal the free heat kernel is a determinant divided
+by $N!$ on labelled coordinates including spin. Hadamard's inequality
+bounds it by the product of diagonal one-particle kernels, each at
+most $\lambda_\beta^{-3}$ by Dirichlet domination. Additional Dirichlet
+hard-core exclusions can only reduce the trace, also relative to a
+finite repulsive barrier filling each excluded region. Sending that
+barrier to infinity gives the stated upper bound.
+[Golden](https://doi.org/10.1103/PhysRev.137.B1127) (abstract, thermal
+trace inequality) and [Ceperley](https://people.physics.illinois.edu/Ceperley/papers/059a.pdf)
+(passage, free-particle density matrix, Eq. 32).
+
+For the right inequality confine one atom to each of $N$ distinct
+cubes, use Dirichlet walls, and replace $V$ there by its supremum.
+Antisymmetrizing the disjoint cell products leaves one copy per
+unordered cell set and $2^N$ spin choices. For fixed spin populations
+the number of choices is $\binom{N}{N_\uparrow}$ on both sides
+in place of $2^N$, so the comparison is unchanged. The variational principle
+bounds their summed traces above by the full fermionic trace.
+The one-dimensional cell trace is at least $\ell/\lambda_\beta-1$ by
+the integral bound for the decreasing Dirichlet Gaussian sum. Taking
+three factors per atom gives the displayed inequality. This argument
+uses the sign of a free determinant only on its diagonal.
+
+Write $A_*=(A_{\beta_c}+A_{\beta_w})/2$ at the same $\ell$. The
+midpoint correction $N^{-1}\log(Z_{\rm cl}^h/Z_F^h)$ is nonnegative.
+Thus a fermion model fitting the observed heat must satisfy, whenever
+$A_*<\delta$,
+$$
+ h\ \ge\ \ell\sqrt{\frac{m}{2\pi\beta_c}}\,
+                  \big[1-e^{-(\delta-A_*)/3}\big].
+$$
+If $\lambda_{\beta_c}\ge\ell$ this already holds. Otherwise average
+the error at the two endpoints and use $\lambda_{\beta_w}\le
+\lambda_{\beta_c}$. At fixed $N,\Omega,V$, $L_\beta(\ell)\to1$ on
+successively halved grids by lower Riemann approximation. Walls and
+particle coincidences have zero configuration volume. A positive
+$\ell$ with $A_*<\delta$ therefore exists for each such model.
+Obtaining a number in action units requires $m$, a physical length
+$\ell$ and control of the classical weight on that length from the
+vessel geometry, sample density and interaction energies. The grid
+estimates that weight without imposing a minimum length. Uniformity
+over changing potentials or increasing sample sizes remains open. Under
+$h\mapsto a h$ with all preparation and calorimeter settings fixed,
+$\lambda_\beta/\ell$ is multiplied by $a$ while the heat allowance
+and $A_\beta$ are unchanged. Rescaling the bath temperature, atomic
+mass or vessel dimensions to undo this would change measured inputs.
+
+**What would a Lemma X measurement add?** For smooth, time-independent
+ideal holonomic constraints and the atomic mass metric, the response to a small
+constant force applied to atom $i$, read in one unit direction $e$,
+is the corresponding diagonal entry of the mass-weighted orthogonal
+projector $P$ onto allowed velocities. Operationally that entry is
+the limit of
+$2m\, e\cdot(\langle x_i(\tau)\rangle_F-\langle x_i(\tau)\rangle_0)/
+(F\tau^2)$ for a force $Fe$ and matched initial ensembles, averaged
+over their configurations. Smooth finite forces give the short-time
+expansion away from impacts. The trace of $P$ counts the mobile
+directions at each configuration. Thus for a uniformly sampled atom
+and an isotropically sampled axis, the temperature-averaged mean
+response is at most $2\bar c/3\le0.20$ in this constrained equilibrium
+class. Unconstrained atoms give one. The required independent readout
+measures mass, local applied force, elapsed time and displacement,
+with control of the finite-time remainder and atom selection. A uniform
+force tests only one collective profile per axis. [Udwadia and Kalaba](https://doi.org/10.1115/1.1459071)
+(passage, constrained equations for forces doing zero virtual work).
+
+Both the force and its readout can have finite resolution. In Cartesian
+coordinates for equal atomic masses let $u$ be the desired unit vector
+at the chosen atom. A force $F b$ and displacement sensor along $c$
+give the initial response $c^\top P b$. Map the two profiles at their
+physical spot widths and bound $\|b-u\|\le\zeta_F$ and
+$\|c-u\|\le\zeta_x$. The spatial error in the normalized response is
+at most $\zeta_F+\zeta_x+\zeta_F\zeta_x$ since $\|P\|\le1$.
+For a timed exposure $\tau$, let $L$ bound, in inverse seconds, the
+rate of change of the mean acceleration difference along $c$ in units
+of $|F|/m$. The displacement averages the acceleration with weight
+$2(\tau-s)/\tau^2$. If the error on the paired displacement is at most
+$\sigma_x$ in metres, the additional error is bounded by
+$$
+       L\tau/3+2m\sigma_x/(|F|\tau^2).
+$$
+Both terms use apparatus calibrations independent of a time mesh.
+With positive $L$ and $\sigma_x$ the best duration for this estimate
+is $\tau=(12m\sigma_x/(|F|L))^{1/3}$ if the acceleration bound holds
+that long. Shrinking the plotted time step cannot improve this
+physical measurement.
+
+Heat and a recoil spectrum have both been measured at the same nominal
+temperature and pressure. At 500 mK and 10 bar the thermodynamic table gives
+$C_P/(\nu R_{\rm g}T)=0.6964\,{\rm K}^{-1}$. Stability gives
+$C_V\le C_P$, hence a pointwise classical ceiling of $0.2322$ on the
+mean projected response using the tabulated value. Allowing
+$C_V/(\nu R_{\rm g})\le0.40$ raises the ceiling to $0.267$.
+Bryan et al. selected a nominal 800 meV incident neutron energy and a
+mean scattering angle of $125^\circ$ at this temperature and pressure.
+They compared the recoil line to a single-atom impulse profile with
+instrumental resolution and final-state corrections.
+[Kollar and Vollhardt](https://arxiv.org/pdf/cond-mat/9906222)
+(Table IV, 10 bar) and [Bryan et al.](https://doi.org/10.1209/0295-5075/115/66001)
+(experimental approach and extraction of kinetic energy).
+
+For a mechanical comparison, deliver opposite impulses of magnitude
+$I$ on matched preparations to a uniformly chosen atom along a random
+axis, and read the work $W_\pm$ done on the sample. In the impulsive
+limit the coordinates stay fixed, the momentum change is projected
+onto allowed velocities, and
+$m\langle W_++W_-\rangle/I^2$ equals the mean projector entry. The
+opposite signs cancel the initial velocity. Suppose an instrument
+determines the mean entry $r$ only on a fraction $\eta$ of these
+uniformly assigned paired trials, with selection independent of the
+sign and with the two works matched at fixed initial state or in
+conditional mean. Nonnegativity of each projected squared impulse
+makes $\eta r$ a lower bound for the unconditional entry. Thus
+$\eta r>0.267$ would exclude even the constrained classical model
+at the warmer state under the stated heat allowance. A calibrated
+impulse, delivered work, mass and a lower bound on the represented
+fraction suffice. Conditioning on detected scattering events alone
+loses this last factor. For example, a fraction $s$ of freely mobile
+atoms among fixed atoms has true mean entry $s$, yet gives unit
+response on the mobile subset for every $s>0$. The published profile
+measures scattering intensity in a selected energy and angle range.
+It supplies neither the opposite-work measurement nor that uniform
+sampling calibration. This is the remaining physical step between
+the heat deficit and Newton's individual force readout.
+
 ## 7. Consequence for STATE
 
 Newton action necessity is the active priority. This note gives the first
@@ -2455,7 +2713,8 @@ absolute microwave boost calibration. Its remaining premises are the
 exterior binding work during passage and the driven velocity moment.
 The field-free, finite-time position measurement dispenses with the
 latter and has yet to be matched to data at the stated preparation.
-The helium pressure comparison removes the unknown central potential
-from the classical dilute prediction. Extending that exclusion to
-thermally active internal states requires independent pressure and heat
-capacity information.
+The liquid-helium heat measurement excludes mobile classical Gibbs
+atoms even with internal states. The finite-vessel fermion comparison
+gives a positive action bound for each fixed potential. An independent
+measurement of local atomic inertia in the same preparation would
+test whether classical constraints can account for the heat deficit.
