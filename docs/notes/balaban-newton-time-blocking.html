@@ -97,6 +97,14 @@ error gives a lower bound on a trial action in the spin-zero Coulomb
 exchange model. <a
 href="#a-three-energy-test-of-central-force-trajectories">Three-energy
 test</a>.</p>
+<p>Electron transmission through argon supplies a single-energy
+comparison without identical-particle exchange. A finite annulus of
+exterior Newton orbits would miss the measured exit aperture if the
+polarization force has at least half its asymptotic strength beyond
+<span class="math inline">\(0.50\)</span> nm, with the upper control
+specified below. The published attenuation fixes the size of the
+discrepancy such a force calibration would have to explain. <a
+href="#an-exterior-force-test-with-argon">Argon transmission</a>.</p>
 <p><strong>First calculation, 2026-10-27; written derivation,
 unrefereed.</strong> In one spatial coordinate and one time variable,
 the same discrete Green function controls three operations: constructing
@@ -1203,6 +1211,364 @@ href="https://archive.org/details/dli.ernet.7436">volume scan</a>,
 passages read in the library OCR) and <a
 href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.104.123">Heydenburg
 and Temmer, 1956</a> (abstract).</p>
+<h2 id="an-exterior-force-test-with-argon">An exterior force test with
+argon</h2>
+<p><strong>6.1 Sol Max, 2026-11-18.</strong> At <span
+class="math inline">\(0.34\)</span> eV Buckman and Lohmann report an
+electron–argon attenuation cross section of <span
+class="math inline">\(0.318\)</span> square ångströms (relative error
+<span class="math inline">\(3.5\%\)</span>, one standard deviation). The
+question from Lemma X is whether a separately measured radial force
+could produce so little loss. The following comparison uses elastic
+trajectories and a physical exit aperture. All assumptions about the
+atom’s interior can be dropped once the contributing rays are shown to
+turn outside it. <a
+href="https://doi.org/10.1088/0022-3700/19/16/013">Buckman and Lohmann,
+§§2–4 and Table 2</a> (passages and data row).</p>
+<p><strong>The independently measurable force coefficient.</strong> Let
+<span class="math inline">\(\alpha_v\)</span> be the static dipole
+polarizability expressed as a volume, so <span
+class="math inline">\(\mathbf p_{\rm ind}=4\pi\epsilon_0\alpha_v\mathbf
+E\)</span>. The induced-dipole energy in a charge’s field is <span
+class="math inline">\(-C_4/r^4\)</span> to leading order, with <span
+class="math inline">\(C_4=[e^2/(4\pi\epsilon_0)]\alpha_v/2\)</span>.
+Dielectric measurements on argon give a molar polarizability <span
+class="math inline">\(A_\epsilon=4.140686(10)\)</span> cubic centimetres
+per mole. Using <span class="math inline">\(\alpha_v=3A_\epsilon/(4\pi
+N_A)\)</span> and the electrostatic coupling <span
+class="math inline">\(1.44\)</span> eV nm gives <span
+class="math inline">\(C_4\simeq1.18\,10^{-3}\)</span> eV nm<span
+class="math inline">\(^4\)</span>. These inputs can be calibrated by
+charge, force, length and particle number. A dielectric measurement
+probes a weak, nearly uniform field. It determines the coefficient at
+large distance. The accuracy of the instantaneous radial force in an
+actual flyby is an additional measurement. <a
+href="https://doi.org/10.1103/PhysRevLett.120.123203">Gaiser and
+Fellmuth, Table III</a> (method and data passage).</p>
+<p><strong>A finite annulus with a known minimum deflection.</strong>
+Let <span class="math inline">\(E=\mu v^2/2\)</span> be the relative
+kinetic energy, <span class="math inline">\(\mu\)</span> the reduced
+mass, and <span class="math inline">\(p=\mu v\)</span>. Write <span
+class="math inline">\(V(\infty)=0\)</span> and assume a time-independent
+central potential, locally <span class="math inline">\(C^2\)</span>
+outside <span class="math inline">\(r_0\)</span>. Suppose that on <span
+class="math inline">\(r\ge r_0\)</span> its inward force magnitude obeys
+<span class="math display">\[
+4(1-\gamma)C_4/r^5\ \le V&#39;(r)\le\ 4(1+\gamma)C_4/r^5,
+\qquad 0\le\gamma&lt;1 .
+\]</span> Let <span class="math inline">\(n(r)=\sqrt{1-V(r)/E}\)</span>,
+<span class="math inline">\(\rho=r n(r)\)</span> and <span
+class="math inline">\(B(r)=rV&#39;(r)/[2(E-V(r))]\)</span>. Then <span
+class="math inline">\(d\log\rho/d\log r=1-B(r)\)</span>. Fix impact
+radii <span class="math inline">\(b_1\le b\le b_2\)</span>. If <span
+class="math display">\[
+B_*=\frac{2(1+\gamma)C_4}{E r_0^4}&lt;\tfrac12,\qquad
+b_1&gt;r_0\sqrt{1+\frac{(1+\gamma)C_4}{E r_0^4}},
+\]</span> then <span class="math inline">\(0\le B\le B_*\)</span>
+outside <span class="math inline">\(r_0\)</span> and the turning point
+<span class="math inline">\(\rho(r)=b\)</span> lies in this exterior
+region. Use the usual central-orbit quadrature, with <span
+class="math inline">\(\chi\)</span> positive for inward bending and
+<span class="math inline">\(\rho=b\sec u\)</span>. Subtracting its free
+angle gives <span class="math display">\[
+\chi(b)=2\int_0^{\pi/2}\frac{B(r(b\sec u))}{1-B(r(b\sec u))}\,du .
+\]</span> Here <span class="math inline">\(r(\rho)\)</span> is the
+unique exterior inverse. This is the single-turning-point formula of <a
+href="https://arxiv.org/pdf/cond-mat/0605637">Hendi, Henn and Leonhardt,
+Eqs. (1)–(4)</a> (passage, opposite sign convention). Since <span
+class="math inline">\(n\ge1\)</span> and <span
+class="math inline">\(B\ge 2(1-\gamma)C_4 n^2/(E\rho^4)\)</span>, the
+integral of <span class="math inline">\(\cos^4u\)</span> gives the
+finite bounds <span class="math display">\[
+\frac{3\pi(1-\gamma)C_4}{4E b^4}
+\ \le\ \chi(b)\ \le\ \frac{\pi B_*}{1-B_*}&lt;\pi .
+\]</span> The upper bound excludes a return to the forward detector
+after a full turn. Neither bound needs the force inside <span
+class="math inline">\(r_0\)</span>. Inserting times into a convergent
+trajectory calculation leaves both inequalities intact.</p>
+<p><strong>Putting the loss in the units of the experiment.</strong>
+Take <span class="math inline">\(E\in[0.30,0.40]\)</span> eV, <span
+class="math inline">\(C_4\in[1.15,1.20]\,10^{-3}\)</span> eV nm<span
+class="math inline">\(^4\)</span>, <span
+class="math inline">\(\gamma=1/2\)</span>, <span
+class="math inline">\(r_0=0.50\)</span> nm and <span
+class="math inline">\([b_1,b_2]=[0.55,0.60]\)</span> nm. Throughout this
+band <span class="math inline">\(B_*\le0.192\)</span>, <span
+class="math inline">\(\rho(r_0)&lt;0.525\)</span> nm and <span
+class="math inline">\(\chi(b)&gt;0.026\)</span> rad. The annulus has
+area <span class="math inline">\(A=\pi(b_2^2-b_1^2)=0.0575\pi\)</span>
+nm<span class="math inline">\(^2\)</span>, or <span
+class="math inline">\(18.06\)</span> square ångströms. Uniformly
+distributed independent gas atoms give this area per unit target column
+for any fixed incident ray.</p>
+<p>Buckman and Lohmann used a field-free tube of length <span
+class="math inline">\(L=255\)</span> mm with a <span
+class="math inline">\(D=2\)</span> mm diameter exit. For a collision a
+distance <span class="math inline">\(z\)</span> upstream, the
+undeflected and deflected rays can both cross that exit only if their
+angle is at most <span class="math inline">\(D/z\)</span>. The angle
+between the two unit directions is bounded by their transverse slope
+difference, which is at most the diameter of the disk divided by <span
+class="math inline">\(z\)</span>. Thus for the upstream half the angle
+is at most <span class="math inline">\(2D/L&lt;0.016\)</span> rad. This
+uses only straight-line flight and the measured lengths. In a
+calibration allowing up to <span class="math inline">\(0.004\)</span>
+rad in total for the relative-to-laboratory angle, residual fields,
+alignment and finite-distance propagation, take <span
+class="math inline">\(\theta=0.020\)</span> rad as the largest accepted
+relative deflection there. The margin is positive at fixed length and
+clock resolution. The authors estimate an energy resolution below <span
+class="math inline">\(20\)</span> meV at <span
+class="math inline">\(0.4\)</span> eV. A resolution width alone gives no
+hard support for the energy distribution. <a
+href="https://doi.org/10.1088/0022-3700/19/16/013">Buckman and Lohmann,
+pp. 2548–2550, 2553–2556, 2561</a> (instrument and resolution
+passages).</p>
+<p>Let <span class="math inline">\(Y\)</span> be the gas-induced loss
+per unit column in the dilute limit, normalized to the empty-cell
+detected current. Assume its linear term is the single-atom loss minus
+the single-atom gain. A column scan checks the range in which the
+measured slope applies. Write <span class="math inline">\(f\)</span> for
+a certified lower fraction of reference fluence and gas column meeting
+the energy, upstream-location and angular conditions, including the
+relative flux for moving targets. More precisely, on the annulus these
+good encounters dominate <span class="math inline">\(fP(dE)\,2\pi
+b\,db\)</span> per unit column for a probability <span
+class="math inline">\(P\)</span> on the specified energy band. Let <span
+class="math inline">\(G\)</span> bound, in area units, the gain from
+rays entering the counted output that would otherwise have missed it,
+including migration between timing bins. All good encounters in that
+annulus remove a reference count. The Newton prediction therefore obeys
+<span class="math display">\[
+Y_{\rm Newton}\ge f A-G .
+\]</span> For <span class="math inline">\(f=1/2\)</span> and <span
+class="math inline">\(G=0\)</span> this exceeds <span
+class="math inline">\(9.0\)</span> square ångströms. Even a conservative
+<strong>trial</strong> upper value <span class="math inline">\(Y_{\rm
+hi}=0.40\)</span> square ångströms would suffice if <span
+class="math inline">\(G=0\)</span> and <span
+class="math inline">\(f&gt;0.023\)</span>. Ferch et al. independently
+measured <span class="math inline">\(0.311\)</span> square ångströms at
+<span class="math inline">\(0.345\)</span> eV with a magnetic lens. Its
+angular response differs from that of the field-free tube. Both
+experiments discuss forward-scattering corrections using angular
+distributions. Their quoted errors do not by themselves bound <span
+class="math inline">\(G\)</span> under an alternative classical angular
+law. Pressure scans, column density, empty-cell fluence, background and
+detector efficiency enter the comparison. <a
+href="https://doi.org/10.1088/0022-3700/18/5/017">Ferch et al., Table 1
+and §§3.1, 4</a> and <a
+href="https://doi.org/10.1088/0022-3700/19/16/013">Buckman and Lohmann,
+§4</a> (data and correction passages).</p>
+<p>A way to control the gain independently is to admit only rays through
+two upstream stops of radius <span
+class="math inline">\(a_s=0.25\)</span> mm a distance <span
+class="math inline">\(L_s=L\)</span> apart, the second at the cell
+entrance. Every straight ray through both would arrive within <span
+class="math inline">\(a_s(1+2L/L_s)=0.75\)</span> mm of the exit centre.
+Pulse gates at the stops separated by <span
+class="math inline">\(0.74\)</span> microseconds, each with a half-width
+of <span class="math inline">\(5\)</span> ns, select velocity using
+<span class="math inline">\(L_s\)</span> and a clock. The on-axis flight
+interval of <span class="math inline">\(0.73\)</span>–<span
+class="math inline">\(0.75\)</span> microseconds is inside the declared
+energy band for electrons on stationary argon. The small inclination,
+mass ratio, gas temperature and timing tails enter <span
+class="math inline">\(f\)</span>. Count the whole outgoing pulse with
+calibrated efficiency across the exit. A wide time gate and an
+empty-cell beam profile are essential to the bound on <span
+class="math inline">\(G\)</span>. This is a proposed preparation. The
+two published experiments did not report these guarded counts.</p>
+<p><strong>What could calibrate the force independently?</strong> The
+nominal traversal time <span class="math inline">\(r_0/v\)</span> is
+<span class="math inline">\(1.3\)</span>–<span
+class="math inline">\(1.6\)</span> fs. Spatial and temporal response can
+be tested with different external fields. The following two estimates
+specify what such measurements would control.</p>
+<p>First consider a neutral spherical source whose static polarization
+energy in an imposed potential is minus one half a positive, rotation-
+invariant quadratic form. Suppose the responding charge is contained
+inside <span class="math inline">\(r_1=0.40\)</span> nm and the form is
+continuous on the converging exterior point-charge expansion there (for
+example the support is strictly smaller than <span
+class="math inline">\(r_1\)</span> and the form is bounded on its
+potentials). The different spherical harmonic degrees are orthogonal for
+this form. Neutrality removes degree zero. Consequently the static
+energy is <span class="math inline">\(V_{\rm
+st}(r)=-\sum_{\ell\ge1}c_\ell/r^{2\ell+2}\)</span>, with <span
+class="math inline">\(c_\ell\ge0\)</span> and <span
+class="math inline">\(c_1=C_4\)</span>. Convergence at <span
+class="math inline">\(r_1\)</span> suffices to differentiate at <span
+class="math inline">\(r\ge r_0&gt;r_1\)</span>. Zhang et al. distinguish
+a convergent exterior polarization series for confined hydrogen from the
+asymptotic free-atom expansion. <a
+href="https://doi.org/10.1063/1.4705279">Zhang et al. (2012)</a>
+(abstract).</p>
+<p>A single measurement of the work of bringing a charge from infinity
+to <span class="math inline">\(r_1\)</span> now bounds the higher-order
+force on the whole annulus. Put <span
+class="math inline">\(u_1=-r_1^4V_{\rm st}(r_1)/C_4-1\)</span>. Each
+higher multipole contributes a nonnegative weight to <span
+class="math inline">\(u_1\)</span>. Its contribution to the fractional
+force excess at <span class="math inline">\(r\)</span> equals that
+weight times <span
+class="math inline">\((\ell+1)(r_1/r)^{2\ell-2}/2\)</span>. For <span
+class="math inline">\(\ell\ge2\)</span> these factors are at most <span
+class="math inline">\((3/2)(0.40/0.50)^2=0.96\)</span> because their
+successive ratios are bounded by <span
+class="math inline">\((4/3)(0.40/0.50)^2&lt;1\)</span>. Thus <span
+class="math display">\[
+0\le \frac{r^5 V&#39;_{\rm st}(r)}{4C_4}-1\le0.96\,u_1,\qquad r\ge r_0 .
+\]</span> For example, an independent upper limit <span
+class="math inline">\(u_1\le1/4\)</span> would leave a fractional
+allowance of <span class="math inline">\(0.26\)</span> before the upper
+force tolerance <span class="math inline">\(1.50\)</span> is reached.
+Penetration by the probe, higher powers of field strength and delayed
+response require their own control for real argon.</p>
+<p>For a temporal check, prescribe a straight probe passage <span
+class="math inline">\(\mathbf r(t)=(b,0,vt)\)</span> independently of
+the scattering experiment. Write <span
+class="math inline">\(K=|e|/(4\pi\epsilon_0)\)</span>, <span
+class="math inline">\(\mathbf E(t)=K\mathbf r/r^3\)</span> up to overall
+sign, and <span
+class="math inline">\(\alpha=4\pi\epsilon_0\alpha_v\)</span>. Model the
+<em>dipole</em> by passive classical oscillator modes with positive
+static weights <span class="math inline">\(d\alpha(\nu)\)</span> summing
+to <span class="math inline">\(\alpha\)</span>, angular frequencies
+<span class="math inline">\(\nu&gt;0\)</span> and zero incoming
+excitation. Each mode of static weight <span
+class="math inline">\(a\)</span> obeys <span
+class="math inline">\(\ddot{\mathbf d}+\nu^2\mathbf d=a\nu^2\mathbf
+E(t)\)</span>. All choices of <span class="math inline">\(\nu\)</span>
+give the same static response per unit weight. At closest approach the
+retarded solution gives <span class="math inline">\(|\mathbf
+d(0)|/(a|\mathbf E(0)|)\le\pi\nu b/(2v)\)</span> by integrating <span
+class="math inline">\(K/(b^2+v^2t^2)\)</span> over the incoming
+half-line. An arbitrarily slow classical dipole therefore defeats a
+static force calibration even when its whole static work curve is
+known.</p>
+<p>Conversely let <span class="math inline">\(\tau_{\rm
+pol}=\alpha^{-1}\int\nu^{-1}\,d\alpha(\nu)\)</span>. For the integrated
+force on the prescribed probe, the error from using an instantaneous
+dipole obeys <span class="math display">\[
+\frac{|\mathbf I_{\rm ret}-\mathbf I_{\rm stat}|}{|\mathbf I_{\rm
+stat}|}
+\le \frac{8v\tau_{\rm pol}}{b},\qquad
+|\mathbf I_{\rm stat}|=\frac{3\pi\alpha K^2}{4vb^4}.
+\]</span> In fact <span class="math inline">\(\mathbf d-a\mathbf
+E\)</span> is the retarded sine integral of <span
+class="math inline">\(-a\ddot{\mathbf E}/\nu\)</span>. Along the
+straight line, <span class="math inline">\(\|\nabla\mathbf
+E(t)\|\le2K/r(t)^3\)</span> and <span
+class="math inline">\(|\ddot{\mathbf E}(s)|\le6Kv^2/r(s)^4\)</span>. For
+the latter, the squared dimensionless coefficient is <span
+class="math inline">\(45x^4-18x^2+9\le36\)</span> for <span
+class="math inline">\(x=\hat{\mathbf r}\cdot\hat{\mathbf v}\)</span>.
+The integral of these two even bounds over <span
+class="math inline">\(s&lt;t\)</span> is half their full product
+integral, namely <span class="math inline">\(6\pi K^2/b^5\)</span>.
+Integration of the static transverse force and summing the retarded
+errors over modes gives the displayed ratio. Masses enter through <span
+class="math inline">\(\mu^{-1}=m_e^{-1}+M_{\rm Ar}^{-1}\)</span> when
+converting <span class="math inline">\(E\)</span> to <span
+class="math inline">\(v\)</span>.</p>
+<p>The frequencies in this moment are clock frequencies. For this mode
+model the causal susceptibility has <span
+class="math inline">\(d\alpha(\nu)=(2/\pi)\operatorname{Im}\alpha(\nu+i0)\,d\nu/\nu\)</span>,
+including line masses. Thus an independently calibrated absorption
+spectrum can bound <span class="math inline">\(\tau_{\rm pol}\)</span>
+without converting photon energy to frequency with <span
+class="math inline">\(\hbar\)</span>. A bound <span
+class="math inline">\(\tau_{\rm pol}\le9\,10^{-17}\)</span> s would put
+the integrated dipole error below one half throughout the test annulus.
+The prominent argon lines near <span class="math inline">\(105\)</span>
+and <span class="math inline">\(107\)</span> nm have inverse angular
+frequencies near <span class="math inline">\(5.6\,10^{-17}\)</span> s
+via <span class="math inline">\(\lambda/(2\pi c)\)</span>. Their
+positions and strengths alone do not bound the whole positive moment.
+Extending the straight-probe impulse estimate to curved, freely moving
+rays with multipole forces requires a further dynamical estimate. <a
+href="https://doi.org/10.1103/PhysRevA.49.2363">Ligtenberg et al.,
+optical absorption measurements</a> (abstract) and <a
+href="https://physics.nist.gov/PhysRefData/Handbook/Tables/argontable3.htm">NIST,
+Ar I resonance wavelengths</a> (table).</p>
+<p>There is a numerical cross-check of the required timescale. Kumar and
+Thakkar tabulate argon oscillator-strength moments <span
+class="math inline">\(S_{-2}=11.08\)</span> and <span
+class="math inline">\(S_{-3}=16.75\)</span> in atomic units. Static
+dipole weights are proportional to oscillator strengths divided by
+squared frequency. Their ratio therefore gives <span
+class="math inline">\(\tau_{\rm pol}=(16.75/11.08)t_{\rm at}\simeq
+3.66\,10^{-17}\)</span> s with the conventional atomic time <span
+class="math inline">\(t_{\rm at}=\hbar/E_{\rm h}\)</span> (<span
+class="math inline">\(E_{\rm h}\)</span> is the Hartree energy). It puts
+<span class="math inline">\(8v\tau_{\rm pol}/b\)</span> near <span
+class="math inline">\(0.20\)</span> at the fastest, closest straight
+probe in the band. Their distribution combines absorption and
+refractivity data with theoretical input and a sum-rule constraint. For
+an independent test of action necessity the frequency integral must be
+calibrated with lengths, clocks and field response, with spectral
+coverage stated. <a href="https://doi.org/10.1063/1.3315418">Kumar and
+Thakkar, §§II–III and Table I</a> (method and moment table).</p>
+<p><strong>How much mechanical action would an alternative deflection
+need?</strong> For a deterministic elastic central branch use its radial
+characteristic <span class="math inline">\(W_E(J)\)</span> with the free
+contribution subtracted and angular momentum <span
+class="math inline">\(J=p b\)</span>. Hamilton’s deflection identity
+gives <span class="math inline">\(|(W_E-\widetilde
+W_E)&#39;(J)|=|\chi-\widetilde\chi|\)</span> with a common sign and
+continuous winding convention. This is also the integrated scattering
+function of <a href="https://arxiv.org/pdf/cond-mat/0605637">Hendi et
+al., Eq. (3)</a> (passage, with <span
+class="math inline">\(p\,db=dJ\)</span>). Suppose an alternative branch
+reproduces <span class="math inline">\(Y\le Y_{\rm hi}\)</span> under
+the same preparation and detector calibrations. The mean area in the
+annulus on which its deflection is within <span
+class="math inline">\(\theta\)</span> of forward, modulo a full turn, is
+at least <span class="math inline">\([A-(Y_{\rm hi}+G)/f]_+\)</span>,
+where <span class="math inline">\(f&gt;0\)</span> and <span
+class="math inline">\([x]_+=\max(x,0)\)</span>. Indeed, every ray from
+the complement in the good exposure would leave the aperture. On the
+near-forward rays the angle error has magnitude at least <span
+class="math inline">\(\chi_*-\theta\)</span>, with <span
+class="math inline">\(\chi_*=0.026\)</span> rad. Integrating over <span
+class="math inline">\(J\)</span>, using <span class="math inline">\(2\pi
+b\,db\le 2\pi b_2\,db\)</span>, yields <span class="math display">\[
+\int {\rm Var}_{[pb_1,pb_2]}(W_E-\widetilde W_E)\,P(dE)
+\ \ge\
+\frac{p_{\min}(\chi_*-\theta)}{2\pi b_2}
+\left[A-\frac{Y_{\rm hi}+G}{f}\right]_+ .
+\]</span> Here <span class="math inline">\(p_{\min}=\sqrt{2\mu
+E_{\min}}\)</span> and <span
+class="math inline">\(\operatorname{Var}\)</span> is total variation in
+angular momentum. Additive action constants cancel. With the trial
+numbers <span class="math inline">\(f=1/2\)</span>, <span
+class="math inline">\(G=0\)</span>, <span class="math inline">\(Y_{\rm
+hi}=0.40\)</span> square ångströms this exceeds <span
+class="math inline">\(7\,10^{-38}\)</span> J s. This bounds a change in
+the mechanical scattering characteristic. A different classical force
+can produce such a change. The inequality assigns no quantum of action
+to it.</p>
+<p><strong>Why the finite-radius premise matters.</strong> The smooth
+Newton potentials <span
+class="math inline">\(V_R(r)=-C_4/(r^2+R^2)^2\)</span> have the same
+measured asymptotic coefficient for every <span
+class="math inline">\(R&gt;0\)</span>. In the preceding quadrature <span
+class="math inline">\(B\le 2C_4/(ER^4)=\zeta\)</span> at every radius.
+For <span class="math inline">\(\zeta&lt;1\)</span> all <span
+class="math inline">\(b&gt;0\)</span> scatter with <span
+class="math inline">\(0\le\chi\le\pi\zeta/(1-\zeta)\)</span>, and the
+head-on ray crosses the regular centre along a straight line. Choosing
+<span class="math inline">\(R\)</span> large enough puts every
+deflection below any fixed positive angular resolution, uniformly on the
+specified energy band. This gives a classical countermodel to inferring
+a resolvable deflection from static polarizability alone. The
+finite-radius and encounter-time force calibration would exclude it. An
+action-dependent theory that recovers the calibrated Newton loss as its
+action tends to zero would then exclude an entire neighbourhood of zero
+if the measured deficit exceeded its errors. The reported attenuations
+alone establish neither that calibration nor a universal physical <span
+class="math inline">\(\hbar\)</span>.</p>
 <h2 id="consequence-for-state">7. Consequence for STATE</h2>
 <p>Newton action necessity is the active priority. This note gives the
 first <span class="math inline">\(0+1\)</span> background construction:
@@ -1220,7 +1586,9 @@ comparison. Its use on real data requires control of the accessible
 force, of how the ensemble changes with the setting, and of the angular
 response. A lower bound from Mott exchange also supplies that dynamical
 law. The physical premise that would force a positive action for central
-motion in general remains open.</p>
+motion in general remains open. The argon test puts a finite radius,
+flyby speed and angular tolerance on the missing force calibration. Its
+action discrepancy can already occur between two classical dynamics.</p>
 
 </main>
 <footer class="site"><div class="wrap">

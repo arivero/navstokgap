@@ -12,10 +12,12 @@ to the orbital force rule in Book I, Proposition VI (1713).
 The [point-insertion test](../notes/balaban-newton-time-blocking.md#central-force-passage-under-point-insertion)
 exposes the sensitivity of one orbit to its preparation. The
 [three-energy scattering test](../notes/balaban-newton-time-blocking.md#a-three-energy-test-of-central-force-trajectories)
-cancels any common impact distribution. Can independent force and
-detector calibrations exclude the Newton prediction for measured
-angular yields? Inferring a trial action from Mott exchange still
-assumes the exchange law.
+cancels any common impact distribution. The [argon transmission
+test](../notes/balaban-newton-time-blocking.md#an-exterior-force-test-with-argon)
+now specifies an exterior force and a detector aperture against measured
+loss. Can an independent work measurement and a clock-calibrated dipole
+response control the force on a freely moving charge beyond $0.50$ nm?
+The inferred mechanical action discrepancy can also occur classically.
 Earlier apparatus tests use [three positions and two ions](../notes/newton-insertion-action.md),
 an [electron and shutter](../notes/galileo-two-path-interference.md#two-slits-and-a-position-detector)
 and a [clocked grating](../notes/groupoid-quantum-newton-states.md#9-action-calibration-with-a-clocked-grating).
