@@ -24,22 +24,21 @@ circle. A nonnegative spherical mass instead gives unique nonradial
 motion under joint source and time refinement.
 [Polygon limits and gravitational bound](../notes/balaban-ode-lesson.md#tangent-orbits-under-the-two-impulse-orders).
 
-In planar inverse-square gravity, fix energy and angular momentum.
-A stationary Newtonian ellipse and infinitely many trial actions tending
-to zero have exactly the same mean inward force. A specified bounded
-radius reading selects $a=J/3$ at sharp inputs and excludes $a\le J/5$
-at the stated finite tolerances, where $J$ is angular momentum. The mean energy
-and the corresponding mean force can enforce zero energy spread.
-The classical ellipse satisfies both. What principle
-of admissible central-force motion would require a different radial law?
+At fixed energy and angular momentum $J$, a stationary Kepler ellipse
+and an infinite sequence of trial actions have the same mean inward
+force. A specified bounded radius reading selects $a=J/3$ at sharp
+inputs and excludes $a\le J/5$ at the stated finite tolerances.
 [Stationary Kepler comparison](../notes/self-sufficiency-contrast.md#stationary-kepler-preparations).
 
-On a near-circular Kepler orbit three timed radius readings also bound
-every concentrated classical preparation. A specified coherent profile
-exceeds the bound for this one source. The earlier three-force result
-bounds action relative to a shrinking preparation.
-[One Kepler source](../notes/self-sufficiency-contrast.md#three-radial-readings-on-a-near-circular-kepler-orbit)
-and [three-force action bound](../notes/cusp-quantum-preparation-selection.md#a-quantitative-bound-with-a-common-radial-velocity-spread).
+On a noncircular ellipse a radial displacement has a negative reflected
+square in physical time at arbitrarily small cuts. A local Euclidean
+transfer fitted to its first harmonic gives twice the orbital radial
+action. With the Newtonian radial law and two orbital speed bounds,
+such a transfer misses at least $9/80$ of a specified real-time squared
+displacement. A positive jump transfer keeps both frequencies.
+What independently requires a change in the physical radial law?
+[Time cuts and orbital speeds](../notes/alpoge-balaban-newton-peek.md#kepler-motion-and-reflection-at-a-cut)
+and [three-time Kepler preparations](../notes/self-sufficiency-contrast.md#three-radial-readings-on-a-near-circular-kepler-orbit).
 
 A vanishing action along a particular orbit or time cell differs from a
 vanishing physical action parameter. A quantum lift exists for every

@@ -79,7 +79,18 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <a href="https://github.com/arivero/navstokgap/issues">Issues</a>
 </nav></div></header>
 <main class="wrap">
-<h1>A bounded Alpoge–Sussman peek: what returns to Newton in 0+1</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/alpoge-balaban-newton-peek.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/alpoge-balaban-newton-peek.pdf">PDF</a></p><p><strong>Result and source comparison, 2026-10-27.</strong> The useful
+<h1>A bounded Alpoge–Sussman peek: what returns to Newton in 0+1</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/alpoge-balaban-newton-peek.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/alpoge-balaban-newton-peek.pdf">PDF</a></p><p>For an exact noncircular Kepler orbit, requiring a local, reversible
+Euclidean transfer for its first radial harmonic gives an apparent
+action equal to twice the classical radial action. Its second harmonic
+is incompatible with that transfer. Keeping just the two orbital speed
+bounds already forces a relative discrepancy of at least <span
+class="math inline">\(9/80\)</span> in a real-time squared displacement.
+A positive jump process reproduces both frequency laws, and a third
+radial reading tests positivity across an inserted cut. All the orbital
+data come from one Newtonian ellipse. <a
+href="#kepler-motion-and-reflection-at-a-cut">Kepler motion and
+reflection at a cut</a>.</p>
+<p><strong>Result and source comparison, 2026-10-27.</strong> The useful
 immediate imports are a connected-response test for interaction,
 retention of the complete density through blocking, and reflection
 positivity as a condition that survives limits. None of these alone
@@ -290,15 +301,378 @@ class="math inline">\(\hbar\)</span> in (8) is a supplied covariance
 scale; the quartic witness (3) is nonzero for each positive value but
 collapses at zero. No universal positive action value or relativistic
 <span class="math inline">\(c\)</span> follows from these tests.</p>
+<h2 id="kepler-motion-and-reflection-at-a-cut">Kepler motion and
+reflection at a cut</h2>
+<p><strong>6.1 Sol Max, 2026-11-19.</strong> Newton’s revised Lemma X
+uses initial displacement to determine the force, and Proposition XXXI
+asks for an elliptic position at an assigned time. Both use the time of
+the motion. To test whether positivity adds a physical premise, keep
+that time <span class="math inline">\(t\)</span> distinct from an
+auxiliary transfer time <span class="math inline">\(\tau\)</span>. <a
+href="newton-insertion-action.html#lemma-x-and-the-measurement-of-initial-force">Lemma
+X, 1687 and 1713</a> and <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/Newton_Principia_Motte1846.md">Proposition
+XXXI, 1713</a> (edition passages).</p>
+<p>Take a classical bound orbit of mass <span
+class="math inline">\(m\)</span> in the potential <span
+class="math inline">\(-m\mu/r\)</span>, with <span
+class="math inline">\(\mu=GM&gt;0\)</span>, energy <span
+class="math inline">\(E&lt;0\)</span> and angular momentum <span
+class="math inline">\(J&gt;0\)</span>. Write <span
+class="math inline">\(A=-m\mu/(2E)\)</span>, <span
+class="math inline">\(I=m\sqrt{\mu A}\)</span>, <span
+class="math inline">\(e=\sqrt{1-(J/I)^2}\in(0,1)\)</span> and <span
+class="math inline">\(\nu=\sqrt{\mu/A^3}\)</span>. These fix the length
+and time scales. Under the stationary preparation the mean anomaly <span
+class="math inline">\(\phi\)</span> is uniform on the circle and
+advances by <span class="math inline">\(\nu t\)</span>. The radius is
+<span class="math inline">\(r=A(1-e\cos u)\)</span>, where <span
+class="math inline">\(u-e\sin u=\phi\)</span>. On <span
+class="math inline">\(0\le u\le\pi\)</span>, <span
+class="math inline">\(r\)</span> goes from periapsis to apoapsis. Thus
+<span class="math inline">\(X=\cos\phi\)</span> and <span
+class="math inline">\(Y=\cos(2\phi)=2X^2-1\)</span> are bounded
+functions of radius alone, with the same values on the return leg. The
+law of <span class="math inline">\(X\)</span> is <span
+class="math inline">\(\pi_0(dx)=dx/(\pi\sqrt{1-x^2})\)</span> on <span
+class="math inline">\((-1,1)\)</span>. <a
+href="self-sufficiency-contrast.html#stationary-kepler-preparations">Stationary
+Kepler preparation and source for the orbit clock</a> (Kepler equations,
+passage).</p>
+<p>The Newtonian trajectory obeys the exact second-difference identity
+<span class="math inline">\(X_{-t}-2X_0+X_t=2(\cos(\nu
+t)-1)X_0\)</span>. Its normalized limit is <span
+class="math inline">\(-\nu^2X_0\)</span>. The actual inward force <span
+class="math inline">\(m\mu/r^2\)</span> is finite throughout the orbit.
+Yet time reflection <span
+class="math inline">\(\Theta:t\mapsto-t\)</span> gives, for <span
+class="math inline">\(F=X_t-X_0\)</span>,</p>
+<p><span class="math display">\[
+\mathbb E[(\Theta F)F]=\cos(\nu t)\,[\cos(\nu t)-1]&lt;0,
+\qquad 0&lt;\nu t&lt;\pi/2
+.                                           \tag{10}
+\]</span></p>
+<p>The sign follows from <span class="math inline">\(\mathbb
+E[X_0X_t]=\tfrac12\cos(\nu t)\)</span>. Moving the time-zero reading to
+a positive time tending to zero gives the same strict sign by
+continuity. Newtonian time reversal and finite force therefore admit a
+negative reflected square at every sufficiently fine cut.</p>
+<p>There is also a bound that uses just one physical time lag. For any
+stationary candidate let <span class="math inline">\(D_f(t)=\mathbb
+E[(f_t-f_0)^2]\)</span>. Positivity of the reflected square of <span
+class="math inline">\(f_t-f_0\)</span> requires <span
+class="math inline">\(D_f(2t)\le2D_f(t)\)</span>. With <span
+class="math inline">\(T=\pi/(2\nu)\)</span> the ellipse supplies <span
+class="math inline">\(D_X(T)=1\)</span>. A candidate preserving this
+single number and cut positivity at each dyadic step must have <span
+class="math inline">\(D_X(t_n)/t_n\ge1/T\)</span> at <span
+class="math inline">\(t_n=T/2^n\)</span>. On the orbital interval <span
+class="math inline">\(|dX/dr|\le K\)</span> with <span
+class="math inline">\(K=(1+e)^2/(Ae)\)</span>, since <span
+class="math inline">\(|\sin(u-e\sin u)-\sin u|\le e\sin u\)</span>.
+Extend <span class="math inline">\(X\)</span> by its endpoint values
+outside that interval. It follows that</p>
+<p><span class="math display">\[
+m\,\frac{D_r(t_n)}{t_n}\ \ge\ \frac{m}{K^2T}
+=\frac{2m\nu(Ae)^2}{\pi(1+e)^4}&gt;0 .
+\]</span></p>
+<p>The right side has action units. On the actual orbit <span
+class="math inline">\(|\dot X|\le\nu\)</span> and <span
+class="math inline">\(D_X(t_n)/t_n\to0\)</span>. Thus applying cut
+positivity in mechanical time would contradict finite-speed motion
+already for a single orbit. Conditionally joining two independent legs
+at the observed radius would discard the sign of the radial velocity
+that Newton carries through the cut. <a
+href="conservative-harmonic-receiver.html#what-information-survives-a-cut">Position
+and momentum at a classical cut</a>.</p>
+<h3 id="what-follows-from-keeping-the-orbital-frequencies">What follows
+from keeping the orbital frequencies</h3>
+<p>Use a specified additional rule for the auxiliary time. Keep the
+positive frequencies in the real cosine correlations and give frequency
+<span class="math inline">\(j\nu\)</span> the transfer factor <span
+class="math inline">\(e^{-j\nu\tau}\)</span> for <span
+class="math inline">\(\tau\ge0\)</span>. This rule acts on the spectral
+weights. Substitution of <span class="math inline">\(i\tau\)</span> for
+<span class="math inline">\(t\)</span> in the real cosine would give a
+hyperbolic cosine. For <span
+class="math inline">\(f_j=\cos(j\phi)\)</span>, the prescribed
+correlation is <span
+class="math inline">\(C_j(\tau)=\tfrac12e^{-j\nu\tau}\)</span>, <span
+class="math inline">\(j\ge1\)</span>.</p>
+<p>There is a classical reflection-positive realization at every
+subdivision. On the circle take the Poisson semigroup, whose multiplier
+on <span class="math inline">\(e^{ij\phi}\)</span> is <span
+class="math inline">\(b^{|j|}\)</span> with <span
+class="math inline">\(b=e^{-\nu\tau}\)</span>. Its density relative to
+uniform angle is <span
+class="math inline">\((1-b^2)/(1-2b\cos\phi+b^2)\)</span>. This is a
+conservative symmetric Markov transfer. Given the middle phase, its
+reflected past and its future are independent with the same conditional
+law, so reflected cylinder squares are nonnegative. Its phase makes
+jumps. The construction uses the orbital frequency and uniform phase,
+with no phase constant. <a
+href="https://www.math.ru.nl/~mueger/Stein1.pdf">Stein and Shakarchi,
+Chapter 2, §5.4</a> (Poisson kernel and Abel multipliers, passage).</p>
+<p>Now suppose the auxiliary transfer is a conservative symmetric Markov
+semigroup <span class="math inline">\(P_\tau=e^{-\tau H}\)</span> on a
+stationary probability space, with a regular, <strong>strongly
+local</strong> Dirichlet form <span class="math inline">\(\mathcal
+E\)</span>. This is the diffusion hypothesis used here. Additional state
+variables are allowed. Suppose <span class="math inline">\(X\)</span>
+has the stated radial law and its first mode has the two correlations
+<span class="math inline">\(C_1(s),C_1(2s)\)</span> above at one fixed
+<span class="math inline">\(s&gt;0\)</span>. Then <span
+class="math inline">\(\|P_sX-e^{-\nu s}X\|^2=0\)</span> and the spectral
+theorem gives <span class="math inline">\(HX=\nu X\)</span>. For bounded
+<span class="math inline">\(X\)</span> the energy measure <span
+class="math inline">\(d\Gamma(X)\)</span> is normalized by <span
+class="math inline">\(\int d\Gamma(X)=\mathcal E(X,X)\)</span>. The
+strongly local chain rule gives</p>
+<p><span class="math display">\[
+\int h&#39;(X)\,d\Gamma(X)
+=\mathcal E(X,h(X))
+=\nu\int xh(x)\,d\pi_0
+=\nu\int(1-x^2)h&#39;(x)\,d\pi_0
+.                                  \tag{11}
+\]</span></p>
+<p>The last equality is integration by parts with the stated arcsine
+density. Taking primitives of continuous tests identifies the
+pushforward of the energy measure. Hence for every <span
+class="math inline">\(C^1\)</span> function <span
+class="math inline">\(g\)</span> on <span
+class="math inline">\([-1,1]\)</span>, <span
+class="math inline">\(\mathcal
+E(g(X),g(X))=\nu\int(1-x^2)g&#39;(x)^2\,d\pi_0\)</span>. <a
+href="https://www.tu-chemnitz.de/mathematik/analysis/preprints/schnol.pdf">Boutet
+de Monvel, Lenz and Stollmann, pp. 192–193</a> (regular strongly local
+forms and energy-measure chain rule, passage).</p>
+<p>For <span class="math inline">\(r=g(X)\)</span> the derivative is
+finite at both turning points, since <span
+class="math inline">\(dr/d\phi=Ae\sin u/(1-e\cos u)\)</span> vanishes
+linearly there. Writing <span class="math inline">\(I_r=(2\pi)^{-1}\oint
+p_r\,dr\)</span>, (11) gives</p>
+<p><span class="math display">\[
+\begin{aligned}
+m\lim_{\tau\downarrow0}\frac{\mathbb E[(r_\tau-r_0)^2]}{\tau}
+&amp;=2m\mathcal E(r,r)
+=2m\nu\int_0^{2\pi}\left(\frac{dr}{d\phi}\right)^2\frac{d\phi}{2\pi}\\
+&amp;=\frac{2m}{\nu}\,\overline{\dot r^{\,2}}=2I_r=2(I-J).
+\end{aligned}                                                     \tag{12}
+\]</span></p>
+<p>The dot and overbar in the last line use the mechanical time and its
+orbital average. The local circle heat semigroup with generator <span
+class="math inline">\(\nu\partial_\phi^2\)</span> realizes the first
+mode and (12). At <span class="math inline">\(I=3J/2\)</span> the
+apparent action is <span class="math inline">\(J\)</span>. It vanishes
+in the circular limit at fixed <span class="math inline">\(J\)</span>.
+The local energy density in the physical radius is <span
+class="math inline">\(\nu(dr/d\phi)^2\)</span> times the radial
+probability. It varies around the orbit and tends to zero at the turning
+points. A homogeneous kinetic coefficient <span
+class="math inline">\(a/(2m)\)</span> cannot match it for any constant
+<span class="math inline">\(a\)</span>. <a
+href="rivero-1998-conjecture-central-forces.html#hooke-and-kepler-radial-actions-and-maslov-phases">Kepler
+radial action, equation (11)</a>.</p>
+<p>There is an exact test with a second radial function. Equation (11)
+gives <span class="math inline">\(\mathcal
+E(Y,Y)=16\nu\int(x^2-x^4)d\pi_0=2\nu\)</span>. The two prescribed
+readings <span class="math inline">\(C_2(s),C_2(2s)\)</span> instead
+force <span class="math inline">\(HY=2\nu Y\)</span>, hence <span
+class="math inline">\(\mathcal E(Y,Y)=\nu\)</span>, since <span
+class="math inline">\(\|Y\|^2=1/2\)</span>. Thus four exact correlations
+at two fixed positive lags rule out every such strongly local transfer
+in the same clock, including hidden variables. The positive Poisson
+transfer has the prescribed second mode. The local circle heat transfer
+gives <span class="math inline">\(e^{-4\nu\tau}\)</span> on it.</p>
+<h3 id="a-finite-physical-time-gap-from-the-orbital-speeds">A finite
+physical-time gap from the orbital speeds</h3>
+<p>The same conflict has a quantitative test in mechanical time if the
+transfer is to reconstruct the real, even correlation as <span
+class="math inline">\(\langle f,\cos(tH)f\rangle\)</span>. This is a
+spectral matching premise for this particular stationary preparation. A
+Hamiltonian bounded below can still have transitions to lower energies
+from an excited state.</p>
+<p>On the ellipse <span class="math inline">\(\overline{\dot
+X^2}=\nu^2/2\)</span> and <span class="math inline">\(\overline{\dot
+Y^2}=2\nu^2\)</span>. For a reconstructed correlation its negative
+second derivative at zero is <span
+class="math inline">\(\|Hf\|^2\)</span>. Impose only the corresponding
+upper bounds <span class="math inline">\(\|HX\|\le\nu/\sqrt2\)</span>,
+<span class="math inline">\(\|HY\|\le\sqrt2\,\nu\)</span>, with the same
+equal-time radial law. These are frequency-moment bounds from physical
+time, in inverse seconds squared when squared. They allow rough paths in
+auxiliary time.</p>
+<p>Strong locality alone gives <span class="math inline">\(\mathcal
+E(Y,Y)=(16/3)\mathcal E(X,X^3)\)</span> by the chain rule, without
+assuming either mode is an eigenfunction. The second speed bound gives
+<span class="math inline">\(\mathcal
+E(Y,Y)\le\|Y\|\|HY\|\le\nu\)</span>. Since <span
+class="math inline">\(\int X^4=3/8\)</span>, <span
+class="math inline">\(\int X^6=5/16\)</span> in the stationary
+probability,</p>
+<p><span class="math display">\[
+\|(H-\nu)X\|\,\|X^3\|\ge
+\nu\int X^4-\langle HX,X^3\rangle\ge 3\nu/16 .
+\]</span></p>
+<p>Squaring and using the first speed bound gives <span
+class="math inline">\(9\nu^2/80\le\|(H-\nu)X\|^2\le\nu^2-2\nu\mathcal
+E(X,X)\)</span>. The mean frequency in the normalized spectral measure
+of <span class="math inline">\(X\)</span> is therefore <span
+class="math inline">\(2\mathcal E(X,X)\le71\nu/80\)</span>. In
+particular <span class="math inline">\(2\langle X,P_sX\rangle\ge
+e^{-71\nu s/80}\)</span> by Jensen’s inequality.</p>
+<p>For an entirely real-time reading take <span
+class="math inline">\(u_*\)</span> maximizing <span
+class="math inline">\((1-\cos u)/u\)</span> on <span
+class="math inline">\(u&gt;0\)</span>, and put <span
+class="math inline">\(t_*=u_*/\nu\)</span>. The maximizer is the root of
+<span class="math inline">\(\tan(u_*/2)=u_*\)</span> in <span
+class="math inline">\((\pi/2,\pi)\)</span>. Integrating the inequality
+<span class="math inline">\(1-\cos z\le z(1-\cos u_*)/u_*\)</span>
+against the nonnegative frequency measure gives</p>
+<p><span class="math display">\[
+2\langle X,(1-\cos(t_*H))X\rangle
+\le \frac{71}{80}(1-\cos u_*),\qquad
+D_X^{\rm Newton}(t_*)=1-\cos u_*
+.                               \tag{13}
+\]</span></p>
+<p>This discrepancy needs neither exact exponential readings nor a limit
+of readout precision. Its hypotheses are stationarity with the specified
+radial marginal, the two mechanical speed bounds, strong locality, and
+the proposed spectral relation between the clocks.</p>
+<h3 id="what-insertion-between-two-readings-tests">What insertion
+between two readings tests</h3>
+<p>Smooth paths can reproduce even the <em>complete</em> two-time laws
+of the Poisson clock. Draw a uniform phase <span
+class="math inline">\(\Phi\)</span> and an independent angular speed
+<span class="math inline">\(V\)</span> with Cauchy density <span
+class="math inline">\(\nu/[\pi(v^2+\nu^2)]\)</span>. Set <span
+class="math inline">\(\phi_\tau=\Phi+V\tau\)</span> modulo <span
+class="math inline">\(2\pi\)</span>, using the same <span
+class="math inline">\(V\)</span> throughout. The characteristic function
+<span class="math inline">\(\mathbb E
+e^{ijV\tau}=e^{-|j|\nu|\tau|}\)</span> gives exactly the same pair
+transition densities at every lag. This is a random parametrization in
+auxiliary time. Its mean squared speed diverges, whereas the physical
+Kepler clock has speed <span class="math inline">\(\nu\)</span>. <a
+href="https://people.math.harvard.edu/~ctm/papers/home/text/class/harvard/154/course/course.pdf">McMullen,
+Probability Theory, Theorem II.6</a> (Cauchy characteristic function,
+passage).</p>
+<p>Insert <span class="math inline">\(Y_0\)</span> between <span
+class="math inline">\(X_{-s}\)</span> and <span
+class="math inline">\(X_s\)</span>. In the smooth process <span
+class="math inline">\(X_{-s}X_s=(\cos 2\Phi+\cos 2Vs)/2\)</span>, so the
+three-time mean is <span class="math inline">\(1/4\)</span>. In the
+Poisson process it is <span class="math inline">\(e^{-2\nu
+s}/4\)</span>, by conditioning on <span
+class="math inline">\(\Phi\)</span> at the cut. In fact <strong>full
+reflection positivity forces the second value</strong> given the Poisson
+two-time laws. Put <span class="math inline">\(\lambda=e^{-\nu
+s}\)</span> and <span class="math inline">\(U=X_s-\lambda X_0\)</span>.
+Its reflected square is zero. Cauchy–Schwarz for the reflected form
+gives <span class="math inline">\(\mathbb E[(\Theta
+U)Y_0X_s]=0\)</span>. The pair law gives <span
+class="math inline">\(\mathbb E[X_0Y_0X_s]=\lambda/4\)</span>. Together
+they fix the three-time mean. All functions are bounded, and the
+time-zero variable is also available as a mean-square limit from
+positive times. Thus retaining the same hidden speed on both legs fails
+positivity on histories despite matching every pair. This is a test of
+the composition at a cut in addition to positivity of the two-point
+kernel.</p>
+<p>The separation persists with finite radius and time resolution.
+Choose the two lags <span class="math inline">\(u,v\)</span>
+independently in <span class="math inline">\([s,2s]\)</span> with <span
+class="math inline">\(s=(\log2)/\nu\)</span>. For the three marks at
+<span class="math inline">\(-u,0,v\)</span>, the respective means are
+<span class="math inline">\(e^{-\nu|u-v|}/4\ge1/8\)</span> and <span
+class="math inline">\(e^{-\nu(u+v)}/4\le1/16\)</span>, by the same
+trigonometric identity and conditional expectation. These bounds hold
+for any distribution of the lags in the windows. Round each radius in
+bins of width <span class="math inline">\(1/(512K)\)</span> before
+evaluating <span class="math inline">\(X,Y\)</span>. Since <span
+class="math inline">\(|X|,|Y|\le1\)</span> and <span
+class="math inline">\(|2x^2-2z^2|\le4|x-z|\)</span> there, each
+three-time mean moves by at most <span
+class="math inline">\(6/512\)</span>. The resulting intervals remain
+disjoint. The equality of all pair laws persists under the identical
+rounding and timing.</p>
+<h3 id="finite-accuracy-and-a-local-bulk-degree-of-freedom">Finite
+accuracy and a local bulk degree of freedom</h3>
+<p>The exact two-mode obstruction has no positive tolerance uniform over
+hidden local rates. To see this, add a dimensionless coordinate <span
+class="math inline">\(0\le y\le L\)</span> to the angle. Give the
+cylinder the probability and form</p>
+<p><span class="math display">\[
+d\pi_\eta=\frac{d\phi}{2\pi}\frac{\delta_0(dy)+(\eta/L)\,dy}{1+\eta},
+\qquad
+\mathcal E_\eta(u,u)=\frac{\nu}{1+\eta}
+  \int_0^L\int_0^{2\pi}|\nabla u|^2\,\frac{d\phi}{2\pi}\,dy
+.     \tag{14}
+\]</span></p>
+<p>Here <span class="math inline">\(L,\eta&gt;0\)</span> are
+dimensionless. Use the periodic <span class="math inline">\(H^1\)</span>
+form domain with its Sobolev trace at <span
+class="math inline">\(y=0\)</span>. For each fixed <span
+class="math inline">\(L,\eta\)</span> the form norm is equivalent to the
+<span class="math inline">\(H^1\)</span> norm by the trace bound. Smooth
+functions are dense both in the form domain and uniformly in the
+continuous functions on the closed cylinder. This gives a conservative
+regular strongly local form, with exactly uniform angle. The
+construction uses the harmonic-extension representation of the square
+root of a Laplacian. <a
+href="https://arxiv.org/pdf/math/0608640">Caffarelli and Silvestre,
+§1</a> (half-space Dirichlet-to-Neumann map, passage).</p>
+<p>For <span class="math inline">\(j\ge1\)</span> set <span
+class="math inline">\(h_j=f_j\cosh(j(L-y))/\cosh(jL)\)</span> and <span
+class="math inline">\(\alpha_j=j\nu\tanh(jL)\)</span>. The function is
+harmonic inside and has zero normal derivative at the top. Integration
+by parts in (14) gives <span class="math inline">\(H_\eta h_j=0\)</span>
+in the bulk and <span class="math inline">\(H_\eta h_j=\alpha_j
+f_j\)</span> at the bottom. With <span
+class="math inline">\(b_\eta=\sqrt{\eta/[2(1+\eta)]}\)</span> this
+yields <span class="math inline">\(\|h_j-f_j\|\le b_\eta\)</span> and
+<span class="math inline">\(\|(H_\eta-\alpha_j)h_j\|\le\alpha_j
+b_\eta\)</span> in <span class="math inline">\(L^2(\pi_\eta)\)</span>.
+The contraction semigroup and Duhamel’s formula then give <span
+class="math inline">\(\|P_\tau
+f_j-e^{-\alpha_j\tau}f_j\|\le3b_\eta\)</span> for all <span
+class="math inline">\(\tau\ge0\)</span>. Since <span
+class="math inline">\(\|f_j\|=1/\sqrt2\)</span> and <span
+class="math inline">\(|e^{-\alpha_j\tau}-e^{-j\nu\tau}|\le
+j\nu/\alpha_j-1\)</span>,</p>
+<p><span class="math display">\[
+\sup_{\tau\ge0,\ j\ge1}
+\left|2\langle f_j,P_\tau f_j\rangle-e^{-j\nu\tau}\right|
+\le 3\sqrt{\frac{\eta}{1+\eta}}+\coth L-1 .                     \tag{15}
+\]</span></p>
+<p>Thus local continuous processes approach the target two-time
+correlations to arbitrary accuracy as <span
+class="math inline">\(\eta\downarrow0\)</span>, <span
+class="math inline">\(L\uparrow
+\infty\)</span>. The three-time Poisson mean is approached too, since
+the cylinder mean is <span class="math inline">\(\int
+Y(P_sX)^2\,d\pi_\eta\)</span> and <span
+class="math inline">\(P_sX\)</span> approaches <span
+class="math inline">\(e^{-\nu s}X\)</span> in norm. The bulk has angular
+and transverse diffusion coefficient <span class="math inline">\(\nu
+L/\eta\)</span>. Also <span class="math inline">\(\mathcal
+E_\eta(f_j,f_j)=\nu
+Lj^2/[2(1+\eta)]\)</span>. The diverging initial slopes explain how
+uniform agreement of correlations can coexist with a different limit
+after division by the time step. In particular this construction cannot
+keep the mechanical speed bounds used in (13).</p>
 <h2 id="consequence-for-state">5. Consequence for STATE</h2>
 <p>The authorized Alpoge–Sussman peek is recorded at a fixed commit with
 selected source coverage. It contributes a concrete fourth-response test
-and a warning to preserve complete source-dependent densities. The main
-Newton queue remains physical justification of preparation and record
-closure and identification of its positive scale with <span
-class="math inline">\(\hbar\)</span>. The central-limit preparation test
-listed in STATE remains unstarted. No YM proof claim, gap construction
-or rotation theorem has been imported as an established result.</p>
+and a warning to preserve complete source-dependent densities. The
+noncircular ellipse supplies a finite force and nonconstant
+physical-time motion at every refinement. The apparent action (12)
+belongs to an auxiliary diffusion fitted to the first orbital frequency.
+Keeping the second frequency calls for a jump transfer or a singular
+limit of local transfers. The missing physical premise would have to
+relate the clock and its local kinetic coefficient to Newtonian motion
+independently of a phase constant. The calculation uses one orbit and
+supplies no four-dimensional gauge estimate.</p>
 
 </main>
 <footer class="site"><div class="wrap">
