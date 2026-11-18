@@ -22,7 +22,11 @@ orbits would miss the measured exit aperture if the polarization force
 has at least half its asymptotic strength beyond $0.50$ nm, with the upper
 control specified below. The published attenuation fixes the size of the
 discrepancy such a force calibration would have to explain.
-[Argon transmission](#an-exterior-force-test-with-argon).
+For a freely moving charge coupled to a localized, linearly polarizable
+target, two clocked response measurements suffice to bound how much the
+delayed force changes the outgoing angle.
+[Argon transmission](#an-exterior-force-test-with-argon) and
+[free-charge calibration](#two-pulse-tests-for-a-freely-moving-charge).
 
 **First calculation, 2026-10-27; written derivation, unrefereed.** In
 one spatial coordinate and one time variable, the same discrete Green
@@ -1190,9 +1194,9 @@ would put the integrated dipole error below one half throughout the
 test annulus. The prominent argon lines near $105$ and $107$ nm have
 inverse angular frequencies near $5.6\,10^{-17}$ s via $\lambda/(2\pi c)$.
 Their positions and strengths alone do not bound the whole positive
-moment. Extending the straight-probe impulse estimate to curved,
-freely moving rays with multipole forces requires a further dynamical
-estimate. [Ligtenberg et al., optical absorption measurements](https://doi.org/10.1103/PhysRevA.49.2363)
+moment. The straight-probe estimate controls a prescribed path. The
+coupled calculation below allows the probe to turn and the target to
+retain energy. [Ligtenberg et al., optical absorption measurements](https://doi.org/10.1103/PhysRevA.49.2363)
 (abstract) and [NIST, Ar I resonance wavelengths](https://physics.nist.gov/PhysRefData/Handbook/Tables/argontable3.htm)
 (table).
 
@@ -1211,7 +1215,282 @@ be calibrated with lengths, clocks and field response, with spectral
 coverage stated. [Kumar and Thakkar, §§II–III and Table I](https://doi.org/10.1063/1.3315418)
 (method and moment table).
 
-**How much mechanical action would an alternative deflection need?**
+### Two pulse tests for a freely moving charge
+
+**6.1 Sol Max, 2026-11-18.** Consider the reciprocal classical model
+defined below, with its internal modes initially at rest. Given the
+specified static work and two pulse readings, every incoming electron
+with relative energy $0.33$–$0.35$ eV and impact radius $0.70$–$0.72$ nm
+turns by more than $0.0133$ rad. In the first tenth of the field-free
+cell the largest accepted turn is $0.0128$ rad under the angular
+calibration above. The claim allows energy and angular momentum transfer
+to the target and modes arbitrarily close to zero frequency.
+
+**What is measured.** Retain the static exterior expansion above and write
+$w_1=1$, $w_\ell=c_\ell/(C_4 r_1^{2\ell-2})$ and
+$U=\sum_{\ell\ge2}w_\ell=-r_1^4 V_{\rm st}(r_1)/C_4-1$.
+Each $c_\ell$ has units of energy times length$^{2\ell+2}$.
+The dipole coefficient is measured in a uniform field. The equilibrium
+work of a point charge at $r_1$ supplies $1+U$. Use the same source
+position for the static and pulsed readings. The estimates below allow
+$r_1=0.400\pm0.001$ nm. In each
+angular degree assume a normalized positive distribution $P_\ell(d\nu)$
+of undamped oscillator modes with angular frequencies $\nu>0$. Use the
+same linear, isotropic response to the imposed fields and the passing
+charge at the stated amplitudes. The equilibrium references must
+include any slowly relaxing response. For a bounded unit drive of
+duration $T$ starting from rest, an additional mode of static weight
+$w$ changes the finite response by at most $w(\nu T)^2/2$, since
+$|\nu\sin(\nu t)|\le\nu^2t$ for $t\ge0$. Its equilibrium contribution
+is $w$. Finite pulse readings alone cannot certify that upper bound.
+
+Apply an exponential envelope of rate $\sigma=2.5\,10^{14}$ s$^{-1}$
+to two spatial profiles. The first imposes a uniform field and reads
+the induced dipole along it. The second imposes the Coulomb potential
+of a charge at $r_1$ and reads the induced potential there. At full
+amplitude take the electron charge magnitude $|e|$ and a uniform field
+of magnitude $|e|/(4\pi\epsilon_0 r_1^2)$, about $9$ V/nm. The
+point-charge profile specifies the external field over the responding
+region. Each readout is conjugate to the applied amplitude and is oriented
+to give a positive static dipole contribution.
+Normalize the induced potential by its equilibrium dipole magnitude
+$2C_4/(|e|r_1^4)$, about $0.092$ V. A mode driven from the remote past
+by $e^{\sigma t}$ follows with factor $\nu^2/(\nu^2+\sigma^2)$.
+Thus the normalized static reading minus the pulse reading gives $d_1$
+for the uniform profile and $d_1+d_H$ for the point-charge profile, where
+$$
+ h_\sigma(\nu)=\frac{\sigma^2}{\nu^2+\sigma^2},\qquad
+ d_1=\int h_\sigma\,dP_1,\qquad
+ d_H=\sum_{\ell\ge2}w_\ell\int h_\sigma\,dP_\ell .
+$$
+Both pulses may start at $t=-17/\sigma$ from rest. Integrate the
+signal and the envelope over the last $1/\sigma$ before $t=0$ and
+divide the former by the latter. The omitted past contributes at most
+$e^{-17}\nu/\sqrt{\nu^2+\sigma^2}$ per unit static weight at any time
+in the gate, by integration of the oscillator's sine kernel. The
+envelope throughout the gate is at least $e^{-1}$, so the normalized
+error is at most $e^{-16}$ per unit weight. Errors of both readings enter
+the subtraction for $d_H$. The duration is $68$ fs and the gate is $4$ fs.
+The following trial upper limits include those errors and the uncertainties
+in the spatial profiles, drive amplitudes, readout gains and static references.
+$$
+ U\le1/8,\qquad d_1\le10^{-4},\qquad d_H\le1.2\,10^{-5}.
+$$
+The last limit corresponds to about $1.1$ microvolts after dipole
+subtraction at the nominal radius and $C_4$.
+Two targets can have the same static work at every radius and the same
+complete dipole response while differing in the frequency of a
+quadrupole of positive weight. The second pulse distinguishes them.
+
+There is a check on the size of these proposed readings. In atomic
+units put $\epsilon_i$ equal to a tabulated excitation energy,
+$u=\sigma t_{\rm at}$ with $t_{\rm at}=2.42\,10^{-17}$ s, and
+$\alpha_\ell=\sum_i f_i^{(\ell)}/\epsilon_i^2$.
+The effective spectrum of Jiang et al. then gives the degree-$\ell$
+deficit per unit weight as
+$u^2\sum_i f_i^{(\ell)}/[\epsilon_i^2(\epsilon_i^2+u^2)]/\alpha_\ell$.
+Their argon entries $\alpha_1=11.08$, $\alpha_2=52.80$,
+$\alpha_3=536.4$ give $w_2\simeq0.083$ and $w_3\simeq0.015$ using
+$w_\ell=(\alpha_\ell/\alpha_1)(a_0/r_1)^{2\ell-2}$ and the Bohr
+radius $a_0=0.0529$ nm. Their Table 2 gives $d_1\simeq9.2\,10^{-5}$
+and a combined quadrupole and octupole contribution to $d_H$ of about
+$8.7\,10^{-6}$. These are fitted atomic-unit benchmarks. The higher
+degrees, charge penetration, equilibrium work and a clocked response at
+the proposed field strength still need independent calibration.
+[Zhang et al., Eq. (1)](https://arxiv.org/pdf/1108.0150) (charge-potential convention) and
+[Jiang et al., Eqs. (2)–(4), §3.21 and Ar rows of Tables 1–2](https://arxiv.org/pdf/1410.7957)
+(method and table passages).
+
+**Coupled motion.** Put $x=\mathbf r/b$, $s=v(t-t_*)/b$,
+$\beta=r_1/b$ and $q=C_4/(Eb^4)$, with $E=\mu v^2/2$.
+Let $f_\ell(x)=|x|^{-\ell-1}\mathbf Y_\ell(\hat x)$, using real spherical
+harmonics normalized by $\mathbf Y_\ell(n)\cdot\mathbf Y_\ell(n')=
+P_\ell^{\rm Leg}(n\cdot n')$, the Legendre polynomial. Primes here
+denote $s$ derivatives. Each target coordinate $y_{\ell\nu}$ is driven
+by the actual charge position. The reciprocal equations are
+$$
+ \begin{aligned}
+ y_{\ell\nu}''+\omega^2y_{\ell\nu}&=\omega^2 f_\ell(x),\qquad
+        \omega=\nu b/v,\\
+ x''&=q\sum_{\ell\ge1}w_\ell\beta^{2\ell-2}
+        Df_\ell(x)^T\int y_{\ell\nu}\,dP_\ell .
+ \end{aligned}
+$$
+Indeed the mode potential is proportional to
+$|y|^2/2-y\cdot f_\ell(x)$ with the displayed positive weight and
+mode kinetic term $|y'|^2/(2\omega^2)$. Equilibrium gives $y=f_\ell$
+and the measured static potential. Classical oscillator models of induced
+dipoles are established. The model here assumes the convergent
+exterior response of the preceding section, no incoming excitations
+and no additional force on the exterior orbit.
+[Lamoureux and Roux](https://doi.org/10.1063/1.1589749) (abstract, dipole model)
+and [NIST DLMF 14.30.9](https://dlmf.nist.gov/14.30.E9) (harmonic addition formula).
+
+Split the modes at $3\sigma$. Their total static weight on the slow
+side is $S=\sum w_\ell P_\ell(\nu\le3\sigma)\le10(d_1+d_H)<0.0012$.
+On the fast side $F=\{\nu>3\sigma\}$, $\nu^{-2}\le
+10h_\sigma/(9\sigma^2)$. Write $\tau_{\ell,F}=\int_F\nu^{-1}\,dP_\ell$.
+Cauchy–Schwarz, including the weights in the higher degrees, gives
+$$
+ \begin{aligned}
+ T_F&=\tau_{1,F}+1.85\sum_{\ell\ge2}w_\ell\tau_{\ell,F}\\
+ &\le\frac{\sqrt{10d_1/9}+1.85\sqrt{10U d_H/9}}{\sigma}
+ <5.18\,10^{-17}\ {\rm s}.
+ \end{aligned}
+$$
+Here $v<3.52\,10^5$ m/s for electron–argon relative motion,
+$\Lambda=vT_F/b<0.0261$, and the preceding $C_4$ band gives
+$0.0122<q<0.0152$. In mechanical units one needs $C_4/\mu$ in
+length$^6$/time$^2$, since $q=2(C_4/\mu)/(v^2b^4)$. This allows
+force per unit reduced mass, lengths and flight times to set the
+comparison without a photon energy–frequency conversion. The possibly
+divergent inverse moment of the slow modes never enters the orbit estimate.
+
+Compare the moving charge with the static orbit $X$ of the same incoming
+impact, velocity and asymptotic time offset. Write $F_{\rm st}(x)$ for
+the right hand side at equilibrium, $r=|X|$ and $g(s)=\sqrt{1+s^2}$.
+Energy and angular momentum give
+$|X'|^2=1+q\sum w_\ell\beta^{2\ell-2}r^{-2\ell-2}$,
+$|X\times X'|=1$. At $r=0.99$ the squared value of $r|X'|$ would
+be at most $0.99^2+q(1+U\,0.58^2)/0.99^2<1$. Thus $r>0.99$,
+$\beta/r<0.58$ and $|X'|<1.01$. Also
+$$
+ (r^2/2)''=1-q\sum_{\ell\ge1}\ell w_\ell\beta^{2\ell-2}r^{-2\ell-2}
+ \ge 1-q(1+2U\,0.58^2)/0.99^4>0.98 .
+$$
+Choose $t_*$ at the unique static turning point. Twice integrating
+gives $r\ge0.989g$. The single-turn quadrature above gives
+$3\pi q/4\le\chi_X<\pi$ since the dipole is present, all the extra
+forces are inward and $B(r)<2.3q/0.99^4<0.04$ along this orbit.
+
+**The error in the outgoing angle.** For matching incoming asymptotes
+let
+$$
+ D(s)=\sup_{t\le s}\max\bigl\{|x(t)-X(t)|/g(t),\,|x'(t)-X'(t)|\bigr\}.
+$$
+While $D\le0.028$ the segment between the two positions lies at radius
+at least $a g$ with $a=0.96$, and $|x'|\le V=1.04$. On that segment
+$|F_{\rm st}|\le F_0 q a^{-5}g^{-5}$, $F_0=2.3$, and
+$\|DF_{\rm st}\|\le12q a^{-6}g^{-6}$. Indeed $\beta/a<0.60$.
+Relative to the static dipole, a weight $w_\ell$ adds at most
+$(\ell+1)0.36^{\ell-1}/2$ times its weight to the force bound and
+$(\ell+1)(2\ell+3)0.36^{\ell-1}/10$ times its weight to the
+derivative bound. Both maxima for $\ell\ge2$ occur at $\ell=2$.
+
+For the time delay, denote $L(s)=|x''-F_{\rm st}(x)|$. Along the path
+the oscillator solution gives $y-f=-\int_{-\infty}^s
+\cos(\omega(s-t))\dot f(t)\,dt$. For a fast mode integrate once more
+to get $|y-f|\le\omega^{-1}\int_{-\infty}^s|\ddot f(t)|\,dt$.
+Use the first formula on slow modes. At radius $R$,
+$\|Df_\ell\|\le(\ell+1)R^{-\ell-2}$ and
+$|D^2f_\ell[u,u]|\le H_\ell |u|^2R^{-\ell-3}$.
+Here $H_1=6$ from the dipole formula above and for $\ell\ge2$ one may
+take $H_\ell=\sqrt{(\ell+1)(2\ell+1)(\ell+2)(2\ell+3)}$.
+For the first bound the radial derivative has norm $(\ell+1)R^{-\ell-2}$
+and is orthogonal to the angular derivatives. The squared gradient
+trace is $\Delta |f_\ell|^2/2$ by harmonicity. The remaining tangential
+trace is $\ell(\ell+1)R^{-2\ell-4}$. The squared Frobenius norm of the
+Hessian is $\Delta^2|f_\ell|^2/4$, giving $H_\ell$.
+In the product with the force derivative the factor relative to the
+dipole is $(\ell+1)H_\ell\,0.36^{\ell-1}/12<1.85$ for $\ell\ge2$.
+It equals $3\sqrt{420}\,0.36/12$ at degree two. At degrees three
+and above use $H_\ell\le2(\ell+1)(\ell+2)$ and the decreasing product.
+For two first derivatives the factor is $(\ell+1)^2
+0.36^{\ell-1}/4\le1$.
+
+Put $k_1=12\Lambda a^{-7}$, $k_2=4\Lambda a^{-6}$ and $k_0=4S a^{-6}$.
+The preceding product bounds give $L(s)\le qg(s)^{-3}K(s)$, where a
+nonnegative majorant is the solution of
+$$
+ \begin{aligned}
+ K(s)&=\int_{-\infty}^s [\,A(t)+k_2qg(t)^{-6}K(t)\,]\,dt,\\
+ A&=k_1V^2g^{-4}+k_0Vg^{-3}+k_2 F_0 q a^{-5}g^{-8}.
+ \end{aligned}
+$$
+The three terms in $A$ come from $D^2f[x',x']$ on fast modes,
+$Df\,x'$ on slow modes and $Df\,F_{\rm st}$ on fast modes.
+The remaining $Df(x''-F_{\rm st})$ is the integral feedback above.
+All sums are absolutely bounded on the exterior by the displayed
+geometric factors. Equivalently, eliminating $y$ with the cosine formula
+defines a causal, locally Lipschitz integral equation on exterior
+position and velocity histories. To initialize from the free asymptote,
+on a far incoming tail take $|x|\ge |s|/2$ and $|x'|\le2$.
+The cosine formula gives $|y_{\ell\nu}|=O(|s|^{-\ell-1})$ uniformly
+in $\nu$ for each $\ell$. In the norm used for $D$, the difference of
+the forces for two such histories near the free line is bounded by a
+constant times $|s|^{-5}D(s)$, using the same first-derivative and
+Hessian estimates and summing the exterior geometric factors.
+The twice-integrated map is a contraction sufficiently far in the past.
+Local continuation applies while the orbit stays exterior.
+
+Write $I_j=\int_{\mathbb R}g^{-j}ds$. Here $I_2=\pi$, $I_3=2$,
+$I_4=\pi/2$, $I_5=4/3$, $I_6=3\pi/8$ and $I_8=5\pi/16$.
+The integrating factor bound for $K$ is $\exp(q k_2 I_6)$.
+An even nonnegative function integrated against the running integral
+from $-\infty$ of another even function gives half the product of their
+full integrals. Apply this to the bounds $g^{-2}$ or $g^{-3}$ and $A$,
+even when the orbit itself is asymmetric. On every interval where
+$D\le0.028$ this gives
+$$
+ \begin{aligned}
+ \int gL\,ds&\le q B_{\rm lag},\qquad
+ \int L\,ds\le (2/\pi)q B_{\rm lag},\\
+ B_{\rm lag}&=\tfrac{\pi}{2}e^{q k_2 I_6}
+       (k_1V^2 I_4+k_0 V I_3+k_2 F_0 q a^{-5} I_8)<1.15 .
+ \end{aligned}
+$$
+For example $qk_2 I_6<0.0025$. Integrating the difference of the
+two orbit equations with $|s-t|/g(s)\le g(t)$ gives
+$D(s)\le q B_{\rm lag}+\int_{-\infty}^s12q a^{-6}g(t)^{-4}D(t)\,dt$.
+Grönwall gives $D\le q B_{\rm lag}\exp(12q a^{-6}I_4)<1.67q<0.028$,
+closing the estimate throughout the flyby. In particular the charge
+stays at physical radius at least $0.96b>0.67$ nm.
+[Newton stability argument, Eq. (10)](balaban-ode-lesson.md)
+(integral Grönwall inequality).
+
+A final integration of the velocity equation uses the stronger
+unweighted lag bound and gives
+$$
+ |x'(+\infty)-X'(+\infty)|
+ \le q[(2/\pi)B_{\rm lag}+12 a^{-6} I_5\sup D]<1.26q .
+$$
+The reference outgoing speed is one. A ball of radius $1.26q$ about
+that velocity subtends an angle of at most $\arcsin(1.26q)<1.261q$.
+Hence the actual angle is at least $(3\pi/4-1.261)q>0.0133$ rad.
+
+If the equilibrium work alone gave $U\le0.01$, the clocked dipole
+reading would suffice. Apply the slow-mode estimate to every higher
+degree regardless of frequency. Its total weight together with the
+slow dipole is at most $U+10d_1\le0.011$. Only the fast dipole
+contributes to $\Lambda$, giving $\Lambda<0.0213$ and $B_{\rm lag}<1.12$.
+The same angular conclusion follows. The tabulated quadrupole alone
+exceeds that one-percent work allowance for argon.
+
+**The transmitted count.** In the first tenth of the cell the aperture
+and the stated angular tolerance give $D_{\rm exit}/(0.9L)+0.004
+<0.0128$ rad, with $D_{\rm exit}=2$ mm and $L=255$ mm.
+The annulus has area $\pi(0.72^2-0.70^2)$ nm$^2$, or $8.92$ square
+ångströms. The same two $0.25$ mm radius stops separated by $255$ mm
+can use gates $0.737$ microseconds apart, each of half-width $3$ ns.
+Their on-axis flight times $0.731$–$0.743$ microseconds select energies
+inside the declared band for a stationary atom. The free charge may
+emerge with a different speed. Count the entire exit pulse and include
+target motion, alignment, timing tails, beam fluence and detector
+efficiency in the independently calibrated good fraction $f$ and gain
+area $G$ defined above. The dilute loss again obeys $Y\ge fA-G$.
+For example $f\ge0.08$ and $G\le0.10$ square ångströms would give
+$Y>0.61$ square ångströms. The published $0.318$ square ångströms at
+$0.34$ eV motivates this comparison. Neither the two material readings
+nor the guarded transmission for this preparation has been established
+by those data. No mathematical time step or quantum action enters
+the prediction. Its failure would test the specified material dynamics
+and preparation. The inference about a radial characteristic below
+requires elastic central motion.
+
+### Action discrepancy for an elastic central branch
+
+Return here to the elastic $0.55$–$0.60$ nm annulus and its original
+energy and acceptance bands.
 For a deterministic elastic central branch use its radial characteristic
 $W_E(J)$ with the free contribution subtracted and angular momentum
 $J=p b$. Hamilton's deflection identity gives
@@ -1273,6 +1552,8 @@ requires control of the accessible force, of how the ensemble changes
 with the setting, and of the angular response. A lower bound from
 Mott exchange also supplies that dynamical law. The physical premise
 that would force a positive action for central motion in general
-remains open. The argon test puts a finite radius, flyby speed and
-angular tolerance on the missing force calibration. Its action
-discrepancy can already occur between two classical dynamics.
+remains open. The two pulse readings would suffice to predict a
+resolved turn of a freely moving charge in the localized linear model.
+An equilibrated finite-radius work bound, the response at encounter
+strength and the guarded counts for real argon remain open. The elastic
+action discrepancy can already occur between two classical dynamics.

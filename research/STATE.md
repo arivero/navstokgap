@@ -14,10 +14,11 @@ exposes the sensitivity of one orbit to its preparation. The
 [three-energy scattering test](../notes/balaban-newton-time-blocking.md#a-three-energy-test-of-central-force-trajectories)
 cancels any common impact distribution. The [argon transmission
 test](../notes/balaban-newton-time-blocking.md#an-exterior-force-test-with-argon)
-now specifies an exterior force and a detector aperture against measured
-loss. Can an independent work measurement and a clock-calibrated dipole
-response control the force on a freely moving charge beyond $0.50$ nm?
-The inferred mechanical action discrepancy can also occur classically.
+compares an exterior force and a detector aperture with measured loss.
+For a localized linear target, [two clocked pulse readings](../notes/balaban-newton-time-blocking.md#two-pulse-tests-for-a-freely-moving-charge)
+and static work suffice to bound a freely moving charge's deflection.
+Can charge penetration and nonlinear response in real argon be bounded
+on this annulus independently of the transmission count?
 Earlier apparatus tests use [three positions and two ions](../notes/newton-insertion-action.md),
 an [electron and shutter](../notes/galileo-two-path-interference.md#two-slits-and-a-position-detector)
 and a [clocked grating](../notes/groupoid-quantum-newton-states.md#9-action-calibration-with-a-clocked-grating).
