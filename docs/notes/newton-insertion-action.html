@@ -95,6 +95,13 @@ position and velocity and gives an exact scalar quantum phase for every
 common motional preparation, once quantum kinematics and coherent
 control are supplied. None of these geometric or phase statements
 establishes independent positive-action necessity.</p>
+<p>For the short-time force measurement in Lemma X, two bounded,
+increasing forces can differ at release yet give the same final motion
+and even the same forced-particle propagator at the first reading. A
+bound on how fast the force changes restores uniform recovery with
+sufficient differential position accuracy. A separate test using three
+position probabilities gives a conditional lower bound on the trial
+action, with an explicit allowance for a recoiling source.</p>
 <p>This treatment integrates the constant-force derivation and its
 receding-centre correction with the controlled reunion. Written
 model/coordinator checks are internal; the mechanics and phase
@@ -213,6 +220,285 @@ polygon</a> figures supplied the recorded passage checks. The historical
 limits are not evidence for an established fluxional-time interpretation
 or a physical <span class="math inline">\(\hbar\to0\)</span>
 theorem.</p>
+<h2 id="lemma-x-and-the-measurement-of-initial-force">Lemma X and the
+measurement of initial force</h2>
+<p>In Book I, Lemma X, Newton changes <em>vi regulari</em> in the London
+1687 edition to <em>Vi finita</em> in the Cambridge 1713 edition,
+specifying a force that is constant, continually increasing or
+continually decreasing. In the new Corollary 4 he infers force from
+initial displacement divided by time squared, as a proportion. The
+following measurement is a modern realization for a body of
+independently calibrated inertial mass <span
+class="math inline">\(m\)</span>. <a
+href="https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00077#par27">1687,
+Lemma X</a> and <a
+href="https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082#par28">1713,
+Lemma X and Corollaries 3–5</a> (diplomatic transcriptions,
+passages).</p>
+<p><strong>What the marks have to resolve.</strong> Read positions <span
+class="math inline">\(y\)</span> against an inertial ruler at the
+calibrated times <span class="math inline">\(0,\tau/2,\tau\)</span>. Let
+<span class="math inline">\(D_\tau y=y(0)-2y(\tau/2)+y(\tau)\)</span>.
+This cancels an unknown initial position and velocity, including a
+common affine ruler drift. For <span class="math inline">\(m
+q&#39;&#39;=f(t)\)</span> with continuous <span
+class="math inline">\(f\)</span>, the normalized second divided
+difference averages <span class="math inline">\(f\)</span> with weight
+<span class="math inline">\(4\min(t,\tau-t)/\tau^2\)</span> on the
+window. This weight integrates to one and has mean time <span
+class="math inline">\(\tau/2\)</span>. <a
+href="https://pages.cs.wisc.edu/~deboor/sat/papers/2/2.pdf#page=17">De
+Boor, §9, Eqs. (47)–(48)</a> (passage, Peano kernel). Thus a single
+fixed force gives its initial value in the limit. For a class with an
+independently calibrated bound <span
+class="math inline">\(|f(t)-f(0)|\le Lt\)</span> and differential record
+error <span class="math inline">\(|D_\tau y-D_\tau
+q|\le\rho_\tau\)</span>,</p>
+<p><span class="math display">\[
+\left|\frac{4m}{\tau^2}D_\tau y-f(0)\right|
+\le \frac{L\tau}{2}+\frac{4m\rho_\tau}{\tau^2}.
+\]</span></p>
+<p>Here <span class="math inline">\(L\)</span> has units force/time and
+<span class="math inline">\(\rho_\tau\)</span> is a length. Calibration
+of the gate times or their contribution to <span
+class="math inline">\(\rho_\tau\)</span> is part of the protocol.
+Uniform recovery follows if <span
+class="math inline">\(m\rho_\tau/\tau^2\to0\)</span>. For a specified
+force accuracy it suffices to keep the right side below that accuracy.
+The equations of classical mechanics allow all these conditions. For
+linear three-meter measurements of a free mass under a prescribed force,
+the same difference removes the initial test-body variables. Measuring a
+suitable combination of the middle pointer’s position and momentum also
+cancels its recoil from the output, at a cost in meter preparation. This
+prevents inferring an irreducible record error from the test mass’s
+initial spread alone. <a
+href="https://arxiv.org/pdf/gr-qc/0109003#page=7">Braginsky et al., §II
+B, Eqs. (2.21)–(2.24), (2.29)–(2.33)</a> (passage).</p>
+<p><strong>Two forces hidden before the first reading.</strong> Fix a
+force unit <span class="math inline">\(F_*&gt;0\)</span> and any
+interval of duration <span class="math inline">\(s&gt;0\)</span> between
+release and the first positive observation. Write <span
+class="math inline">\(u=t/s\)</span> and define on <span
+class="math inline">\([0,1]\)</span></p>
+<p><span class="math display">\[
+\begin{gathered}
+H(u)=u^4(1-u)^6/24,\qquad h=H^{(4)},\\
+\eta=\frac{1}{2(1+\|h\|_\infty+\|h&#39;\|_\infty)},\qquad
+f_\pm(t)=F_*[1+u\pm\eta h(u)].
+\end{gathered}
+\]</span></p>
+<p>Both forces are positive and strictly increasing. Their slopes are at
+least <span class="math inline">\(F_*/(2s)\)</span>, and <span
+class="math inline">\(h(0)=1\)</span>, <span
+class="math inline">\(h(1)=h&#39;(1)=0\)</span>. Continue both by <span
+class="math inline">\(F_*(3-\exp(1-u))\)</span> for <span
+class="math inline">\(u\ge1\)</span>. They are continuously
+differentiable, bounded by <span class="math inline">\(3F_*\)</span>,
+and differ at release by <span class="math inline">\(2\eta F_*\)</span>
+independently of <span class="math inline">\(s\)</span>. Four
+integrations by parts give <span class="math inline">\(\int_0^1u^j
+h(u)\,du=0\)</span> for <span class="math inline">\(0\le j\le3\)</span>,
+since <span class="math inline">\(H\)</span> and its first three
+derivatives vanish at both ends. The first two moments match the
+endpoint impulse and displacement for every common initial state. Within
+the window the position difference is <span class="math inline">\(2\eta
+F_*s^2 H&#39;&#39;(u)/m\)</span> and afterwards it is zero. Thus even a
+continuous position record with fixed positive error can be shared by
+choosing <span class="math inline">\(s\)</span> small enough and taking
+the midpoint of the two records.</p>
+<p>The pair also tests phase-sensitive readout. For the prescribed
+Hamiltonians <span class="math inline">\(p^2/(2m)-f_\pm(t)q\)</span>
+with a common scalar-potential zero, the <a
+href="cut-measure-newton.html#general-force-histories-one-dirichlet-functional">general
+force propagator identity</a> (Theorem G7(a), passage) reduces endpoint
+evolution to two kicks and the scalar action <span
+class="math inline">\(\langle f,G_s f\rangle/(2m)\)</span>, where <span
+class="math inline">\(G_s\)</span> is the Dirichlet inverse of <span
+class="math inline">\(-d^2/dt^2\)</span> on <span
+class="math inline">\([0,s]\)</span>. The kicks agree by the first two
+moments. With <span class="math inline">\(b(t)=1+t/s\)</span>, the
+difference of the two scalar actions is <span
+class="math inline">\((2\eta F_*^2/m)\int_0^s h(t/s)(G_s
+b)(t)\,dt\)</span>. Since <span class="math inline">\(G_s b\)</span> is
+a cubic polynomial in <span class="math inline">\(t\)</span>, the
+remaining moments make this integral zero. The two body propagators are
+identical, including their phase, for every supplied reduced action
+<span class="math inline">\(a&gt;0\)</span>. This covers endpoint
+interference against a common reference. A record of the drive or an
+intervention within the interval is additional data. At each smaller
+first gate the construction chooses a different pair. It proves failure
+of a uniform force measurement over Newton’s finite monotone class and
+preserves the pointwise limit for each fixed force.</p>
+<p><strong>A reciprocal classical source.</strong> Give the source a
+finite mass <span class="math inline">\(M\)</span>, put <span
+class="math inline">\(\mu=mM/(m+M)\)</span>, and choose a common initial
+separation <span class="math inline">\(r_0\)</span> and relative speed
+<span class="math inline">\(v&gt;0\)</span>. Solve <span
+class="math inline">\(\mu\ddot r_\pm=f_\pm(t)\)</span> from these data.
+Since <span class="math inline">\(\dot r_\pm\ge v\)</span>, define a
+time-independent pair potential along each path by <span
+class="math inline">\(V_\pm&#39;(r_\pm(t))=-f_\pm(t)\)</span>. It exerts
+opposite forces on the two masses. At <span
+class="math inline">\(s\)</span> the separations and relative speeds
+agree by the matched moments. Free centre-of-mass motion then gives
+identical endpoint positions and momenta of <strong>both</strong>
+masses. With equal initial potential zeros, the work identity <span
+class="math inline">\(V_\pm(r_0)-V_\pm(r_\pm(s))=\mu(\dot
+r_\pm(s)^2-v^2)/2\)</span> also matches their terminal energies and
+allows a common continuation. During the window <span
+class="math inline">\(\dot r_\pm\le v+2F_*s/\mu\)</span> and <span
+class="math inline">\(r_\pm(s)-r_0\le vs+F_*s^2/\mu\)</span>. The
+interaction changes over a shrinking length. Its force gradient at the
+join has magnitude <span class="math inline">\(F_*/(s\dot
+r_\pm(s))\)</span>. Fixed masses, initial speed and bounded exchanged
+work allow these potentials in classical mechanics. Their fabrication
+and independent inspection would require a source model of their own.
+The propagator equality above applies to the prescribed uniform fields.
+This reciprocal realization establishes classical endpoint equality for
+the stated initial preparation.</p>
+<h2 id="a-three-time-test-with-a-calibrated-position-resolution">A
+three-time test with a calibrated position resolution</h2>
+<p>A candidate physical premise can be stated entirely in observed
+frequencies. Prepare the same ensemble of bodies and independently
+choose one final reading per run at <span
+class="math inline">\(t_j=0,\tau/2,\tau\)</span>, with no earlier
+measurement. For a spatially uniform calibrated acceleration <span
+class="math inline">\(g\)</span>, subtract <span
+class="math inline">\(g(t_j-\tau/2)^2/2\)</span> from each position.
+Write <span class="math inline">\(p_j\)</span> for the probability that
+this corrected position, after the calibrated blur below, falls in the
+same bounded interval <span class="math inline">\(I\)</span> of the
+ruler. Count all preselected runs, with missing outcomes included in the
+error bounds. The proposed observation is a positive excess</p>
+<p><span class="math display">\[V=p_0+p_2-p_1-1&gt;0.\]</span></p>
+<p>The corresponding classical bound <span
+class="math inline">\(V\le0\)</span> is the particle reentry inequality
+of <a href="https://arxiv.org/pdf/2511.10155#page=2">Paterek and
+Goussev, Eqs. (2) and (4)</a> (passage), in the freely falling
+coordinates of the parabola. A classical trajectory is a straight line
+in these coordinates. Membership of both endpoints in <span
+class="math inline">\(I\)</span> implies membership of the midpoint, for
+every initial place and velocity and hence for every positive
+distribution over them. This also allows arbitrary extra preparation
+labels when the choice of gate is independent and the calibrated
+detector reads the body’s position.</p>
+<p><strong>How a violation would exclude small actions.</strong> Fix a
+ruler width <span class="math inline">\(\ell&gt;0\)</span> and a
+calibration time <span class="math inline">\(T_c&gt;0\)</span>
+independently of the gate spacing. Set <span
+class="math inline">\(w=\ell/T_c\)</span>. Require that the total
+position response at each gate be a centred Gaussian of variance <span
+class="math inline">\(\sigma_j^2=\ell^2+w^2(t_j-\tau/2)^2\)</span>. This
+is a specification for the calibrated detector response including any
+blur deliberately applied to its records. It makes the three noise
+marginals exactly those of adding one random affine function <span
+class="math inline">\(X+U(t-\tau/2)\)</span> with independent centred
+Gaussian offsets of standard deviations <span
+class="math inline">\(\ell,w\)</span>. Thus the blurred records still
+obey <span class="math inline">\(V\le0\)</span> for every classical
+ensemble. Measurements on different runs require no joint draw of these
+offsets.</p>
+<p>Compare also every canonical Schrödinger model with trial reduced
+action <span class="math inline">\(a&gt;0\)</span>, the same mass <span
+class="math inline">\(m\)</span>, uniform force <span
+class="math inline">\(mg\)</span>, and Born position readout. Its Wigner
+distribution at the middle time propagates by the exact affine Newtonian
+flow, so blurring the three marginals is equivalent to convolving that
+distribution at the middle time with a Gaussian of covariance <span
+class="math inline">\(\operatorname{diag}(\ell^2,m^2w^2)\)</span> in
+position and momentum. The Gaussian smoothing theorem gives a positive
+probability density for every state when <span
+class="math inline">\(\ell m w\ge a/2\)</span>. The classical interval
+argument then applies to that density. <a
+href="principia-fifth-postulate.html">Quadratic transport, Theorem
+A(b)</a> (passage) and <a
+href="https://doi.org/10.1016/0378-4371(76)90145-X">Cartwright, Gaussian
+smoothing</a> (abstract). If simultaneous error bounds <span
+class="math inline">\(e_j\)</span> cover the three reported
+probabilities at the stated joint confidence level, then</p>
+<p><span class="math display">\[
+\widehat p_0+\widehat p_2-\widehat p_1-1&gt;e_0+e_1+e_2
+\quad\Longrightarrow\quad
+a&gt;2m\ell w=\frac{2m\ell^2}{T_c}
+\]</span></p>
+<p>for every such candidate model. The observation also excludes the
+classical zero member under the stated trajectory and readout laws. The
+bound uses a mass, a length and a time supplied without quantum
+calibration. The other dimensional inputs are the gate times, the
+interval endpoints and the acceleration. For a spatially uniform force
+with acceleration miscalibration bounded by <span
+class="math inline">\(\delta g\)</span>, the residual shift at gate
+<span class="math inline">\(j\)</span> is at most <span
+class="math inline">\(\delta g(t_j-\tau/2)^2/2\)</span> relative to the
+middle-time tangent. A shift <span class="math inline">\(d\)</span>
+changes the blurred interval probability by at most <span
+class="math inline">\(|d|/(\sqrt{2\pi}\sigma_j)\)</span>, from the
+derivative of the Gaussian interval probability. Other errors in the
+force law, clock, detector or gate selection need their own probability
+bounds.</p>
+<p><strong>Allowing an unobserved source to recoil.</strong> Suppose the
+source remains coupled throughout the gate. In a canonical model, add a
+source Hamiltonian and a bounded self-adjoint potential <span
+class="math inline">\(W_t(Q)\)</span> acting on the source at each body
+coordinate. Assume the source alone has a unitary propagator, the
+perturbation is norm-continuous in time, and a force calibration
+supplies <span class="math inline">\(\sup_q\|W_t(q+d)-W_t(q)\|\le
+m\delta g|d|\)</span> for every <span
+class="math inline">\(d,t\)</span>. This includes bounded reciprocal
+pair potentials <span class="math inline">\(W(q-R)\)</span> with the
+stated slope. For any joint state at the middle time <span
+class="math inline">\(t_m=\tau/2\)</span>, the error in gate probability
+caused by dropping this coupling is at most</p>
+<p><span class="math display">\[b_j=\frac{\delta
+g(t_j-t_m)^2}{\sqrt{2\pi}\,\sigma_j}.\]</span></p>
+<p>Indeed, under the reference uniform force, the terminal mode <span
+class="math inline">\(e^{ikQ}\)</span> transported back to an
+intermediate time <span class="math inline">\(r\)</span> translates the
+argument of <span class="math inline">\(W_r\)</span> by a distance of
+magnitude <span class="math inline">\(a|k(t_j-r)|/m\)</span>. Its
+commutator with <span class="math inline">\(W_r\)</span>, divided by
+<span class="math inline">\(a\)</span>, has norm at most <span
+class="math inline">\(\delta g|k(t_j-r)|\)</span>. The
+bounded-perturbation Duhamel formula in either time direction gives a
+mode error at most <span class="math inline">\(\delta
+g|k|(t_j-t_m)^2/2\)</span>. For the Gaussian-blurred interval effect
+<span class="math inline">\(B_j\)</span>, <span
+class="math inline">\(|k\widehat B_j(k)|\le2\exp(-\sigma_j^2
+k^2/2)\)</span> in the Fourier convention with inverse factor <span
+class="math inline">\(1/(2\pi)\)</span>. Integrating the mode error
+gives <span class="math inline">\(b_j\)</span>. The deterministic
+correction for <span class="math inline">\(g\)</span> translates the
+interval and leaves this bound unchanged. Starting both evolutions at
+the same middle-time joint state allows arbitrary body–source
+correlations. The comparison probabilities are those of one common
+reduced body state. For a classical source with <span
+class="math inline">\(|\ddot q-g|\le\delta g\)</span> on each unobserved
+path, the tangent displacement bound above gives at most <span
+class="math inline">\(b_j/2\)</span> per gate even if the residual
+depends on that path. Thus adding <span class="math inline">\(\sum_j
+b_j\)</span> to the required excess covers both classes. The calibration
+has to bound the interaction on the admitted domain. A mean acceleration
+measurement alone supplies no such bound.</p>
+<p>Subdividing the mathematical propagation between these fixed gates
+changes neither side of the test. Physically sending <span
+class="math inline">\(\tau\)</span> to zero at fixed <span
+class="math inline">\(\ell,T_c\)</span> and fixed release preparation is
+different. All three blurred probabilities then converge to the same
+<span class="math inline">\(p&lt;1\)</span> by continuity of the motion
+and readout, so <span class="math inline">\(V\to p-1&lt;0\)</span>. The
+positive width and bounded <span class="math inline">\(I\)</span> give
+the strict inequality. Conversely, a strict ideal reentry violation on a
+half-line persists for some finite interval and sufficiently small
+positive blur by continuity of the three marginal probabilities. Paterek
+and Goussev exhibit such states in the supplied quantum theory. The
+missing physical input is a violation in corrected gate counts with the
+response and errors independently calibrated. <a
+href="https://arxiv.org/pdf/2203.03053#page=4">Brown et al., Fig. 3 and
+supplement IV B</a> (passages) reconstruct a trapped atom’s state from
+quadratures by a quantum maximum-likelihood fit. Their reported Wigner
+negativity does not supply these three counts. A verified violation
+would constrain the calibrated motional models above. Extending that
+constraint to all preparations requires a further physical argument.</p>
 <h2
 id="matched-endpoints-arbitrary-partitions-and-action-normalization">Matched
 endpoints, arbitrary partitions and action normalization</h2>
@@ -439,7 +725,11 @@ coefficients. Mesh size, record resolution and <span
 class="math inline">\(\epsilon=\hbar/S_0\)</span> are separate limits. A
 consistent classical geometric refinement and a supplied quantum phase
 benchmark are both constructed here; independent exclusion of zero
-action remains open.</p>
+action remains open. For Lemma X, a bound on the force gradient and
+relative speed of a reciprocal source gives a testable <span
+class="math inline">\(L\)</span>. The three-time experiment instead
+tests a common distribution of trajectories directly. Independent
+evidence for the calibrated probability excess remains open.</p>
 
 </main>
 <footer class="site"><div class="wrap">

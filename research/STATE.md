@@ -5,11 +5,12 @@ consolidation and index/reference/site consistency checks.** The
 [88-argument catalog](../notes/index.md) owns coverage and short completed-work
 phrases; git preserves retired notes and process records.
 
-One [clocked grating preparation](../notes/groupoid-quantum-newton-states.md#9-action-calibration-with-a-clocked-grating)
-now distinguishes reduced actions at fixed inertial mass using the port
-and pixel record. Ruler and clock alone determine $a/m$. The open physical
-question is what forces another preparation to use the same coefficient
-without assuming a common quantum phase law.
+The Newton priority is the [1713 Lemma X force measurement](../notes/newton-insertion-action.md#lemma-x-and-the-measurement-of-initial-force).
+Which physical premise survives refinement and excludes zero action before
+assuming a quantum phase law? The [three-time position test](../notes/newton-insertion-action.md#a-three-time-test-with-a-calibrated-position-resolution)
+requires an independently observed excess above the force and detector
+errors. Its relation to the [clocked grating's action per unit mass](../notes/groupoid-quantum-newton-states.md#9-action-calibration-with-a-clocked-grating)
+and to a universal coefficient is open.
 
 ## Goals and current proof boundaries
 
