@@ -9,15 +9,17 @@ The first priority is an explanation of positive physical action from the
 central-force trajectory limit itself. Newton connects [Lemma X's force
 measurement](../notes/newton-insertion-action.md#lemma-x-and-the-measurement-of-initial-force)
 to the orbital force rule in Book I, Proposition VI (1713).
-[Single rubidium atoms](../notes/balaban-newton-time-blocking.md#a-single-atom-returning-in-a-tilted-lattice)
-spread several cells downhill and return near the source. Can the three
-position counts exceed the orbit bound after independently measuring
-axial work, losses and freeze errors? On concentric shells the
-centrifugal drop supplies the downhill work from radii and a timed
-tangential launch. A clocked return also tests whether distinct action
-scales can agree once the actual stopping interval is fixed.
-[Two passages through one barrier](../notes/balaban-newton-time-blocking.md#two-images-of-a-returning-orbit)
-use four launch energies to bound a possible barrier-top cusp.
+[Four central-force releases](../notes/newton-insertion-action.md#four-central-force-releases-measured-by-final-speeds)
+test arbitrary launch distributions using only the final kinetic energies.
+Do their variances and third moments violate the radial trajectory bound
+with unrecorded switch work bounded and complete counts? A fifth
+Coulomb strength measures the force factor from the same flights.
+[Hydrogen fragment spectra](../notes/newton-insertion-action.md#what-two-hydrogen-fragment-spectra-already-test)
+give a fourfold ratio excess under common capture. The relative capture
+response and rotational spread remain open.
+[Single-atom lattice returns](../notes/balaban-newton-time-blocking.md#a-single-atom-returning-in-a-tilted-lattice)
+need axial work, loss and freeze calibrations. [Two passages through one barrier](../notes/balaban-newton-time-blocking.md#two-images-of-a-returning-orbit)
+bound the barrier-top exception with four launch energies.
 The potassium [two-power test](../notes/balaban-newton-time-blocking.md#locating-a-turn-with-two-barrier-powers)
 uses guarded returns and a common optical work calibration.
 For a harmonic central force the [trapped-ion contrast estimates](../notes/newton-insertion-action.md#three-measured-contrasts-of-a-trapped-ion)

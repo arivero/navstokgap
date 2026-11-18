@@ -33,6 +33,12 @@ additive position readout. A zero-mean probe impulse can reproduce
 the three contrasts. Direct position exposures would test the same
 inequality with an independent force calibration.
 
+Four releases of a bound pair into different central forces can bound its
+initial energy spread and test Newtonian motion from final speeds alone.
+Two measured hydrogen fragment spectra already test how the capture
+process samples the orbit. [Four central-force releases](#four-central-force-releases-measured-by-final-speeds)
+and [hydrogen fragment counts](#what-two-hydrogen-fragment-spectra-already-test).
+
 This treatment integrates the constant-force derivation and its receding-centre
 correction with the controlled reunion. Written model/coordinator checks are
 internal; the mechanics and phase ingredients are established and no
@@ -234,6 +240,357 @@ independent inspection would require a source model of their own.
 The propagator equality above applies to the prescribed uniform fields.
 This reciprocal realization establishes classical endpoint equality for
 the stated initial preparation.
+
+## Four central-force releases measured by final speeds
+
+**6.1 Sol Max, 2026-11-18.** The same four sets of outgoing speeds
+can bound the energy spread of a bound pair and test its equation of
+motion. The test uses every release. It requires neither a selected
+angular momentum nor a measurement of the initial energy level.
+
+Let $R=|\mathbf r|$ be the relative separation and $\mu$ the reduced
+mass. Prepare the same ensemble in the central well $-Q(R)$ on each
+trial. Choose $Q$ smooth, bounded, nonnegative and nonincreasing, and
+zero outside a calibrated radius $r_b$. At a time chosen independently
+of the motion, switch to $(j-1)Q(R)$, with $j=1,2,3,4$ chosen
+independently of the preparation. Thus the first setting releases the
+pair freely and the other three repel the particles. Outside the field
+record their relative kinetic energy $K_j=\mu v_{\rm rel}^2/2$ by
+time of flight. Include late, undetected and saturated events in the
+moment-error budget. The potential zero is common at infinity.
+Calibrate $L=\sup Q-\inf Q$ in energy units and $F_*=\sup|Q'|$ in
+force units. In Lemma X's prescription, compare relative accelerations
+from rest at the same radius in the two fields. An envelope between
+sampled radii and an integration in radius give the force and work
+bounds. The [finite-time qualifications](#lemma-x-and-the-measurement-of-initial-force)
+apply to this calibration.
+
+Write $v_j$ for the variance and $t_j$ for the **third central moment**
+of the energy reading in setting $j$. Keep energies in mechanical
+units for every setting. Form
+
+$$
+ S=3v_1-3v_2+v_3,\qquad
+ D=\tfrac12(3t_1-8t_2+7t_3-2t_4).
+$$
+
+For any ensemble of Newtonian pairs subject to the stated force
+switch and an instantaneous release,
+
+$$
+                  |D|\le \tfrac32 L^2\sqrt S.                   \tag{F}
+$$
+
+This allows arbitrary initial correlations between separation, radial
+speed and angular momentum. It also allows additive energy-readout
+noise independent of the atom with a common distribution of finite
+third absolute moment. A constant energy offset may differ by setting.
+
+Indeed let $E$ be the initial mechanical energy and $q=Q(R)$ at the
+switch. The outgoing energy on this same trajectory is $E+jq$, since
+the switch changes the potential and preserves the velocity. Its
+variance is a quadratic in $j$ with constant term $\operatorname{Var}E$.
+The combination $S$ gives this constant plus the common noise variance.
+The third central moment is a cubic in $j$. The weights defining $D$
+extract its quadratic coefficient, canceling the common noise skew as
+well. This coefficient is
+$3\operatorname{Cov}(E,(q-\langle q\rangle)^2)$.
+The squared centred quantity is between zero and $L^2$, so its
+standard deviation is at most $L^2/2$. This proves (F). Inserting
+times anywhere in the incoming or outgoing orbit preserves the
+work identity. A classical trajectory that waits forever at an
+unstable equilibrium requires an allowance if the detector times out.
+[Bhatia and Davis, range bound for variance](https://doi.org/10.1080/00029890.2000.12005203)
+(theorem).
+
+**The action measured by an excess.** In canonical relative motion
+write $H=\mathbf p^2/(2\mu)-Q(R)$ with trial reduced action $a$.
+Use the same density operator for all four switches. Assume finite
+third absolute energy moments, the operator products below well defined
+(for example on a common smooth core with the indicated moments),
+and collection of the full outgoing channel. The spectral law of
+$H+jQ$ then gives the asymptotic kinetic-energy law by the
+intertwining of the outgoing wave operator. Smooth short-range
+potentials and states in the scattering subspace suffice.
+[Enss, short-range scattering](https://doi.org/10.1007/BF01940771)
+(theorem).
+
+Let $A=H-\langle H\rangle$ and $B=Q-\langle Q\rangle$. The same
+variance interpolation gives $S=\langle A^2\rangle$ plus any common
+readout variance. The quadratic coefficient in
+$\langle(A+jB)^3\rangle$ is
+
+$$
+ D=3\,\operatorname{Re}\langle A B^2\rangle
+       +\tfrac12\langle[B,[A,B]]\rangle
+   =3\,\operatorname{Re}\langle A B^2\rangle
+       +\frac{a^2}{2\mu}\langle |Q'(R)|^2\rangle .
+$$
+
+The local double commutator is the standard energy-weighted sum
+rule. The appearance of a double commutator in the third moment
+of sudden quantum work is also established. Here the coefficient
+comes from four *terminal* kinetic-energy laws and the variance
+of the bound preparation is tested by those same flights.
+[Hinohara, Eqs. (16)–(18)](https://arxiv.org/pdf/1902.11005)
+and [Ma, Mitchell and Sela, sudden-quench formula on p. 2](https://arxiv.org/pdf/2502.01601)
+(passages). Since $\langle A\rangle=0$, Cauchy–Schwarz gives the same
+bound $\tfrac32L^2\sqrt S$ on the first term even when the state has
+energy coherences. Consequently, if simultaneous moment bounds give
+$S\le S_{\rm hi}$, $D\ge D_{\rm lo}$ with $S_{\rm hi}\ge0$, and the bracket below is positive, the bound is
+
+$$
+ a\ \ge\
+ \frac{\sqrt{2\mu\,[D_{\rm lo}-\tfrac32 L^2\sqrt{S_{\rm hi}}]}}{F_*}.
+                                                               \tag{A}
+$$
+
+For an initial bound eigenstate with exact readout, $S=0$ and
+$D=a^2\langle |Q'|^2\rangle/(2\mu)$. A nonconstant smooth well
+and a bound state with weight on its slope give a strict excess in
+this model. Establishing it for physical pairs requires the four
+measured distributions.
+
+**Measuring the force factor in a Coulomb release.** With a fifth
+strength and finite fourth moments the measured flights can also
+replace the external range $L$. Let $m_j$ be the fourth central moment
+of the terminal reading and set
+
+$$
+ V_q=(v_1-2v_2+v_3)/2,\qquad
+ M_c=(m_5-4m_4+6m_3-4m_2+m_1)/24.
+$$
+
+The highest coefficients of the two polynomials are
+$V_q=\langle B^2\rangle$ and $M_c=\langle B^4\rangle$ in both theories.
+An independent common detector error adds only lower powers of $j$.
+Thus the nuisance term in $D$ is bounded by
+$3\sqrt{S(M_c-V_q^2)}$, using only terminal energy readings.
+This works for any reference $H=\mathbf p^2/(2\mu)+V_b(R)$ and any
+common input state if all five exit surfaces are $V_b+jQ$. Preparing
+the pair on $V_b$ is unnecessary.
+
+For a repulsive Coulomb increment $Q(R)=\kappa/R$, where $\kappa$ has
+units of energy times length, let $M_r$ be the same fourth difference
+divided by 24 using **raw** fourth moments. Use a common energy zero or
+calibrate offsets before taking these raw moments. Then $M_r=\langle Q^4\rangle$ and $|Q'|^2=Q^4/\kappa^2$. The canonical energy laws give
+
+$$
+ \left|D-\frac{a^2 M_r}{2\mu\kappa^2}\right|
+           \le 3\sqrt{S(M_c-V_q^2)}.
+$$
+
+This compares trial actions in mechanical units even when the initial
+radial distribution is unknown. It requires common preparation and
+response, the indicated finite moments and commutator domains at small
+$R$, and an escaping channel whose true energy is measured.
+Use Coulomb scattering asymptotics and bound residual potential energy
+at finite detector distance. The short-range theorem used for the
+compact well does not cover a $1/R$ tail. [Dollard, Coulomb scattering](https://doi.org/10.1063/1.1704171)
+(abstract). Independent mass comparison and classical charge–force
+calibration fix $\mu$ and $\kappa$.
+
+Siegmann et al. measured several charge products in the fragmentation
+of nitrogen. For $\mathrm{Bi}^{57+}$ impact at 4.7 MeV per nucleon, the reported
+mean fragment energies at products $2,3,4$ are $34.6(2)$, $60.0(3)$
+and $59.0(3)$ eV. The middle exceeds the affine midpoint by $13.2$ eV.
+A common preparation with potentials $V_b+jQ$ and common energy zero
+has an affine mean for every $a$, including its Newtonian counterpart.
+Different constant offsets can change this mean check but leave the
+centred moments unchanged. The experiment sorts stochastic electronic
+outcomes and the authors find evidence for multiple potential curves.
+These channels alone do not realize the five independently set
+releases. [Siegmann et al., Table II and Fig. 3](https://doi.org/10.1103/PhysRevA.62.022718)
+(passages and data).
+
+**Finite readings.** Fix the free-flight ruler, clock interval $\tau$,
+spatial resolution $\epsilon_x$ per position and interval error
+$\epsilon_t<\tau$. For two vector position readings on a free relative
+flight with speed at most $u$, the error in the speed inferred from
+their difference is at most
+$e_v=(2\epsilon_x+u\epsilon_t)/(\tau-\epsilon_t)$. The kinetic-energy
+error is at most $\mu(ue_v+e_v^2/2)$. For a classical switch monotone in
+strength lasting $b$ with speed at most $u$ during the switch, the
+work differs from $jQ(R_0)$ by at most $jF_*ub$. This follows by
+integrating the change in strength times the potential along the
+moving orbit. Calibrating (A) also requires bounds on any finite-ramp
+change of the quantum energy moments or a justified sudden limit.
+
+If a residual error in an energy is bounded by $e$ and the true centred
+energy by $M$, allowances of $4e(M+e)$ for its variance and
+$6e(M+2e)^2$ for its third central moment suffice by expanding the
+centred powers. For unbounded or missing records bound the respective
+tail moments independently. A small missing probability alone does
+not bound a cubic moment. Given variance allowances $b_j$ and
+third-moment allowances $c_j$, add $3b_1+3b_2+b_3$ to the observed
+$S$ and subtract $(3c_1+8c_2+7c_3+2c_4)/2$ from the observed $D$.
+The other dimensional inputs are the masses, the calibrated work and
+force profiles, field radius, release and readout distances, timing and
+resolution, and any speed, energy or moment limits used for these
+allowances. For example $S_0=r_b\sqrt{2\mu L}$ is an action unit.
+Fixing the ruler and clock removes the common length and time
+rescalings of the [interacting action dilation](groupoid-quantum-newton-states.md#7-interacting-kernels-under-tangent-scaling).
+The dimensionless $a/S_0$, physical $\hbar$, $h_P=2\pi\hbar$ and the
+numerical time mesh retain their separate meanings.
+
+**A classical switch that passes the mean and variance checks.** Let
+every release have the same $E=-4b_0$ and $q=8b_0$, with $b_0>0$ an
+apparatus energy. At setting $j$ allow the switch to exchange the
+additional work $b_0(N_j-j^2/4)$, where $N_j$ counts successes among
+$j^2$ independent classical triggers, each with probability $1/4$.
+This bounded kick can be delivered to an outward-moving relative
+coordinate with an equal and opposite change in the source energy.
+The terminal kinetic energies remain positive for $j=1,\ldots,5$ and
+every release is counted. Their means are affine, their variances are
+$3b_0^2j^2/16$, and their third central moments are $3b_0^3j^2/32$.
+It follows that $S=0$ and $D=3b_0^3/32>0$ at zero action.
+The field now supplies additional work that a mean-force calibration
+would miss. On an independently prepared narrow-radius, narrow-speed
+calibration flight this model predicts an extra rms work of
+$j\sqrt3(32D/3)^{1/3}/4$. A bound on such work over the occupied
+radii and speeds belongs in the moment allowances above.
+[NIST, binomial variance and skewness](https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm)
+(formulas).
+
+## What two hydrogen fragment spectra already test
+
+Schmidt et al. measured the two neutral hydrogen fragments and the
+helium recoil after an electron transferred to a hydrogen molecular
+ion. Two of their plots give **counts against final kinetic energy
+release** $K$ for two recoil-selected bands, labelled $\nu=2,3$.
+A peak in the ratio of these two spectra tests a classical radial
+orbit without converting any fragment energy to a bond length.
+[Schmidt et al., Fig. 4(d,e)](https://arxiv.org/pdf/1202.3899#page=5)
+(experimental points and caption).
+
+Let the pair undergo stationary bound vibrations in an incoming
+potential $V(R)$ at common angular momentum $J$. Write
+$U(R)=V(R)+J^2/(2\mu R^2)$. Sample each orbit uniformly in elapsed
+time. On a common traversed interval where $E>U(R)$, the usual
+time-spent density is proportional to $[E-U(R)]^{-1/2}$. The
+normalization includes the period and source flux. As an experimental
+control, a collision time randomized uniformly over a duration $T$
+leaves at most $P/(4T)$ total-variation error from a uniform phase
+on an orbit of period $P$. Indeed the remainder $r=T\bmod P$
+contributes $r(P-r)/(PT)$. A steady source alone need not implement
+this control. [Cambridge, WKB and the classical time-spent density](https://www.tcm.phy.cam.ac.uk/~bds10/aqp/handout_approx.pdf)
+(passage).
+
+Suppose electron attachment preserves the nuclear relative momentum
+and switches to the same outgoing potential $V_f(R)$, with its zero
+at infinite separation. Then $Y=K-E=V_f(R)-V(R)$, up to the common
+choice of the initial energy zero. Full energy balance identifies
+this difference with the change of translational energy with reversed
+sign, up to the same fixed channel offset. It is accessible from
+fragment and recoil momenta. On the interval under test assume the
+map from $R$ to $Y$ is one-to-one and monotone, all radii contributing to the windows
+are interior to that branch in the same traversed well for both bands, and $U$ falls
+then rises or is monotone there. Abrupt turning endpoints inside a
+window would invalidate the time-spent comparison. Allow an arbitrary
+common efficiency $w(R)$ for transfer and collection, and an arbitrary
+normalization for each incoming band.
+
+For two sharp energies $E_l<E_h$, the ratio of the densities in $Y$ is
+
+$$
+                 C\sqrt{\frac{E_h-U(R)}{E_l-U(R)}} .
+$$
+
+Both $w$ and the radius-to-energy Jacobian cancel. The square root
+increases with $U$. The density ratio therefore has no interior peak
+above both sides. The same conclusion holds for disjoint ordered
+energy bands if the sorting uses the actual $K-E$ and all admitted
+energies traverse the windows. For each band integrate
+$(E-U)^{-1/2}$ with its positive source and inverse-period weight.
+The logarithmic derivative with respect to $U$ is half a weighted
+average of $(E-U)^{-1}$. Every such value in the lower band exceeds
+every one in the upper band. For three ordered disjoint windows
+$A,B,C$, let $N_{ij}$ denote their counts and $q_j=N_{lj}/N_{hj}$.
+A bin ratio is a high-band weighted average of the density ratio.
+Every middle point has ratio at most the maximum of the ratios at
+any pair of flanking points. Hence $q_B\le\max(q_A,q_C)$ at finite
+bin width whenever the denominators are positive.
+
+**The plotted counts.** In units of eV use $K$ for the lower row and
+$K-\Delta$ for the higher, with nominal band separation
+$0.20\le\Delta\le0.30$ eV. Fig. 1(a) places the two band centres
+about 0.24 eV apart. Reading the blue markers at their plotted 0.10 eV
+spacing as bin counts gives the conservative bounds below. In the
+upper row use only whole bins inside both extreme translates for
+a lower bound, or all bins in their union for an upper bound.
+
+| Window in the common coordinate (eV) | Lower-band counts | Higher-band counts used |
+|---|---:|---:|
+| $A=[0.5,0.8)$ | $<320$ | $>500$ in $[0.8,1.0)$ |
+| $B=[1.0,1.3)$ | $>1040$ | $<270$ in $[1.2,1.6)$ |
+| $C=[1.6,1.9)$ | $<290$ | $>310$ in $[1.9,2.1)$ |
+
+Thus $q_B>3.85$ whereas $q_A<0.64$ and $q_C<0.94$. The ratio in
+the middle exceeds the larger flanking ratio by a factor greater
+than four. These are graphical counts with a range for the *centre
+offset*. Eventwise band migration and statistical uncertainty still
+need to be included. For example, if the only error were removal of
+counts from the common-response distributions, over 575 additional
+counts across the two rows would be needed to restore the inequality.
+For side $s=A$ or $C$, restoring it requires
+$(N_{hB}+m_{hB})(N_{ls}+m_{ls})\ge N_{lB}N_{hs}$.
+The arithmetic–geometric mean bound gives at least
+$2\sqrt{1040\cdot310}-270-290>575$ missed counts for $C$, and a
+larger bound for $A$. It applies to these count units and to pure
+losses. [Original plot, bins and recoil selection](../docs/SchmidtEtAl_HydrogenFragmentEnergies_2012.md)
+(figure and apparatus passages).
+
+There is also a test if the force shape or the map to fragment energy
+is unknown. For sharp energies and common $J$, allow any common positive
+response from radius to the shifted energy window, including blur. On
+radii traversed by both orbits their incoming density ratio lies between
+$C$ and $C\sqrt{1+\Delta/T_{\min}}$ if the lower orbit has radial kinetic
+energy at least $T_{\min}$ there. The ratio is zero on the high orbit
+outside the lower orbit's range. Take $T_{\min}$ only on the shared
+radii contributing to $B$. Let $\eta_s$ be the fraction of high-band
+counts in a side window $s$ from outside the lower orbit's range.
+Positivity and integration of the response give
+
+$$
+ \frac{q_B}{q_s}\le
+ \frac{\sqrt{1+\Delta/T_{\min}}}{1-\eta_s}.
+$$
+
+This argument needs neither a monotone switch map nor a one-well shape.
+If the lower orbit covers the side windows, the observed factor greater
+than four requires radial kinetic energy below $0.30/15=0.020$ eV
+somewhere contributing to $B$. Alternatively, a measured lower speed
+bound giving $T_{\min}\ge0.050$ eV would require more than
+$1-\sqrt7/4>0.33$ of the high counts in each side window to come from
+radii inaccessible to the lower orbit. The random phase, common
+angular momentum and common response remain physical premises.
+
+**What could make the peak classically?** If the two bands have
+different radial transfer probabilities, the ratio acquires a
+multiplier $w_l(R)/w_h(R)$. Its supremum divided by its infimum
+on the three windows must exceed four to fit the nominal counts
+under the other hypotheses. A common change with radius, however
+large, cancels. In fact a velocity-sensitive classical capture law
+can fit arbitrary bounded nonnegative binned spectra on a compact
+interior interval. Choose a smooth single well, two regular energies
+and a monotone switch function $Y(R)$ there. For row $i$ with desired
+density $f_i$, take its capture probability proportional to
+$f_i(Y(R))|Y'(R)|\sqrt{E_i-U(R)}$. A separate constant can keep each
+probability below one because the source intensities are free. One
+law of radius and speed realizes both prescriptions on the disjoint
+energy surfaces and can be extended between them. Events outside
+the recorded channel then carry the missing flux.
+
+The experiment reports a radial variation of transfer probability
+deduced from comparison with calculated wave functions. It leaves
+the relative sensitivities of the two energy bands without an
+independent calibration. The rotational state was unresolved.
+The inferred radii depend on the treatment of the nuclei's initial
+kinetic energy. Thus the raw spectra identify a size of effect
+that a classical capture model must accommodate. A mechanical test
+with the four externally chosen force releases above would replace
+this selective reaction and both energy tags by a single preparation.
+The measured molecular spectra supply one outgoing force surface.
 
 ## A three-time test with a calibrated position resolution
 
@@ -1181,3 +1538,7 @@ On a central orbit the outstanding observation is a violation of
 the three-angle disk with radial motion and detector losses bounded.
 For the harmonic ion the observed contrast margin instead sets the
 precision needed for an independent mechanical check of its probe.
+Four central-force releases now give a test using mechanical energy
+variances and third moments. The hydrogen fragment counts constrain
+selective capture, while the four unconditioned release measurements
+needed for the action bound remain open.
