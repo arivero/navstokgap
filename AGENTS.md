@@ -44,8 +44,9 @@ explicit. No fluxional-time interpretation is an established result here.
 
 Be a researcher. Propose mechanisms, compare them, develop the strongest into
 a derivation, construction, decisive test or informative failure. Label
-conjectures. Use established theorems with their hypotheses; do not audit
-borrowed proofs unless a concrete error is suspected in a result in use.
+conjectures. Cite well-known results without rederiving them. State the
+hypotheses needed to apply each result. Inspect a borrowed proof only when
+there is reason to suspect a concrete error in a result the argument uses.
 Literature is for ingredients and honest prior-art labels, never a
 deliverable by itself. A session may end with "nothing worth recording"
 and no artifact.
