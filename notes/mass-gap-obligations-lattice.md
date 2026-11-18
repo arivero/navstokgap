@@ -12,8 +12,10 @@ continuum limit. T3 requires controlled physical gap scaling along the
 weak-coupling trajectory, and T4 requires construction, nontriviality
 and the axioms. Spectral transfer between finite lattices and the
 specified limiting vacuum is an additional obligation. These latter
-steps remain open. All energies below are measured using $\hbar c/a$;
-volume and cutoff limits are separate.
+steps remain open. The lattice energy unit is $\hbar c/a$; volume and
+cutoff limits are separate. In the continuum a massive tensor pole
+gives an upper bound on the gap. The same tensor correlators can coexist
+with any smaller gap, including zero, as the example in §4b shows.
 
 ## 1. The finite-lattice Hamiltonian
 
@@ -282,6 +284,80 @@ An infimum of rates equal to zero need not be attained by a single
 observable: $\xi_t=\infty$ need not mean that *one* observable has
 slower-than-exponential decay. It can mean that there is no common
 positive exponential rate for the entire local algebra.
+
+#### What a tensor pole determines
+
+Take the infinite-volume vacuum Hamiltonian $H$ generating physical time
+translations, with the vacuum energy subtracted. For a unique vacuum
+$\Omega$, write $\Delta=\inf\sigma(H|_{\Omega^\perp})$ in energy units.
+A physical stable tensor particle of rest mass $M$ puts $Mc^2$ in the
+energy spectrum (momenta arbitrarily close to zero suffice). This gives
+$\Delta\le Mc^2$. A fitted Regge trajectory would first have to establish
+such spectral weight. The definition of the four-dimensional pure gauge
+problem uses an interval free of positive-energy spectrum in the *whole*
+vacuum representation. Continuous spectrum above the interval is allowed.
+[Jaffe and Witten, §3](https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf)
+(reading: passage).
+
+**Same tensor observations, different gaps (6.1 Sol Max, 2026-11-18).**
+Let $H_T$ be the free massive spin-two Fock Hamiltonian on $\mathbb R^3$
+with mass $M>0$. Use any tensor-field sources belonging to this theory.
+Adjoin a decoupled free scalar of mass $0\le\mu\le M$ and set
+$$
+ H=H_T\otimes I+I\otimes H_\mu,\qquad
+ \Omega=\Omega_T\otimes\Omega_\mu,\qquad A=A_T\otimes I .
+$$
+The vacuum expectations of *all* products of translated tensor sources
+are identical to their values in the original theory. In particular the
+tensor particle pole, its residue and the spectral measure of every
+such centered source are unchanged. Yet $\Delta=\mu c^2$ by the
+free dispersion $E_\mu(p)=\sqrt{c^2|p|^2+\mu^2c^4}$ and additivity
+of Fock energies. For $\mu=0$, one-scalar packets supported at
+$0<|p|<\eta/c$ have energy below any prescribed $\eta>0$. Taking
+$\mu=M$ and $\mu=0$ gives an explicit gapped and gapless pair.
+The same tensor-factor identity preserves scattering amplitudes of an
+interacting first factor whenever it has such amplitudes. The free
+example needs no assumption that a confining Yang–Mills theory exists.
+The specified sources act only on the tensor factor. Other spin-two
+observables, including operators made from the scalar, need not agree.
+For the free massive spin-two field see [Fierz and Pauli (1939)](https://doi.org/10.1098/rspa.1939.0140)
+(reading: metadata).
+
+Thus an actual tensor mass supplies the sharp upper bound given above
+from those observations alone. To obtain a lower bound $\delta>0$ for
+pure Yang–Mills one needs control reaching a dense set of physical
+states, for example $\mathbf1_{(0,\delta)}(H)A_0\Omega=0$ for every
+member of a cyclic local algebra as in Proposition 2. The spectator
+example tests the inference from selected observations. It makes no
+claim of a massless scalar in pure Yang–Mills.
+
+**The hadronic and holographic comparisons.** In high-energy small-angle
+hadron scattering, the soft Pomeron describes leading exchange with
+vacuum quantum numbers. In units $\hbar=c=1$, the phenomenological
+line $\alpha_P(t)\simeq1.08+(0.25\,\mathrm{GeV}^{-2})t$ reaches spin
+two at $\sqrt t\simeq1.92\,\mathrm{GeV}$ if continued to positive $t$.
+The $f_2(1270)$ is on a mesonic trajectory. Meyer and Teper compare
+the leading pure-glue trajectory with the soft fit and discuss mixing
+with the mesonic trajectory in hadronic data. At their chosen scale
+Chen et al. find $1.710(50)(80)\,\mathrm{GeV}$ for the scalar and
+$2.390(30)(120)\,\mathrm{GeV}$ for the tensor in pure $SU(3)$.
+The extrapolated scattering fit and the lattice tensor mass are
+different measurements. Neither supplies the common lower spectral
+bound. [Meyer and Teper, Eq. (2) and Fig. 1](https://arxiv.org/pdf/hep-ph/0409183)
+and [Chen et al., Table XXI](https://arxiv.org/pdf/hep-lat/0510074)
+(reading: passages).
+
+In Witten's compactified large-$N$ construction a normalizable tensor
+fluctuation of the higher-dimensional metric gives a massive
+boundary $2^{++}$ mode. Its mass is computed at strong coupling in a
+background with a compactification scale and additional Kaluza–Klein
+modes. A Regge singularity in the scattering amplitude requires the
+Regge limit of an exchange kernel. A single tensor eigenvalue supplies
+neither that kernel nor a lower bound in continuum pure $SU(3)$.
+[Witten, §4](https://arxiv.org/pdf/hep-th/9803131),
+[Brower, Mathur and Tan, §§1–2](https://arxiv.org/pdf/hep-th/0003115)
+and [Brower, Polchinski, Strassler and Tan, §1](https://arxiv.org/pdf/hep-th/0603115)
+(reading: passages).
 
 **Why the original implication fails.** Even convergence of an
 observable's spectral measures does not preserve their lowest support
@@ -594,3 +670,6 @@ of Yarotsky's gap-stability theorem, with threshold
 $g_0(N)=(48N^2/[(N^2-1)\beta_*])^{1/4}$; the unresolved task is to control the weak-coupling scaling trajectory and transfer the physical spectrum to the reconstructed theory. The
 $d=3$ target of STATE keeps its place as the case where T3 has no
 transmutation to perform.
+In four dimensions a tensor pole provides a candidate excitation.
+The all-observable spectral comparison in §4b is still needed for a
+lower bound.

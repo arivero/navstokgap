@@ -92,9 +92,11 @@ at every bare coupling for a continuum limit. T3 requires controlled
 physical gap scaling along the weak-coupling trajectory, and T4 requires
 construction, nontriviality and the axioms. Spectral transfer between
 finite lattices and the specified limiting vacuum is an additional
-obligation. These latter steps remain open. All energies below are
-measured using <span class="math inline">\(\hbar c/a\)</span>; volume
-and cutoff limits are separate.</p>
+obligation. These latter steps remain open. The lattice energy unit is
+<span class="math inline">\(\hbar c/a\)</span>; volume and cutoff limits
+are separate. In the continuum a massive tensor pole gives an upper
+bound on the gap. The same tensor correlators can coexist with any
+smaller gap, including zero, as the example in §4b shows.</p>
 <h2 id="the-finite-lattice-hamiltonian">1. The finite-lattice
 Hamiltonian</h2>
 <p>Let <span class="math inline">\(G\)</span> be a compact connected
@@ -495,6 +497,97 @@ observable: <span class="math inline">\(\xi_t=\infty\)</span> need not
 mean that <em>one</em> observable has slower-than-exponential decay. It
 can mean that there is no common positive exponential rate for the
 entire local algebra.</p>
+<h4 id="what-a-tensor-pole-determines">What a tensor pole
+determines</h4>
+<p>Take the infinite-volume vacuum Hamiltonian <span
+class="math inline">\(H\)</span> generating physical time translations,
+with the vacuum energy subtracted. For a unique vacuum <span
+class="math inline">\(\Omega\)</span>, write <span
+class="math inline">\(\Delta=\inf\sigma(H|_{\Omega^\perp})\)</span> in
+energy units. A physical stable tensor particle of rest mass <span
+class="math inline">\(M\)</span> puts <span
+class="math inline">\(Mc^2\)</span> in the energy spectrum (momenta
+arbitrarily close to zero suffice). This gives <span
+class="math inline">\(\Delta\le Mc^2\)</span>. A fitted Regge trajectory
+would first have to establish such spectral weight. The definition of
+the four-dimensional pure gauge problem uses an interval free of
+positive-energy spectrum in the <em>whole</em> vacuum representation.
+Continuous spectrum above the interval is allowed. <a
+href="https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf">Jaffe
+and Witten, §3</a> (reading: passage).</p>
+<p><strong>Same tensor observations, different gaps (6.1 Sol Max,
+2026-11-18).</strong> Let <span class="math inline">\(H_T\)</span> be
+the free massive spin-two Fock Hamiltonian on <span
+class="math inline">\(\mathbb R^3\)</span> with mass <span
+class="math inline">\(M&gt;0\)</span>. Use any tensor-field sources
+belonging to this theory. Adjoin a decoupled free scalar of mass <span
+class="math inline">\(0\le\mu\le M\)</span> and set <span
+class="math display">\[
+H=H_T\otimes I+I\otimes H_\mu,\qquad
+\Omega=\Omega_T\otimes\Omega_\mu,\qquad A=A_T\otimes I .
+\]</span> The vacuum expectations of <em>all</em> products of translated
+tensor sources are identical to their values in the original theory. In
+particular the tensor particle pole, its residue and the spectral
+measure of every such centered source are unchanged. Yet <span
+class="math inline">\(\Delta=\mu c^2\)</span> by the free dispersion
+<span class="math inline">\(E_\mu(p)=\sqrt{c^2|p|^2+\mu^2c^4}\)</span>
+and additivity of Fock energies. For <span
+class="math inline">\(\mu=0\)</span>, one-scalar packets supported at
+<span class="math inline">\(0&lt;|p|&lt;\eta/c\)</span> have energy
+below any prescribed <span class="math inline">\(\eta&gt;0\)</span>.
+Taking <span class="math inline">\(\mu=M\)</span> and <span
+class="math inline">\(\mu=0\)</span> gives an explicit gapped and
+gapless pair. The same tensor-factor identity preserves scattering
+amplitudes of an interacting first factor whenever it has such
+amplitudes. The free example needs no assumption that a confining
+Yang–Mills theory exists. The specified sources act only on the tensor
+factor. Other spin-two observables, including operators made from the
+scalar, need not agree. For the free massive spin-two field see <a
+href="https://doi.org/10.1098/rspa.1939.0140">Fierz and Pauli (1939)</a>
+(reading: metadata).</p>
+<p>Thus an actual tensor mass supplies the sharp upper bound given above
+from those observations alone. To obtain a lower bound <span
+class="math inline">\(\delta&gt;0\)</span> for pure Yang–Mills one needs
+control reaching a dense set of physical states, for example <span
+class="math inline">\(\mathbf1_{(0,\delta)}(H)A_0\Omega=0\)</span> for
+every member of a cyclic local algebra as in Proposition 2. The
+spectator example tests the inference from selected observations. It
+makes no claim of a massless scalar in pure Yang–Mills.</p>
+<p><strong>The hadronic and holographic comparisons.</strong> In
+high-energy small-angle hadron scattering, the soft Pomeron describes
+leading exchange with vacuum quantum numbers. In units <span
+class="math inline">\(\hbar=c=1\)</span>, the phenomenological line
+<span
+class="math inline">\(\alpha_P(t)\simeq1.08+(0.25\,\mathrm{GeV}^{-2})t\)</span>
+reaches spin two at <span class="math inline">\(\sqrt
+t\simeq1.92\,\mathrm{GeV}\)</span> if continued to positive <span
+class="math inline">\(t\)</span>. The <span
+class="math inline">\(f_2(1270)\)</span> is on a mesonic trajectory.
+Meyer and Teper compare the leading pure-glue trajectory with the soft
+fit and discuss mixing with the mesonic trajectory in hadronic data. At
+their chosen scale Chen et al. find <span
+class="math inline">\(1.710(50)(80)\,\mathrm{GeV}\)</span> for the
+scalar and <span
+class="math inline">\(2.390(30)(120)\,\mathrm{GeV}\)</span> for the
+tensor in pure <span class="math inline">\(SU(3)\)</span>. The
+extrapolated scattering fit and the lattice tensor mass are different
+measurements. Neither supplies the common lower spectral bound. <a
+href="https://arxiv.org/pdf/hep-ph/0409183">Meyer and Teper, Eq. (2) and
+Fig. 1</a> and <a href="https://arxiv.org/pdf/hep-lat/0510074">Chen et
+al., Table XXI</a> (reading: passages).</p>
+<p>In Witten’s compactified large-<span class="math inline">\(N\)</span>
+construction a normalizable tensor fluctuation of the higher-dimensional
+metric gives a massive boundary <span
+class="math inline">\(2^{++}\)</span> mode. Its mass is computed at
+strong coupling in a background with a compactification scale and
+additional Kaluza–Klein modes. A Regge singularity in the scattering
+amplitude requires the Regge limit of an exchange kernel. A single
+tensor eigenvalue supplies neither that kernel nor a lower bound in
+continuum pure <span class="math inline">\(SU(3)\)</span>. <a
+href="https://arxiv.org/pdf/hep-th/9803131">Witten, §4</a>, <a
+href="https://arxiv.org/pdf/hep-th/0003115">Brower, Mathur and Tan,
+§§1–2</a> and <a href="https://arxiv.org/pdf/hep-th/0603115">Brower,
+Polchinski, Strassler and Tan, §1</a> (reading: passages).</p>
 <p><strong>Why the original implication fails.</strong> Even convergence
 of an observable’s spectral measures does not preserve their lowest
 support points. With <span class="math inline">\(\mathrm d_x\)</span>
@@ -982,7 +1075,9 @@ class="math inline">\(g_0(N)=(48N^2/[(N^2-1)\beta_*])^{1/4}\)</span>;
 the unresolved task is to control the weak-coupling scaling trajectory
 and transfer the physical spectrum to the reconstructed theory. The
 <span class="math inline">\(d=3\)</span> target of STATE keeps its place
-as the case where T3 has no transmutation to perform.</p>
+as the case where T3 has no transmutation to perform. In four dimensions
+a tensor pole provides a candidate excitation. The all-observable
+spectral comparison in §4b is still needed for a lower bound.</p>
 
 </main>
 <footer class="site"><div class="wrap">

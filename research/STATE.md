@@ -49,12 +49,14 @@ comparison and iteration open
 ([argument](../notes/su2-midplane-small-field.md)).
 [Generated-action matching](../notes/four-dimensional-composition.md), the
 [small-volume bridge](../notes/weak-coupling-feshbach-reduction.md),
-continuum reconstruction and surviving physical spectral weight retain
-separate obligations. The [valley correction](../notes/torus-valley-potential.md#4-saturation-and-central-holonomies)
+continuum reconstruction and [spectral weight across all physical
+sectors](../notes/mass-gap-obligations-lattice.md#what-a-tensor-pole-determines)
+retain separate obligations. The [valley correction](../notes/torus-valley-potential.md#4-saturation-and-central-holonomies)
 removes the unsupported global perturbation inference. The committee's
 [10 November assessment of the October pure-gauge submission](https://github.com/yang-mills-group/YM)
 accepts a Wightman scaling limit and leaves infinite-volume uniqueness
-and the physical mass gap open.
+and the physical mass gap open. On 18 November the group still lists
+the 4 and 15 November submissions as under assessment.
 
 Use [dependencies](dependencies.md) for reading order and
 [obstructions](obstructions.md) before reviving a failed route.
