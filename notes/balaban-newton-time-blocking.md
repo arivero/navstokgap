@@ -35,6 +35,12 @@ finite work readings give a separate test at a specified energy, allowing
 charge penetration and nonlinear electrostatic relaxation.
 [Work measurements and the threshold rate](#three-work-readings-and-the-low-energy-limit).
 
+At 77 K a double shutter recorded an argon electron drift of 36 m/s.
+An exterior force comparison bounds both this drift, with a measurable
+allowance for heating, and the displacement of a field-free thermal
+packet at a fixed time. The latter uses one final position per
+electron. [The thermal shutter and displacement tests](#a-thermal-test-with-two-shutters).
+
 **First calculation, 2026-10-27; written derivation, unrefereed.** In
 one spatial coordinate and one time variable, the same discrete Green
 function controls three operations: constructing a Newton polygon on an
@@ -1866,6 +1872,26 @@ For the separately specified $90$ K, $10^4$ m/s preparation the mean
 is below $19.7$ meV, so calibration through $27$ meV would cover more
 than $26\%$. Those settings cannot be substituted for the 1974 pulse.
 
+There is also an upper limit on what calibrating the pulse speed could
+accomplish. For the prepared Maxwell distributions, completing the
+square gives the Laplace transform of $E=\mu g^2/2$,
+$$
+ \int e^{-sE}\,dP_{T,U}
+ =(1+s k_BT)^{-5/2}
+ \exp\!\left[-\frac{s\mu U^2}{2(1+s k_BT)}\right].
+$$
+The first factor is the transform of a gamma law of shape $5/2$ and
+scale $k_BT$. The second is a compound Poisson law with exponential
+jumps of mean $k_BT$ and mean jump count $\mu U^2/(2k_BT)$. Convolution
+and positive mixing over the waveguide cannot increase the maximum
+density of the first law, which is less than $0.31/(k_BT)$. Thus if
+the electrons and gas were at the sample's $303$ K (thesis, Appendix
+VII), the $0.118$–$0.122$ eV band above would carry less than $4.8\%$
+of the signal at **any** pulse amplitude. A force calibration confined
+to that band could not meet the $26\%$ test. The thesis lists electron
+thermal speed among the quantities it did not directly measure
+(pp. 92–93).
+
 The order of the energy and action limits matters. For a supplied
 reduced action $h$, the exterior Schrödinger equation in units of
 $\ell_E$ and $E$ has kinetic coefficient
@@ -1877,6 +1903,301 @@ calibrated energy would exclude a neighbourhood of zero in any trial
 family proved to recover this Newtonian readout there as $h\to0$.
 The fitted zero-energy law supplies neither that finite discrepancy
 nor a value of physical $\hbar$.
+
+### A thermal test with two shutters
+
+**6.1 Sol Max, 2026-11-18.** Pack and Phelps timed electrons between
+two shutters in argon. At $77$ K and reduced electric field
+$|\mathcal E|/n=6.25\,10^{-25}$ V m$^2$ their drift speed was
+$36$ m/s. At $7.81\,10^{-25}$ V m$^2$ it was $44$ m/s. Here $n$ is
+the neutral number density. Dutton attributes these rows to experiment
+and the lowest-field row to a calculation. An older thermal microwave
+determination reports an inferred argon collision probability, while its
+displayed cavity ratios are for nitrogen. The shutter times provide a
+comparison independent of the energy assigned to the Ramsauer minimum.
+[Pack and Phelps (1961)](https://doi.org/10.1103/PhysRev.121.798)
+(abstract, timing method), [Dutton, Table 1.6(b), p. 613](https://srd.nist.gov/jpcrdreprint/1.555525.pdf#page=38)
+(tabulated Pack–Phelps measurements), and
+[Phelps, Fundingsland and Brown, MIT report 211, pp. 6–8](https://hdl.handle.net/1721.1/4853)
+(readout and preliminary argon result).
+
+**Which mechanical measurement would decide the comparison?** Write
+$B(r)=-V(r)>0$ for the binding work of the *moving* pair in the
+elastic central model, with $B(\infty)=0$, and set
+$p(r)=-d\log B/d\log r$. Fix $r_0=0.40$ nm and the dielectric
+$C_4=1.18\,10^{-3}$ eV nm$^4$ measured above. Test the exterior laws
+$$
+ B(r)\ge 0.8 C_4/r^4,\qquad 7/2\le p(r)\le 9/2
+ \quad(r\ge r_0).
+$$
+The slope is $rV'(r)/B(r)$. Thus work and the initial inward
+displacement of a relative coordinate released from rest would
+measure its denominator and numerator independently. The latter is
+the force observable in Newton's 1713 Lemma X, Corollary 4, with the
+reduced mass, clock and finite displacement error retained.
+[Edition comparison and finite readout](newton-insertion-action.md#lemma-x-and-the-measurement-of-initial-force).
+
+These tolerances admit higher multipoles. For the earlier confined
+linear target with $B=\sum_{\ell\ge1}c_\ell/r^{2\ell+2}$ and
+$c_\ell\ge0$, they have a finite test. The slope is the weighted
+mean of $2\ell+2$ and its derivative in $\log r$ is minus the
+variance. For a series convergent in a neighbourhood of
+$r_a=0.36$ nm, it suffices to measure
+$$
+ B(r_a)/B(r_0)\le(r_0/r_a)^{9/2}\simeq1.607 .
+$$
+Indeed, the log secant majorizes every $p(r)$ outside $r_0$, and
+$c_1=C_4$ supplies the lower work and slope. The first three Jiang
+coefficients quoted above give a ratio about $1.56$ when truncated.
+They do not bound the omitted response. Applying two static works to
+a free electron requires independent control of the material response
+during passage. A penetrating, nonlinear or delayed target need not
+have this positive series.
+
+**An exterior rate at every energy.** Set $E_c=50$ meV,
+$K_*=\sqrt{2C_4/\mu}$ (units m$^3$/s), and $x=E/E_c$.
+For every $E>0$ a subset of the escaping elastic trajectories has rate
+$$
+ K_A(E)=g\int_A(1-\cos\chi)\,d\sigma \ \ge\ K_*\,c(E),\qquad
+ c(E)=\begin{cases}0.27,& x\le1,\\0.15\,x^{-3/2},&x>1.\end{cases}
+$$
+Here $g=\sqrt{2E/\mu}$ and $d\sigma$ is the impact-area measure.
+The high-energy bound is needed since weakly scattered electrons can
+contribute disproportionately to the drift.
+
+Use $E_b=\min(E,E_c)$, $y=E/E_b$ and $\ell_b=(C_4/E_b)^{1/4}$.
+Label the turning radius by $s=B(r)/E_b$. Take four adjacent intervals
+with endpoints $0.16,0.25,0.36,0.49,0.64$. They all lie beyond
+$r_0$, since $B(r_0)\ge36.8$ meV and $0.64E_b\le32$ meV.
+At the turn $b^2=r^2(1+s/y)$, and
+$$
+ -\ell_b^{-2}\frac{db^2}{ds}
+ =\frac{r^2}{\ell_b^2}
+ \left[\frac{2}{p s}+\frac{2/p-1}{y}\right]
+ \ge\sqrt{0.8/s}\left[\frac{4}{9s}-\frac59\right].
+$$
+The right side is positive up to $s=0.64$, including the path in
+from infinity. On the four intervals its integrals exceed
+$\sqrt{0.8}$ times $0.333,0.185,0.100,0.047$, respectively.
+For the angle quadrature above put $t=r_{\min}/r$ and
+$k=s/(y+s)$. The work at radius $r_{\min}/t$ is between
+$t^{9/2}$ and $t^{7/2}$ times the turning work. Hence $P(t)$ is
+between $k(1+3t^2/4)$ and $k(1+5t^2/4)$. These chord bounds
+follow by writing $(1-z^a)/(1-z)$ as the mean of $a u^{a-1}$ on
+$[z,1]$, with $z=t^2$ and $a=7/4,9/4$. Jensen's lower bound and the
+upper chord for $(1-P)^{-1/2}$ give
+$$
+ \frac{1}{\sqrt{1-11k/8}}
+ \ \le\ 1+\frac{\chi}{\pi}
+ \ \le\ \tfrac12\left[(1-k)^{-1/2}+(1-9k/4)^{-1/2}\right].
+$$
+Here $k\le0.64/1.64$ keeps $\chi<3.4$ rad. At $y=1$ the lower
+angles exceed $0.34,0.54,0.79,1.10$ rad. At $y\ge1$ they exceed
+$0.29,0.43,0.57,0.70$ rad divided by $y$, using
+$\chi\ge(11\pi/16)s/[(1+s)y]$. For each of these lower angles $u$,
+$1-\cos(u/y)\ge(1-\cos u)/y^2$. The upper angle stays far enough
+from a full turn for the same lower bound on the loss. Multiplying
+the four area bounds by their angular losses and by
+$\pi g\ell_b^2=\pi K_*\sqrt y$ gives the two stated constants.
+The potential inside $r_0$ does not enter the calculation.
+
+**Carrying the orbits through a finite measuring field.** Use dilute
+independent binary encounters, a spatially homogeneous stationary
+electron distribution $f$, and Maxwell target velocities at temperature
+$T$ in the gas frame. Other collision channels may be included if
+they conserve the electron population and have nonnegative entropy
+dissipation relative to the same thermal equilibrium. Orient $z$ along
+the electric force, write $v_d\ge0$ for the electron drift, and average
+over independent electron and target velocities. With
+$\mathbf g=\mathbf v_e-\mathbf v_a$ the finite-field test is
+$$
+ K_*\frac{\mu}{e}\frac{v_d}{|\mathcal E|/n}
+ \ \le\ \mathcal B_f,\qquad
+ \mathcal B_f=\left\langle\frac{\mu}{k_BT c(E)}
+ \max\!\left(g_z^2,\frac{g_x^2+g_y^2}{2}\right)\right\rangle_f .
+$$
+This dimensionless velocity moment can be measured independently
+of the scattering data. It includes the fast tail. A mean energy
+alone would leave its fifth-power speed weight unbounded.
+
+To see why finite target recoil is included, scale the electron and
+relative velocities to unit thermal component variance,
+$X=\sqrt{m_e/(k_BT)}\,\mathbf v_e$ and
+$G=\sqrt{\mu/(k_BT)}\,\mathbf g$. In the equilibrium pair measure
+$\mathbb E_0[G\mid X]=aX$, $a=\sqrt{\mu/m_e}$. Along a collision
+the centre-of-mass velocity and $|G|$ are fixed. Put $h=f/f_0$,
+where $f_0$ is the Maxwell electron density normalized to one.
+For the annular collisions write
+$$
+ \mathcal D_A(u,w)=\tfrac12\,\mathbb E_0\int_A g\,d\sigma\,
+                 (u'-u)(w'-w).
+$$
+The equilibrium incoming and outgoing measures agree by elastic time
+reversal. The angular collision generator sends $\psi=G_z/K_A(E)$
+to $-G_z$, so $\mathcal D_A(\psi,h)=a\langle X_z\rangle_f$.
+The stationary entropy balance gives the total dissipation per density
+as $e|\mathcal E|v_d/(n k_BT)$. It uses the field work and the usual
+Maxwell detailed-balance identity, assuming finite dissipation and
+no boundary entropy flux.
+[Bisi, Cañizo and Lods, Eqs. (1.17)–(1.19), (3.2)](https://arxiv.org/pdf/1405.0366)
+(reversible collision form; the mass factors here follow from the
+elastic pair variables).
+
+Cauchy–Schwarz with the logarithmic mean
+$(h'-h)/(\log h'-\log h)\le(h+h')/2$ gives
+$$
+ a^2\langle X_z\rangle_f^2\ \le\
+ \frac{e|\mathcal E|v_d}{n k_BT}\,
+ \tfrac12\left\langle\int_A g\,d\sigma\,(\psi'-\psi)^2\right\rangle_f .
+$$
+In this last expectation the bath remains Maxwellian. At a fixed
+$G$ the half angular integral is a convex combination
+of $G_z^2/K_A$ and $(G_x^2+G_y^2)/(2K_A)$, because the azimuth is
+uniform and the trace of the angular jump tensor for $G$ is
+$2|G|^2K_A$. Substitution gives the finite-field test. The argument
+permits truncation when the displayed integrals converge.
+
+For the first measured shutter row the left side is about $6.67$,
+using $\mu\simeq9.11\,10^{-31}$ kg and $K_*\simeq2.04\,10^{-14}$
+m$^3$/s. At $77$ K a Maxwell relative law gives $\mathcal B_0<6.0$.
+Its angular maximum has mean $(1+1/\sqrt3)/3$ on the unit sphere.
+Weighting by $|G|^2/3$ gives the gamma energy law
+$dP_T=t^{3/2}e^{-t}\,dt/\Gamma(5/2)$, $t=E/(k_BT)$. For
+$z=E_c/(k_BT)>7.53$, the tail integral is
+$$
+ \int_{t>z}(t/z)^{3/2}\,dP_T
+ =\frac{e^{-z}(z^3+3z^2+6z+6)}{\Gamma(5/2)z^{3/2}}<0.013 .
+$$
+Thus $\int dP_T/c(E)<1/0.27+0.013/0.15<3.80$ and the angular
+maximum gives $\mathcal B_0<6.0$. If the driven laws approach
+equilibrium with uniformly integrable fifth speed moments as the
+field vanishes, averaging the angular combination *before* taking
+its maximum gives $1/3$ for either component. The zero-field
+density-normalized mobility is then at most
+$3.80e/(\mu K_*)<3.3\,10^{25}$ (V m s)$^{-1}$. The two measured
+finite-field ratios are $5.76\,10^{25}$ and $5.63\,10^{25}$ in
+these units. For a comparison at finite field, an independently
+bounded $\mathcal B_f\le6.2$ with a corrected measured left side above
+$6.2$ would exclude the stated mechanical model at the actual field.
+The shutter rows do not supply this velocity moment. Finite-field
+heating, timing, wall losses, density and the exterior work remain
+physical tests. The two measured mobilities are close at these
+fields, but their agreement does not bound a rare fast tail.
+
+**A field-free readout with fixed length and time resolution.** A
+separate preparation eliminates the driven velocity moment. Release
+an electron ensemble at a fixed origin with an independent Maxwell
+velocity in a field-free uniform Maxwell gas at the same $T$. For the
+reversible velocity process let $L$ be the nonnegative collision
+operator per unit density, so the velocity semigroup is $e^{-ntL}$.
+For an electron test function $u$, the same pair identity and ordinary
+Cauchy–Schwarz give
+$$
+ a^2|\langle X_z,u\rangle_0|^2
+ \le \left(\int dP_T/K_A\right)\langle u,Lu\rangle_0 .
+$$
+Indeed $\mathcal D_A(\psi,\psi)=\int dP_T/K_A$, and the other
+reversible channels add nonnegative forms. The spectral representation
+of the stationary velocity correlation then gives, for every finite
+lag $\tau$,
+$$
+ \mathbb E[(z(\tau)-z(0))^2]
+ \le \frac{2\tau k_BT}{n\mu K_*}\int\frac{dP_T}{c(E)} .
+$$
+Here the finite-time integral of $(\tau-s)e^{-ns\lambda}$ is at
+most $\tau/(n\lambda)$ for each positive spectral value $\lambda$.
+The form bound controls the inverse on the observed velocity,
+without requiring a spectral gap.
+[Pavliotis, §2, Eqs. (2.3)–(2.8)](../docs/Pavliotis_GreenKubo_2010.md)
+(Green–Kubo and the Poisson equation). These steps use a stationary
+Markov velocity law for completed independent encounters.
+
+At $77$ K and $n=10^{23}$ m$^{-3}$ the coefficient multiplying
+$2\tau$ is below $2.2$ m$^2$/s. Take the lag to be $1.000$
+microsecond with an independent timing error at most $5$ ns, and bound
+the rms initial longitudinal spread and final position error by
+$10$ micrometres each. The observed rms displacement is then below
+$2.13$ mm at the nominal material inputs. One may cap the squared
+displacement at $(8\ {\rm mm})^2$ and score zero for an electron
+absorbed at a wall or missing from the detector, normalizing to all
+launches. This can only decrease the readout if a survivor follows
+the field-free law until detection. The test uses the two masses,
+$k_BT$, $C_4$, $r_0$, $E_c$, number density, and the stated length
+and time calibrations. Preparation, fields, count backgrounds and
+input uncertainties must enter the experimental bounds. Rhymes and
+Crompton measured the cooling of the surviving population at absorbing
+walls in argon. Their decay readout differs from the position moment
+per launched electron used here.
+[Rhymes and Crompton (1975), abstract and §1](https://doi.org/10.1071/PH750675)
+(apparatus and boundary effect).
+
+**Which small actions would a displacement excess exclude?** Take a
+finite gas of $N$ distinguishable targets and one electron with a
+supplied scalar Schrödinger dynamics. Keep this mechanical system fixed
+as the trial reduced action $h$ varies. Mass-scale each position as
+$q_i=\sqrt{m_i/m_e}\,x_i$ with conjugate momentum
+$p_i^*=\sqrt{m_e/m_i}\,p_i$. Use the fixed units $L_*=1$ mm and
+$\tau_*=1$ microsecond for $Q=q/L_*$, $P=p^*\tau_* /(m_e L_*)$,
+and let $\epsilon=h\tau_* /(m_e L_*^2)$. The scaled Hamiltonian has
+kinetic energy $|P|^2/2$. Suppose its potential has globally Lipschitz
+gradient with dimensionless constant $\Lambda$; for a smooth physical
+potential in the $q$ coordinates this can be taken to be
+$(\tau_*^2/m_e)\sup\|\nabla_q^2 V\|$. This is a regular-core class.
+
+Specify the initial classical phase-space law as a fixed probability
+with finite second moments convolved with a centered Gaussian of
+covariance $\sigma^2 I$ in the scaled coordinates. For example
+$\sigma=10^{-3}$ corresponds to $1$ micrometre and $1$ m/s for the
+electron. Include this variance within the prescribed thermal and
+position spreads. For $\epsilon\le2\sigma^2$, use coherent packets of
+variance $\epsilon/2$ in each scaled coordinate, mixing their centres
+with the same probability convolved with the Gaussian of covariance
+$(\sigma^2-\epsilon/2)I$. The Wigner law of the mixture is exactly the
+fixed initial law for every such $h$. This specifies how the preparation
+transforms. A single pure packet of adjustable physical size would
+describe a different experiment. Coherent mixtures and their
+quantum–classical quadratic cost are standard.
+[Golse and Paul, §2, Definitions 2.1–2.2 and Theorem 2.4](https://arxiv.org/pdf/1510.06681)
+(construction and estimates).
+
+For clarity, pair each prepared packet with a classical initial point
+drawn from its own Gaussian Wigner law. With $d=3(N+1)$ the combined
+mean squared position and momentum error starts at $2d\epsilon$.
+The Lipschitz packet estimate bounds this cost at time $t$ by
+$2d\epsilon\exp[(1+\Lambda)t/\tau_*]$. In the drift substep its
+derivative in scaled time is at most the cost, and in the kick substep
+it is at most $\Lambda$ times the cost, by Cauchy–Schwarz for the full
+position and momentum vectors. The same bound therefore holds against
+the corresponding classical polygon on every partition, and passes
+to the finite-time flow.
+[Lipschitz lift, §§3–4](lipschitz-certificate-quantum-lift.md)
+(product convergence and packet estimate). The final position map
+$z\mapsto\min(|z|,8\ {\rm mm})$ is 1-Lipschitz. Coupling the
+position outcome to the classical coordinate bounds the difference
+of their rms readouts by $L_*\sqrt{2d\epsilon}\,
+\exp[(1+\Lambda)t/(2\tau_*)]$. A position-dependent final detection
+efficiency at most one only lowers the observed rms if missing counts
+are scored zero. Earlier interactions with a detector or boundary
+must be included in the dynamics or its error.
+
+Let $\delta_{\rm gas}$ (length) bound any excess of the finite
+classical gas over the binary-gas rms prediction at this preparation
+and clock. If the experimental lower rms exceeds $2.13$ mm plus
+$\delta_{\rm gas}$ and other input uncertainties by a length
+$\delta>0$, the trial family obeys
+$$
+ h\ \ge\ \min\!\left\{
+ \frac{2m_eL_*^2\sigma^2}{\tau_*},\
+ \frac{m_e\delta^2}{2d\tau_*}
+ e^{-(1+\Lambda)t_{\max}/\tau_*}\right\},
+ \qquad t_{\max}=1.005\ {\rm microseconds}.
+$$
+Both terms have action units. The first sets the range of the common
+preparation. The second follows from its readout. The finite-gas error
+requires separate control of simultaneous encounters, boundaries and
+the material response. No positive $\delta$ has been measured for this
+preparation. The result supplies the small-action passage for the stated
+regular system and leaves the independent physical necessity premise open.
 
 ## 7. Consequence for STATE
 
@@ -1897,7 +2218,8 @@ Mott exchange also supplies that dynamical law. The physical premise
 that would force a positive action for central motion in general
 remains open. Three equilibrium work readings control nonlinear static
 screening and charge penetration. The two-pulse test covers delayed
-motion in its stated model. The measured microwave decay is small
-enough for a test if a calibrated finite-energy rate covers a known
-fraction of its initial signal. The material onset and that independent
-velocity calibration for argon remain open.
+motion in its stated model. The thermal shutter test bypasses the
+absolute microwave boost calibration. Its remaining premises are the
+exterior binding work during passage and the driven velocity moment.
+The field-free, finite-time position measurement dispenses with the
+latter and has yet to be matched to data at the stated preparation.

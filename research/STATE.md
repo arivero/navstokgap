@@ -18,9 +18,12 @@ compares an exterior force and a detector aperture with measured loss.
 [Three finite work readings and the low-energy rate](../notes/balaban-newton-time-blocking.md#three-work-readings-and-the-low-energy-limit)
 allow static charge penetration and nonlinear relaxation. The outward
 orbits retain a momentum-transfer signal as their angular momenta vanish.
-McPherson measured the initial microwave decay. Does an independently
-calibrated finite-energy rate cover enough of that pulse's velocity
-distribution to decide the comparison?
+The [77 K double-shutter and field-free tests](../notes/balaban-newton-time-blocking.md#a-thermal-test-with-two-shutters)
+compare the exterior work with a measured drift and a fixed-time
+position readout. Can independent argon measurements bound the binding
+work and its slope outside $0.40$ nm during free passage? The shutter
+test also needs the driven velocity moment. An excess in the field-free
+test would bound a trial action in the stated finite-gas model.
 Earlier apparatus tests use [three positions and two ions](../notes/newton-insertion-action.md),
 an [electron and shutter](../notes/galileo-two-path-interference.md#two-slits-and-a-position-detector)
 and a [clocked grating](../notes/groupoid-quantum-newton-states.md#9-action-calibration-with-a-clocked-grating).
