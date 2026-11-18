@@ -9,6 +9,10 @@ The first priority is an explanation of positive physical action from the
 central-force trajectory limit itself. Newton connects [Lemma X's force
 measurement](../notes/newton-insertion-action.md#lemma-x-and-the-measurement-of-initial-force)
 to the orbital force rule in Book I, Proposition VI (1713).
+For a [Kepler pair selected by binding energy](../notes/newton-insertion-action.md#a-radius-count-beyond-the-kepler-turning-point),
+can a calibrated detector count pairs beyond the outer turning radius?
+The [bare lithium fraction from helium-6](../notes/newton-insertion-action.md#a-stronger-coulomb-attraction-and-the-measured-bare-lithium-fraction)
+tests the work an outgoing beta can supply to a bound electron.
 For [neutrons returning under gravity](../notes/dirichlet-wall-impulse.md#counting-turning-heights-from-neutron-positions),
 does a height measurement at an independently randomized time assign a
 negative count to any interval of turning heights?

@@ -11,6 +11,8 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Mechanics investigation
 
+- [Helium-6 charge readout](CouratinEtAl_Helium6_ChargeReadout.md) records
+  the bare lithium count, nuclear recoil and the authors' beta correction.
 - [Neutron heights above a mirror](NeutronGravity_HeightMeasurements.md)
   records direct track counts and the readout used in the magnified profile.
 - [Polonium-212 and lead-208](Polonium212_AlphaEscape.md) pairs the emitted

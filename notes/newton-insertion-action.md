@@ -38,6 +38,10 @@ initial energy spread and test Newtonian motion from final speeds alone.
 Two measured hydrogen fragment spectra already test how the capture
 process samples the orbit. [Four central-force releases](#four-central-force-releases-measured-by-final-speeds)
 and [hydrogen fragment counts](#what-two-hydrogen-fragment-spectra-already-test).
+For an inverse-square attraction, a binding-energy tag and one radius
+count distinguish a factor of two in trial action. The measured bare
+lithium fraction after helium-6 decay tests how often another force
+must supply work when the central attraction increases.
 
 This treatment integrates the constant-force derivation and its receding-centre
 correction with the controlled reunion. Written model/coordinator checks are
@@ -240,6 +244,276 @@ independent inspection would require a source model of their own.
 The propagator equality above applies to the prescribed uniform fields.
 This reciprocal realization establishes classical endpoint equality for
 the stated initial preparation.
+
+## A radius count beyond the Kepler turning point
+
+**6.1 Sol Max, 2026-11-18.** Prepare a bound pair in the attractive
+potential $-K/r$. Select it by the mechanical energy released when it
+forms. A single count in a radial annulus separates two reduced actions
+that pass the same energy cut. The separation holds at every observation
+time, with arbitrary angular momentum in the accepted band. Newton's
+initial displacement test enters through the calibration of $K$.
+
+**Preparation and detector.** Let $m$ be the reduced mass and $b$ a
+length fixed by a ruler. Set $B=K/(2b)$ and $\delta=B/1000$. The energy
+zero is a separated pair at rest. Accept binding energies in
+$[B-\delta,B+\delta]$. One operational specification is three-body
+recombination. Measure the incoming kinetic energy, the departing
+third body's kinetic energy and the centre-of-mass recoil of the
+surviving pair. Energy conservation gives the binding energy by
+subtraction, after accounting for remaining interaction energy, missing
+radiation and work by the apparatus. The resolutions and those corrections
+must put the *retained* pair in the stated band. Time of flight needs
+the flight lengths, times and constituent masses. A spectral line
+converted to energy with a trial action would change the preparation.
+
+Calibrate the relative force by acceleration and separation in independent
+shots, $K=mr^2|{\ddot{\boldsymbol r}}|$, in the regime of the test.
+Hold the pair in that field until an external gate of duration
+$\Delta t>0$ centred at $t_g>\Delta t/2$. Set both times by a laboratory
+clock. The radius counter answers whether the observed separation lies
+between $3b$ and $8b$, with radial error at most $\sigma=b/10$.
+For example, fix the ruler at $b=52.95$ pm and fix the clock at
+$t_g=10$ ps, $\Delta t=1$ ps, independently of the trial action.
+Equivalently, its effect lies between the position projections for the
+annulus contracted and expanded by $\sigma$ at each edge. This is a
+specific detector calibration, including disturbance before the gate.
+Use one reading per retained pair, with all tags in the denominator.
+The bounds below hold throughout the gate. They permit an independent
+distribution of exposure times within it. The masses, incoming and
+outgoing energies, $K$, $b$, the energy and position resolutions, and the
+clock settings are the dimensional inputs. Neither the binding-energy
+selection nor the annulus refers to an atomic length calculated from
+$\hbar$. The position resolution is a physical requirement of the proposed
+experiment.
+
+**Two actions through the same preparation.** Write $a$ for the trial
+reduced action in the spinless Coulomb Hamiltonian
+$H_a=-a^2\nabla^2/(2m)-K/r$. Compare $a_0=\sqrt{mKb}$ and $a_0/2$.
+The established binding energies and radial laws use
+$b_a=a^2/(mK)$ and $B_n=K/(2n^2 b_a)$. At $a_0$ the cut admits only
+$n=1$. At $a_0/2$ it admits only $n=2$, including both angular
+subspaces. The state is stationary within either band. A spherical
+counter has zero interference between different angular subspaces.
+[Fitzpatrick, *Hydrogen Atom*, bound energies and normalized radial
+functions](https://phys.libretexts.org/Bookshelves/Quantum_Mechanics/Introductory_Quantum_Mechanics_%28Fitzpatrick%29/08%3A_Central_Potentials/8.03%3A_Hydrogen_Atom)
+(passage).
+
+For $a_0$ the probability outside $yb$ is
+$S_1(y)=e^{-2y}(1+2y+2y^2)$. For $a_0/2$ use $x=r/b_{a_0/2}=4r/b$.
+Integrating the tabulated $2s$ and $2p$ radial densities over the
+exterior gives
+
+$$
+ S_{2s}(x)=e^{-x}(1+x+x^2/2+x^4/8),\qquad
+ S_{2p}(x)=e^{-x}(1+x+x^2/2+x^3/6+x^4/24).
+$$
+
+For $x>2$ the larger tail is $S_{2s}$. Thus even a detector with an
+unknown response in both edge strips gives the following disjoint
+probabilities for the registered annulus:
+
+$$
+ \begin{aligned}
+ a=a_0:\quad &p_{\rm ann}\ \ge S_1(3.1)-S_1(7.9)>0.05,\\
+ a=a_0/2:\quad &p_{\rm ann}\ \le S_{2s}(11.6)<0.025 .
+ \end{aligned}
+$$
+
+The projection bounds make this comparison valid even for a
+non-spherical response inside the edge strips. The smaller-action $2s$
+state also has the same mean radius, $3b/2$, as the larger-action $1s$
+state. The count resolves information lost in the first moment.
+Both energy filters must have nonzero yield. No assumption about their
+relative yields or the populations of the $2s$ and $2p$ states enters.
+
+**A lower bound for every trial action.** For Newtonian relative motion
+the positivity of kinetic energy gives $r\le K/(B-\delta)$ at every
+instant. Even the expanded annulus starts beyond this radius. The
+conclusion tolerates any collision continuation conserving the admitted
+energy. For quantum motion let $P$ be the energy-band projection and let
+$f$ rise linearly from zero at $R_0=5b/2$ to one at $R_1=29b/10$.
+Write $w=R_1-R_0=2b/5$, $D=B-K/R_0=B/5$, and $X=\|fP\|$. The
+one-cutoff localization identity applied to any unit $\psi=P\psi$ gives
+
+$$
+ D\|f\psi\|^2
+ \le \operatorname{Re}\langle f\psi,f(H_a+B)\psi\rangle
+         +\frac{a^2}{2mw^2}
+ \le \delta X^2+\frac{a^2}{2mw^2}.
+$$
+
+Here kinetic energy after multiplication by $f$ is nonnegative,
+$|\nabla f|\le1/w$, and $(H_a+B)\psi$ is still in the band. These
+statements apply to the usual self-adjoint Coulomb Hamiltonian in
+three dimensions. Taking the supremum and using $p_{\rm ann}\le X^2$
+also covers mixtures and arbitrary observation times.
+[Simon, Lemma 3.1](https://www.numdam.org/item/AIHPA_1983__38_3_295_0.pdf)
+(localization identity) and [the finite barrier estimate](balaban-newton-time-blocking.md#a-clock-on-escape-through-a-central-force-barrier)
+(passage). In particular,
+
+$$
+                 a^2\ \ge\ 2m w^2(D-\delta)\,p_{\rm low}.
+$$
+
+Use a lower confidence bound $p_{\rm low}$ on the absolute count, after
+subtracting false tags and detector error beyond the guard. If at most
+$\eta$ of a quantum state's energy probability is outside the band,
+projection and renormalization can change the count by at most
+$\sqrt\eta$. Subtract this too. With a corrected $p_{\rm low}=0.04$,
+$a>0.035\sqrt{mKb}$. All lengths and times stay fixed as a mathematical
+mesh shrinks. The premise requiring experimental evidence is the joint
+binding-energy certificate and exterior count on the same preparation.
+For this lower bound alone the inner potential can even change. It
+suffices that the same separated-pair energy zero and the inequality
+$U+B\ge D$ hold in every admitted channel on $r\ge R_0$ and that the
+local kinetic form is the one used above. The exact two-action
+probabilities use the Coulomb law throughout.
+Stodolna et al. imaged an excited hydrogen Stark state using a static
+electric field and photoionization. Their detector measures a continuum
+projection carrying the nodal pattern. Inferring an absolute bound-pair
+annulus probability would require a separate response calibration.
+[Stodolna et al., *Physical Review Letters* **110**, 213001](https://doi.org/10.1103/PhysRevLett.110.213001)
+(abstract).
+
+There is also a check with a familiar observable. Write $A=K/(2|E|)$
+for the semimajor axis of an ellipse of energy $E<0$ and $J$ for its
+angular momentum. The eccentric-anomaly time measure gives the orbit
+mean $\overline{r^2}=(5A^2-3AJ^2/(mK))/2$. At the same energy the
+hydrogenic $1s$ moment is $3A^2$, one fifth above the maximum
+$5A^2/2$ over Newtonian ellipses. This version uses an orbit average.
+The annulus bound above holds at each phase.
+[Savransky, Cady and Kasdin, §3](https://arxiv.org/pdf/1012.1526)
+(Kepler time measure) and [Fitzpatrick, radial expectation values](https://phys.libretexts.org/Bookshelves/Quantum_Mechanics/Introductory_Quantum_Mechanics_%28Fitzpatrick%29/08%3A_Central_Potentials/8.03%3A_Hydrogen_Atom)
+(passages).
+
+## A stronger Coulomb attraction and the measured bare lithium fraction
+
+**6.1 Sol Max, 2026-11-18.** The decay of one-electron
+$^{6}{\rm He}^{+}$ increases the nuclear charge from $2e$ to $3e$.
+Couratin and collaborators measured a bare $^{6}{\rm Li}^{3+}$ fraction
+of $0.02339\pm0.00036$ by detecting beta particles and timing the daughter
+ions. It is an actual escape count in a system with a stronger final
+attraction. Their quantum calculation gives $0.02322$ for their acceptance.
+The classical question is how much energy an escaping electron can
+receive from the emitted beta and other forces during the change.
+[Couratin et al., Eqs. (1)–(5)](https://in2p3.hal.science/in2p3-00709325v1/document#page=4)
+(passages) and [apparatus, cuts and energy calibration](../docs/CouratinEtAl_Helium6_ChargeReadout.md).
+
+Let $k=e^2/(4\pi\epsilon_0)$, $Z=2$, and $B>0$ be the initial electron
+binding energy in $-Zk/r$. Write $\mu_i,\mu_f$ for the reduced electron
+masses and $\boldsymbol p$ for the initial relative momentum. Work in
+the parent centre-of-mass frame. Write $\boldsymbol q$ for the impulse
+from the nuclear decay and $\boldsymbol V=\boldsymbol q/M_f$, where
+$M_f$ is the daughter nuclear mass. If the spectator receives no
+impulse at the vertex, its final relative momentum is
+$\boldsymbol p-\mu_f\boldsymbol V$. This follows by subtracting its
+share of the total recoil momentum. It accounts for the change of
+reduced mass even on an orbit with large initial speed. For a point
+charge switching instantaneously the new relative energy is
+
+$$
+ \begin{aligned}
+ E_f={}&-(1+1/Z)B+\frac{|\boldsymbol V|^2}{2}(\mu_f+d^{-1})
+           -\frac d2\left|\boldsymbol p+\frac{\boldsymbol V}{d}\right|^2,\\
+ d={}&(1/Z-g)/\mu_i,\qquad
+ g=\mu_i/\mu_f-1=\mu_i(1/M_f-1/M_i).
+ \end{aligned}
+$$
+
+This follows by substituting $Zk/r=B+|\boldsymbol p|^2/(2\mu_i)$ in
+the final energy. The daughter is lighter and $\mu_i/M_f<10^{-4}$, so
+$0\le g<10^{-4}$. The authors give a maximum nuclear recoil of
+about $1.4$ keV. Even allowing $1.5$ keV, the mass-six daughter's
+ratio $\mu_f/M_f<9.3\times10^{-5}$ gives
+$\mu_f|\boldsymbol V|^2/2<0.14$ eV. Its multiplier in the
+energy ceiling is $1+(1+g)/(1/Z-g)<3.001$. At $B\ge54$ eV
+every post-switch trajectory is more than $80$ eV below escape,
+irrespective of the direction or speed at release. The quoted
+experimental binding energy is $54.4$ eV. A charge-state designation
+alone leaves excited parents possible.
+
+**Finite time to uncover the daughter charge.** Allow the emitted beta
+charge to occupy an outgoing spherical shell of arbitrary increasing
+radius $L(t)$, initially zero, around the coasting daughter. Its
+potential energy with the spectator is $k/\max(r,L)$. The reference
+potential is therefore
+
+$$
+ U(r,t)=-\frac{(Z+1)k}{r}+\frac{k}{\max(r,L(t))},
+ \qquad \partial_t U=-\frac{k\dot L}{L^2}\,{\bf1}_{r<L}\le0 .
+$$
+
+The sign holds also for a positive mixture of expanding shells.
+In the daughter frame let $W$ be the accumulated signed work on the
+relative motion by all forces in excess of this reference, including
+any subsequent acceleration of the centre. At the instant of recoil
+the screening still gives the old potential. For
+$E_R=\mu_f V_*^2/2$, $|\boldsymbol V|\le V_*$ and initial kinetic
+energy $T_i=|\boldsymbol p|^2/(2\mu_i)$, the energy available at
+any later escape is bounded above by
+
+$$
+             -B+E_R+gT_i+2\sqrt{(1+g)E_R T_i}+W .
+$$
+
+This sign follows along the actual path and allows the electron to move
+throughout the field change. A measured outgoing beta direction defines
+an individual nonspherical force which belongs in $W$. Averaging its
+source over directions before solving for a trajectory changes the
+escape problem.
+
+There is a bound even for very eccentric initial orbits whose periapsis
+speed can be arbitrarily large. Assume the nuclear decay samples time
+on an initial Kepler orbit uniformly, conditional on its energy and
+eccentricity. Acceptance or preparation errors in this premise have to
+be included when applying the bound. Take $B\ge54$ eV,
+$E_R\le0.14$ eV and $W\le20$ eV. If $T_i/B\le37$, the sum of the
+two kinetic terms divided by $B$ is at most
+$0.0037+2\sqrt{1.0001\times37\times0.14/54}<0.624$.
+Escape requires at least $1-20.14/54>0.627$.
+Hence $T_i>37B$. With $A=Zk/(2B)$ this requires
+$r/A=2B/(B+T_i)<1/19$. For eccentric
+anomaly $u\in[-\pi,\pi]$ the orbit has $x=r/A=1-e\cos u$ and time
+measure $x\,du/(2\pi)$. For $0<s<1$, $x\le s$ implies
+$|u|\le\arccos(1-s)$. On that interval the accepted time density
+is at most $s/(2\pi)$. Thus
+
+$$
+ \Pr(r/A\le s)\le \frac{s}{\pi}\arccos(1-s)
+       \le \frac{s}{\pi}\sqrt{\frac{2s}{1-s/2}} .
+$$
+
+The last inequality uses $\arcsin y\le y/\sqrt{1-y^2}$.
+The bound is uniform in orbital orientation, eccentricity and recoil
+direction. [Savransky, Cady and Kasdin, §3](https://arxiv.org/pdf/1012.1526)
+(Kepler time measure). At $s=1/19$ the bound is at most
+$2/(19\pi\sqrt{37})<0.0056$.
+Even taking the reported fraction two quoted standard errors below
+its centre, over $0.017$ of the sample would require more than
+$20$ eV of additional work. Subtract from this margin any upper
+bounds on weakly bound parents, phase selection and false bare-ion
+tags beyond the reported corrections.
+
+The experimental inputs here are electronic binding energy, nuclear
+recoil energy and the daughter and electron masses; the laboratory
+readout uses beta energy, ion flight distance and time, and electrode
+voltages. The Coulomb coefficient cancels from the final fraction.
+Couratin et al. estimated the finite-duration correction with a
+spherical beta wave and a time-dependent quantum calculation. That
+estimate cannot independently upper-bound the Newtonian work of an
+individual outgoing beta. The observed fraction sets a numerical
+requirement on that work under the stated preparation assumptions.
+
+The binding-energy tag also matters for action dilation. In an ideal
+instantaneous switch at zero recoil, a Coulomb ground preparation
+specified only as $1s$ and a final readout of bound versus free have
+exactly the same probabilities for every $a>0$. In the coordinate
+$r/[a^2/(\mu_i Zk)]$ the initial wave function and the final continuum
+projector are both independent of $a$. Changing $a$ changes the
+initial binding energy as $a^{-2}$. This ambiguity is removed by a
+mechanical energy tag. The measured helium fraction and the calibrated
+Kepler radius count above test different premises.
 
 ## Four central-force releases measured by final speeds
 
@@ -1751,3 +2025,8 @@ Four central-force releases now give a test using mechanical energy
 variances and third moments. The hydrogen fragment counts constrain
 selective capture, while the four unconditioned release measurements
 needed for the action bound remain open.
+For an inverse-square attraction a mechanically tagged binding energy and
+a count beyond the outer turning radius would give a positive action
+bound at any gate time. The helium-6 daughter counts already constrain
+how frequently a trajectory explanation would need additional electronic
+work. Its magnitude in individual beta encounters remains open.
