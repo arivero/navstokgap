@@ -9,6 +9,14 @@ finite-time arrival and waiting branches occur for $\beta>2$. Local action tends
 to zero in both regimes. These are classical existence and uniqueness statements,
 with no positive action premise.
 
+For a continuous outward central force, the departure of one moving orbit
+from its inertial tangent at successive half-times determines whether a
+body initially at rest at the centre can leave. The short-time force
+coefficient converges uniformly over bounded-speed orbits in both cases.
+Allowing the force to change sign gives two explicit laws with the same
+moving positions, velocities and accelerations at all those times and
+opposite answers about rest.
+
 The polygon proof uses standard stability, consistency and Gronwall arguments.
 The arrival test is a direct energy calculation, not the general first-order
 Osgood criterion. Teschl [@TeschlODE2012, §2.7, pp.54--56 and Problem 2.25,
@@ -338,6 +346,162 @@ The stronger range $1<\beta\le2$ above uses the conservative Newton
 structure and energy; failure of that first-order sufficient test is
 not a proof of nonuniqueness.
 
+### What one moving orbit determines about rest
+
+**6.1 Sol Max, 2026-11-18.** In the 1713 *Principia*, Lemma X,
+Corollary 4 relates initial displacement divided by time squared to
+force. Proposition VI invokes it for the departure from an orbital
+tangent. The following is a modern question about the same quadratic
+coefficient. Can it converge uniformly under refinement even though a
+body at rest has several continuations? We use a diameter orbit.
+Proposition VI's geometric ratios are defined at positive radius.
+[Newton, 1713, Book I](https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082)
+(Lemma X and Proposition VI, passages).
+
+Write the force as $m\mathbf a(q)$, with $m>0$. On a compact region
+$K$ where $\mathbf a$ is continuous, let $\omega_K$ be its modulus of
+continuity. Every exact orbit staying in $K$ at speed at most $V$ obeys
+
+$$
+ \left|\frac{2[q(t+s)-q(t)-s\dot q(t)]}{s^2}
+                 -\mathbf a(q(t))\right|\le \omega_K(Vs). \tag{D1}
+$$
+
+The quotient averages the acceleration with the unit-mass weight
+$2(s-u)/s^2$ on $0\le u\le s$. This is the integral form of
+Newton's equation in (1). Thus even for a family of trajectories the
+coefficient converges uniformly, with the same bound on every inserted
+cell of duration $s$.
+
+Now take $\mathbf a(q)=a(r)q/r$ for $0<r\le r_0$ and
+$\mathbf a(0)=0$, where $a$ is continuous, $a(0)=0$, $a\ge0$,
+and $W(r)=\int_0^r a(u)\,du>0$ for $r>0$. The magnitude $a$ may
+oscillate. Start a radial solution $x_v$ at the centre with any
+speed $v>0$. Its radius increases uniquely by
+$\dot x_v=\sqrt{v^2+2W(x_v)}$. Take $H>0$ small enough that
+$x_v(H)\le r_0$ and $\dot x_v\le 2v$. Define the dimensionless
+excess over the inertial tangent and a sum with units of time by
+
+$$
+ d(s)=\frac{x_v(s)-vs}{vs},\qquad
+ t_n=2^{-n}H,\qquad
+ S_v(H)=\sum_{n=0}^\infty\frac{t_n}{\sqrt{d(t_n)}}. \tag{D2}
+$$
+
+**Criterion.** Rest at the centre is the unique forward motion locally
+if $S_v(H)=\infty$. If $S_v(H)<\infty$, a body can wait for any time
+and then leave along any ray. More precisely, the zero-energy travel
+time $\mathcal T$ in (L2) obeys
+
+$$
+ \frac{S_v(H)}8\le \mathcal T(x_v(H))
+            \le\frac{2}{\sqrt3} S_v(H). \tag{D3}
+$$
+
+The rest criterion in (L2) is the usual conservative quadrature.
+Angular momentum from rest is zero, so every departing excursion
+lies on a ray. Comparison (D3) uses positions of the moving orbit
+alone, with no differentiation of its tangent excess. [López Pouso,
+2005](https://doi.org/10.1112/S0024610705006319) (abstract, general
+scalar existence criterion).
+
+To prove (D3), put $z(s)=\dot x_v(s)/v-1$. Outward acceleration gives
+nondecreasing $0\le z\le1$. Its average $d(s)$ satisfies
+$z(s/2)/2\le d(s)\le z(s)$ and is nondecreasing. Changing variables
+$r=x_v(s)$ in (L2) gives
+
+$$
+ \mathcal T(x_v(H))
+   =\int_0^H\frac{1+z(s)}{\sqrt{z(s)[2+z(s)]}}\,ds .
+$$
+
+For $0\le z\le1$ the factor $(1+z)/\sqrt{2+z}$ lies between
+$1/\sqrt2$ and $2/\sqrt3$. If $I_d=\int_0^H ds/\sqrt{d(s)}$
+and $I_z=\int_0^H ds/\sqrt{z(s)}$, the average bounds give
+$I_z\le I_d\le2\sqrt2 I_z$. On $[t_{n+1},t_n]$, the endpoint
+values of $1/\sqrt d$ bracket the integrand. Summing the two bounds
+gives $S_v(H)/2\le I_d\le S_v(H)$ and proves (D3), including the
+divergent case. The improper integral also equals the supremum of
+lower sums on compact subintervals of $(0,H]$. Its finiteness is
+independent of choosing dyadic subdivisions and of the nonzero speed
+chosen in (D2).
+
+For the force in (L3) let $L_s=\log(\ell/(vs))$. Since
+$x_v(s)/(vs)\to1$, energy gives
+$z(s)\sim\Omega^2s^2 L_s^\beta/2$. Averaging gives
+$d(s)\sim\Omega^2s^2 L_s^\beta/6$, using
+$\int_0^s u^2 L_u^\beta du\sim s^3 L_s^\beta/3$.
+The terms of (D2) are therefore asymptotic to
+$\sqrt6/(\Omega[L_H+n\log2]^{\beta/2})$.
+Every member of the family has the uniform finite-force limit (D1).
+The sum diverges for $0<\beta\le2$ and converges at every $\beta>2$,
+where even an arbitrarily delayed departure obeys that same limit.
+Here $r_0,\ell$ are lengths, $H$ is a time, $v,V$ are speeds and
+$\Omega$ is an inverse time. Both outcomes occur in classical
+mechanics with no action parameter.
+
+### Two central forces with the same positions at successive half-times
+
+Keep the work primitive $W(r)>0$ for $r>0$ and allow the radial
+acceleration to reverse sign. The positions, velocities and accelerations
+of a moving solution at the whole sequence $t_n=2^{-n}H$ can then agree
+for two force laws whose solutions from rest have different uniqueness
+properties. This pair uses autonomous potentials fixed across all $n$.
+
+Fix $H,v,m>0$. Prescribe two increasing radius functions by
+$x_i(t)=v\int_0^t(1+z_i(s))\,ds$ on $[0,H]$, starting with
+$z_1(t)=(t/H)^{3/2}$. In each $I_n=[t_n/2,t_n]$ set
+$u=2t/t_n-1$. Use the smooth step
+$g(s)=\rho(s)/(\rho(s)+\rho(1-s))$, where $\rho(s)=e^{-1/s}$
+for $s>0$ and is zero otherwise. Put
+$\chi(u)=g(8u-1)g(5-8u)$ and $\psi(u)=8g'(8u-6)$.
+Then $0\le\chi\le1$ is one on $[1/4,1/2]$, while the nonnegative
+$\psi$ has disjoint support and integrates to one. Set
+
+$$
+ \begin{split}
+ b_n&=\frac{2}{t_n}\int_{I_n}\chi(2s/t_n-1)
+                     [z_1(s)-(s/H)^2]\,ds,\\
+ z_2(t)&=(1-\chi(u))z_1(t)+\chi(u)(t/H)^2+b_n\psi(u).
+ \end{split} \tag{D4}
+$$
+
+The subtracted and added integrals are equal on each $I_n$. Hence
+$x_1(t_n)=x_2(t_n)$ by summing the intervals down to zero.
+Both $z_i$ coincide in a neighbourhood of each node, so the speeds
+and accelerations there also agree. Inside the interval,
+$0\le b_n\le(t_n/H)^{3/2}$ and $z_2>0$. Differentiation gives
+$|z_2'|\le C(t_n/H)^{1/2}/H$ with
+$C=2(1+\|\chi'\|_\infty+\|\psi'\|_\infty)$.
+Both $z_i$ thus extend to $C^1$ functions with value and derivative
+zero at $t=0$.
+
+Since $x_i'\ge v$, the assignments
+
+$$
+   a_i(x_i(t))=v z_i'(t),\qquad
+   W_i(x_i(t))=v^2 z_i(t)(1+z_i(t)/2)
+$$
+
+define continuous accelerations with $a_i(0)=0$ on the same radial
+interval. The second identity follows from $W_i'=a_i$ and $W_i(0)=0$.
+The potentials $-mW_i(|q|)$ are $C^1$ at the origin. They admit
+bounded-force extensions past the common outer radius. The first force
+points outward. The second must turn inward on each sufficiently small
+cell to reach $(t/H)^2$ from the larger $z_1(t_n/2)$, then turns
+outward again.
+
+For the first force (L2) is finite since $\int_0^H(t/H)^{-3/4}dt$
+is finite. For the second, on the plateau $1/4\le u\le1/2$ one has
+$1/\sqrt{z_2(t)}=H/t$. Its integral contributes at least $H/8$
+on each cell. The travel-time integrand in the proof of (D3) is at
+least $1/\sqrt{2z_2}$, so (L2) diverges. Thus the first force admits
+arbitrary waiting followed by departure, while the second has unique
+rest. Inserting a time inside a modified cell can distinguish the two
+moving curves. Knowing the complete moving curve even determines
+$W(x_v(t))=(\dot x_v(t)^2-v^2)/2$. Equality here concerns one
+particular nested sequence accumulating at the initial instant.
+
 ### Crossing times and arbitrary-mesh polygons
 
 Let $q_n=\ell e^{-n}$ with $n$ sufficiently large. Along the zero-energy
@@ -463,7 +627,10 @@ bound across the family. No relativistic ingredient or $c$ is used.
 
 Initial-value construction, continuation, endpoint caustics and finite-time
 mergers have different hypotheses. Unbounded force slope alone establishes no
-merger and no action floor. The [cusp preparation theorem](newton-cusp-preparation-floor.md)
+merger and no action floor. Uniform convergence of the Lemma X coefficient
+holds even at a centre that admits delayed departures. For outward radial
+forces (D2) decides uniqueness from one moving orbit. The sign-changing
+counterexample (D4) delimits that inference. The [cusp preparation theorem](newton-cusp-preparation-floor.md)
 uses an actual full-state merger and additional preparation laws. The separate
 [endpoint blocking argument](balaban-newton-time-blocking.md) retains inverse
 Hessians, normalization and source response; the

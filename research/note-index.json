@@ -1094,13 +1094,13 @@
     {
       "path": "notes/balaban-ode-lesson.md",
       "title": "Constructing Newton motion: refinement, continuation and regularity",
-      "summary": "Arbitrary positive partitions and mixed kick/drift orders construct global-Lipschitz Newton motion with explicit mesh error. Conservative energy gives local continuation and magnetic global examples; exact logarithmic arrival criterion has threshold beta=2, vanishing annular action and local WKB residual. Unbounded slope is not a full-state merger; no action floor follows.",
+      "summary": "Arbitrary positive partitions and mixed kick/drift orders construct global-Lipschitz Newton motion with explicit mesh error. Conservative energy gives local continuation and magnetic global examples. The logarithmic family has uniqueness threshold beta=2, vanishing annular action and a local WKB residual. Uniform recovery of the force coefficient allows delayed departure. For an outward radial force one moving orbit determines uniqueness from rest. Two central potentials agree on the moving positions, speeds and accelerations at every successive half-time while only one permits departure from rest.",
       "thematic_area": "Newton/action",
-      "strongest_result": "Arbitrary positive partitions and mixed kick/drift orders construct global-Lipschitz Newton motion with explicit mesh error.",
+      "strongest_result": "Arbitrary positive partitions and mixed kick/drift orders construct global-Lipschitz Newton motion with explicit mesh error. With outward radial acceleration the dyadic tangent excess on one nonzero-speed orbit bounds the time for departure from rest on both sides. Two explicit autonomous force laws give opposing rest uniqueness for the same sequence of moving positions, speeds and accelerations when the radial acceleration can change sign.",
       "status": "result",
       "proof_status": "written proof; standard polygon methods and exact conservative examples; internal checks only",
       "retrieval_priority": 3,
-      "current_relevance": "Canonical maintained argument; read its assumptions and correcting countermodels.",
+      "current_relevance": "Distinguishes uniform validity of Newton’s short-time force coefficient from uniqueness at a joining time. The derivative-free criterion uses a single moving orbit of a fixed force.",
       "relations": [
         {
           "type": "continues",
@@ -1146,12 +1146,19 @@
         "mixed polygon compactness",
         "preparation instability",
         "vanishing canonical action",
-        "explicit hbar WKB residual"
+        "explicit hbar WKB residual",
+        "Lemma X tangent displacement",
+        "uniform force coefficient",
+        "dyadic departure time",
+        "outward central force",
+        "force sign reversals",
+        "uniqueness from rest"
       ],
       "role": "result,synthesis",
       "value": "infrastructure,open-mechanism",
-      "limitations": "Global ODE construction assumes a globally Lipschitz acceleration; local forces require continuation control. Weighted-law and Euclidean/real-time identification remain separate physical premises. This lesson supplies no independent positivity argument for hbar.",
-      "content_coverage": "Full consolidated arguments and later corrections read; mechanical link-only changes preserve the established proof scope. Internal model checks are not independent peer review."
+      "limitations": "Global ODE construction assumes a globally Lipschitz acceleration; local forces require continuation control. Weighted-law and Euclidean/real-time identification remain separate physical premises. This lesson supplies no independent positivity argument for hbar. The two-sided dyadic estimate uses continuous outward radial acceleration, positive work primitive and bounded crossing speed near the centre. Equality of the counterexample concerns one nested sequence. Additional insertions can distinguish the curves.",
+      "content_coverage": "Full consolidated arguments and later corrections read; mechanical link-only changes preserve the established proof scope. Internal model checks are not independent peer review. Read the conservative arrival criterion, logarithmic family and Newton passages. Checked (D1)–(D4), the comparison constants and the sign-changing construction by written argument.",
+      "completed_work": "Characterized departure from rest by the tangent excess at successive half-times."
     },
     {
       "path": "notes/blocking-criterion-monotone.md",

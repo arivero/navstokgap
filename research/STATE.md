@@ -19,14 +19,18 @@ over a family of trajectories. Specify the force law, the class of
 orbits and what is held fixed as points are inserted.
 [Edition comparison](../notes/newton-insertion-action.md#lemma-x-and-the-measurement-of-initial-force).
 
-Two existing results constrain any answer. A globally Lipschitz force
-admits the same classical motion on every refining sequence of positive
-time partitions. At a continuous finite central force with a cusp, two
-continuations from the same incoming orbit can have the same initial
-force coefficient and cell actions on every subdivision through the
-joining time. Determine which dynamics, if any, require an additional
-principle there and whether it rules out every classical continuation.
-[Polygon theorem](../notes/balaban-ode-lesson.md) and
+The force coefficient converges uniformly for bounded-speed orbits in
+a compact region with one continuous force. Even then the centre can
+admit delayed departures. For an outward radial force a sum of tangent
+displacements on one moving orbit decides whether rest is unique. If
+the force can reverse sign, two laws can have identical displacements
+at all successive half-times and opposite answers about rest.
+[Radial proof and counterexample](../notes/balaban-ode-lesson.md#what-one-moving-orbit-determines-about-rest).
+
+What part of the central-force argument, if any, requires the current
+position and momentum to specify the entire continuation at a joining
+time? A reversible shift on complete classical histories is available.
+[History completion](../notes/newton-cusp-preparation-floor.md) and
 [fixed-force counterexample](../notes/balaban-newton-time-blocking.md#central-force-passage-under-point-insertion).
 
 A vanishing action along a particular orbit or time cell differs from a
