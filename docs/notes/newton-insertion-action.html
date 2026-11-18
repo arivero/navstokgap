@@ -107,8 +107,13 @@ a force transmitted through the ions’ motion admits a quantitative test
 using the optical wavelength and the trap clock. For a circular orbit,
 three direct angle readings on separately prepared pairs give a test
 that tolerates finite ruler and clock resolution. A classical impulse
-model reproduces the ideal mean fluorescence of a published rotor
-echo.</p>
+model reproduces the ideal mean fluorescence of a published rotor echo.
+For a single harmonically trapped ion, three published fluorescence
+contrasts give <span class="math inline">\(1.768\)</span> against a
+classical ceiling of <span class="math inline">\(1.5\)</span> for an
+additive position readout. A zero-mean probe impulse can reproduce the
+three contrasts. Direct position exposures would test the same
+inequality with an independent force calibration.</p>
 <p>This treatment integrates the constant-force derivation and its
 receding-centre correction with the controlled reunion. Written
 model/coordinator checks are internal; the mechanics and phase
@@ -808,6 +813,339 @@ zero fourth cumulant. Matching the mean fluorescence and the diffusion
 rate leaves this independent force measurement open. The direct angle
 test uses a single terminal exposure and removes the middle-pulse
 impulse altogether.</p>
+<h2 id="three-measured-contrasts-of-a-trapped-ion">Three measured
+contrasts of a trapped ion</h2>
+<p><strong>6.1 Sol Max, 2026-11-18.</strong> Valahu et al. measured one
+radial vibrational mode of a single ytterbium-171 ion at <span
+class="math inline">\(\omega=2\pi\times1.33\)</span> MHz. Three of their
+fluorescence settings give <span
+class="math inline">\(0.684+0.628-(-0.456)=1.768\)</span>. Any positive
+ensemble for which the third setting reads the sum of the first two
+trajectory phases has a ceiling of <span
+class="math inline">\(3/2\)</span>. The margin of <span
+class="math inline">\(0.268\)</span> specifies the combined precision
+required of the meter, dynamics and sampling. The experiment encodes
+motion into an internal state with a laser force. The same three numbers
+can be produced by a classical probe that moves the ion during
+interrogation.</p>
+<p><strong>Which data enter.</strong> For each prepared grid state use
+the origin and the settings <span
+class="math inline">\((b,0),(0,b),(b,b)\)</span> in the authors’ complex
+displacement coordinates, with <span
+class="math inline">\(b=1.7724166666666665\)</span> as tabulated. Call
+the respective signed readouts <span
+class="math inline">\(V,A,B,C\)</span>. The last three points lie on the
+boundary or interior of the measured upper-right quadrant.</p>
+<table>
+<thead>
+<tr>
+<th>Target preparation <span class="math inline">\(\Delta\)</span></th>
+<th style="text-align: right;"><span
+class="math inline">\(V\)</span></th>
+<th style="text-align: right;"><span
+class="math inline">\(A\)</span></th>
+<th style="text-align: right;"><span
+class="math inline">\(B\)</span></th>
+<th style="text-align: right;"><span
+class="math inline">\(C\)</span></th>
+<th style="text-align: right;"><span
+class="math inline">\(W=A+B-C\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(0.61\)</span></td>
+<td style="text-align: right;"><span
+class="math inline">\(0.948\)</span></td>
+<td style="text-align: right;"><span
+class="math inline">\(0.388\)</span></td>
+<td style="text-align: right;"><span
+class="math inline">\(0.444\)</span></td>
+<td style="text-align: right;"><span
+class="math inline">\(-0.212\)</span></td>
+<td style="text-align: right;"><span
+class="math inline">\(1.044\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(0.37\)</span></td>
+<td style="text-align: right;"><span
+class="math inline">\(0.944\)</span></td>
+<td style="text-align: right;"><span
+class="math inline">\(0.684\)</span></td>
+<td style="text-align: right;"><span
+class="math inline">\(0.628\)</span></td>
+<td style="text-align: right;"><span
+class="math inline">\(-0.456\)</span></td>
+<td style="text-align: right;"><span
+class="math inline">\(1.768\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(0.30\)</span></td>
+<td style="text-align: right;"><span
+class="math inline">\(0.928\)</span></td>
+<td style="text-align: right;"><span
+class="math inline">\(0.616\)</span></td>
+<td style="text-align: right;"><span
+class="math inline">\(0.676\)</span></td>
+<td style="text-align: right;"><span
+class="math inline">\(-0.380\)</span></td>
+<td style="text-align: right;"><span
+class="math inline">\(1.672\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The numbers retain the authors’ contrast normalization. Each is the
+real component read through the ion’s electronic state. The other
+quadrants in the release use reflections, and the Wigner reconstruction
+uses a fitted density matrix. Neither operation enters the table. The
+files report point estimates and omit shot counts and joint error bounds
+for these entries. For the <span class="math inline">\(0.37\)</span>
+preparation, simultaneous absolute errors <span
+class="math inline">\(e_A,e_B,e_C\)</span> leave an excess if their sum
+is below <span class="math inline">\(0.268\)</span>. <a
+href="https://doi.org/10.1126/sciadv.adw9757">Valahu et al., Fig. 2A and
+Methods</a> and <a
+href="https://arxiv.org/pdf/2412.04865#page=14">supplement, Fig. S.1</a>
+(passages). <a href="https://zenodo.org/records/14512034">Zenodo
+release, CSV row IDs 1200, 1210, 1690 and 1700</a> and <a
+href="https://github.com/arivero/navstokgap/blob/main/docs/ValahuEtAl_GridContrast_2024.md">source
+files and reading coverage</a> (data entries).</p>
+<p><strong>The trajectory test.</strong> For any two real phases <span
+class="math inline">\(X,Y\)</span> the real part of the three-point
+characteristic function obeys</p>
+<p><span class="math display">\[
+\cos X+\cos Y-\cos(X+Y)\le 3/2 .                              \tag{4}
+\]</span></p>
+<p>This is the three-point Bochner positivity test, obtained by taking
+the squared modulus of <span
+class="math inline">\(1-e^{iX}-e^{-iY}\)</span>. Averaging retains the
+bound for every joint distribution. Even a common affine electronic
+readout <span class="math inline">\(c\mapsto g c+c_0\)</span> preserves
+the ceiling when <span class="math inline">\(g\ge0\)</span> and <span
+class="math inline">\(g+|c_0|\le1\)</span>, since <span
+class="math inline">\(W\mapsto gW+c_0\)</span>. Finite
+characteristic-function tests of Wigner positivity, including tests with
+conditional displacements and a qubit readout, are established. Here the
+question is whether the ion’s probe reads the same mechanical phases
+that these inequalities constrain. <a
+href="https://doi.org/10.1103/PhysRevA.34.1">Narcowich and
+O’Connell</a>, <a
+href="https://doi.org/10.1103/PhysRevLett.106.010403">Mari et al.</a>
+and <a href="https://doi.org/10.1103/PhysRevLett.133.050201">Zaw</a>
+(abstracts).</p>
+<p>A force law gives (4) a direct mechanical interpretation. Choose one
+Cartesian coordinate of a central Hooke orbit with inertial mass <span
+class="math inline">\(m\)</span> and angular frequency <span
+class="math inline">\(\omega\)</span>. Set the origin at the force
+centre. Expose one independently chosen terminal gate per release at
+<span
+class="math inline">\(t_0,t_0+\pi/(4\omega),t_0+\pi/(2\omega)\)</span>.
+Let the positions be <span class="math inline">\(x_-,x_m,x_+\)</span>.
+For every harmonic trajectory <span
+class="math inline">\(x_-+x_+=\sqrt{2}\,x_m\)</span>. Measure cosines of
+<span class="math inline">\(kx_-,kx_+\)</span> and <span
+class="math inline">\(\sqrt{2}kx_m\)</span> respectively, with <span
+class="math inline">\(k=2\pi/\Lambda\)</span> set by a ruler pitch <span
+class="math inline">\(\Lambda\)</span>. Choosing the phase origin fixes
+which two quarter-period projections are the authors’ axes. The
+construction requires the same release law at all gates. It allows
+arbitrary initial position–velocity correlations. If the three gates
+have the same distribution of clock offsets independent of the release,
+their marginals can be coupled using one common offset. A centred
+Gaussian position error of the same width <span
+class="math inline">\(\ell\)</span> at each gate preserves (4) for the
+<strong>raw</strong> cosines. Couple independent endpoint errors <span
+class="math inline">\(\xi,\zeta\)</span> of width <span
+class="math inline">\(\ell\)</span> to the middle error <span
+class="math inline">\((\xi+\zeta)/\sqrt{2}\)</span>, of the same
+width.</p>
+<p>Newton’s force measurement sets a tolerance here. Suppose independent
+displacement measurements bound <span class="math inline">\(|\ddot
+x+\omega^2 x|\le b_F\)</span> on the admitted trajectories. About the
+middle gate the sine response of the oscillator integrated on each side
+gives</p>
+<p><span class="math display">\[
+|x_-+x_+-\sqrt{2}x_m|\le (2-\sqrt{2})b_F/\omega^2 .
+\]</span></p>
+<p>Thus the maximum excess attributable to the force error is <span
+class="math inline">\(|k|(2-\sqrt{2})b_F/\omega^2\)</span>. To compare
+canonical models on the same footing, let <span
+class="math inline">\(a&gt;0\)</span> be the trial reduced action and
+take a common midpoint state, a self-adjoint harmonic-plus-potential
+evolution and a bounded perturbation of slope at most <span
+class="math inline">\(mb_F\)</span>. The propagated harmonic endpoint
+mode translates the perturbation’s argument by a distance <span
+class="math inline">\(|ak\sin(\omega u)|/(m\omega)\)</span> at lag <span
+class="math inline">\(u\)</span>. The commutator divided by <span
+class="math inline">\(a\)</span> is bounded by <span
+class="math inline">\(|k|b_F|\sin(\omega u)|/\omega\)</span>. The two
+endpoint Duhamel integrals give the same combined tolerance. The
+Gaussian error only contracts each Fourier mode. Remaining timing,
+selection and readout errors need their own bounds. With direct
+Gaussian-blurred positions a verified excess beyond the errors would
+require <span class="math inline">\(a&gt;2m\omega\ell^2\)</span> in this
+family. Smoothing the midpoint Wigner distribution with widths <span
+class="math inline">\(\ell,m\omega\ell\)</span> gives a positive joint
+law for every state when <span
+class="math inline">\(a\le2m\omega\ell^2\)</span>, by the Gaussian
+smoothing result used <a
+href="#a-three-time-test-with-a-calibrated-position-resolution">above</a>.
+All these statements survive refinement between the physical gates.</p>
+<p><strong>The action in a calibrated phase measurement.</strong> For
+ideal, unit-gain linear probes put <span
+class="math inline">\(X=kQ\)</span>, <span
+class="math inline">\(Y=kP/(m\omega)\)</span> in coordinates referred to
+the first gate. In a canonical model the Weyl phase is <span
+class="math inline">\(\Phi=ak^2/(2m\omega)\)</span>. Positivity of the
+squared norms of <span class="math inline">\(1-e^{iX}-e^{-iY}\)</span>
+and <span class="math inline">\(1-e^{-iX}-e^{iY}\)</span>, averaged over
+the two signs and the state, gives</p>
+<p><span class="math display">\[
+                  A+B-C\cos\Phi\le 3/2 .                         \tag{5}
+\]</span></p>
+<p>Here <span class="math inline">\(C=\operatorname{Re}\langle
+e^{i(X+Y)}\rangle\)</span>. The ordered products carry opposite Weyl
+phases in the two real-part bounds. Averaging removes the unmeasured
+imaginary component. This is a finite instance of quantum
+characteristic-function positivity. At the <span
+class="math inline">\(0.37\)</span> point estimates (5) requires <span
+class="math inline">\(\cos\Phi\le(1.5-1.312)/0.456=47/114\)</span> and
+hence</p>
+<p><span class="math display">\[
+       a\ \ge\ \frac{2m\omega}{k^2}\arccos(47/114)
+.              \tag{6}
+\]</span></p>
+<p>For uncertain data use the weakest bound over their joint error set.
+The dimensional inputs for (6) are the mechanical mass, period and ruler
+pitch. Direct exposures additionally use the clock response,
+point-spread width and any residual acceleration bound. The experiment
+gives the trap clock, uses 355 nm Raman light, and quotes a calibrated
+sideband rate <span class="math inline">\(\Omega/(2\pi)=2\)</span> kHz
+and a <span class="math inline">\(141\ \mu\)</span>s axis pulse. The
+optical wavelength and the effective motional fringe pitch are different
+calibrations. In the oscillator convention <span
+class="math inline">\(k=b/x_{\rm zp}\)</span>, <span
+class="math inline">\(x_{\rm zp}=\sqrt{a/(2m\omega)}\)</span>, which
+makes <span class="math inline">\(\Phi=b^2\)</span> at every positive
+trial action. Holding the dimensionless pulse settings and preparation
+fixed therefore leaves their ideal records invariant under <span
+class="math inline">\(a\mapsto\lambda a\)</span> with spatial widths
+multiplied by <span class="math inline">\(\sqrt\lambda\)</span>. A
+translation by a mechanically known distance, with the analyzer phase
+scanned, can calibrate <span class="math inline">\(k\)</span> directly.
+Using <span class="math inline">\(x_{\rm zp}\)</span> as that ruler
+would insert the action being tested. <a
+href="https://arxiv.org/pdf/2412.04865">Valahu et al., Methods and
+supplement II C</a> (passages on the sideband drive and pulse
+duration).</p>
+<p><strong>A zero-action mechanical alternative.</strong> The following
+single probe law reproduces all four entries in each row, including the
+measured origin. Use the harmonic orbit with classical quadratures <span
+class="math inline">\(X=kQ\)</span> and <span
+class="math inline">\(Y=kP/(m\omega)\)</span>. Before reading the
+setting <span class="math inline">\((u,v)\)</span> in units of <span
+class="math inline">\(b\)</span>, give it a random momentum impulse
+<span class="math inline">\(\pm uJ\)</span> with equiprobable signs and
+<span class="math inline">\(J=\pi m\omega/k\)</span> (<span
+class="math inline">\(k&gt;0\)</span>). The meter reads the cosine of
+<span class="math inline">\(uX+vY\pm\pi uv\)</span>. Both axis phases
+are intact and the diagonal cosine changes sign. The impulse has zero
+mean. Translating the orbit changes each probe phase by precisely the
+amount prescribed by its linear slope, including on the diagonal.</p>
+<p>For each preparation independently choose a tag sign of mean <span
+class="math inline">\(V\)</span> which multiplies the output. Choose
+signs <span class="math inline">\(s,t=\pm1\)</span> with
+probabilities</p>
+<p><span class="math display">\[
+           p_{st}=\frac{V+sA+tB-stC}{4V}.
+\]</span></p>
+<p>Set <span class="math inline">\(X,Y\)</span> to <span
+class="math inline">\(0\)</span> or <span
+class="math inline">\(\pi\)</span> so that their cosines are <span
+class="math inline">\(s,t\)</span>. These are four ordinary initial
+points of the harmonic flow. The probabilities sum to one and are
+nonnegative for every row. The smallest numerator in the <span
+class="math inline">\(0.30\)</span> row is <span
+class="math inline">\(0.928-0.616-0.676+0.380=0.016\)</span>.
+Consequently the mean origin, axis and diagonal outputs are precisely
+<span class="math inline">\(V,A,B,C\)</span>. The model uses the same
+impulse and readout rule at all three preparations. Its scope is the
+four selected settings per row.</p>
+<p><strong>What repeated probes can resolve.</strong> At ideal lattice
+spacing the axis Weyl operators <span
+class="math inline">\(U=e^{iX}\)</span> and <span
+class="math inline">\(V_p=e^{iY}\)</span> commute, with <span
+class="math inline">\([X,Y]=2\pi i\)</span>. Their joint spectral
+probabilities define a positive law of phases <span
+class="math inline">\((x,y)\)</span> for every incident quantum state.
+At integer <span class="math inline">\((u,v)\)</span> the Weyl
+multiplication rule gives the signal <span
+class="math inline">\((-1)^{uv}\mathbb E e^{i(ux+vy)}\)</span>,
+including the diagonal sign. The classical kick just constructed gives
+this sign for every integer pair. Complete the other axis probe by
+shifting <span class="math inline">\(Q\)</span> by <span
+class="math inline">\(\pi/k\)</span> after it is read. Both probes then
+move the conjugate phase through half a fringe, and give the full ideal
+sequence of axial records. In fact the symmetric axial measurement has a
+factor <span class="math inline">\((1+r e^{i\theta}U)/2\)</span> for a
+bit <span class="math inline">\(r=\pm1\)</span> and a half displacement.
+The first factor weights the joint law by <span
+class="math inline">\((1+r\cos(x+\theta))/2\)</span>. Conjugation by the
+half displacement changes <span class="math inline">\(V_p\)</span> to
+<span class="math inline">\(-V_p\)</span>. Thus the classical rule
+samples the bit and sends <span class="math inline">\(y\)</span> to
+<span class="math inline">\(y+\pi\)</span> modulo <span
+class="math inline">\(2\pi\)</span>. Exchanging the two axes gives the
+other rule. Iteration covers each bit string, including analyzer phases
+chosen from earlier bits. The comparison concerns the ideal axial
+instruments and the exact lattice. Valahu et al. explicitly include this
+bit flip in the analysis of their sequential sensing protocol. <a
+href="https://arxiv.org/pdf/2412.04865#page=26">Supplement, Eqs. (S.52),
+(S.69) and (S.71)</a> (passages).</p>
+<p><strong>An existing measurement away from the lattice tests the
+kick.</strong> For continuous real <span
+class="math inline">\(u,v\)</span>, averaging the two possible impulse
+signs gives a factor <span class="math inline">\(\cos(\pi uv)\)</span>.
+Hence the magnitude of the contrast in the specified classical meter is
+at most <span class="math inline">\(|\cos(\pi uv)|\)</span>, for any
+release and tag independent of the impulse sign. Row 1550 in the
+measured quadrant has <span class="math inline">\(u=v=0.7\)</span>. The
+ceiling is <span class="math inline">\(\sin(\pi/100)&lt;0.032\)</span>,
+while the <span class="math inline">\(\Delta=0.61\)</span> file gives
+<span class="math inline">\(-0.200\)</span>. This tests the mechanical
+explanation using the same preparation that stayed below (4). The
+discrepancy exceeds <span class="math inline">\(0.168\)</span> in
+contrast at the point estimates. At the exact half product <span
+class="math inline">\((1,1/2)\)</span> the prediction is zero even for a
+symmetric mixture of odd multiples of <span
+class="math inline">\(J\)</span> independent of the release. Row 1455
+gives <span class="math inline">\(+0.100\)</span> at <span
+class="math inline">\(\Delta=0.30\)</span>. These are tests of specified
+impulse laws. Sampling error, a setting-dependent bias and other impulse
+distributions have separate consequences. <a
+href="https://zenodo.org/records/14512034">Grid data, rows 1455 and
+1550</a> (data entries).</p>
+<p>A calibration sensitive to the <strong>spread</strong> of recoil
+would test this alternative. More generally, if the diagonal phase error
+in any such classical meter is <span class="math inline">\(kD\)</span>
+for a displacement <span class="math inline">\(D\)</span>, its
+contribution to <span class="math inline">\(W-3/2\)</span> is at most
+<span class="math inline">\(|k|\sqrt{\mathbb E D^2}\)</span> by the
+Lipschitz bound for the cosine. With perfect axes, the <span
+class="math inline">\(0.37\)</span> central values require an rms error
+of at least <span class="math inline">\(0.268\,\Lambda/(2\pi)\)</span>,
+about <span class="math inline">\(4.3\%\)</span> of a fringe pitch. A
+momentum impulse gives a quarter-period displacement <span
+class="math inline">\(J/(m\omega)\)</span> and can be checked
+mechanically. A bound on mean recoil alone would pass the symmetric-kick
+model. If all three probes can err, let <span
+class="math inline">\(d_A,d_B,d_C\)</span> bound their rms phase errors
+in radians. The same Lipschitz estimate adds at most <span
+class="math inline">\(d_A+d_B+d_C\)</span> to the classical ceiling,
+before sampling and other response errors. The stored fluorescence
+values supply an excess to test against these tolerances. A physical
+floor still requires an independently calibrated additive meter or the
+corresponding direct position exposures.</p>
 <h2 id="a-force-transmitted-between-two-ions">A force transmitted
 between two ions</h2>
 <p>In a modern test of the force measurement, give ion 2 a small
@@ -1274,7 +1612,9 @@ two-ion experiment the spin excess is observed. Its attribution to
 mechanical action depends on isolating the force path from other
 entangling interactions. On a central orbit the outstanding observation
 is a violation of the three-angle disk with radial motion and detector
-losses bounded.</p>
+losses bounded. For the harmonic ion the observed contrast margin
+instead sets the precision needed for an independent mechanical check of
+its probe.</p>
 
 </main>
 <footer class="site"><div class="wrap">

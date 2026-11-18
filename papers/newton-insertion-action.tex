@@ -42,7 +42,12 @@ transmitted through the ions' motion admits a quantitative test using
 the optical wavelength and the trap clock. For a circular orbit, three
 direct angle readings on separately prepared pairs give a test that
 tolerates finite ruler and clock resolution. A classical impulse model
-reproduces the ideal mean fluorescence of a published rotor echo.
+reproduces the ideal mean fluorescence of a published rotor echo. For a
+single harmonically trapped ion, three published fluorescence contrasts
+give \(1.768\) against a classical ceiling of \(1.5\) for an additive
+position readout. A zero-mean probe impulse can reproduce the three
+contrasts. Direct position exposures would test the same inequality with
+an independent force calibration.
 
 This treatment integrates the constant-force derivation and its
 receding-centre correction with the controlled reunion. Written
@@ -609,6 +614,242 @@ fluorescence and the diffusion rate leaves this independent force
 measurement open. The direct angle test uses a single terminal exposure
 and removes the middle-pulse impulse altogether.
 
+\subsection{Three measured contrasts of a trapped
+ion}\label{three-measured-contrasts-of-a-trapped-ion}
+
+\textbf{6.1 Sol Max, 2026-11-18.} Valahu et al.~measured one radial
+vibrational mode of a single ytterbium-171 ion at
+\(\omega=2\pi\times1.33\) MHz. Three of their fluorescence settings give
+\(0.684+0.628-(-0.456)=1.768\). Any positive ensemble for which the
+third setting reads the sum of the first two trajectory phases has a
+ceiling of \(3/2\). The margin of \(0.268\) specifies the combined
+precision required of the meter, dynamics and sampling. The experiment
+encodes motion into an internal state with a laser force. The same three
+numbers can be produced by a classical probe that moves the ion during
+interrogation.
+
+\textbf{Which data enter.} For each prepared grid state use the origin
+and the settings \((b,0),(0,b),(b,b)\) in the authors' complex
+displacement coordinates, with \(b=1.7724166666666665\) as tabulated.
+Call the respective signed readouts \(V,A,B,C\). The last three points
+lie on the boundary or interior of the measured upper-right quadrant.
+
+\begin{longtable}[]{@{}lrrrrr@{}}
+\toprule\noalign{}
+Target preparation \(\Delta\) & \(V\) & \(A\) & \(B\) & \(C\) &
+\(W=A+B-C\) \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(0.61\) & \(0.948\) & \(0.388\) & \(0.444\) & \(-0.212\) & \(1.044\) \\
+\(0.37\) & \(0.944\) & \(0.684\) & \(0.628\) & \(-0.456\) & \(1.768\) \\
+\(0.30\) & \(0.928\) & \(0.616\) & \(0.676\) & \(-0.380\) & \(1.672\) \\
+\end{longtable}
+
+The numbers retain the authors' contrast normalization. Each is the real
+component read through the ion's electronic state. The other quadrants
+in the release use reflections, and the Wigner reconstruction uses a
+fitted density matrix. Neither operation enters the table. The files
+report point estimates and omit shot counts and joint error bounds for
+these entries. For the \(0.37\) preparation, simultaneous absolute
+errors \(e_A,e_B,e_C\) leave an excess if their sum is below \(0.268\).
+\href{https://doi.org/10.1126/sciadv.adw9757}{Valahu et al., Fig. 2A and
+Methods} and
+\href{https://arxiv.org/pdf/2412.04865\#page=14}{supplement, Fig. S.1}
+(passages). \href{https://zenodo.org/records/14512034}{Zenodo release,
+CSV row IDs 1200, 1210, 1690 and 1700} and
+\href{../docs/ValahuEtAl_GridContrast_2024.md}{source files and reading
+coverage} (data entries).
+
+\textbf{The trajectory test.} For any two real phases \(X,Y\) the real
+part of the three-point characteristic function obeys
+
+\[
+ \cos X+\cos Y-\cos(X+Y)\le 3/2 .                              \tag{4}
+\]
+
+This is the three-point Bochner positivity test, obtained by taking the
+squared modulus of \(1-e^{iX}-e^{-iY}\). Averaging retains the bound for
+every joint distribution. Even a common affine electronic readout
+\(c\mapsto g c+c_0\) preserves the ceiling when \(g\ge0\) and
+\(g+|c_0|\le1\), since \(W\mapsto gW+c_0\). Finite
+characteristic-function tests of Wigner positivity, including tests with
+conditional displacements and a qubit readout, are established. Here the
+question is whether the ion's probe reads the same mechanical phases
+that these inequalities constrain.
+\href{https://doi.org/10.1103/PhysRevA.34.1}{Narcowich and O'Connell},
+\href{https://doi.org/10.1103/PhysRevLett.106.010403}{Mari et al.} and
+\href{https://doi.org/10.1103/PhysRevLett.133.050201}{Zaw} (abstracts).
+
+A force law gives (4) a direct mechanical interpretation. Choose one
+Cartesian coordinate of a central Hooke orbit with inertial mass \(m\)
+and angular frequency \(\omega\). Set the origin at the force centre.
+Expose one independently chosen terminal gate per release at
+\(t_0,t_0+\pi/(4\omega),t_0+\pi/(2\omega)\). Let the positions be
+\(x_-,x_m,x_+\). For every harmonic trajectory
+\(x_-+x_+=\sqrt{2}\,x_m\). Measure cosines of \(kx_-,kx_+\) and
+\(\sqrt{2}kx_m\) respectively, with \(k=2\pi/\Lambda\) set by a ruler
+pitch \(\Lambda\). Choosing the phase origin fixes which two
+quarter-period projections are the authors' axes. The construction
+requires the same release law at all gates. It allows arbitrary initial
+position--velocity correlations. If the three gates have the same
+distribution of clock offsets independent of the release, their
+marginals can be coupled using one common offset. A centred Gaussian
+position error of the same width \(\ell\) at each gate preserves (4) for
+the \textbf{raw} cosines. Couple independent endpoint errors
+\(\xi,\zeta\) of width \(\ell\) to the middle error
+\((\xi+\zeta)/\sqrt{2}\), of the same width.
+
+Newton's force measurement sets a tolerance here. Suppose independent
+displacement measurements bound \(|\ddot x+\omega^2 x|\le b_F\) on the
+admitted trajectories. About the middle gate the sine response of the
+oscillator integrated on each side gives
+
+\[
+ |x_-+x_+-\sqrt{2}x_m|\le (2-\sqrt{2})b_F/\omega^2 .
+\]
+
+Thus the maximum excess attributable to the force error is
+\(|k|(2-\sqrt{2})b_F/\omega^2\). To compare canonical models on the same
+footing, let \(a>0\) be the trial reduced action and take a common
+midpoint state, a self-adjoint harmonic-plus-potential evolution and a
+bounded perturbation of slope at most \(mb_F\). The propagated harmonic
+endpoint mode translates the perturbation's argument by a distance
+\(|ak\sin(\omega u)|/(m\omega)\) at lag \(u\). The commutator divided by
+\(a\) is bounded by \(|k|b_F|\sin(\omega u)|/\omega\). The two endpoint
+Duhamel integrals give the same combined tolerance. The Gaussian error
+only contracts each Fourier mode. Remaining timing, selection and
+readout errors need their own bounds. With direct Gaussian-blurred
+positions a verified excess beyond the errors would require
+\(a>2m\omega\ell^2\) in this family. Smoothing the midpoint Wigner
+distribution with widths \(\ell,m\omega\ell\) gives a positive joint law
+for every state when \(a\le2m\omega\ell^2\), by the Gaussian smoothing
+result used
+\hyperref[a-three-time-test-with-a-calibrated-position-resolution]{above}.
+All these statements survive refinement between the physical gates.
+
+\textbf{The action in a calibrated phase measurement.} For ideal,
+unit-gain linear probes put \(X=kQ\), \(Y=kP/(m\omega)\) in coordinates
+referred to the first gate. In a canonical model the Weyl phase is
+\(\Phi=ak^2/(2m\omega)\). Positivity of the squared norms of
+\(1-e^{iX}-e^{-iY}\) and \(1-e^{-iX}-e^{iY}\), averaged over the two
+signs and the state, gives
+
+\[
+                  A+B-C\cos\Phi\le 3/2 .                         \tag{5}
+\]
+
+Here \(C=\operatorname{Re}\langle e^{i(X+Y)}\rangle\). The ordered
+products carry opposite Weyl phases in the two real-part bounds.
+Averaging removes the unmeasured imaginary component. This is a finite
+instance of quantum characteristic-function positivity. At the \(0.37\)
+point estimates (5) requires \(\cos\Phi\le(1.5-1.312)/0.456=47/114\) and
+hence
+
+\[
+       a\ \ge\ \frac{2m\omega}{k^2}\arccos(47/114) .              \tag{6}
+\]
+
+For uncertain data use the weakest bound over their joint error set. The
+dimensional inputs for (6) are the mechanical mass, period and ruler
+pitch. Direct exposures additionally use the clock response,
+point-spread width and any residual acceleration bound. The experiment
+gives the trap clock, uses 355 nm Raman light, and quotes a calibrated
+sideband rate \(\Omega/(2\pi)=2\) kHz and a \(141\ \mu\)s axis pulse.
+The optical wavelength and the effective motional fringe pitch are
+different calibrations. In the oscillator convention \(k=b/x_{\rm zp}\),
+\(x_{\rm zp}=\sqrt{a/(2m\omega)}\), which makes \(\Phi=b^2\) at every
+positive trial action. Holding the dimensionless pulse settings and
+preparation fixed therefore leaves their ideal records invariant under
+\(a\mapsto\lambda a\) with spatial widths multiplied by
+\(\sqrt\lambda\). A translation by a mechanically known distance, with
+the analyzer phase scanned, can calibrate \(k\) directly. Using
+\(x_{\rm zp}\) as that ruler would insert the action being tested.
+\href{https://arxiv.org/pdf/2412.04865}{Valahu et al., Methods and
+supplement II C} (passages on the sideband drive and pulse duration).
+
+\textbf{A zero-action mechanical alternative.} The following single
+probe law reproduces all four entries in each row, including the
+measured origin. Use the harmonic orbit with classical quadratures
+\(X=kQ\) and \(Y=kP/(m\omega)\). Before reading the setting \((u,v)\) in
+units of \(b\), give it a random momentum impulse \(\pm uJ\) with
+equiprobable signs and \(J=\pi m\omega/k\) (\(k>0\)). The meter reads
+the cosine of \(uX+vY\pm\pi uv\). Both axis phases are intact and the
+diagonal cosine changes sign. The impulse has zero mean. Translating the
+orbit changes each probe phase by precisely the amount prescribed by its
+linear slope, including on the diagonal.
+
+For each preparation independently choose a tag sign of mean \(V\) which
+multiplies the output. Choose signs \(s,t=\pm1\) with probabilities
+
+\[
+           p_{st}=\frac{V+sA+tB-stC}{4V}.
+\]
+
+Set \(X,Y\) to \(0\) or \(\pi\) so that their cosines are \(s,t\). These
+are four ordinary initial points of the harmonic flow. The probabilities
+sum to one and are nonnegative for every row. The smallest numerator in
+the \(0.30\) row is \(0.928-0.616-0.676+0.380=0.016\). Consequently the
+mean origin, axis and diagonal outputs are precisely \(V,A,B,C\). The
+model uses the same impulse and readout rule at all three preparations.
+Its scope is the four selected settings per row.
+
+\textbf{What repeated probes can resolve.} At ideal lattice spacing the
+axis Weyl operators \(U=e^{iX}\) and \(V_p=e^{iY}\) commute, with
+\([X,Y]=2\pi i\). Their joint spectral probabilities define a positive
+law of phases \((x,y)\) for every incident quantum state. At integer
+\((u,v)\) the Weyl multiplication rule gives the signal
+\((-1)^{uv}\mathbb E e^{i(ux+vy)}\), including the diagonal sign. The
+classical kick just constructed gives this sign for every integer pair.
+Complete the other axis probe by shifting \(Q\) by \(\pi/k\) after it is
+read. Both probes then move the conjugate phase through half a fringe,
+and give the full ideal sequence of axial records. In fact the symmetric
+axial measurement has a factor \((1+r e^{i\theta}U)/2\) for a bit
+\(r=\pm1\) and a half displacement. The first factor weights the joint
+law by \((1+r\cos(x+\theta))/2\). Conjugation by the half displacement
+changes \(V_p\) to \(-V_p\). Thus the classical rule samples the bit and
+sends \(y\) to \(y+\pi\) modulo \(2\pi\). Exchanging the two axes gives
+the other rule. Iteration covers each bit string, including analyzer
+phases chosen from earlier bits. The comparison concerns the ideal axial
+instruments and the exact lattice. Valahu et al.~explicitly include this
+bit flip in the analysis of their sequential sensing protocol.
+\href{https://arxiv.org/pdf/2412.04865\#page=26}{Supplement, Eqs.
+(S.52), (S.69) and (S.71)} (passages).
+
+\textbf{An existing measurement away from the lattice tests the kick.}
+For continuous real \(u,v\), averaging the two possible impulse signs
+gives a factor \(\cos(\pi uv)\). Hence the magnitude of the contrast in
+the specified classical meter is at most \(|\cos(\pi uv)|\), for any
+release and tag independent of the impulse sign. Row 1550 in the
+measured quadrant has \(u=v=0.7\). The ceiling is
+\(\sin(\pi/100)<0.032\), while the \(\Delta=0.61\) file gives
+\(-0.200\). This tests the mechanical explanation using the same
+preparation that stayed below (4). The discrepancy exceeds \(0.168\) in
+contrast at the point estimates. At the exact half product \((1,1/2)\)
+the prediction is zero even for a symmetric mixture of odd multiples of
+\(J\) independent of the release. Row 1455 gives \(+0.100\) at
+\(\Delta=0.30\). These are tests of specified impulse laws. Sampling
+error, a setting-dependent bias and other impulse distributions have
+separate consequences. \href{https://zenodo.org/records/14512034}{Grid
+data, rows 1455 and 1550} (data entries).
+
+A calibration sensitive to the \textbf{spread} of recoil would test this
+alternative. More generally, if the diagonal phase error in any such
+classical meter is \(kD\) for a displacement \(D\), its contribution to
+\(W-3/2\) is at most \(|k|\sqrt{\mathbb E D^2}\) by the Lipschitz bound
+for the cosine. With perfect axes, the \(0.37\) central values require
+an rms error of at least \(0.268\,\Lambda/(2\pi)\), about \(4.3\%\) of a
+fringe pitch. A momentum impulse gives a quarter-period displacement
+\(J/(m\omega)\) and can be checked mechanically. A bound on mean recoil
+alone would pass the symmetric-kick model. If all three probes can err,
+let \(d_A,d_B,d_C\) bound their rms phase errors in radians. The same
+Lipschitz estimate adds at most \(d_A+d_B+d_C\) to the classical
+ceiling, before sampling and other response errors. The stored
+fluorescence values supply an excess to test against these tolerances. A
+physical floor still requires an independently calibrated additive meter
+or the corresponding direct position exposures.
+
 \subsection{A force transmitted between two
 ions}\label{a-force-transmitted-between-two-ions}
 
@@ -1024,5 +1265,7 @@ probability excess remains open. In the two-ion experiment the spin
 excess is observed. Its attribution to mechanical action depends on
 isolating the force path from other entangling interactions. On a
 central orbit the outstanding observation is a violation of the
-three-angle disk with radial motion and detector losses bounded.
+three-angle disk with radial motion and detector losses bounded. For the
+harmonic ion the observed contrast margin instead sets the precision
+needed for an independent mechanical check of its probe.
 \end{document}

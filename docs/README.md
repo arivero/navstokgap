@@ -11,6 +11,8 @@ history in which Newton carries interference from optics into mechanics.
 
 ## Mechanics investigation
 
+- [Valahu et al. grid-state data](ValahuEtAl_GridContrast_2024.md) give
+  the measured axis and diagonal fluorescence contrasts of a single ion.
 - [Spin publication source comparison](batches/B76/spin-positioning-source-companion.md):
   classical extensions and transformation-relative preparation equivalence.
 - [Before the arrow: static composition](../notes/ancient-cuts-provenance.md#contacts-and-spatial-composition-across-traditions):

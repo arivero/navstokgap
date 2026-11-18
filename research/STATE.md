@@ -9,10 +9,13 @@ The first priority is an explanation of positive physical action from the
 central-force trajectory limit itself. Newton connects [Lemma X's force
 measurement](../notes/newton-insertion-action.md#lemma-x-and-the-measurement-of-initial-force)
 to the orbital force rule in Book I, Proposition VI (1713).
-On a single central pair, do [three separately timed angle
-readings](../notes/newton-insertion-action.md#three-angle-readings-on-a-central-orbit)
-violate the torque-free trajectory bound after allowing for radial motion
-and detector error? An ion fluorescence echo admits a classical impulse model.
+For a harmonic central force the [trapped-ion contrast estimates](../notes/newton-insertion-action.md#three-measured-contrasts-of-a-trapped-ion)
+exceed the additive phase ceiling by $0.268$ at one preparation. Can
+the probe's rms displacement error be bounded independently below
+$0.268/(2\pi)$ of its measured fringe pitch after allowing for the
+other errors, or does the excess persist in direct position images?
+For a freely rotating pair a separate [three-angle test](../notes/newton-insertion-action.md#three-angle-readings-on-a-central-orbit)
+allows for radial motion.
 The [point-insertion test](../notes/balaban-newton-time-blocking.md#central-force-passage-under-point-insertion)
 exposes the sensitivity of one orbit to its preparation. The
 [three-energy scattering test](../notes/balaban-newton-time-blocking.md#a-three-energy-test-of-central-force-trajectories)
