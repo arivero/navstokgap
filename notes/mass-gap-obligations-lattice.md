@@ -296,7 +296,8 @@ $\Delta\le Mc^2$. A fitted Regge trajectory would first have to establish
 such spectral weight. The definition of the four-dimensional pure gauge
 problem uses an interval free of positive-energy spectrum in the *whole*
 vacuum representation. Continuous spectrum above the interval is allowed.
-[Jaffe and Witten, §3](https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf)
+The authors list isolation of a one-particle state and confinement as
+further problems. [Jaffe and Witten, §§4–5](https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf)
 (reading: passage).
 
 **Same tensor observations, different gaps (6.1 Sol Max, 2026-11-18).**
