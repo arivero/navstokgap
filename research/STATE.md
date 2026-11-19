@@ -46,10 +46,13 @@ real-time squared displacement. A positive jump transfer keeps both frequencies.
 [Time cuts and orbital speeds](../notes/alpoge-balaban-newton-peek.md#kepler-motion-and-reflection-at-a-cut)
 and [three-time Kepler preparations](../notes/self-sufficiency-contrast.md#three-radial-readings-on-a-near-circular-kepler-orbit).
 
-A bare trajectory, even if passive, can still be a Newtonian circle.
-Can the trajectory limit alone supply the exclusion, or can interactions
-identify one common phase scale across bodies? Universality and the
-value of $\hbar$ remain open.
+Two ellipses approaching the same moving circle recover the force
+gradient on a common subdivision. Either can keep its excess energy
+$e$ after a frequency increase by $b>1$. A common drive misses by at
+least $(b-1)e$ on one of them, and this sharp error vanishes at the circle.
+[Neighbouring motions and trajectory renormalization](../notes/newton-neighbouring-motions.md).
+What additional mechanical requirement excludes zero phase scale, and
+can interactions fix a common $\hbar$ across bodies?
 [Action scales](../notes/action-unit-dimensional-selection.md) and
 [quantum lift](../notes/lipschitz-certificate-quantum-lift.md).
 

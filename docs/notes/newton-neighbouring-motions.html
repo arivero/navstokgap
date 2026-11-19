@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Newton&#x27;s force comparison and the renormalization of a trajectory</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#22201c;--muted:#6b6459;--rule:#e2ddd2;--accent:#7a3b12;
+--card:#fff;--code:#f2efe8}
+@media(prefers-color-scheme:dark){:root{--bg:#16150f;--fg:#e9e4d9;--muted:#9c948a;
+--rule:#332f26;--accent:#d99a5b;--card:#1e1c15;--code:#211f18}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:17px/1.65 Charter,Georgia,"Iowan Old Style",serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1rem 5rem}
+header.site{border-bottom:1px solid var(--rule);margin-bottom:2rem;
+padding:1.6rem 0 1.1rem}
+header.site a.home{color:var(--fg);text-decoration:none;font-weight:600;
+letter-spacing:-.01em}
+nav.site{margin-top:.5rem;font-size:.86rem;color:var(--muted)}
+nav.site a{color:var(--muted);text-decoration:none;margin-right:1.1rem}
+nav.site a:hover{color:var(--accent)}
+h1{font-size:1.85rem;line-height:1.22;letter-spacing:-.015em;margin:.2rem 0 1rem}
+h2{font-size:1.28rem;margin:2.6rem 0 .5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:1.8rem 0 .4rem}
+a{color:var(--accent)}
+p,li{overflow-wrap:break-word}
+.lede{font-size:1.06rem;color:var(--muted)}
+.track{border-top:1px solid var(--rule);padding-top:1.1rem;margin-top:2.4rem}
+.track p.blurb{color:var(--muted);font-size:.95rem;margin:.1rem 0 1rem}
+ul.notes{list-style:none;padding:0;margin:0}
+ul.notes li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+ul.notes li:last-child{border-bottom:0}
+ul.notes a{text-decoration:none;font-weight:600}
+ul.notes a:hover{text-decoration:underline}
+ul.notes .pdf{float:right;font-size:.76rem;color:var(--muted);
+text-decoration:none;font-weight:400;margin-left:.6rem}
+ul.notes .pdf:hover{color:var(--accent)}
+.hl{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+padding:.9rem 1.1rem;margin:.9rem 0}
+.hl h3{margin:0 0 .3rem;font-size:1rem}
+.hl h3 a{text-decoration:none}
+.hl p{margin:0;font-size:.93rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;
+display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;text-align:left;
+vertical-align:top}
+th{font-weight:600}
+code{background:var(--code);padding:.08em .32em;border-radius:3px;
+font:.87em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+pre{background:var(--code);padding:.85rem 1rem;border-radius:7px;overflow-x:auto}
+pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.1rem 0 .1rem 1rem;
+border-left:3px solid var(--rule);color:var(--muted)}
+footer.site{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1rem;
+font-size:.83rem;color:var(--muted)}
+footer.site p{margin:.5rem 0}
+footer.site strong{color:var(--fg)}
+.meta{font-size:.85rem;color:var(--muted);margin:-.5rem 0 1.5rem}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+@media(max-width:640px){body{font-size:16px}h1{font-size:1.5rem}
+ul.notes .pdf{float:none;display:block;margin:.1rem 0 0}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],
+displayMath:[['$$','$$'],['\\[','\\]']],tags:'none'},
+options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a class="home" href="../index.html">navstokgap</a>
+<nav class="site">
+<a href="../index.html">Research map</a>
+<a href="../archive.html">Note archive</a>
+<a href="../tutorial.html">Tutorial</a>
+<a href="../papers.html">Papers</a>
+<a href="../ledger.html">Claim ledger</a>
+<a href="../sources.html">Sources</a>
+<a href="https://github.com/arivero/navstokgap">Repository</a>
+<a href="https://github.com/arivero/navstokgap/issues">Issues</a>
+</nav></div></header>
+<main class="wrap">
+<h1>Newton’s force comparison and the renormalization of a trajectory</h1><p class="meta"><a href="https://github.com/arivero/navstokgap/blob/main/notes/newton-neighbouring-motions.md">Markdown source</a> &middot; <a href="https://github.com/arivero/navstokgap/blob/main/out/papers/newton-neighbouring-motions.pdf">PDF</a></p><p><strong>6.1 Sol Max, 19 November 2026.</strong> Two ellipses can
+approach the same moving circle while their relative displacement still
+determines the force gradient in arbitrarily short times. There is a
+mechanical requirement that the ellipses can satisfy separately and fail
+together. At fixed positive angular momentum, let each have energy <span
+class="math inline">\(e&gt;0\)</span> above the circular minimum.
+Increase the orbital frequency of the linear central force from <span
+class="math inline">\(\omega\)</span> to <span
+class="math inline">\(b\omega\)</span>, <span
+class="math inline">\(b&gt;1\)</span>. Either ellipse can reach a final
+ellipse with the same excess <span class="math inline">\(e\)</span>.
+Under any <em>one</em> change of strength applied to both, at least one
+finishes with excess at least <span class="math inline">\(be\)</span>.
+The exact least possible worst error in preserving <span
+class="math inline">\(e\)</span> is <span
+class="math inline">\((b-1)e\)</span>, even for smooth positive
+forces.</p>
+<p>This answers two questions about Newton’s revision. His comparison of
+nascent displacements has a joint classical realization. Implementing an
+equal-energy identification by a common drive is a stronger demand with
+a sharp classical obstruction. Its absolute cost tends to zero as the
+orbits coalesce. For a convergent one-step discretization the classical
+evolution is a fixed point of blocking on the space of transfer maps. We
+give the scale law for time decimation and insertion of one point, an
+exact blocking rule on a physical momentum grid, and a convergent scheme
+whose single bare coupling fails to close after one block.</p>
+<h2 id="what-the-revision-asks-of-two-motions">What the revision asks of
+two motions</h2>
+<p>Book I, Lemma X of the London <em>Principia</em> (1687) specifies a
+regular force. In Cambridge (1713) Newton specifies a finite force,
+either constant or continually increasing or decreasing. In Corollary 2
+he compares departures generated by proportional forces applied at
+corresponding parts of similar figures. Corollaries 3 and 4 allow
+different forces and times and recover the force ratio from the nascent
+displacements divided by the squared times. Proposition VI expressly
+gives Corollary 4 as another way to obtain the orbital force formula. In
+the preceding Lemma IX he holds the comparison segment <span
+class="math inline">\(Ae\)</span> fixed as the original points coalesce.
+The segment normalizes the geometry, and the squared-time ratio in Lemma
+X compares the intervals. Transporting a family between strengths at a
+prescribed energy would be a further operation. <a
+href="https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00077#par27">1687,
+Lemma X</a> and <a
+href="https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082#par27">1713,
+Lemma IX</a> and <a
+href="https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082#par31">1713,
+Corollaries 2–4</a> and <a
+href="https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082#par90">Proposition
+VI</a> (diplomatic transcriptions, passages).</p>
+<p>For equal masses, the modern vector form uses the departure <span
+class="math inline">\(q(t)-q(0)-t\dot q(0)\)</span> from the inertial
+tangent. Its coefficient of <span class="math inline">\(t^2/2\)</span>
+is acceleration. Acceleration times the common mass gives force.
+Requiring this comparison to work while the two starting states also
+approach each other strengthens the historical fixed-pair limit. The
+companion formalization derives Corollary 4’s ultimate ratio from the
+premises of Corollary 3 and a shared proportionality constant. The
+formal statement makes explicit where the force law enters. <a
+href="https://github.com/arivero/newtonlean/blob/8138e9449b4f961c4adbebcb6090acc0d2fd5aaf/NewtonLimitDynamics/Historical/LemmaX/CorollaryIV.lean">NewtonLean,
+Corollary IV at the cited revision</a> (theorem statements and
+premises).</p>
+<h2 id="two-ellipses-with-a-common-clock">Two ellipses with a common
+clock</h2>
+<p>Use Newton’s Proposition X, with acceleration <span
+class="math inline">\(-\omega^2q\)</span> in the plane. Fix the mass
+<span class="math inline">\(m&gt;0\)</span>, angular frequency <span
+class="math inline">\(\omega&gt;0\)</span> and angular momentum <span
+class="math inline">\(J&gt;0\)</span>. Choose <span
+class="math inline">\(A&gt;B&gt;0\)</span> with <span
+class="math inline">\(m\omega AB=J\)</span>, and put <span
+class="math inline">\(d=A-B\)</span>. The same force acts on the
+following two test bodies, with the same origin, axes and time
+coordinate,</p>
+<p><span class="math display">\[
+q_1(t)=(A\cos\omega t,B\sin\omega t),\qquad
+q_2(t)=(B\cos\omega t,A\sin\omega t).
+\]</span></p>
+<p>They start at opposite radial turning points on the same ray, with
+tangential velocities in the same direction. Their separation has
+constant length <span class="math inline">\(d\)</span>, and their
+velocity difference has length <span class="math inline">\(\omega
+d\)</span>. As <span class="math inline">\(d\)</span> tends to zero they
+approach the same timed circle of radius <span
+class="math inline">\(\sqrt{J/(m\omega)}\)</span>. Both have energy
+<span class="math inline">\(E\)</span>, circular minimum <span
+class="math inline">\(E_c=\omega J\)</span>, and radial action <span
+class="math inline">\(I_r=(2\pi)^{-1}\oint
+p_r\,dr\)</span>. The classical action formula at fixed <span
+class="math inline">\(J\)</span> gives</p>
+<p><span class="math display">\[
+e=E-E_c=\tfrac12m\omega^2d^2,\qquad
+I_r=\frac{e}{2\omega}=\frac{m\omega
+d^2}{4}.                       \tag{1}
+\]</span></p>
+<p>Here <span class="math inline">\(I_r\)</span> labels a particular
+ellipse. The angular action <span class="math inline">\(J\)</span> stays
+fixed in the limit. <a
+href="https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082#par114">Newton,
+1713, Proposition X</a> (passage) and <a
+href="https://arivero.github.io/navstokgap/notes/rivero-1998-conjecture-central-forces.html#hooke-and-kepler-radial-actions-and-maslov-phases">classical
+radial actions, equations (10)–(11)</a>.</p>
+<p>Write <span class="math inline">\(\Delta q=q_1-q_2\)</span> and take
+the component along their common launch ray <span
+class="math inline">\(x\)</span>. Lemma X’s normalized relative tangent
+departure is</p>
+<p><span class="math display">\[
+\frac{2[\Delta q_x(t)-\Delta q_x(0)-t\Delta\dot q_x(0)]}{d\,t^2}
+=\frac{2(\cos\omega t-1)}{t^2}
+\longrightarrow-\omega^2
+.                                        \tag{2}
+\]</span></p>
+<p>The error is at most <span
+class="math inline">\(\omega^4t^2/12\)</span>, independently of <span
+class="math inline">\(d&gt;0\)</span>. Thus any joint approach <span
+class="math inline">\(d,t\downarrow0\)</span> gives the same force
+gradient per unit mass. At <span class="math inline">\(d=0\)</span> the
+quotient refers to a limit of pairs. The mechanical input to its
+normalization is their actual launch separation.</p>
+<p><strong>What happens on Newton polygons.</strong> Give both bodies
+the same partition <span class="math inline">\(\pi\)</span> of <span
+class="math inline">\([0,t]\)</span>. On a cell of length <span
+class="math inline">\(h_i\)</span> apply the impulse before or after
+free flight, at time <span class="math inline">\(s_i\)</span> equal to
+the left or right endpoint. Recompute both histories when a point is
+inserted. By linearity the relative <span
+class="math inline">\(x\)</span> coordinate divided by <span
+class="math inline">\(d\)</span> is a single polygon <span
+class="math inline">\(u\)</span> starting at <span
+class="math inline">\(1\)</span> with zero velocity. Summing the drift
+due to each impulse gives</p>
+<p><span class="math display">\[
+u(t)=1-\omega^2\sum_i h_i(t-s_i)u(s_i).
+\]</span></p>
+<p>The formula with only past kicks also holds at any intermediate time.
+Writing <span class="math inline">\(U=\sup_{[0,t]}|u|\)</span> gives
+<span class="math inline">\(U\le1+\omega^2t^2U\)</span>. For <span
+class="math inline">\(\omega t\le1/\sqrt2\)</span> this gives <span
+class="math inline">\(|u(s)-1|\le2\omega^2t^2\)</span>. The endpoint
+quadrature for <span class="math inline">\(\int_0^t(t-s)\,ds\)</span>
+has error at most <span class="math inline">\(\sum_i h_i^2/2\)</span>.
+With <span class="math inline">\(|\pi|=\max_i h_i\)</span>, the two
+estimates yield</p>
+<p><span class="math display">\[
+\left|\frac{2(u(t)-1)}{t^2}+\omega^2\right|
+\le
+\omega^2\frac{|\pi|}{t}+4\omega^4t^2.                          \tag{3}
+\]</span></p>
+<p>It suffices to refine <em>within</em> the shrinking interval, <span
+class="math inline">\(|\pi|/t\to0\)</span>, with arbitrary <span
+class="math inline">\(d&gt;0\)</span>. On a single cell of length <span
+class="math inline">\(t\)</span>, <span
+class="math inline">\(2(u(t)-1)/t^2\)</span> is <span
+class="math inline">\(-2\omega^2\)</span> for a kick before flight and
+zero for a kick after flight. Both meshes shrink in absolute time. The
+general fixed-duration polygon convergence theorem is used with its
+common-force Lipschitz hypothesis. <a
+href="https://arivero.github.io/navstokgap/notes/balaban-ode-lesson.html#start-with-a-finite-newton-polygon">Mixed
+impulse orders and finite-time convergence</a>.</p>
+<h2 id="a-requirement-that-holds-separately-and-fails-for-the-pair">A
+requirement that holds separately and fails for the pair</h2>
+<p>At the final source frequency <span
+class="math inline">\(b\omega\)</span>, an ellipse with the same excess
+<span class="math inline">\(e\)</span> would have radial action <span
+class="math inline">\(e/(2b\omega)\)</span>. Is there one mechanical
+change of the source that realizes this comparison for both launches?
+Allow any prescribed finite-duration, smooth, positive isotropic
+frequency <span class="math inline">\(\Omega(t)\)</span> joining <span
+class="math inline">\(\omega\)</span> to <span
+class="math inline">\(b\omega\)</span>, constant near its ends. It is
+common to both bodies and cannot depend on which launch it is driving.
+They exert no force on each other. At frequency <span
+class="math inline">\(\nu\)</span> the Hamiltonian is <span
+class="math inline">\(H_\nu(q,p)=|p|^2/(2m)+m\nu^2|q|^2/2\)</span>.
+Define the final excess for launch <span
+class="math inline">\(i\)</span> by <span
+class="math inline">\(e_{f,i}=H_{b\omega}(q_i,p_i)-b\omega
+J\)</span>.</p>
+<p><strong>Theorem.</strong> For the pair above and <span
+class="math inline">\(b&gt;1\)</span>,</p>
+<p><span class="math display">\[
+\inf_{\Omega}\max_{i=1,2}|e_{f,i}-e|=(b-1)e.                       \tag{4}
+\]</span></p>
+<p>One smooth positive drive attains the infimum for all these pairs at
+once. For either launch separately, another smooth positive drive can
+give <span class="math inline">\(e_{f,i}=e\)</span>.</p>
+<p><strong>Proof.</strong> At frequency <span
+class="math inline">\(\nu\)</span> write <span
+class="math inline">\(X=\sqrt{m\nu}\,q\)</span>, <span
+class="math inline">\(Y=p/\sqrt{m\nu}\)</span>. These coordinates have
+units of square root of action and <span
+class="math inline">\(H_\nu=\nu(|X|^2+|Y|^2)/2\)</span>. The drive has
+the same two-by-two matrix <span class="math inline">\(S\)</span> on
+<span class="math inline">\((X_j,Y_j)\)</span> for each Cartesian
+component <span class="math inline">\(j\)</span>, using initial and
+final units at their respective ends. The Hamiltonian transfer and both
+changes of units have determinant one. Let <span
+class="math inline">\(l_1,l_2\)</span> be the squared lengths of the
+columns of <span class="math inline">\(S\)</span>. The two launches
+exchange the weights <span class="math inline">\(m\omega A^2,m\omega
+B^2\)</span> of those columns. Consequently their arithmetic mean
+obeys</p>
+<p><span class="math display">\[
+\frac{E_{f,1}+E_{f,2}}2=bE\,\frac{l_1+l_2}{2}\ \ge\
+bE,             \tag{5}
+\]</span></p>
+<p>since <span class="math inline">\(l_1+l_2\ge2|\det S|=2\)</span>.
+Subtracting the common final circular energy gives <span
+class="math inline">\(\max_i e_{f,i}\ge be\)</span>. This is a
+comparison of two specified solutions. The established oscillator
+inequality for a uniform ensemble of initial phases uses the same
+transfer matrix. Equation (5) identifies two coalescing fixed-<span
+class="math inline">\(J\)</span> launches which already realize its mean
+exactly. <a href="https://arxiv.org/pdf/nlin/0506033">Robnik and
+Romanovski, equations (9)–(12) and the following mean-energy
+inequality</a> (passage).</p>
+<p>The lower bound holds even before the trajectory limit. Each free
+drift and each isotropic central kick has determinant one on a Cartesian
+coordinate and its momentum, and preserves <span
+class="math inline">\(J\)</span> in the plane. Any common partition and
+common kick placement therefore give (5) exactly for the two discrete
+endpoint energies.</p>
+<p>For attainment, the positive intermediate frequency <span
+class="math inline">\(\Omega_p=\sqrt b\,\omega\)</span>, run for <span
+class="math inline">\(\pi/(2\Omega_p)\)</span>, has the quarter-period
+map <span class="math inline">\((q,p)\mapsto(p/(m\Omega_p),-m\Omega_p
+q)\)</span>. Switching to <span class="math inline">\(b\omega\)</span>
+gives <span class="math inline">\(E_f=bE\)</span> for every input. There
+is also an exactly smooth realization. Take a smooth positive scale
+<span class="math inline">\(\rho\)</span> constant at 1 initially and at
+<span class="math inline">\(b^{-1/2}\)</span> finally. The Ermakov
+prescription <span
+class="math inline">\(\Omega^2=\omega^2/\rho^4-\ddot\rho/\rho\)</span>
+preserves the endpoint oscillator action <span
+class="math inline">\(E/\nu\)</span> for every phase. Stretching the
+duration makes <span class="math inline">\(\Omega^2&gt;0\)</span>
+throughout. Thus both excesses equal <span
+class="math inline">\(be\)</span>, which attains (4). <a
+href="https://arxiv.org/pdf/0910.0709">Chen et al., scaling equation and
+endpoint conditions</a> (passage, used for compression).</p>
+<p>For launch 1 choose instead <span
+class="math inline">\(\Omega_p^2=b\omega^2 B/A\)</span>. At the end of
+its quarter period the position and momentum are perpendicular with
+<span class="math inline">\(|p_f|=mb\omega|q_f|\)</span>. The final
+orbit is the circle and <span class="math inline">\(e_{f,1}=0\)</span>.
+For launch 2 interchange <span class="math inline">\(A,B\)</span>.
+Varying <span class="math inline">\(\Omega_p\)</span> continuously from
+the value for the chosen circle to <span class="math inline">\(\sqrt
+b\,\omega\)</span> therefore brackets the desired excess strictly
+between 0 and <span class="math inline">\(be\)</span>. Smooth both
+switches over a sufficiently short positive time. Continuous dependence
+of the linear transfer on the ramps preserves the strict bracket for
+this fixed <span class="math inline">\(e&gt;0\)</span>, and continuity
+in <span class="math inline">\(\Omega_p\)</span> gives the target
+exactly. Time spent at the final strength can equalize the durations
+without changing either final energy. This proves the separate
+assertion. <span class="math inline">\(\square\)</span></p>
+<p>At <span class="math inline">\(b=2\)</span> the best common drive
+misses the equal-excess target on at least one orbit by <span
+class="math inline">\(e\)</span>, one full initial excitation. In final
+radial-action units the sharp error is <span
+class="math inline">\((1-1/b)I_r\)</span>. The fractional error survives
+arbitrarily fine comparison of neighbouring trajectories. The absolute
+error vanishes quadratically with <span
+class="math inline">\(d\)</span>. In particular the limiting moving
+circle itself admits a common drive to the final circle.</p>
+<h2 id="a-kepler-bound-from-the-whole-radial-orbit">A Kepler bound from
+the whole radial orbit</h2>
+<p>For the potential <span class="math inline">\(-m\mu/r\)</span>, take
+<span class="math inline">\(m,J,\mu&gt;0\)</span>. At fixed <span
+class="math inline">\(J\)</span> the bound radial action <span
+class="math inline">\(I\)</span> and energy above the circular minimum
+obey</p>
+<p><span class="math display">\[
+e_\mu(I)=\frac{m^3\mu^2}{2}
+       \left(\frac1{J^2}-\frac1{(J+I)^2}\right).
+\]</span></p>
+<p>The closed radial curve of excitation <span
+class="math inline">\(e\)</span> bounds a disk of canonical area <span
+class="math inline">\(2\pi I\)</span> in <span
+class="math inline">\((r,p_r)\)</span>. This is the action of the radial
+oscillation. <a
+href="https://arivero.github.io/navstokgap/notes/rivero-1998-conjecture-central-forces.html#hooke-and-kepler-radial-actions-and-maslov-phases">Kepler
+action and its circular limit</a> and <a
+href="https://physique.ensta-paris.fr/PAT/DM/paper_dm3.pdf">Ramond and
+Perez, radial-action formula in the Kepler limit</a> (passage following
+equation (2.7)).</p>
+<p>Increase the attraction to <span
+class="math inline">\(\lambda\mu\)</span>, <span
+class="math inline">\(\lambda&gt;1\)</span>. For any smooth rotationally
+invariant Hamiltonian drive with these endpoints whose reduced
+finite-time flow exists on a neighbourhood of the initial closed disk,
+at least one initial phase finishes with</p>
+<p><span class="math display">\[
+                    e_f\ \ge\ \lambda^2
+e.                          \tag{6}
+\]</span></p>
+<p>Indeed <span class="math inline">\(e_{\lambda\mu}(I)=\lambda^2
+e_\mu(I)\)</span>. The target disk at that excitation has exactly the
+initial disk’s area. If the entire image of its boundary lay strictly
+inside the target disk, its enclosed image would have strictly smaller
+area. The reduced Hamiltonian flow preserves <span
+class="math inline">\(dr\,dp_r\)</span>. This proves (6), including the
+case in which a phase escapes to nonnegative energy. Take <span
+class="math inline">\(0&lt;e&lt;m^3\mu^2/(2J^2)\)</span> so that the
+initial disk is compact. There are no walls or thermal preparations in
+this comparison. The proof finds a phase on the entire radial orbit.
+Identifying a prescribed two-phase witness for a nonlinear Kepler drive
+would require further information about its transfer.</p>
+<h2 id="frequency-doubling-decimation-and-point-insertion">Frequency
+doubling, decimation and point insertion</h2>
+<p>There are two senses in which Newton’s construction resembles
+renormalization. They admit a direct comparison in this example.</p>
+<p><strong>Comparing source strengths.</strong> At fixed <span
+class="math inline">\(J,e\)</span>, the map on the labels of ellipses
+is</p>
+<p><span class="math display">\[
+             (\omega,I_r)\ \longmapsto\ (b\omega,I_r/b).
+\]</span></p>
+<p>These maps compose by multiplication of <span
+class="math inline">\(b\)</span> and preserve <span
+class="math inline">\(2\omega I_r=e\)</span>. For <span
+class="math inline">\(b=2\)</span> the radial action halves. This
+resembles a Kadanoff change of scale with a specified quantity held
+fixed. It compares two different force strengths. Equation (4) gives a
+mechanical way to distinguish this map from a common time evolution of
+the two orbits. Kadanoff groups spins into cells, and Wilson and Kogut
+allow effective interactions to change as degrees of freedom are
+eliminated. <a
+href="https://inspirehep.net/files/1b6824b02d6ea885938ba7992c217b69">Kadanoff,
+1966, cell construction</a> and <a
+href="https://theory.tifr.res.in/~tridib/ReferenceMaterial/WilsonKogut.pdf">Wilson
+and Kogut, 1974, pp. 82–83 and §12</a> (passages).</p>
+<p><strong>Blocking actual trajectory data.</strong> Hold the source and
+orbit fixed. At time spacing <span class="math inline">\(h\)</span>,
+every Cartesian position component satisfies <span
+class="math inline">\(q_{j+1}+q_{j-1}=2c(h)q_j\)</span>, where <span
+class="math inline">\(c(h)=\cos(\omega h)\)</span>. Keeping even sites
+gives the exact recurrence at spacing <span
+class="math inline">\(2h\)</span>,</p>
+<p><span class="math display">\[
+                   c(2h)=2c(h)^2-1.                                \tag{7}
+\]</span></p>
+<p>The decimated data describe the same timed orbit with its original
+radial action. Doubling <span class="math inline">\(\omega\)</span> at
+fixed <span class="math inline">\(h\)</span> gives the same recurrence
+coefficient by changing the <em>source</em>. For instance the position
+response to initial momentum in time <span
+class="math inline">\(2h\)</span> is <span
+class="math inline">\(\sin(2\omega h)/(m\omega)\)</span>, whereas the
+response at frequency <span class="math inline">\(2\omega\)</span> in
+time <span class="math inline">\(h\)</span> is <span
+class="math inline">\(\sin(2\omega h)/(2m\omega)\)</span>. The two
+operations agree on the trace of the transfer and can disagree on the
+transfer itself.</p>
+<p><strong>Inserting one point and changing the reference
+interval.</strong> Suppose <span class="math inline">\(0&lt;\omega
+h&lt;\pi\)</span>. Given the two endpoints, the unique intermediate
+position at time <span class="math inline">\(a h\)</span>, <span
+class="math inline">\(0&lt;a&lt;1\)</span>, is</p>
+<p><span class="math display">\[
+q(ah)=\frac{\sin((1-a)\omega h)\,q(0)+\sin(a\omega h)\,q(h)}
+                 {\sin(\omega
+h)}.                                  \tag{8}
+\]</span></p>
+<p>The subinterval transfers compose to the old endpoint transfer. This
+is the classical oscillator instance of the established perfect
+discretization construction. The Gell-Mann–Low aspect appears when one
+expresses the <em>same</em> physics using a coefficient fixed at a new
+reference interval. The change of coefficient and its differential form
+here are</p>
+<p><span class="math display">\[
+\Sigma_s(c)=\cos(s\arccos c),\qquad
+h\,\frac{dc}{dh}=-(\arccos
+c)\sqrt{1-c^2}.                         \tag{9}
+\]</span></p>
+<p>The invariant is <span
+class="math inline">\(\arccos(c(h))/h=\omega\)</span>. Inserting one
+point uses <span class="math inline">\(\Sigma_a(c)\)</span> and <span
+class="math inline">\(\Sigma_{1-a}(c)\)</span> for the two new
+coefficients. One has <span
+class="math inline">\(\Sigma_s\Sigma_v=\Sigma_{sv}\)</span> wherever the
+initial, intermediate and final angles lie in <span
+class="math inline">\((0,\pi)\)</span>. On that branch <span
+class="math inline">\(\Sigma_2\)</span> is precisely (7). Outside it
+different frequencies can give the same sampled coefficient, and at
+<span class="math inline">\(\omega h=\pi\)</span> the endpoints do not
+determine the inserted point. This supplies an exact scale-composition
+example of the Gell-Mann–Low functional equation idea. The running
+quantity in (9) is a coefficient of a classical recurrence. <a
+href="https://doi.org/10.1103/PhysRev.95.1300">Gell-Mann and Low,
+1954</a> (abstract on scale functional equations), <a
+href="https://arxiv.org/pdf/1101.4775">Bahr, Dittrich and Steinhaus,
+§3</a> (harmonic refinement passage) and <a
+href="https://arxiv.org/pdf/quant-ph/9803035">Rivero, 1998, equations
+(5)–(10)</a> (passages on scale control and insertion).</p>
+<h2
+id="how-generally-does-a-discretization-define-a-renormalization-flow">How
+generally does a discretization define a renormalization flow?</h2>
+<p><strong>The continuum evolution as a fixed point.</strong> Let <span
+class="math inline">\(A_{t,s}\)</span> be any continuous one-step rule
+on the full state for <span class="math inline">\(s&lt;t\)</span>. A
+blocking transformation on such <em>rules</em> is</p>
+<p><span class="math display">\[
+(\mathcal B A)_{t,s}=A_{t,r}\circ A_{r,s},\qquad r=(s+t)/2.
+\]</span></p>
+<p>Assume the products on all partitions of each finite interval
+converge, as their mesh tends to zero, locally uniformly in the launch
+state. Assume the intermediate states stay in compact subsets of the
+common domain for compact sets of launches. Write <span
+class="math inline">\(\Phi_{t,s}\)</span> for this limit. Then <span
+class="math inline">\((\mathcal B^n A)_{t,s}\to\Phi_{t,s}\)</span>,
+since these are the products on the dyadic refinements. More strongly,
+refine <span class="math inline">\([s,u]\)</span> and <span
+class="math inline">\([u,t]\)</span> separately for any <span
+class="math inline">\(s&lt;u&lt;t\)</span>. Their union is another
+vanishing-mesh partition. Local uniform convergence on the intermediate
+compact set and continuity of the limiting transfer give</p>
+<p><span class="math display">\[
+                  \Phi_{t,s}=\Phi_{t,u}\circ\Phi_{u,s}.
+\]</span></p>
+<p>Thus the continuum law is fixed by blocking at <em>any</em> inserted
+point. When the method converges to Newton’s initial-value problem this
+fixed law is the classical flow. This argument takes convergence as a
+hypothesis. Concrete estimates establishing it for the two Newton
+impulse orders are available. <a
+href="https://arivero.github.io/navstokgap/notes/refinement-composition-and-limit.html#c.-all-refinement-sequences-and-two-microscopic-kick-orders">All-partition
+construction</a>.</p>
+<p><strong>What a change of variables preserves.</strong> Consider any
+method with specified observations at each resolution. Let <span
+class="math inline">\(\pi&#39;\)</span> refine <span
+class="math inline">\(\pi\)</span>. Let <span
+class="math inline">\(S_\pi x\)</span> denote what the exact curve <span
+class="math inline">\(x\)</span> would give at resolution <span
+class="math inline">\(\pi\)</span>, and <span
+class="math inline">\(R_{\pi\pi&#39;}\)</span> the restriction of fine
+data to coarse data. Require <span
+class="math inline">\(R_{\pi\pi&#39;}S_{\pi&#39;}=S_\pi\)</span> and
+require successive restrictions to compose. Taking the image of a set of
+fine histories under <span class="math inline">\(R\)</span> then gives
+exact, associative blocking on sets of histories. An invertible change
+of finite data <span class="math inline">\(C_\pi\)</span> at each
+resolution gives the conjugate restriction <span
+class="math inline">\(C_\pi R_{\pi\pi&#39;}C_{\pi&#39;}^{-1}\)</span>.
+It has the same composition law, including in a full discrete Fourier
+basis. Retaining selected Fourier modes introduces a further projection
+whose closure has to be tested. Information discarded by restriction can
+prevent its inversion.</p>
+<p>For an approximate method let <span
+class="math inline">\(x_\pi\)</span> have error at most <span
+class="math inline">\(\eta_\pi\)</span> relative to <span
+class="math inline">\(S_\pi x\)</span> in a chosen norm. If the
+restriction is <span class="math inline">\(L\)</span>-Lipschitz, coarse
+predictions satisfy</p>
+<p><span class="math display">\[
+\|R_{\pi\pi&#39;}x_{\pi&#39;}-x_\pi\|
+\le L\eta_{\pi&#39;}+\eta_\pi
+.                                       \tag{10}
+\]</span></p>
+<p>This triangle inequality gives asymptotic agreement whenever the
+right side tends to zero. Sampling a common timed curve in the sup norm
+has <span class="math inline">\(L=1\)</span>. Equation (3) illustrates
+why a normalized observable with shrinking denominator needs its own
+estimate. Exact closure on a proposed set of retained variables <span
+class="math inline">\(Pz\)</span> has a further condition. For a fine
+block transfer <span class="math inline">\(F\)</span>, <strong>all fine
+states with the same <span class="math inline">\(Pz\)</span> must have
+the same <span class="math inline">\(PFz\)</span></strong>. This
+condition is necessary and sufficient to define the coarse deterministic
+map on the image of <span class="math inline">\(P\)</span>. Closure in a
+prescribed family of couplings also requires the resulting map to belong
+to that family.</p>
+<p>For a countertest take a convergent kick-then-drift discretization of
+the same oscillator. In <span class="math inline">\((q,\dot q)\)</span>
+its time-<span class="math inline">\(h\)</span> step at stiffness per
+mass <span class="math inline">\(k=\omega^2\)</span> is</p>
+<p><span class="math display">\[
+M_h(k)=\begin{pmatrix}1-kh^2&amp;h\\-kh&amp;1\end{pmatrix}.
+\]</span></p>
+<p>The lower right entry of <span
+class="math inline">\(M_h(k)^2\)</span> is <span
+class="math inline">\(1-kh^2\)</span>. Every <span
+class="math inline">\(M_{2h}(k&#39;)\)</span> has lower right entry one.
+Thus even arbitrary renormalization of the single stiffness cannot give
+the blocked full-state step at finite <span
+class="math inline">\(h&gt;0\)</span>, <span
+class="math inline">\(k&gt;0\)</span>. In the space of determinant-one
+transfer matrices the exact block is <span
+class="math inline">\(M_h(k)^2\)</span>. This example gives both the
+flow on enlarged data and the failure of a particular one-coupling
+description. <a
+href="https://arivero.github.io/navstokgap/notes/refinement-composition-and-limit.html#c.-all-refinement-sequences-and-two-microscopic-kick-orders">Convergence
+for arbitrary harmonic partitions</a>.</p>
+<p><strong>A grid in physical momentum.</strong> One can use momentum
+itself as the mesh coordinate. For one Cartesian harmonic mode of energy
+<span class="math inline">\(E_x&gt;0\)</span>, put <span
+class="math inline">\(P_*=\sqrt{2mE_x}\)</span>. On a monotone arc
+retain the sign <span
+class="math inline">\(\sigma=\operatorname{sgn}q\)</span>. From the
+energy law <span
+class="math inline">\(q(p)=\sigma\sqrt{P_*^2-p^2}/(m\omega)\)</span>.
+For a cell of momenta <span class="math inline">\(p_0,p_1\)</span>
+traversed in the direction of motion its elapsed time is</p>
+<p><span class="math display">\[
+\tau_\sigma(p_0,p_1)=-\frac{\sigma}{\omega}
+      \big[\arcsin(p_1/P_*)-\arcsin(p_0/P_*)\big].                  \tag{11}
+\]</span></p>
+<p>Inserting any intermediate momentum composes by addition of cell
+times. In particular, take midpoint approximations to <span
+class="math inline">\(1/(\omega\sqrt{P_*^2-p^2})\)</span> on a
+nonuniform momentum grid. Blocking adjacent cells replaces their inverse
+speeds in momentum space, <span class="math inline">\(dt/|dp|\)</span>,
+by their momentum-width-weighted mean. The rule is associative and
+preserves elapsed time. On compact subintervals of <span
+class="math inline">\((-P_*,P_*)\)</span> the midpoint sums converge
+uniformly for cumulative time. This extends to the turning points. The
+integrand is convex and integrable, so every midpoint sum over a
+terminal layer is bounded by the exact integral over that layer enlarged
+by one mesh cell. This bound tends to zero with the layer width and
+mesh. Linear interpolation and inversion of the strictly monotone
+cumulative time recover the timed arc. At a turn one joins signed arcs
+and keeps their order. Forget the sign and the same momentum <span
+class="math inline">\(p=0\)</span> allows <span
+class="math inline">\(q=\pm P_* /(m\omega)\)</span>, giving opposite
+<span class="math inline">\(\dot p\)</span>. A deterministic rule on
+that one retained momentum fails the criterion above. The momentum mesh
+width has units of momentum. Neither a time lattice nor a quantum phase
+was used in obtaining (11).</p>
+<h2 id="consequence-for-state">Consequence for STATE</h2>
+<p>The bare comparison in Lemma X survives joint refinement of time and
+of the two launches. Requiring a single change of force to preserve
+their common excess energy would add a condition that already fails in
+classical mechanics by (4). Its sharp relative error stays finite as the
+circle is approached, while its absolute action cost tends to zero. In
+the thermal problem the equilibrium work identity gives the ratio an
+entropy consequence and the Nernst heat theorem independently constrains
+that entropy. Planck’s December 1900 paper introduced the energy element
+<span class="math inline">\(h_P\nu\)</span>, with <span
+class="math inline">\(\nu\)</span> in cycles per unit time, when
+counting distributions of energy among resonators in equilibrium. <a
+href="https://arivero.github.io/navstokgap/notes/thermal-action-central-force.html#what-a-quarter-period-change-forces-on-every-newtonian-law">Thermal
+central-force proof</a> and <a
+href="https://www.ub.edu/hcub/hfq/sites/default/files/planck_1900_deduccio%281%29.pdf">Planck,
+1900, pp. 82–83 in translation</a> (passage on energy elements).</p>
+<p>The mechanical inputs are <span
+class="math inline">\(m,J,\omega,d\)</span>, the timed source profile
+and its duration. The inverse-square comparison adds <span
+class="math inline">\(\mu\)</span>, of dimension length cubed per time
+squared, and its chosen excitation. The time grid uses a spacing <span
+class="math inline">\(h\)</span> in seconds. The momentum grid also
+fixes the component energy <span class="math inline">\(E_x\)</span>,
+hence the momentum amplitude <span class="math inline">\(P_*\)</span>,
+and uses cell widths in momentum units. The cut fraction <span
+class="math inline">\(a\)</span> and the scale factors <span
+class="math inline">\(b,\lambda\)</span> and <span
+class="math inline">\(s\)</span> in (9) are dimensionless. The physical
+reduced phase constant <span class="math inline">\(\hbar\)</span>, with
+<span class="math inline">\(h_P=2\pi\hbar\)</span>, never enters. Even
+at fixed dimensionful reference <span class="math inline">\(J\)</span>
+the entire construction admits classical dynamics with zero phase scale.
+An exclusion from the trajectory limit would require another principle
+about which comparisons the mechanics must realize.</p>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Comments, corrections and questions are welcome as repository
+issues.</strong> Open one at <a href="https://github.com/arivero/navstokgap/issues">https://github.com/arivero/navstokgap/issues</a>, or go
+straight to <a href="https://github.com/arivero/navstokgap/issues/new">a new issue</a>. Corrections to a
+quoted source, a dating or a proof are especially wanted: every note names the
+premises it uses, so a disputed premise can be pointed at directly.</p>
+<p>Research repository <a href="https://github.com/arivero/navstokgap">arivero/navstokgap</a>. Pages generated
+by <code>scripts/build_site.py</code>; every note is also the Markdown source
+in <code>notes/</code>; selected manuscripts have a typeset PDF in
+<code>out/papers/</code>. Notes are
+working research, not peer-reviewed publications, and each states its own
+status.</p>
+</div></footer>
+</body></html>
