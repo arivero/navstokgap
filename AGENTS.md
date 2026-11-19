@@ -136,3 +136,11 @@ submissions, correspondence and paid services require separate direction.
 Publication uploads must include the compiled PDF built from the included
 source (user rule, 2026-09-13). Verify redistribution rights before
 publishing archived editorial material.
+
+# Integration without pull requests
+
+Integrate finished work directly on the default branch (`main` or
+`master`). Fast-forward when the history allows it, otherwise merge
+locally, then push the default branch. Do not open pull requests. A side
+branch is for work in progress only; merge it back as soon as the work
+is complete and delete it afterwards. User instruction of 20 November 2026.
