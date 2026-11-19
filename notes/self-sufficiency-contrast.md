@@ -9,6 +9,15 @@ all sufficiently small ones for its specified value. The classical ellipse
 satisfies the preparation even under arbitrarily fine time subdivision.
 [Stationary Kepler preparations](#stationary-kepler-preparations).
 
+A different condition uses work in Newton's physical time. Vary only
+the strength of the attraction and restore it. Among stationary planar
+bound states of sharp energy and positive angular momentum $J$, the
+passive Newtonian orbits are precisely the circles. The passive states
+of the regular canonical theory are precisely its radial grounds, with
+radial action $I_r=a/2$ at trial reduced action $a$. At the example's
+fixed energy this selects $a=J$.
+[Passivity under cyclic changes of the attraction](#passivity-under-cyclic-changes-of-the-attraction).
+
 For $V=-k/r$ in three dimensions, the inward radial classical flow reaches a
 collision in finite time, whereas the nonrelativistic Coulomb Hamiltonian
 $-h^2\Delta/(2m)-k/r$ on the specified Laplacian domain generates global
@@ -953,6 +962,276 @@ The specified coherent preparation supplies the excess. Classical
 stationarity or Newton's short-time force prescription does not supply
 its relative signs.
 
+## Passivity under cyclic changes of the attraction
+
+**5e. 6.1 Sol Max, 2026-11-19.** Passivity means that the mean work
+done *on* a preparation is nonnegative for every allowed cycle. Use
+only smooth positive strengths $\mu(t)$ equal to the same $\mu$ before
+and after a finite interval. The potential is always $-m\mu(t)/r$ and
+the angular momentum stays fixed. Work is final minus initial mean
+energy in the original Hamiltonian. The schedule is fixed in advance,
+independent of orbital phase. This is a restriction of the usual
+equilibrium work criterion to a specified source family. Ground-state
+passivity and examples of cyclic work extraction from classical
+microcanonical states are established results. [Pusz and Woronowicz](https://link.springer.com/article/10.1007/BF01614224)
+(abstract) and [Marathe and Parrondo](https://arxiv.org/abs/0909.0671)
+(abstract, different Hamiltonian).
+
+### Two changes of source strength on a classical ellipse
+
+Keep sharp $J>0$. In reduced radial action-angle coordinates use
+$I=J+I_r$ and mean anomaly $\phi$. With $C=m^3\mu^2$, the undriven
+energy and frequency are $h(I)=-C/(2I^2)$ and $\nu(I)=C/I^3$.
+Take any noncircular bound preparation with $I=I_0>J$, uniform in
+$\phi$, and set $\nu_0=\nu(I_0)$. The following finite smooth cycle
+has negative mean work. It uses the change of orbital period with energy.
+[Kepler actions and period](rivero-1998-conjecture-central-forces.md#5-hooke-and-kepler-radial-actions-and-maslov-phases).
+
+Write $S(r)=-m\mu/(\nu_0 r)$, with units of action. Choose a
+nonnegative smooth function $b$ supported in $(0,\ell)$, of integral
+one, with $\nu_0\ell<\pi/2$. Add
+$\epsilon [b(t)+b(t-T)] S(r)$ to the Hamiltonian, with dimensionless
+$\epsilon>0$. This increases the attraction twice. Define
+
+$$
+ B(I,\phi)=\int b(t)S(r(I,\phi+\nu(I)t))\,dt,\qquad
+ K(I,\theta)=\overline{B_\phi(I,\phi)B_\phi(I,\phi+\theta)}
+$$
+
+where the bar is uniform phase average. The first cosine coefficient
+of $S(r(I_0,\phi))$ is nonzero. It is even on the circle and increases
+strictly from periapsis to apoapsis, so the integral against $\cos\phi$
+on $(0,\pi)$ is negative by integration by parts. Averaging over $b$
+preserves a nonzero first Fourier coefficient since the phase in that
+integral ranges over less than $\pi/2$. Hence $K(I_0,\cdot)$ is a
+nonconstant smooth periodic autocorrelation. Choose $\theta_0$ where
+$K_\theta(I_0,\theta_0)>0$.
+
+For the two pulses the first interaction-picture generator is
+$G(I,\phi)=B(I,\phi)+B(I,\phi+\nu(I)T)$. At zero amplitude the
+first mean-work derivative vanishes. The second is
+
+$$
+ W''(0)=\partial_I\!\left[\nu(I)\overline{G_\phi^2}\right]_{I_0}.
+ \tag{P1}
+$$
+
+Indeed the second variation of $h$ has the term
+$\{\{h,G\},G\}$ and a bracket $\{h,G_2\}$ from time ordering.
+The latter is a full phase derivative and averages to zero. Integrating
+the former once in $\phi$, with $\{h,G\}=-\nu G_\phi$, gives (P1).
+The flow and its two parameter derivatives exist uniformly over the
+initial phases for fixed $T$ and sufficiently small amplitude, since the
+unperturbed ellipse lies in a compact collision-free annulus.
+
+Take $T=(2\pi N+\theta_0)/\nu_0>\ell$. Write
+$D=\partial_I[\nu(I)(K(I,0)+K(I,\theta_0))]_{I_0}$. Then
+$W''(0)=2D+2\nu_0\nu'(I_0)T K_\theta(I_0,\theta_0)$. Since
+$\nu'(I_0)=-3\nu_0/I_0$, any such $T$ greater than
+$|D|/(\nu_0|\nu'(I_0)| K_\theta(I_0,\theta_0))$ gives $W''(0)<0$.
+Fix that finite delay before taking the weak-drive limit. For all
+sufficiently small positive $\epsilon$ the returned source has
+extracted mean work. The strict sign persists for stationary orbits
+in a neighborhood of the sharp energy and angular momentum, by
+continuous dependence at the fixed duration. Refining the underlying
+Newton trajectory in the collision-free annulus preserves the sign.
+[Finite-time Newton construction](balaban-ode-lesson.md).
+
+### Which stationary trial is passive at the same integrals?
+
+Return to the planar Friedrichs states of §5c at $I_0=3J/2$.
+They exhaust the sharp canonical trials, with $a=J/(2n+1)$ and
+angular index $k=2n+1$. For $n=0$, $a=J$, the sharp state is the
+lowest radial eigenstate at this $J$. A cycle acts within the sector,
+whose original Hamiltonian bounds the final energy below by the initial
+energy. It is passive for every allowed strength cycle.
+
+For $n\ge1$ let $u_j$ be the normalized real radial eigenfunctions
+in this fixed $k$ sector, with energies
+$E_j=-C/[2a^2(j+k+1/2)^2]$. The adjacent downward transition couples
+to the allowed control $V=-m\mu/r$. The radial operator is a real
+half-line Sturm–Liouville operator with separated endpoint conditions.
+The two adjacent bound eigenfunctions satisfy both endpoint conditions.
+Their Wronskian has no interior zero by the open-interval oscillation
+count. Thus $A_1(s)=\int_0^s u_{n-1}u_n\,dr$, proportional to that
+Wronskian by the radial equations and its zero boundary value, has one
+strict sign. Integration by parts gives
+$\int u_{n-1}u_n/r\,dr=\int A_1(r)/r^2\,dr\ne0$. The regular
+solutions vanish as $r^{k+1/2}$ at zero and decay at infinity.
+[Gesztesy, Simon and Teschl, Theorem 1.3](https://math.caltech.edu/papers/bsimon/p252.pdf)
+(passage).
+
+There is no upward energy at the same distance. Write
+$q=n+k+1/2$. An upward resonance would require
+$(q+j)^{-2}=2/q^2-1/(q-1)^2$ with an integer $j\ge1$.
+For $n=1$, $q=9/2$, the right side is $68/3969$, strictly between
+$(q+4)^{-2}$ and $(q+3)^{-2}$. For $n\ge2$, $q\ge15/2$.
+Convexity of $q^{-2}$ puts the right side below $(q+1)^{-2}$.
+It exceeds $(q+2)^{-2}$ since their difference has positive numerator
+$2q^3-11q^2-8q+8$ over $q^2(q-1)^2(q+2)^2$. In both cases the
+candidate upward energy is negative, below the continuum.
+
+Let $\Omega=(E_n-E_{n-1})/a$. Choose a real smooth $g$ supported in
+$(0,1)$ with nonzero integral and change $\mu$ to
+$\mu[1+\epsilon c_T(t)]$, $c_T(t)=g(t/T)\cos(\Omega t)$.
+At each fixed duration choose $|\epsilon|\|g\|_\infty<1$. Let $P_{H_0}$
+be the spectral resolution of the undriven radial Hamiltonian and put
+$d\sigma(\lambda)=d\langle Vu_n,P_{H_0}(\lambda)Vu_n\rangle$.
+The weak-drive work coefficient is
+
+$$
+ \lim_{\epsilon\to0}\frac{W(\epsilon)}{\epsilon^2}
+ =\frac1{a^2}\int(\lambda-E_n)
+  \left|\int_0^T c_T(t)e^{i(\lambda-E_n)t/a}dt\right|^2
+  d\sigma(\lambda).                                                \tag{P2}
+$$
+
+Here the first-order transition formula applies to a single bound
+state. In the flat radial measure the centrifugal term is
+$a^2(k^2-1/4)/(2mr^2)$, so $V$ maps the common form domain to $L^2$.
+The smooth source keeps the shifted forms uniformly equivalent on a
+fixed time interval. Also $Vu_n$ belongs to the form domain since
+$k\ge3$. The form propagators are uniformly bounded there for small
+$\epsilon$ by the form-energy estimate. Duhamel's formula applied to
+the source term $\epsilon c_T(t)Vu_n e^{-iE_nt/a}$ gives an $O(\epsilon)$
+change in form norm and the first variation in $L^2$. Substituting that
+variation in $\epsilon\int\dot c_T\langle V\rangle_t\,dt$ gives (P2)
+by integration by parts. The finite first absolute spectral moment of
+$Vu_n$ justifies the interchange. [Kubo, linear response, §§2–3](https://doi.org/10.1143/JPSJ.12.570)
+(passages) and [Kisyński's common-form propagator theorem, statement 3.10](https://arxiv.org/pdf/2112.11063)
+(passage, Balmaseda, Lonigro and Pérez-Pardo).
+
+Divide (P2) by $T^2$ and let $T\to\infty$. The normalized Fourier
+factor tends to zero off the two resonances and is bounded by
+$\|g\|_1$. Dominated convergence leaves
+
+$$
+ \frac{|\int_0^1 g(v)\,dv|^2}{4a^2}
+ (E_{n-1}-E_n)|\langle u_{n-1},Vu_n\rangle|^2<0 .
+$$
+
+Thus some finite smooth cycle extracts energy for every $n\ge1$,
+including the $a=J/3$ preparation singled out by §5c's radius
+reading. A finite duration can also be specified before comparing the
+two trials. Choose $g\ge0$, put $g_0=\int g>0$, $g_1=\int|g'|$, and let
+$d$ be the smaller of $\Omega$ and the distance from $\Omega$ to the
+set of upward transition frequencies in the sector, including the
+continuum. The negative candidate energy and the nonresonance just
+proved give $d>0$. Put
+$S_+=\int(\lambda-E_n)_+d\sigma(\lambda)$ and
+$S_-=(E_n-E_{n-1})|\langle u_{n-1},Vu_n\rangle|^2$.
+It suffices to choose
+
+$$
+ T>\max\left\{\frac{g_1}{\Omega g_0},
+              \frac{4g_1}{d g_0}\sqrt{S_+/S_-}\right\}.
+$$
+
+Indeed $|\widehat g(z)|\le g_1/|z|$. After division by $T$ the
+resonant Fourier amplitude is at least $g_0/4$ and every upward
+amplitude is at most $g_1/(Td)$. In particular, for $a=J/3$ the
+prescribed carrier is $\Omega=96|E|/(49J)=72\nu_0/49$. At the same
+duration and sufficiently small fixed amplitude this single cycle
+gives negative work for $J/3$ and nonnegative work for $J$.
+For the full sequence the cycle can depend on the trial. Passivity
+quantifies over the same class of cycles for every trial. Subdividing
+the fixed smooth cycle composes its exact propagators and preserves its
+work.
+The only dimensionful dynamical inputs are $m,\mu,E,J$ and the trial
+action in the canonical model. The classical pulse width and delay
+are times, $b$ has inverse-time units, and the quantum drive has
+frequency $\Omega$ and duration $T$. All work values use the original
+mechanical energy, with no auxiliary clock.
+
+### Classification at every positive angular momentum
+
+In fact, for every sharp bound state with $k=J/a\ge1$ integral,
+passivity under these strength cycles holds **if and only if $n=0$**.
+The preceding argument proves ground-state passivity and coupling of
+adjacent levels for all $k\ge1$. Here are the remaining resonance and
+domain details. Set $Z=m^2\mu/a^2$ and $\beta_j=Z/(j+k+1/2)$.
+For a regular real radial Coulomb sector, the only energy atoms are
+the listed negative bound levels. [Dereziński and Richard, Corollary 3.8(ii)](https://arxiv.org/pdf/1712.04068)
+(point spectrum, passage).
+
+For $q\ge13/2$ the numerator $2q^3-11q^2-8q+8$ above is at least
+$2(q-2)^2$. Thus the adjacent downward line has no upward atom at the
+same distance. At $q=11/2$ the required reciprocal square is
+$164/9801$, whose square root is irrational. At $q=9/2$ the earlier
+calculation applies. At $q=5/2$ the upward energy would be positive.
+The only remaining excited possibility is $q=7/2$. There the adjacent
+downward line is resonant with the upward level $q'=35/2$.
+
+- For $(k,n)=(1,2)$ use the transition to the ground instead. Its
+  opposite energy is positive. The integral coupling to $1/r$ is
+  nonzero. Up to positive normalization it is the integral of
+  $r^2 e^{-(\beta_0+\beta_2)r} L_2^2(2\beta_2r)$, equal to
+  $12(\beta_0-\beta_2)^2/(\beta_0+\beta_2)^5$.
+- For $(k,n)=(2,1)$ the two competing levels are $0$ and $15$.
+  Substitution of $L_0^4=1$, $L_1^4(x)=5-x$ in the normalized
+  eigenfunctions cited in §5c gives
+  $|\langle u_0,r^{-1}u_1\rangle|=
+  \frac{2Z}{21\sqrt5}\left(\frac{\sqrt{35}}6\right)^5$.
+  The opposing matrix element is bounded by
+  $\|r^{-1}u_{15}\|=2Z/(35\sqrt{35})$ from the inverse-square
+  moment. The downward value is larger since their ratio, using the
+  upper bound, is $(5\sqrt7/3)(\sqrt{35}/6)^5>1$.
+  Thus the net resonant contribution still extracts work.
+
+For $k=1$, $Vu_n$ belongs to $L^2$ but its first absolute spectral
+moment need not be finite. Formula (P2) still holds. Indeed $V$ is
+infinitesimally operator-bounded relative to $H_0$ by the form bound
+above. The operator domains coincide. The smooth drive gives a uniform
+graph-norm bound for $U_\epsilon(t,0)u_n$ at fixed $T$ by the
+propagator estimate with $\|\dot H_\epsilon(H_\epsilon+c)^{-1}\|$
+bounded, where $c$ is a constant energy shift above the lower-bound
+magnitude. Duhamel gives an $O(|\epsilon|)$ difference in $L^2$ and
+its linear variation there. Interpolation with the graph bound gives an
+$O(\sqrt{|\epsilon|})$ difference in the form norm. The term quadratic
+in the state difference in $\langle V\rangle$ is then
+$O(|\epsilon|^{3/2})$. The work identity gives (P2) by first truncating
+the spectral measure and passing to the limit. Smooth $g$ makes its
+Fourier transform rapidly decreasing. In the limit of (P2) divided
+by $T^2$, the energy factor times the squared normalized transform
+is bounded uniformly in $\lambda$ for $T\Omega\ge1$. The finite
+measure $d\sigma$ therefore suffices even at a continuum resonance.
+
+Consequently, if the conserved $I,J$ are prescribed, a passive regular
+canonical realization exists exactly when $a=2(I-J)>0$ and $J/a$ is a
+positive integer. The Newtonian sharp realization is passive exactly
+at $I=J$. These conclusions concern the stated planar dynamics and
+cycle class.
+
+### A passive classical countermodel and the remaining premise
+
+Sharp energy matters. At fixed $J$ give the classical sublevel set
+$0\le I_r\le5J/4$ uniform radial phase-space density with respect to
+$dI_r\,d\phi$. It has mean energy $-C/[2J(J+5J/4)]$, exactly the
+specified $E=-C/[2(3J/2)^2]$. Every radial Hamiltonian cycle preserves
+area. Moving any portion of this occupied sublevel outside replaces
+it by states of greater energy, so the law is passive. Its mean inward
+force differs from the sharp-energy value by the strict convexity in
+§5c. Thus prescribing *both* mean energy and the corresponding mean
+force at sharp $J$ rules out this mixture and enforces sharp energy.
+
+A classical circle at $I=J$ also has sharp energy and is passive
+under every allowed cycle, since it minimizes $H_0$ at fixed $J$.
+Even on the canonical side, at fixed $m,\mu,J$ the radial grounds
+$a_k=J/k$, $I_k=J+a_k/2$ are all passive. Their energies tend to the
+circular minimum. The first two radial moments in §5c at
+$A_k=I_k^2/(m^2\mu)$ give $\langle(r-R)^2\rangle\to0$, so their
+radial laws tend to the circular point mass. Passivity permits
+arbitrarily small positive actions when the sharp energy can approach
+that minimum.
+Passivity has an independent equilibrium interpretation. What needs
+a further physical justification is that a passive, sharply prepared
+body at fixed $J$ must have $I>J$. Newton's equations allow the
+circle at every subdivision. At the specified $I=3J/2$, existence
+of a passive preparation would select the canonical $a=2(I-J)=J$
+over the classical law and the whole sequence $a\downarrow0$. The
+same orbital number occurred in the [first Euclidean harmonic](alpoge-balaban-newton-peek.md#what-follows-from-keeping-the-orbital-frequencies)
+under different assumptions.
+
 ## 6. What the theorem establishes and what it does not
 
 Theorem 1 compares an incomplete classical point-force flow with a
@@ -978,11 +1257,14 @@ not consequences to be inferred from a threshold formula.
 
 For the planar inverse-square source, Lemma X's mean force at fixed
 $E,J$ agrees with every state on an exact sequence $a\downarrow0$.
-At sharp inputs the bounded radial reading selects $J/3$. At the stated
-finite tolerances it excludes every $a\le J/5$. The classical ellipse satisfies
-the same conserved inputs and force law. The open question is which
-independent principle about admissible central-force motion requires a
-different radial law. The separate foundational note depends on that step.
+At the example's sharp inputs the bounded radial reading selects $J/3$.
+At the stated finite tolerances it excludes every $a\le J/5$. A cycle
+of the attraction extracts work from the $J/3$ state, while $a=J$ is
+passive at those inputs. More generally, the passive sharp classical
+orbits have $I_r=0$ and the passive regular planar canonical states
+have $I_r=a/2$. Their radial laws approach the classical circle along
+$a=J/k\downarrow0$. The open premise is why a sharply passive body
+must retain a positive radial action under refinement.
 
 The fixed-$T$, fixed-$\delta$ localization obligation (L) and the
 Kepler centroid obligation are closed by the written derivation in

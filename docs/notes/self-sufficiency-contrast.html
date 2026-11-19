@@ -90,6 +90,17 @@ value. The classical ellipse satisfies the preparation even under
 arbitrarily fine time subdivision. <a
 href="#stationary-kepler-preparations">Stationary Kepler
 preparations</a>.</p>
+<p>A different condition uses work in Newton’s physical time. Vary only
+the strength of the attraction and restore it. Among stationary planar
+bound states of sharp energy and positive angular momentum <span
+class="math inline">\(J\)</span>, the passive Newtonian orbits are
+precisely the circles. The passive states of the regular canonical
+theory are precisely its radial grounds, with radial action <span
+class="math inline">\(I_r=a/2\)</span> at trial reduced action <span
+class="math inline">\(a\)</span>. At the example’s fixed energy this
+selects <span class="math inline">\(a=J\)</span>. <a
+href="#passivity-under-cyclic-changes-of-the-attraction">Passivity under
+cyclic changes of the attraction</a>.</p>
 <p>For <span class="math inline">\(V=-k/r\)</span> in three dimensions,
 the inward radial classical flow reaches a collision in finite time,
 whereas the nonrelativistic Coulomb Hamiltonian <span
@@ -1412,6 +1423,367 @@ class="math inline">\(P\le 2/3+4000d^2/3\)</span> for the full law. The
 specified coherent preparation supplies the excess. Classical
 stationarity or Newton’s short-time force prescription does not supply
 its relative signs.</p>
+<h2 id="passivity-under-cyclic-changes-of-the-attraction">Passivity
+under cyclic changes of the attraction</h2>
+<p><strong>5e. 6.1 Sol Max, 2026-11-19.</strong> Passivity means that
+the mean work done <em>on</em> a preparation is nonnegative for every
+allowed cycle. Use only smooth positive strengths <span
+class="math inline">\(\mu(t)\)</span> equal to the same <span
+class="math inline">\(\mu\)</span> before and after a finite interval.
+The potential is always <span class="math inline">\(-m\mu(t)/r\)</span>
+and the angular momentum stays fixed. Work is final minus initial mean
+energy in the original Hamiltonian. The schedule is fixed in advance,
+independent of orbital phase. This is a restriction of the usual
+equilibrium work criterion to a specified source family. Ground-state
+passivity and examples of cyclic work extraction from classical
+microcanonical states are established results. <a
+href="https://link.springer.com/article/10.1007/BF01614224">Pusz and
+Woronowicz</a> (abstract) and <a
+href="https://arxiv.org/abs/0909.0671">Marathe and Parrondo</a>
+(abstract, different Hamiltonian).</p>
+<h3 id="two-changes-of-source-strength-on-a-classical-ellipse">Two
+changes of source strength on a classical ellipse</h3>
+<p>Keep sharp <span class="math inline">\(J&gt;0\)</span>. In reduced
+radial action-angle coordinates use <span
+class="math inline">\(I=J+I_r\)</span> and mean anomaly <span
+class="math inline">\(\phi\)</span>. With <span
+class="math inline">\(C=m^3\mu^2\)</span>, the undriven energy and
+frequency are <span class="math inline">\(h(I)=-C/(2I^2)\)</span> and
+<span class="math inline">\(\nu(I)=C/I^3\)</span>. Take any noncircular
+bound preparation with <span class="math inline">\(I=I_0&gt;J\)</span>,
+uniform in <span class="math inline">\(\phi\)</span>, and set <span
+class="math inline">\(\nu_0=\nu(I_0)\)</span>. The following finite
+smooth cycle has negative mean work. It uses the change of orbital
+period with energy. <a
+href="rivero-1998-conjecture-central-forces.html#hooke-and-kepler-radial-actions-and-maslov-phases">Kepler
+actions and period</a>.</p>
+<p>Write <span class="math inline">\(S(r)=-m\mu/(\nu_0 r)\)</span>, with
+units of action. Choose a nonnegative smooth function <span
+class="math inline">\(b\)</span> supported in <span
+class="math inline">\((0,\ell)\)</span>, of integral one, with <span
+class="math inline">\(\nu_0\ell&lt;\pi/2\)</span>. Add <span
+class="math inline">\(\epsilon [b(t)+b(t-T)] S(r)\)</span> to the
+Hamiltonian, with dimensionless <span
+class="math inline">\(\epsilon&gt;0\)</span>. This increases the
+attraction twice. Define</p>
+<p><span class="math display">\[
+B(I,\phi)=\int b(t)S(r(I,\phi+\nu(I)t))\,dt,\qquad
+K(I,\theta)=\overline{B_\phi(I,\phi)B_\phi(I,\phi+\theta)}
+\]</span></p>
+<p>where the bar is uniform phase average. The first cosine coefficient
+of <span class="math inline">\(S(r(I_0,\phi))\)</span> is nonzero. It is
+even on the circle and increases strictly from periapsis to apoapsis, so
+the integral against <span class="math inline">\(\cos\phi\)</span> on
+<span class="math inline">\((0,\pi)\)</span> is negative by integration
+by parts. Averaging over <span class="math inline">\(b\)</span>
+preserves a nonzero first Fourier coefficient since the phase in that
+integral ranges over less than <span
+class="math inline">\(\pi/2\)</span>. Hence <span
+class="math inline">\(K(I_0,\cdot)\)</span> is a nonconstant smooth
+periodic autocorrelation. Choose <span
+class="math inline">\(\theta_0\)</span> where <span
+class="math inline">\(K_\theta(I_0,\theta_0)&gt;0\)</span>.</p>
+<p>For the two pulses the first interaction-picture generator is <span
+class="math inline">\(G(I,\phi)=B(I,\phi)+B(I,\phi+\nu(I)T)\)</span>. At
+zero amplitude the first mean-work derivative vanishes. The second
+is</p>
+<p><span class="math display">\[
+W&#39;&#39;(0)=\partial_I\!\left[\nu(I)\overline{G_\phi^2}\right]_{I_0}.
+\tag{P1}
+\]</span></p>
+<p>Indeed the second variation of <span class="math inline">\(h\)</span>
+has the term <span class="math inline">\(\{\{h,G\},G\}\)</span> and a
+bracket <span class="math inline">\(\{h,G_2\}\)</span> from time
+ordering. The latter is a full phase derivative and averages to zero.
+Integrating the former once in <span
+class="math inline">\(\phi\)</span>, with <span
+class="math inline">\(\{h,G\}=-\nu G_\phi\)</span>, gives (P1). The flow
+and its two parameter derivatives exist uniformly over the initial
+phases for fixed <span class="math inline">\(T\)</span> and sufficiently
+small amplitude, since the unperturbed ellipse lies in a compact
+collision-free annulus.</p>
+<p>Take <span class="math inline">\(T=(2\pi
+N+\theta_0)/\nu_0&gt;\ell\)</span>. Write <span
+class="math inline">\(D=\partial_I[\nu(I)(K(I,0)+K(I,\theta_0))]_{I_0}\)</span>.
+Then <span class="math inline">\(W&#39;&#39;(0)=2D+2\nu_0\nu&#39;(I_0)T
+K_\theta(I_0,\theta_0)\)</span>. Since <span
+class="math inline">\(\nu&#39;(I_0)=-3\nu_0/I_0\)</span>, any such <span
+class="math inline">\(T\)</span> greater than <span
+class="math inline">\(|D|/(\nu_0|\nu&#39;(I_0)|
+K_\theta(I_0,\theta_0))\)</span> gives <span
+class="math inline">\(W&#39;&#39;(0)&lt;0\)</span>. Fix that finite
+delay before taking the weak-drive limit. For all sufficiently small
+positive <span class="math inline">\(\epsilon\)</span> the returned
+source has extracted mean work. The strict sign persists for stationary
+orbits in a neighborhood of the sharp energy and angular momentum, by
+continuous dependence at the fixed duration. Refining the underlying
+Newton trajectory in the collision-free annulus preserves the sign. <a
+href="balaban-ode-lesson.html">Finite-time Newton construction</a>.</p>
+<h3 id="which-stationary-trial-is-passive-at-the-same-integrals">Which
+stationary trial is passive at the same integrals?</h3>
+<p>Return to the planar Friedrichs states of §5c at <span
+class="math inline">\(I_0=3J/2\)</span>. They exhaust the sharp
+canonical trials, with <span class="math inline">\(a=J/(2n+1)\)</span>
+and angular index <span class="math inline">\(k=2n+1\)</span>. For <span
+class="math inline">\(n=0\)</span>, <span
+class="math inline">\(a=J\)</span>, the sharp state is the lowest radial
+eigenstate at this <span class="math inline">\(J\)</span>. A cycle acts
+within the sector, whose original Hamiltonian bounds the final energy
+below by the initial energy. It is passive for every allowed strength
+cycle.</p>
+<p>For <span class="math inline">\(n\ge1\)</span> let <span
+class="math inline">\(u_j\)</span> be the normalized real radial
+eigenfunctions in this fixed <span class="math inline">\(k\)</span>
+sector, with energies <span
+class="math inline">\(E_j=-C/[2a^2(j+k+1/2)^2]\)</span>. The adjacent
+downward transition couples to the allowed control <span
+class="math inline">\(V=-m\mu/r\)</span>. The radial operator is a real
+half-line Sturm–Liouville operator with separated endpoint conditions.
+The two adjacent bound eigenfunctions satisfy both endpoint conditions.
+Their Wronskian has no interior zero by the open-interval oscillation
+count. Thus <span class="math inline">\(A_1(s)=\int_0^s
+u_{n-1}u_n\,dr\)</span>, proportional to that Wronskian by the radial
+equations and its zero boundary value, has one strict sign. Integration
+by parts gives <span class="math inline">\(\int u_{n-1}u_n/r\,dr=\int
+A_1(r)/r^2\,dr\ne0\)</span>. The regular solutions vanish as <span
+class="math inline">\(r^{k+1/2}\)</span> at zero and decay at infinity.
+<a href="https://math.caltech.edu/papers/bsimon/p252.pdf">Gesztesy,
+Simon and Teschl, Theorem 1.3</a> (passage).</p>
+<p>There is no upward energy at the same distance. Write <span
+class="math inline">\(q=n+k+1/2\)</span>. An upward resonance would
+require <span class="math inline">\((q+j)^{-2}=2/q^2-1/(q-1)^2\)</span>
+with an integer <span class="math inline">\(j\ge1\)</span>. For <span
+class="math inline">\(n=1\)</span>, <span
+class="math inline">\(q=9/2\)</span>, the right side is <span
+class="math inline">\(68/3969\)</span>, strictly between <span
+class="math inline">\((q+4)^{-2}\)</span> and <span
+class="math inline">\((q+3)^{-2}\)</span>. For <span
+class="math inline">\(n\ge2\)</span>, <span
+class="math inline">\(q\ge15/2\)</span>. Convexity of <span
+class="math inline">\(q^{-2}\)</span> puts the right side below <span
+class="math inline">\((q+1)^{-2}\)</span>. It exceeds <span
+class="math inline">\((q+2)^{-2}\)</span> since their difference has
+positive numerator <span class="math inline">\(2q^3-11q^2-8q+8\)</span>
+over <span class="math inline">\(q^2(q-1)^2(q+2)^2\)</span>. In both
+cases the candidate upward energy is negative, below the continuum.</p>
+<p>Let <span class="math inline">\(\Omega=(E_n-E_{n-1})/a\)</span>.
+Choose a real smooth <span class="math inline">\(g\)</span> supported in
+<span class="math inline">\((0,1)\)</span> with nonzero integral and
+change <span class="math inline">\(\mu\)</span> to <span
+class="math inline">\(\mu[1+\epsilon c_T(t)]\)</span>, <span
+class="math inline">\(c_T(t)=g(t/T)\cos(\Omega t)\)</span>. At each
+fixed duration choose <span
+class="math inline">\(|\epsilon|\|g\|_\infty&lt;1\)</span>. Let <span
+class="math inline">\(P_{H_0}\)</span> be the spectral resolution of the
+undriven radial Hamiltonian and put <span
+class="math inline">\(d\sigma(\lambda)=d\langle
+Vu_n,P_{H_0}(\lambda)Vu_n\rangle\)</span>. The weak-drive work
+coefficient is</p>
+<p><span class="math display">\[
+\lim_{\epsilon\to0}\frac{W(\epsilon)}{\epsilon^2}
+=\frac1{a^2}\int(\lambda-E_n)
+  \left|\int_0^T c_T(t)e^{i(\lambda-E_n)t/a}dt\right|^2
+  d\sigma(\lambda).                                                \tag{P2}
+\]</span></p>
+<p>Here the first-order transition formula applies to a single bound
+state. In the flat radial measure the centrifugal term is <span
+class="math inline">\(a^2(k^2-1/4)/(2mr^2)\)</span>, so <span
+class="math inline">\(V\)</span> maps the common form domain to <span
+class="math inline">\(L^2\)</span>. The smooth source keeps the shifted
+forms uniformly equivalent on a fixed time interval. Also <span
+class="math inline">\(Vu_n\)</span> belongs to the form domain since
+<span class="math inline">\(k\ge3\)</span>. The form propagators are
+uniformly bounded there for small <span
+class="math inline">\(\epsilon\)</span> by the form-energy estimate.
+Duhamel’s formula applied to the source term <span
+class="math inline">\(\epsilon c_T(t)Vu_n e^{-iE_nt/a}\)</span> gives an
+<span class="math inline">\(O(\epsilon)\)</span> change in form norm and
+the first variation in <span class="math inline">\(L^2\)</span>.
+Substituting that variation in <span
+class="math inline">\(\epsilon\int\dot c_T\langle
+V\rangle_t\,dt\)</span> gives (P2) by integration by parts. The finite
+first absolute spectral moment of <span
+class="math inline">\(Vu_n\)</span> justifies the interchange. <a
+href="https://doi.org/10.1143/JPSJ.12.570">Kubo, linear response,
+§§2–3</a> (passages) and <a
+href="https://arxiv.org/pdf/2112.11063">Kisyński’s common-form
+propagator theorem, statement 3.10</a> (passage, Balmaseda, Lonigro and
+Pérez-Pardo).</p>
+<p>Divide (P2) by <span class="math inline">\(T^2\)</span> and let <span
+class="math inline">\(T\to\infty\)</span>. The normalized Fourier factor
+tends to zero off the two resonances and is bounded by <span
+class="math inline">\(\|g\|_1\)</span>. Dominated convergence leaves</p>
+<p><span class="math display">\[
+\frac{|\int_0^1 g(v)\,dv|^2}{4a^2}
+(E_{n-1}-E_n)|\langle u_{n-1},Vu_n\rangle|^2&lt;0 .
+\]</span></p>
+<p>Thus some finite smooth cycle extracts energy for every <span
+class="math inline">\(n\ge1\)</span>, including the <span
+class="math inline">\(a=J/3\)</span> preparation singled out by §5c’s
+radius reading. A finite duration can also be specified before comparing
+the two trials. Choose <span class="math inline">\(g\ge0\)</span>, put
+<span class="math inline">\(g_0=\int g&gt;0\)</span>, <span
+class="math inline">\(g_1=\int|g&#39;|\)</span>, and let <span
+class="math inline">\(d\)</span> be the smaller of <span
+class="math inline">\(\Omega\)</span> and the distance from <span
+class="math inline">\(\Omega\)</span> to the set of upward transition
+frequencies in the sector, including the continuum. The negative
+candidate energy and the nonresonance just proved give <span
+class="math inline">\(d&gt;0\)</span>. Put <span
+class="math inline">\(S_+=\int(\lambda-E_n)_+d\sigma(\lambda)\)</span>
+and <span class="math inline">\(S_-=(E_n-E_{n-1})|\langle
+u_{n-1},Vu_n\rangle|^2\)</span>. It suffices to choose</p>
+<p><span class="math display">\[
+T&gt;\max\left\{\frac{g_1}{\Omega g_0},
+              \frac{4g_1}{d g_0}\sqrt{S_+/S_-}\right\}.
+\]</span></p>
+<p>Indeed <span class="math inline">\(|\widehat g(z)|\le
+g_1/|z|\)</span>. After division by <span
+class="math inline">\(T\)</span> the resonant Fourier amplitude is at
+least <span class="math inline">\(g_0/4\)</span> and every upward
+amplitude is at most <span class="math inline">\(g_1/(Td)\)</span>. In
+particular, for <span class="math inline">\(a=J/3\)</span> the
+prescribed carrier is <span
+class="math inline">\(\Omega=96|E|/(49J)=72\nu_0/49\)</span>. At the
+same duration and sufficiently small fixed amplitude this single cycle
+gives negative work for <span class="math inline">\(J/3\)</span> and
+nonnegative work for <span class="math inline">\(J\)</span>. For the
+full sequence the cycle can depend on the trial. Passivity quantifies
+over the same class of cycles for every trial. Subdividing the fixed
+smooth cycle composes its exact propagators and preserves its work. The
+only dimensionful dynamical inputs are <span
+class="math inline">\(m,\mu,E,J\)</span> and the trial action in the
+canonical model. The classical pulse width and delay are times, <span
+class="math inline">\(b\)</span> has inverse-time units, and the quantum
+drive has frequency <span class="math inline">\(\Omega\)</span> and
+duration <span class="math inline">\(T\)</span>. All work values use the
+original mechanical energy, with no auxiliary clock.</p>
+<h3
+id="classification-at-every-positive-angular-momentum">Classification at
+every positive angular momentum</h3>
+<p>In fact, for every sharp bound state with <span
+class="math inline">\(k=J/a\ge1\)</span> integral, passivity under these
+strength cycles holds <strong>if and only if <span
+class="math inline">\(n=0\)</span></strong>. The preceding argument
+proves ground-state passivity and coupling of adjacent levels for all
+<span class="math inline">\(k\ge1\)</span>. Here are the remaining
+resonance and domain details. Set <span
+class="math inline">\(Z=m^2\mu/a^2\)</span> and <span
+class="math inline">\(\beta_j=Z/(j+k+1/2)\)</span>. For a regular real
+radial Coulomb sector, the only energy atoms are the listed negative
+bound levels. <a href="https://arxiv.org/pdf/1712.04068">Dereziński and
+Richard, Corollary 3.8(ii)</a> (point spectrum, passage).</p>
+<p>For <span class="math inline">\(q\ge13/2\)</span> the numerator <span
+class="math inline">\(2q^3-11q^2-8q+8\)</span> above is at least <span
+class="math inline">\(2(q-2)^2\)</span>. Thus the adjacent downward line
+has no upward atom at the same distance. At <span
+class="math inline">\(q=11/2\)</span> the required reciprocal square is
+<span class="math inline">\(164/9801\)</span>, whose square root is
+irrational. At <span class="math inline">\(q=9/2\)</span> the earlier
+calculation applies. At <span class="math inline">\(q=5/2\)</span> the
+upward energy would be positive. The only remaining excited possibility
+is <span class="math inline">\(q=7/2\)</span>. There the adjacent
+downward line is resonant with the upward level <span
+class="math inline">\(q&#39;=35/2\)</span>.</p>
+<ul>
+<li>For <span class="math inline">\((k,n)=(1,2)\)</span> use the
+transition to the ground instead. Its opposite energy is positive. The
+integral coupling to <span class="math inline">\(1/r\)</span> is
+nonzero. Up to positive normalization it is the integral of <span
+class="math inline">\(r^2 e^{-(\beta_0+\beta_2)r}
+L_2^2(2\beta_2r)\)</span>, equal to <span
+class="math inline">\(12(\beta_0-\beta_2)^2/(\beta_0+\beta_2)^5\)</span>.</li>
+<li>For <span class="math inline">\((k,n)=(2,1)\)</span> the two
+competing levels are <span class="math inline">\(0\)</span> and <span
+class="math inline">\(15\)</span>. Substitution of <span
+class="math inline">\(L_0^4=1\)</span>, <span
+class="math inline">\(L_1^4(x)=5-x\)</span> in the normalized
+eigenfunctions cited in §5c gives <span class="math inline">\(|\langle
+u_0,r^{-1}u_1\rangle|=
+\frac{2Z}{21\sqrt5}\left(\frac{\sqrt{35}}6\right)^5\)</span>. The
+opposing matrix element is bounded by <span
+class="math inline">\(\|r^{-1}u_{15}\|=2Z/(35\sqrt{35})\)</span> from
+the inverse-square moment. The downward value is larger since their
+ratio, using the upper bound, is <span
+class="math inline">\((5\sqrt7/3)(\sqrt{35}/6)^5&gt;1\)</span>. Thus the
+net resonant contribution still extracts work.</li>
+</ul>
+<p>For <span class="math inline">\(k=1\)</span>, <span
+class="math inline">\(Vu_n\)</span> belongs to <span
+class="math inline">\(L^2\)</span> but its first absolute spectral
+moment need not be finite. Formula (P2) still holds. Indeed <span
+class="math inline">\(V\)</span> is infinitesimally operator-bounded
+relative to <span class="math inline">\(H_0\)</span> by the form bound
+above. The operator domains coincide. The smooth drive gives a uniform
+graph-norm bound for <span
+class="math inline">\(U_\epsilon(t,0)u_n\)</span> at fixed <span
+class="math inline">\(T\)</span> by the propagator estimate with <span
+class="math inline">\(\|\dot H_\epsilon(H_\epsilon+c)^{-1}\|\)</span>
+bounded, where <span class="math inline">\(c\)</span> is a constant
+energy shift above the lower-bound magnitude. Duhamel gives an <span
+class="math inline">\(O(|\epsilon|)\)</span> difference in <span
+class="math inline">\(L^2\)</span> and its linear variation there.
+Interpolation with the graph bound gives an <span
+class="math inline">\(O(\sqrt{|\epsilon|})\)</span> difference in the
+form norm. The term quadratic in the state difference in <span
+class="math inline">\(\langle V\rangle\)</span> is then <span
+class="math inline">\(O(|\epsilon|^{3/2})\)</span>. The work identity
+gives (P2) by first truncating the spectral measure and passing to the
+limit. Smooth <span class="math inline">\(g\)</span> makes its Fourier
+transform rapidly decreasing. In the limit of (P2) divided by <span
+class="math inline">\(T^2\)</span>, the energy factor times the squared
+normalized transform is bounded uniformly in <span
+class="math inline">\(\lambda\)</span> for <span
+class="math inline">\(T\Omega\ge1\)</span>. The finite measure <span
+class="math inline">\(d\sigma\)</span> therefore suffices even at a
+continuum resonance.</p>
+<p>Consequently, if the conserved <span
+class="math inline">\(I,J\)</span> are prescribed, a passive regular
+canonical realization exists exactly when <span
+class="math inline">\(a=2(I-J)&gt;0\)</span> and <span
+class="math inline">\(J/a\)</span> is a positive integer. The Newtonian
+sharp realization is passive exactly at <span
+class="math inline">\(I=J\)</span>. These conclusions concern the stated
+planar dynamics and cycle class.</p>
+<h3 id="a-passive-classical-countermodel-and-the-remaining-premise">A
+passive classical countermodel and the remaining premise</h3>
+<p>Sharp energy matters. At fixed <span class="math inline">\(J\)</span>
+give the classical sublevel set <span class="math inline">\(0\le
+I_r\le5J/4\)</span> uniform radial phase-space density with respect to
+<span class="math inline">\(dI_r\,d\phi\)</span>. It has mean energy
+<span class="math inline">\(-C/[2J(J+5J/4)]\)</span>, exactly the
+specified <span class="math inline">\(E=-C/[2(3J/2)^2]\)</span>. Every
+radial Hamiltonian cycle preserves area. Moving any portion of this
+occupied sublevel outside replaces it by states of greater energy, so
+the law is passive. Its mean inward force differs from the sharp-energy
+value by the strict convexity in §5c. Thus prescribing <em>both</em>
+mean energy and the corresponding mean force at sharp <span
+class="math inline">\(J\)</span> rules out this mixture and enforces
+sharp energy.</p>
+<p>A classical circle at <span class="math inline">\(I=J\)</span> also
+has sharp energy and is passive under every allowed cycle, since it
+minimizes <span class="math inline">\(H_0\)</span> at fixed <span
+class="math inline">\(J\)</span>. Even on the canonical side, at fixed
+<span class="math inline">\(m,\mu,J\)</span> the radial grounds <span
+class="math inline">\(a_k=J/k\)</span>, <span
+class="math inline">\(I_k=J+a_k/2\)</span> are all passive. Their
+energies tend to the circular minimum. The first two radial moments in
+§5c at <span class="math inline">\(A_k=I_k^2/(m^2\mu)\)</span> give
+<span class="math inline">\(\langle(r-R)^2\rangle\to0\)</span>, so their
+radial laws tend to the circular point mass. Passivity permits
+arbitrarily small positive actions when the sharp energy can approach
+that minimum. Passivity has an independent equilibrium interpretation.
+What needs a further physical justification is that a passive, sharply
+prepared body at fixed <span class="math inline">\(J\)</span> must have
+<span class="math inline">\(I&gt;J\)</span>. Newton’s equations allow
+the circle at every subdivision. At the specified <span
+class="math inline">\(I=3J/2\)</span>, existence of a passive
+preparation would select the canonical <span
+class="math inline">\(a=2(I-J)=J\)</span> over the classical law and the
+whole sequence <span class="math inline">\(a\downarrow0\)</span>. The
+same orbital number occurred in the <a
+href="alpoge-balaban-newton-peek.html#what-follows-from-keeping-the-orbital-frequencies">first
+Euclidean harmonic</a> under different assumptions.</p>
 <h2 id="what-the-theorem-establishes-and-what-it-does-not">6. What the
 theorem establishes and what it does not</h2>
 <p>Theorem 1 compares an incomplete classical point-force flow with a
@@ -1435,14 +1807,20 @@ consequences to be inferred from a threshold formula.</p>
 <h2 id="consequence-for-state">7. Consequence for STATE</h2>
 <p>For the planar inverse-square source, Lemma X’s mean force at fixed
 <span class="math inline">\(E,J\)</span> agrees with every state on an
-exact sequence <span class="math inline">\(a\downarrow0\)</span>. At
-sharp inputs the bounded radial reading selects <span
+exact sequence <span class="math inline">\(a\downarrow0\)</span>. At the
+example’s sharp inputs the bounded radial reading selects <span
 class="math inline">\(J/3\)</span>. At the stated finite tolerances it
-excludes every <span class="math inline">\(a\le J/5\)</span>. The
-classical ellipse satisfies the same conserved inputs and force law. The
-open question is which independent principle about admissible
-central-force motion requires a different radial law. The separate
-foundational note depends on that step.</p>
+excludes every <span class="math inline">\(a\le J/5\)</span>. A cycle of
+the attraction extracts work from the <span
+class="math inline">\(J/3\)</span> state, while <span
+class="math inline">\(a=J\)</span> is passive at those inputs. More
+generally, the passive sharp classical orbits have <span
+class="math inline">\(I_r=0\)</span> and the passive regular planar
+canonical states have <span class="math inline">\(I_r=a/2\)</span>.
+Their radial laws approach the classical circle along <span
+class="math inline">\(a=J/k\downarrow0\)</span>. The open premise is why
+a sharply passive body must retain a positive radial action under
+refinement.</p>
 <p>The fixed-<span class="math inline">\(T\)</span>, fixed-<span
 class="math inline">\(\delta\)</span> localization obligation (L) and
 the Kepler centroid obligation are closed by the written derivation in
