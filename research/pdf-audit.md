@@ -13,12 +13,12 @@ Retired internal score reports and programme snapshots are preserved only in git
 
 ## Current artifact coverage
 
-The catalog covers **94 PDFs**.
+The catalog covers **95 PDFs**.
 
 | Classification | Count |
 | --- | --- |
 | current synthesis | 3 |
-| current technical manuscript | 65 |
+| current technical manuscript | 66 |
 | historical research snapshot | 2 |
 | orphan manuscript | 6 |
 | working manuscript | 18 |

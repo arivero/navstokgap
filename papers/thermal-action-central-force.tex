@@ -1,0 +1,520 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\DeclareUnicodeCharacter{1E93}{\d{z}}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A thermal action scale from Newton's central-force limit},pdfauthor={navstokgap research working notes}}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\section{A thermal action scale from Newton's central-force
+limit}\label{a-thermal-action-scale-from-newtons-central-force-limit}
+
+\textbf{6.1 Sol Max, 2026-11-19.} A central force proportional to radius
+admits a test of zero physical action in Newton's own time. Fix a body
+in a plane with positive angular momentum. Prepare its radial degree of
+freedom in thermal equilibrium and allow changes of the strength of this
+one force. If a positive ensemble of Newtonian trajectories obeys the
+equilibrium work identity, doubling the orbital frequency costs exactly
+\(k_B\log 2\) in isothermal entropy loss at \emph{every} temperature.
+Nernst's heat theorem requires this loss to tend to zero. For the
+inverse-square force, two changes of strength separated by a short
+interval force the equilibrium radius law by the acceleration term in
+Lemma X. With both circular orbits inside fixed reflecting walls, the
+entropy loss tends to the logarithm of their radial frequency ratio in
+units of \(k_B\). Both exclusions include singular ensembles and survive
+arbitrary time subdivision.
+
+The two-temperature work observable below defines a positive thermal
+action from the body's equation of state, given the usual
+high-temperature correspondence and harmonic virial relation. In the
+regular planar Schrödinger family it determines the reduced action \(a\)
+uniquely, including a finite-observation lower bound. The independent
+physical premise concerns thermal equilibria of this rotating body. The
+value across different bodies, and an identification with quantum phase
+in other theories, remain open.
+
+\subsection{From the finite force to a thermodynamic
+question}\label{from-the-finite-force-to-a-thermodynamic-question}
+
+In 1687 Newton specified a regular force in Lemma X. In 1713 he
+specified a finite force, allowed it to vary, and added Corollary 4
+relating it to initial displacement divided by time squared. Proposition
+VI applies the construction to orbits. Proposition X finds the force
+toward the centre of an ellipse proportional to distance, with equal
+periods for all its ellipses at a common strength. These are edition
+passages. The thermal condition in this note is modern.
+\href{newton-insertion-action.md\#lemma-x-and-the-measurement-of-initial-force}{Lemma
+X in 1687 and 1713} and
+\href{https://www.newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00082}{Newton,
+1713, Book I, Proposition X and its corollaries}.
+
+Write the acceleration as \(-\omega^2 {\bf q}\). At a point
+\({\bf q}_0\ne0\) the departure from its inertial tangent, divided by
+\(t^2/2\), tends to \(-\omega^2{\bf q}_0\). This fixes the frequency in
+mechanical time. The independently fixed sector is
+\(J=q_xp_y-q_yp_x>0\), with mass \(m>0\). A radial thermal contact can
+exchange energy while preserving \(J\). Write \(\theta=k_BT>0\) for
+temperature in energy units. At each fixed strength the initial law is
+stationary. During a prescribed strength change the body is isolated.
+For a Newtonian path the full source work on it is the change in
+
+\[
+ H_\omega=K+V=\frac{|{\bf p}|^2}{2m}
+                 +\frac{m\omega^2|{\bf q}|^2}{2}.
+\]
+
+Two equilibrium conditions have independent content.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  For an initial equilibrium and each smooth positive strength protocol
+  from \(\omega\) to \(\omega_f\), inclusive work satisfies
+  \(\langle e^{-W/\theta}\rangle=\exp[-(F(\theta,\omega_f)-
+  F(\theta,\omega))/\theta]\), with finite Helmholtz free energies. The
+  right side is common to all routes between the two strengths. This is
+  Jarzynski's identity for an initially thermal, subsequently isolated
+  drive. It is used here as a constraint on \emph{any} candidate law.
+  Its usual forward derivation starts with a Gibbs state. The
+  corresponding quantum work is the difference of the two endpoint
+  energy readings.
+  \href{https://arxiv.org/pdf/cond-mat/9610209}{Jarzynski, equations (2)
+  and (8)} and \href{https://arxiv.org/pdf/0711.3914}{Deffner and Lutz,
+  equations (1)--(3)} (passages).
+\item
+  At fixed \(J\) assume differentiable equilibrium thermodynamics,
+  \(S=-k_B\partial_\theta F\), and the Nernst heat theorem for the two
+  strengths. In symbols \(S(\theta,\omega)-S(\theta,2\omega)\to0\) as
+  \(\theta\downarrow0\). It concerns entropy differences within the same
+  equilibrium sector. Its justification as a thermodynamic postulate is
+  independent of an action constant. Applying it to this constrained
+  radial system is a physical hypothesis. Independent copies give the
+  same test per copy by entropy additivity.
+  \href{https://www.nobelprize.org/uploads/2017/03/nernst-lecture2.pdf}{Nernst,
+  Nobel lecture, pp.~358--359} and
+  \href{https://arxiv.org/pdf/1412.3828}{Masanes and Oppenheim, opening
+  discussion of the heat theorem and its degeneracy condition}
+  (passages).
+\end{enumerate}
+
+\subsection{What a quarter-period change forces on every Newtonian
+law}\label{what-a-quarter-period-change-forces-on-every-newtonian-law}
+
+\textbf{Theorem.} At fixed \(\theta,\omega,J>0\), condition 1 forces the
+Newtonian energy to have law \(E_0+X\), with \(E_0=\omega J\) and \(X\)
+exponential of mean \(\theta\). For every \(c>1\) it forces
+
+\[
+ F(\theta,c\omega)-F(\theta,\omega)=(c-1)E_0+\theta\log c.       \tag{1}
+\]
+
+No density relative to phase volume is required. A hidden label may
+affect the initial law arbitrarily if the projected motion and work
+still have the specified mechanical values.
+
+\textbf{Proof.} On a stationary orbit put \(E=K+V\) and \(D=V-K\). The
+pair \((D,\omega{\bf q}\cdot{\bf p})\) rotates at \(2\omega\) and has
+squared radius \(E^2-E_0^2\). This follows from the harmonic equations
+and the planar Gram determinant \(J^2\). Stationarity gives
+\(\mathbb E[D\mid E]=0\) and \(\mathbb E[D^2\mid E]=(E^2-E_0^2)/2\),
+including the circle. The orbit's orientation need never be specified.
+
+Between the initial and final strengths, use frequency
+\(\omega_p=\sqrt c\,\omega e^{s/2}\) for its quarter-period
+\(\pi/(2\omega_p)\). Its exact map is
+\(({\bf q},{\bf p})\mapsto({\bf p}/(m\omega_p),-m\omega_p{\bf q})\). The
+final energy at frequency \(c\omega\) is
+
+\[
+ E_f=c(e^s V+e^{-s}K)=c(E\cosh s+D\sinh s).                    \tag{2}
+\]
+
+These switches are legitimate limits of the smooth finite forces in
+condition 1. For \(|s|<\log c\) one has \(E_f\ge ce^{-|s|}E>E\).
+Smoothing each switch over a shrinking time changes the linear
+fundamental matrix continuously, so the same strict quadratic-form
+bound, with a smaller margin, holds for sufficiently narrow ramps.
+Dominated convergence applies to \(e^{-(E_f-E)/\theta}\), bounded by
+one. Inserting times into a fixed smooth motion composes its exact maps.
+Convergent Newton polygons give the same fundamental matrix at fixed
+duration. \href{balaban-ode-lesson.md}{Finite-force polygon limit}.
+
+Condition 1 makes this work average independent of \(s\). Differentiate
+twice at \(s=0\). On any smaller neighborhood of zero the integrands and
+both derivatives are bounded by a polynomial in \(E\) times a decreasing
+exponential, even for an initial law with heavy tails. With
+\(t=(c-1)/\theta>0\) and \(L(t)=\mathbb E[e^{-tE}]\), the conditional
+moments above give
+
+\[
+ L''(t)+\frac{2}{t+1/\theta}L'(t)-E_0^2 L(t)=0.                 \tag{3}
+\]
+
+Indeed the averaged second derivative has the two factors \(-cE/\theta\)
+and \(c^2(E^2-E_0^2)/(2\theta^2)\). Set \(u=t+1/\theta\). Then
+\((uL)''=E_0^2(uL)\). The bound \(0<L(t)\le e^{-tE_0}\) removes the
+growing solution since \(J>0\). Normalization at zero gives
+
+\[
+ L(t)=\frac{e^{-tE_0}}{1+\theta t}.
+\]
+
+Uniqueness of the Laplace transform gives the stated law. At \(s=0\) we
+have \(W=(c-1)E\), and the work identity gives (1). Differentiating (1)
+in temperature gives
+\((S(\theta,\omega)-S(\theta,c\omega))/k_B=\log c\). Taking \(c=2\)
+contradicts condition 2. The familiar classical oscillator entropy
+already has this dependence. The converse above is what prevents a
+different positive distribution of Newtonian moving orbits from
+repairing it while keeping the source work.
+\href{https://arxiv.org/pdf/physics/0210128}{Boyer, oscillator
+thermodynamics, §§III and VI} (passages).
+
+\subsection{An action scale from two finite work
+averages}\label{an-action-scale-from-two-finite-work-averages}
+
+Set \(G(\theta,\omega)=F(\theta,2\omega)-F(\theta,\omega)\). Compare the
+same compression at two positive temperatures using
+
+\[
+ B(\theta,\omega)=
+ \frac{G(\theta,\omega)-G(\theta/2,\omega)}{\theta/2}.
+                                                                    \tag{4}
+\]
+
+This is the average of the isothermal entropy loss in units of \(k_B\)
+over the interval \([\theta/2,\theta]\) (or its value at an intermediate
+temperature by the mean value theorem). It uses only two finite work
+averages. An additive temperature-independent endpoint energy cancels.
+For Newtonian motion (1) gives \(B=\log 2\). Nernst gives \(B\to0\), so
+there is already a strict separation at a \emph{fixed positive}
+temperature. Fix this temperature before refining the mechanical time
+mesh or comparing trial actions.
+
+To define an action directly from thermodynamics, keep the usual
+mechanical source conjugacy
+\(F_\omega=m\omega\langle r^2\rangle=U/\omega\) in equilibrium, with
+\(U=F-\theta F_\theta\). The last mechanical equality is the harmonic
+virial law at fixed \(J\). Under precisely this work law oscillator
+entropy has Wien's scaling form, a function of \(\theta/\omega\) at
+fixed body and sector. Thus (4) is a continuous function of
+\(x=\theta/(2\omega)\), which has action units.
+\href{https://arxiv.org/pdf/physics/0210128}{Boyer, equations (1), (8)
+and (13)} (passages). Assume classical thermal correspondence
+\(B(x)\to\log 2\) at large \(x\). For existence of the scale it suffices
+that \(B\) exceed \(\log(3/2)\) at one finite \(x\). Then
+
+\[
+ A_*=\inf\{x>0:B(x)\ge\log(3/2)\},\qquad 0<A_*<\infty .          \tag{5}
+\]
+
+Indeed there is an entire neighborhood of zero below this threshold, and
+the defining set is nonempty. Continuity gives a first crossing even if
+the response elsewhere is nonmonotone. The choice \(3/2\) is the
+midpoint of the two endpoint ratios \(e^B=1,2\). Other intermediate
+thresholds define other finite positive scales. No action-valued cell
+size or absolute entropy enters (4) or (5).
+
+\subsubsection{The reduced action in the regular canonical
+theory}\label{the-reduced-action-in-the-regular-canonical-theory}
+
+For a spinless regular planar oscillator with trial reduced action
+\(a>0\) and \(J=ka\), \(k\) a positive integer, the exact radial
+energies are \(E_n=\omega[J+(2n+1)a]\), \(n\ge0\), each simple at fixed
+\(k\). The Helmholtz difference follows from this equally spaced
+spectrum. \href{https://doi.org/10.3390/sym16030297}{Mazhar et al.,
+equation (56)} (passage) and
+\href{rivero-1998-conjecture-central-forces.md\#5-hooke-and-kepler-radial-actions-and-maslov-phases}{radial
+period and action}. Writing \(z=2a\omega/\theta=a/x\) gives
+
+\[
+ \begin{aligned}
+ G_a(\theta,\omega)&=\omega(J+a)+\theta\log(1+e^{-z}),\\
+ e^{B_a}&=\frac{(1+e^{-z})^2}{1+e^{-2z}}=1+\operatorname{sech}z .
+ \end{aligned}                                                       \tag{6}
+\]
+
+Thus any observed \(B\le b<\log 2\), \(0<b\), implies
+
+\[
+ a\ \ge\ \frac{\theta}{2\omega}
+       \operatorname{arcosh}\!\left(\frac1{e^b-1}\right)>0.
+                                                                    \tag{7}
+\]
+
+Equality in the measured response determines one trial action through
+(6), subject to \(J/a\) integral. In this theory
+\(a=A_*\operatorname{arcosh}2\). The vanishing-temperature and
+vanishing-action limits in (6) give different answers in opposite
+orders. Each positive \(a=J/k\) separately obeys Nernst. What excludes
+an entire sequence \(a\downarrow0\) for \emph{one} preparation is the
+shared finite-temperature value (4).
+
+For example take \(\theta=J\omega/\log 2\). At \(a=J\) and \(a=J/2\),
+respectively, \(B=\log(25/17)\) and \(\log(9/5)\). Both trials use the
+same angular momentum, two source strengths, two temperatures and work
+rule. Even a single-temperature bounded reading separates them. For the
+\(s=0,c=2\) quarter-period change, \(W=E\) also holds for the two
+quantum energy readings. The harmonic evolution interchanges position
+and momentum as in (2), giving \(U_p^\dagger H_{2\omega}U_p=2H_\omega\).
+On the initial thermal state the mean of \(e^{-(W-E_0)/\theta}\) is
+\(1/[2\cosh(a\omega/\theta)]\). The two means are \(2/5\) and
+\(\sqrt2/3\), compared with \(1/2\) for the Newtonian work law. Rounding
+\(W-E_0\) down in bins of width \(\theta/256\) and giving the reading
+zero at energies above \(8\theta\) changes each mean by at most
+\(e^{1/256}-1+e^{-8}<1/128\). All three intervals are disjoint.
+
+An exactly smooth compression with the same endpoint relation is also
+available. Take a smooth scale factor \(b(t)\) constant at 1 initially
+and \(1/\sqrt2\) finally. Use the standard harmonic dilation with
+\(\Omega^2=\omega^2/b^4-\ddot b/b\). A sufficiently long finite duration
+keeps \(\Omega^2>0\). The construction acts identically on both
+Cartesian coordinates and preserves \(J\). The endpoint energies scale
+by two. The same profile works for both trial actions. Initial and final
+energy readings can lie anywhere in fixed time windows on the constant
+plateaus. \href{https://arxiv.org/pdf/0910.0709}{Chen et al., Ermakov
+equation and endpoint conditions} (passage, reversed compression).
+
+The dimensional inputs here are \(m\), the prepared angular momentum
+\(J\), the source frequencies and their durations in physical time, and
+the thermal energies \(\theta,\theta/2\). \(k_B\) converts temperature
+to energy. One may equivalently fix independent length and time units
+\(L,\tau\) and set \(J=mL^2/\tau,\ \omega=1/\tau\). The finite energy
+bins and plateau windows can then be fixed in those same units before
+choosing \(a\). Both \(B\) and the threshold in (5) are dimensionless.
+With the mechanical reference \(S_0=J\), the dimensionless trial is
+\(\epsilon=a/J\). The physical trial \(a\) tends to zero with
+\(\epsilon\) at fixed \(J\). The time mesh is a separate regulator. In
+the canonical identification \(a=\hbar\) the ordinary Planck action is
+\(h_P=2\pi a\).
+
+\textbf{A radius reading with a fixed ruler and clock.} Take those same
+independent \(L,\tau\) and the same thermal preparation at
+\(\theta=J\omega/\log2\). Sample its initial stationary radius at a
+uniform time in \([\tau,2\tau]\). Use bin width \(\rho=L/1024\) and
+report \(f(r)=\min\{64L,\rho\lfloor r/\rho\rfloor\}^2\). The equilibrium
+virial relation gives \(\langle r^2\rangle=U/(m\omega^2)\). The two
+geometric level populations give \(U/(J\omega)=8/3,5/2\) at \(a=J,J/2\),
+respectively. Their energy second moments in units of \((J\omega)^2\)
+are \(80/9,33/4\).
+
+For each regular oscillator eigenfunction \(\psi\), integration by parts
+gives \(2\operatorname{Re}\langle K\psi,V\psi\rangle
+\ge -a^2\omega^2\|\psi\|^2\), since \(\Delta V=2m\omega^2\) in the plane
+and the remaining integral is \((a^2/m)\int V|\nabla\psi|^2\). Thus
+\(\langle V^2\rangle\le\langle H_\omega^2\rangle+a^2\omega^2\) also in
+the thermal mixtures. Both have \(\langle r^4\rangle\le40L^4\) and
+\(\langle r\rangle<2L\). The loss from rounding and saturation is at
+most \(2\rho\langle r\rangle+\langle r^4\rangle/(64L)^2<L^2/64\). The
+intervals for \(\langle f\rangle/L^2\) therefore lie within
+\([8/3-1/64,8/3]\) and \([5/2-1/64,5/2]\), respectively. The action
+changes the thermal populations and their position laws. The same finite
+spatial bins and the same time window act on both.
+
+\subsection{Why positive angular momentum
+matters}\label{why-positive-angular-momentum-matters}
+
+\textbf{A classical exception at zero angular momentum.} In the
+invariant diameter of the same central force take the common reference
+measure \(dq\,dp/(2\pi b_0)+\delta_{(0,0)}\), where \(b_0>0\) has action
+units. Every change of spring strength preserves area and fixes the
+origin. The Gibbs weights on this measure therefore obey the work
+identity by change of variables, for the full mechanical work. Its
+partition function is \(1+\theta/(b_0\omega)\). Its entropy tends to the
+same value at both strengths as \(\theta\downarrow0\). Its
+high-temperature loss tends to \(k_B\log2\). It has continuous Newtonian
+trajectories and no quantum phase. The extra weight gives a thermal
+scale \(b_0\). Here (3) admits a constant term in \(L\), the mass at the
+fixed point. The strictly rotating sector removed exactly that
+possibility. Also, an entropy difference is insensitive to
+temperature-independent shifts of level energies. An absolute zero-point
+energy requires further input.
+
+\subsection{Two short force changes on a Kepler
+orbit}\label{two-short-force-changes-on-a-kepler-orbit}
+
+Take two Kepler strengths \(\mu_2>\mu_1>0\). With \(v=\dot r\), write
+\(H_\mu=mv^2/2+U_\mu(r)\), where
+
+\[
+ V(r)=-m/r,\qquad U_\mu(r)=\frac{J^2}{2mr^2}+\mu V(r),\qquad
+ R_\mu=\frac{J^2}{m^2\mu},\qquad \nu_\mu=\frac{m^3\mu^2}{J^3}.
+\]
+
+\(R_\mu,\nu_\mu\) are the circular radius and its radial frequency. The
+unconfined Kepler canonical partition function diverges at large radius.
+Use the same two fixed elastic walls \(0<r_-<r_+\) for all strengths in
+an open interval containing \(\mu_1,\mu_2\), with every \(R_\mu\)
+strictly inside. The walls perform zero work. The effective radial force
+points into the annulus at each wall, so a stationary Newtonian law
+spends zero probability at the endpoints, including turning points with
+zero speed. Assume finite mean kinetic energy.
+\href{self-sufficiency-contrast.md\#passivity-under-cyclic-changes-of-the-attraction}{Kepler
+actions and circular limit} and \href{dirichlet-wall-impulse.md}{elastic
+and Dirichlet walls}.
+
+\textbf{Theorem.} For this source, condition 1 and stationarity
+determine both the radial probability \(P_\mu\) and the conditional mean
+square radial speed.
+
+\[
+ P_\mu(dr)=\frac{e^{-U_\mu(r)/\theta}}{I_\mu(\theta)}\,dr,\qquad
+ \mathbb E_\mu[v^2\mid r]=\theta/m,\qquad
+ I_\mu(\theta)=\int_{r_-}^{r_+} e^{-U_\mu(r)/\theta}\,dr .           \tag{8}
+\]
+
+Only the scalar source work and the motion enter the proof. In
+particular it also applies after marginalizing any hidden state that
+leaves this source work and equation of motion intact. The established
+work-weighted endpoint formula starts with a Gibbs ensemble. Here two
+strength changes and their short-time motion determine the radius
+marginal of an initially unspecified stationary law.
+\href{https://doi.org/10.1073/pnas.071034098}{Hummer and Szabo, equation
+(4)} (passage, forward identity).
+
+\textbf{Proof.} Change \(\mu\) to \(\lambda=\mu+\delta\), let the orbit
+move for a time \(t\), then change to \(\alpha\). Its work is
+\(\delta V(r_0)+(\alpha-\lambda)V(r_t)\). Comparing this route with
+\(t=0\) in condition 1 shows that under the tilted initial measure
+\(h_\delta(r_0)d\rho_\mu\), where \(h_\delta=e^{-\delta V/\theta}\) and
+\(\rho_\mu\) is the whole stationary law, \(V(r_t)\) and \(V(r_0)\) have
+identical Laplace transforms as \(\alpha\) ranges near \(\lambda\).
+These variables are bounded. Equality on an interval determines their
+laws, and \(V\) is one-to-one. Thus the \emph{radius marginal} of the
+tilted measure is stationary under evolution at \(\lambda\).
+
+The switches can be obtained with smooth ramps. The work throughout is
+bounded by the total variation of the strength times \(\sup|V|\). For an
+initial point in the interior the intermediate energy equals the
+potential at either wall for at most two values of \(\lambda\), since
+\(V(r_0)\ne V(r_\pm)\). By Fubini, for almost every intermediate
+strength these grazing energies have zero initial probability. For those
+strengths the limiting position flow is continuous through transverse
+wall impacts. Bounded convergence therefore gives the stated work
+comparison. Two distinct nonzero shifts from this full-measure set
+suffice below.
+
+Let \(\Pi(dr)=\mathbb E_\mu[v^2{\bf1}_{\{r\in dr\}}]\), a finite
+measure. For a smooth test \(f\) supported in the interior, stationarity
+of \(vf(r)\) at the original strength gives
+\(\int f'\,d\Pi=m^{-1}\int f U_\mu'\,dP_\mu\). For the tilted measure
+differentiate its constant mean of \(f(r_t)\) twice at zero, using
+Newton's short-time acceleration at strength \(\lambda\). This gives
+
+\[
+ 0=\int h_\delta f''\,d\Pi
+    -\frac1m\int h_\delta f'(U_\mu'+\delta V')\,dP_\mu.             \tag{9}
+\]
+
+The compact support removes the wall impulse from both identities. The
+second derivative along the flow is bounded by a constant times
+\(1+v_0^2\), since the potentials are bounded on the annulus. Subtract
+the original identity tested with \(h_\delta f'\). It follows that
+\(h_\delta V'(\Pi-\theta P_\mu/m)\) has zero distributional derivative
+and hence is constant times Lebesgue measure on the connected interior.
+Two distinct shifts have a nonconstant ratio of tilts. Both constants
+must vanish. Since \(V'>0\), \(\Pi=\theta P_\mu/m\). The original
+identity now reads \(P_\mu'=-(U_\mu'/\theta)P_\mu\). Multiplication by
+\(e^{U_\mu/\theta}\) and normalization give (8).
+
+An immediate strength change then gives
+\(G_K(\theta)=F(\theta,\mu_2)-F(\theta,\mu_1)
+=-\theta\log(I_{\mu_2}/I_{\mu_1})\). Near each circle \(U_{\mu_i}\) has
+a unique nondegenerate minimum \(E_{c,i}\) of curvature \(m\nu_i^2\),
+where \(\nu_i=\nu_{\mu_i}\). The leading Laplace formula gives
+\(I_{\mu_i}\sim e^{-E_{c,i}/\theta}\sqrt{2\pi\theta/m}/\nu_i\). In
+consequence,
+
+\[
+ G_K(\theta)=E_{c,2}-E_{c,1}+\theta\Lambda+o(\theta),\qquad
+ B_K(\theta):=\frac{G_K(\theta)-G_K(\theta/2)}{\theta/2}
+       \longrightarrow \Lambda=\log(\nu_2/\nu_1)>0 .              \tag{10}
+\]
+
+The ordinary entropy loss has the same limit in units of \(k_B\) because
+the weighted Laplace asymptotic gives
+\(\langle U_{\mu_i}-E_{c,i}\rangle/\theta\to1/2\) at both minima. No
+wall length or phase-volume normalization enters \(\Lambda\). Condition
+2 for these two strengths requires \(B_K\to0\). The conflict comes from
+the local acceleration in (9) and the source work.
+\href{https://dlmf.nist.gov/2.3.iii}{DLMF §2.3(iii), applied on each
+side of the minimum} (passage).
+
+\subsubsection{A finite Kepler lower
+bound}\label{a-finite-kepler-lower-bound}
+
+For explicit dimensional choices take the earlier \(m,L,\tau\) and
+\(J=mL^2/\tau\). Use \(\mu_1=L^3/\tau^2,\ \mu_2=\sqrt2\,\mu_1\),
+\(r_-=L/2\) and \(r_+=2L\). Then \(\nu_1=1/\tau\), \(\nu_2=2/\tau\) and
+\(\Lambda=\log2\). Fix a positive \(\theta\) low enough that the
+Newtonian value in (10) exceeds \(3\Lambda/4\) and the physical
+preparation obeying Nernst has \(|B_K|<\Lambda/4\). Existence follows
+from the two limits. A regular canonical realization at each fixed
+admissible \(a>0\) is consistent with Nernst. The Dirichlet radial
+operator on this finite interval has a simple ground and positive
+excitation gap in the fixed angular sector. The selected temperature
+belongs to the preparation.
+
+Here is a computable lower bound at that fixed \(\theta\). In flat
+radial measure, at \(a=J/k\) the two Dirichlet Hamiltonians have kinetic
+part \(-a^2\partial_r^2/(2m)\) and potentials \(U_{\mu_i}-a^2/(8mr^2)\).
+Put \(M=\max_i\sup|U_{\mu_i}'|\) on the annulus,
+\(\eta=\min\{\Lambda/12,1/2\}\). For the comparison take
+\(N=\max\{1,\lceil 6M(r_+-r_-)/(\eta\theta)\rceil\}\) and
+\(d=(r_+-r_-)/N\le\eta\theta/(6M)\). Every matching canonical trial must
+satisfy
+
+\[
+ a>a_0,\qquad
+ a_0=\min\left\{
+ r_-\sqrt{\frac{4\eta m\theta}{3}},
+ \ \frac{\eta d}{6}\sqrt{\frac{m\theta}{4\pi}}\right\}>0 .         \tag{11}
+\]
+
+To see this, denote the canonical partition function by \(Z_{a,i}(u)\)
+at thermal energy \(u\). Write \(\ell_u=a\sqrt{2\pi/(m\,u)}\) and
+\(Q=a^2/(8mr_-^2)\). Dirichlet--Neumann bracketing on cells of length
+\(d\), with the extrema of the potential on each cell, gives
+
+\[
+ e^{-Md/u}(1-\ell_u/d)
+ \ \le\ \frac{\ell_u Z_{a,i}(u)}{I_{\mu_i}(u)}
+ \ \le\ e^{(Md+Q)/u}(1+\ell_u/d).
+\]
+
+Indeed the constant-potential cell kinetic sums are bounded below by
+\(d/\ell_u-1\) for Dirichlet and above by \(d/\ell_u+1\) for Neumann, by
+the integral bounds for the decreasing Gaussian. If \(a\le a_0\), at
+both \(u=\theta,\theta/2\) the logarithm of the middle ratio is bounded
+in magnitude by \((Md+Q)/u+2\ell_u/d\le\eta\). The two strengths give
+error at most \(2u\eta\) in their free-energy difference. The two
+temperatures give error at most \(6\eta\le\Lambda/2\) in \(B_K\). This
+is too small to span the stipulated strict separation. The partition
+here bounds a trace. Its cell length \(d\) can be chosen once and is
+independent of the time subdivision in Newton's construction.
+\href{https://doi.org/10.1017/9781009218436.007}{Frank, Laptev and
+Weidl, Dirichlet--Neumann bracketing} (chapter summary) and
+\href{self-sufficiency-contrast.md\#passivity-under-cyclic-changes-of-the-attraction}{regular
+planar radial operator}.
+
+\subsection{Consequence for STATE}\label{consequence-for-state}
+
+The heat theorem and the finite-time work identity exclude the
+zero-action Newtonian trajectory description for a thermal rotating body
+in Proposition X's central force. The thermal action (5) is positive
+under virial scaling and thermal correspondence. On a confined Kepler
+orbit (9) gives the exclusion directly from the short-time acceleration.
+Inequalities (7) and (11) bound the reduced action of a regular
+canonical realization at fixed physical inputs. Two uncoupled bodies can
+have different positive trial actions and satisfy all these tests
+jointly. Their work averages multiply, free energies add and both
+entropy differences vanish on cooling. A common phase scale for
+interacting bodies and an exclusion from the bare trajectory limit
+remain open.
+\end{document}

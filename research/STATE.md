@@ -18,37 +18,38 @@ uniqueness argument added to Proposition XIII. It concerns tangent
 inverse-square orbits at a given launch.
 [Edition passages and letter](../docs/Newton_Principia_Motte1846.md#corollary-1-to-proposition-xiii).
 
+For a rotating thermal body the Nernst heat theorem supplies an
+independent premise. In a fixed Kepler annulus, two changes of the
+attraction and the short-time acceleration force a radial equilibrium
+law whose entropy loss stays nonzero on cooling. Proposition X's linear
+central force gives an exact comparison without walls. In both problems
+a fixed finite-temperature work difference excludes the zero-action
+Newtonian law and bounds the regular canonical reduced action.
+[Thermal action and the Kepler proof](../notes/thermal-action-central-force.md#two-short-force-changes-on-a-kepler-orbit).
+
 For one continuous inward force at nonzero speed, placing each impulse
 before or after free flight gives opposite limiting departures from a
 circle. A nonnegative spherical mass instead gives unique nonradial
 motion under joint source and time refinement.
 [Polygon limits and gravitational bound](../notes/balaban-ode-lesson.md#tangent-orbits-under-the-two-impulse-orders).
 
-At sharp bound energy and angular momentum $J>0$, cycles of the Kepler
-attraction extract work from every eccentric Newtonian orbit with uniform
-phase and every excited regular planar radial eigenstate. Passive circles
-have radial action $I_r=0$. Passive radial grounds have $I_r=a/2$ at
-trial reduced action $a$ and approach the circle along $a=J/k\downarrow0$.
-At total Kepler action $I=3J/2$ all trials share Lemma X's mean force.
-A bounded radius reading selects $J/3$, while passivity selects $J$.
-What independently requires a sharply passive body to retain $I_r>0$?
+At sharp energy and $J>0$, passive Kepler circles have $I_r=0$ and
+passive regular radial grounds have $I_r=a/2$. When $I=3J/2$ the mean
+force agrees across trials, a bounded radius selects $J/3$ and passivity selects $J$.
 [Cyclic work and countermodels](../notes/self-sufficiency-contrast.md#passivity-under-cyclic-changes-of-the-attraction)
 and [stationary radius and force](../notes/self-sufficiency-contrast.md#stationary-kepler-preparations).
 
-On a noncircular ellipse a radial displacement has a negative reflected
-square in physical time at arbitrarily small cuts. A local Euclidean
-transfer fitted to its first harmonic gives twice the orbital radial
-action. With the Newtonian radial law and two orbital speed bounds,
-such a transfer misses at least $9/80$ of a specified real-time squared
-displacement. A positive jump transfer keeps both frequencies.
+On an eccentric ellipse a radial increment has a negative reflected
+square at arbitrarily short times. Under the two orbital speed bounds,
+a local Euclidean transfer misses at least $9/80$ of a specified
+real-time squared displacement. A positive jump transfer keeps both frequencies.
 [Time cuts and orbital speeds](../notes/alpoge-balaban-newton-peek.md#kepler-motion-and-reflection-at-a-cut)
 and [three-time Kepler preparations](../notes/self-sufficiency-contrast.md#three-radial-readings-on-a-near-circular-kepler-orbit).
 
-A vanishing action along a particular orbit or time cell differs from a
-vanishing physical action parameter. A quantum lift exists for every
-supplied positive action in its stated class. A separate foundational
-note is due when an independently justified premise actually excludes
-zero physical action. Universality and the value of $\hbar$ remain open.
+A bare trajectory, even if passive, can still be a Newtonian circle.
+Can the trajectory limit alone supply the exclusion, or can interactions
+identify one common phase scale across bodies? Universality and the
+value of $\hbar$ remain open.
 [Action scales](../notes/action-unit-dimensional-selection.md) and
 [quantum lift](../notes/lipschitz-certificate-quantum-lift.md).
 
