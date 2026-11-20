@@ -783,6 +783,8 @@ and submission scope](https://github.com/yang-mills-group/YM) (passage).
 
 ## A three-energy test of central-force trajectories
 
+*Historical experimental application before the 18 November scope reset.*
+
 Newton's force measurement and an outgoing orbit direction give an
 action difference in mechanical units. Consider two equal masses in a
 nonrelativistic elastic collision. Write $\mu$ for their reduced mass,
@@ -1036,6 +1038,8 @@ read in the library OCR) and [Heydenburg and Temmer, 1956](https://journals.aps.
 (abstract).
 
 ## Locating a turn with two barrier powers
+
+*Historical experimental application before the 18 November scope reset.*
 
 **6.1 Sol Max, 2026-11-18.** Eid et al. counted potassium atoms on
 either side of a repulsive optical barrier. Among the plotted points,
@@ -1367,6 +1371,8 @@ the mathematical orbit between the images leaves all these inputs fixed.
 
 ## Two images of a returning orbit
 
+*Historical experimental application before the 18 November scope reset.*
+
 **6.1 Sol Max, 2026-11-18.** An atom seen far beyond a barrier in the
 late image had to be inside a specified central interval in the early
 image, under the clock conditions below. Counting this interval
@@ -1633,6 +1639,8 @@ gates nor a value for a universal physical $\hbar$.
 
 ## A single atom returning in a tilted lattice
 
+*Historical experimental application before the 18 November scope reset.*
+
 **6.1 Sol Max, 2026-11-18.** A Newtonian atom that passes a lattice
 crest downhill must have enough energy to pass the next identical
 crest. Preiss et al. imaged individual rubidium atoms several cells
@@ -1872,6 +1880,8 @@ single-band contrast bound establishes universal action necessity.
 
 ## A clock on escape through a central-force barrier
 
+*Historical experimental application before the 18 November scope reset.*
+
 **6.1 Sol Max, 2026-11-18.** How far does a force measured on an incoming
 particle constrain an outgoing one? Polonium-212 emits an alpha particle
 and leaves lead-208. One can also fire alpha particles at lead-208. If
@@ -2059,6 +2069,8 @@ exterior count would test it. The numerical action bound above remains
 conditional on those measurements and on the specified dynamics.
 
 ## An exterior force test with argon
+
+*Historical experimental application before the 18 November scope reset.*
 
 **6.1 Sol Max, 2026-11-18.** At $0.34$ eV Buckman and Lohmann report an
 electron–argon attenuation cross section of $0.318$ square ångströms
@@ -3261,6 +3273,8 @@ preparation. The result supplies the small-action passage for the stated
 regular system and leaves the independent physical necessity premise open.
 
 ## Helium pressure at three temperatures
+
+*Historical experimental application before the 18 November scope reset.*
 
 **6.1 Sol Max, 2026-11-18.** In helium-3 the published second virial
 coefficient at 3 K falls $6.244\ {\rm cm^3/mol}$ below the line between

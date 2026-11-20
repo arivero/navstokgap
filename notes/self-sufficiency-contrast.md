@@ -1277,4 +1277,4 @@ The October 1 referee acceptance applies to the original
 Theorem 1 as then printed. The October 2 localization, moment proof
 and replacement Proposition 2 are written, source-supported additions
 by Codex and have not received independent verification or referee
-acceptance.
+acceptance. The November 19 stationary preparations, three radial readings and cyclic passivity sections received internal model checks of the orbital moments, readout bounds and work variations on November 20. They have had no independent peer review.

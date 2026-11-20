@@ -1,6 +1,6 @@
 # State
 
-Updated 2026-11-19. New research is mathematical physics. The
+Updated 2026-11-20. New research is mathematical physics. The
 [catalog](../notes/index.md) records earlier work and its limitations.
 
 ## Newton's central-force trajectory limit
@@ -18,8 +18,7 @@ uniqueness argument added to Proposition XIII. It concerns tangent
 inverse-square orbits at a given launch.
 [Edition passages and letter](../docs/Newton_Principia_Motte1846.md#corollary-1-to-proposition-xiii).
 
-For a rotating thermal body the Nernst heat theorem supplies an
-independent premise. In a fixed Kepler annulus, two changes of the
+Within the oscillator families compared, the Nernst heat theorem is equivalent to positive canonical trial action. Its application to a rotating sector is an extra thermodynamic hypothesis. In a fixed Kepler annulus, two changes of the
 attraction and the short-time acceleration force a radial equilibrium
 law whose entropy loss stays nonzero on cooling. Proposition X's linear
 central force gives an exact comparison without walls. In both problems
@@ -35,7 +34,7 @@ motion under joint source and time refinement.
 
 At sharp energy and $J>0$, passive Kepler circles have $I_r=0$ and
 passive regular radial grounds have $I_r=a/2$. When $I=3J/2$ the mean
-force agrees across trials, a bounded radius selects $J/3$ and passivity selects $J$.
+force agrees across trials, the bounded radius reading distinguishes the preparations with $J$, $J/3$ and $a\le J/5$ under the stated cuts.
 [Cyclic work and countermodels](../notes/self-sufficiency-contrast.md#passivity-under-cyclic-changes-of-the-attraction)
 and [stationary radius and force](../notes/self-sufficiency-contrast.md#stationary-kepler-preparations).
 
@@ -48,7 +47,7 @@ and [three-time Kepler preparations](../notes/self-sufficiency-contrast.md#three
 
 Two ellipses approaching the same moving circle recover the force
 gradient on a common subdivision. Either can keep its excess energy
-$e$ after a frequency increase by $b>1$. A common drive misses by at
+$e$ after a frequency increase by $b>1$. A common change of the linear force strength misses by at
 least $(b-1)e$ on one of them, and this sharp error vanishes at the circle.
 [Neighbouring motions and trajectory renormalization](../notes/newton-neighbouring-motions.md).
 What additional mechanical requirement excludes zero phase scale, and

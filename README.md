@@ -25,6 +25,7 @@ The [dependency paths](research/dependencies.md) route the arguments;
 [obstructions](research/obstructions.md) preserve countertests and exact failure
 scopes. Former note URLs redirect to canonical sections. Internal model reviews
 and retrieval priorities confer neither independent peer review nor novelty.
+The catalog records the proof status of the November 18–19 results in each entry’s `proof_status` field. [Notes catalog](notes/index.md)
 Completed work is recorded briefly in the existing catalog; retired handoffs,
 status snapshots and internal score/review files remain in git history.
 

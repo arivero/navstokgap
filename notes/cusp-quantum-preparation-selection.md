@@ -372,8 +372,7 @@ amplitude includes $r^{-1/2}$. The angle is uniform. The incoming
 scaled radial position has limiting density $|\phi|^2$, and the radial
 velocity scale is $d\ell^2$. The product of the position and momentum
 units is the trial action. The actual standard deviations also depend
-on $\phi$. For all three **exact continuum**
-Schrödinger evolutions,
+on $\phi$. For all three exact continuum Schrödinger evolutions, the following detailed sketch depends on the uniform WKB bounds in (C11)–(C12) of the polygon argument, whose constants remain unchecked:
 
 $$
   p_\kappa\longrightarrow

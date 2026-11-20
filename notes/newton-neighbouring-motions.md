@@ -241,6 +241,11 @@ $$
                     e_f\ \ge\ \lambda^2 e.                          \tag{6}
 $$
 
+The disk argument uses conservation of phase volume, also used for the
+classical minimal-work principle. Here the observable is the maximum
+over initial phases at fixed radial action. [Allahverdyan and
+Nieuwenhuizen, Phys. Rev. E 75, 051124](https://doi.org/10.1103/PhysRevE.75.051124) (abstract).
+
 Indeed $e_{\lambda\mu}(I)=\lambda^2 e_\mu(I)$. The target disk at
 that excitation has exactly the initial disk's area. If the entire
 image of its boundary lay strictly inside the target disk, its enclosed

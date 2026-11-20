@@ -19,8 +19,7 @@ The two-temperature work observable below defines a positive thermal
 action from the body's equation of state, given the usual high-temperature
 correspondence and harmonic virial relation. In the regular planar
 Schrödinger family it determines the reduced action $a$ uniquely,
-including a finite-observation lower bound. The independent physical
-premise concerns thermal equilibria of this rotating body. The value
+including a finite-observation lower bound. Applying the heat theorem to the constrained rotating sector is an additional thermodynamic assumption. The value
 across different bodies, and an identification with quantum phase in
 other theories, remain open.
 
@@ -67,13 +66,24 @@ Two equilibrium conditions have independent content.
    $S=-k_B\partial_\theta F$, and the Nernst heat theorem for the two
    strengths. In symbols $S(\theta,\omega)-S(\theta,2\omega)\to0$
    as $\theta\downarrow0$. It concerns entropy differences within the same
-   equilibrium sector. Its justification as a thermodynamic postulate
-   is independent of an action constant. Applying it to this constrained
-   radial system is a physical hypothesis. Independent copies give the
+   equilibrium sector. Within the two oscillator families compared here, this condition is
+   equivalent to positive trial action: (1) gives $B=\log 2$ on the
+   Newtonian branch, whereas (6) gives $e^{B_a}=1+\operatorname{sech}(a/x)\to1$
+   on cooling at every fixed $a>0$. Applying the heat theorem in this
+   sector therefore requires evidence outside this comparison. The converse
+   in the next section establishes that *every* positive stationary
+   Newtonian law obeying condition 1 has the same entropy loss. Independent copies give the
    same test per copy by entropy additivity. [Nernst, Nobel lecture,
    pp. 358–359](https://www.nobelprize.org/uploads/2017/03/nernst-lecture2.pdf)
    and [Masanes and Oppenheim, opening discussion of the heat theorem
    and its degeneracy condition](https://arxiv.org/pdf/1412.3828) (passages).
+
+Quantized oscillators already supplied a low-temperature specific heat in
+the 1907 theory of solids. Nernst subsequently discussed the relation of
+the heat theorem to that quantum hypothesis. The converse work-law
+arguments below concern this restricted force family. Their priority is open.
+[Einstein, 1907](https://doi.org/10.1002/andp.19063270110) (metadata)
+and [Nernst, Nobel lecture](https://www.nobelprize.org/uploads/2017/03/nernst-lecture2.pdf) (historical discussion).
 
 ## What a quarter-period change forces on every Newtonian law
 

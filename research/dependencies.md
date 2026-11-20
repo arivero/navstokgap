@@ -13,6 +13,11 @@ and target operators require separate identifications.
 
 | Question | Argument path | Dependency that remains explicit |
 | --- | --- | --- |
+| Uniqueness from a sampled trajectory | [Argument](../notes/balaban-ode-lesson.md) | Dyadic position, speed and acceleration agree in (D4) for forces with different uniqueness from rest. Control the force between nodes. |
+| Tangent departure at fixed launch | [Argument](../notes/balaban-ode-lesson.md) | Changing kick order selects opposite limits for (C1)–(C7). The positive spherical-source result has stronger hypotheses. |
+| Heat theorem in a fixed sector | [Argument](../notes/thermal-action-central-force.md) | A classical zero-angular-momentum mixture evades the entropy test. Require sharp positive angular momentum. |
+| Passivity as a preparation test | [Argument](../notes/self-sufficiency-contrast.md) | A classical sublevel mixture is passive under cyclic drives. The pure-shell comparison needs sharp energy. |
+| Closure of the kick–drift family | [Argument](../notes/newton-neighbouring-motions.md) | Two kick–drift steps change the lower-right matrix entry. An exact blocked step requires more than one running coupling. |
 | Classical initial-value construction | [Polygons and regularity](../notes/balaban-ode-lesson.md) | Stability/residual estimates; the logarithmic arrival test replaces a sufficient Lipschitz hypothesis only in its conservative family |
 | Endpoint elimination | [Time blocking](../notes/balaban-newton-time-blocking.md) → [nonlinear cell](../notes/newton-nonlinear-time-cell.md) | Dirichlet contraction and normalized full conditional law; endpoint caustics differ from IVP failure |
 | Quantum lift | [C1,1 certificate](../notes/lipschitz-certificate-quantum-lift.md) and [smooth construction](../notes/quantum-blocks-construct-newton.md) → [groupoid states](../notes/groupoid-quantum-newton-states.md) | Operator toolkit and supplied action; weaker and stronger regularity give different rates |

@@ -247,6 +247,8 @@ the stated initial preparation.
 
 ## A radius count beyond the Kepler turning point
 
+*Historical experimental application before the 18 November scope reset.*
+
 **6.1 Sol Max, 2026-11-18.** Prepare a bound pair in the attractive
 potential $-K/r$. Select it by the mechanical energy released when it
 forms. A single count in a radial annulus separates two reduced actions
@@ -388,6 +390,8 @@ The annulus bound above holds at each phase.
 (passages).
 
 ## A stronger Coulomb attraction and the measured bare lithium fraction
+
+*Historical experimental application before the 18 November scope reset.*
 
 **6.1 Sol Max, 2026-11-18.** The decay of one-electron
 $^{6}{\rm He}^{+}$ increases the nuclear charge from $2e$ to $3e$.
@@ -808,6 +812,8 @@ The ideal point-current calculation alone supplies no value of $\eta$.
 
 ## Four central-force releases measured by final speeds
 
+*Historical experimental application before the 18 November scope reset.*
+
 **6.1 Sol Max, 2026-11-18.** The same four sets of outgoing speeds
 can bound the energy spread of a bound pair and test its equation of
 motion. The test uses every release. It requires neither a selected
@@ -1019,6 +1025,8 @@ radii and speeds belongs in the moment allowances above.
 
 ## What two hydrogen fragment spectra already test
 
+*Historical experimental application before the 18 November scope reset.*
+
 Schmidt et al. measured the two neutral hydrogen fragments and the
 helium recoil after an electron transferred to a hydrogen molecular
 ion. Two of their plots give **counts against final kinetic energy
@@ -1159,6 +1167,8 @@ The measured molecular spectra supply one outgoing force surface.
 
 ## A three-time test with a calibrated position resolution
 
+*Historical experimental application before the 18 November scope reset.*
+
 A candidate physical premise can be stated entirely in observed
 frequencies. Prepare the same ensemble of bodies and independently choose
 one final reading per run at $t_j=0,\tau/2,\tau$, with no earlier
@@ -1276,6 +1286,8 @@ the calibrated motional models above. Extending that constraint to all
 preparations requires a further physical argument.
 
 ## Two action scales in the same atom photographs
+
+*Historical experimental application before the 18 November scope reset.*
 
 **6.1 Sol Max, 2026-11-18.** A specified set of position photographs
 in a central harmonic trap admits two reduced actions differing by a
@@ -1483,6 +1495,8 @@ available on request. [Imaging and calibration passages](../docs/BrownEtAl_AtomT
 
 ## Three angle readings on a central orbit
 
+*Historical experimental application before the 18 November scope reset.*
+
 **6.1 Sol Max, 2026-11-18.** A torque-free circular orbit permits any
 initial angle and speed, yet three angular distributions at equal time
 steps must satisfy (1) below with phase zero. A violation would also
@@ -1682,6 +1696,8 @@ open. The direct angle test uses a single terminal exposure and
 removes the middle-pulse impulse altogether.
 
 ## Three measured contrasts of a trapped ion
+
+*Historical experimental application before the 18 November scope reset.*
 
 **6.1 Sol Max, 2026-11-18.** Valahu et al. measured one radial
 vibrational mode of a single ytterbium-171 ion at
@@ -1909,6 +1925,8 @@ A physical floor still requires an independently calibrated additive
 meter or the corresponding direct position exposures.
 
 ## A force transmitted between two ions
+
+*Historical experimental application before the 18 November scope reset.*
 
 In a modern test of the force measurement, give ion 2 a small transverse
 impulse $J$ and measure ion 1's displacement at time $t$. For two equal
