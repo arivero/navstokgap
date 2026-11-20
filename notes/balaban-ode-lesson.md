@@ -23,10 +23,10 @@ free flight. A nonnegative spherical gravitating source restores unique
 nonradial motion. For the branching force, uniform agreement of the
 canonical products over a set of trial actions is equivalent to a
 positive infimum of that set. A positive lower width for classical
-ensembles gives the same refinement property. For the shrinking Gaussian
-preparations the two theories also give the same probabilities for
-each of the two limiting radii. The odds change when the impulse
-interval is comparable to the position width times its squared logarithm.
+ensembles gives the same refinement property. For shrinking classical Gaussian preparations the branch odds change
+when the impulse interval is comparable to the position width times its
+squared logarithm. The quantum calculation gives the same odds subject
+to the uniform WKB transport estimates in (C11)–(C12).
 
 The polygon proof uses standard stability, consistency and Gronwall arguments.
 The arrival test is a direct energy calculation, not the general first-order
@@ -964,8 +964,7 @@ formula gives $\operatorname{erf}(h|\nabla U(q)|/(2\sqrt w))$.
 Averaging over position bounds the score difference. This upper bound
 tends to $\operatorname{erf}(\lambda/2)$ at $h/\sqrt w\to\lambda$,
 $w\downarrow0$. Both this and the quantum overlap bound concern
-possible terminal differences. The next calculation gives the actual
-terminal law.
+possible terminal differences. The next calculation derives the classical terminal law and sketches its quantum counterpart.
 [Devroye, Mehrabian and Reddad, p. 3](https://arxiv.org/pdf/1810.08693#page=3)
 (equal-covariance formula).
 
@@ -1134,7 +1133,7 @@ Up to $t_2$, summing (C8) for
 $|y_n|+|\Delta y_n|/(h\ell^2)$ gives
 $|y_n|\le C d\exp(C\ell^2 t_2)<\sqrt d$. Here the modified
 force term is bounded by $C\ell^4 |y_n|$ in the annulus. On this
-short interval $c_n\ge\ell^4/100$ for small $d$. After
+short interval the needed uniform estimate is $c_n\ge\ell^4/100$ for small $d$. After
 $u_*/\ell^2$ the signed nodal acceleration is also at least
 $\ell^4|y_n|/100$ until $t_2$. These inequalities give
 
@@ -1156,7 +1155,7 @@ doubles $J$. Each of the intervals from $u_*/\ell^2$ to $t_1$ and
 from $t_1$ to $t_2$ contains $20\log\ell-O(1)$ blocks. Subsequently
 the signed nodal increments stay positive. During a flight the
 radius differs from linear interpolation by $O(h^2)$, by bounded
-centrifugal acceleration. This proves (C11).
+centrifugal acceleration. This gives (C11) conditional on the uniform force and Jacobi bounds on these blocks.
 
 For clarity about diffraction, put $E_2=d|H|/J^2$ and
 $E_3=d^2|I|/J^3$. Let $F_j$ denote the $j$th radial derivative
@@ -1282,16 +1281,14 @@ $C\log(1/h)$ dyadic levels gives $\sum_{n\ge1}^{N-1}h\Lambda_n
 power of $1/h$, whereas $E_1=O(\Lambda_1\sqrt d)$ decays faster
 than every such power. The terminal packet therefore selects the
 same radius as the point polygon. Every subsequence has a further
-subsequence in one of the two regimes for $\ell/L_e$. This completes
-the joint limit in (C7), including $\lambda=\infty$.
+subsequence in one of the two regimes for $\ell/L_e$. Subject to the transport estimates, this extends the quantum statement in (C7) to $\lambda=\infty$.
 
 For the exact continuum evolution, at each fixed positive $d$ the
 products converge for the quantum state by the product formula and
 for the classical ensemble by its almost-everywhere uniqueness.
 For any sequence $d\downarrow0$ and any fixed bounded continuous
 radial score, choose equal cells with $h<d^2$ and a score error
-less than $d$ from that continuum evolution. Formula (C7) at
-$\lambda=0$ gives the equal mixture for the exact dynamics as well.
+less than $d$ from that continuum evolution. The classical part of (C7) at $\lambda=0$ gives the equal continuum mixture. The quantum conclusion uses the same uniform WKB estimates.
 
 In dimensional terms the inputs are $m,R,\omega$, the time $T/\omega$,
 the cell duration $h/\omega$ and the specified preparation. They fix
@@ -1299,7 +1296,7 @@ $S_0=mR^2\omega$, the potential energy unit $mR^2\omega^2$, the
 initial position and momentum deviations $Rd/\sqrt2$ and
 $mR\omega d/\sqrt2$, and the readout width $R Y(T)$. The fixed
 constants $b,T$ and the function of $|q_{\rm phys}|/R$ used for the score are
-dimensionless. For a quantum sequence $a$ with $0<\lambda<\infty$,
+dimensionless. Assuming the quantum limit in (C7), for a sequence $a$ with $0<\lambda<\infty$,
 the sequence $c a$ at the same cells, $c>0$, has parameter
 $\lambda/\sqrt c$. Distinct $c$ therefore give different limiting
 scores within the prescribed canonical family. The model with zero
@@ -1324,8 +1321,7 @@ The moving-circle example now distinguishes uniform agreement over trial
 actions from agreement at each fixed positive action. A nonnegative
 spherical source admits order-independent classical refinement, including
 at a circular orbit. Classical ensembles of positive lower width also
-admit uniform refinement. Even the two branch probabilities at the
-transition scale agree for matched preparations. In the scaled radial
+admit uniform refinement. Equality of the two branch probabilities for matched classical and quantum preparations at the transition scale remains conditional on (C11)–(C12). In the scaled radial
 variables the momentum unit is $mR\omega\,d\log^2(1/d)$. Its product
 with $Rd$ exceeds the Gaussian action $a$ by a factor $\log^2(1/d)$. Whether
 the central-force argument imposes any independent relation between

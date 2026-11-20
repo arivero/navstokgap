@@ -104,10 +104,11 @@ free flight. A nonnegative spherical gravitating source restores unique
 nonradial motion. For the branching force, uniform agreement of the
 canonical products over a set of trial actions is equivalent to a
 positive infimum of that set. A positive lower width for classical
-ensembles gives the same refinement property. For the shrinking Gaussian
-preparations the two theories also give the same probabilities for each
-of the two limiting radii. The odds change when the impulse interval is
-comparable to the position width times its squared logarithm.</p>
+ensembles gives the same refinement property. For shrinking classical
+Gaussian preparations the branch odds change when the impulse interval
+is comparable to the position width times its squared logarithm. The
+quantum calculation gives the same odds subject to the uniform WKB
+transport estimates in (C11)–(C12).</p>
 <p>The polygon proof uses standard stability, consistency and Gronwall
 arguments. The arrival test is a direct energy calculation, not the
 general first-order Osgood criterion. Teschl [<span class="citation"
@@ -1203,9 +1204,9 @@ class="math inline">\(\operatorname{erf}(\lambda/2)\)</span> at <span
 class="math inline">\(h/\sqrt w\to\lambda\)</span>, <span
 class="math inline">\(w\downarrow0\)</span>. Both this and the quantum
 overlap bound concern possible terminal differences. The next
-calculation gives the actual terminal law. <a
-href="https://arxiv.org/pdf/1810.08693#page=3">Devroye, Mehrabian and
-Reddad, p. 3</a> (equal-covariance formula).</p>
+calculation derives the classical terminal law and sketches its quantum
+counterpart. <a href="https://arxiv.org/pdf/1810.08693#page=3">Devroye,
+Mehrabian and Reddad, p. 3</a> (equal-covariance formula).</p>
 <p>Newton’s letter uses point-state uniqueness in the inverse-square
 conic argument. Equation (C5) justifies it classically in a broader
 gravitational class. Equation (C6) identifies what would exclude zero
@@ -1436,8 +1437,9 @@ class="math inline">\(|y_n|+|\Delta y_n|/(h\ell^2)\)</span> gives <span
 class="math inline">\(|y_n|\le C d\exp(C\ell^2 t_2)&lt;\sqrt d\)</span>.
 Here the modified force term is bounded by <span
 class="math inline">\(C\ell^4 |y_n|\)</span> in the annulus. On this
-short interval <span class="math inline">\(c_n\ge\ell^4/100\)</span> for
-small <span class="math inline">\(d\)</span>. After <span
+short interval the needed uniform estimate is <span
+class="math inline">\(c_n\ge\ell^4/100\)</span> for small <span
+class="math inline">\(d\)</span>. After <span
 class="math inline">\(u_*/\ell^2\)</span> the signed nodal acceleration
 is also at least <span class="math inline">\(\ell^4|y_n|/100\)</span>
 until <span class="math inline">\(t_2\)</span>. These inequalities
@@ -1469,7 +1471,8 @@ class="math inline">\(20\log\ell-O(1)\)</span> blocks. Subsequently the
 signed nodal increments stay positive. During a flight the radius
 differs from linear interpolation by <span
 class="math inline">\(O(h^2)\)</span>, by bounded centrifugal
-acceleration. This proves (C11).</p>
+acceleration. This gives (C11) conditional on the uniform force and
+Jacobi bounds on these blocks.</p>
 <p>For clarity about diffraction, put <span
 class="math inline">\(E_2=d|H|/J^2\)</span> and <span
 class="math inline">\(E_3=d^2|I|/J^3\)</span>. Let <span
@@ -1641,8 +1644,8 @@ class="math inline">\(E_1=O(\Lambda_1\sqrt d)\)</span> decays faster
 than every such power. The terminal packet therefore selects the same
 radius as the point polygon. Every subsequence has a further subsequence
 in one of the two regimes for <span
-class="math inline">\(\ell/L_e\)</span>. This completes the joint limit
-in (C7), including <span
+class="math inline">\(\ell/L_e\)</span>. Subject to the transport
+estimates, this extends the quantum statement in (C7) to <span
 class="math inline">\(\lambda=\infty\)</span>.</p>
 <p>For the exact continuum evolution, at each fixed positive <span
 class="math inline">\(d\)</span> the products converge for the quantum
@@ -1652,8 +1655,9 @@ class="math inline">\(d\downarrow0\)</span> and any fixed bounded
 continuous radial score, choose equal cells with <span
 class="math inline">\(h&lt;d^2\)</span> and a score error less than
 <span class="math inline">\(d\)</span> from that continuum evolution.
-Formula (C7) at <span class="math inline">\(\lambda=0\)</span> gives the
-equal mixture for the exact dynamics as well.</p>
+The classical part of (C7) at <span
+class="math inline">\(\lambda=0\)</span> gives the equal continuum
+mixture. The quantum conclusion uses the same uniform WKB estimates.</p>
 <p>In dimensional terms the inputs are <span
 class="math inline">\(m,R,\omega\)</span>, the time <span
 class="math inline">\(T/\omega\)</span>, the cell duration <span
@@ -1666,7 +1670,7 @@ class="math inline">\(mR\omega d/\sqrt2\)</span>, and the readout width
 <span class="math inline">\(R Y(T)\)</span>. The fixed constants <span
 class="math inline">\(b,T\)</span> and the function of <span
 class="math inline">\(|q_{\rm phys}|/R\)</span> used for the score are
-dimensionless. For a quantum sequence <span
+dimensionless. Assuming the quantum limit in (C7), for a sequence <span
 class="math inline">\(a\)</span> with <span
 class="math inline">\(0&lt;\lambda&lt;\infty\)</span>, the sequence
 <span class="math inline">\(c a\)</span> at the same cells, <span
@@ -1697,12 +1701,12 @@ distinguishes uniform agreement over trial actions from agreement at
 each fixed positive action. A nonnegative spherical source admits
 order-independent classical refinement, including at a circular orbit.
 Classical ensembles of positive lower width also admit uniform
-refinement. Even the two branch probabilities at the transition scale
-agree for matched preparations. In the scaled radial variables the
-momentum unit is <span
-class="math inline">\(mR\omega\,d\log^2(1/d)\)</span>. Its product with
-<span class="math inline">\(Rd\)</span> exceeds the Gaussian action
-<span class="math inline">\(a\)</span> by a factor <span
+refinement. Equality of the two branch probabilities for matched
+classical and quantum preparations at the transition scale remains
+conditional on (C11)–(C12). In the scaled radial variables the momentum
+unit is <span class="math inline">\(mR\omega\,d\log^2(1/d)\)</span>. Its
+product with <span class="math inline">\(Rd\)</span> exceeds the
+Gaussian action <span class="math inline">\(a\)</span> by a factor <span
 class="math inline">\(\log^2(1/d)\)</span>. Whether the central-force
 argument imposes any independent relation between these two resolutions
 remains open.</p>
