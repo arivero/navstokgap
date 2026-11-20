@@ -282,6 +282,8 @@ free incoming bounce does not encode.
 
 ## Counting turning heights from neutron positions
 
+*Historical experimental application before the 18 November scope reset.*
+
 **6.1 Sol Max, 2026-11-18.** A classical neutron that visits the top
 of a gravitational arc must spend time at the heights below it. This
 gives a test using one terminal position per neutron. It requires

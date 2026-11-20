@@ -476,6 +476,8 @@ no inconsistency in the theory itself.
 
 ## Two slits and a position detector
 
+*Historical experimental application before the 18 November scope reset.*
+
 Newton's 1713 Corollary 4 to Lemma X makes displacement a measure of
 force. Here the mechanical calibration is the displacement produced by a
 known transverse impulse $J$. Denote it by $BJ$. For free flight from a

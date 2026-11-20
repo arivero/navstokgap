@@ -2,6 +2,7 @@
 
 from pathlib import Path
 from html.parser import HTMLParser
+import hashlib
 import json
 import re
 from urllib.parse import unquote, urlsplit
@@ -271,13 +272,23 @@ def main():
                   if urlsplit(link).path.endswith(".pdf")]
         if set(linked) != {p.stem for p in (ROOT / "out/papers").glob("*.pdf")} or len(linked) != len(set(linked)):
             errors.append("Generated Papers page: incomplete or duplicate PDF coverage")
+    # The Bałaban catalog records the hashes of optional local source copies.
+    balaban_dir = ROOT / "docs" / "balaban"
+    local_pdf_hashes = {
+        balaban_dir / (entry["stem"] + ".pdf"): entry["sha256"]
+        for entry in json.loads((balaban_dir / "catalog.json").read_text())["downloaded"]
+    }
     for path in (ROOT / "docs").rglob("*"):
         if path.relative_to(ROOT).as_posix() in generated:
             continue
         if path.suffix.lower() in {".pdf", ".html", ".xml"}:
             if not path.with_suffix(".md").exists():
                 errors.append(f"Missing source companion: {path.relative_to(ROOT)}")
-            if path.relative_to(ROOT).as_posix() not in registered:
+            if path in local_pdf_hashes:
+                with path.open("rb") as source:
+                    if hashlib.file_digest(source, "sha256").hexdigest() != local_pdf_hashes[path]:
+                        errors.append(f"Local source differs from catalog: {path.relative_to(ROOT)}")
+            elif path.relative_to(ROOT).as_posix() not in registered:
                 errors.append(f"Unregistered source checksum: {path.relative_to(ROOT)}")
     bib = (ROOT / "references" / "library.bib").read_text()
     keys = re.findall(r"@\w+\s*\{\s*([^,\s]+)\s*,", bib)

@@ -831,6 +831,8 @@ refinement at action zero remains the classical countermodel in §6.
 
 ## 9. Action calibration with a clocked grating
 
+*Historical experimental application before the 18 November scope reset.*
+
 <span id="9-action-calibration-with-a-clocked-grating"></span>
 
 Record the port $B=\pm1$ and integer pixel $N$ on each transmitted
